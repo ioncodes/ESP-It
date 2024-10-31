@@ -25,20 +25,20 @@ jobs:
 
     - name: Build Steam Version
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: msbuild ${{env.SOLUTION_FILE_PATH}} /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{BUILD_PLATFORM}}
+      run: msbuild ${{env.SOLUTION_FILE_PATH}} /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{env.BUILD_PLATFORM}}
 
     - name: Archive Steam DLL
       uses: actions/upload-artifact@v4
       with:
         name: Steam
-        path: ${{BUILD_PATH}}
+        path: ${{env.BUILD_PATH}}
   
     - name: Build Epic Games Version
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: msbuild ${{env.SOLUTION_FILE_PATH}} /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{BUILD_PLATFORM}} /p:PreprocessorDefinitions=${{EPIC_GAMES_DEFINE}}
+      run: msbuild ${{env.SOLUTION_FILE_PATH}} /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{env.BUILD_PLATFORM}} /p:PreprocessorDefinitions=${{env.EPIC_GAMES_DEFINE}}
 
     - name: Archive Epic Games DLL
       uses: actions/upload-artifact@v4
       with:
         name: Epic Games
-        path: ${{BUILD_PATH}}
+        path: ${{env.BUILD_PATH}}
