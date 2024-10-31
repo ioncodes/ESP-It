@@ -1,7 +1,17 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "SDK/Engine_classes.hpp"
+#ifdef EPIC_SDK
+#include "Epic/SDK/Engine_classes.hpp"
+#include "Epic/SDK/Basic.cpp"
+#include "Epic/SDK/CoreUObject_functions.cpp"
+#include "Epic/SDK/Engine_functions.cpp"
+#else
+#include "Steam/SDK/Engine_classes.hpp"
+#include "Steam/SDK/Basic.cpp"
+#include "Steam/SDK/CoreUObject_functions.cpp"
+#include "Steam/SDK/Engine_functions.cpp"
+#endif
 
 using namespace SDK;
 

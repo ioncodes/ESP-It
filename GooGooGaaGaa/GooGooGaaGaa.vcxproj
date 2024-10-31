@@ -136,9 +136,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SDK\Basic.cpp" />
-    <ClCompile Include="SDK\CoreUObject_functions.cpp" />
-    <ClCompile Include="SDK\Engine_functions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
