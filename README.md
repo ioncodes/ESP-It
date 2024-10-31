@@ -16,7 +16,7 @@ If you see `uwu we successfully hooked the post renderer owo` in the top left yo
 ## How to build
 You should be able to just open the solution in Visual Studio and build it. The project defaults to the Steam version, if you need the Epic Games version built add the following line in `main.cpp`:
 ```c
-#define EPIC_GAMES
+#define EPIC_SDK
 ```
 
 ## TODO
