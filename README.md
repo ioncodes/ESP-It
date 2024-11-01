@@ -1,5 +1,5 @@
 # ESP-It
-ESP cheat for Witch it, currently compatible with the latest version 1.6.0.3 (23225) for both the Steam and Epic Games version. Renders the player name above every player - including props/witches.
+ESP cheat for Witch It, currently compatible with the latest version 1.6.0.3 (23225) for both the Steam and Epic Games version. Renders the player name above every player - including props/witches.
 
 ## How does it work
 Basically just swaps the VMT entry for the UE5 PostRender function. In the hook we render the playername into the canvas for each pawn. It technically also enables the internal UE console which is neat if you want to dump GNames and what not.
