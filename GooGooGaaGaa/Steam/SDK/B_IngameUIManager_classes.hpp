@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_RememberAfterSaveLayoutAction_structs.hpp"
 #include "SOpenWidgetInfo_structs.hpp"
-#include "EChatType_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "ETeamID_structs.hpp"
 #include "ESkillCategory_structs.hpp"
+#include "E_RememberAfterSaveLayoutAction_structs.hpp"
+#include "EChatType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "EResultType_structs.hpp"
 

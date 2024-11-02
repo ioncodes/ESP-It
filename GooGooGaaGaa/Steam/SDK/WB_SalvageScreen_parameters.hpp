@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "S_ItemInfo_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
-#include "E_Slot_structs.hpp"
 #include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
+#include "S_ItemInfo_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "B_Rarity_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "E_Slot_structs.hpp"
+#include "B_Rarity_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "WB_BaseControl_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "WB_BaseControl_classes.hpp"
 
 
 namespace SDK

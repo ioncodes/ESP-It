@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "E_MeetingState_structs.hpp"
 #include "B_GameState_classes.hpp"
 #include "E_ImpostorState_structs.hpp"
-#include "E_MeetingState_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SCalculatedScoreStat_structs.hpp"
 #include "EWitchScoreStat_structs.hpp"
 #include "EHunterScoreStat_structs.hpp"
+#include "SCalculatedScoreStat_structs.hpp"
 
 
 namespace SDK::Params

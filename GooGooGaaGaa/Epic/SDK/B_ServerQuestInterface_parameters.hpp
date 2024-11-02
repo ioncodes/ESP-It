@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "QuestObjective_structs.hpp"
 #include "LowEntryJson_structs.hpp"
+#include "QuestObjective_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

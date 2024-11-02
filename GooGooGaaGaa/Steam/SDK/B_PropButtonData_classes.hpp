@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "B_TileViewData_classes.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "B_TileViewData_classes.hpp"
 
 
 namespace SDK

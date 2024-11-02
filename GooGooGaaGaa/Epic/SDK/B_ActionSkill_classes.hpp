@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_ActionSkillMode_structs.hpp"
 #include "B_BaseHunterSkill_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "S_PropVolumeCategory_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EHighlightChannel_structs.hpp"
 #include "SRuntimePropData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EHighlightChannel_structs.hpp"
 
 
 namespace SDK::Params

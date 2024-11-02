@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_PossessNotWorkingReason_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_BaseWitchSkill_classes.hpp"
 
 

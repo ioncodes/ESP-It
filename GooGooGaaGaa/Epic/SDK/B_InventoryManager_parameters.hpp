@@ -13,14 +13,14 @@
 #include "S_ItemInfo_structs.hpp"
 #include "E_Slot_structs.hpp"
 #include "ETeamID_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
 #include "S_ItemSetInfo_structs.hpp"
-#include "B_SteamItemDef_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "B_SteamItemDef_structs.hpp"
 #include "EventNames_structs.hpp"
 #include "S_EventInfo_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EItemCraftResult_structs.hpp"
 
 

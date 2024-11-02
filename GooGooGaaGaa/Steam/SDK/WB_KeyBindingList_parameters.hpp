@@ -12,8 +12,8 @@
 
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "SAxisToEdit_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "SAxisToEdit_structs.hpp"
 
 
 namespace SDK::Params

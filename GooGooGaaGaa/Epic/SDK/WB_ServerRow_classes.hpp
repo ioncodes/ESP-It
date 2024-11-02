@@ -12,8 +12,8 @@
 
 #include "UMG_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "WB_BaseButton_classes.hpp"
 #include "Engine_structs.hpp"
+#include "WB_BaseButton_classes.hpp"
 
 
 namespace SDK

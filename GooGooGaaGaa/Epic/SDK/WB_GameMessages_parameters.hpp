@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EGameMessageType_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SGameMessage_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "ESkillCategory_structs.hpp"
 
 
 namespace SDK

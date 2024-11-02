@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "SMapData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "S_MatchRules_structs.hpp"
-#include "S_GameModifier_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "SCalculatedScoreStat_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "S_GameModifier_structs.hpp"
+#include "S_MatchRules_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "S_SkillRules_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"

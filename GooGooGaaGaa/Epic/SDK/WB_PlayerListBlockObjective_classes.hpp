@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_PlayerListBlock_classes.hpp"
 
 

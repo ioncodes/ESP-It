@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
 #include "S_GameModifier_structs.hpp"
 #include "E_GameModifierType_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "Engine_structs.hpp"
 
 

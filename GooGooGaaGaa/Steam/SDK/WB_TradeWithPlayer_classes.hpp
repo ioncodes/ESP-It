@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "UMG_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
 
 

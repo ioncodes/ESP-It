@@ -14,8 +14,8 @@
 #include "S_EntryPresence_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "UMG_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_PresenceStates_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK

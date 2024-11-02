@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "B_SkinItem_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK

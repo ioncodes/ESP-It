@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "PropWitchHuntModule_classes.hpp"
 #include "S_RecipeInfo_structs.hpp"
-#include "E_Slot_structs.hpp"
+#include "B_SteamItemDef_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EventNames_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "B_SteamItemDef_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
+#include "E_Slot_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "EventNames_structs.hpp"
 #include "EItemCraftResult_structs.hpp"
 
 

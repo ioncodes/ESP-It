@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "S_Stat_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "LowEntryJson_structs.hpp"
+#include "S_Stat_structs.hpp"
 
 
 namespace SDK::Params

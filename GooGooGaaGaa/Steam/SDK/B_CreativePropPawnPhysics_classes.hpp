@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_PropPawnPhysics_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_PropPawnPhysics_classes.hpp"
 
 
 namespace SDK

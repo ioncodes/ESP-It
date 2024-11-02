@@ -12,9 +12,9 @@
 
 #include "UMG_structs.hpp"
 #include "E_ConnectivityType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "E_ConnectivityState_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "WB_TileViewButton_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

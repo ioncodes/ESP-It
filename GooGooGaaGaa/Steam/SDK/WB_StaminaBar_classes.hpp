@@ -30,10 +30,10 @@ public:
 	double                                        VisualPercentage;                                  // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	ESlateVisibility GetVisibility_0();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Construct();
 	void ExecuteUbergraph_WB_StaminaBar(int32 EntryPoint);
+	ESlateVisibility GetVisibility_0();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

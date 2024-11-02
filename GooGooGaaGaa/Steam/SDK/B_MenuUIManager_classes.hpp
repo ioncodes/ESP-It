@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EMenuState_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EMenuState_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SNeededIngredient_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
+#include "SNeededIngredient_structs.hpp"
 
 
 namespace SDK::Params

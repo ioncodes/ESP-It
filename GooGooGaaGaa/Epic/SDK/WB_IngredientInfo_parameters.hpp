@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_Ingredient_structs.hpp"
 #include "B_Rarity_structs.hpp"
+#include "B_Ingredient_structs.hpp"
 #include "E_Ingredients_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "SMapData_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "UMG_structs.hpp"
-#include "E_MapListMenuState_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "ESalvageCategory_structs.hpp"
+#include "SMapData_structs.hpp"
+#include "E_MapListMenuState_structs.hpp"
+#include "UMG_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
 
 

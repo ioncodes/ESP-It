@@ -42,6 +42,7 @@ public:
 
 public:
 	void OnNoQuestToFocusFound__DelegateSignature();
+	void HideQuestUI();
 	void SetInitialFocus(int32 WidgetToFocus);
 	void DoesAnyQuestHaveFocus(bool* FocusedQuestExists, int32* FocusedIndex);
 	void SetUpNavigation();
@@ -53,6 +54,7 @@ public:
 	void Construct();
 	void UpdateItems();
 	void HandleReceiveAssignedQuests(TArray<struct FClientQuest>& Quests);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WB_QuestBlock(int32 EntryPoint);
 
 public:

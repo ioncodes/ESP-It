@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "S_Task_structs.hpp"
-#include "Engine_structs.hpp"
-#include "E_TaskType_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_TaskType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "S_Task_structs.hpp"
 
 
 namespace SDK

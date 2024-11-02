@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ETeamID_structs.hpp"
+#include "UMG_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK::Params

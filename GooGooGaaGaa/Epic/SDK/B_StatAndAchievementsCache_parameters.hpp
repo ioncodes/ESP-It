@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "E_StatSetBy_structs.hpp"
 #include "S_Stat_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

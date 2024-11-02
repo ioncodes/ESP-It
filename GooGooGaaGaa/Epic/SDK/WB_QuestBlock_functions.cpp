@@ -31,6 +31,20 @@ void UWB_QuestBlock_C::OnNoQuestToFocusFound__DelegateSignature()
 }
 
 
+// Function WB_QuestBlock.WB_QuestBlock_C.HideQuestUI
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_QuestBlock_C::HideQuestUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_QuestBlock_C", "HideQuestUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_QuestBlock.WB_QuestBlock_C.SetInitialFocus
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -242,6 +256,28 @@ void UWB_QuestBlock_C::HandleReceiveAssignedQuests(TArray<struct FClientQuest>& 
 	UObject::ProcessEvent(Func, &Parms);
 
 	Quests = std::move(Parms.Quests);
+}
+
+
+// Function WB_QuestBlock.WB_QuestBlock_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_QuestBlock_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_QuestBlock_C", "Tick");
+
+	Params::WB_QuestBlock_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

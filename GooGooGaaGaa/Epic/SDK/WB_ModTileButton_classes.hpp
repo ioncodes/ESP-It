@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "WB_TileViewButton_classes.hpp"
-#include "E_GameModifierType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_GameModifierType_structs.hpp"
 
 
 namespace SDK

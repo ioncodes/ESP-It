@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_MapSize_structs.hpp"
 #include "E_MapContest_structs.hpp"
+#include "E_MapSize_structs.hpp"
 
 
 namespace SDK

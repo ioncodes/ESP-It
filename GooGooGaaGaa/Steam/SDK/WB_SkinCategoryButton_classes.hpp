@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
-#include "WB_CategoryButton_classes.hpp"
 #include "UMG_structs.hpp"
+#include "E_Slot_structs.hpp"
+#include "WB_CategoryButton_classes.hpp"
 
 
 namespace SDK

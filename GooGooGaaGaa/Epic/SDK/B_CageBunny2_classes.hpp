@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "B_StaticMeshProp_classes.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "B_StaticMeshProp_classes.hpp"
 
 
 namespace SDK

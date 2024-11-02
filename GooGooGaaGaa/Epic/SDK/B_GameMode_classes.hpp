@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_JoinAsHunterStates_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SMapData_structs.hpp"
+#include "E_JoinAsHunterStates_structs.hpp"
 #include "E_MapSize_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "EGameMessageType_structs.hpp"

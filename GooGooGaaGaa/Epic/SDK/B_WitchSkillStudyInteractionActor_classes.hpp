@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "B_WaitInteractionActor_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "LowEntryExtendedStandardLibrary_structs.hpp"
+#include "B_WaitInteractionActor_classes.hpp"
 
 
 namespace SDK

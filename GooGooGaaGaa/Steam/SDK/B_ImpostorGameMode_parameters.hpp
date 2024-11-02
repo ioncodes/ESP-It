@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ETeamID_structs.hpp"
 #include "E_TaskType_structs.hpp"
 
 

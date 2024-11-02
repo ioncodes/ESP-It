@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ESkillCategory_structs.hpp"
-#include "E_SkillType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
+#include "E_SkillType_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
 

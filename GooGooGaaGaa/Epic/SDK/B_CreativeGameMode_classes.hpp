@@ -12,8 +12,8 @@
 
 #include "PropWitchHuntModule_structs.hpp"
 #include "B_GameMode_classes.hpp"
-#include "Engine_structs.hpp"
 #include "E_PropLayoutType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "LowEntryFileManager_structs.hpp"
 
 

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EHighlightChannel_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "EHighlightChannel_structs.hpp"
 
 
 namespace SDK

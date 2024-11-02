@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EHunterScoreStat_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "EWitchScoreStat_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK

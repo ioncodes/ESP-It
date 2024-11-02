@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "S_MatchRules_structs.hpp"
-#include "S_GameModifier_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
+#include "S_GameModifier_structs.hpp"
+#include "S_MatchRules_structs.hpp"
 #include "S_TournamentPlayer_structs.hpp"
 #include "S_SkillRules_structs.hpp"
 #include "CoreUObject_structs.hpp"

@@ -6,44 +6,44 @@
 * https://github.com/Encryqed/Dumper-7
 */
 
-// Package: DreamlandMenuMap
+// Package: StartupMap
 
 #include "Basic.hpp"
 
-#include "DreamlandMenuMap_classes.hpp"
-#include "DreamlandMenuMap_parameters.hpp"
+#include "StartupMap_classes.hpp"
+#include "StartupMap_parameters.hpp"
 
 
 namespace SDK
 {
 
-// Function DreamlandMenuMap.DreamlandMenuMap_C.ReceiveBeginPlay
+// Function StartupMap.StartupMap_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
-void ADreamlandMenuMap_C::ReceiveBeginPlay()
+void AStartupMap_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DreamlandMenuMap_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("StartupMap_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function DreamlandMenuMap.DreamlandMenuMap_C.ExecuteUbergraph_DreamlandMenuMap
+// Function StartupMap.StartupMap_C.ExecuteUbergraph_StartupMap
 // (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ADreamlandMenuMap_C::ExecuteUbergraph_DreamlandMenuMap(int32 EntryPoint)
+void AStartupMap_C::ExecuteUbergraph_StartupMap(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DreamlandMenuMap_C", "ExecuteUbergraph_DreamlandMenuMap");
+		Func = Class->GetFunction("StartupMap_C", "ExecuteUbergraph_StartupMap");
 
-	Params::DreamlandMenuMap_C_ExecuteUbergraph_DreamlandMenuMap Parms{};
+	Params::StartupMap_C_ExecuteUbergraph_StartupMap Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 

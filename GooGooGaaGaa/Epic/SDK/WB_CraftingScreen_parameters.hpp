@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "S_RecipeInfo_structs.hpp"
 #include "B_Ingredient_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 

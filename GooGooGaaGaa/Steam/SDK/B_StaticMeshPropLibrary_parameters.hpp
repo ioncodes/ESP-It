@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "S_PropVolumeCategory_structs.hpp"
+#include "SRuntimePropData_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EPropPhysicalGroup_structs.hpp"
-#include "SRuntimePropData_structs.hpp"
 
 
 namespace SDK::Params

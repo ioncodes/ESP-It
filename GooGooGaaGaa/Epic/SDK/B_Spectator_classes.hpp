@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_JoinAsHunterStates_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_JoinAsHunterStates_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ETeamID_structs.hpp"
 

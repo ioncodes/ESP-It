@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "B_Dummy_classes.hpp"
 #include "LowEntryExtendedStandardLibrary_structs.hpp"
+#include "B_Dummy_classes.hpp"
 
 
 namespace SDK

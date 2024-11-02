@@ -12,8 +12,8 @@
 
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK::Params

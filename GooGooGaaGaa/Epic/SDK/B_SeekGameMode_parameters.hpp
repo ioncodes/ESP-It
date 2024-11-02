@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_JoinAsHunterStates_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "ETeamID_structs.hpp"

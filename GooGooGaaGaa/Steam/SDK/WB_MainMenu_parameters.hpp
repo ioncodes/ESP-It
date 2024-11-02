@@ -12,15 +12,15 @@
 
 #include "MasterServerPlugin_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
 #include "EventNames_structs.hpp"
 #include "S_SystemMessage_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "S_Event_structs.hpp"
 #include "S_EventInfo_structs.hpp"
+#include "S_Event_structs.hpp"
 #include "SNeededIngredient_structs.hpp"
+#include "S_ItemInfo_structs.hpp"
 
 
 namespace SDK::Params

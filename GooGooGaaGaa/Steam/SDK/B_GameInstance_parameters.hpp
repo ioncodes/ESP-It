@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemUtils_structs.hpp"
-#include "SMapData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "NetCore_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 

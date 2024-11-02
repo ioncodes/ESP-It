@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESalvageCategory_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
 #include "WB_CategoryButton_classes.hpp"
 
 

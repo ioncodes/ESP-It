@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "SControllerBinding_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SAxisToEdit_structs.hpp"
+#include "SActionMappings_structs.hpp"
 #include "SAxisMappings_structs.hpp"
 #include "EControllerLayout_structs.hpp"
-#include "SActionMappings_structs.hpp"
-#include "SAxisToEdit_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SControllerBinding_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
 

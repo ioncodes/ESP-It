@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_LightColor_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_LightColor_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_ActionPlacable_classes.hpp"
 

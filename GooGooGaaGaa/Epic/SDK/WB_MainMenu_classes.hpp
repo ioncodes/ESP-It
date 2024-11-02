@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "EventNames_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "EventNames_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 

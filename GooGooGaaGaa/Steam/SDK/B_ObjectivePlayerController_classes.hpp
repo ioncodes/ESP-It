@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_ObjectiveTeam_structs.hpp"
 #include "B_PlayerController_classes.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 
 
 namespace SDK

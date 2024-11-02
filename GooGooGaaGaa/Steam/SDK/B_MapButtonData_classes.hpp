@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "B_TileViewData_classes.hpp"
 #include "SMapData_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "B_TileViewData_classes.hpp"
 
 
 namespace SDK

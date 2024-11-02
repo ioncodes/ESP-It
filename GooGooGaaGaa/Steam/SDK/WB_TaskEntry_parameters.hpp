@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "S_Task_structs.hpp"
 #include "E_TaskType_structs.hpp"
+#include "S_Task_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

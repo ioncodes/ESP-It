@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EPropPhysicalGroup_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EPropPhysicalGroup_structs.hpp"
 
 
 namespace SDK
