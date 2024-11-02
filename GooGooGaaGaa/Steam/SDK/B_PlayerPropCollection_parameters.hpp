@@ -12,8 +12,8 @@
 
 #include "S_PropData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_PropSet_structs.hpp"
 #include "E_PropCategory_structs.hpp"
+#include "E_PropSet_structs.hpp"
 
 
 namespace SDK::Params

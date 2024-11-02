@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "E_ActionPropType_structs.hpp"
-#include "E_CreativePlayerMode_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "E_CreativePlayerMode_structs.hpp"
 
 
 namespace SDK::Params

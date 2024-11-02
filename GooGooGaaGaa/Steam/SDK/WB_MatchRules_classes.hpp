@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "UMG_classes.hpp"
 #include "E_MatchRuleType_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

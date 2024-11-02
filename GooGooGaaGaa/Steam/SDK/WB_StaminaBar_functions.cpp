@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function WB_StaminaBar.WB_StaminaBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWB_StaminaBar_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_StaminaBar_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_StaminaBar.WB_StaminaBar_C.ExecuteUbergraph_WB_StaminaBar
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_StaminaBar_C::ExecuteUbergraph_WB_StaminaBar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_StaminaBar_C", "ExecuteUbergraph_WB_StaminaBar");
-
-	Params::WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WB_StaminaBar.WB_StaminaBar_C.GetVisibility_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -88,6 +54,40 @@ void UWB_StaminaBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 
 	Parms.MyGeometry = std::move(MyGeometry);
 	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_StaminaBar.WB_StaminaBar_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_StaminaBar_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_StaminaBar_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_StaminaBar.WB_StaminaBar_C.ExecuteUbergraph_WB_StaminaBar
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_StaminaBar_C::ExecuteUbergraph_WB_StaminaBar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_StaminaBar_C", "ExecuteUbergraph_WB_StaminaBar");
+
+	Params::WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

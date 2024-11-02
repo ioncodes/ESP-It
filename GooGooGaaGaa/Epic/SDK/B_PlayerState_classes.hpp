@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "SSelectedSkills_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "SClientItemUnlock_structs.hpp"
-#include "SSelectedSkills_structs.hpp"
+#include "ESkillCategory_structs.hpp"
 
 
 namespace SDK

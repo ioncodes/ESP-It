@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "ETeamID_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "S_TournamentPlayer_structs.hpp"
 #include "E_MapSize_structs.hpp"
-#include "E_JoinAsHunterStates_structs.hpp"
-#include "SMapData_structs.hpp"
+#include "ETeamID_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
-#include "SCalculatedScoreStat_structs.hpp"
 #include "EGameMessageType_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
+#include "E_JoinAsHunterStates_structs.hpp"
+#include "SCalculatedScoreStat_structs.hpp"
+#include "S_TournamentPlayer_structs.hpp"
 #include "VaRest_structs.hpp"
 
 

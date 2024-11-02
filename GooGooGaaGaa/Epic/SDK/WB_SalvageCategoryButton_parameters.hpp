@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESalvageCategory_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
 
 
 namespace SDK::Params

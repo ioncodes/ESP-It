@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WB_ServerRow.WB_ServerRow_C.SetWidgetValues
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWB_ServerRow_C::SetWidgetValues()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerRow_C", "SetWidgetValues");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_ServerRow.WB_ServerRow_C.GetToolTipWidget_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -71,39 +85,19 @@ class FText UWB_ServerRow_C::Get_Duration_Text_0()
 }
 
 
-// Function WB_ServerRow.WB_ServerRow_C.Get_GameRules_Text_0
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_ServerRow_C::Get_GameRules_Text_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "Get_GameRules_Text_0");
-
-	Params::WB_ServerRow_C_Get_GameRules_Text_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_ServerRow.WB_ServerRow_C.Get_PasswordProtectedImage_1_Visibility_0
+// Function WB_ServerRow.WB_ServerRow_C.GetIsUserGeneratedContentVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UWB_ServerRow_C::Get_PasswordProtectedImage_1_Visibility_0()
+ESlateVisibility UWB_ServerRow_C::GetIsUserGeneratedContentVisibility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "Get_PasswordProtectedImage_1_Visibility_0");
+		Func = Class->GetFunction("WB_ServerRow_C", "GetIsUserGeneratedContentVisibility");
 
-	Params::WB_ServerRow_C_Get_PasswordProtectedImage_1_Visibility_0 Parms{};
+	Params::WB_ServerRow_C_GetIsUserGeneratedContentVisibility Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -150,19 +144,19 @@ struct FEventReply UWB_ServerRow_C::OnFocusReceived(const struct FGeometry& MyGe
 }
 
 
-// Function WB_ServerRow.WB_ServerRow_C.Get_PasswordProtectedImage_Visibility_0
+// Function WB_ServerRow.WB_ServerRow_C.GetPasswordProtectedVisibility
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UWB_ServerRow_C::Get_PasswordProtectedImage_Visibility_0()
+ESlateVisibility UWB_ServerRow_C::GetPasswordProtectedVisibility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "Get_PasswordProtectedImage_Visibility_0");
+		Func = Class->GetFunction("WB_ServerRow_C", "GetPasswordProtectedVisibility");
 
-	Params::WB_ServerRow_C_Get_PasswordProtectedImage_Visibility_0 Parms{};
+	Params::WB_ServerRow_C_GetPasswordProtectedVisibility Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -191,7 +185,7 @@ ESlateVisibility UWB_ServerRow_C::Get_PingThrobber_Visibility_0()
 
 
 // Function WB_ServerRow.WB_ServerRow_C.GetPlayerCountNumber
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   PlayerCount                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -224,46 +218,6 @@ bool UWB_ServerRow_C::Get_SelectServer_bIsEnabled_0()
 		Func = Class->GetFunction("WB_ServerRow_C", "Get_SelectServer_bIsEnabled_0");
 
 	Params::WB_ServerRow_C_Get_SelectServer_bIsEnabled_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_ServerRow.WB_ServerRow_C.Get_GameMode_Text_0
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_ServerRow_C::Get_GameMode_Text_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "Get_GameMode_Text_0");
-
-	Params::WB_ServerRow_C_Get_GameMode_Text_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_ServerRow.WB_ServerRow_C.Get_Map_Text_0
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_ServerRow_C::Get_Map_Text_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "Get_Map_Text_0");
-
-	Params::WB_ServerRow_C_Get_Map_Text_0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -507,45 +461,55 @@ void UWB_ServerRow_C::OnSuccess_7E31FBC146D6B1AC1BE93AA7265B325E(const class FSt
 }
 
 
-// Function WB_ServerRow.WB_ServerRow_C.OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// Function WB_ServerRow.WB_ServerRow_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
 
-void UWB_ServerRow_C::OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage)
+void UWB_ServerRow_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA");
+		Func = Class->GetFunction("WB_ServerRow_C", "BP_OnEntryReleased");
 
-	Params::WB_ServerRow_C_OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+// Function WB_ServerRow.WB_ServerRow_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerRow_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerRow_C", "BP_OnItemExpansionChanged");
+
+	Params::WB_ServerRow_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WB_ServerRow.WB_ServerRow_C.OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA
-// (BlueprintCallable, BlueprintEvent)
+// Function WB_ServerRow.WB_ServerRow_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ServerRow_C::OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage)
+void UWB_ServerRow_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerRow_C", "OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA");
+		Func = Class->GetFunction("WB_ServerRow_C", "BP_OnItemSelectionChanged");
 
-	Params::WB_ServerRow_C_OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA Parms{};
+	Params::WB_ServerRow_C_BP_OnItemSelectionChanged Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -646,6 +610,26 @@ void UWB_ServerRow_C::GetServerPing()
 		Func = Class->GetFunction("WB_ServerRow_C", "GetServerPing");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ServerRow.WB_ServerRow_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerRow_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerRow_C", "OnListItemObjectSet");
+
+	Params::WB_ServerRow_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "WB_CategoryMenuScreen_classes.hpp"
+#include "ESalvageCategory_structs.hpp"
 #include "UMG_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_PowerupRuleType_structs.hpp"
-#include "E_GameModifierType_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
+#include "E_GameModifierType_structs.hpp"
 #include "S_GameModifier_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
 #include "S_SkillRules_structs.hpp"

@@ -13,9 +13,9 @@
 #include "PropWitchHuntModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "B_SkinColor_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SCalculatedScoreStat_structs.hpp"
-#include "B_SkinColor_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 
 

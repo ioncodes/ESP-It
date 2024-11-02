@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "ETeamID_structs.hpp"
-#include "E_PowerupRuleType_structs.hpp"
 #include "E_GameModifierType_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "S_SystemMessage_structs.hpp"
-#include "E_DowntimeType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_AffectedService_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_DowntimeType_structs.hpp"
+#include "E_AffectedService_structs.hpp"
 #include "UMG_classes.hpp"
+#include "S_SystemMessage_structs.hpp"
 
 
 namespace SDK

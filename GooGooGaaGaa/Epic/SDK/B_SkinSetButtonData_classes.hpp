@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_SkinOrRecipeItemData_classes.hpp"
 #include "S_ItemSetInfo_structs.hpp"
+#include "B_SkinOrRecipeItemData_classes.hpp"
 
 
 namespace SDK

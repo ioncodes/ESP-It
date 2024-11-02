@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SAxisToEdit_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SAxisToEdit_structs.hpp"
 
 
 namespace SDK::Params

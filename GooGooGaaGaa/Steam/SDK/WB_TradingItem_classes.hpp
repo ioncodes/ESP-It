@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MasterServerPlugin_structs.hpp"
 #include "WB_SkinOrRecipeButton_classes.hpp"
+#include "MasterServerPlugin_structs.hpp"
 
 
 namespace SDK

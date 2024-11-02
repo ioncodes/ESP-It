@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "E_StatSetBy_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "S_Stat_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

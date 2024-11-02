@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "B_Rarity_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "E_Slot_structs.hpp"
 
 
 namespace SDK::Params

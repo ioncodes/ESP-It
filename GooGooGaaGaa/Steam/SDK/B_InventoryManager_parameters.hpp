@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "E_Slot_structs.hpp"
+#include "EventNames_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "S_ItemSetInfo_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "B_SteamItemDef_structs.hpp"
+#include "S_ItemSetInfo_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "S_EventInfo_structs.hpp"
-#include "EventNames_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EItemCraftResult_structs.hpp"
 
@@ -278,113 +278,117 @@ static_assert(offsetof(B_InventoryManager_C_CraftItem, ReagentIDs_0) == 0x000010
 static_assert(offsetof(B_InventoryManager_C_CraftItem, AmountToCraft_0) == 0x000020, "Member 'B_InventoryManager_C_CraftItem::AmountToCraft_0' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.ExecuteUbergraph_B_InventoryManager
-// 0x0498 (0x0498 - 0x0000)
+// 0x04A8 (0x04A8 - 0x0000)
 struct B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_17;                       // 0x0008(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_16;                       // 0x0018(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable;                              // 0x0038(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_15;                       // 0x0058(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_14;                       // 0x0068(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_1;                            // 0x0088(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_13;                       // 0x00A8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_12;                       // 0x00B8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x00D8(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_11;                       // 0x00F8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_10;                       // 0x0108(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0118(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x0128(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0138(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_9;                        // 0x0148(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_8;                        // 0x0158(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0168(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_4;                            // 0x0178(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           CallFunc_FastReloadItems_NewItems;                 // 0x0188(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0198(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x01A8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_6;                        // 0x01B8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x01C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_5;                            // 0x01D8(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_5;                        // 0x01F8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_4;                        // 0x0208(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0218(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_6;                            // 0x0228(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0238(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0248(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x0258(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0268(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_7;                            // 0x0278(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           CallFunc_GetOwnedIngredientItems_IngredientItems;  // 0x0288(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_1;                        // 0x0298(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x02A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items;                          // 0x02B8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x02C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_8;                            // 0x02D8(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_18;                       // 0x02E8(0x0010)(ConstParm, ReferenceParm)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue;                  // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue;              // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31A[0x6];                                      // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue;              // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_3; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue_1;            // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_1;            // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A[0x6];                                      // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_2;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_3;            // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0361(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0362(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_363[0x1];                                      // 0x0363(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x0364(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_GetUnownedItemIDs_Unowned_Item_IDs;       // 0x0378(0x0010)(ReferenceParm)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_4; // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GenerateItems_ReturnValue;                // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_CustomEvent_ItemsToCraft;                   // 0x03A0(0x0010)(ConstParm, ReferenceParm)
-	TArray<int32>                                 K2Node_CustomEvent_ReagentIDs;                     // 0x03B0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_CustomEvent_AmountToCraft;                  // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C5[0x3];                                      // 0x03C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_19;                       // 0x03C8(0x0010)(ConstParm, ReferenceParm)
-	class APlayerController*                      CallFunc_GetPlayerController_PlayerController;     // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F2[0x6];                                      // 0x03F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x03F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x040C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x0410(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsXboxBuild_ReturnValue;                  // 0x0421(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPS4Build_ReturnValue;                   // 0x0422(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0423(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425[0x3];                                      // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_17;                       // 0x0010(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_IsConnectedTo_IsConnected;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate;              // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_16;                       // 0x0038(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable;                              // 0x0048(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_15;                       // 0x0068(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_14;                       // 0x0078(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_1;                            // 0x0098(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x00A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_13;                       // 0x00B8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_12;                       // 0x00C8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x00D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x00E8(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_11;                       // 0x0108(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_10;                       // 0x0118(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x0138(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0148(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_9;                        // 0x0158(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_8;                        // 0x0168(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0178(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_4;                            // 0x0188(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           CallFunc_FastReloadItems_NewItems;                 // 0x0198(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x01A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x01B8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_6;                        // 0x01C8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x01D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_5;                            // 0x01E8(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x01F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_5;                        // 0x0208(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_4;                        // 0x0218(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0228(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_6;                            // 0x0238(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0248(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0258(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x0268(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0278(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_7;                            // 0x0288(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           CallFunc_GetOwnedIngredientItems_IngredientItems;  // 0x0298(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_1;                        // 0x02A8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x02B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items;                          // 0x02C8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x02D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_8;                            // 0x02E8(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_18;                       // 0x02F8(0x0010)(ConstParm, ReferenceParm)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue;                  // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue;              // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32A[0x6];                                      // 0x032A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue;              // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_3; // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue_1;            // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_1;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35A[0x6];                                      // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_2;            // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_3;            // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0372(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_373[0x1];                                      // 0x0373(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x0374(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_GetUnownedItemIDs_Unowned_Item_IDs;       // 0x0388(0x0010)(ReferenceParm)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_4; // 0x0398(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GenerateItems_ReturnValue;                // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_CustomEvent_ItemsToCraft;                   // 0x03B0(0x0010)(ConstParm, ReferenceParm)
+	TArray<int32>                                 K2Node_CustomEvent_ReagentIDs;                     // 0x03C0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_CustomEvent_AmountToCraft;                  // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x03D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D5[0x3];                                      // 0x03D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_19;                       // 0x03D8(0x0010)(ConstParm, ReferenceParm)
+	class APlayerController*                      CallFunc_GetPlayerController_PlayerController;     // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0401(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_402[0x2];                                      // 0x0402(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x3];                                      // 0x0409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x040C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x041C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsXboxBuild_ReturnValue;                  // 0x041D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPS4Build_ReturnValue;                   // 0x041E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x041F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x3];                                      // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x0424(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -403,103 +407,106 @@ public:
 	class UGetAllItemsCallbackProxy*              CallFunc_ExchangeItems_ReturnValue;                // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0491(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_492[0x2];                                      // 0x0492(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0494(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0498(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x000008, "Wrong alignment on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
-static_assert(sizeof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x000498, "Wrong size on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
+static_assert(sizeof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x0004A8, "Wrong size on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, EntryPoint) == 0x000000, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Array_Index_Variable) == 0x000004, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_17) == 0x000008, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_17' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_16) == 0x000018, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_16' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable) == 0x000038, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000048, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_15) == 0x000058, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_15' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_14) == 0x000068, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_14' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000078, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_1) == 0x000088, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x000098, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_13) == 0x0000A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_13' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_12) == 0x0000B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_12' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_2) == 0x0000D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_11) == 0x0000F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_11' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_10) == 0x000108, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_10' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000118, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_3) == 0x000128, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000138, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_9) == 0x000148, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_8) == 0x000158, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x000168, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_4) == 0x000178, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_FastReloadItems_NewItems) == 0x000188, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_FastReloadItems_NewItems' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x000198, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_7) == 0x0001A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_6) == 0x0001B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x0001C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_5) == 0x0001D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x0001E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_5) == 0x0001F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_4) == 0x000208, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000218, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_6) == 0x000228, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x000238, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_3) == 0x000248, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_2) == 0x000258, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x000268, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_7) == 0x000278, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetOwnedIngredientItems_IngredientItems) == 0x000288, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetOwnedIngredientItems_IngredientItems' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_1) == 0x000298, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x0002A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items) == 0x0002B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0002C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_8) == 0x0002D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_18) == 0x0002E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_18' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x0002F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000300, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetAllItems_ReturnValue) == 0x000308, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetAllItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue) == 0x000310, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue) == 0x000318, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_1) == 0x000319, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x000320, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue) == 0x000328, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_3) == 0x000330, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue_1) == 0x000338, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_1) == 0x000340, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_2) == 0x000348, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_3) == 0x000349, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_2) == 0x000350, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_3) == 0x000358, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_4) == 0x000360, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_5) == 0x000361, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_6) == 0x000362, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x000364, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetUnownedItemIDs_Unowned_Item_IDs) == 0x000378, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetUnownedItemIDs_Unowned_Item_IDs' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_4) == 0x000388, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GenerateItems_ReturnValue) == 0x000390, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GenerateItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_7) == 0x000398, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ItemsToCraft) == 0x0003A0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ItemsToCraft' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ReagentIDs) == 0x0003B0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ReagentIDs' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_AmountToCraft) == 0x0003C0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_AmountToCraft' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_WithEditor_ReturnValue) == 0x0003C4, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_19) == 0x0003C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_19' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetPlayerController_PlayerController) == 0x0003D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetPlayerController_PlayerController' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameState_ReturnValue) == 0x0003E0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_AsB_Game_State) == 0x0003E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_bSuccess) == 0x0003F0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue) == 0x0003F1, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Get_Item) == 0x0003F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue) == 0x000408, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x00040C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x000410, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue) == 0x000420, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsXboxBuild_ReturnValue) == 0x000421, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsXboxBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsPS4Build_ReturnValue) == 0x000422, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsPS4Build_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_1) == 0x000423, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_2) == 0x000424, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x000428, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetItemQuantity_ReturnValue) == 0x000438, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue_1) == 0x00043C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetBGameInstance_ReturnValue) == 0x000008, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_17) == 0x000010, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_17' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsConnectedTo_IsConnected) == 0x000020, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsConnectedTo_IsConnected' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate) == 0x000024, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_16) == 0x000038, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_16' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable) == 0x000048, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000058, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_15) == 0x000068, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_15' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_14) == 0x000078, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_14' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000088, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_1) == 0x000098, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_13) == 0x0000B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_13' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_12) == 0x0000C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_12' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_2) == 0x0000E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_11) == 0x000108, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_11' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_10) == 0x000118, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_10' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000128, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_3) == 0x000138, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000148, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_9) == 0x000158, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_8) == 0x000168, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x000178, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_4) == 0x000188, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_FastReloadItems_NewItems) == 0x000198, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_FastReloadItems_NewItems' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x0001A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_7) == 0x0001B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_6) == 0x0001C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x0001D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_5) == 0x0001E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x0001F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_5) == 0x000208, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_4) == 0x000218, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000228, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_6) == 0x000238, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x000248, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_3) == 0x000258, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_2) == 0x000268, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x000278, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_7) == 0x000288, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetOwnedIngredientItems_IngredientItems) == 0x000298, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetOwnedIngredientItems_IngredientItems' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_1) == 0x0002A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x0002B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items) == 0x0002C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0002D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_8) == 0x0002E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_18) == 0x0002F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_18' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000308, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000310, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetAllItems_ReturnValue) == 0x000318, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetAllItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue) == 0x000320, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue) == 0x000328, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_1) == 0x000329, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x000330, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue) == 0x000338, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_3) == 0x000340, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue_1) == 0x000348, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_1) == 0x000350, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_2) == 0x000358, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_3) == 0x000359, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_2) == 0x000360, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_3) == 0x000368, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_4) == 0x000370, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_5) == 0x000371, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_6) == 0x000372, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x000374, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetUnownedItemIDs_Unowned_Item_IDs) == 0x000388, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetUnownedItemIDs_Unowned_Item_IDs' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_4) == 0x000398, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GenerateItems_ReturnValue) == 0x0003A0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GenerateItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_7) == 0x0003A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ItemsToCraft) == 0x0003B0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ItemsToCraft' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ReagentIDs) == 0x0003C0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ReagentIDs' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_AmountToCraft) == 0x0003D0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_AmountToCraft' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_WithEditor_ReturnValue) == 0x0003D4, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_19) == 0x0003D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_19' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetPlayerController_PlayerController) == 0x0003E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetPlayerController_PlayerController' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameState_ReturnValue) == 0x0003F0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_AsB_Game_State) == 0x0003F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_bSuccess) == 0x000400, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue) == 0x000401, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue) == 0x000404, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x000408, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x00040C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue) == 0x00041C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsXboxBuild_ReturnValue) == 0x00041D, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsXboxBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsPS4Build_ReturnValue) == 0x00041E, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsPS4Build_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_1) == 0x00041F, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_2) == 0x000420, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x000424, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetItemQuantity_ReturnValue) == 0x000434, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue_1) == 0x000438, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameInstance_ReturnValue) == 0x000440, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000448, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_5) == 0x000450, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_5' has a wrong offset!");
@@ -514,6 +521,8 @@ static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager,
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_ExchangeItems_ReturnValue) == 0x000488, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_ExchangeItems_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_9) == 0x000490, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000491, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Array_Index_Variable) == 0x000494, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Get_Item) == 0x000498, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Get_Item' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.FastReloadItems
 // 0x00D8 (0x00D8 - 0x0000)

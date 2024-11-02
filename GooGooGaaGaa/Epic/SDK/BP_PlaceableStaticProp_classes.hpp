@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_MapType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_PlaceableActor_classes.hpp"
-#include "E_MapType_structs.hpp"
 
 
 namespace SDK

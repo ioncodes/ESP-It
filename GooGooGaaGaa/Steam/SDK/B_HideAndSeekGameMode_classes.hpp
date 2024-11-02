@@ -26,9 +26,9 @@ public:
 	bool                                          HuntersWin;                                        // 0x05C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_B_HideAndSeekGameMode(int32 EntryPoint);
 	void HandleEndMatchByTime();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_B_HideAndSeekGameMode(int32 EntryPoint);
 
 	void GetPlayObjectiveId(int64* ObjectiveId) const;
 	void GetWinObjectiveId(int64* ObjectiveId) const;

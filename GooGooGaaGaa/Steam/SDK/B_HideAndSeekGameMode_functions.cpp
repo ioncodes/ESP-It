@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function B_HideAndSeekGameMode.B_HideAndSeekGameMode_C.ExecuteUbergraph_B_HideAndSeekGameMode
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_HideAndSeekGameMode_C::ExecuteUbergraph_B_HideAndSeekGameMode(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HideAndSeekGameMode_C", "ExecuteUbergraph_B_HideAndSeekGameMode");
+
+	Params::B_HideAndSeekGameMode_C_ExecuteUbergraph_B_HideAndSeekGameMode Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_HideAndSeekGameMode.B_HideAndSeekGameMode_C.HandleEndMatchByTime
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -42,26 +62,6 @@ void AB_HideAndSeekGameMode_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("B_HideAndSeekGameMode_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HideAndSeekGameMode.B_HideAndSeekGameMode_C.ExecuteUbergraph_B_HideAndSeekGameMode
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_HideAndSeekGameMode_C::ExecuteUbergraph_B_HideAndSeekGameMode(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HideAndSeekGameMode_C", "ExecuteUbergraph_B_HideAndSeekGameMode");
-
-	Params::B_HideAndSeekGameMode_C_ExecuteUbergraph_B_HideAndSeekGameMode Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

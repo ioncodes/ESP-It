@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ETeamID_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
-#include "ETeamID_structs.hpp"
 
 
 namespace SDK

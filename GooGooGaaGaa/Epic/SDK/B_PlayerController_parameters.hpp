@@ -12,16 +12,16 @@
 
 #include "CoreUObject_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "S_ServerStat_structs.hpp"
-#include "EChatType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_AchievementData_structs.hpp"
 #include "ClientQuest_structs.hpp"
+#include "S_ServerStat_structs.hpp"
+#include "EChatType_structs.hpp"
+#include "S_TournamentPlayer_structs.hpp"
 #include "ETeamID_structs.hpp"
-#include "Engine_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 #include "SSelectedSkills_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "S_TournamentPlayer_structs.hpp"
 
 
 namespace SDK::Params

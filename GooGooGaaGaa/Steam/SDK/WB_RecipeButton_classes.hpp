@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "B_Rarity_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WB_SkinOrRecipeButton_classes.hpp"
+#include "B_Rarity_structs.hpp"
 
 
 namespace SDK

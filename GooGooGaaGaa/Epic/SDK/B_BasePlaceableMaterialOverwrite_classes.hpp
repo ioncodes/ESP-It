@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "S_MaterialEntry_structs.hpp"
-#include "E_MapType_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "E_MapType_structs.hpp"
 
 
 namespace SDK

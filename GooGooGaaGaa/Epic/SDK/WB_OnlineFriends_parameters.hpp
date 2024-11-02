@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "S_EntryPresence_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "E_PresenceStates_structs.hpp"
 #include "Engine_structs.hpp"
+#include "S_EntryPresence_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 

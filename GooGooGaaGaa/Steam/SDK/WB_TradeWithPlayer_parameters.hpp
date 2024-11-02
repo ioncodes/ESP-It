@@ -16,8 +16,8 @@
 #include "S_RecipeInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "E_QuestionAnswer_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "E_QuestionAnswer_structs.hpp"
 #include "Engine_structs.hpp"
 
 

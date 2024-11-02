@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveTeam_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_SeekGameMode_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 
 
 namespace SDK

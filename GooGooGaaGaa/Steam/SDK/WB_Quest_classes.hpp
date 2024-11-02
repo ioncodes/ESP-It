@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "ClientQuest_structs.hpp"
-#include "UMG_classes.hpp"
 #include "ClientQuestType_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
-#include "E_PowerupRuleType_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "Engine_structs.hpp"
 
 

@@ -12,8 +12,8 @@
 
 #include "ETeamID_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "SSelectedSkills_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params

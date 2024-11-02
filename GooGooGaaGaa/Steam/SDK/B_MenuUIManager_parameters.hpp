@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EMenuState_structs.hpp"
 #include "Slate_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "EMenuState_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 

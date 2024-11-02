@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "E_Slot_structs.hpp"
-#include "B_Rarity_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_Ingredients_structs.hpp"
+#include "B_Rarity_structs.hpp"
 
 
 namespace SDK

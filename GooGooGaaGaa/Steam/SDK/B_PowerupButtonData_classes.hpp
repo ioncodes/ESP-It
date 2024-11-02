@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "B_TileViewData_classes.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 
 
 namespace SDK

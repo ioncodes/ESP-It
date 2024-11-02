@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "WB_SkinButton_classes.hpp"
-#include "S_ItemSetInfo_structs.hpp"
 #include "E_Slot_structs.hpp"
+#include "Engine_structs.hpp"
+#include "S_ItemSetInfo_structs.hpp"
+#include "WB_SkinButton_classes.hpp"
 
 
 namespace SDK

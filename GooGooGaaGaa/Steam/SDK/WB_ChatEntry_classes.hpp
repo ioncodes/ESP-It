@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SChatMessage_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "EChatType_structs.hpp"

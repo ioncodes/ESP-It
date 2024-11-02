@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "S_PropLayoutData_structs.hpp"
 #include "Engine_structs.hpp"
+#include "S_PropLayoutData_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "E_QuestionAnswer_structs.hpp"

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "S_ItemInfo_structs.hpp"
 #include "ESalvageCategory_structs.hpp"
 #include "E_Slot_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
 #include "UMG_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "S_ItemSetInfo_structs.hpp"

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
 #include "WB_CategoryMenuScreen_classes.hpp"
+#include "ESalvageCategory_structs.hpp"
 
 
 namespace SDK

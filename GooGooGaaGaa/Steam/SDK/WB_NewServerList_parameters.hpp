@@ -12,13 +12,13 @@
 
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ESortMethod_structs.hpp"
+#include "EServerFilter_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "EServerFilter_structs.hpp"
-#include "ESortMethod_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -921,101 +921,19 @@ static_assert(offsetof(WB_NewServerList_C_SortBy, CallFunc_EqualEqual_ByteByte_R
 static_assert(offsetof(WB_NewServerList_C_SortBy, CallFunc_Not_PreBool_ReturnValue) == 0x000002, "Member 'WB_NewServerList_C_SortBy::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_NewServerList.WB_NewServerList_C.SortServer
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_NewServerList_C_SortServer final
 {
 public:
 	class UObject*                                A;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                B;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Return;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ServerRow_C*                        K2Node_DynamicCast_AsWB_Server_Row;                // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ServerRow_C*                        K2Node_DynamicCast_AsWB_Server_Row_1;              // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Get_GameRules_Text_0_ReturnValue;         // 0x0038(0x0010)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get_Duration_Text_0_ReturnValue;          // 0x0060(0x0010)()
-	int32                                         CallFunc_GetPlayerCountNumber_PlayerCount;         // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get_GameMode_Text_0_ReturnValue;          // 0x0088(0x0010)()
-	class FString                                 CallFunc_RemoveCharactersExcept_ReturnValue;       // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get_Map_Text_0_ReturnValue;               // 0x00B8(0x0010)()
-	class FText                                   CallFunc_GetServerName_ReturnValue;                // 0x00C8(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_3;          // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_4;          // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get_GameRules_Text_0_ReturnValue_1;       // 0x00F8(0x0010)()
-	class FText                                   CallFunc_Get_Duration_Text_0_ReturnValue_1;        // 0x0108(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_5;          // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_6;          // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessStringString_ReturnValue;             // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_RemoveCharactersExcept_ReturnValue_1;     // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessStringString_ReturnValue_1;           // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetPlayerCountNumber_PlayerCount_1;       // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Get_GameMode_Text_0_ReturnValue_1;        // 0x0160(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_7;          // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get_Map_Text_0_ReturnValue_1;             // 0x0180(0x0010)()
-	bool                                          CallFunc_LessStringString_ReturnValue_2;           // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_8;          // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessStringString_ReturnValue_3;           // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetServerName_ReturnValue_1;              // 0x01B0(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_9;          // 0x01C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessStringString_ReturnValue_4;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_NewServerList_C_SortServer) == 0x000008, "Wrong alignment on WB_NewServerList_C_SortServer");
-static_assert(sizeof(WB_NewServerList_C_SortServer) == 0x0001D8, "Wrong size on WB_NewServerList_C_SortServer");
+static_assert(sizeof(WB_NewServerList_C_SortServer) == 0x000018, "Wrong size on WB_NewServerList_C_SortServer");
 static_assert(offsetof(WB_NewServerList_C_SortServer, A) == 0x000000, "Member 'WB_NewServerList_C_SortServer::A' has a wrong offset!");
 static_assert(offsetof(WB_NewServerList_C_SortServer, B) == 0x000008, "Member 'WB_NewServerList_C_SortServer::B' has a wrong offset!");
 static_assert(offsetof(WB_NewServerList_C_SortServer, Return) == 0x000010, "Member 'WB_NewServerList_C_SortServer::Return' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, K2Node_DynamicCast_AsWB_Server_Row) == 0x000018, "Member 'WB_NewServerList_C_SortServer::K2Node_DynamicCast_AsWB_Server_Row' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_NewServerList_C_SortServer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, K2Node_DynamicCast_AsWB_Server_Row_1) == 0x000028, "Member 'WB_NewServerList_C_SortServer::K2Node_DynamicCast_AsWB_Server_Row_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_NewServerList_C_SortServer::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_GameRules_Text_0_ReturnValue) == 0x000038, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_GameRules_Text_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'WB_NewServerList_C_SortServer::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue) == 0x000050, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_Duration_Text_0_ReturnValue) == 0x000060, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_Duration_Text_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_GetPlayerCountNumber_PlayerCount) == 0x000070, "Member 'WB_NewServerList_C_SortServer::CallFunc_GetPlayerCountNumber_PlayerCount' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000078, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_GameMode_Text_0_ReturnValue) == 0x000088, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_GameMode_Text_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_RemoveCharactersExcept_ReturnValue) == 0x000098, "Member 'WB_NewServerList_C_SortServer::CallFunc_RemoveCharactersExcept_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000A8, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_Map_Text_0_ReturnValue) == 0x0000B8, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_Map_Text_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_GetServerName_ReturnValue) == 0x0000C8, "Member 'WB_NewServerList_C_SortServer::CallFunc_GetServerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_3) == 0x0000D8, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_4) == 0x0000E8, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_GameRules_Text_0_ReturnValue_1) == 0x0000F8, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_GameRules_Text_0_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_Duration_Text_0_ReturnValue_1) == 0x000108, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_Duration_Text_0_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_5) == 0x000118, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_6) == 0x000128, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_LessStringString_ReturnValue) == 0x000138, "Member 'WB_NewServerList_C_SortServer::CallFunc_LessStringString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_RemoveCharactersExcept_ReturnValue_1) == 0x000140, "Member 'WB_NewServerList_C_SortServer::CallFunc_RemoveCharactersExcept_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_LessStringString_ReturnValue_1) == 0x000150, "Member 'WB_NewServerList_C_SortServer::CallFunc_LessStringString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_GetPlayerCountNumber_PlayerCount_1) == 0x000154, "Member 'WB_NewServerList_C_SortServer::CallFunc_GetPlayerCountNumber_PlayerCount_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Less_IntInt_ReturnValue_1) == 0x000158, "Member 'WB_NewServerList_C_SortServer::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_GameMode_Text_0_ReturnValue_1) == 0x000160, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_GameMode_Text_0_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_7) == 0x000170, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Get_Map_Text_0_ReturnValue_1) == 0x000180, "Member 'WB_NewServerList_C_SortServer::CallFunc_Get_Map_Text_0_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_LessStringString_ReturnValue_2) == 0x000190, "Member 'WB_NewServerList_C_SortServer::CallFunc_LessStringString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_8) == 0x000198, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_LessStringString_ReturnValue_3) == 0x0001A8, "Member 'WB_NewServerList_C_SortServer::CallFunc_LessStringString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_GetServerName_ReturnValue_1) == 0x0001B0, "Member 'WB_NewServerList_C_SortServer::CallFunc_GetServerName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_Conv_TextToString_ReturnValue_9) == 0x0001C0, "Member 'WB_NewServerList_C_SortServer::CallFunc_Conv_TextToString_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, CallFunc_LessStringString_ReturnValue_4) == 0x0001D0, "Member 'WB_NewServerList_C_SortServer::CallFunc_LessStringString_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_NewServerList_C_SortServer, K2Node_SwitchEnum_CmpSuccess) == 0x0001D1, "Member 'WB_NewServerList_C_SortServer::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WB_NewServerList.WB_NewServerList_C.UpdateTabButtonStyles
 // 0x0028 (0x0028 - 0x0000)

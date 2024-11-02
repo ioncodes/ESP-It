@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_Ingredients_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_Ingredients_structs.hpp"
 #include "B_Rarity_structs.hpp"
 
 

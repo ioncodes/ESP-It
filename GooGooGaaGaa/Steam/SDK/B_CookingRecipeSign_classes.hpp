@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_Dummy_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "B_Dummy_classes.hpp"
 
 
 namespace SDK

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "S_RecipeInfo_structs.hpp"
 #include "UMG_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "B_Rarity_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 

@@ -295,20 +295,6 @@ void UWB_ServerList_C::ExecuteUbergraph_WB_ServerList(int32 EntryPoint)
 }
 
 
-// Function WB_ServerList.WB_ServerList_C.FocusServerButton
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_ServerList_C::FocusServerButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerList_C", "FocusServerButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_ServerList.WB_ServerList_C.Get_DurationSortImage_Visibility_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -869,6 +855,46 @@ void UWB_ServerList_C::OnCallFailed_456AB2C74F07026000179C81BD4DC490(bool bWasSu
 }
 
 
+// Function WB_ServerList.WB_ServerList_C.OnCallFailed_4FD22F724DF4D5357C18E9B00328D93E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerList_C::OnCallFailed_4FD22F724DF4D5357C18E9B00328D93E(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnCallFailed_4FD22F724DF4D5357C18E9B00328D93E");
+
+	Params::WB_ServerList_C_OnCallFailed_4FD22F724DF4D5357C18E9B00328D93E Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_ServerList.WB_ServerList_C.OnCallFailed_4FD22F724DF4D5357C18E9B01100757B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerList_C::OnCallFailed_4FD22F724DF4D5357C18E9B01100757B(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnCallFailed_4FD22F724DF4D5357C18E9B01100757B");
+
+	Params::WB_ServerList_C_OnCallFailed_4FD22F724DF4D5357C18E9B01100757B Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_ServerList.WB_ServerList_C.OnCallFailed_542E60C048C6474E739F6A86CFE54BE5
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1029,6 +1055,46 @@ void UWB_ServerList_C::OnFindSessionsComplete_456AB2C74F07026000179C81BD4DC490(b
 }
 
 
+// Function WB_ServerList.WB_ServerList_C.OnFindSessionsComplete_4FD22F724DF4D5357C18E9B00328D93E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerList_C::OnFindSessionsComplete_4FD22F724DF4D5357C18E9B00328D93E(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnFindSessionsComplete_4FD22F724DF4D5357C18E9B00328D93E");
+
+	Params::WB_ServerList_C_OnFindSessionsComplete_4FD22F724DF4D5357C18E9B00328D93E Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_ServerList.WB_ServerList_C.OnFindSessionsComplete_4FD22F724DF4D5357C18E9B01100757B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServerList_C::OnFindSessionsComplete_4FD22F724DF4D5357C18E9B01100757B(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnFindSessionsComplete_4FD22F724DF4D5357C18E9B01100757B");
+
+	Params::WB_ServerList_C_OnFindSessionsComplete_4FD22F724DF4D5357C18E9B01100757B Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_ServerList.WB_ServerList_C.OnFindSessionsComplete_AD6707DF4707F115F8ED888FE9A43620
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1145,10 +1211,10 @@ void UWB_ServerList_C::RemoveAllServers()
 // Function WB_ServerList.WB_ServerList_C.ServerPassesCurrentFilter
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UWB_ServerRow_C*                  ServerRow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_ServerRowData_C*               ServerData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    Pass                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ServerList_C::ServerPassesCurrentFilter(class UWB_ServerRow_C* ServerRow, bool* Pass)
+void UWB_ServerList_C::ServerPassesCurrentFilter(class UB_ServerRowData_C* ServerData, bool* Pass)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1157,7 +1223,7 @@ void UWB_ServerList_C::ServerPassesCurrentFilter(class UWB_ServerRow_C* ServerRo
 
 	Params::WB_ServerList_C_ServerPassesCurrentFilter Parms{};
 
-	Parms.ServerRow = ServerRow;
+	Parms.ServerData = ServerData;
 
 	UObject::ProcessEvent(Func, &Parms);
 

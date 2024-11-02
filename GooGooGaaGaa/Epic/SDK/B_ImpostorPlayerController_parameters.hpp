@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_TaskType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EChatType_structs.hpp"
+#include "E_TaskType_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "S_PropLayoutData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SMapData_structs.hpp"
+#include "S_PropLayoutData_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "E_MapSize_structs.hpp"

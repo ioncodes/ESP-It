@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SActionAndTeam_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "SActionAndTeam_structs.hpp"
 
 
 namespace SDK

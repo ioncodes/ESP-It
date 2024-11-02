@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveTeam_structs.hpp"
-#include "S_PropList_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "B_SeekGameState_classes.hpp"
 #include "EResultType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "B_SeekGameState_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "S_PropList_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 
 
 namespace SDK

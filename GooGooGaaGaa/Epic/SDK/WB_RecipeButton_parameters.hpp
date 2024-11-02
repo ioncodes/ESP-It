@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "B_Rarity_structs.hpp"
 #include "UMG_structs.hpp"
 #include "B_Ingredient_structs.hpp"
-#include "B_Rarity_structs.hpp"
 
 
 namespace SDK::Params

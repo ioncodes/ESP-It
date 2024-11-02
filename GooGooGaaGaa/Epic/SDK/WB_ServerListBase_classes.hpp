@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ServerListBase.WB_ServerListBase_C
-// 0x0038 (0x0318 - 0x02E0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_ServerListBase_C : public UUserWidget
 {
 public:
@@ -27,11 +27,12 @@ public:
 	TArray<class UWB_ServerRow_C*>                FoundServerWidgets;                                // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class FString>                         ListedServerNames;                                 // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class FString>                         ExternalIds;                                       // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UB_ServerRowData_C*>             FoundServers;                                      // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void AddServerRowEOS(const struct FOnlineSessionSearchResultBP& SearchResult, bool IsCustom, bool UserGeneratedContent, class UWB_ServerRow_C** ServerWidget);
+	void AddServerRowEOS(const struct FOnlineSessionSearchResultBP& SearchResult, bool IsCustom, bool UserGeneratedContent, class UB_ServerRowData_C** ServerRowData);
 	void HandleServersFoundEOS(TArray<struct FOnlineSessionSearchResultBP>& Servers);
-	void HandleServerFoundEOS(const struct FOnlineSessionSearchResultBP& CurrentServer, class UWB_ServerRow_C** ServerWidget);
+	void HandleServerFoundEOS(const struct FOnlineSessionSearchResultBP& CurrentServer, class UB_ServerRowData_C** ServerEowData);
 
 public:
 	static class UClass* StaticClass()
@@ -44,11 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_ServerListBase_C) == 0x000008, "Wrong alignment on UWB_ServerListBase_C");
-static_assert(sizeof(UWB_ServerListBase_C) == 0x000318, "Wrong size on UWB_ServerListBase_C");
+static_assert(sizeof(UWB_ServerListBase_C) == 0x000328, "Wrong size on UWB_ServerListBase_C");
 static_assert(offsetof(UWB_ServerListBase_C, StatusTextVisibility) == 0x0002E0, "Member 'UWB_ServerListBase_C::StatusTextVisibility' has a wrong offset!");
 static_assert(offsetof(UWB_ServerListBase_C, FoundServerWidgets) == 0x0002E8, "Member 'UWB_ServerListBase_C::FoundServerWidgets' has a wrong offset!");
 static_assert(offsetof(UWB_ServerListBase_C, ListedServerNames) == 0x0002F8, "Member 'UWB_ServerListBase_C::ListedServerNames' has a wrong offset!");
 static_assert(offsetof(UWB_ServerListBase_C, ExternalIds) == 0x000308, "Member 'UWB_ServerListBase_C::ExternalIds' has a wrong offset!");
+static_assert(offsetof(UWB_ServerListBase_C, FoundServers) == 0x000318, "Member 'UWB_ServerListBase_C::FoundServers' has a wrong offset!");
 
 }
 

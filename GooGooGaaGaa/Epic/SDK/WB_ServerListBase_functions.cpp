@@ -23,9 +23,9 @@ namespace SDK
 // struct FOnlineSessionSearchResultBP     SearchResult                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    IsCustom                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    UserGeneratedContent                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWB_ServerRow_C*                  ServerWidget                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_ServerRowData_C*               ServerRowData                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ServerListBase_C::AddServerRowEOS(const struct FOnlineSessionSearchResultBP& SearchResult, bool IsCustom, bool UserGeneratedContent, class UWB_ServerRow_C** ServerWidget)
+void UWB_ServerListBase_C::AddServerRowEOS(const struct FOnlineSessionSearchResultBP& SearchResult, bool IsCustom, bool UserGeneratedContent, class UB_ServerRowData_C** ServerRowData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -40,8 +40,8 @@ void UWB_ServerListBase_C::AddServerRowEOS(const struct FOnlineSessionSearchResu
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (ServerWidget != nullptr)
-		*ServerWidget = Parms.ServerWidget;
+	if (ServerRowData != nullptr)
+		*ServerRowData = Parms.ServerRowData;
 }
 
 
@@ -71,9 +71,9 @@ void UWB_ServerListBase_C::HandleServersFoundEOS(TArray<struct FOnlineSessionSea
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FOnlineSessionSearchResultBP     CurrentServer                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UWB_ServerRow_C*                  ServerWidget                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_ServerRowData_C*               ServerEowData                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ServerListBase_C::HandleServerFoundEOS(const struct FOnlineSessionSearchResultBP& CurrentServer, class UWB_ServerRow_C** ServerWidget)
+void UWB_ServerListBase_C::HandleServerFoundEOS(const struct FOnlineSessionSearchResultBP& CurrentServer, class UB_ServerRowData_C** ServerEowData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,8 +86,8 @@ void UWB_ServerListBase_C::HandleServerFoundEOS(const struct FOnlineSessionSearc
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (ServerWidget != nullptr)
-		*ServerWidget = Parms.ServerWidget;
+	if (ServerEowData != nullptr)
+		*ServerEowData = Parms.ServerEowData;
 }
 
 }

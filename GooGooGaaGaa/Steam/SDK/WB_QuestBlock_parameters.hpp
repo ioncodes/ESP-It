@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "ClientQuestType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "ClientQuest_structs.hpp"
+#include "ClientQuestType_structs.hpp"
 
 
 namespace SDK::Params

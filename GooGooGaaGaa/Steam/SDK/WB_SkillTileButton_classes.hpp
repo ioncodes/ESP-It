@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_SkillRuleType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "WB_TileViewButton_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

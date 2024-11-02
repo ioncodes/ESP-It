@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "S_InviteInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "E_PopupType_structs.hpp"
+#include "S_InviteInfo_structs.hpp"
 
 
 namespace SDK::Params

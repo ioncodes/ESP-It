@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass B_Potato.B_Potato_C
 // 0x0100 (0x0390 - 0x0290)
-class AB_Potato_C : public AActor
+class AB_Potato_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

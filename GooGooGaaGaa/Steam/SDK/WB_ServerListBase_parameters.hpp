@@ -20,7 +20,7 @@ namespace SDK::Params
 {
 
 // Function WB_ServerListBase.WB_ServerListBase_C.AddServerRowEOS
-// 0x0440 (0x0440 - 0x0000)
+// 0x0468 (0x0468 - 0x0000)
 struct WB_ServerListBase_C_AddServerRowEOS final
 {
 public:
@@ -28,31 +28,43 @@ public:
 	bool                                          IsCustom;                                          // 0x01B8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UserGeneratedContent;                              // 0x01B9(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ServerRow_C*                        ServerWidget;                                      // 0x01C0(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FOnlineSessionSettingBP> ExtraSettings;                                     // 0x01C8(0x0050)(Edit, BlueprintVisible)
-	struct FOnlineSessionSearchResultBP           BlueprintSearchResult;                             // 0x0218(0x01B8)(Edit, BlueprintVisible)
-	TMap<class FName, struct FOnlineSessionSettingBP> CallFunc_GetExtraSessionSettings_ExtraSettings;    // 0x03D0(0x0050)()
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421[0x3];                                      // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_ServerRow_C*                        CallFunc_Create_ReturnValue;                       // 0x0430(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     ServerRowData;                                     // 0x01C0(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     NewServerEntry;                                    // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FOnlineSessionSettingBP> ExtraSettings;                                     // 0x01D0(0x0050)(Edit, BlueprintVisible)
+	struct FOnlineSessionSearchResultBP           BlueprintSearchResult;                             // 0x0220(0x01B8)(Edit, BlueprintVisible)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineMessageSanitizerSubsystem*       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_ServerRowData_C*                     CallFunc_CreateObject_Object;                      // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FOnlineSessionSettingBP> CallFunc_GetExtraSessionSettings_ExtraSettings;    // 0x0410(0x0050)()
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_461[0x3];                                      // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0464(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ServerListBase_C_AddServerRowEOS) == 0x000008, "Wrong alignment on WB_ServerListBase_C_AddServerRowEOS");
-static_assert(sizeof(WB_ServerListBase_C_AddServerRowEOS) == 0x000440, "Wrong size on WB_ServerListBase_C_AddServerRowEOS");
+static_assert(sizeof(WB_ServerListBase_C_AddServerRowEOS) == 0x000468, "Wrong size on WB_ServerListBase_C_AddServerRowEOS");
 static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, SearchResult) == 0x000000, "Member 'WB_ServerListBase_C_AddServerRowEOS::SearchResult' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, IsCustom) == 0x0001B8, "Member 'WB_ServerListBase_C_AddServerRowEOS::IsCustom' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, UserGeneratedContent) == 0x0001B9, "Member 'WB_ServerListBase_C_AddServerRowEOS::UserGeneratedContent' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, ServerWidget) == 0x0001C0, "Member 'WB_ServerListBase_C_AddServerRowEOS::ServerWidget' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, ExtraSettings) == 0x0001C8, "Member 'WB_ServerListBase_C_AddServerRowEOS::ExtraSettings' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, BlueprintSearchResult) == 0x000218, "Member 'WB_ServerListBase_C_AddServerRowEOS::BlueprintSearchResult' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetExtraSessionSettings_ExtraSettings) == 0x0003D0, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetExtraSessionSettings_ExtraSettings' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Contains_ReturnValue) == 0x000420, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Add_ReturnValue) == 0x000424, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetOwningPlayer_ReturnValue) == 0x000428, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Create_ReturnValue) == 0x000430, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Add_ReturnValue_1) == 0x000438, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, ServerRowData) == 0x0001C0, "Member 'WB_ServerListBase_C_AddServerRowEOS::ServerRowData' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, NewServerEntry) == 0x0001C8, "Member 'WB_ServerListBase_C_AddServerRowEOS::NewServerEntry' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, ExtraSettings) == 0x0001D0, "Member 'WB_ServerListBase_C_AddServerRowEOS::ExtraSettings' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, BlueprintSearchResult) == 0x000220, "Member 'WB_ServerListBase_C_AddServerRowEOS::BlueprintSearchResult' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetGameInstance_ReturnValue) == 0x0003D8, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, K2Node_DynamicCast_AsB_Game_Instance) == 0x0003E0, "Member 'WB_ServerListBase_C_AddServerRowEOS::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, K2Node_DynamicCast_bSuccess) == 0x0003E8, "Member 'WB_ServerListBase_C_AddServerRowEOS::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0003F0, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0003F8, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Add_ReturnValue) == 0x000400, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_CreateObject_Object) == 0x000408, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_GetExtraSessionSettings_ExtraSettings) == 0x000410, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_GetExtraSessionSettings_ExtraSettings' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Contains_ReturnValue) == 0x000460, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_AddServerRowEOS, CallFunc_Array_Add_ReturnValue_1) == 0x000464, "Member 'WB_ServerListBase_C_AddServerRowEOS::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
 
 // Function WB_ServerListBase.WB_ServerListBase_C.HandleServersFoundEOS
 // 0x0328 (0x0328 - 0x0000)
@@ -70,7 +82,7 @@ public:
 	struct FOnlineSessionSearchResultBP           CallFunc_Array_Get_Item;                           // 0x0150(0x01B8)()
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ServerRow_C*                        CallFunc_HandleServerFoundEOS_ServerWidget;        // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     CallFunc_HandleServerFoundEOS_ServerEowData;       // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31D[0x3];                                      // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -87,7 +99,7 @@ static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_Great
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_IsSessionUsageAllowed_bIsAllowed) == 0x000149, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_IsSessionUsageAllowed_bIsAllowed' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_Array_Get_Item) == 0x000150, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_Array_Length_ReturnValue_1) == 0x000308, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_HandleServerFoundEOS_ServerWidget) == 0x000310, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_HandleServerFoundEOS_ServerWidget' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_HandleServerFoundEOS_ServerEowData) == 0x000310, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_HandleServerFoundEOS_ServerEowData' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, Temp_int_Loop_Counter_Variable) == 0x000318, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_Less_IntInt_ReturnValue) == 0x00031C, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServersFoundEOS, CallFunc_Add_IntInt_ReturnValue) == 0x000320, "Member 'WB_ServerListBase_C_HandleServersFoundEOS::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
@@ -98,7 +110,7 @@ struct WB_ServerListBase_C_HandleServerFoundEOS final
 {
 public:
 	struct FOnlineSessionSearchResultBP           CurrentServer;                                     // 0x0000(0x01B8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UWB_ServerRow_C*                        ServerWidget;                                      // 0x01B8(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     ServerEowData;                                     // 0x01B8(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          UserGeneratedContent;                              // 0x01C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FOnlineSessionSettingBP> CurrentExtraSessings;                              // 0x01C8(0x0050)(Edit, BlueprintVisible)
@@ -157,7 +169,7 @@ public:
 	class FString                                 CallFunc_GetSessionSettingValue_As_String_2;       // 0x0408(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ServerRow_C*                        CallFunc_AddServerRowEOS_ServerWidget;             // 0x0420(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     CallFunc_AddServerRowEOS_ServerRowData;            // 0x0420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetResolvedConnectStringBySearchResult_bWasSuccessful; // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -174,7 +186,7 @@ public:
 static_assert(alignof(WB_ServerListBase_C_HandleServerFoundEOS) == 0x000008, "Wrong alignment on WB_ServerListBase_C_HandleServerFoundEOS");
 static_assert(sizeof(WB_ServerListBase_C_HandleServerFoundEOS) == 0x000488, "Wrong size on WB_ServerListBase_C_HandleServerFoundEOS");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CurrentServer) == 0x000000, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CurrentServer' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, ServerWidget) == 0x0001B8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::ServerWidget' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, ServerEowData) == 0x0001B8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::ServerEowData' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, UserGeneratedContent) == 0x0001C0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::UserGeneratedContent' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CurrentExtraSessings) == 0x0001C8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CurrentExtraSessings' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetExtraSessionSettings_ExtraSettings) == 0x000218, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetExtraSessionSettings_ExtraSettings' has a wrong offset!");
@@ -217,7 +229,7 @@ static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSes
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Int_64_2) == 0x000400, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Int_64_2' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_String_2) == 0x000408, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_String_2' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_BooleanAND_ReturnValue) == 0x000418, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_AddServerRowEOS_ServerWidget) == 0x000420, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_AddServerRowEOS_ServerWidget' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_AddServerRowEOS_ServerRowData) == 0x000420, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_AddServerRowEOS_ServerRowData' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000428, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetResolvedConnectStringBySearchResult_bWasSuccessful) == 0x000430, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetResolvedConnectStringBySearchResult_bWasSuccessful' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetResolvedConnectStringBySearchResult_OutConnectInfo) == 0x000438, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetResolvedConnectStringBySearchResult_OutConnectInfo' has a wrong offset!");

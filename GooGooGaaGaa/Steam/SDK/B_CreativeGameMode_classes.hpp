@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "LowEntryFileManager_structs.hpp"
 #include "B_GameMode_classes.hpp"
 #include "E_PropLayoutType_structs.hpp"
-#include "LowEntryFileManager_structs.hpp"
 
 
 namespace SDK

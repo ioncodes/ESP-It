@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_classes.hpp"
 #include "E_ActionPropType_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 
 
 namespace SDK

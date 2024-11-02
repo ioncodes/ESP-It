@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "B_TileViewData_classes.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
-#include "B_TileViewData_classes.hpp"
 
 
 namespace SDK

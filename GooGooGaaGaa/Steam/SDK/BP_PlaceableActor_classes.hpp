@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "EHighlightChannel_structs.hpp"
 #include "E_PropCategory_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EHighlightChannel_structs.hpp"
 
 
 namespace SDK

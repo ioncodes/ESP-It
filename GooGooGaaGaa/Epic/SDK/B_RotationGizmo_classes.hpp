@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_BaseGizmo_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_BaseGizmo_classes.hpp"
 #include "E_Axis_structs.hpp"
 
 

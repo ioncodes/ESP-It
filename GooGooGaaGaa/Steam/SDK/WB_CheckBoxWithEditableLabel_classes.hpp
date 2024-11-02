@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "WB_BaseControlWithLabel_classes.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "WB_BaseControlWithLabel_classes.hpp"
 #include "UMG_structs.hpp"
 
 

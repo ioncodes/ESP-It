@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
+#include "SButtonLocalization_structs.hpp"
 #include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "SButtonLocalization_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"

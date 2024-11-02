@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_SkillRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "S_SkillRules_structs.hpp"
-#include "E_SkillRuleType_structs.hpp"
 #include "Engine_structs.hpp"
 
 

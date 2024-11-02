@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "S_PropData_structs.hpp"
 #include "Engine_structs.hpp"
+#include "S_PropData_structs.hpp"
 
 
 namespace SDK::Params

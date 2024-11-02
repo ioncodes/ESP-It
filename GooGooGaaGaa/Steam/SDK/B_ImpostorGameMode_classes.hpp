@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_TaskType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_GameMode_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "E_TaskType_structs.hpp"
 
 
 namespace SDK

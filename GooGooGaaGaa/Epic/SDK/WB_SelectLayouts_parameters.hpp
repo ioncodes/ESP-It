@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SMapData_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "SMapData_structs.hpp"
 
 
 namespace SDK::Params

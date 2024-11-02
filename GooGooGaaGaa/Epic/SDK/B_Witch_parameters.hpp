@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "SRuntimePropData_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "STauntAnimation_structs.hpp"
+#include "SRuntimePropData_structs.hpp"
 #include "SCalculatedScoreStat_structs.hpp"
+#include "STauntAnimation_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 
 

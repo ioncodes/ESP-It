@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SSelectedSkills_structs.hpp"
 #include "B_PlayerState_classes.hpp"
+#include "SSelectedSkills_structs.hpp"
 
 
 namespace SDK

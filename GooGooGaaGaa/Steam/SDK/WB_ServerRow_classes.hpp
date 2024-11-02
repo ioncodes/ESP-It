@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "WB_BaseButton_classes.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "Engine_structs.hpp"
-#include "WB_BaseButton_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -26,11 +26,11 @@ class UWB_ServerRow_C final : public UWB_BaseButton_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_WB_ServerRow_C;                     // 0x0758(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0760(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             GameMode;                                          // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Map;                                               // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MatchTime;                                         // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PasswordProtectedImage;                            // 0x0780(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PasswordProtectedImage_1;                          // 0x0788(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CreativeModeImage;                                 // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GameMode;                                          // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Map;                                               // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MatchTime;                                         // 0x0780(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PasswordProtectedImage;                            // 0x0788(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Ping;                                              // 0x0790(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UThrobber*                              PingThrobber;                                      // 0x0798(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Players;                                           // 0x07A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -50,21 +50,20 @@ public:
 	bool                                          PingCompleted;                                     // 0x09F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9F5[0x3];                                      // 0x09F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SanitizedName;                                     // 0x09F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UB_ServerRowData_C*                     ServerRowDataObject;                               // 0x0A08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void SetWidgetValues();
 	class UWidget* GetToolTipWidget_0();
 	void CreateGameRulesTooltip();
 	class FText Get_Duration_Text_0();
-	class FText Get_GameRules_Text_0();
-	ESlateVisibility Get_PasswordProtectedImage_1_Visibility_0();
+	ESlateVisibility GetIsUserGeneratedContentVisibility();
 	void ProceedJoin();
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	ESlateVisibility Get_PasswordProtectedImage_Visibility_0();
+	ESlateVisibility GetPasswordProtectedVisibility();
 	ESlateVisibility Get_PingThrobber_Visibility_0();
 	void GetPlayerCountNumber(int32* PlayerCount);
 	bool Get_SelectServer_bIsEnabled_0();
-	class FText Get_GameMode_Text_0();
-	class FText Get_Map_Text_0();
 	class FText GetPlayerCount();
 	class FText GetPing();
 	class FText GetServerName();
@@ -76,14 +75,16 @@ public:
 	void OnTimeout_7E31FBC146D6B1AC1BE93AA7265B325E(const class FString& ServerAddress, float PingMs);
 	void OnFailure_7E31FBC146D6B1AC1BE93AA7265B325E(const class FString& ServerAddress, float PingMs);
 	void OnSuccess_7E31FBC146D6B1AC1BE93AA7265B325E(const class FString& ServerAddress, float PingMs);
-	void OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage);
-	void OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage);
+	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
 	void BndEvt__Button_534_K2Node_ComponentBoundEvent_280_OnButtonClickedEvent__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Construct();
 	void ClickedServer();
 	void GetServerPing();
+	void OnListItemObjectSet(class UObject* ListItemObject);
 	void ExecuteUbergraph_WB_ServerRow(int32 EntryPoint);
 
 public:
@@ -100,11 +101,11 @@ static_assert(alignof(UWB_ServerRow_C) == 0x000010, "Wrong alignment on UWB_Serv
 static_assert(sizeof(UWB_ServerRow_C) == 0x000A10, "Wrong size on UWB_ServerRow_C");
 static_assert(offsetof(UWB_ServerRow_C, UberGraphFrame_WB_ServerRow_C) == 0x000758, "Member 'UWB_ServerRow_C::UberGraphFrame_WB_ServerRow_C' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, FocusAnimation) == 0x000760, "Member 'UWB_ServerRow_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_ServerRow_C, GameMode) == 0x000768, "Member 'UWB_ServerRow_C::GameMode' has a wrong offset!");
-static_assert(offsetof(UWB_ServerRow_C, Map) == 0x000770, "Member 'UWB_ServerRow_C::Map' has a wrong offset!");
-static_assert(offsetof(UWB_ServerRow_C, MatchTime) == 0x000778, "Member 'UWB_ServerRow_C::MatchTime' has a wrong offset!");
-static_assert(offsetof(UWB_ServerRow_C, PasswordProtectedImage) == 0x000780, "Member 'UWB_ServerRow_C::PasswordProtectedImage' has a wrong offset!");
-static_assert(offsetof(UWB_ServerRow_C, PasswordProtectedImage_1) == 0x000788, "Member 'UWB_ServerRow_C::PasswordProtectedImage_1' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, CreativeModeImage) == 0x000768, "Member 'UWB_ServerRow_C::CreativeModeImage' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, GameMode) == 0x000770, "Member 'UWB_ServerRow_C::GameMode' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, Map) == 0x000778, "Member 'UWB_ServerRow_C::Map' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, MatchTime) == 0x000780, "Member 'UWB_ServerRow_C::MatchTime' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, PasswordProtectedImage) == 0x000788, "Member 'UWB_ServerRow_C::PasswordProtectedImage' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, Ping) == 0x000790, "Member 'UWB_ServerRow_C::Ping' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, PingThrobber) == 0x000798, "Member 'UWB_ServerRow_C::PingThrobber' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, Players) == 0x0007A0, "Member 'UWB_ServerRow_C::Players' has a wrong offset!");
@@ -121,6 +122,7 @@ static_assert(offsetof(UWB_ServerRow_C, GameRulesTooltip) == 0x0009E8, "Member '
 static_assert(offsetof(UWB_ServerRow_C, ServerPing) == 0x0009F0, "Member 'UWB_ServerRow_C::ServerPing' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, PingCompleted) == 0x0009F4, "Member 'UWB_ServerRow_C::PingCompleted' has a wrong offset!");
 static_assert(offsetof(UWB_ServerRow_C, SanitizedName) == 0x0009F8, "Member 'UWB_ServerRow_C::SanitizedName' has a wrong offset!");
+static_assert(offsetof(UWB_ServerRow_C, ServerRowDataObject) == 0x000A08, "Member 'UWB_ServerRow_C::ServerRowDataObject' has a wrong offset!");
 
 }
 

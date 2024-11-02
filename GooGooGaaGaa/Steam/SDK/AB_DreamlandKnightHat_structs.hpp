@@ -16,14 +16,6 @@
 namespace SDK
 {
 
-// ScriptStruct AB_DreamlandKnightHat.AB_DreamlandKnightHat_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData");
-
 // ScriptStruct AB_DreamlandKnightHat.AB_DreamlandKnightHat_C.AnimBlueprintGeneratedConstantData
 // 0x015F (0x0160 - 0x0001)
 struct AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -50,6 +42,14 @@ static_assert(offsetof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantDat
 static_assert(offsetof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0000D0, "Member 'AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
 static_assert(offsetof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RigidBody) == 0x000100, "Member 'AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RigidBody' has a wrong offset!");
 static_assert(offsetof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000130, "Member 'AB_DreamlandKnightHat::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+
+// ScriptStruct AB_DreamlandKnightHat.AB_DreamlandKnightHat_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on AB_DreamlandKnightHat::FAnimBlueprintGeneratedMutableData");
 
 }
 
