@@ -775,32 +775,6 @@ static_assert(offsetof(AOnlineBeaconHostObject, BeaconTypeName) == 0x000290, "Me
 static_assert(offsetof(AOnlineBeaconHostObject, ClientBeaconActorClass) == 0x0002A0, "Member 'AOnlineBeaconHostObject::ClientBeaconActorClass' has a wrong offset!");
 static_assert(offsetof(AOnlineBeaconHostObject, ClientActors) == 0x0002A8, "Member 'AOnlineBeaconHostObject::ClientActors' has a wrong offset!");
 
-// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
-// 0x0160 (0x0188 - 0x0028)
-class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl final : public UOnlineEngineInterface
-{
-public:
-	TMap<class FName, class FName>                MappedUniqueNetIdTypes;                            // 0x0028(0x0050)(Config, NativeAccessSpecifierPrivate)
-	TArray<class FName>                           CompatibleUniqueNetIdTypes;                        // 0x0078(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	class FName                                   VoiceSubsystemNameOverride;                        // 0x0088(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_90[0xF8];                                      // 0x0090(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl", true>();
-	}
-	static class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<OnlineSubsystemUtils::UOnlineEngineInterfaceImpl>();
-	}
-};
-static_assert(alignof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000008, "Wrong alignment on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
-static_assert(sizeof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000188, "Wrong size on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
-static_assert(offsetof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl, MappedUniqueNetIdTypes) == 0x000028, "Member 'OnlineSubsystemUtils::UOnlineEngineInterfaceImpl::MappedUniqueNetIdTypes' has a wrong offset!");
-static_assert(offsetof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl, CompatibleUniqueNetIdTypes) == 0x000078, "Member 'OnlineSubsystemUtils::UOnlineEngineInterfaceImpl::CompatibleUniqueNetIdTypes' has a wrong offset!");
-static_assert(offsetof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl, VoiceSubsystemNameOverride) == 0x000088, "Member 'OnlineSubsystemUtils::UOnlineEngineInterfaceImpl::VoiceSubsystemNameOverride' has a wrong offset!");
-
 // Class OnlineSubsystemUtils.OnlinePIESettings
 // 0x0018 (0x0050 - 0x0038)
 class UOnlinePIESettings final : public UDeveloperSettings

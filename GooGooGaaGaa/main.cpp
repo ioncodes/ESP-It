@@ -2,11 +2,13 @@
 
 #ifdef EPIC_SDK
 #include "Epic/SDK/Engine_classes.hpp"
+#include "Epic/SDK/B_Hunter_classes.hpp"
 #include "Epic/SDK/Basic.cpp"
 #include "Epic/SDK/CoreUObject_functions.cpp"
 #include "Epic/SDK/Engine_functions.cpp"
 #else
 #include "Steam/SDK/Engine_classes.hpp"
+#include "Steam/SDK/B_Hunter_classes.hpp"
 #include "Steam/SDK/Basic.cpp"
 #include "Steam/SDK/CoreUObject_functions.cpp"
 #include "Steam/SDK/Engine_functions.cpp"
@@ -70,6 +72,9 @@ static void DrawESP(UGameViewportClient* Viewport, UCanvas* Canvas)
         APawn* Pawn = PlayerState->GetPawn();
         if (!Pawn || Pawn == CurrentPlayerPawn)
             continue;
+
+        if (Pawn->IsA(AB_Hunter_C::StaticClass()))
+			continue;
 
         FVector PawnLocation = Pawn->K2_GetActorLocation();
         FVector2D PlayerScreenLocation;
