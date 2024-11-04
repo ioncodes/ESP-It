@@ -14,7 +14,7 @@ If you see `i have a small pp` in the top left you know it worked.
 Please note that this is just a cheat, it doesn't make an attempt at evading any form of anticheat.
 
 ## Proof or it didn't happen
-![image](https://github.com/user-attachments/assets/bf7d12ac-6a2e-4163-a536-d2afd725c44a)
+![image](https://github.com/user-attachments/assets/4ecc19cb-497c-490b-995a-52ffaa5a153d)
 
 
 ## How to build
@@ -26,6 +26,7 @@ You should be able to just open the solution in Visual Studio and build it. The 
 ## TODO
 1. ~Wireframe? Draw lines or 2D box?~
    * Kind of implemented via https://github.com/ioncodes/ESP-It/issues/5
-3. Draw only playernames for witches
+2. ~Draw only playernames for witches~
+   * Done
 
 However, I'm too lazy to implement these.
