@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "LowEntryExtendedStandardLibrary_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

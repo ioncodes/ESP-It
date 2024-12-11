@@ -37,9 +37,9 @@ public:
 public:
 	class FText Get_ChooseYourTeamTest_Text_0();
 	class FText Get_GameModeText_Text_0();
-	class FText Get_GameNameText_Text_0();
 	class FText Get_RoundText_Text_0();
 	ESlateVisibility Get_RoundText_Visibility_0();
+	class FText GetGameNameTextText0();
 
 public:
 	static class UClass* StaticClass()

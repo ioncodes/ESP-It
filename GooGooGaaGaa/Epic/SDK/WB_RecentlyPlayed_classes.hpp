@@ -37,11 +37,13 @@ public:
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void GetSelectedEntry(class UWB_OnlineUserEntry_C** ListEntry);
 	void Init();
+	void LeftTriggerPressed();
 	void PresenceUpdated();
 	void RecentPlayerComparator(class UObject* ObjectA, class UObject* ObjectB, bool* Result);
 	void RefreshRecentPlayers();
 	void RemoveEntry(class UObject* EntryListObject);
 	void RemoveEntryFromMap(class UObject* EntryListObject);
+	void RightTriggerPressed();
 	void ScrollToSelectedItem();
 	void SelectionChanged(class UObject* Item, bool bIsSelected);
 	void SetItemFocus(bool ResetFocus);

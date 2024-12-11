@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SClientItemUnlock_structs.hpp"
+#include "ETeamID_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "SSelectedSkills_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "SClientItemUnlock_structs.hpp"
+#include "ESkillCategory_structs.hpp"
 
 
 namespace SDK
@@ -159,8 +159,8 @@ public:
 	void GetSelectedSkill(ESkillCategory SkillCategory, class UClass** Skill);
 	void OnRep_SelectedTeam();
 	void OnRep_IsReady();
-	void OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage);
-	void OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage);
+	void OnFailure_3B21D3544D0F5DF313D09A9D27556F36(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_3B21D3544D0F5DF313D09A9D27556F36(const TArray<class FString>& FilteredStrings);
 	void ReceiveBeginPlay();
 	void AddPropChecked(class AActor* Actor, double Damage, class UClass* DamageType);
 	void AddPropCheckedOwningClient(class AActor* Actor);

@@ -431,6 +431,22 @@ public:
 static_assert(alignof(FGizmoSelectData) == 0x000008, "Wrong alignment on FGizmoSelectData");
 static_assert(sizeof(FGizmoSelectData) == 0x000050, "Wrong size on FGizmoSelectData");
 
+// ScriptStruct Landscape.LandscapeTexture2DMipMap
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FLandscapeTexture2DMipMap final
+{
+public:
+	int32                                         SizeX;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeY;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCompressed;                                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x2F];                                       // 0x0009(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FLandscapeTexture2DMipMap) == 0x000008, "Wrong alignment on FLandscapeTexture2DMipMap");
+static_assert(sizeof(FLandscapeTexture2DMipMap) == 0x000038, "Wrong size on FLandscapeTexture2DMipMap");
+static_assert(offsetof(FLandscapeTexture2DMipMap, SizeX) == 0x000000, "Member 'FLandscapeTexture2DMipMap::SizeX' has a wrong offset!");
+static_assert(offsetof(FLandscapeTexture2DMipMap, SizeY) == 0x000004, "Member 'FLandscapeTexture2DMipMap::SizeY' has a wrong offset!");
+static_assert(offsetof(FLandscapeTexture2DMipMap, bCompressed) == 0x000008, "Member 'FLandscapeTexture2DMipMap::bCompressed' has a wrong offset!");
+
 // ScriptStruct Landscape.GrassVariety
 // 0x01B0 (0x01B0 - 0x0000)
 struct FGrassVariety final
@@ -737,22 +753,6 @@ static_assert(alignof(FLandscapeProxyMaterialOverride) == 0x000008, "Wrong align
 static_assert(sizeof(FLandscapeProxyMaterialOverride) == 0x000010, "Wrong size on FLandscapeProxyMaterialOverride");
 static_assert(offsetof(FLandscapeProxyMaterialOverride, LODIndex) == 0x000000, "Member 'FLandscapeProxyMaterialOverride::LODIndex' has a wrong offset!");
 static_assert(offsetof(FLandscapeProxyMaterialOverride, Material) == 0x000008, "Member 'FLandscapeProxyMaterialOverride::Material' has a wrong offset!");
-
-// ScriptStruct Landscape.LandscapeTexture2DMipMap
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FLandscapeTexture2DMipMap final
-{
-public:
-	int32                                         SizeX;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeY;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCompressed;                                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x2F];                                       // 0x0009(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FLandscapeTexture2DMipMap) == 0x000008, "Wrong alignment on FLandscapeTexture2DMipMap");
-static_assert(sizeof(FLandscapeTexture2DMipMap) == 0x000038, "Wrong size on FLandscapeTexture2DMipMap");
-static_assert(offsetof(FLandscapeTexture2DMipMap, SizeX) == 0x000000, "Member 'FLandscapeTexture2DMipMap::SizeX' has a wrong offset!");
-static_assert(offsetof(FLandscapeTexture2DMipMap, SizeY) == 0x000004, "Member 'FLandscapeTexture2DMipMap::SizeY' has a wrong offset!");
-static_assert(offsetof(FLandscapeTexture2DMipMap, bCompressed) == 0x000008, "Member 'FLandscapeTexture2DMipMap::bCompressed' has a wrong offset!");
 
 // ScriptStruct Landscape.PhysicalMaterialInput
 // 0x0030 (0x0030 - 0x0000)

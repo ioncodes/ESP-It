@@ -13,8 +13,8 @@
 #include "Slate_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EMenuState_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -140,24 +140,26 @@ static_assert(offsetof(B_MenuUIManager_C_CloseDialog, Widget) == 0x000000, "Memb
 static_assert(offsetof(B_MenuUIManager_C_CloseDialog, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'B_MenuUIManager_C_CloseDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function B_MenuUIManager.B_MenuUIManager_C.ExecuteUbergraph_B_MenuUIManager
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_MasterScreen_C*                     CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_ConnectionLoss_C*                   CallFunc_Create_ReturnValue_1;                     // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_MasterScreen_C*                     CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_ConnectionLoss_C*                   CallFunc_Create_ReturnValue_1;                     // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager) == 0x000008, "Wrong alignment on B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager");
-static_assert(sizeof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager) == 0x000028, "Wrong size on B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager");
+static_assert(sizeof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager) == 0x000030, "Wrong size on B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager");
 static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, EntryPoint) == 0x000000, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_GetBGameInstance_ReturnValue) == 0x000008, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_Create_ReturnValue) == 0x000010, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_Create_ReturnValue_1) == 0x000018, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, K2Node_Event_InGameInstance) == 0x000020, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::K2Node_Event_InGameInstance' has a wrong offset!");
+static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_Create_ReturnValue) == 0x000008, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_Create_ReturnValue_1) == 0x000010, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, K2Node_Event_InGameInstance) == 0x000018, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::K2Node_Event_InGameInstance' has a wrong offset!");
+static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_GetBGameInstance_ReturnValue) == 0x000020, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager, CallFunc_SwitchPlatform_ReturnValue) == 0x000028, "Member 'B_MenuUIManager_C_ExecuteUbergraph_B_MenuUIManager::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
 
 // Function B_MenuUIManager.B_MenuUIManager_C.GetGameInstance
 // 0x0018 (0x0018 - 0x0000)

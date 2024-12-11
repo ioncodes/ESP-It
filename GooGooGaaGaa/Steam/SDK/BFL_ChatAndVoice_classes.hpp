@@ -22,10 +22,11 @@ namespace SDK
 class UBFL_ChatAndVoice_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static bool ArePlayersInSameObjectiveTeam(class APlayerState* PlayerStateA, class UObject* PlayerStateB, class UObject* __WorldContext);
-	static bool ArePlayersInSameTeam(class APlayerState* PlayerStateA, class APlayerState* PlayerStateB, class UObject* __WorldContext);
+	static void IsPlayerBlocked(class UB_GameInstance_C* BGameInstance, const class FString& PlayerToCheck, class UObject* __WorldContext, bool* IsBlocked);
 	static bool IsPlayerBlockedWrapper(class APlayerState* MyPlayerState, class APlayerState* OtherPlayerState, class UObject* __WorldContext);
 	static bool IsPlayerMutedManually(class APlayerState* Player_State, class UB_SaveGameManager_C* SaveGameManager, class UObject* __WorldContext);
+	static bool ArePlayersInSameObjectiveTeam(class APlayerState* PlayerStateA, class UObject* PlayerStateB, class UObject* __WorldContext);
+	static bool ArePlayersInSameTeam(class APlayerState* PlayerStateA, class APlayerState* PlayerStateB, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

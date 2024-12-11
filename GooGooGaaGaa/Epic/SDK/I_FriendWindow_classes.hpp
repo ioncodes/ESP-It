@@ -25,7 +25,9 @@ public:
 	void Deinit();
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void Init();
+	void LeftTriggerPressed();
 	void PresenceUpdated();
+	void RightTriggerPressed();
 	void SpecialButtonPressed();
 
 public:

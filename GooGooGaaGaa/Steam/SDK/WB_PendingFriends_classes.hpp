@@ -43,11 +43,13 @@ public:
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void GetSelectedEntry(class UWB_OnlineUserEntry_C** ListEntry);
 	void Init();
+	void LeftTriggerPressed();
 	class UWidget* NavigateToOtherList(EUINavigation Navigation_0);
 	void PresenceUpdated();
 	void RefreshPendingPlayers();
 	void RemoveEntry(class UObject* EntryListObject);
 	void RemoveEntryFromMap(TMap<struct FUniqueNetIdRepl, class UB_OnlineUserEntryData_C*>& Map, class UObject* EntryObject);
+	void RightTriggerPressed();
 	void SelectionChanged(class UObject* Item, bool bIsSelected);
 	void SetItemFocus(bool ResetFocus);
 	void SpecialButtonPressed();

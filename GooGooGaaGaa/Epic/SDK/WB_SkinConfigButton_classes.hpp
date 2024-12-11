@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "WB_TileViewButton_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "WB_TileViewButton_classes.hpp"
 
 
 namespace SDK

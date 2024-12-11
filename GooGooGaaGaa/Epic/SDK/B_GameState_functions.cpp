@@ -114,6 +114,20 @@ void AB_GameState_C::IsRoundEnd(bool* RoundIsEnd)
 }
 
 
+// Function B_GameState.B_GameState_C.OnRep_IsCrossPlatformGame
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_GameState_C::OnRep_IsCrossPlatformGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameState_C", "OnRep_IsCrossPlatformGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_GameState.B_GameState_C.DetermineTickRates
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1010,6 +1024,44 @@ void AB_GameState_C::UpdateGameNameSanitized()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_GameState_C", "UpdateGameNameSanitized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameState.B_GameState_C.ShowGameMessage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             SourcePlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             TargetPlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// EGameMessageType                        MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameState_C::ShowGameMessage(const class FText& SourcePlayerName, const class FText& TargetPlayerName, EGameMessageType MessageType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameState_C", "ShowGameMessage");
+
+	Params::B_GameState_C_ShowGameMessage Parms{};
+
+	Parms.SourcePlayerName = std::move(SourcePlayerName);
+	Parms.TargetPlayerName = std::move(TargetPlayerName);
+	Parms.MessageType = MessageType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameState.B_GameState_C.OnMatchStartedClients__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AB_GameState_C::OnMatchStartedClients__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameState_C", "OnMatchStartedClients__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

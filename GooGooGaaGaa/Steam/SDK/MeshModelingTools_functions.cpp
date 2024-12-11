@@ -17,129 +17,15 @@
 namespace SDK
 {
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Bridge
+// Function MeshModelingTools.PolyEditTopologyProperties.RegenerateExtraCorners
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions_Triangles::Bridge()
+void UPolyEditTopologyProperties::RegenerateExtraCorners()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Bridge");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Collapse
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::Collapse()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Collapse");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Extrude
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::Extrude()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Extrude");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.FillHole
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::FillHole()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "FillHole");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Flip
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::Flip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Flip");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Split
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::Split()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Split");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Weld
-// (Final, Native, Public)
-
-void UEditMeshPolygonsToolEdgeActions_Triangles::Weld()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Weld");
+		Func = Class->GetFunction("PolyEditTopologyProperties", "RegenerateExtraCorners");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -492,15 +378,15 @@ void UEditMeshPolygonsToolActions::SimplifyByGroups()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolUVActions.PlanarProjection
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Bevel
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolUVActions::PlanarProjection()
+void UEditMeshPolygonsToolEdgeActions::Bevel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolUVActions", "PlanarProjection");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Bevel");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -511,15 +397,129 @@ void UEditMeshPolygonsToolUVActions::PlanarProjection()
 }
 
 
-// Function MeshModelingTools.PolyEditTopologyProperties.RegenerateExtraCorners
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Bridge
 // (Final, Native, Public)
 
-void UPolyEditTopologyProperties::RegenerateExtraCorners()
+void UEditMeshPolygonsToolEdgeActions::Bridge()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PolyEditTopologyProperties", "RegenerateExtraCorners");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Bridge");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.DeleteEdge
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::DeleteEdge()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "DeleteEdge");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Extrude
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::Extrude()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Extrude");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.FillHole
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::FillHole()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "FillHole");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Simplify
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::Simplify()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Simplify");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Straighten
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::Straighten()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Straighten");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Weld
+// (Final, Native, Public)
+
+void UEditMeshPolygonsToolEdgeActions::Weld()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Weld");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -758,15 +758,15 @@ void UEditMeshPolygonsToolActions_Triangles::RecalcNormals()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Bevel
+// Function MeshModelingTools.EditMeshPolygonsToolUVActions.PlanarProjection
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Bevel()
+void UEditMeshPolygonsToolUVActions::PlanarProjection()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Bevel");
+		Func = Class->GetFunction("EditMeshPolygonsToolUVActions", "PlanarProjection");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -777,15 +777,15 @@ void UEditMeshPolygonsToolEdgeActions::Bevel()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Bridge
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Bridge
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Bridge()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Bridge()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Bridge");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Bridge");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -796,15 +796,15 @@ void UEditMeshPolygonsToolEdgeActions::Bridge()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.DeleteEdge
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Collapse
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::DeleteEdge()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Collapse()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "DeleteEdge");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Collapse");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -815,15 +815,15 @@ void UEditMeshPolygonsToolEdgeActions::DeleteEdge()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Extrude
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Extrude
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Extrude()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Extrude()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Extrude");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Extrude");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -834,15 +834,15 @@ void UEditMeshPolygonsToolEdgeActions::Extrude()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.FillHole
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.FillHole
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::FillHole()
+void UEditMeshPolygonsToolEdgeActions_Triangles::FillHole()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "FillHole");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "FillHole");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -853,15 +853,15 @@ void UEditMeshPolygonsToolEdgeActions::FillHole()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Simplify
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Flip
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Simplify()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Flip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Simplify");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Flip");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -872,15 +872,15 @@ void UEditMeshPolygonsToolEdgeActions::Simplify()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Straighten
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Split
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Straighten()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Split()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Straighten");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Split");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -891,15 +891,15 @@ void UEditMeshPolygonsToolEdgeActions::Straighten()
 }
 
 
-// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions.Weld
+// Function MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles.Weld
 // (Final, Native, Public)
 
-void UEditMeshPolygonsToolEdgeActions::Weld()
+void UEditMeshPolygonsToolEdgeActions_Triangles::Weld()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions", "Weld");
+		Func = Class->GetFunction("EditMeshPolygonsToolEdgeActions_Triangles", "Weld");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

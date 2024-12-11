@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "WB_CategoryMenuScreen_classes.hpp"
 #include "ESalvageCategory_structs.hpp"
 #include "UMG_structs.hpp"
+#include "E_Slot_structs.hpp"
 
 
 namespace SDK

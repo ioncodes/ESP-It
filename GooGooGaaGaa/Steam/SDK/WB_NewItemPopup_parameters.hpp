@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "S_NewItemPopupInfo_structs.hpp"
-#include "S_PropData_structs.hpp"
+#include "ClientQuest_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "E_PropCategory_structs.hpp"
 #include "UMG_structs.hpp"
+#include "S_PropData_structs.hpp"
+#include "E_PropCategory_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_AchievementData_structs.hpp"
-#include "ClientQuest_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

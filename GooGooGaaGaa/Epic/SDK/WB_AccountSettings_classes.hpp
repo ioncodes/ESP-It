@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_AccountSettings.WB_AccountSettings_C
-// 0x0060 (0x0340 - 0x02E0)
+// 0x0068 (0x0348 - 0x02E0)
 class UWB_AccountSettings_C final : public UUserWidget
 {
 public:
@@ -28,18 +28,20 @@ public:
 	class UWB_CheckBoxWithLabel_C*                AllowFriendInvites;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_CheckBoxWithLabel_C*                CB_MirroringEnabled;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_SquareButtonWithIcon_C*             CopyButton;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_CheckBoxWithLabel_C*                InventoryPublic;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             L_UserId;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VB_Settings;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           WB_RevealButton;                                   // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 MirrorInventoryName;                               // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 InventoryPublicName;                               // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                DisableCrossPlatform;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                InventoryPublic;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             L_UserId;                                          // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VB_Settings;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           WB_RevealButton;                                   // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 MirrorInventoryName;                               // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 InventoryPublicName;                               // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AcceptButtonPressed();
 	void BndEvt__WB_AccountSettings_AllowFriendInvites_K2Node_ComponentBoundEvent_5_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
 	void BndEvt__WB_AccountSettings_CB_MirroringEnabled_K2Node_ComponentBoundEvent_3_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
 	void BndEvt__WB_AccountSettings_CopyButton_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature();
+	void BndEvt__WB_AccountSettings_DisableCrossPlatform_K2Node_ComponentBoundEvent_2_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
 	void BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
 	void BndEvt__WB_AccountSettings_WB_RevealButton_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
 	void Construct();
@@ -48,14 +50,18 @@ public:
 	void Destruct();
 	void ExecuteUbergraph_WB_AccountSettings(int32 EntryPoint);
 	void FocusFirstElement();
+	ESlateVisibility Get_DisableCrossPlatform_Visibility();
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void Init();
+	void LeftTriggerPressed();
 	void LoadSettings();
 	void OnReceiveAccountSettings(const TArray<struct FAccountSetting>& Settings);
 	void PresenceUpdated();
 	void ProcessInventoryPrivateSetting(const struct FAccountSetting& Setting);
 	void ProcessMirrorInventorySetting(const struct FAccountSetting& Setting);
 	void ProcessSettingsArray(TArray<struct FAccountSetting>& Settings);
+	void RightTriggerPressed();
+	class UWidget* SelectCrossPlatformIfPossible(EUINavigation Navigation_0);
 	class UWidget* SelectLastListElement(EUINavigation Navigation_0);
 	class UWidget* SelectRevealIfPossible(EUINavigation Navigation_0);
 	void ShowHideMirrorControls();
@@ -74,17 +80,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_AccountSettings_C) == 0x000008, "Wrong alignment on UWB_AccountSettings_C");
-static_assert(sizeof(UWB_AccountSettings_C) == 0x000340, "Wrong size on UWB_AccountSettings_C");
+static_assert(sizeof(UWB_AccountSettings_C) == 0x000348, "Wrong size on UWB_AccountSettings_C");
 static_assert(offsetof(UWB_AccountSettings_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_AccountSettings_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_AccountSettings_C, AllowFriendInvites) == 0x0002E8, "Member 'UWB_AccountSettings_C::AllowFriendInvites' has a wrong offset!");
 static_assert(offsetof(UWB_AccountSettings_C, CB_MirroringEnabled) == 0x0002F0, "Member 'UWB_AccountSettings_C::CB_MirroringEnabled' has a wrong offset!");
 static_assert(offsetof(UWB_AccountSettings_C, CopyButton) == 0x0002F8, "Member 'UWB_AccountSettings_C::CopyButton' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, InventoryPublic) == 0x000300, "Member 'UWB_AccountSettings_C::InventoryPublic' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, L_UserId) == 0x000308, "Member 'UWB_AccountSettings_C::L_UserId' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, VB_Settings) == 0x000310, "Member 'UWB_AccountSettings_C::VB_Settings' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, WB_RevealButton) == 0x000318, "Member 'UWB_AccountSettings_C::WB_RevealButton' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, MirrorInventoryName) == 0x000320, "Member 'UWB_AccountSettings_C::MirrorInventoryName' has a wrong offset!");
-static_assert(offsetof(UWB_AccountSettings_C, InventoryPublicName) == 0x000330, "Member 'UWB_AccountSettings_C::InventoryPublicName' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, DisableCrossPlatform) == 0x000300, "Member 'UWB_AccountSettings_C::DisableCrossPlatform' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, InventoryPublic) == 0x000308, "Member 'UWB_AccountSettings_C::InventoryPublic' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, L_UserId) == 0x000310, "Member 'UWB_AccountSettings_C::L_UserId' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, VB_Settings) == 0x000318, "Member 'UWB_AccountSettings_C::VB_Settings' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, WB_RevealButton) == 0x000320, "Member 'UWB_AccountSettings_C::WB_RevealButton' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, MirrorInventoryName) == 0x000328, "Member 'UWB_AccountSettings_C::MirrorInventoryName' has a wrong offset!");
+static_assert(offsetof(UWB_AccountSettings_C, InventoryPublicName) == 0x000338, "Member 'UWB_AccountSettings_C::InventoryPublicName' has a wrong offset!");
 
 }
 

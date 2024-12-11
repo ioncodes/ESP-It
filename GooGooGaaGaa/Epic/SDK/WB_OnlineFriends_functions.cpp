@@ -55,6 +55,48 @@ void UWB_OnlineFriends_C::AddItemToList(class UListView* List, class UB_FriendSc
 }
 
 
+// Function WB_OnlineFriends.WB_OnlineFriends_C.BndEvt__WB_OnlineFriends_LeftButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_OnlineFriends_C::BndEvt__WB_OnlineFriends_LeftButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "BndEvt__WB_OnlineFriends_LeftButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.BndEvt__WB_OnlineFriends_RightButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_OnlineFriends_C::BndEvt__WB_OnlineFriends_RightButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "BndEvt__WB_OnlineFriends_RightButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.ClearAndRefreshList
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_OnlineFriends_C::ClearAndRefreshList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "ClearAndRefreshList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_OnlineFriends.WB_OnlineFriends_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -125,6 +167,26 @@ void UWB_OnlineFriends_C::ExecuteUbergraph_WB_OnlineFriends(int32 EntryPoint)
 }
 
 
+// Function WB_OnlineFriends.WB_OnlineFriends_C.Get_ArrowIcon_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_OnlineFriends_C::Get_ArrowIcon_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "Get_ArrowIcon_Visibility");
+
+	Params::WB_OnlineFriends_C_Get_ArrowIcon_Visibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_OnlineFriends.WB_OnlineFriends_C.GetCurrentlyFocusedWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -176,6 +238,20 @@ void UWB_OnlineFriends_C::Init()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_OnlineFriends_C", "Init");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_OnlineFriends_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "LeftTriggerPressed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -357,6 +433,20 @@ void UWB_OnlineFriends_C::ResetFocus(int32 LastFocusedIndex)
 	Parms.LastFocusedIndex = LastFocusedIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_OnlineFriends_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "RightTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

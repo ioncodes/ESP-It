@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "MediaUtils_structs.hpp"
 #include "MediaAssets_structs.hpp"
 #include "Engine_structs.hpp"
-#include "MediaUtils_structs.hpp"
 
 
 namespace SDK::Params

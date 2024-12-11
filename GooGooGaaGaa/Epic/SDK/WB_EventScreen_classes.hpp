@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "S_EventInfo_structs.hpp"
+#include "SNeededIngredient_structs.hpp"
+#include "ESummerEventRecipe_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
+#include "EventNames_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "ESummerEventRecipe_structs.hpp"
-#include "EventNames_structs.hpp"
-#include "SNeededIngredient_structs.hpp"
 #include "EventTime_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 

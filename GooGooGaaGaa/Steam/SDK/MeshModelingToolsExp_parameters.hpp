@@ -58,16 +58,38 @@ static_assert(alignof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc) == 0x000
 static_assert(sizeof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc) == 0x000010, "Wrong size on BakeMultiTexture2DProperties_GetUVLayerNamesFunc");
 static_assert(offsetof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc, ReturnValue) == 0x000000, "Member 'BakeMultiTexture2DProperties_GetUVLayerNamesFunc::ReturnValue' has a wrong offset!");
 
-// Function MeshModelingToolsExp.DisplaceMeshCommonProperties.GetWeightMapsFunc
+// Function MeshModelingToolsExp.MeshAttributePaintToolProperties.GetAttributeNames
 // 0x0010 (0x0010 - 0x0000)
-struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+struct MeshAttributePaintToolProperties_GetAttributeNames final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeshAttributePaintToolProperties_GetAttributeNames) == 0x000008, "Wrong alignment on MeshAttributePaintToolProperties_GetAttributeNames");
+static_assert(sizeof(MeshAttributePaintToolProperties_GetAttributeNames) == 0x000010, "Wrong size on MeshAttributePaintToolProperties_GetAttributeNames");
+static_assert(offsetof(MeshAttributePaintToolProperties_GetAttributeNames, ReturnValue) == 0x000000, "Member 'MeshAttributePaintToolProperties_GetAttributeNames::ReturnValue' has a wrong offset!");
+
+// Function MeshModelingToolsExp.MeshVertexPaintToolUtilityActions.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetWeightMapsFunc final
 {
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000008, "Wrong alignment on DisplaceMeshCommonProperties_GetWeightMapsFunc");
-static_assert(sizeof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000010, "Wrong size on DisplaceMeshCommonProperties_GetWeightMapsFunc");
-static_assert(offsetof(DisplaceMeshCommonProperties_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'DisplaceMeshCommonProperties_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
+static_assert(alignof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc) == 0x000008, "Wrong alignment on MeshVertexPaintToolUtilityActions_GetWeightMapsFunc");
+static_assert(sizeof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc) == 0x000010, "Wrong size on MeshVertexPaintToolUtilityActions_GetWeightMapsFunc");
+static_assert(offsetof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'MeshVertexPaintToolUtilityActions_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
+
+// Function MeshModelingToolsExp.MeshVertexPaintToolUtilityActions.GetLODNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetLODNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc) == 0x000008, "Wrong alignment on MeshVertexPaintToolUtilityActions_GetLODNamesFunc");
+static_assert(sizeof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc) == 0x000010, "Wrong size on MeshVertexPaintToolUtilityActions_GetLODNamesFunc");
+static_assert(offsetof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc, ReturnValue) == 0x000000, "Member 'MeshVertexPaintToolUtilityActions_GetLODNamesFunc::ReturnValue' has a wrong offset!");
 
 // Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventNormalFlipsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -135,6 +157,17 @@ static_assert(alignof(OutputPolygroupLayerProperties_GetGroupOptionsList) == 0x0
 static_assert(sizeof(OutputPolygroupLayerProperties_GetGroupOptionsList) == 0x000010, "Wrong size on OutputPolygroupLayerProperties_GetGroupOptionsList");
 static_assert(offsetof(OutputPolygroupLayerProperties_GetGroupOptionsList, ReturnValue) == 0x000000, "Member 'OutputPolygroupLayerProperties_GetGroupOptionsList::ReturnValue' has a wrong offset!");
 
+// Function MeshModelingToolsExp.DisplaceMeshCommonProperties.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000008, "Wrong alignment on DisplaceMeshCommonProperties_GetWeightMapsFunc");
+static_assert(sizeof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000010, "Wrong size on DisplaceMeshCommonProperties_GetWeightMapsFunc");
+static_assert(offsetof(DisplaceMeshCommonProperties_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'DisplaceMeshCommonProperties_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
+
 // Function MeshModelingToolsExp.SelectiveTessellationProperties.GetMaterialIDsFunc
 // 0x0010 (0x0010 - 0x0000)
 struct SelectiveTessellationProperties_GetMaterialIDsFunc final
@@ -146,17 +179,6 @@ static_assert(alignof(SelectiveTessellationProperties_GetMaterialIDsFunc) == 0x0
 static_assert(sizeof(SelectiveTessellationProperties_GetMaterialIDsFunc) == 0x000010, "Wrong size on SelectiveTessellationProperties_GetMaterialIDsFunc");
 static_assert(offsetof(SelectiveTessellationProperties_GetMaterialIDsFunc, ReturnValue) == 0x000000, "Member 'SelectiveTessellationProperties_GetMaterialIDsFunc::ReturnValue' has a wrong offset!");
 
-// Function MeshModelingToolsExp.MeshAttributePaintToolProperties.GetAttributeNames
-// 0x0010 (0x0010 - 0x0000)
-struct MeshAttributePaintToolProperties_GetAttributeNames final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeshAttributePaintToolProperties_GetAttributeNames) == 0x000008, "Wrong alignment on MeshAttributePaintToolProperties_GetAttributeNames");
-static_assert(sizeof(MeshAttributePaintToolProperties_GetAttributeNames) == 0x000010, "Wrong size on MeshAttributePaintToolProperties_GetAttributeNames");
-static_assert(offsetof(MeshAttributePaintToolProperties_GetAttributeNames, ReturnValue) == 0x000000, "Member 'MeshAttributePaintToolProperties_GetAttributeNames::ReturnValue' has a wrong offset!");
-
 // Function MeshModelingToolsExp.MeshInspectorMaterialProperties.GetUVChannelNamesFunc
 // 0x0010 (0x0010 - 0x0000)
 struct MeshInspectorMaterialProperties_GetUVChannelNamesFunc final
@@ -167,28 +189,6 @@ public:
 static_assert(alignof(MeshInspectorMaterialProperties_GetUVChannelNamesFunc) == 0x000008, "Wrong alignment on MeshInspectorMaterialProperties_GetUVChannelNamesFunc");
 static_assert(sizeof(MeshInspectorMaterialProperties_GetUVChannelNamesFunc) == 0x000010, "Wrong size on MeshInspectorMaterialProperties_GetUVChannelNamesFunc");
 static_assert(offsetof(MeshInspectorMaterialProperties_GetUVChannelNamesFunc, ReturnValue) == 0x000000, "Member 'MeshInspectorMaterialProperties_GetUVChannelNamesFunc::ReturnValue' has a wrong offset!");
-
-// Function MeshModelingToolsExp.MeshVertexPaintToolUtilityActions.GetWeightMapsFunc
-// 0x0010 (0x0010 - 0x0000)
-struct MeshVertexPaintToolUtilityActions_GetWeightMapsFunc final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc) == 0x000008, "Wrong alignment on MeshVertexPaintToolUtilityActions_GetWeightMapsFunc");
-static_assert(sizeof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc) == 0x000010, "Wrong size on MeshVertexPaintToolUtilityActions_GetWeightMapsFunc");
-static_assert(offsetof(MeshVertexPaintToolUtilityActions_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'MeshVertexPaintToolUtilityActions_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
-
-// Function MeshModelingToolsExp.MeshVertexPaintToolUtilityActions.GetLODNamesFunc
-// 0x0010 (0x0010 - 0x0000)
-struct MeshVertexPaintToolUtilityActions_GetLODNamesFunc final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc) == 0x000008, "Wrong alignment on MeshVertexPaintToolUtilityActions_GetLODNamesFunc");
-static_assert(sizeof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc) == 0x000010, "Wrong size on MeshVertexPaintToolUtilityActions_GetLODNamesFunc");
-static_assert(offsetof(MeshVertexPaintToolUtilityActions_GetLODNamesFunc, ReturnValue) == 0x000000, "Member 'MeshVertexPaintToolUtilityActions_GetLODNamesFunc::ReturnValue' has a wrong offset!");
 
 // Function MeshModelingToolsExp.TransferMeshToolProperties.GetSourceLODNamesFunc
 // 0x0010 (0x0010 - 0x0000)

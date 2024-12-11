@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "E_JoinAsHunterStates_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_JoinAsHunterStates_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -77,6 +77,7 @@ public:
 	void ReceivePossessed(class AController* NewController);
 	void ExecuteUbergraph_B_Spectator(int32 EntryPoint);
 	void CanTeleport(bool* CanTeleport_0);
+	void StartSpectatorMultiplayerFeature();
 	void AddToMovementSpeedMutliplier(double AddedMultiplier, double* NewMovementSpeedMultiplier, bool* ValueChanged);
 	void OnRep_Invisible();
 	void TickHUD();

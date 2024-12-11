@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PropCategory_structs.hpp"
 #include "E_PropSet_structs.hpp"
+#include "E_PropCategory_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 

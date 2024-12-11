@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "WB_ServerListBase_classes.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "WB_ServerListBase_classes.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "ESortMethod_structs.hpp"
 #include "EServerFilter_structs.hpp"
@@ -24,7 +24,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ServerList.WB_ServerList_C
-// 0x02D0 (0x05F8 - 0x0328)
+// 0x02F0 (0x0618 - 0x0328)
 class UWB_ServerList_C final : public UWB_ServerListBase_C
 {
 public:
@@ -82,6 +82,8 @@ public:
 	class UOnlineSessionSearch*                   CustomSessionSearch;                               // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FOnlineSessionSearchResultBP>   SessionSearchResults;                              // 0x05E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UOnlineSessionSearch*                   CustomSessionSearch2;                              // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         TempStringArray;                                   // 0x05F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 TempIndexArray;                                    // 0x0608(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddServerRow(const struct FBlueprintSessionResult& SearchResult, bool IsCustom, bool UserGeneratedContent, class UWB_ServerRow_C** ServerWidget);
@@ -132,12 +134,10 @@ public:
 	void OnCallFailed_456AB2C74F07026000179C81BD4DC490(bool bWasSuccessful);
 	void OnCallFailed_4FD22F724DF4D5357C18E9B00328D93E(bool bWasSuccessful);
 	void OnCallFailed_4FD22F724DF4D5357C18E9B01100757B(bool bWasSuccessful);
-	void OnCallFailed_542E60C048C6474E739F6A86CFE54BE5(bool bWasSuccessful);
-	void OnCallFailed_542E60C048C6474E739F6A86DDCDE7A0(bool bWasSuccessful);
 	void OnCallFailed_AD6707DF4707F115F8ED888FE9A43620(bool bWasSuccessful);
 	void OnCallFailed_AD6707DF4707F115F8ED888FFB8C9A65(bool bWasSuccessful);
-	void OnCancelFindSessionsComplete_542E60C048C6474E739F6A86CFE54BE5(bool bWasSuccessful);
-	void OnCancelFindSessionsComplete_542E60C048C6474E739F6A86DDCDE7A0(bool bWasSuccessful);
+	void OnFailure_9B3ACF534FAB6A87C559A6984DEFD5EE(const TArray<class FString>& FilteredStrings);
+	void OnFailure_9B3ACF534FAB6A87C559A6985FC779AB(const TArray<class FString>& FilteredStrings);
 	void OnFindSessionsComplete_456AB2C74F07026000179C81AF6568D5(bool bWasSuccessful);
 	void OnFindSessionsComplete_456AB2C74F07026000179C81BD4DC490(bool bWasSuccessful);
 	void OnFindSessionsComplete_4FD22F724DF4D5357C18E9B00328D93E(bool bWasSuccessful);
@@ -146,6 +146,8 @@ public:
 	void OnFindSessionsComplete_AD6707DF4707F115F8ED888FFB8C9A65(bool bWasSuccessful);
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void OnSpecialAction();
+	void OnSuccess_9B3ACF534FAB6A87C559A6984DEFD5EE(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_9B3ACF534FAB6A87C559A6985FC779AB(const TArray<class FString>& FilteredStrings);
 	void PingCustomServer(const struct FBlueprintSessionResult& Server);
 	void RemoveAllServers();
 	void ServerPassesCurrentFilter(class UB_ServerRowData_C* ServerData, bool* Pass);
@@ -164,7 +166,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_ServerList_C) == 0x000008, "Wrong alignment on UWB_ServerList_C");
-static_assert(sizeof(UWB_ServerList_C) == 0x0005F8, "Wrong size on UWB_ServerList_C");
+static_assert(sizeof(UWB_ServerList_C) == 0x000618, "Wrong size on UWB_ServerList_C");
 static_assert(offsetof(UWB_ServerList_C, UberGraphFrame) == 0x000328, "Member 'UWB_ServerList_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_ServerList_C, Back) == 0x000330, "Member 'UWB_ServerList_C::Back' has a wrong offset!");
 static_assert(offsetof(UWB_ServerList_C, Button_Filter_All) == 0x000338, "Member 'UWB_ServerList_C::Button_Filter_All' has a wrong offset!");
@@ -216,6 +218,8 @@ static_assert(offsetof(UWB_ServerList_C, DedicatedSessionSearch) == 0x0005D0, "M
 static_assert(offsetof(UWB_ServerList_C, CustomSessionSearch) == 0x0005D8, "Member 'UWB_ServerList_C::CustomSessionSearch' has a wrong offset!");
 static_assert(offsetof(UWB_ServerList_C, SessionSearchResults) == 0x0005E0, "Member 'UWB_ServerList_C::SessionSearchResults' has a wrong offset!");
 static_assert(offsetof(UWB_ServerList_C, CustomSessionSearch2) == 0x0005F0, "Member 'UWB_ServerList_C::CustomSessionSearch2' has a wrong offset!");
+static_assert(offsetof(UWB_ServerList_C, TempStringArray) == 0x0005F8, "Member 'UWB_ServerList_C::TempStringArray' has a wrong offset!");
+static_assert(offsetof(UWB_ServerList_C, TempIndexArray) == 0x000608, "Member 'UWB_ServerList_C::TempIndexArray' has a wrong offset!");
 
 }
 

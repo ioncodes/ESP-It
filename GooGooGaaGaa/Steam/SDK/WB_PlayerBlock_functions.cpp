@@ -363,6 +363,20 @@ void UWB_PlayerBlock_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 }
 
 
+// Function WB_PlayerBlock.WB_PlayerBlock_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_PlayerBlock_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PlayerBlock_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_PlayerBlock.WB_PlayerBlock_C.ExecuteUbergraph_WB_PlayerBlock
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

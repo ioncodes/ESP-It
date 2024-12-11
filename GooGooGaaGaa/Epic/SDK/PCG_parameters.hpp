@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PCG_structs.hpp"
 
 
 namespace SDK::Params
@@ -258,39 +258,6 @@ static_assert(alignof(PCGSpatialData_UnionWith) == 0x000008, "Wrong alignment on
 static_assert(sizeof(PCGSpatialData_UnionWith) == 0x000010, "Wrong size on PCGSpatialData_UnionWith");
 static_assert(offsetof(PCGSpatialData_UnionWith, InOther) == 0x000000, "Member 'PCGSpatialData_UnionWith::InOther' has a wrong offset!");
 static_assert(offsetof(PCGSpatialData_UnionWith, ReturnValue) == 0x000008, "Member 'PCGSpatialData_UnionWith::ReturnValue' has a wrong offset!");
-
-// Function PCG.PCGDifferenceData.AddDifference
-// 0x0008 (0x0008 - 0x0000)
-struct PCGDifferenceData_AddDifference final
-{
-public:
-	const class UPCGSpatialData*                  InDifference;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGDifferenceData_AddDifference) == 0x000008, "Wrong alignment on PCGDifferenceData_AddDifference");
-static_assert(sizeof(PCGDifferenceData_AddDifference) == 0x000008, "Wrong size on PCGDifferenceData_AddDifference");
-static_assert(offsetof(PCGDifferenceData_AddDifference, InDifference) == 0x000000, "Member 'PCGDifferenceData_AddDifference::InDifference' has a wrong offset!");
-
-// Function PCG.PCGDifferenceData.Initialize
-// 0x0008 (0x0008 - 0x0000)
-struct PCGDifferenceData_Initialize final
-{
-public:
-	const class UPCGSpatialData*                  InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGDifferenceData_Initialize) == 0x000008, "Wrong alignment on PCGDifferenceData_Initialize");
-static_assert(sizeof(PCGDifferenceData_Initialize) == 0x000008, "Wrong size on PCGDifferenceData_Initialize");
-static_assert(offsetof(PCGDifferenceData_Initialize, InData) == 0x000000, "Member 'PCGDifferenceData_Initialize::InData' has a wrong offset!");
-
-// Function PCG.PCGDifferenceData.SetDensityFunction
-// 0x0001 (0x0001 - 0x0000)
-struct PCGDifferenceData_SetDensityFunction final
-{
-public:
-	EPCGDifferenceDensityFunction                 InDensityFunction;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PCGDifferenceData_SetDensityFunction) == 0x000001, "Wrong alignment on PCGDifferenceData_SetDensityFunction");
-static_assert(sizeof(PCGDifferenceData_SetDensityFunction) == 0x000001, "Wrong size on PCGDifferenceData_SetDensityFunction");
-static_assert(offsetof(PCGDifferenceData_SetDensityFunction, InDensityFunction) == 0x000000, "Member 'PCGDifferenceData_SetDensityFunction::InDensityFunction' has a wrong offset!");
 
 // Function PCG.PCGMetadataSettingsBase.GetOutputDataFromPinOptions
 // 0x0010 (0x0010 - 0x0000)
@@ -1128,6 +1095,39 @@ static_assert(alignof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x
 static_assert(sizeof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata) == 0x0000E0, "Wrong size on PCGFunctionPrototypes_PrototypeWithPointAndMetadata");
 static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, Point) == 0x000000, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::Point' has a wrong offset!");
 static_assert(offsetof(PCGFunctionPrototypes_PrototypeWithPointAndMetadata, MetaData) == 0x0000D0, "Member 'PCGFunctionPrototypes_PrototypeWithPointAndMetadata::MetaData' has a wrong offset!");
+
+// Function PCG.PCGDifferenceData.AddDifference
+// 0x0008 (0x0008 - 0x0000)
+struct PCGDifferenceData_AddDifference final
+{
+public:
+	const class UPCGSpatialData*                  InDifference;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGDifferenceData_AddDifference) == 0x000008, "Wrong alignment on PCGDifferenceData_AddDifference");
+static_assert(sizeof(PCGDifferenceData_AddDifference) == 0x000008, "Wrong size on PCGDifferenceData_AddDifference");
+static_assert(offsetof(PCGDifferenceData_AddDifference, InDifference) == 0x000000, "Member 'PCGDifferenceData_AddDifference::InDifference' has a wrong offset!");
+
+// Function PCG.PCGDifferenceData.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct PCGDifferenceData_Initialize final
+{
+public:
+	const class UPCGSpatialData*                  InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGDifferenceData_Initialize) == 0x000008, "Wrong alignment on PCGDifferenceData_Initialize");
+static_assert(sizeof(PCGDifferenceData_Initialize) == 0x000008, "Wrong size on PCGDifferenceData_Initialize");
+static_assert(offsetof(PCGDifferenceData_Initialize, InData) == 0x000000, "Member 'PCGDifferenceData_Initialize::InData' has a wrong offset!");
+
+// Function PCG.PCGDifferenceData.SetDensityFunction
+// 0x0001 (0x0001 - 0x0000)
+struct PCGDifferenceData_SetDensityFunction final
+{
+public:
+	EPCGDifferenceDensityFunction                 InDensityFunction;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PCGDifferenceData_SetDensityFunction) == 0x000001, "Wrong alignment on PCGDifferenceData_SetDensityFunction");
+static_assert(sizeof(PCGDifferenceData_SetDensityFunction) == 0x000001, "Wrong size on PCGDifferenceData_SetDensityFunction");
+static_assert(offsetof(PCGDifferenceData_SetDensityFunction, InDensityFunction) == 0x000000, "Member 'PCGDifferenceData_SetDensityFunction::InDensityFunction' has a wrong offset!");
 
 // Function PCG.PCGIntersectionData.Initialize
 // 0x0010 (0x0010 - 0x0000)

@@ -38,8 +38,8 @@ public:
 public:
 	void SetSelectedColor(bool Selected);
 	void OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6(TSubclassOf<class UObject> Loaded);
-	void OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF(bool bSuccess, const class FString& SanitizedMessage);
-	void OnCallFailed_32B7D77C4ED208666207D89F0D8013CF(bool bSuccess, const class FString& SanitizedMessage);
+	void OnFailure_CD97852D4BF9125878126FA4C0392283(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_CD97852D4BF9125878126FA4C0392283(const TArray<class FString>& FilteredStrings);
 	void SetUserInfo(class UOnlineUserRef* UserInfo, const class FString& AdditionalText_0);
 	void ExecuteUbergraph_WB_PlayerIconAndName(int32 EntryPoint);
 

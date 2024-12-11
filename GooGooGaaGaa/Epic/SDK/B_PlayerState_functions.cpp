@@ -554,45 +554,41 @@ void AB_PlayerState_C::OnRep_IsReady()
 }
 
 
-// Function B_PlayerState.B_PlayerState_C.OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034
-// (BlueprintCallable, BlueprintEvent)
+// Function B_PlayerState.B_PlayerState_C.OnFailure_3B21D3544D0F5DF313D09A9D27556F36
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_PlayerState_C::OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage)
+void AB_PlayerState_C::OnFailure_3B21D3544D0F5DF313D09A9D27556F36(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerState_C", "OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034");
+		Func = Class->GetFunction("B_PlayerState_C", "OnFailure_3B21D3544D0F5DF313D09A9D27556F36");
 
-	Params::B_PlayerState_C_OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034 Parms{};
+	Params::B_PlayerState_C_OnFailure_3B21D3544D0F5DF313D09A9D27556F36 Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function B_PlayerState.B_PlayerState_C.OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034
-// (BlueprintCallable, BlueprintEvent)
+// Function B_PlayerState.B_PlayerState_C.OnSuccess_3B21D3544D0F5DF313D09A9D27556F36
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_PlayerState_C::OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage)
+void AB_PlayerState_C::OnSuccess_3B21D3544D0F5DF313D09A9D27556F36(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerState_C", "OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034");
+		Func = Class->GetFunction("B_PlayerState_C", "OnSuccess_3B21D3544D0F5DF313D09A9D27556F36");
 
-	Params::B_PlayerState_C_OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034 Parms{};
+	Params::B_PlayerState_C_OnSuccess_3B21D3544D0F5DF313D09A9D27556F36 Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

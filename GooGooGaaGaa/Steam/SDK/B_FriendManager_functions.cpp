@@ -73,6 +73,26 @@ void UB_FriendManager_C::OnUserInfosReceived__DelegateSignature(TArray<struct FU
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.SessionInviteReceived__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 FromPlayer                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UB_FriendManager_C::SessionInviteReceived__DelegateSignature(const struct FUniqueNetIdRepl& FromPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SessionInviteReceived__DelegateSignature");
+
+	Params::B_FriendManager_C_SessionInviteReceived__DelegateSignature Parms{};
+
+	Parms.FromPlayer = std::move(FromPlayer);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.AcceptFriendRequest
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -129,6 +149,28 @@ void UB_FriendManager_C::AnyPendingFriendOrSessionInvitesExist(bool* ThereArePen
 
 	if (ThereArePendingInvites != nullptr)
 		*ThereArePendingInvites = Parms.ThereArePendingInvites;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.BlockedPlayerListChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::BlockedPlayerListChanged(int32 LocalUserNum, const class FString& ListName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "BlockedPlayerListChanged");
+
+	Params::B_FriendManager_C_BlockedPlayerListChanged Parms{};
+
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.ListName = std::move(ListName);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -468,6 +510,74 @@ void UB_FriendManager_C::InitializeFriendsAndPlayers()
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.IsPlayerBlocked
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsBlocked                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::IsPlayerBlocked(const class FString& PlayerId, bool* IsBlocked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "IsPlayerBlocked");
+
+	Params::B_FriendManager_C_IsPlayerBlocked Parms{};
+
+	Parms.PlayerId = std::move(PlayerId);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsBlocked != nullptr)
+		*IsBlocked = Parms.IsBlocked;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.IsPlayerRefPlatformBlocked
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UOnlineUserRef*                   PlayerRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsBlocked                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::IsPlayerRefPlatformBlocked(class UOnlineUserRef* PlayerRef, bool* IsBlocked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "IsPlayerRefPlatformBlocked");
+
+	Params::B_FriendManager_C_IsPlayerRefPlatformBlocked Parms{};
+
+	Parms.PlayerRef = PlayerRef;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsBlocked != nullptr)
+		*IsBlocked = Parms.IsBlocked;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.NotifySessionInviteReceived
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 FromPlayer                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UB_FriendManager_C::NotifySessionInviteReceived(const struct FUniqueNetIdRepl& FromPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "NotifySessionInviteReceived");
+
+	Params::B_FriendManager_C_NotifySessionInviteReceived Parms{};
+
+	Parms.FromPlayer = std::move(FromPlayer);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.OnAcceptInviteComplete_35A41B484B6CFFB9578A52A5BD3155FF
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -493,6 +603,20 @@ void UB_FriendManager_C::OnAcceptInviteComplete_35A41B484B6CFFB9578A52A5BD3155FF
 	Parms.ErrorStr = std::move(ErrorStr);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnBlockedPlayerReceived__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::OnBlockedPlayerReceived__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnBlockedPlayerReceived__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -600,23 +724,25 @@ void UB_FriendManager_C::OnCallFailed_53851A804A830E61AFB854AB13BB6C79(bool bWas
 }
 
 
-// Function B_FriendManager.B_FriendManager_C.OnCallFailed_652B7B3045DC0C028A2E38958D67868C
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function B_FriendManager.B_FriendManager_C.OnCallFailed_6967657645E8E6B25C9013B176D7FDD6
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::OnCallFailed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+void UB_FriendManager_C::OnCallFailed_6967657645E8E6B25C9013B176D7FDD6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_FriendManager_C", "OnCallFailed_652B7B3045DC0C028A2E38958D67868C");
+		Func = Class->GetFunction("B_FriendManager_C", "OnCallFailed_6967657645E8E6B25C9013B176D7FDD6");
 
-	Params::B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C Parms{};
+	Params::B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6 Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessages = std::move(SanitizedMessages);
+	Parms.UserId = std::move(UserId);
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.Error = std::move(Error);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -792,6 +918,26 @@ void UB_FriendManager_C::OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.OnFailure_842E1AC84A79AB73771E288077F13694
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnFailure_842E1AC84A79AB73771E288077F13694(const TArray<class FString>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnFailure_842E1AC84A79AB73771E288077F13694");
+
+	Params::B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694 Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.OnFriendInviteReceived
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -835,28 +981,6 @@ void UB_FriendManager_C::OnFriendSessionInviteReceived(const struct FUniqueNetId
 	Parms.FromId = std::move(FromId);
 	Parms.AppId = std::move(AppId);
 	Parms.InviteResult = std::move(InviteResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_FriendManager.B_FriendManager_C.OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UB_FriendManager_C::OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FriendManager_C", "OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C");
-
-	Params::B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C Parms{};
-
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessages = std::move(SanitizedMessages);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -951,6 +1075,30 @@ void UB_FriendManager_C::OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF
 
 	Parms.UserId = std::move(UserId);
 	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6");
+
+	Params::B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6 Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.Error = std::move(Error);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1115,6 +1263,26 @@ void UB_FriendManager_C::OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray
 	Params::B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC Parms{};
 
 	Parms.Requests = std::move(Requests);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnSuccess_842E1AC84A79AB73771E288077F13694
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnSuccess_842E1AC84A79AB73771E288077F13694(const TArray<class FString>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnSuccess_842E1AC84A79AB73771E288077F13694");
+
+	Params::B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694 Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1338,6 +1506,20 @@ void UB_FriendManager_C::SanitizeRecentPlayerNames()
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.SaveBlockedPlayersList
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::SaveBlockedPlayersList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SaveBlockedPlayersList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.SendFriendInvite
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1376,12 +1558,32 @@ void UB_FriendManager_C::SendFriendInviteQueued()
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.SendPlatformSessionInvite
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UOnlineUserRef*                   UserToInvite                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::SendPlatformSessionInvite(class UOnlineUserRef* UserToInvite)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SendPlatformSessionInvite");
+
+	Params::B_FriendManager_C_SendPlatformSessionInvite Parms{};
+
+	Parms.UserToInvite = UserToInvite;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.SendSessionInvite
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl                 Friend                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UOnlineFriendRef*                 Friend                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::SendSessionInvite(const struct FUniqueNetIdRepl& Friend)
+void UB_FriendManager_C::SendSessionInvite(class UOnlineFriendRef* Friend)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1390,7 +1592,7 @@ void UB_FriendManager_C::SendSessionInvite(const struct FUniqueNetIdRepl& Friend
 
 	Params::B_FriendManager_C_SendSessionInvite Parms{};
 
-	Parms.Friend = std::move(Friend);
+	Parms.Friend = Friend;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

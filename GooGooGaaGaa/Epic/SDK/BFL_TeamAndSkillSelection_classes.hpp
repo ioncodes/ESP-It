@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCategory_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "ESkillCategory_structs.hpp"
 
 
 namespace SDK

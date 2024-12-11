@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_GameModifierType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_GameModifierType_structs.hpp"
 
 
 namespace SDK

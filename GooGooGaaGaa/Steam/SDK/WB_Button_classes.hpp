@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_BaseButton_classes.hpp"
 #include "UMG_structs.hpp"
 

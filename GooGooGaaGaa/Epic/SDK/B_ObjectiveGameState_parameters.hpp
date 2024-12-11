@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ETeamID_structs.hpp"
-#include "EResultType_structs.hpp"
 #include "S_PropList_structs.hpp"
+#include "EResultType_structs.hpp"
 
 
 namespace SDK::Params

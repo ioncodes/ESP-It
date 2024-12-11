@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_PropCategory_structs.hpp"
 #include "WB_CategoryButton_classes.hpp"
+#include "E_PropCategory_structs.hpp"
 
 
 namespace SDK

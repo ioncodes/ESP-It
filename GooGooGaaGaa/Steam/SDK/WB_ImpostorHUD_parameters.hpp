@@ -11,49 +11,58 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "E_ImpostorState_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "E_MeetingState_structs.hpp"
 #include "E_TaskType_structs.hpp"
 #include "E_PossessNotWorkingReason_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_ImpostorHUD.WB_ImpostorHUD_C.ExecuteUbergraph_WB_ImpostorHUD
-// 0x0090 (0x0090 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_PossessNotWorkingReason                     K2Node_Event_Reason;                               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_Event_Killer;                               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_PlayerWasHunter;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0014(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_SabotageBomb_C*>              CallFunc_GetAllActorsOfClass_OutActors;            // 0x0050(0x0010)(ReferenceParm)
-	class AB_SabotageBomb_C*                      CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_SabotagePortal_C*>            CallFunc_GetAllActorsOfClass_OutActors_1;          // 0x0068(0x0010)(ReferenceParm)
-	class AB_SabotagePortal_C*                    CallFunc_Array_Get_Item_1;                         // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0080(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PossessNotWorkingReason                     K2Node_Event_Reason;                               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_Event_Killer;                               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_PlayerWasHunter;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x002C(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_SabotageBomb_C*>              CallFunc_GetAllActorsOfClass_OutActors;            // 0x0068(0x0010)(ReferenceParm)
+	TArray<class AB_SabotagePortal_C*>            CallFunc_GetAllActorsOfClass_OutActors_1;          // 0x0078(0x0010)(ReferenceParm)
+	class AB_SabotageBomb_C*                      CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_SabotagePortal_C*                    CallFunc_Array_Get_Item_1;                         // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD) == 0x000008, "Wrong alignment on WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD");
-static_assert(sizeof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD) == 0x000090, "Wrong size on WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD");
+static_assert(sizeof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD) == 0x0000B8, "Wrong size on WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD");
 static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, EntryPoint) == 0x000000, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_Reason) == 0x000004, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_Reason' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_Killer) == 0x000008, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_Killer' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_PlayerWasHunter) == 0x000010, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_PlayerWasHunter' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_MyGeometry) == 0x000014, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_GetAllActorsOfClass_OutActors) == 0x000050, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_Array_Get_Item) == 0x000060, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_GetAllActorsOfClass_OutActors_1) == 0x000068, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_GetAllActorsOfClass_OutActors_1' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_Array_Get_Item_1) == 0x000078, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_CreateDelegate_OutputDelegate) == 0x000080, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_Reason) == 0x000019, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_Reason' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_Killer) == 0x000020, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_Killer' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_PlayerWasHunter) == 0x000028, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_PlayerWasHunter' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_MyGeometry) == 0x00002C, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_Event_InDeltaTime) == 0x000064, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_GetAllActorsOfClass_OutActors) == 0x000068, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_GetAllActorsOfClass_OutActors_1) == 0x000078, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_GetAllActorsOfClass_OutActors_1' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_Array_Get_Item) == 0x000088, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_CreateDelegate_OutputDelegate) == 0x000098, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A8, "Member 'WB_ImpostorHUD_C_ExecuteUbergraph_WB_ImpostorHUD::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 
 // Function WB_ImpostorHUD.WB_ImpostorHUD_C.Get_ActionHint_Visibility_0
 // 0x0007 (0x0007 - 0x0000)

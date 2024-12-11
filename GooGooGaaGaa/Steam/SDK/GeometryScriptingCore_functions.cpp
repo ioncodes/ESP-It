@@ -12014,6 +12014,197 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshTransformFunctions::TranslatePivo
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyCollisionMeshesFromObject
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          FromObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ToDynamicMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bTransformToWorld                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       LocalToWorld                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGeometryScriptOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseComplexCollision                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SphereResolution                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_SceneUtilityFunctions::CopyCollisionMeshesFromObject(class UObject* FromObject, class UDynamicMesh* ToDynamicMesh, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, bool bUseComplexCollision, int32 SphereResolution, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CopyCollisionMeshesFromObject");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject Parms{};
+
+	Parms.FromObject = FromObject;
+	Parms.ToDynamicMesh = ToDynamicMesh;
+	Parms.bTransformToWorld = bTransformToWorld;
+	Parms.bUseComplexCollision = bUseComplexCollision;
+	Parms.SphereResolution = SphereResolution;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LocalToWorld != nullptr)
+		*LocalToWorld = std::move(Parms.LocalToWorld);
+
+	if (Outcome != nullptr)
+		*Outcome = Parms.Outcome;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyMeshFromComponent
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ToDynamicMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptCopyMeshFromComponentOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bTransformToWorld                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       LocalToWorld                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGeometryScriptOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_SceneUtilityFunctions::CopyMeshFromComponent(class USceneComponent* Component, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromComponentOptions& Options, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CopyMeshFromComponent");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent Parms{};
+
+	Parms.Component = Component;
+	Parms.ToDynamicMesh = ToDynamicMesh;
+	Parms.Options = std::move(Options);
+	Parms.bTransformToWorld = bTransformToWorld;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LocalToWorld != nullptr)
+		*LocalToWorld = std::move(Parms.LocalToWorld);
+
+	if (Outcome != nullptr)
+		*Outcome = Parms.Outcome;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CreateDynamicMeshPool
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDynamicMeshPool*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMeshPool* UGeometryScriptLibrary_SceneUtilityFunctions::CreateDynamicMeshPool()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CreateDynamicMeshPool");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.DetermineMeshOcclusion
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UDynamicMesh*>             SourceMeshes                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               SourceMeshTransforms                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<bool>                            OutMeshIsHidden                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class UDynamicMesh*>             TransparentMeshes                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               TransparentMeshTransforms                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<bool>                            OutTransparentMeshIsHidden                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class UDynamicMesh*>             OccludeMeshes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               OccludeMeshTransforms                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptDetermineMeshOcclusionOptionsOcclusionOptions                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_SceneUtilityFunctions::DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "DetermineMeshOcclusion");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion Parms{};
+
+	Parms.SourceMeshes = std::move(SourceMeshes);
+	Parms.SourceMeshTransforms = std::move(SourceMeshTransforms);
+	Parms.TransparentMeshes = std::move(TransparentMeshes);
+	Parms.TransparentMeshTransforms = std::move(TransparentMeshTransforms);
+	Parms.OccludeMeshes = std::move(OccludeMeshes);
+	Parms.OccludeMeshTransforms = std::move(OccludeMeshTransforms);
+	Parms.OcclusionOptions = std::move(OcclusionOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMeshIsHidden != nullptr)
+		*OutMeshIsHidden = std::move(Parms.OutMeshIsHidden);
+
+	if (OutTransparentMeshIsHidden != nullptr)
+		*OutTransparentMeshIsHidden = std::move(Parms.OutTransparentMeshIsHidden);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.SetComponentMaterialList
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent*              Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UMaterialInterface*>       MaterialList                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_SceneUtilityFunctions::SetComponentMaterialList(class UPrimitiveComponent* Component, const TArray<class UMaterialInterface*>& MaterialList, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "SetComponentMaterialList");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList Parms{};
+
+	Parms.Component = Component;
+	Parms.MaterialList = std::move(MaterialList);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AddUVElementToMesh
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -13536,6 +13727,76 @@ void UGeometryScriptLibrary_PointSetSamplingFunctions::UnflattenPoints(const TAr
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptUVList            UVList                                                 (Parm, NativeAccessSpecifierPublic)
+// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSampleTextureOptionsSampleOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptColorList         ColorList                                              (Parm, OutParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_TextureMapFunctions::SampleTexture2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTexture2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_TextureMapFunctions", "SampleTexture2DAtUVPositions");
+
+	Params::GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions Parms{};
+
+	Parms.UVList = std::move(UVList);
+	Parms.Texture = Texture;
+	Parms.SampleOptions = std::move(SampleOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ColorList != nullptr)
+		*ColorList = std::move(Parms.ColorList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTextureRenderTarget2DAtUVPositions
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptUVList            UVList                                                 (Parm, NativeAccessSpecifierPublic)
+// class UTextureRenderTarget2D*           Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSampleTextureOptionsSampleOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptColorList         ColorList                                              (Parm, OutParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_TextureMapFunctions::SampleTextureRenderTarget2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTextureRenderTarget2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_TextureMapFunctions", "SampleTextureRenderTarget2DAtUVPositions");
+
+	Params::GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions Parms{};
+
+	Parms.UVList = std::move(UVList);
+	Parms.Texture = Texture;
+	Parms.SampleOptions = std::move(SampleOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ColorList != nullptr)
+		*ColorList = std::move(Parms.ColorList);
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.AddPolygonVertex
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -13925,602 +14186,6 @@ void UGeometryScriptLibrary_SimplePolygonFunctions::SetPolygonVertex(struct FGeo
 
 	if (bPolygonIsEmpty != nullptr)
 		*bPolygonIsEmpty = Parms.bPolygonIsEmpty;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantScalarMultiply");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply Parms{};
-
-	Parms.Constant = Constant;
-	Parms.ScalarList = std::move(ScalarList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantScalarMultiplyInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace Parms{};
-
-	Parms.Constant = Constant;
-	Parms.ScalarList = std::move(ScalarList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	ScalarList = std::move(Parms.ScalarList);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantVectorMultiply");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply Parms{};
-
-	Parms.Constant = Constant;
-	Parms.VectorList = std::move(VectorList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantVectorMultiplyInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace Parms{};
-
-	Parms.Constant = Constant;
-	Parms.VectorList = std::move(VectorList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VectorList = std::move(Parms.VectorList);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, NativeAccessSpecifierPublic)
-// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarBlend");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarBlend Parms{};
-
-	Parms.ScalarListA = std::move(ScalarListA);
-	Parms.ScalarListB = std::move(ScalarListB);
-	Parms.ConstantA = ConstantA;
-	Parms.ConstantB = ConstantB;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarBlendInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace Parms{};
-
-	Parms.ScalarListA = std::move(ScalarListA);
-	Parms.ScalarListB = std::move(ScalarListB);
-	Parms.ConstantA = ConstantA;
-	Parms.ConstantB = ConstantB;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	ScalarListB = std::move(Parms.ScalarListB);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
-// double                                  Numerator                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarInvert");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarInvert Parms{};
-
-	Parms.ScalarList = std::move(ScalarList);
-	Parms.Numerator = Numerator;
-	Parms.SetOnFailure = SetOnFailure;
-	Parms.Epsilon = Epsilon;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// double                                  Numerator                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarInvertInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace Parms{};
-
-	Parms.ScalarList = std::move(ScalarList);
-	Parms.Numerator = Numerator;
-	Parms.SetOnFailure = SetOnFailure;
-	Parms.Epsilon = Epsilon;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	ScalarList = std::move(Parms.ScalarList);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, NativeAccessSpecifierPublic)
-// double                                  ConstantMultiplier                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarMultiply");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply Parms{};
-
-	Parms.ScalarListA = std::move(ScalarListA);
-	Parms.ScalarListB = std::move(ScalarListB);
-	Parms.ConstantMultiplier = ConstantMultiplier;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// double                                  ConstantMultiplier                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarMultiplyInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace Parms{};
-
-	Parms.ScalarListA = std::move(ScalarListA);
-	Parms.ScalarListB = std::move(ScalarListB);
-	Parms.ConstantMultiplier = ConstantMultiplier;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	ScalarListB = std::move(Parms.ScalarListB);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
-// double                                  ScalarMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarVectorMultiply");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply Parms{};
-
-	Parms.ScalarList = std::move(ScalarList);
-	Parms.VectorList = std::move(VectorList);
-	Parms.ScalarMultiplier = ScalarMultiplier;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// double                                  ScalarMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarVectorMultiplyInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace Parms{};
-
-	Parms.ScalarList = std::move(ScalarList);
-	Parms.VectorList = std::move(VectorList);
-	Parms.ScalarMultiplier = ScalarMultiplier;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VectorList = std::move(Parms.VectorList);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
-// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorBlend");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorBlend Parms{};
-
-	Parms.VectorListA = std::move(VectorListA);
-	Parms.VectorListB = std::move(VectorListB);
-	Parms.ConstantA = ConstantA;
-	Parms.ConstantB = ConstantB;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorBlendInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace Parms{};
-
-	Parms.VectorListA = std::move(VectorListA);
-	Parms.VectorListB = std::move(VectorListB);
-	Parms.ConstantA = ConstantA;
-	Parms.ConstantB = ConstantB;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VectorListB = std::move(Parms.VectorListB);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorCross");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorCross Parms{};
-
-	Parms.VectorListA = std::move(VectorListA);
-	Parms.VectorListB = std::move(VectorListB);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorDot");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorDot Parms{};
-
-	Parms.VectorListA = std::move(VectorListA);
-	Parms.VectorListB = std::move(VectorListB);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorLength(const struct FGeometryScriptVectorList& VectorList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorLength");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorLength Parms{};
-
-	Parms.VectorList = std::move(VectorList);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FVector                          SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_VectorMathFunctions::VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorNormalizeInPlace");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace Parms{};
-
-	Parms.VectorList = std::move(VectorList);
-	Parms.SetOnFailure = std::move(SetOnFailure);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VectorList = std::move(Parms.VectorList);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
-// double                                  ConstantX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ConstantZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorToScalar");
-
-	Params::GeometryScriptLibrary_VectorMathFunctions_VectorToScalar Parms{};
-
-	Parms.VectorList = std::move(VectorList);
-	Parms.ConstantX = ConstantX;
-	Parms.ConstantY = ConstantY;
-	Parms.ConstantZ = ConstantZ;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -15981,197 +15646,6 @@ bool UGeometryScriptLibrary_PolyPathFunctions::SampleSplineToTransforms(const cl
 }
 
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyCollisionMeshesFromObject
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          FromObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDynamicMesh*                     ToDynamicMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bTransformToWorld                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       LocalToWorld                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGeometryScriptOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bUseComplexCollision                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SphereResolution                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UDynamicMesh* UGeometryScriptLibrary_SceneUtilityFunctions::CopyCollisionMeshesFromObject(class UObject* FromObject, class UDynamicMesh* ToDynamicMesh, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, bool bUseComplexCollision, int32 SphereResolution, class UGeometryScriptDebug* Debug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CopyCollisionMeshesFromObject");
-
-	Params::GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject Parms{};
-
-	Parms.FromObject = FromObject;
-	Parms.ToDynamicMesh = ToDynamicMesh;
-	Parms.bTransformToWorld = bTransformToWorld;
-	Parms.bUseComplexCollision = bUseComplexCollision;
-	Parms.SphereResolution = SphereResolution;
-	Parms.Debug = Debug;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LocalToWorld != nullptr)
-		*LocalToWorld = std::move(Parms.LocalToWorld);
-
-	if (Outcome != nullptr)
-		*Outcome = Parms.Outcome;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyMeshFromComponent
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDynamicMesh*                     ToDynamicMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptCopyMeshFromComponentOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    bTransformToWorld                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       LocalToWorld                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGeometryScriptOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UDynamicMesh* UGeometryScriptLibrary_SceneUtilityFunctions::CopyMeshFromComponent(class USceneComponent* Component, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromComponentOptions& Options, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CopyMeshFromComponent");
-
-	Params::GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent Parms{};
-
-	Parms.Component = Component;
-	Parms.ToDynamicMesh = ToDynamicMesh;
-	Parms.Options = std::move(Options);
-	Parms.bTransformToWorld = bTransformToWorld;
-	Parms.Debug = Debug;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LocalToWorld != nullptr)
-		*LocalToWorld = std::move(Parms.LocalToWorld);
-
-	if (Outcome != nullptr)
-		*Outcome = Parms.Outcome;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CreateDynamicMeshPool
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UDynamicMeshPool*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UDynamicMeshPool* UGeometryScriptLibrary_SceneUtilityFunctions::CreateDynamicMeshPool()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "CreateDynamicMeshPool");
-
-	Params::GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.DetermineMeshOcclusion
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<class UDynamicMesh*>             SourceMeshes                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FTransform>               SourceMeshTransforms                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<bool>                            OutMeshIsHidden                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<class UDynamicMesh*>             TransparentMeshes                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FTransform>               TransparentMeshTransforms                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<bool>                            OutTransparentMeshIsHidden                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<class UDynamicMesh*>             OccludeMeshes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FTransform>               OccludeMeshTransforms                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FGeometryScriptDetermineMeshOcclusionOptionsOcclusionOptions                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_SceneUtilityFunctions::DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "DetermineMeshOcclusion");
-
-	Params::GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion Parms{};
-
-	Parms.SourceMeshes = std::move(SourceMeshes);
-	Parms.SourceMeshTransforms = std::move(SourceMeshTransforms);
-	Parms.TransparentMeshes = std::move(TransparentMeshes);
-	Parms.TransparentMeshTransforms = std::move(TransparentMeshTransforms);
-	Parms.OccludeMeshes = std::move(OccludeMeshes);
-	Parms.OccludeMeshTransforms = std::move(OccludeMeshTransforms);
-	Parms.OcclusionOptions = std::move(OcclusionOptions);
-	Parms.Debug = Debug;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMeshIsHidden != nullptr)
-		*OutMeshIsHidden = std::move(Parms.OutMeshIsHidden);
-
-	if (OutTransparentMeshIsHidden != nullptr)
-		*OutTransparentMeshIsHidden = std::move(Parms.OutTransparentMeshIsHidden);
-}
-
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.SetComponentMaterialList
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UPrimitiveComponent*              Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UMaterialInterface*>       MaterialList                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGeometryScriptLibrary_SceneUtilityFunctions::SetComponentMaterialList(class UPrimitiveComponent* Component, const TArray<class UMaterialInterface*>& MaterialList, class UGeometryScriptDebug* Debug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "SetComponentMaterialList");
-
-	Params::GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList Parms{};
-
-	Parms.Component = Component;
-	Parms.MaterialList = std::move(MaterialList);
-	Parms.Debug = Debug;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.GetTransformAxisPlane
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -17249,28 +16723,24 @@ bool UGeometryScriptLibrary_BoxFunctions::TestPointInsideBox(const struct FBox& 
 }
 
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FGeometryScriptUVList            UVList                                                 (Parm, NativeAccessSpecifierPublic)
-// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptSampleTextureOptionsSampleOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FGeometryScriptColorList         ColorList                                              (Parm, OutParm, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_TextureMapFunctions::SampleTexture2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTexture2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug)
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_TextureMapFunctions", "SampleTexture2DAtUVPositions");
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantScalarMultiply");
 
-	Params::GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions Parms{};
+	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply Parms{};
 
-	Parms.UVList = std::move(UVList);
-	Parms.Texture = Texture;
-	Parms.SampleOptions = std::move(SampleOptions);
-	Parms.Debug = Debug;
+	Parms.Constant = Constant;
+	Parms.ScalarList = std::move(ScalarList);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -17279,33 +16749,27 @@ void UGeometryScriptLibrary_TextureMapFunctions::SampleTexture2DAtUVPositions(co
 
 	Func->FunctionFlags = Flgs;
 
-	if (ColorList != nullptr)
-		*ColorList = std::move(Parms.ColorList);
+	return Parms.ReturnValue;
 }
 
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTextureRenderTarget2DAtUVPositions
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FGeometryScriptUVList            UVList                                                 (Parm, NativeAccessSpecifierPublic)
-// class UTextureRenderTarget2D*           Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptSampleTextureOptionsSampleOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FGeometryScriptColorList         ColorList                                              (Parm, OutParm, NativeAccessSpecifierPublic)
-// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_TextureMapFunctions::SampleTextureRenderTarget2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTextureRenderTarget2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug)
+void UGeometryScriptLibrary_VectorMathFunctions::ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GeometryScriptLibrary_TextureMapFunctions", "SampleTextureRenderTarget2DAtUVPositions");
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantScalarMultiplyInPlace");
 
-	Params::GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions Parms{};
+	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace Parms{};
 
-	Parms.UVList = std::move(UVList);
-	Parms.Texture = Texture;
-	Parms.SampleOptions = std::move(SampleOptions);
-	Parms.Debug = Debug;
+	Parms.Constant = Constant;
+	Parms.ScalarList = std::move(ScalarList);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -17314,8 +16778,544 @@ void UGeometryScriptLibrary_TextureMapFunctions::SampleTextureRenderTarget2DAtUV
 
 	Func->FunctionFlags = Flgs;
 
-	if (ColorList != nullptr)
-		*ColorList = std::move(Parms.ColorList);
+	ScalarList = std::move(Parms.ScalarList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantVectorMultiply");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply Parms{};
+
+	Parms.Constant = Constant;
+	Parms.VectorList = std::move(VectorList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// double                                  Constant                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ConstantVectorMultiplyInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace Parms{};
+
+	Parms.Constant = Constant;
+	Parms.VectorList = std::move(VectorList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	VectorList = std::move(Parms.VectorList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, NativeAccessSpecifierPublic)
+// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarBlend");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarBlend Parms{};
+
+	Parms.ScalarListA = std::move(ScalarListA);
+	Parms.ScalarListB = std::move(ScalarListB);
+	Parms.ConstantA = ConstantA;
+	Parms.ConstantB = ConstantB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarBlendInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace Parms{};
+
+	Parms.ScalarListA = std::move(ScalarListA);
+	Parms.ScalarListB = std::move(ScalarListB);
+	Parms.ConstantA = ConstantA;
+	Parms.ConstantB = ConstantB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	ScalarListB = std::move(Parms.ScalarListB);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
+// double                                  Numerator                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarInvert");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarInvert Parms{};
+
+	Parms.ScalarList = std::move(ScalarList);
+	Parms.Numerator = Numerator;
+	Parms.SetOnFailure = SetOnFailure;
+	Parms.Epsilon = Epsilon;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  Numerator                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarInvertInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace Parms{};
+
+	Parms.ScalarList = std::move(ScalarList);
+	Parms.Numerator = Numerator;
+	Parms.SetOnFailure = SetOnFailure;
+	Parms.Epsilon = Epsilon;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	ScalarList = std::move(Parms.ScalarList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, NativeAccessSpecifierPublic)
+// double                                  ConstantMultiplier                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarMultiply");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply Parms{};
+
+	Parms.ScalarListA = std::move(ScalarListA);
+	Parms.ScalarListB = std::move(ScalarListB);
+	Parms.ConstantMultiplier = ConstantMultiplier;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ScalarListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  ConstantMultiplier                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarMultiplyInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace Parms{};
+
+	Parms.ScalarListA = std::move(ScalarListA);
+	Parms.ScalarListB = std::move(ScalarListB);
+	Parms.ConstantMultiplier = ConstantMultiplier;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	ScalarListB = std::move(Parms.ScalarListB);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
+// double                                  ScalarMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarVectorMultiply");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply Parms{};
+
+	Parms.ScalarList = std::move(ScalarList);
+	Parms.VectorList = std::move(VectorList);
+	Parms.ScalarMultiplier = ScalarMultiplier;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  ScalarMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "ScalarVectorMultiplyInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace Parms{};
+
+	Parms.ScalarList = std::move(ScalarList);
+	Parms.VectorList = std::move(VectorList);
+	Parms.ScalarMultiplier = ScalarMultiplier;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	VectorList = std::move(Parms.VectorList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
+// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorBlend");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorBlend Parms{};
+
+	Parms.VectorListA = std::move(VectorListA);
+	Parms.VectorListB = std::move(VectorListB);
+	Parms.ConstantA = ConstantA;
+	Parms.ConstantB = ConstantB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorListB                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  ConstantA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorBlendInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace Parms{};
+
+	Parms.VectorListA = std::move(VectorListA);
+	Parms.VectorListB = std::move(VectorListB);
+	Parms.ConstantA = ConstantA;
+	Parms.ConstantB = ConstantB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	VectorListB = std::move(Parms.VectorListB);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptVectorList UGeometryScriptLibrary_VectorMathFunctions::VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorCross");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorCross Parms{};
+
+	Parms.VectorListA = std::move(VectorListA);
+	Parms.VectorListB = std::move(VectorListB);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorListA                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptVectorList        VectorListB                                            (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorDot");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorDot Parms{};
+
+	Parms.VectorListA = std::move(VectorListA);
+	Parms.VectorListB = std::move(VectorListB);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorLength(const struct FGeometryScriptVectorList& VectorList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorLength");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorLength Parms{};
+
+	Parms.VectorList = std::move(VectorList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FVector                          SetOnFailure                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_VectorMathFunctions::VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorNormalizeInPlace");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace Parms{};
+
+	Parms.VectorList = std::move(VectorList);
+	Parms.SetOnFailure = std::move(SetOnFailure);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	VectorList = std::move(Parms.VectorList);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
+// double                                  ConstantX                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantY                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ConstantZ                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptScalarList        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptScalarList UGeometryScriptLibrary_VectorMathFunctions::VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_VectorMathFunctions", "VectorToScalar");
+
+	Params::GeometryScriptLibrary_VectorMathFunctions_VectorToScalar Parms{};
+
+	Parms.VectorList = std::move(VectorList);
+	Parms.ConstantX = ConstantX;
+	Parms.ConstantY = ConstantY;
+	Parms.ConstantZ = ConstantZ;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

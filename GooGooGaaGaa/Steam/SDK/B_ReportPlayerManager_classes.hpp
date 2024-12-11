@@ -28,9 +28,8 @@ public:
 public:
 	void AddPlayerReport(const class FString& PlayerToReportId, const class FString& ReporterId);
 	void CanReporterReport(const class FString& PlayerToReportId, const class FString& ReporterId, bool* CanReport);
+	void ConstructReportJsonObject(class APlayerState* PlayerToReport, class APlayerState* ReportingPlayer, int32 Reason, class UVaRestJsonObject** JsonRequest);
 	void ExecuteUbergraph_B_ReportPlayerManager(int32 EntryPoint);
-	void OnFailure_CA756CEE40EA230D71CCEA881C25CCBD(const class FString& DownloadedString, int32 QueryID);
-	void OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD(const class FString& DownloadedString, int32 QueryID);
 	void ReportPlayer(class APlayerState* PlayerToReport, int32 Reason, class APlayerState* Reporter);
 
 public:

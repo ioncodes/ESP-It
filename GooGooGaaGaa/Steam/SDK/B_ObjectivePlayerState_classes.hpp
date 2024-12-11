@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "B_PlayerState_classes.hpp"
 #include "Engine_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
+#include "B_PlayerState_classes.hpp"
 #include "ETeamID_structs.hpp"
 
 

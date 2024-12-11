@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "LowEntryExtendedStandardLibrary_structs.hpp"
 #include "B_WaitInteractionActor_classes.hpp"
+#include "LowEntryExtendedStandardLibrary_structs.hpp"
 
 
 namespace SDK

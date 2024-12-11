@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "UMG_classes.hpp"
+#include "ETeamID_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -27,7 +27,7 @@ public:
 	class UImage*                                 Logo;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Name_0;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UInvalidationBox*                       TeamLogo;                                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	ETeamID                                       TeamID;                                            // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       TeamId;                                            // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_TeamLogo(int32 EntryPoint);
@@ -52,7 +52,7 @@ static_assert(offsetof(UWB_TeamLogo_C, UberGraphFrame) == 0x0002E0, "Member 'UWB
 static_assert(offsetof(UWB_TeamLogo_C, Logo) == 0x0002E8, "Member 'UWB_TeamLogo_C::Logo' has a wrong offset!");
 static_assert(offsetof(UWB_TeamLogo_C, Name_0) == 0x0002F0, "Member 'UWB_TeamLogo_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UWB_TeamLogo_C, TeamLogo) == 0x0002F8, "Member 'UWB_TeamLogo_C::TeamLogo' has a wrong offset!");
-static_assert(offsetof(UWB_TeamLogo_C, TeamID) == 0x000300, "Member 'UWB_TeamLogo_C::TeamID' has a wrong offset!");
+static_assert(offsetof(UWB_TeamLogo_C, TeamId) == 0x000300, "Member 'UWB_TeamLogo_C::TeamId' has a wrong offset!");
 
 }
 

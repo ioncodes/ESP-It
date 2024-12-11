@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "StructUtilsEngine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "StructUtilsEngine_structs.hpp"
 
 
 namespace SDK

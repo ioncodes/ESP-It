@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "S_ServerStat_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EChatType_structs.hpp"
 #include "ESleepPropSendState_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "EChatType_structs.hpp"
+#include "ETeamID_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 
 
@@ -172,8 +172,8 @@ public:
 	void InpActEvt_AnyKey_K2Node_InputKeyEvent_0(const struct FKey& Key);
 	void InpActEvt_ActivateScopeMode_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_ActivateScopeMode_K2Node_InputActionEvent_0(const struct FKey& Key);
-	void OnMessageProcessed_0FC174CF4F2A67E518FD869CEBC63EA6(bool bSuccess, const class FString& SanitizedMessage);
-	void OnCallFailed_0FC174CF4F2A67E518FD869CEBC63EA6(bool bSuccess, const class FString& SanitizedMessage);
+	void OnFailure_BF06C5004E5A2CDB72C33D83358B51E0(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_BF06C5004E5A2CDB72C33D83358B51E0(const TArray<class FString>& FilteredStrings);
 	void RequestGSStats();
 	void GetGSStat();
 	void TravelToMap(const class FString& MapName);

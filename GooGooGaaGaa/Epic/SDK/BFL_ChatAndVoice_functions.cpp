@@ -17,57 +17,31 @@
 namespace SDK
 {
 
-// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.ArePlayersInSameObjectiveTeam
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerBlocked
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerState*                     PlayerStateA                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          PlayerStateB                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_GameInstance_C*                BGameInstance                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString                           PlayerToCheck                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsBlocked                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UBFL_ChatAndVoice_C::ArePlayersInSameObjectiveTeam(class APlayerState* PlayerStateA, class UObject* PlayerStateB, class UObject* __WorldContext)
+void UBFL_ChatAndVoice_C::IsPlayerBlocked(class UB_GameInstance_C* BGameInstance, const class FString& PlayerToCheck, class UObject* __WorldContext, bool* IsBlocked)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ChatAndVoice_C", "ArePlayersInSameObjectiveTeam");
+		Func = StaticClass()->GetFunction("BFL_ChatAndVoice_C", "IsPlayerBlocked");
 
-	Params::BFL_ChatAndVoice_C_ArePlayersInSameObjectiveTeam Parms{};
+	Params::BFL_ChatAndVoice_C_IsPlayerBlocked Parms{};
 
-	Parms.PlayerStateA = PlayerStateA;
-	Parms.PlayerStateB = PlayerStateB;
+	Parms.BGameInstance = BGameInstance;
+	Parms.PlayerToCheck = std::move(PlayerToCheck);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
-}
-
-
-// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.ArePlayersInSameTeam
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class APlayerState*                     PlayerStateA                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerState*                     PlayerStateB                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UBFL_ChatAndVoice_C::ArePlayersInSameTeam(class APlayerState* PlayerStateA, class APlayerState* PlayerStateB, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BFL_ChatAndVoice_C", "ArePlayersInSameTeam");
-
-	Params::BFL_ChatAndVoice_C_ArePlayersInSameTeam Parms{};
-
-	Parms.PlayerStateA = PlayerStateA;
-	Parms.PlayerStateB = PlayerStateB;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	if (IsBlocked != nullptr)
+		*IsBlocked = Parms.IsBlocked;
 }
 
 
@@ -117,6 +91,60 @@ bool UBFL_ChatAndVoice_C::IsPlayerMutedManually(class APlayerState* Player_State
 
 	Parms.Player_State = Player_State;
 	Parms.SaveGameManager = SaveGameManager;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.ArePlayersInSameObjectiveTeam
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class APlayerState*                     PlayerStateA                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          PlayerStateB                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBFL_ChatAndVoice_C::ArePlayersInSameObjectiveTeam(class APlayerState* PlayerStateA, class UObject* PlayerStateB, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ChatAndVoice_C", "ArePlayersInSameObjectiveTeam");
+
+	Params::BFL_ChatAndVoice_C_ArePlayersInSameObjectiveTeam Parms{};
+
+	Parms.PlayerStateA = PlayerStateA;
+	Parms.PlayerStateB = PlayerStateB;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.ArePlayersInSameTeam
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class APlayerState*                     PlayerStateA                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerState*                     PlayerStateB                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBFL_ChatAndVoice_C::ArePlayersInSameTeam(class APlayerState* PlayerStateA, class APlayerState* PlayerStateB, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BFL_ChatAndVoice_C", "ArePlayersInSameTeam");
+
+	Params::BFL_ChatAndVoice_C_ArePlayersInSameTeam Parms{};
+
+	Parms.PlayerStateA = PlayerStateA;
+	Parms.PlayerStateB = PlayerStateB;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_Witch_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_Witch_classes.hpp"
 
 
 namespace SDK

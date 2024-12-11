@@ -156,6 +156,20 @@ void UWB_SplashScreen_C::OnEOSLoginStarted_Event()
 }
 
 
+// Function WB_SplashScreen.WB_SplashScreen_C.OnPremiumStatusFailed_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_SplashScreen_C::OnPremiumStatusFailed_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SplashScreen_C", "OnPremiumStatusFailed_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_SplashScreen.WB_SplashScreen_C.OnSpecialAction
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -165,6 +179,20 @@ void UWB_SplashScreen_C::OnSpecialAction()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_SplashScreen_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SplashScreen.WB_SplashScreen_C.SetControllerIconVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SplashScreen_C::SetControllerIconVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SplashScreen_C", "SetControllerIconVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,6 +229,26 @@ void UWB_SplashScreen_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 	Parms.MyGeometry = std::move(MyGeometry);
 	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_SplashScreen.WB_SplashScreen_C.ToggleAllActors
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ShowActors                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_SplashScreen_C::ToggleAllActors(bool ShowActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SplashScreen_C", "ToggleAllActors");
+
+	Params::WB_SplashScreen_C_ToggleAllActors Parms{};
+
+	Parms.ShowActors = ShowActors;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

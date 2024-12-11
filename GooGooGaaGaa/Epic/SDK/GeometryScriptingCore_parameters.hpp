@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "GeometryScriptingCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -6829,6 +6829,119 @@ static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePiv
 static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, Debug) == 0x000020, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyCollisionMeshesFromObject
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject final
+{
+public:
+	class UObject*                                FromObject;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTransformToWorld;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseComplexCollision;                              // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SphereResolution;                                  // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
+static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, FromObject) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::FromObject' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, ToDynamicMesh) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::ToDynamicMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, bTransformToWorld) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::bTransformToWorld' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, LocalToWorld) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::LocalToWorld' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, Outcome) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::Outcome' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, bUseComplexCollision) == 0x000081, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::bUseComplexCollision' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, SphereResolution) == 0x000084, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::SphereResolution' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, Debug) == 0x000088, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyMeshFromComponent
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent final
+{
+public:
+	class USceneComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshFromComponentOptions Options;                                           // 0x0010(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bTransformToWorld;                                 // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
+static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Component) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Component' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, ToDynamicMesh) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::ToDynamicMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Options) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, bTransformToWorld) == 0x00001C, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::bTransformToWorld' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, LocalToWorld) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::LocalToWorld' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Outcome) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Outcome' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Debug) == 0x000088, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CreateDynamicMeshPool
+// 0x0008 (0x0008 - 0x0000)
+struct GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool final
+{
+public:
+	class UDynamicMeshPool*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool");
+static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool) == 0x000008, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool, ReturnValue) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.DetermineMeshOcclusion
+// 0x0098 (0x0098 - 0x0000)
+struct GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion final
+{
+public:
+	TArray<class UDynamicMesh*>                   SourceMeshes;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     SourceMeshTransforms;                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<bool>                                  OutMeshIsHidden;                                   // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UDynamicMesh*>                   TransparentMeshes;                                 // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     TransparentMeshTransforms;                         // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<bool>                                  OutTransparentMeshIsHidden;                        // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UDynamicMesh*>                   OccludeMeshes;                                     // 0x0060(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     OccludeMeshTransforms;                             // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptDetermineMeshOcclusionOptions OcclusionOptions;                                  // 0x0080(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion");
+static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion) == 0x000098, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, SourceMeshes) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::SourceMeshes' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, SourceMeshTransforms) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::SourceMeshTransforms' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OutMeshIsHidden) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OutMeshIsHidden' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, TransparentMeshes) == 0x000030, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::TransparentMeshes' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, TransparentMeshTransforms) == 0x000040, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::TransparentMeshTransforms' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OutTransparentMeshIsHidden) == 0x000050, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OutTransparentMeshIsHidden' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OccludeMeshes) == 0x000060, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OccludeMeshes' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OccludeMeshTransforms) == 0x000070, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OccludeMeshTransforms' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OcclusionOptions) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OcclusionOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, Debug) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::Debug' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.SetComponentMaterialList
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList final
+{
+public:
+	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             MaterialList;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList");
+static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList) == 0x000020, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, Component) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::Component' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, MaterialList) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::MaterialList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, Debug) == 0x000018, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::Debug' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AddUVElementToMesh
 // 0x0030 (0x0030 - 0x0000)
 struct GeometryScriptLibrary_MeshUVFunctions_AddUVElementToMesh final
@@ -7701,6 +7814,44 @@ static_assert(offsetof(GeometryScriptLibrary_PointSetSamplingFunctions_Unflatten
 static_assert(offsetof(GeometryScriptLibrary_PointSetSamplingFunctions_UnflattenPoints, Options) == 0x000020, "Member 'GeometryScriptLibrary_PointSetSamplingFunctions_UnflattenPoints::Options' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_PointSetSamplingFunctions_UnflattenPoints, Height) == 0x000090, "Member 'GeometryScriptLibrary_PointSetSamplingFunctions_UnflattenPoints::Height' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions final
+{
+public:
+	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSampleTextureOptions    SampleOptions;                                     // 0x0018(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptColorList               ColorList;                                         // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions");
+static_assert(sizeof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions) == 0x000058, "Wrong size on GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, UVList) == 0x000000, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::UVList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, Texture) == 0x000010, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::Texture' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::SampleOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::ColorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::Debug' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTextureRenderTarget2DAtUVPositions
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions final
+{
+public:
+	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSampleTextureOptions    SampleOptions;                                     // 0x0018(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptColorList               ColorList;                                         // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
+static_assert(sizeof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000058, "Wrong size on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, UVList) == 0x000000, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::UVList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Texture) == 0x000010, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Texture' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::SampleOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::ColorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Debug' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.AddPolygonVertex
 // 0x0028 (0x0028 - 0x0000)
 struct GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex final
@@ -7894,309 +8045,6 @@ static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVe
 static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, VertexIndex) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::VertexIndex' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, Position) == 0x000018, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::Position' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, bPolygonIsEmpty) == 0x000028, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::bPolygonIsEmpty' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::Constant' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, ScalarList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::ScalarList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace) == 0x000018, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace::Constant' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace, ScalarList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace::ScalarList' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::Constant' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, VectorList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace) == 0x000018, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace::Constant' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace, VectorList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace::VectorList' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlend final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarBlend");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend) == 0x000040, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarBlend");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ScalarListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ScalarListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ConstantA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ConstantB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ScalarListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ScalarListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ConstantA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ConstantB' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvert final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarInvert");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarInvert");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::ScalarList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, Numerator) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::Numerator' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, SetOnFailure) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::SetOnFailure' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, Epsilon) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::Epsilon' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::ScalarList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, Numerator) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::Numerator' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, SetOnFailure) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::SetOnFailure' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, Epsilon) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::Epsilon' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ScalarListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ScalarListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ConstantMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ConstantMultiplier' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ScalarListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ScalarListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ConstantMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ConstantMultiplier' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ScalarList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, VectorList) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ScalarMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ScalarMultiplier' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::ScalarList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, VectorList) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, ScalarMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::ScalarMultiplier' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorBlend final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorBlend");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend) == 0x000040, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorBlend");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::VectorListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::VectorListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ConstantA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ConstantB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::VectorListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::VectorListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::ConstantA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::ConstantB' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorCross final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorCross) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorCross");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorCross) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorCross");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::VectorListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::VectorListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorDot final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorDot) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorDot");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorDot) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorDot");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::VectorListA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::VectorListB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorLength final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorLength");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorLength) == 0x000020, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorLength");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorLength, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorLength::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorLength, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorLength::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                SetOnFailure;                                      // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace, SetOnFailure) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace::SetOnFailure' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorToScalar final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantX;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantY;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantZ;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorToScalar");
-static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorToScalar");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::VectorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantX) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantX' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantY) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantY' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantZ) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantZ' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.AddPolygonToList
 // 0x0038 (0x0038 - 0x0000)
@@ -8967,119 +8815,6 @@ static_assert(offsetof(GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTra
 static_assert(offsetof(GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms, bIncludeScale) == 0x0000A0, "Member 'GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms::bIncludeScale' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms, ReturnValue) == 0x0000A1, "Member 'GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyCollisionMeshesFromObject
-// 0x00A0 (0x00A0 - 0x0000)
-struct GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject final
-{
-public:
-	class UObject*                                FromObject;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTransformToWorld;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseComplexCollision;                              // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SphereResolution;                                  // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
-static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, FromObject) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::FromObject' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, ToDynamicMesh) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::ToDynamicMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, bTransformToWorld) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::bTransformToWorld' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, LocalToWorld) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::LocalToWorld' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, Outcome) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::Outcome' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, bUseComplexCollision) == 0x000081, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::bUseComplexCollision' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, SphereResolution) == 0x000084, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::SphereResolution' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, Debug) == 0x000088, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyMeshFromComponent
-// 0x00A0 (0x00A0 - 0x0000)
-struct GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent final
-{
-public:
-	class USceneComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptCopyMeshFromComponentOptions Options;                                           // 0x0010(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bTransformToWorld;                                 // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
-static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Component) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Component' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, ToDynamicMesh) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::ToDynamicMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Options) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, bTransformToWorld) == 0x00001C, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::bTransformToWorld' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, LocalToWorld) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::LocalToWorld' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Outcome) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Outcome' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, Debug) == 0x000088, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CreateDynamicMeshPool
-// 0x0008 (0x0008 - 0x0000)
-struct GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool final
-{
-public:
-	class UDynamicMeshPool*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool");
-static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool) == 0x000008, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool, ReturnValue) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_CreateDynamicMeshPool::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.DetermineMeshOcclusion
-// 0x0098 (0x0098 - 0x0000)
-struct GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion final
-{
-public:
-	TArray<class UDynamicMesh*>                   SourceMeshes;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     SourceMeshTransforms;                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<bool>                                  OutMeshIsHidden;                                   // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UDynamicMesh*>                   TransparentMeshes;                                 // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     TransparentMeshTransforms;                         // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<bool>                                  OutTransparentMeshIsHidden;                        // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UDynamicMesh*>                   OccludeMeshes;                                     // 0x0060(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     OccludeMeshTransforms;                             // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptDetermineMeshOcclusionOptions OcclusionOptions;                                  // 0x0080(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion");
-static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion) == 0x000098, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, SourceMeshes) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::SourceMeshes' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, SourceMeshTransforms) == 0x000010, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::SourceMeshTransforms' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OutMeshIsHidden) == 0x000020, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OutMeshIsHidden' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, TransparentMeshes) == 0x000030, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::TransparentMeshes' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, TransparentMeshTransforms) == 0x000040, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::TransparentMeshTransforms' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OutTransparentMeshIsHidden) == 0x000050, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OutTransparentMeshIsHidden' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OccludeMeshes) == 0x000060, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OccludeMeshes' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OccludeMeshTransforms) == 0x000070, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OccludeMeshTransforms' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, OcclusionOptions) == 0x000080, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::OcclusionOptions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion, Debug) == 0x000090, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion::Debug' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.SetComponentMaterialList
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList final
-{
-public:
-	class UPrimitiveComponent*                    Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             MaterialList;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList");
-static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList) == 0x000020, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, Component) == 0x000000, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::Component' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, MaterialList) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::MaterialList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, Debug) == 0x000018, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::Debug' has a wrong offset!");
-
 // Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.GetTransformAxisPlane
 // 0x0090 (0x0090 - 0x0000)
 struct GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane final
@@ -9645,43 +9380,308 @@ static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, Po
 static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, bConsiderOnBoxAsInside) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::bConsiderOnBoxAsInside' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, ReturnValue) == 0x000051, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions final
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply final
 {
 public:
-	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSampleTextureOptions    SampleOptions;                                     // 0x0018(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptColorList               ColorList;                                         // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions");
-static_assert(sizeof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions) == 0x000058, "Wrong size on GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, UVList) == 0x000000, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::UVList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, Texture) == 0x000010, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::Texture' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::SampleOptions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::ColorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::Debug' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::Constant' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, ScalarList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::ScalarList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTextureRenderTarget2DAtUVPositions
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions final
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace final
 {
 public:
-	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSampleTextureOptions    SampleOptions;                                     // 0x0018(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptColorList               ColorList;                                         // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
-static_assert(sizeof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000058, "Wrong size on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, UVList) == 0x000000, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::UVList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Texture) == 0x000010, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Texture' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::SampleOptions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::ColorList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Debug' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace) == 0x000018, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace::Constant' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace, ScalarList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace::ScalarList' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::Constant' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, VectorList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace) == 0x000018, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace, Constant) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace::Constant' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace, VectorList) == 0x000008, "Member 'GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace::VectorList' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlend final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarBlend");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend) == 0x000040, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarBlend");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ScalarListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ScalarListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ConstantA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ConstantB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlend, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlend::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ScalarListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ScalarListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ConstantA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace::ConstantB' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvert final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarInvert");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarInvert");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::ScalarList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, Numerator) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::Numerator' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, SetOnFailure) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::SetOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, Epsilon) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::Epsilon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvert, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvert::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::ScalarList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, Numerator) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::Numerator' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, SetOnFailure) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::SetOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace, Epsilon) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace::Epsilon' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ScalarListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ScalarListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ConstantMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ConstantMultiplier' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ScalarListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ScalarListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ScalarListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ScalarListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace, ConstantMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace::ConstantMultiplier' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ScalarList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, VectorList) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ScalarMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ScalarMultiplier' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, ScalarList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::ScalarList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, VectorList) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace, ScalarMultiplier) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace::ScalarMultiplier' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorBlend final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorBlend");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend) == 0x000040, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorBlend");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::VectorListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::VectorListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ConstantA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ConstantB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlend, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlend::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::VectorListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::VectorListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, ConstantA) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::ConstantA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace, ConstantB) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace::ConstantB' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorCross final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorCross) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorCross");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorCross) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorCross");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::VectorListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::VectorListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorCross, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorCross::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorDot final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorDot) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorDot");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorDot) == 0x000030, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorDot");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, VectorListA) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::VectorListA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, VectorListB) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::VectorListB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorDot, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorDot::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorLength final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorLength");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorLength) == 0x000020, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorLength");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorLength, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorLength::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorLength, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorLength::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                SetOnFailure;                                      // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace) == 0x000028, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace, SetOnFailure) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace::SetOnFailure' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorToScalar final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantX;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantY;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantZ;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar) == 0x000008, "Wrong alignment on GeometryScriptLibrary_VectorMathFunctions_VectorToScalar");
+static_assert(sizeof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar) == 0x000038, "Wrong size on GeometryScriptLibrary_VectorMathFunctions_VectorToScalar");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, VectorList) == 0x000000, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::VectorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantX) == 0x000010, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantX' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantY) == 0x000018, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantY' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ConstantZ) == 0x000020, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ConstantZ' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_VectorMathFunctions_VectorToScalar, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_VectorMathFunctions_VectorToScalar::ReturnValue' has a wrong offset!");
 
 }
 

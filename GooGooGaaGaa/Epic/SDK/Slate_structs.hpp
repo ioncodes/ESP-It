@@ -237,17 +237,6 @@ enum class EListItemAlignment : uint8
 	EListItemAlignment_MAX                   = 7,
 };
 
-// ScriptStruct Slate.VirtualKeyboardOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FVirtualKeyboardOptions final
-{
-public:
-	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVirtualKeyboardOptions) == 0x000001, "Wrong alignment on FVirtualKeyboardOptions");
-static_assert(sizeof(FVirtualKeyboardOptions) == 0x000001, "Wrong size on FVirtualKeyboardOptions");
-static_assert(offsetof(FVirtualKeyboardOptions, bEnableAutocorrect) == 0x000000, "Member 'FVirtualKeyboardOptions::bEnableAutocorrect' has a wrong offset!");
-
 // ScriptStruct Slate.CharRange
 // 0x0004 (0x0004 - 0x0000)
 struct FCharRange final
@@ -260,6 +249,17 @@ static_assert(alignof(FCharRange) == 0x000002, "Wrong alignment on FCharRange");
 static_assert(sizeof(FCharRange) == 0x000004, "Wrong size on FCharRange");
 static_assert(offsetof(FCharRange, First) == 0x000000, "Member 'FCharRange::First' has a wrong offset!");
 static_assert(offsetof(FCharRange, Last) == 0x000002, "Member 'FCharRange::Last' has a wrong offset!");
+
+// ScriptStruct Slate.VirtualKeyboardOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FVirtualKeyboardOptions final
+{
+public:
+	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVirtualKeyboardOptions) == 0x000001, "Wrong alignment on FVirtualKeyboardOptions");
+static_assert(sizeof(FVirtualKeyboardOptions) == 0x000001, "Wrong size on FVirtualKeyboardOptions");
+static_assert(offsetof(FVirtualKeyboardOptions, bEnableAutocorrect) == 0x000000, "Member 'FVirtualKeyboardOptions::bEnableAutocorrect' has a wrong offset!");
 
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
@@ -277,17 +277,6 @@ static_assert(alignof(FInputChord) == 0x000008, "Wrong alignment on FInputChord"
 static_assert(sizeof(FInputChord) == 0x000020, "Wrong size on FInputChord");
 static_assert(offsetof(FInputChord, Key) == 0x000000, "Member 'FInputChord::Key' has a wrong offset!");
 
-// ScriptStruct Slate.CustomizedToolMenuEntry
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCustomizedToolMenuEntry) == 0x000004, "Wrong alignment on FCustomizedToolMenuEntry");
-static_assert(sizeof(FCustomizedToolMenuEntry) == 0x000004, "Wrong size on FCustomizedToolMenuEntry");
-static_assert(offsetof(FCustomizedToolMenuEntry, Visibility) == 0x000000, "Member 'FCustomizedToolMenuEntry::Visibility' has a wrong offset!");
-
 // ScriptStruct Slate.Anchors
 // 0x0020 (0x0020 - 0x0000)
 struct FAnchors final
@@ -300,6 +289,17 @@ static_assert(alignof(FAnchors) == 0x000008, "Wrong alignment on FAnchors");
 static_assert(sizeof(FAnchors) == 0x000020, "Wrong size on FAnchors");
 static_assert(offsetof(FAnchors, Minimum) == 0x000000, "Member 'FAnchors::Minimum' has a wrong offset!");
 static_assert(offsetof(FAnchors, Maximum) == 0x000010, "Member 'FAnchors::Maximum' has a wrong offset!");
+
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCustomizedToolMenuEntry) == 0x000004, "Wrong alignment on FCustomizedToolMenuEntry");
+static_assert(sizeof(FCustomizedToolMenuEntry) == 0x000004, "Wrong size on FCustomizedToolMenuEntry");
+static_assert(offsetof(FCustomizedToolMenuEntry, Visibility) == 0x000000, "Member 'FCustomizedToolMenuEntry::Visibility' has a wrong offset!");
 
 // ScriptStruct Slate.CharRangeList
 // 0x0010 (0x0010 - 0x0000)

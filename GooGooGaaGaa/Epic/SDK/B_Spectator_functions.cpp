@@ -102,6 +102,20 @@ void AB_Spectator_C::CanTeleport(bool* CanTeleport_0)
 }
 
 
+// Function B_Spectator.B_Spectator_C.StartSpectatorMultiplayerFeature
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Spectator_C::StartSpectatorMultiplayerFeature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Spectator_C", "StartSpectatorMultiplayerFeature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Spectator.B_Spectator_C.AddToMovementSpeedMutliplier
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

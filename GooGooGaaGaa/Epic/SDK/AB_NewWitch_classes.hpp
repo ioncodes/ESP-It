@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
-#include "AB_NewWitch_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "AB_NewWitch_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK

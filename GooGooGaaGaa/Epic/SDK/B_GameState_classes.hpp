@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "S_SkillRules_structs.hpp"
-#include "SMapData_structs.hpp"
-#include "SCalculatedScoreStat_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "S_GameModifier_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "EChatType_structs.hpp"
+#include "SCalculatedScoreStat_structs.hpp"
 #include "S_MatchRules_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
-#include "EChatType_structs.hpp"
 #include "EGameMessageType_structs.hpp"
 
 
@@ -28,8 +28,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GameState.B_GameState_C
-// 0x0298 (0x05A0 - 0x0308)
-class AB_GameState_C : public AWitchItGameState
+// 0x02B0 (0x05B8 - 0x0308)
+#pragma pack(push, 0x1)
+class alignas(0x08) AB_GameState_C : public AWitchItGameState
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -95,6 +96,8 @@ public:
 	bool                                          EnabledPropSleepManager;                           // 0x0599(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_59A[0x2];                                      // 0x059A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TargetClientTickRate;                              // 0x059C(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnMatchStartedClients;                             // 0x05A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsCrossPlatformGame;                               // 0x05B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnMatchStarted__DelegateSignature();
@@ -102,6 +105,7 @@ public:
 	void HasTrackingStarted(bool* HasTrackingStarted_0);
 	bool IsPhysicsEnabled();
 	void IsRoundEnd(bool* RoundIsEnd);
+	void OnRep_IsCrossPlatformGame();
 	void DetermineTickRates();
 	void ApplyClientTickRate();
 	void OnRep_TargetClientTickRate();
@@ -153,6 +157,8 @@ public:
 	void UpdateTournamentPlayerScoreMulti(const class FString& PlayerId, int32 NewScore);
 	void SkillsUpdated();
 	void UpdateGameNameSanitized();
+	void ShowGameMessage(const class FText& SourcePlayerName, const class FText& TargetPlayerName, EGameMessageType MessageType);
+	void OnMatchStartedClients__DelegateSignature();
 	void ExecuteUbergraph_B_GameState(int32 EntryPoint);
 
 	void IsIdleKickEnabled(bool* bIsEnabled) const;
@@ -167,8 +173,9 @@ public:
 		return GetDefaultObjImpl<AB_GameState_C>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(AB_GameState_C) == 0x000008, "Wrong alignment on AB_GameState_C");
-static_assert(sizeof(AB_GameState_C) == 0x0005A0, "Wrong size on AB_GameState_C");
+static_assert(sizeof(AB_GameState_C) == 0x0005B8, "Wrong size on AB_GameState_C");
 static_assert(offsetof(AB_GameState_C, UberGraphFrame) == 0x000308, "Member 'AB_GameState_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(AB_GameState_C, B_AnnouncerSystem) == 0x000310, "Member 'AB_GameState_C::B_AnnouncerSystem' has a wrong offset!");
 static_assert(offsetof(AB_GameState_C, B_InstrumentManager) == 0x000318, "Member 'AB_GameState_C::B_InstrumentManager' has a wrong offset!");
@@ -221,6 +228,8 @@ static_assert(offsetof(AB_GameState_C, PowerupRules) == 0x000588, "Member 'AB_Ga
 static_assert(offsetof(AB_GameState_C, HuntersCanTakeDamage) == 0x000598, "Member 'AB_GameState_C::HuntersCanTakeDamage' has a wrong offset!");
 static_assert(offsetof(AB_GameState_C, EnabledPropSleepManager) == 0x000599, "Member 'AB_GameState_C::EnabledPropSleepManager' has a wrong offset!");
 static_assert(offsetof(AB_GameState_C, TargetClientTickRate) == 0x00059C, "Member 'AB_GameState_C::TargetClientTickRate' has a wrong offset!");
+static_assert(offsetof(AB_GameState_C, OnMatchStartedClients) == 0x0005A0, "Member 'AB_GameState_C::OnMatchStartedClients' has a wrong offset!");
+static_assert(offsetof(AB_GameState_C, IsCrossPlatformGame) == 0x0005B0, "Member 'AB_GameState_C::IsCrossPlatformGame' has a wrong offset!");
 
 }
 

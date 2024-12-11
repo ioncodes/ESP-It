@@ -299,6 +299,65 @@ static_assert(offsetof(FTradeRequest, TargetItems) == 0x000028, "Member 'FTradeR
 static_assert(offsetof(FTradeRequest, State) == 0x000038, "Member 'FTradeRequest::State' has a wrong offset!");
 static_assert(offsetof(FTradeRequest, UnixCreationTime) == 0x000048, "Member 'FTradeRequest::UnixCreationTime' has a wrong offset!");
 
+// ScriptStruct MasterServerPlugin.GameServerListEntry
+// 0x00C8 (0x00C8 - 0x0000)
+struct FGameServerListEntry final
+{
+public:
+	int64                                         UniqueID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BuildUniqueId;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PingInMs;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        SessionSettingsFlags;                              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OnlineSystemUserId;                                // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameServerType                               ServerType;                                        // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentPlayers;                                    // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxPlayers;                                        // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MatchTime;                                         // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GameMode;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GameRules;                                         // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActiveMapName;                                     // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 VersionNumber;                                     // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 StartTime;                                         // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTournamentServer;                               // 0x0098(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasUserGeneratedContent;                          // 0x0099(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasObjectiveMatchStarted;                         // 0x009A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPasswordProtected;                              // 0x009B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasMatchStarted;                                  // 0x009C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 HostName;                                          // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListeningPort;                                     // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EServerBrowserEntryOnlineSystemType           OnlineSystemType;                                  // 0x00B4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 OnlineSystemConnectionInfoBlock;                   // 0x00B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameServerListEntry) == 0x000008, "Wrong alignment on FGameServerListEntry");
+static_assert(sizeof(FGameServerListEntry) == 0x0000C8, "Wrong size on FGameServerListEntry");
+static_assert(offsetof(FGameServerListEntry, UniqueID) == 0x000000, "Member 'FGameServerListEntry::UniqueID' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, BuildUniqueId) == 0x000008, "Member 'FGameServerListEntry::BuildUniqueId' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, PingInMs) == 0x00000C, "Member 'FGameServerListEntry::PingInMs' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, SessionSettingsFlags) == 0x000010, "Member 'FGameServerListEntry::SessionSettingsFlags' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, Name) == 0x000018, "Member 'FGameServerListEntry::Name' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, OnlineSystemUserId) == 0x000028, "Member 'FGameServerListEntry::OnlineSystemUserId' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, ServerType) == 0x000038, "Member 'FGameServerListEntry::ServerType' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, CurrentPlayers) == 0x00003C, "Member 'FGameServerListEntry::CurrentPlayers' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, MaxPlayers) == 0x000040, "Member 'FGameServerListEntry::MaxPlayers' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, MatchTime) == 0x000044, "Member 'FGameServerListEntry::MatchTime' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, GameMode) == 0x000048, "Member 'FGameServerListEntry::GameMode' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, GameRules) == 0x000058, "Member 'FGameServerListEntry::GameRules' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, ActiveMapName) == 0x000068, "Member 'FGameServerListEntry::ActiveMapName' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, VersionNumber) == 0x000078, "Member 'FGameServerListEntry::VersionNumber' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, StartTime) == 0x000088, "Member 'FGameServerListEntry::StartTime' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, bIsTournamentServer) == 0x000098, "Member 'FGameServerListEntry::bIsTournamentServer' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, bHasUserGeneratedContent) == 0x000099, "Member 'FGameServerListEntry::bHasUserGeneratedContent' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, bHasObjectiveMatchStarted) == 0x00009A, "Member 'FGameServerListEntry::bHasObjectiveMatchStarted' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, bIsPasswordProtected) == 0x00009B, "Member 'FGameServerListEntry::bIsPasswordProtected' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, bHasMatchStarted) == 0x00009C, "Member 'FGameServerListEntry::bHasMatchStarted' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, HostName) == 0x0000A0, "Member 'FGameServerListEntry::HostName' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, ListeningPort) == 0x0000B0, "Member 'FGameServerListEntry::ListeningPort' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, OnlineSystemType) == 0x0000B4, "Member 'FGameServerListEntry::OnlineSystemType' has a wrong offset!");
+static_assert(offsetof(FGameServerListEntry, OnlineSystemConnectionInfoBlock) == 0x0000B8, "Member 'FGameServerListEntry::OnlineSystemConnectionInfoBlock' has a wrong offset!");
+
 // ScriptStruct MasterServerPlugin.AccountMessage
 // 0x0020 (0x0020 - 0x0000)
 struct FAccountMessage final
@@ -426,65 +485,6 @@ static_assert(offsetof(FGameServerInfo, GameRules) == 0x000010, "Member 'FGameSe
 static_assert(offsetof(FGameServerInfo, CustomHost) == 0x000020, "Member 'FGameServerInfo::CustomHost' has a wrong offset!");
 static_assert(offsetof(FGameServerInfo, CustomListeningPort) == 0x000030, "Member 'FGameServerInfo::CustomListeningPort' has a wrong offset!");
 static_assert(offsetof(FGameServerInfo, Session) == 0x000038, "Member 'FGameServerInfo::Session' has a wrong offset!");
-
-// ScriptStruct MasterServerPlugin.GameServerListEntry
-// 0x00C8 (0x00C8 - 0x0000)
-struct FGameServerListEntry final
-{
-public:
-	int64                                         UniqueID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BuildUniqueId;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PingInMs;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint64                                        SessionSettingsFlags;                              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Name;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OnlineSystemUserId;                                // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameServerType                               ServerType;                                        // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentPlayers;                                    // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxPlayers;                                        // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MatchTime;                                         // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GameMode;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GameRules;                                         // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActiveMapName;                                     // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VersionNumber;                                     // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 StartTime;                                         // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsTournamentServer;                               // 0x0098(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasUserGeneratedContent;                          // 0x0099(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasObjectiveMatchStarted;                         // 0x009A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPasswordProtected;                              // 0x009B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasMatchStarted;                                  // 0x009C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 HostName;                                          // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ListeningPort;                                     // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EServerBrowserEntryOnlineSystemType           OnlineSystemType;                                  // 0x00B4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 OnlineSystemConnectionInfoBlock;                   // 0x00B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameServerListEntry) == 0x000008, "Wrong alignment on FGameServerListEntry");
-static_assert(sizeof(FGameServerListEntry) == 0x0000C8, "Wrong size on FGameServerListEntry");
-static_assert(offsetof(FGameServerListEntry, UniqueID) == 0x000000, "Member 'FGameServerListEntry::UniqueID' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, BuildUniqueId) == 0x000008, "Member 'FGameServerListEntry::BuildUniqueId' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, PingInMs) == 0x00000C, "Member 'FGameServerListEntry::PingInMs' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, SessionSettingsFlags) == 0x000010, "Member 'FGameServerListEntry::SessionSettingsFlags' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, Name) == 0x000018, "Member 'FGameServerListEntry::Name' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, OnlineSystemUserId) == 0x000028, "Member 'FGameServerListEntry::OnlineSystemUserId' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, ServerType) == 0x000038, "Member 'FGameServerListEntry::ServerType' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, CurrentPlayers) == 0x00003C, "Member 'FGameServerListEntry::CurrentPlayers' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, MaxPlayers) == 0x000040, "Member 'FGameServerListEntry::MaxPlayers' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, MatchTime) == 0x000044, "Member 'FGameServerListEntry::MatchTime' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, GameMode) == 0x000048, "Member 'FGameServerListEntry::GameMode' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, GameRules) == 0x000058, "Member 'FGameServerListEntry::GameRules' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, ActiveMapName) == 0x000068, "Member 'FGameServerListEntry::ActiveMapName' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, VersionNumber) == 0x000078, "Member 'FGameServerListEntry::VersionNumber' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, StartTime) == 0x000088, "Member 'FGameServerListEntry::StartTime' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, bIsTournamentServer) == 0x000098, "Member 'FGameServerListEntry::bIsTournamentServer' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, bHasUserGeneratedContent) == 0x000099, "Member 'FGameServerListEntry::bHasUserGeneratedContent' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, bHasObjectiveMatchStarted) == 0x00009A, "Member 'FGameServerListEntry::bHasObjectiveMatchStarted' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, bIsPasswordProtected) == 0x00009B, "Member 'FGameServerListEntry::bIsPasswordProtected' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, bHasMatchStarted) == 0x00009C, "Member 'FGameServerListEntry::bHasMatchStarted' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, HostName) == 0x0000A0, "Member 'FGameServerListEntry::HostName' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, ListeningPort) == 0x0000B0, "Member 'FGameServerListEntry::ListeningPort' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, OnlineSystemType) == 0x0000B4, "Member 'FGameServerListEntry::OnlineSystemType' has a wrong offset!");
-static_assert(offsetof(FGameServerListEntry, OnlineSystemConnectionInfoBlock) == 0x0000B8, "Member 'FGameServerListEntry::OnlineSystemConnectionInfoBlock' has a wrong offset!");
 
 }
 

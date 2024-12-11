@@ -17,35 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WB_StaminaBar.WB_StaminaBar_C.ExecuteUbergraph_WB_StaminaBar
-// 0x0070 (0x0070 - 0x0000)
-struct WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0010(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FInterpTo_ReturnValue;                    // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FInterpTo_DeltaTime_ImplicitCast;         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar) == 0x000008, "Wrong alignment on WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar");
-static_assert(sizeof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar) == 0x000070, "Wrong size on WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, EntryPoint) == 0x000000, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, K2Node_Event_MyGeometry) == 0x000010, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, K2Node_Event_InDeltaTime) == 0x000048, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_IsValid_ReturnValue) == 0x00004C, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000050, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_FInterpTo_ReturnValue) == 0x000058, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_FInterpTo_DeltaTime_ImplicitCast) == 0x000060, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_FInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000068, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-
 // Function WB_StaminaBar.WB_StaminaBar_C.GetVisibility_0
 // 0x0018 (0x0018 - 0x0000)
 struct WB_StaminaBar_C_GetVisibility_0 final
@@ -74,6 +45,35 @@ static_assert(alignof(WB_StaminaBar_C_Tick) == 0x000004, "Wrong alignment on WB_
 static_assert(sizeof(WB_StaminaBar_C_Tick) == 0x00003C, "Wrong size on WB_StaminaBar_C_Tick");
 static_assert(offsetof(WB_StaminaBar_C_Tick, MyGeometry) == 0x000000, "Member 'WB_StaminaBar_C_Tick::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_StaminaBar_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_StaminaBar_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function WB_StaminaBar.WB_StaminaBar_C.ExecuteUbergraph_WB_StaminaBar
+// 0x0070 (0x0070 - 0x0000)
+struct WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0010(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FInterpTo_ReturnValue;                    // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FInterpTo_DeltaTime_ImplicitCast;         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar) == 0x000008, "Wrong alignment on WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar");
+static_assert(sizeof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar) == 0x000070, "Wrong size on WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, EntryPoint) == 0x000000, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, K2Node_Event_MyGeometry) == 0x000010, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, K2Node_Event_InDeltaTime) == 0x000048, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_IsValid_ReturnValue) == 0x00004C, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000050, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_FInterpTo_ReturnValue) == 0x000058, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_FInterpTo_DeltaTime_ImplicitCast) == 0x000060, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_FInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000068, "Member 'WB_StaminaBar_C_ExecuteUbergraph_WB_StaminaBar::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 }
 

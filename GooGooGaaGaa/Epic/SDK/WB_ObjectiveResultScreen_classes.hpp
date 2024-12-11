@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveTeam_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 #include "E_ObjectiveResult_structs.hpp"
 
 

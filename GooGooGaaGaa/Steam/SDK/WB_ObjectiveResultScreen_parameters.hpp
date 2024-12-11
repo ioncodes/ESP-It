@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "E_ObjectiveTeam_structs.hpp"
 #include "E_ObjectiveResult_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "UMG_structs.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 
 
 namespace SDK::Params

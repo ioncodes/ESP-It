@@ -10,33 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "ClientQuest_structs.hpp"
 #include "ClientQuestType_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function WB_QuestBlock.WB_QuestBlock_C.HideQuestUI
-// 0x0005 (0x0005 - 0x0000)
-struct WB_QuestBlock_C_HideQuestUI final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_QuestBlock_C_HideQuestUI) == 0x000001, "Wrong alignment on WB_QuestBlock_C_HideQuestUI");
-static_assert(sizeof(WB_QuestBlock_C_HideQuestUI) == 0x000005, "Wrong size on WB_QuestBlock_C_HideQuestUI");
-static_assert(offsetof(WB_QuestBlock_C_HideQuestUI, Temp_bool_Variable) == 0x000000, "Member 'WB_QuestBlock_C_HideQuestUI::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_HideQuestUI, Temp_byte_Variable) == 0x000001, "Member 'WB_QuestBlock_C_HideQuestUI::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_HideQuestUI, Temp_byte_Variable_1) == 0x000002, "Member 'WB_QuestBlock_C_HideQuestUI::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_HideQuestUI, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000003, "Member 'WB_QuestBlock_C_HideQuestUI::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_HideQuestUI, K2Node_Select_Default) == 0x000004, "Member 'WB_QuestBlock_C_HideQuestUI::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_QuestBlock.WB_QuestBlock_C.SetInitialFocus
 // 0x00A0 (0x00A0 - 0x0000)
@@ -473,21 +454,8 @@ static_assert(alignof(WB_QuestBlock_C_HandleReceiveAssignedQuests) == 0x000008, 
 static_assert(sizeof(WB_QuestBlock_C_HandleReceiveAssignedQuests) == 0x000010, "Wrong size on WB_QuestBlock_C_HandleReceiveAssignedQuests");
 static_assert(offsetof(WB_QuestBlock_C_HandleReceiveAssignedQuests, Quests) == 0x000000, "Member 'WB_QuestBlock_C_HandleReceiveAssignedQuests::Quests' has a wrong offset!");
 
-// Function WB_QuestBlock.WB_QuestBlock_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WB_QuestBlock_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_QuestBlock_C_Tick) == 0x000004, "Wrong alignment on WB_QuestBlock_C_Tick");
-static_assert(sizeof(WB_QuestBlock_C_Tick) == 0x00003C, "Wrong size on WB_QuestBlock_C_Tick");
-static_assert(offsetof(WB_QuestBlock_C_Tick, MyGeometry) == 0x000000, "Member 'WB_QuestBlock_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_QuestBlock_C_Tick::InDeltaTime' has a wrong offset!");
-
 // Function WB_QuestBlock.WB_QuestBlock_C.ExecuteUbergraph_WB_QuestBlock
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock final
 {
 public:
@@ -503,11 +471,9 @@ public:
 	TDelegate<void(TArray<struct FClientQuest>& Quests)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0060(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock) == 0x000008, "Wrong alignment on WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock");
-static_assert(sizeof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock) == 0x0000A0, "Wrong size on WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock");
+static_assert(sizeof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock) == 0x000060, "Wrong size on WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock");
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, EntryPoint) == 0x000000, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
@@ -517,8 +483,6 @@ static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, K2Node_Cu
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, K2Node_CreateDelegate_OutputDelegate_1) == 0x000040, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, CallFunc_PlayAnimation_ReturnValue) == 0x000050, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, CallFunc_PlayAnimation_ReturnValue_1) == 0x000058, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, K2Node_Event_MyGeometry) == 0x000060, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock, K2Node_Event_InDeltaTime) == 0x000098, "Member 'WB_QuestBlock_C_ExecuteUbergraph_WB_QuestBlock::K2Node_Event_InDeltaTime' has a wrong offset!");
 
 }
 

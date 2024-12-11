@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EGameMessageType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "EGameMessageType_structs.hpp"
 
 
 namespace SDK
@@ -41,8 +41,8 @@ public:
 	void ExecuteUbergraph_WB_GameMessages(int32 EntryPoint);
 	ESlateVisibility Get_VerticalBox_1_Visibility_0();
 	void InternalAddGameMessage(const class FText& SourcePlayerName, const class FText& TargetPlayerName, EGameMessageType MessageType);
-	void OnCallFailed_22122CDE4C9301009E76EEB1F17098EF(bool bSuccess, const TArray<class FString>& SanitizedMessages);
-	void OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF(bool bSuccess, const TArray<class FString>& SanitizedMessages);
+	void OnFailure_5E4EF2C84265486E4D90B7B040122A50(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_5E4EF2C84265486E4D90B7B040122A50(const TArray<class FString>& FilteredStrings);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:

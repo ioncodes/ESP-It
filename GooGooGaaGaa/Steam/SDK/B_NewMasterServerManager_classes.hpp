@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "LowEntryJson_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MasterServerPlugin_classes.hpp"
-#include "LowEntryJson_structs.hpp"
 #include "ERestCommonError_structs.hpp"
 
 
@@ -21,42 +21,42 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_NewMasterServerManager.B_NewMasterServerManager_C
-// 0x0128 (0x03E0 - 0x02B8)
+// 0x0128 (0x03D0 - 0x02A8)
 class UB_NewMasterServerManager_C final : public UNewMasterServerManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVaRestRequestJSON*                     VARequest_Access;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 RefreshToken;                                      // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 AccessToken;                                       // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 MasterServerHostname;                              // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash)
-	int32                                         MasterServerRestApiPort;                           // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MasterServerDirectPort;                            // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 DevMasterServerHostName;                           // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash)
-	int32                                         DevMasterServerDirectPort;                         // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         RestApiVersion;                                    // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVaRestRequestJSON*                     VARequest_Refresh;                                 // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              AccessTokenExpiryTime;                             // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              NextAccessTokenCheckTime;                          // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              RefreshTokenExpiryTime;                            // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           UpdateTimer;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              AccessTokenExpiryDeltatime;                        // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             DidReceiveAccessToken;                             // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 CachedLoginUsername;                               // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 CachedLoginPassword;                               // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 CachedLoginLocale;                                 // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 CachedLoginAccountType;                            // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          LastLoginWasSuccessful;                            // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LoginComplete;                                     // 0x0399(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A[0x6];                                      // 0x039A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnLoginCompleted;                                  // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsDedicatedServer;                                 // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      GameInstanceHandle;                                // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ServerClientConfig_C*                ClientConfig;                                      // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         WitchItAccountId;                                  // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         WitchItAccountState;                               // 0x03CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnLoginFailed;                                     // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVaRestRequestJSON*                     VARequest_Access;                                  // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 RefreshToken;                                      // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 AccessToken;                                       // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 MasterServerHostname;                              // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash)
+	int32                                         MasterServerRestApiPort;                           // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MasterServerDirectPort;                            // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 DevMasterServerHostName;                           // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash)
+	int32                                         DevMasterServerDirectPort;                         // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RestApiVersion;                                    // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVaRestRequestJSON*                     VARequest_Refresh;                                 // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              AccessTokenExpiryTime;                             // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              NextAccessTokenCheckTime;                          // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              RefreshTokenExpiryTime;                            // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           UpdateTimer;                                       // 0x0328(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              AccessTokenExpiryDeltatime;                        // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             DidReceiveAccessToken;                             // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 CachedLoginUsername;                               // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 CachedLoginPassword;                               // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 CachedLoginLocale;                                 // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 CachedLoginAccountType;                            // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          LastLoginWasSuccessful;                            // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LoginComplete;                                     // 0x0389(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38A[0x6];                                      // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnLoginCompleted;                                  // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsDedicatedServer;                                 // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      GameInstanceHandle;                                // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerClientConfig_C*                ClientConfig;                                      // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         WitchItAccountId;                                  // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         WitchItAccountState;                               // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnLoginFailed;                                     // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void DidReceiveAccessToken__DelegateSignature();
@@ -68,8 +68,8 @@ public:
 	void BuildGetGSStatsCallUrl(const class FString& ProductUserId, class FString* URL);
 	void BuildGetStatsCallUrl(class FString* URL);
 	void BuildGetSystemMessagesRequest(class UVaRestRequestJSON** Result);
-	void BuildLoginRequest(const class FString& UserName, const class FString& Password, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& ProductUserId, const class FString& PlatformAuthInfo, class UVaRestRequestJSON** RestRequest);
-	void BuildLoginRequestWithRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& PlatformAuthInfo, class UVaRestRequestJSON** RestRequest);
+	void BuildLoginRequest(const class FString& UserName, const class FString& Password, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& ProductUserId, const class FString& PlatformAuthInfo, const class FString& OnlineEnvironment, class UVaRestRequestJSON** RestRequest);
+	void BuildLoginRequestWithRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& PlatformAuthInfo, const class FString& OnlineEnvironment, class UVaRestRequestJSON** RestRequest);
 	void BuildParameterString(const TMap<class FString, class FString>& Parameters, class FString* Out);
 	void BuildPostQuestProgressRequest(const class FString& JsonContent, class UVaRestRequestJSON** RestRequest);
 	void BuildQuestCallUrl(const class FString& FunctionName, const TMap<class FString, class FString>& Parameters, class FString* URL);
@@ -140,37 +140,37 @@ public:
 	}
 };
 static_assert(alignof(UB_NewMasterServerManager_C) == 0x000008, "Wrong alignment on UB_NewMasterServerManager_C");
-static_assert(sizeof(UB_NewMasterServerManager_C) == 0x0003E0, "Wrong size on UB_NewMasterServerManager_C");
-static_assert(offsetof(UB_NewMasterServerManager_C, UberGraphFrame) == 0x0002B8, "Member 'UB_NewMasterServerManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, VARequest_Access) == 0x0002C0, "Member 'UB_NewMasterServerManager_C::VARequest_Access' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, RefreshToken) == 0x0002C8, "Member 'UB_NewMasterServerManager_C::RefreshToken' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, AccessToken) == 0x0002D8, "Member 'UB_NewMasterServerManager_C::AccessToken' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerHostname) == 0x0002E8, "Member 'UB_NewMasterServerManager_C::MasterServerHostname' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerRestApiPort) == 0x0002F8, "Member 'UB_NewMasterServerManager_C::MasterServerRestApiPort' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerDirectPort) == 0x0002FC, "Member 'UB_NewMasterServerManager_C::MasterServerDirectPort' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, DevMasterServerHostName) == 0x000300, "Member 'UB_NewMasterServerManager_C::DevMasterServerHostName' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, DevMasterServerDirectPort) == 0x000310, "Member 'UB_NewMasterServerManager_C::DevMasterServerDirectPort' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, RestApiVersion) == 0x000314, "Member 'UB_NewMasterServerManager_C::RestApiVersion' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, VARequest_Refresh) == 0x000318, "Member 'UB_NewMasterServerManager_C::VARequest_Refresh' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, AccessTokenExpiryTime) == 0x000320, "Member 'UB_NewMasterServerManager_C::AccessTokenExpiryTime' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, NextAccessTokenCheckTime) == 0x000328, "Member 'UB_NewMasterServerManager_C::NextAccessTokenCheckTime' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, RefreshTokenExpiryTime) == 0x000330, "Member 'UB_NewMasterServerManager_C::RefreshTokenExpiryTime' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, UpdateTimer) == 0x000338, "Member 'UB_NewMasterServerManager_C::UpdateTimer' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, AccessTokenExpiryDeltatime) == 0x000340, "Member 'UB_NewMasterServerManager_C::AccessTokenExpiryDeltatime' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, DidReceiveAccessToken) == 0x000348, "Member 'UB_NewMasterServerManager_C::DidReceiveAccessToken' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginUsername) == 0x000358, "Member 'UB_NewMasterServerManager_C::CachedLoginUsername' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginPassword) == 0x000368, "Member 'UB_NewMasterServerManager_C::CachedLoginPassword' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginLocale) == 0x000378, "Member 'UB_NewMasterServerManager_C::CachedLoginLocale' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginAccountType) == 0x000388, "Member 'UB_NewMasterServerManager_C::CachedLoginAccountType' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, LastLoginWasSuccessful) == 0x000398, "Member 'UB_NewMasterServerManager_C::LastLoginWasSuccessful' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, LoginComplete) == 0x000399, "Member 'UB_NewMasterServerManager_C::LoginComplete' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, OnLoginCompleted) == 0x0003A0, "Member 'UB_NewMasterServerManager_C::OnLoginCompleted' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, IsDedicatedServer) == 0x0003B0, "Member 'UB_NewMasterServerManager_C::IsDedicatedServer' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, GameInstanceHandle) == 0x0003B8, "Member 'UB_NewMasterServerManager_C::GameInstanceHandle' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, ClientConfig) == 0x0003C0, "Member 'UB_NewMasterServerManager_C::ClientConfig' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, WitchItAccountId) == 0x0003C8, "Member 'UB_NewMasterServerManager_C::WitchItAccountId' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, WitchItAccountState) == 0x0003CC, "Member 'UB_NewMasterServerManager_C::WitchItAccountState' has a wrong offset!");
-static_assert(offsetof(UB_NewMasterServerManager_C, OnLoginFailed) == 0x0003D0, "Member 'UB_NewMasterServerManager_C::OnLoginFailed' has a wrong offset!");
+static_assert(sizeof(UB_NewMasterServerManager_C) == 0x0003D0, "Wrong size on UB_NewMasterServerManager_C");
+static_assert(offsetof(UB_NewMasterServerManager_C, UberGraphFrame) == 0x0002A8, "Member 'UB_NewMasterServerManager_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, VARequest_Access) == 0x0002B0, "Member 'UB_NewMasterServerManager_C::VARequest_Access' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, RefreshToken) == 0x0002B8, "Member 'UB_NewMasterServerManager_C::RefreshToken' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, AccessToken) == 0x0002C8, "Member 'UB_NewMasterServerManager_C::AccessToken' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerHostname) == 0x0002D8, "Member 'UB_NewMasterServerManager_C::MasterServerHostname' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerRestApiPort) == 0x0002E8, "Member 'UB_NewMasterServerManager_C::MasterServerRestApiPort' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, MasterServerDirectPort) == 0x0002EC, "Member 'UB_NewMasterServerManager_C::MasterServerDirectPort' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, DevMasterServerHostName) == 0x0002F0, "Member 'UB_NewMasterServerManager_C::DevMasterServerHostName' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, DevMasterServerDirectPort) == 0x000300, "Member 'UB_NewMasterServerManager_C::DevMasterServerDirectPort' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, RestApiVersion) == 0x000304, "Member 'UB_NewMasterServerManager_C::RestApiVersion' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, VARequest_Refresh) == 0x000308, "Member 'UB_NewMasterServerManager_C::VARequest_Refresh' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, AccessTokenExpiryTime) == 0x000310, "Member 'UB_NewMasterServerManager_C::AccessTokenExpiryTime' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, NextAccessTokenCheckTime) == 0x000318, "Member 'UB_NewMasterServerManager_C::NextAccessTokenCheckTime' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, RefreshTokenExpiryTime) == 0x000320, "Member 'UB_NewMasterServerManager_C::RefreshTokenExpiryTime' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, UpdateTimer) == 0x000328, "Member 'UB_NewMasterServerManager_C::UpdateTimer' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, AccessTokenExpiryDeltatime) == 0x000330, "Member 'UB_NewMasterServerManager_C::AccessTokenExpiryDeltatime' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, DidReceiveAccessToken) == 0x000338, "Member 'UB_NewMasterServerManager_C::DidReceiveAccessToken' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginUsername) == 0x000348, "Member 'UB_NewMasterServerManager_C::CachedLoginUsername' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginPassword) == 0x000358, "Member 'UB_NewMasterServerManager_C::CachedLoginPassword' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginLocale) == 0x000368, "Member 'UB_NewMasterServerManager_C::CachedLoginLocale' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, CachedLoginAccountType) == 0x000378, "Member 'UB_NewMasterServerManager_C::CachedLoginAccountType' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, LastLoginWasSuccessful) == 0x000388, "Member 'UB_NewMasterServerManager_C::LastLoginWasSuccessful' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, LoginComplete) == 0x000389, "Member 'UB_NewMasterServerManager_C::LoginComplete' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, OnLoginCompleted) == 0x000390, "Member 'UB_NewMasterServerManager_C::OnLoginCompleted' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, IsDedicatedServer) == 0x0003A0, "Member 'UB_NewMasterServerManager_C::IsDedicatedServer' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, GameInstanceHandle) == 0x0003A8, "Member 'UB_NewMasterServerManager_C::GameInstanceHandle' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, ClientConfig) == 0x0003B0, "Member 'UB_NewMasterServerManager_C::ClientConfig' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, WitchItAccountId) == 0x0003B8, "Member 'UB_NewMasterServerManager_C::WitchItAccountId' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, WitchItAccountState) == 0x0003BC, "Member 'UB_NewMasterServerManager_C::WitchItAccountState' has a wrong offset!");
+static_assert(offsetof(UB_NewMasterServerManager_C, OnLoginFailed) == 0x0003C0, "Member 'UB_NewMasterServerManager_C::OnLoginFailed' has a wrong offset!");
 
 }
 

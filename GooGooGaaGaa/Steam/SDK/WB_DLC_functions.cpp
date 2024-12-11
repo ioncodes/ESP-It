@@ -50,5 +50,25 @@ void UWB_DLC_C::ExecuteUbergraph_WB_DLC(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function WB_DLC.WB_DLC_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_DLC_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DLC_C", "PreConstruct");
+
+	Params::WB_DLC_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

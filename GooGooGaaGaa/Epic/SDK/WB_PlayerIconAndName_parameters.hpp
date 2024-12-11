@@ -44,33 +44,27 @@ static_assert(alignof(WB_PlayerIconAndName_C_OnLoaded_4B73E0CD4D20971D3FCDF99F63
 static_assert(sizeof(WB_PlayerIconAndName_C_OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6) == 0x000008, "Wrong size on WB_PlayerIconAndName_C_OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6");
 static_assert(offsetof(WB_PlayerIconAndName_C_OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6, Loaded) == 0x000000, "Member 'WB_PlayerIconAndName_C_OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6::Loaded' has a wrong offset!");
 
-// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF
-// 0x0018 (0x0018 - 0x0000)
-struct WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF final
+// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnFailure_CD97852D4BF9125878126FA4C0392283
+// 0x0010 (0x0010 - 0x0000)
+struct WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283 final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SanitizedMessage;                                  // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF) == 0x000008, "Wrong alignment on WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF");
-static_assert(sizeof(WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF) == 0x000018, "Wrong size on WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF");
-static_assert(offsetof(WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF, bSuccess) == 0x000000, "Member 'WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF::bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF, SanitizedMessage) == 0x000008, "Member 'WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF::SanitizedMessage' has a wrong offset!");
+static_assert(alignof(WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283) == 0x000008, "Wrong alignment on WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283");
+static_assert(sizeof(WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283) == 0x000010, "Wrong size on WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283");
+static_assert(offsetof(WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283, FilteredStrings) == 0x000000, "Member 'WB_PlayerIconAndName_C_OnFailure_CD97852D4BF9125878126FA4C0392283::FilteredStrings' has a wrong offset!");
 
-// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnCallFailed_32B7D77C4ED208666207D89F0D8013CF
-// 0x0018 (0x0018 - 0x0000)
-struct WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF final
+// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnSuccess_CD97852D4BF9125878126FA4C0392283
+// 0x0010 (0x0010 - 0x0000)
+struct WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283 final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SanitizedMessage;                                  // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF) == 0x000008, "Wrong alignment on WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF");
-static_assert(sizeof(WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF) == 0x000018, "Wrong size on WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF");
-static_assert(offsetof(WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF, bSuccess) == 0x000000, "Member 'WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF::bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF, SanitizedMessage) == 0x000008, "Member 'WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF::SanitizedMessage' has a wrong offset!");
+static_assert(alignof(WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283) == 0x000008, "Wrong alignment on WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283");
+static_assert(sizeof(WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283) == 0x000010, "Wrong size on WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283");
+static_assert(offsetof(WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283, FilteredStrings) == 0x000000, "Member 'WB_PlayerIconAndName_C_OnSuccess_CD97852D4BF9125878126FA4C0392283::FilteredStrings' has a wrong offset!");
 
 // Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.SetUserInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -86,113 +80,103 @@ static_assert(offsetof(WB_PlayerIconAndName_C_SetUserInfo, UserInfo) == 0x000000
 static_assert(offsetof(WB_PlayerIconAndName_C_SetUserInfo, AdditionalText_0) == 0x000008, "Member 'WB_PlayerIconAndName_C_SetUserInfo::AdditionalText_0' has a wrong offset!");
 
 // Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.ExecuteUbergraph_WB_PlayerIconAndName
-// 0x03D0 (0x03D0 - 0x0000)
+// 0x03C0 (0x03C0 - 0x0000)
 struct WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_SanitizedMessage;               // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bSuccess, const class FString& SanitizedMessage)> K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0050(0x0030)(HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TSubclassOf<class UObject>                    K2Node_CustomEvent_Loaded;                         // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineUserRef*                         K2Node_CustomEvent_UserInfo;                       // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_AdditionalText;                 // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00E8(0x0010)()
-	bool                                          CallFunc_GetUserAttribute_Found_1;                 // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserAttribute_ReturnValue_1;           // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_SanitizedMessage_1;             // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             CallFunc_GetPlatformLogo_PlatformLogo;             // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_138[0x8];                                      // 0x0138(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0140(0x00D0)()
-	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x0218(0x0030)()
-	TSoftClassPtr<class UClass>                   CallFunc_GetSkinSoftReference_ReturnValue;         // 0x0248(0x0028)(HasGetValueTypeHash)
-	TDelegate<void(bool bSuccess, const class FString& SanitizedMessage)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0270(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0280(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UOnlineMessageSanitizerSubsystem*       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x02A8(0x0010)()
-	class UOnlineMessageSanitizerSubsystemSanitizeDisplayName* CallFunc_SanitizeDisplayName_ReturnValue;          // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 Temp_class_Variable;                               // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinIconBase_C*                      K2Node_DynamicCast_AsB_Skin_Icon_Base;             // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E1[0xF];                                      // 0x02E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x02F0(0x00D0)()
-	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x03C0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings;                // 0x0008(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         Temp_string_Variable;                              // 0x0028(0x0010)(ReferenceParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TSubclassOf<class UObject>                    K2Node_CustomEvent_Loaded;                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineUserRef*                         K2Node_CustomEvent_UserInfo;                       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_AdditionalText;                 // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0010)()
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings_1;              // 0x00C0(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x00D8(0x0030)()
+	TSoftClassPtr<class UClass>                   CallFunc_GetSkinSoftReference_ReturnValue;         // 0x0108(0x0028)(HasGetValueTypeHash)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0130(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0160(0x0010)(ConstParm, ReferenceParm)
+	class UFilterProfanityProxy*                  CallFunc_FilterProfanity_ReturnValue;              // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0180(0x0010)()
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0198(0x0030)(HasGetValueTypeHash)
+	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found_1;                 // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue_1;           // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetPlatformLogo_PlatformLogo;             // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x01F0(0x00D0)()
+	class UClass*                                 Temp_class_Variable;                               // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinIconBase_C*                      K2Node_DynamicCast_AsB_Skin_Icon_Base;             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x02E0(0x00D0)()
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x03B0(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName) == 0x000010, "Wrong alignment on WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName");
-static_assert(sizeof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName) == 0x0003D0, "Wrong size on WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName");
+static_assert(sizeof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName) == 0x0003C0, "Wrong size on WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName");
 static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, EntryPoint) == 0x000000, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_SwitchPlatform_ReturnValue) == 0x000004, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_bSuccess) == 0x000005, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_SanitizedMessage) == 0x000008, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_SanitizedMessage' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_filteredStrings) == 0x000008, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_filteredStrings' has a wrong offset!");
 static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, Temp_string_Variable) == 0x000028, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, Temp_bool_Variable) == 0x000038, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetGameInstance_ReturnValue) == 0x000048, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000050, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_AsB_Game_Instance) == 0x000080, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAccount_ReturnValue) == 0x000090, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_Found) == 0x000098, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_Found' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_ReturnValue) == 0x0000A0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_Loaded) == 0x0000B0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_MakeVector2D_ReturnValue) == 0x0000B8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_UserInfo) == 0x0000C8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_UserInfo' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_AdditionalText) == 0x0000D0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_AdditionalText' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_IsEmpty_ReturnValue) == 0x0000E0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_Conv_StringToText_ReturnValue) == 0x0000E8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_Found_1) == 0x0000F8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_Found_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_ReturnValue_1) == 0x000100, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_bSuccess_1) == 0x000110, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_SanitizedMessage_1) == 0x000118, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_SanitizedMessage_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000128, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPlatformLogo_PlatformLogo) == 0x000130, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPlatformLogo_PlatformLogo' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_SlateBrush) == 0x000140, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPresenceForUser_bIsValid) == 0x000210, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPresenceForUser_Out) == 0x000218, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetSkinSoftReference_ReturnValue) == 0x000248, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetSkinSoftReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CreateDelegate_OutputDelegate_1) == 0x000270, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CreateDelegate_OutputDelegate_2) == 0x000280, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetDisplayName_ReturnValue) == 0x000290, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0002A0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0002A8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_SanitizeDisplayName_ReturnValue) == 0x0002B8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_SanitizeDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_IsValid_ReturnValue) == 0x0002C0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, Temp_class_Variable) == 0x0002C8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::Temp_class_Variable' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetDefaultObject_ReturnValue) == 0x0002D0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_AsB_Skin_Icon_Base) == 0x0002D8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_AsB_Skin_Icon_Base' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_bSuccess_1) == 0x0002E0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_SlateBrush_1) == 0x0002F0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x0003C0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_AsB_Game_Instance) == 0x000040, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_Array_Get_Item) == 0x000050, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_Loaded) == 0x000060, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_Loaded' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_MakeVector2D_ReturnValue) == 0x000068, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_UserInfo) == 0x000078, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_UserInfo' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_AdditionalText) == 0x000080, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_AdditionalText' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_IsEmpty_ReturnValue) == 0x000090, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_Conv_StringToText_ReturnValue) == 0x000098, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_Found) == 0x0000A8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_ReturnValue) == 0x0000B0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CustomEvent_filteredStrings_1) == 0x0000C0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CustomEvent_filteredStrings_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPresenceForUser_bIsValid) == 0x0000D0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPresenceForUser_Out) == 0x0000D8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetSkinSoftReference_ReturnValue) == 0x000108, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetSkinSoftReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CreateDelegate_OutputDelegate_1) == 0x000130, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_CreateDelegate_OutputDelegate_2) == 0x000140, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetDisplayName_ReturnValue) == 0x000150, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeArray_Array) == 0x000160, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_FilterProfanity_ReturnValue) == 0x000170, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_FilterProfanity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_IsValid_ReturnValue) == 0x000178, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000180, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000190, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000198, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAccount_ReturnValue) == 0x0001C8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_Found_1) == 0x0001D0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_Found_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetUserAttribute_ReturnValue_1) == 0x0001D8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetUserAttribute_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetPlatformLogo_PlatformLogo) == 0x0001E8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetPlatformLogo_PlatformLogo' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_SlateBrush) == 0x0001F0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, Temp_class_Variable) == 0x0002C0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::Temp_class_Variable' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, CallFunc_GetDefaultObject_ReturnValue) == 0x0002C8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_AsB_Skin_Icon_Base) == 0x0002D0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_AsB_Skin_Icon_Base' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_DynamicCast_bSuccess_1) == 0x0002D8, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_SlateBrush_1) == 0x0002E0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x0003B0, "Member 'WB_PlayerIconAndName_C_ExecuteUbergraph_WB_PlayerIconAndName::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
 
 }
 

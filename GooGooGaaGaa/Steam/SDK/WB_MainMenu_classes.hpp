@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "EventNames_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "EventNames_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 
@@ -43,9 +43,9 @@ public:
 	class UWB_QuestBlock_C*                       WB_QuestBlock;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_SmallDowntimeBlock_C*               WB_SmallDowntimeBlock;                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_SocialMediaBlock_C*                 WB_SocialMediaBlock;                               // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_StartoVersionInfo_C*                WB_StartoVersionInfo;                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SurveyButton_C*                     WB_SurveyButton;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SysMessageBlock_C*                  WB_SysMessageBlock;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SurveyButton_C*                     WB_SurveyButton;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SysMessageBlock_C*                  WB_SysMessageBlock;                                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_VersionInfo_C*                      WB_VersionInfo;                                    // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_VersionNumber_C*                    WB_VersionNumber;                                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FText                                   PlayerIconSelectionText;                           // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bSaveGamesLoaded;                                  // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -139,9 +139,9 @@ static_assert(offsetof(UWB_MainMenu_C, WB_NewItemPopup) == 0x000340, "Member 'UW
 static_assert(offsetof(UWB_MainMenu_C, WB_QuestBlock) == 0x000348, "Member 'UWB_MainMenu_C::WB_QuestBlock' has a wrong offset!");
 static_assert(offsetof(UWB_MainMenu_C, WB_SmallDowntimeBlock) == 0x000350, "Member 'UWB_MainMenu_C::WB_SmallDowntimeBlock' has a wrong offset!");
 static_assert(offsetof(UWB_MainMenu_C, WB_SocialMediaBlock) == 0x000358, "Member 'UWB_MainMenu_C::WB_SocialMediaBlock' has a wrong offset!");
-static_assert(offsetof(UWB_MainMenu_C, WB_StartoVersionInfo) == 0x000360, "Member 'UWB_MainMenu_C::WB_StartoVersionInfo' has a wrong offset!");
-static_assert(offsetof(UWB_MainMenu_C, WB_SurveyButton) == 0x000368, "Member 'UWB_MainMenu_C::WB_SurveyButton' has a wrong offset!");
-static_assert(offsetof(UWB_MainMenu_C, WB_SysMessageBlock) == 0x000370, "Member 'UWB_MainMenu_C::WB_SysMessageBlock' has a wrong offset!");
+static_assert(offsetof(UWB_MainMenu_C, WB_SurveyButton) == 0x000360, "Member 'UWB_MainMenu_C::WB_SurveyButton' has a wrong offset!");
+static_assert(offsetof(UWB_MainMenu_C, WB_SysMessageBlock) == 0x000368, "Member 'UWB_MainMenu_C::WB_SysMessageBlock' has a wrong offset!");
+static_assert(offsetof(UWB_MainMenu_C, WB_VersionInfo) == 0x000370, "Member 'UWB_MainMenu_C::WB_VersionInfo' has a wrong offset!");
 static_assert(offsetof(UWB_MainMenu_C, WB_VersionNumber) == 0x000378, "Member 'UWB_MainMenu_C::WB_VersionNumber' has a wrong offset!");
 static_assert(offsetof(UWB_MainMenu_C, PlayerIconSelectionText) == 0x000380, "Member 'UWB_MainMenu_C::PlayerIconSelectionText' has a wrong offset!");
 static_assert(offsetof(UWB_MainMenu_C, bSaveGamesLoaded) == 0x000390, "Member 'UWB_MainMenu_C::bSaveGamesLoaded' has a wrong offset!");

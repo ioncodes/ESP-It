@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_TaskType_structs.hpp"
-#include "S_Task_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "S_Task_structs.hpp"
 
 
 namespace SDK

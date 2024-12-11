@@ -76,6 +76,29 @@ enum class EWaterBrushFalloffMode : uint8
 	EWaterBrushFalloffMode_MAX               = 2,
 };
 
+// ScriptStruct Water.UnderwaterPostProcessSettings
+// 0x0710 (0x0710 - 0x0000)
+struct FUnderwaterPostProcessSettings final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Priority;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendRadius;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendWeight;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x06F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x0700(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_708[0x8];                                      // 0x0708(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUnderwaterPostProcessSettings) == 0x000010, "Wrong alignment on FUnderwaterPostProcessSettings");
+static_assert(sizeof(FUnderwaterPostProcessSettings) == 0x000710, "Wrong size on FUnderwaterPostProcessSettings");
+static_assert(offsetof(FUnderwaterPostProcessSettings, bEnabled) == 0x000000, "Member 'FUnderwaterPostProcessSettings::bEnabled' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, Priority) == 0x000004, "Member 'FUnderwaterPostProcessSettings::Priority' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, BlendRadius) == 0x000008, "Member 'FUnderwaterPostProcessSettings::BlendRadius' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, BlendWeight) == 0x00000C, "Member 'FUnderwaterPostProcessSettings::BlendWeight' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, PostProcessSettings) == 0x000010, "Member 'FUnderwaterPostProcessSettings::PostProcessSettings' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, UnderwaterPostProcessMaterial) == 0x000700, "Member 'FUnderwaterPostProcessSettings::UnderwaterPostProcessMaterial' has a wrong offset!");
+
 // ScriptStruct Water.SphericalPontoon
 // 0x02D0 (0x02D0 - 0x0000)
 struct FSphericalPontoon final
@@ -125,26 +148,6 @@ static_assert(offsetof(FSphericalPontoon, WaterVelocity) == 0x0000F0, "Member 'F
 static_assert(offsetof(FSphericalPontoon, WaterBodyIndex) == 0x000108, "Member 'FSphericalPontoon::WaterBodyIndex' has a wrong offset!");
 static_assert(offsetof(FSphericalPontoon, bIsInWater) == 0x00010C, "Member 'FSphericalPontoon::bIsInWater' has a wrong offset!");
 static_assert(offsetof(FSphericalPontoon, CurrentWaterBodyComponent) == 0x0002B8, "Member 'FSphericalPontoon::CurrentWaterBodyComponent' has a wrong offset!");
-
-// ScriptStruct Water.GerstnerWaveOctave
-// 0x0014 (0x0014 - 0x0000)
-struct FGerstnerWaveOctave final
-{
-public:
-	int32                                         NumWaves;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AmplitudeScale;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MainDirection;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpreadAngle;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUniformSpread;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGerstnerWaveOctave) == 0x000004, "Wrong alignment on FGerstnerWaveOctave");
-static_assert(sizeof(FGerstnerWaveOctave) == 0x000014, "Wrong size on FGerstnerWaveOctave");
-static_assert(offsetof(FGerstnerWaveOctave, NumWaves) == 0x000000, "Member 'FGerstnerWaveOctave::NumWaves' has a wrong offset!");
-static_assert(offsetof(FGerstnerWaveOctave, AmplitudeScale) == 0x000004, "Member 'FGerstnerWaveOctave::AmplitudeScale' has a wrong offset!");
-static_assert(offsetof(FGerstnerWaveOctave, MainDirection) == 0x000008, "Member 'FGerstnerWaveOctave::MainDirection' has a wrong offset!");
-static_assert(offsetof(FGerstnerWaveOctave, SpreadAngle) == 0x00000C, "Member 'FGerstnerWaveOctave::SpreadAngle' has a wrong offset!");
-static_assert(offsetof(FGerstnerWaveOctave, bUniformSpread) == 0x000010, "Member 'FGerstnerWaveOctave::bUniformSpread' has a wrong offset!");
 
 // ScriptStruct Water.BuoyancyData
 // 0x0090 (0x0090 - 0x0000)
@@ -305,28 +308,25 @@ static_assert(offsetof(FGerstnerWave, WKA) == 0x00003C, "Member 'FGerstnerWave::
 static_assert(offsetof(FGerstnerWave, Q) == 0x000040, "Member 'FGerstnerWave::Q' has a wrong offset!");
 static_assert(offsetof(FGerstnerWave, PhaseOffset) == 0x000044, "Member 'FGerstnerWave::PhaseOffset' has a wrong offset!");
 
-// ScriptStruct Water.UnderwaterPostProcessSettings
-// 0x0710 (0x0710 - 0x0000)
-struct FUnderwaterPostProcessSettings final
+// ScriptStruct Water.GerstnerWaveOctave
+// 0x0014 (0x0014 - 0x0000)
+struct FGerstnerWaveOctave final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Priority;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendRadius;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendWeight;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x06F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x0700(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_708[0x8];                                      // 0x0708(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NumWaves;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AmplitudeScale;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MainDirection;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpreadAngle;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUniformSpread;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FUnderwaterPostProcessSettings) == 0x000010, "Wrong alignment on FUnderwaterPostProcessSettings");
-static_assert(sizeof(FUnderwaterPostProcessSettings) == 0x000710, "Wrong size on FUnderwaterPostProcessSettings");
-static_assert(offsetof(FUnderwaterPostProcessSettings, bEnabled) == 0x000000, "Member 'FUnderwaterPostProcessSettings::bEnabled' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, Priority) == 0x000004, "Member 'FUnderwaterPostProcessSettings::Priority' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, BlendRadius) == 0x000008, "Member 'FUnderwaterPostProcessSettings::BlendRadius' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, BlendWeight) == 0x00000C, "Member 'FUnderwaterPostProcessSettings::BlendWeight' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, PostProcessSettings) == 0x000010, "Member 'FUnderwaterPostProcessSettings::PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, UnderwaterPostProcessMaterial) == 0x000700, "Member 'FUnderwaterPostProcessSettings::UnderwaterPostProcessMaterial' has a wrong offset!");
+static_assert(alignof(FGerstnerWaveOctave) == 0x000004, "Wrong alignment on FGerstnerWaveOctave");
+static_assert(sizeof(FGerstnerWaveOctave) == 0x000014, "Wrong size on FGerstnerWaveOctave");
+static_assert(offsetof(FGerstnerWaveOctave, NumWaves) == 0x000000, "Member 'FGerstnerWaveOctave::NumWaves' has a wrong offset!");
+static_assert(offsetof(FGerstnerWaveOctave, AmplitudeScale) == 0x000004, "Member 'FGerstnerWaveOctave::AmplitudeScale' has a wrong offset!");
+static_assert(offsetof(FGerstnerWaveOctave, MainDirection) == 0x000008, "Member 'FGerstnerWaveOctave::MainDirection' has a wrong offset!");
+static_assert(offsetof(FGerstnerWaveOctave, SpreadAngle) == 0x00000C, "Member 'FGerstnerWaveOctave::SpreadAngle' has a wrong offset!");
+static_assert(offsetof(FGerstnerWaveOctave, bUniformSpread) == 0x000010, "Member 'FGerstnerWaveOctave::bUniformSpread' has a wrong offset!");
 
 // ScriptStruct Water.WaterFalloffSettings
 // 0x0014 (0x0014 - 0x0000)

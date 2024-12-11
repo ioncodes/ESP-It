@@ -179,6 +179,20 @@ void UWB_BlockedPlayers_C::Init()
 }
 
 
+// Function WB_BlockedPlayers.WB_BlockedPlayers_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_BlockedPlayers_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_BlockedPlayers_C", "LeftTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_BlockedPlayers.WB_BlockedPlayers_C.ListSelectionChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -264,6 +278,20 @@ void UWB_BlockedPlayers_C::RequestUserInfos()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_BlockedPlayers_C", "RequestUserInfos");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_BlockedPlayers.WB_BlockedPlayers_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_BlockedPlayers_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_BlockedPlayers_C", "RightTriggerPressed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

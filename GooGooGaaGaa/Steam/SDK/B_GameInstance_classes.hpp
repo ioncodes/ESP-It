@@ -10,15 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
-#include "Engine_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
-#include "NetCore_structs.hpp"
 #include "SMapData_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
+#include "S_VersionNumber_structs.hpp"
+#include "NetCore_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 
 
@@ -26,7 +27,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GameInstance.B_GameInstance_C
-// 0x0960 (0x0CC0 - 0x0360)
+// 0x0988 (0x0CE8 - 0x0360)
 class UB_GameInstance_C final : public UWitchItGameInstance
 {
 public:
@@ -93,92 +94,98 @@ public:
 	class FString                                 SteamWebApiKey;                                    // 0x0780(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class UB_ReportPlayerManager_C*               ReportPlayerManager;                               // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class FString                                 SteamAppId;                                        // 0x0798(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 CurrentJoinPassword;                               // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class UB_ItemManager_C*                       ItemManager;                                       // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWB_EnterPassword_C*                    EnterPasswordWidget;                               // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLanBuild;                                        // 0x07C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C9[0x7];                                      // 0x07C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserSettingsManager_C*                 UserSettingsManager;                               // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsChatBanned;                                      // 0x07D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_VersionNumber                       VersionNumber;                                     // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CurrentJoinPassword;                               // 0x07B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UB_ItemManager_C*                       ItemManager;                                       // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWB_EnterPassword_C*                    EnterPasswordWidget;                               // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLanBuild;                                        // 0x07D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7D9[0x7];                                      // 0x07D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 PreferedRegion;                                    // 0x07E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          UsePreferedRegion;                                 // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_InputMappingsManager_C*              InputMappingsManager;                              // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_EventManager_C*                      EventManager;                                      // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnMenuGameModeLoaded;                              // 0x0810(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bSplashScreenShown;                                // 0x0820(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_821[0x7];                                      // 0x0821(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnGameStateLoaded;                                 // 0x0828(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FString                                 InstanceManagerConnectionAddress;                  // 0x0838(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 MasterServerConnectionAddress;                     // 0x0848(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          HasShowAllyWitchesCommandLine;                     // 0x0858(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasSpectatorsCanSeeWitchesCommandLine;             // 0x0859(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowAllyWitches;                                   // 0x085A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpectatorsCanSeeWitches;                           // 0x085B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasEnableIdleKickCommandLine;                      // 0x085C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableIdleKick;                                    // 0x085D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_85E[0x2];                                      // 0x085E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MapManager_C*                        MapManager;                                        // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ObjectiveMatchManager_C*             ObjectiveMatchManager;                             // 0x0868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_SessionManager_C*                    SessionManager;                                    // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          QuickmatchObjectiveMode;                           // 0x0878(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_879[0x3];                                      // 0x0879(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InstanceId;                                        // 0x087C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_ChatManager_C*                       ChatManager;                                       // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsUserEstablished;                                 // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_889[0x7];                                      // 0x0889(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSearchResultBP           WantedSessionToJoinAfterUserEstablishing;          // 0x0890(0x01B8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          WantsToJoinSessionAfterUserEstablishing;           // 0x0A48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A49[0x7];                                      // 0x0A49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_UserControllerManager_C*             UserControllerManager;                             // 0x0A50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                SteamBeaconManager;                                // 0x0A58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 TestMasterServerConnectionAddress;                 // 0x0A60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         PreferredRegionForMatchMaking;                     // 0x0A70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         IsStaticInstance;                                  // 0x0A74(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCustomMatch;                                     // 0x0A75(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A76[0x2];                                      // 0x0A76(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_TournamentManager_C*                 TournamentManager;                                 // 0x0A78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_NewMasterServerManager_C*            NewMasterServerManager;                            // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FString, class FString>            EmptyParams;                                       // 0x0A88(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UB_UserBehaviorTrackingManager_C*       UserBehaviorTracker;                               // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 ServerLoginName;                                   // 0x0AE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 ServerLoginPassword;                               // 0x0AF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class UB_SkinManager_C*                       SkinManager;                                       // 0x0B00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ServerQuestInterface_C*              ServerQuestInterface;                              // 0x0B08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ClientQuestInterface_C*              ClientQuestInterface;                              // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_NewStatsAndAchievementsManager_C*    StatsAndAchievementsManager;                       // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ConnectivityWatcher_C*               Connectivity;                                      // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_MessageManager_C*                    Messenger;                                         // 0x0B28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         RevisionNumber;                                    // 0x0B30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B34[0x4];                                      // 0x0B34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 GameRulesToLoad;                                   // 0x0B38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FSMapData                              CurrentOpenedMap;                                  // 0x0B48(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UB_PoolManager_C*                       PoolManager;                                       // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasKickedFromMatch;                                // 0x0B90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B91[0x7];                                      // 0x0B91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_AccountActionDialog_C*              AccountActionWidget;                               // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSearch*                   SessionSearch;                                     // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnEOSLoginCompleted;                               // 0x0BA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnEOSLoginStarted;                                 // 0x0BB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimerHandle                           LoginScreenTimer;                                  // 0x0BC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FString, class FString>            PingServerAddresses;                               // 0x0BD0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FString, double>                   PingServerResults;                                 // 0x0C20(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        ClosestPing;                                       // 0x0C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 ClosestPingServer;                                 // 0x0C78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class UB_FriendManager_C*                     FriendsManager;                                    // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCurrentlyInMatch;                                // 0x0C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C91[0x7];                                      // 0x0C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnBackendLoginFailed;                              // 0x0C98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          CanCommunicateOnline;                              // 0x0CA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA9[0x7];                                      // 0x0CA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           EnteredForegroundTimer;                            // 0x0CB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideMasterServerDisconnect;                        // 0x0CB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserSettingsManager_C*                 UserSettingsManager;                               // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsChatBanned;                                      // 0x07E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 PreferedRegion;                                    // 0x07F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          UsePreferedRegion;                                 // 0x0808(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_809[0x7];                                      // 0x0809(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_InputMappingsManager_C*              InputMappingsManager;                              // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_EventManager_C*                      EventManager;                                      // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnMenuGameModeLoaded;                              // 0x0820(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bSplashScreenShown;                                // 0x0830(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_831[0x7];                                      // 0x0831(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnGameStateLoaded;                                 // 0x0838(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 InstanceManagerConnectionAddress;                  // 0x0848(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 MasterServerConnectionAddress;                     // 0x0858(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          HasShowAllyWitchesCommandLine;                     // 0x0868(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasSpectatorsCanSeeWitchesCommandLine;             // 0x0869(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowAllyWitches;                                   // 0x086A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpectatorsCanSeeWitches;                           // 0x086B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEnableIdleKickCommandLine;                      // 0x086C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableIdleKick;                                    // 0x086D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_86E[0x2];                                      // 0x086E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_MapManager_C*                        MapManager;                                        // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ObjectiveMatchManager_C*             ObjectiveMatchManager;                             // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_SessionManager_C*                    SessionManager;                                    // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          QuickmatchObjectiveMode;                           // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_889[0x3];                                      // 0x0889(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InstanceId;                                        // 0x088C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_ChatManager_C*                       ChatManager;                                       // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsUserEstablished;                                 // 0x0898(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_899[0x7];                                      // 0x0899(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSearchResultBP           WantedSessionToJoinAfterUserEstablishing;          // 0x08A0(0x01B8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          WantsToJoinSessionAfterUserEstablishing;           // 0x0A58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A59[0x7];                                      // 0x0A59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_UserControllerManager_C*             UserControllerManager;                             // 0x0A60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                SteamBeaconManager;                                // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 TestMasterServerConnectionAddress;                 // 0x0A70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         PreferredRegionForMatchMaking;                     // 0x0A80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         IsStaticInstance;                                  // 0x0A84(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCustomMatch;                                     // 0x0A85(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A86[0x2];                                      // 0x0A86(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_TournamentManager_C*                 TournamentManager;                                 // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_NewMasterServerManager_C*            NewMasterServerManager;                            // 0x0A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            EmptyParams;                                       // 0x0A98(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UB_UserBehaviorTrackingManager_C*       UserBehaviorTracker;                               // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ServerLoginName;                                   // 0x0AF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 ServerLoginPassword;                               // 0x0B00(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UB_SkinManager_C*                       SkinManager;                                       // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ServerQuestInterface_C*              ServerQuestInterface;                              // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ClientQuestInterface_C*              ClientQuestInterface;                              // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_NewStatsAndAchievementsManager_C*    StatsAndAchievementsManager;                       // 0x0B28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ConnectivityWatcher_C*               Connectivity;                                      // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_MessageManager_C*                    Messenger;                                         // 0x0B38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         RevisionNumber;                                    // 0x0B40(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B44[0x4];                                      // 0x0B44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 GameRulesToLoad;                                   // 0x0B48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FSMapData                              CurrentOpenedMap;                                  // 0x0B58(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UB_PoolManager_C*                       PoolManager;                                       // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasKickedFromMatch;                                // 0x0BA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA1[0x7];                                      // 0x0BA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_AccountActionDialog_C*              AccountActionWidget;                               // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSearch*                   SessionSearch;                                     // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnEOSLoginCompleted;                               // 0x0BB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnEOSLoginStarted;                                 // 0x0BC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           LoginScreenTimer;                                  // 0x0BD8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            PingServerAddresses;                               // 0x0BE0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FString, double>                   PingServerResults;                                 // 0x0C30(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        ClosestPing;                                       // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ClosestPingServer;                                 // 0x0C88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UB_FriendManager_C*                     FriendsManager;                                    // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCurrentlyInMatch;                                // 0x0CA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA1[0x7];                                      // 0x0CA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnBackendLoginFailed;                              // 0x0CA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          CanCommunicateOnline;                              // 0x0CB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB9[0x7];                                      // 0x0CB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           EnteredForegroundTimer;                            // 0x0CC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideMasterServerDisconnect;                        // 0x0CC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC9[0x7];                                      // 0x0CC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnPremiumStatusFailed;                             // 0x0CD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsPS5ExclusiveServer;                              // 0x0CE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnBackendLoginFailed__DelegateSignature();
 	void OnEOSLoginStarted__DelegateSignature();
+	void OnPremiumStatusFailed__DelegateSignature();
+	void OnBackendLoginFailed__DelegateSignature();
+	void OnMenuGameModeLoaded__DelegateSignature();
 	void OnGameStateLoaded__DelegateSignature();
 	void ApplicationEnteredForeground();
 	void BackendLoginCompleted(bool bSuccess);
@@ -222,6 +229,7 @@ public:
 	void HandleInitializePlayersForMatchmaking(TArray<class FString>& UserIds, TArray<int32>& ObjectiveTeams);
 	void HandleShowAccountAction(bool bShowMessage, int32 Code, const class FString& Message);
 	void HandleTravelError(ETravelFailure FailureType);
+	void HandlShowSystemMessage(const class FString& Message);
 	void HostGame(bool IsCustom, bool UserGeneratedContent);
 	void HostGameDedicatedServer();
 	void InitalizeDedicatedServer();
@@ -244,6 +252,7 @@ public:
 	void LoadInputSettings();
 	void LoginScreenTimeoutHandler();
 	void LoginStatusChangedNintendo(int32 LocalUserNum, EOnlineLoginStatus OldStatus, EOnlineLoginStatus NewStatus, const struct FUniqueNetIdRepl& NewId);
+	void LoginStatusChangedSOny(int32 LocalUserNum, EOnlineLoginStatus OldStatus, EOnlineLoginStatus NewStatus, const struct FUniqueNetIdRepl& NewId);
 	void NetCodeErrorToString(ENetworkFailure Error, const class FString& ErrorText, class FString* ErrorTitle, class FString* ErrorOut);
 	void OnAfterLoginCompleted();
 	void OnAllSaveGamesLoaded_Event();
@@ -253,18 +262,20 @@ public:
 	void OnCallFailed_7C43DFA84FCD4A8545E69FBDF87B14F1(bool bWasSuccessful);
 	void OnCallFailed_83B5B6C848F34916B3B70E85E63BC848(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Error);
 	void OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FName SessionName_0, bool bWasSuccessful);
+	void OnCallFailed_B40DCA83439848E8D4EAB99D06DCB39A(bool bWasSuccessful);
 	void OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
 	void OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72(class FName SessionName_0, bool bWasSuccessful);
 	void OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6(class FName SessionName_0, EOnJoinSessionCompleteResult_ Result);
 	void OnCallFailed_D7D987824E029A67C28C27A7944576BA(class FName SessionName_0, bool bWasSuccessful);
 	void OnCallFailed_DE2BE46F4484E3CC5050769BC42D5D32(bool bWasSuccessful);
 	void OnCallFailed_DE990FDB4B0DC5A886D13582C2A33E2F(bool bWasSuccessful);
-	void OnCallFailed_F3E97BAF4ED76190FAED77A87373C204(bool bWasSuccessful);
+	void OnCallFailed_E804551E4AB86830B57BED97459D3204(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
+	void OnCallFailed_E804551E4AB86830B57BED97783DB4CD(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
+	void OnCallFailed_E804551E4AB86830B57BED97D3124B57(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
 	void OnCallFailed_F48D3023411050490BA5D192B95E2377(class FName SessionName_0, bool bWasSuccessful);
 	void OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FName SessionName_0, bool bWasSuccessful);
 	void OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B(class FName SessionName_0, bool bWasSuccessful);
 	void OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D(class FName SessionName_0, bool bWasSuccessful);
-	void OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A87373C204(bool bWasSuccessful);
 	void OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF(class FName SessionName_0, bool bWasSuccessful);
 	void OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72(class FName SessionName_0, bool bWasSuccessful);
 	void OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC02(class FName SessionName_0, bool bWasSuccessful);
@@ -284,6 +295,9 @@ public:
 	void OnFindSessionsComplete_DE990FDB4B0DC5A886D13582C2A33E2F(bool bWasSuccessful);
 	void OnGameStateLoaded_Event();
 	void OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95516(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
+	void OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97459D3204(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
+	void OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97783DB4CD(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
+	void OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97D3124B57(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult);
 	void OnInitCompleted();
 	void OnInventoryDefinitionsLoaded(bool Success);
 	void OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6(class FName SessionName_0, EOnJoinSessionCompleteResult_ Result);
@@ -294,7 +308,7 @@ public:
 	void OnLoginCompleted();
 	void OnLoginFailed(int32 ErrorCode);
 	void OnLogoutComplete_7C43DFA84FCD4A8545E69FBDF87B14F1(bool bWasSuccessful);
-	void OnMenuGameModeLoaded__DelegateSignature();
+	void OnLogoutComplete_B40DCA83439848E8D4EAB99D06DCB39A(bool bWasSuccessful);
 	void OnMenuGameModeLoaded_Event();
 	void OnNetworkFailure(ENetworkFailure FailureType, const class FString& ErrorText, bool IsServer);
 	void OnNewUserEstablished();
@@ -356,7 +370,7 @@ public:
 	}
 };
 static_assert(alignof(UB_GameInstance_C) == 0x000008, "Wrong alignment on UB_GameInstance_C");
-static_assert(sizeof(UB_GameInstance_C) == 0x000CC0, "Wrong size on UB_GameInstance_C");
+static_assert(sizeof(UB_GameInstance_C) == 0x000CE8, "Wrong size on UB_GameInstance_C");
 static_assert(offsetof(UB_GameInstance_C, UberGraphFrame) == 0x000360, "Member 'UB_GameInstance_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UB_GameInstance_C, CustomMatchOptions) == 0x000368, "Member 'UB_GameInstance_C::CustomMatchOptions' has a wrong offset!");
 static_assert(offsetof(UB_GameInstance_C, NextMatchOptions) == 0x000370, "Member 'UB_GameInstance_C::NextMatchOptions' has a wrong offset!");
@@ -411,75 +425,78 @@ static_assert(offsetof(UB_GameInstance_C, StratoVersionNumber) == 0x000770, "Mem
 static_assert(offsetof(UB_GameInstance_C, SteamWebApiKey) == 0x000780, "Member 'UB_GameInstance_C::SteamWebApiKey' has a wrong offset!");
 static_assert(offsetof(UB_GameInstance_C, ReportPlayerManager) == 0x000790, "Member 'UB_GameInstance_C::ReportPlayerManager' has a wrong offset!");
 static_assert(offsetof(UB_GameInstance_C, SteamAppId) == 0x000798, "Member 'UB_GameInstance_C::SteamAppId' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, CurrentJoinPassword) == 0x0007A8, "Member 'UB_GameInstance_C::CurrentJoinPassword' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ItemManager) == 0x0007B8, "Member 'UB_GameInstance_C::ItemManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, EnterPasswordWidget) == 0x0007C0, "Member 'UB_GameInstance_C::EnterPasswordWidget' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsLanBuild) == 0x0007C8, "Member 'UB_GameInstance_C::IsLanBuild' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, UserSettingsManager) == 0x0007D0, "Member 'UB_GameInstance_C::UserSettingsManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsChatBanned) == 0x0007D8, "Member 'UB_GameInstance_C::IsChatBanned' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, LocalizationManager) == 0x0007E0, "Member 'UB_GameInstance_C::LocalizationManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, PreferedRegion) == 0x0007E8, "Member 'UB_GameInstance_C::PreferedRegion' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, UsePreferedRegion) == 0x0007F8, "Member 'UB_GameInstance_C::UsePreferedRegion' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, InputMappingsManager) == 0x000800, "Member 'UB_GameInstance_C::InputMappingsManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, EventManager) == 0x000808, "Member 'UB_GameInstance_C::EventManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, OnMenuGameModeLoaded) == 0x000810, "Member 'UB_GameInstance_C::OnMenuGameModeLoaded' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, bSplashScreenShown) == 0x000820, "Member 'UB_GameInstance_C::bSplashScreenShown' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, OnGameStateLoaded) == 0x000828, "Member 'UB_GameInstance_C::OnGameStateLoaded' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, InstanceManagerConnectionAddress) == 0x000838, "Member 'UB_GameInstance_C::InstanceManagerConnectionAddress' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, MasterServerConnectionAddress) == 0x000848, "Member 'UB_GameInstance_C::MasterServerConnectionAddress' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, HasShowAllyWitchesCommandLine) == 0x000858, "Member 'UB_GameInstance_C::HasShowAllyWitchesCommandLine' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, HasSpectatorsCanSeeWitchesCommandLine) == 0x000859, "Member 'UB_GameInstance_C::HasSpectatorsCanSeeWitchesCommandLine' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ShowAllyWitches) == 0x00085A, "Member 'UB_GameInstance_C::ShowAllyWitches' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, SpectatorsCanSeeWitches) == 0x00085B, "Member 'UB_GameInstance_C::SpectatorsCanSeeWitches' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, HasEnableIdleKickCommandLine) == 0x00085C, "Member 'UB_GameInstance_C::HasEnableIdleKickCommandLine' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, EnableIdleKick) == 0x00085D, "Member 'UB_GameInstance_C::EnableIdleKick' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, MapManager) == 0x000860, "Member 'UB_GameInstance_C::MapManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ObjectiveMatchManager) == 0x000868, "Member 'UB_GameInstance_C::ObjectiveMatchManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, SessionManager) == 0x000870, "Member 'UB_GameInstance_C::SessionManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, QuickmatchObjectiveMode) == 0x000878, "Member 'UB_GameInstance_C::QuickmatchObjectiveMode' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, InstanceId) == 0x00087C, "Member 'UB_GameInstance_C::InstanceId' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ChatManager) == 0x000880, "Member 'UB_GameInstance_C::ChatManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsUserEstablished) == 0x000888, "Member 'UB_GameInstance_C::IsUserEstablished' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, WantedSessionToJoinAfterUserEstablishing) == 0x000890, "Member 'UB_GameInstance_C::WantedSessionToJoinAfterUserEstablishing' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, WantsToJoinSessionAfterUserEstablishing) == 0x000A48, "Member 'UB_GameInstance_C::WantsToJoinSessionAfterUserEstablishing' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, UserControllerManager) == 0x000A50, "Member 'UB_GameInstance_C::UserControllerManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, SteamBeaconManager) == 0x000A58, "Member 'UB_GameInstance_C::SteamBeaconManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, TestMasterServerConnectionAddress) == 0x000A60, "Member 'UB_GameInstance_C::TestMasterServerConnectionAddress' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, PreferredRegionForMatchMaking) == 0x000A70, "Member 'UB_GameInstance_C::PreferredRegionForMatchMaking' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsStaticInstance) == 0x000A74, "Member 'UB_GameInstance_C::IsStaticInstance' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsCustomMatch) == 0x000A75, "Member 'UB_GameInstance_C::IsCustomMatch' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, TournamentManager) == 0x000A78, "Member 'UB_GameInstance_C::TournamentManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, NewMasterServerManager) == 0x000A80, "Member 'UB_GameInstance_C::NewMasterServerManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, EmptyParams) == 0x000A88, "Member 'UB_GameInstance_C::EmptyParams' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, UserBehaviorTracker) == 0x000AD8, "Member 'UB_GameInstance_C::UserBehaviorTracker' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ServerLoginName) == 0x000AE0, "Member 'UB_GameInstance_C::ServerLoginName' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ServerLoginPassword) == 0x000AF0, "Member 'UB_GameInstance_C::ServerLoginPassword' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, SkinManager) == 0x000B00, "Member 'UB_GameInstance_C::SkinManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ServerQuestInterface) == 0x000B08, "Member 'UB_GameInstance_C::ServerQuestInterface' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ClientQuestInterface) == 0x000B10, "Member 'UB_GameInstance_C::ClientQuestInterface' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, StatsAndAchievementsManager) == 0x000B18, "Member 'UB_GameInstance_C::StatsAndAchievementsManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, Connectivity) == 0x000B20, "Member 'UB_GameInstance_C::Connectivity' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, Messenger) == 0x000B28, "Member 'UB_GameInstance_C::Messenger' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, RevisionNumber) == 0x000B30, "Member 'UB_GameInstance_C::RevisionNumber' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, GameRulesToLoad) == 0x000B38, "Member 'UB_GameInstance_C::GameRulesToLoad' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, CurrentOpenedMap) == 0x000B48, "Member 'UB_GameInstance_C::CurrentOpenedMap' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, PoolManager) == 0x000B88, "Member 'UB_GameInstance_C::PoolManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, WasKickedFromMatch) == 0x000B90, "Member 'UB_GameInstance_C::WasKickedFromMatch' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, AccountActionWidget) == 0x000B98, "Member 'UB_GameInstance_C::AccountActionWidget' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, SessionSearch) == 0x000BA0, "Member 'UB_GameInstance_C::SessionSearch' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, OnEOSLoginCompleted) == 0x000BA8, "Member 'UB_GameInstance_C::OnEOSLoginCompleted' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, OnEOSLoginStarted) == 0x000BB8, "Member 'UB_GameInstance_C::OnEOSLoginStarted' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, LoginScreenTimer) == 0x000BC8, "Member 'UB_GameInstance_C::LoginScreenTimer' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, PingServerAddresses) == 0x000BD0, "Member 'UB_GameInstance_C::PingServerAddresses' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, PingServerResults) == 0x000C20, "Member 'UB_GameInstance_C::PingServerResults' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ClosestPing) == 0x000C70, "Member 'UB_GameInstance_C::ClosestPing' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, ClosestPingServer) == 0x000C78, "Member 'UB_GameInstance_C::ClosestPingServer' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, FriendsManager) == 0x000C88, "Member 'UB_GameInstance_C::FriendsManager' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, IsCurrentlyInMatch) == 0x000C90, "Member 'UB_GameInstance_C::IsCurrentlyInMatch' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, OnBackendLoginFailed) == 0x000C98, "Member 'UB_GameInstance_C::OnBackendLoginFailed' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, CanCommunicateOnline) == 0x000CA8, "Member 'UB_GameInstance_C::CanCommunicateOnline' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, EnteredForegroundTimer) == 0x000CB0, "Member 'UB_GameInstance_C::EnteredForegroundTimer' has a wrong offset!");
-static_assert(offsetof(UB_GameInstance_C, HideMasterServerDisconnect) == 0x000CB8, "Member 'UB_GameInstance_C::HideMasterServerDisconnect' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, VersionNumber) == 0x0007A8, "Member 'UB_GameInstance_C::VersionNumber' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, CurrentJoinPassword) == 0x0007B8, "Member 'UB_GameInstance_C::CurrentJoinPassword' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ItemManager) == 0x0007C8, "Member 'UB_GameInstance_C::ItemManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, EnterPasswordWidget) == 0x0007D0, "Member 'UB_GameInstance_C::EnterPasswordWidget' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsLanBuild) == 0x0007D8, "Member 'UB_GameInstance_C::IsLanBuild' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, UserSettingsManager) == 0x0007E0, "Member 'UB_GameInstance_C::UserSettingsManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsChatBanned) == 0x0007E8, "Member 'UB_GameInstance_C::IsChatBanned' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, LocalizationManager) == 0x0007F0, "Member 'UB_GameInstance_C::LocalizationManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, PreferedRegion) == 0x0007F8, "Member 'UB_GameInstance_C::PreferedRegion' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, UsePreferedRegion) == 0x000808, "Member 'UB_GameInstance_C::UsePreferedRegion' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, InputMappingsManager) == 0x000810, "Member 'UB_GameInstance_C::InputMappingsManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, EventManager) == 0x000818, "Member 'UB_GameInstance_C::EventManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnMenuGameModeLoaded) == 0x000820, "Member 'UB_GameInstance_C::OnMenuGameModeLoaded' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, bSplashScreenShown) == 0x000830, "Member 'UB_GameInstance_C::bSplashScreenShown' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnGameStateLoaded) == 0x000838, "Member 'UB_GameInstance_C::OnGameStateLoaded' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, InstanceManagerConnectionAddress) == 0x000848, "Member 'UB_GameInstance_C::InstanceManagerConnectionAddress' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, MasterServerConnectionAddress) == 0x000858, "Member 'UB_GameInstance_C::MasterServerConnectionAddress' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, HasShowAllyWitchesCommandLine) == 0x000868, "Member 'UB_GameInstance_C::HasShowAllyWitchesCommandLine' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, HasSpectatorsCanSeeWitchesCommandLine) == 0x000869, "Member 'UB_GameInstance_C::HasSpectatorsCanSeeWitchesCommandLine' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ShowAllyWitches) == 0x00086A, "Member 'UB_GameInstance_C::ShowAllyWitches' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, SpectatorsCanSeeWitches) == 0x00086B, "Member 'UB_GameInstance_C::SpectatorsCanSeeWitches' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, HasEnableIdleKickCommandLine) == 0x00086C, "Member 'UB_GameInstance_C::HasEnableIdleKickCommandLine' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, EnableIdleKick) == 0x00086D, "Member 'UB_GameInstance_C::EnableIdleKick' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, MapManager) == 0x000870, "Member 'UB_GameInstance_C::MapManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ObjectiveMatchManager) == 0x000878, "Member 'UB_GameInstance_C::ObjectiveMatchManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, SessionManager) == 0x000880, "Member 'UB_GameInstance_C::SessionManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, QuickmatchObjectiveMode) == 0x000888, "Member 'UB_GameInstance_C::QuickmatchObjectiveMode' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, InstanceId) == 0x00088C, "Member 'UB_GameInstance_C::InstanceId' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ChatManager) == 0x000890, "Member 'UB_GameInstance_C::ChatManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsUserEstablished) == 0x000898, "Member 'UB_GameInstance_C::IsUserEstablished' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, WantedSessionToJoinAfterUserEstablishing) == 0x0008A0, "Member 'UB_GameInstance_C::WantedSessionToJoinAfterUserEstablishing' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, WantsToJoinSessionAfterUserEstablishing) == 0x000A58, "Member 'UB_GameInstance_C::WantsToJoinSessionAfterUserEstablishing' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, UserControllerManager) == 0x000A60, "Member 'UB_GameInstance_C::UserControllerManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, SteamBeaconManager) == 0x000A68, "Member 'UB_GameInstance_C::SteamBeaconManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, TestMasterServerConnectionAddress) == 0x000A70, "Member 'UB_GameInstance_C::TestMasterServerConnectionAddress' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, PreferredRegionForMatchMaking) == 0x000A80, "Member 'UB_GameInstance_C::PreferredRegionForMatchMaking' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsStaticInstance) == 0x000A84, "Member 'UB_GameInstance_C::IsStaticInstance' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsCustomMatch) == 0x000A85, "Member 'UB_GameInstance_C::IsCustomMatch' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, TournamentManager) == 0x000A88, "Member 'UB_GameInstance_C::TournamentManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, NewMasterServerManager) == 0x000A90, "Member 'UB_GameInstance_C::NewMasterServerManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, EmptyParams) == 0x000A98, "Member 'UB_GameInstance_C::EmptyParams' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, UserBehaviorTracker) == 0x000AE8, "Member 'UB_GameInstance_C::UserBehaviorTracker' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ServerLoginName) == 0x000AF0, "Member 'UB_GameInstance_C::ServerLoginName' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ServerLoginPassword) == 0x000B00, "Member 'UB_GameInstance_C::ServerLoginPassword' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, SkinManager) == 0x000B10, "Member 'UB_GameInstance_C::SkinManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ServerQuestInterface) == 0x000B18, "Member 'UB_GameInstance_C::ServerQuestInterface' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ClientQuestInterface) == 0x000B20, "Member 'UB_GameInstance_C::ClientQuestInterface' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, StatsAndAchievementsManager) == 0x000B28, "Member 'UB_GameInstance_C::StatsAndAchievementsManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, Connectivity) == 0x000B30, "Member 'UB_GameInstance_C::Connectivity' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, Messenger) == 0x000B38, "Member 'UB_GameInstance_C::Messenger' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, RevisionNumber) == 0x000B40, "Member 'UB_GameInstance_C::RevisionNumber' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, GameRulesToLoad) == 0x000B48, "Member 'UB_GameInstance_C::GameRulesToLoad' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, CurrentOpenedMap) == 0x000B58, "Member 'UB_GameInstance_C::CurrentOpenedMap' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, PoolManager) == 0x000B98, "Member 'UB_GameInstance_C::PoolManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, WasKickedFromMatch) == 0x000BA0, "Member 'UB_GameInstance_C::WasKickedFromMatch' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, AccountActionWidget) == 0x000BA8, "Member 'UB_GameInstance_C::AccountActionWidget' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, SessionSearch) == 0x000BB0, "Member 'UB_GameInstance_C::SessionSearch' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnEOSLoginCompleted) == 0x000BB8, "Member 'UB_GameInstance_C::OnEOSLoginCompleted' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnEOSLoginStarted) == 0x000BC8, "Member 'UB_GameInstance_C::OnEOSLoginStarted' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, LoginScreenTimer) == 0x000BD8, "Member 'UB_GameInstance_C::LoginScreenTimer' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, PingServerAddresses) == 0x000BE0, "Member 'UB_GameInstance_C::PingServerAddresses' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, PingServerResults) == 0x000C30, "Member 'UB_GameInstance_C::PingServerResults' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ClosestPing) == 0x000C80, "Member 'UB_GameInstance_C::ClosestPing' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, ClosestPingServer) == 0x000C88, "Member 'UB_GameInstance_C::ClosestPingServer' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, FriendsManager) == 0x000C98, "Member 'UB_GameInstance_C::FriendsManager' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsCurrentlyInMatch) == 0x000CA0, "Member 'UB_GameInstance_C::IsCurrentlyInMatch' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnBackendLoginFailed) == 0x000CA8, "Member 'UB_GameInstance_C::OnBackendLoginFailed' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, CanCommunicateOnline) == 0x000CB8, "Member 'UB_GameInstance_C::CanCommunicateOnline' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, EnteredForegroundTimer) == 0x000CC0, "Member 'UB_GameInstance_C::EnteredForegroundTimer' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, HideMasterServerDisconnect) == 0x000CC8, "Member 'UB_GameInstance_C::HideMasterServerDisconnect' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, OnPremiumStatusFailed) == 0x000CD0, "Member 'UB_GameInstance_C::OnPremiumStatusFailed' has a wrong offset!");
+static_assert(offsetof(UB_GameInstance_C, IsPS5ExclusiveServer) == 0x000CE0, "Member 'UB_GameInstance_C::IsPS5ExclusiveServer' has a wrong offset!");
 
 }
 

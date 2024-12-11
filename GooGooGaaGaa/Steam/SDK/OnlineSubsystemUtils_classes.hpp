@@ -124,26 +124,6 @@ static_assert(sizeof(UConnectionCallbackProxy) == 0x000078, "Wrong size on UConn
 static_assert(offsetof(UConnectionCallbackProxy, OnSuccess) == 0x000030, "Member 'UConnectionCallbackProxy::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UConnectionCallbackProxy, OnFailure) == 0x000040, "Member 'UConnectionCallbackProxy::OnFailure' has a wrong offset!");
 
-// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
-// 0x0158 (0x0180 - 0x0028)
-class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl final : public UOnlineEngineInterface
-{
-public:
-	uint8                                         Pad_28[0x158];                                     // 0x0028(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl", true>();
-	}
-	static class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<OnlineSubsystemUtils::UOnlineEngineInterfaceImpl>();
-	}
-};
-static_assert(alignof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000008, "Wrong alignment on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
-static_assert(sizeof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000180, "Wrong size on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
-
 // Class OnlineSubsystemUtils.CreateSessionCallbackProxy
 // 0x0068 (0x0098 - 0x0030)
 class UCreateSessionCallbackProxy final : public UOnlineBlueprintCallProxyBase
@@ -1120,6 +1100,26 @@ static_assert(offsetof(USpectatorBeaconState, NumConsumedReservations) == 0x0000
 static_assert(offsetof(USpectatorBeaconState, MaxReservations) == 0x000034, "Member 'USpectatorBeaconState::MaxReservations' has a wrong offset!");
 static_assert(offsetof(USpectatorBeaconState, bRestrictCrossConsole) == 0x000038, "Member 'USpectatorBeaconState::bRestrictCrossConsole' has a wrong offset!");
 static_assert(offsetof(USpectatorBeaconState, Reservations) == 0x000040, "Member 'USpectatorBeaconState::Reservations' has a wrong offset!");
+
+// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
+// 0x0158 (0x0180 - 0x0028)
+class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl final : public UOnlineEngineInterface
+{
+public:
+	uint8                                         Pad_28[0x158];                                     // 0x0028(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl", true>();
+	}
+	static class OnlineSubsystemUtils::UOnlineEngineInterfaceImpl* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<OnlineSubsystemUtils::UOnlineEngineInterfaceImpl>();
+	}
+};
+static_assert(alignof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000008, "Wrong alignment on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
+static_assert(sizeof(OnlineSubsystemUtils::UOnlineEngineInterfaceImpl) == 0x000180, "Wrong size on OnlineSubsystemUtils::UOnlineEngineInterfaceImpl");
 
 // Class OnlineSubsystemUtils.TestBeaconClient
 // 0x0000 (0x0320 - 0x0320)

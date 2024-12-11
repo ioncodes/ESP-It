@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "StructUtils_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "StructUtils_structs.hpp"
 
 
 namespace SDK

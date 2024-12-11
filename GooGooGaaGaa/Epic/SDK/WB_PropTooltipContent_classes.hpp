@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
-#include "UMG_classes.hpp"
 #include "S_PropData_structs.hpp"
 #include "E_PropSet_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

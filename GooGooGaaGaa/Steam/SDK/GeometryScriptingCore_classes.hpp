@@ -890,6 +890,30 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshTransformFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshTransformFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_SceneUtilityFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* CopyCollisionMeshesFromObject(class UObject* FromObject, class UDynamicMesh* ToDynamicMesh, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, bool bUseComplexCollision, int32 SphereResolution, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* CopyMeshFromComponent(class USceneComponent* Component, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromComponentOptions& Options, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
+	static class UDynamicMeshPool* CreateDynamicMeshPool();
+	static void DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug);
+	static void SetComponentMaterialList(class UPrimitiveComponent* Component, const TArray<class UMaterialInterface*>& MaterialList, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_SceneUtilityFunctions">();
+	}
+	static class UGeometryScriptLibrary_SceneUtilityFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_SceneUtilityFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_SceneUtilityFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_SceneUtilityFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshUVFunctions final : public UBlueprintFunctionLibrary
@@ -1007,6 +1031,27 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_PointSetSamplingFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_PointSetSamplingFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_PointSetSamplingFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_PointSetSamplingFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_TextureMapFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static void SampleTexture2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTexture2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
+	static void SampleTextureRenderTarget2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTextureRenderTarget2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_TextureMapFunctions">();
+	}
+	static class UGeometryScriptLibrary_TextureMapFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_TextureMapFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_TextureMapFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_TextureMapFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_TextureMapFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_TextureMapFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_SimplePolygonFunctions final : public UBlueprintFunctionLibrary
@@ -1038,44 +1083,6 @@ public:
 };
 static_assert(alignof(UGeometryScriptLibrary_SimplePolygonFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_SimplePolygonFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_SimplePolygonFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_SimplePolygonFunctions");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_VectorMathFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FGeometryScriptScalarList ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList);
-	static void ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList);
-	static struct FGeometryScriptVectorList ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList);
-	static void ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList);
-	static struct FGeometryScriptScalarList ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
-	static void ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
-	static struct FGeometryScriptScalarList ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
-	static void ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
-	static struct FGeometryScriptScalarList ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
-	static void ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
-	static struct FGeometryScriptVectorList ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
-	static void ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
-	static struct FGeometryScriptVectorList VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
-	static void VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
-	static struct FGeometryScriptVectorList VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
-	static struct FGeometryScriptScalarList VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
-	static struct FGeometryScriptScalarList VectorLength(const struct FGeometryScriptVectorList& VectorList);
-	static void VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure);
-	static struct FGeometryScriptScalarList VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_VectorMathFunctions">();
-	}
-	static class UGeometryScriptLibrary_VectorMathFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_VectorMathFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_VectorMathFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_VectorMathFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_VectorMathFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_VectorMathFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1159,30 +1166,6 @@ public:
 };
 static_assert(alignof(UGeometryScriptLibrary_PolyPathFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_PolyPathFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_PolyPathFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_PolyPathFunctions");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_SceneUtilityFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* CopyCollisionMeshesFromObject(class UObject* FromObject, class UDynamicMesh* ToDynamicMesh, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, bool bUseComplexCollision, int32 SphereResolution, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* CopyMeshFromComponent(class USceneComponent* Component, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromComponentOptions& Options, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
-	static class UDynamicMeshPool* CreateDynamicMeshPool();
-	static void DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug);
-	static void SetComponentMaterialList(class UPrimitiveComponent* Component, const TArray<class UMaterialInterface*>& MaterialList, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_SceneUtilityFunctions">();
-	}
-	static class UGeometryScriptLibrary_SceneUtilityFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_SceneUtilityFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_SceneUtilityFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_SceneUtilityFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1274,26 +1257,43 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_BoxFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_BoxFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_BoxFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_BoxFunctions");
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions
+// Class GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions
 // 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_TextureMapFunctions final : public UBlueprintFunctionLibrary
+class UGeometryScriptLibrary_VectorMathFunctions final : public UBlueprintFunctionLibrary
 {
 public:
-	static void SampleTexture2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTexture2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
-	static void SampleTextureRenderTarget2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTextureRenderTarget2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
+	static struct FGeometryScriptScalarList ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList);
+	static void ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList);
+	static struct FGeometryScriptVectorList ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList);
+	static void ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList);
+	static struct FGeometryScriptScalarList ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
+	static void ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
+	static struct FGeometryScriptScalarList ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
+	static void ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
+	static struct FGeometryScriptScalarList ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
+	static void ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
+	static struct FGeometryScriptVectorList ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
+	static void ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
+	static struct FGeometryScriptVectorList VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
+	static void VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
+	static struct FGeometryScriptVectorList VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
+	static struct FGeometryScriptScalarList VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
+	static struct FGeometryScriptScalarList VectorLength(const struct FGeometryScriptVectorList& VectorList);
+	static void VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure);
+	static struct FGeometryScriptScalarList VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryScriptLibrary_TextureMapFunctions">();
+		return StaticClassImpl<"GeometryScriptLibrary_VectorMathFunctions">();
 	}
-	static class UGeometryScriptLibrary_TextureMapFunctions* GetDefaultObj()
+	static class UGeometryScriptLibrary_VectorMathFunctions* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_TextureMapFunctions>();
+		return GetDefaultObjImpl<UGeometryScriptLibrary_VectorMathFunctions>();
 	}
 };
-static_assert(alignof(UGeometryScriptLibrary_TextureMapFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_TextureMapFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_TextureMapFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_TextureMapFunctions");
+static_assert(alignof(UGeometryScriptLibrary_VectorMathFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_VectorMathFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_VectorMathFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_VectorMathFunctions");
 
 }
 

@@ -128,6 +128,20 @@ void UWB_SaveLoadScreen_C::GetInitialFocusWidget(class UUserWidget** InitialFocu
 }
 
 
+// Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.CheckForTooManySavegames
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SaveLoadScreen_C::CheckForTooManySavegames()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SaveLoadScreen_C", "CheckForTooManySavegames");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.GetVisibility_1
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

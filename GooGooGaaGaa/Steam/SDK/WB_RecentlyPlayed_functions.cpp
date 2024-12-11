@@ -157,6 +157,20 @@ void UWB_RecentlyPlayed_C::Init()
 }
 
 
+// Function WB_RecentlyPlayed.WB_RecentlyPlayed_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_RecentlyPlayed_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_RecentlyPlayed_C", "LeftTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_RecentlyPlayed.WB_RecentlyPlayed_C.PresenceUpdated
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -248,6 +262,20 @@ void UWB_RecentlyPlayed_C::RemoveEntryFromMap(class UObject* EntryListObject)
 	Parms.EntryListObject = EntryListObject;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_RecentlyPlayed.WB_RecentlyPlayed_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_RecentlyPlayed_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_RecentlyPlayed_C", "RightTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

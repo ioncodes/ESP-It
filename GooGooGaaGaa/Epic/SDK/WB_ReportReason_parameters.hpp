@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -18,41 +19,48 @@ namespace SDK::Params
 {
 
 // Function WB_ReportReason.WB_ReportReason_C.ExecuteUbergraph_WB_ReportReason
-// 0x0060 (0x0060 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSelectedOption_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FindOptionIndex_ReturnValue;              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSelectedOption_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FindOptionIndex_ReturnValue;              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason) == 0x000008, "Wrong alignment on WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason");
-static_assert(sizeof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason) == 0x000060, "Wrong size on WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason");
+static_assert(sizeof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason) == 0x000070, "Wrong size on WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason");
 static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, EntryPoint) == 0x000000, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetOwningPlayer_ReturnValue) == 0x000020, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Player_Controller) == 0x000028, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetGameInstance_ReturnValue_1) == 0x000038, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetSelectedOption_ReturnValue) == 0x000040, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetSelectedOption_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000050, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_FindOptionIndex_ReturnValue) == 0x00005C, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_FindOptionIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_IsChecked_ReturnValue) == 0x000010, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_Not_PreBool_ReturnValue) == 0x000021, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetOwningPlayer_ReturnValue) == 0x000028, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Player_Controller) == 0x000030, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetGameInstance_ReturnValue_1) == 0x000040, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetSelectedOption_ReturnValue) == 0x000048, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetSelectedOption_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000058, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, K2Node_DynamicCast_bSuccess_2) == 0x000060, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_FindOptionIndex_ReturnValue) == 0x000064, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_FindOptionIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason, CallFunc_GetIsEnabled_ReturnValue) == 0x000068, "Member 'WB_ReportReason_C_ExecuteUbergraph_WB_ReportReason::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
 
 // Function WB_ReportReason.WB_ReportReason_C.Get_PunishmentText_Text_0
 // 0x0098 (0x0098 - 0x0000)
@@ -89,6 +97,38 @@ static_assert(sizeof(WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0) == 0x00000
 static_assert(offsetof(WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0, ReturnValue) == 0x000000, "Member 'WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0, CallFunc_GetCheckedState_ReturnValue) == 0x000001, "Member 'WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0::CallFunc_GetCheckedState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000002, "Member 'WB_ReportReason_C_Get_ReportPlayer_bIsEnabled_0::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function WB_ReportReason.WB_ReportReason_C.GetControllerIconVisibility
+// 0x0006 (0x0006 - 0x0000)
+struct WB_ReportReason_C_GetControllerIconVisibility final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_ReportReason_C_GetControllerIconVisibility) == 0x000001, "Wrong alignment on WB_ReportReason_C_GetControllerIconVisibility");
+static_assert(sizeof(WB_ReportReason_C_GetControllerIconVisibility) == 0x000006, "Wrong size on WB_ReportReason_C_GetControllerIconVisibility");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, ReturnValue) == 0x000000, "Member 'WB_ReportReason_C_GetControllerIconVisibility::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, Temp_bool_Variable) == 0x000001, "Member 'WB_ReportReason_C_GetControllerIconVisibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, Temp_byte_Variable) == 0x000002, "Member 'WB_ReportReason_C_GetControllerIconVisibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, Temp_byte_Variable_1) == 0x000003, "Member 'WB_ReportReason_C_GetControllerIconVisibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_ReportReason_C_GetControllerIconVisibility::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ReportReason_C_GetControllerIconVisibility, K2Node_Select_Default) == 0x000005, "Member 'WB_ReportReason_C_GetControllerIconVisibility::K2Node_Select_Default' has a wrong offset!");
+
+// Function WB_ReportReason.WB_ReportReason_C.GetInitialFocusWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WB_ReportReason_C_GetInitialFocusWidget final
+{
+public:
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_ReportReason_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_ReportReason_C_GetInitialFocusWidget");
+static_assert(sizeof(WB_ReportReason_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_ReportReason_C_GetInitialFocusWidget");
+static_assert(offsetof(WB_ReportReason_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_ReportReason_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
 
 }
 

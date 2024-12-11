@@ -221,9 +221,10 @@ void UB_NewMasterServerManager_C::BuildGetSystemMessagesRequest(class UVaRestReq
 // class FString                           AdditionalAuthInformation                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           ProductUserId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           PlatformAuthInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           OnlineEnvironment                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UVaRestRequestJSON*               RestRequest                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewMasterServerManager_C::BuildLoginRequest(const class FString& UserName, const class FString& Password, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& ProductUserId, const class FString& PlatformAuthInfo, class UVaRestRequestJSON** RestRequest)
+void UB_NewMasterServerManager_C::BuildLoginRequest(const class FString& UserName, const class FString& Password, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& ProductUserId, const class FString& PlatformAuthInfo, const class FString& OnlineEnvironment, class UVaRestRequestJSON** RestRequest)
 {
 	static class UFunction* Func = nullptr;
 
@@ -239,6 +240,7 @@ void UB_NewMasterServerManager_C::BuildLoginRequest(const class FString& UserNam
 	Parms.AdditionalAuthInformation = std::move(AdditionalAuthInformation);
 	Parms.ProductUserId = std::move(ProductUserId);
 	Parms.PlatformAuthInfo = std::move(PlatformAuthInfo);
+	Parms.OnlineEnvironment = std::move(OnlineEnvironment);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -255,9 +257,10 @@ void UB_NewMasterServerManager_C::BuildLoginRequest(const class FString& UserNam
 // class FString                           AccountType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           AdditionalAuthInformation                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           PlatformAuthInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           OnlineEnvironment                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UVaRestRequestJSON*               RestRequest                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& PlatformAuthInfo, class UVaRestRequestJSON** RestRequest)
+void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, const class FString& PlatformAuthInfo, const class FString& OnlineEnvironment, class UVaRestRequestJSON** RestRequest)
 {
 	static class UFunction* Func = nullptr;
 
@@ -271,6 +274,7 @@ void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class 
 	Parms.AccountType = std::move(AccountType);
 	Parms.AdditionalAuthInformation = std::move(AdditionalAuthInformation);
 	Parms.PlatformAuthInfo = std::move(PlatformAuthInfo);
+	Parms.OnlineEnvironment = std::move(OnlineEnvironment);
 
 	UObject::ProcessEvent(Func, &Parms);
 

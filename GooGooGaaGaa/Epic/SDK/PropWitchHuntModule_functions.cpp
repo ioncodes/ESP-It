@@ -807,7 +807,7 @@ int32 UBitmaskLibrary::ToggleBit(int32 Value, int32 Pos)
 
 
 // Function PropWitchHuntModule.BpAudioSettingsLibrary.LoadSoundVolumes
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // float                                   Master                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Sound                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3196,9 +3196,10 @@ void UMatchParametersSubsystem::InitializeSubsystem()
 // Function PropWitchHuntModule.MatchSubsystem.CreateGameMatch
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
+// class FString                           MatchActivityId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FMatchPlayer>             Players                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UMatchSubsystem::CreateGameMatch(const TArray<struct FMatchPlayer>& Players)
+void UMatchSubsystem::CreateGameMatch(const class FString& MatchActivityId, const TArray<struct FMatchPlayer>& Players)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3207,6 +3208,7 @@ void UMatchSubsystem::CreateGameMatch(const TArray<struct FMatchPlayer>& Players
 
 	Params::MatchSubsystem_CreateGameMatch Parms{};
 
+	Parms.MatchActivityId = std::move(MatchActivityId);
 	Parms.Players = std::move(Players);
 
 	auto Flgs = Func->FunctionFlags;
@@ -3215,6 +3217,56 @@ void UMatchSubsystem::CreateGameMatch(const TArray<struct FMatchPlayer>& Players
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.MatchSubsystem.GetSonyAccessToken
+// (Final, Native, Public)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMatchSubsystem::GetSonyAccessToken()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchSubsystem", "GetSonyAccessToken");
+
+	Params::MatchSubsystem_GetSonyAccessToken Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.MatchSubsystem.GetSonyBaseURL
+// (Final, Native, Public)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMatchSubsystem::GetSonyBaseURL()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchSubsystem", "GetSonyBaseURL");
+
+	Params::MatchSubsystem_GetSonyBaseURL Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -3443,6 +3495,25 @@ void UMatchSubsystem::OnUpdateMatchStatusResponse(class UVaRestRequestJSON* Requ
 }
 
 
+// Function PropWitchHuntModule.MatchSubsystem.RegisterEvents
+// (Final, Native, Private)
+
+void UMatchSubsystem::RegisterEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchSubsystem", "RegisterEvents");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PropWitchHuntModule.MatchSubsystem.ReportMatchResults
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -3477,6 +3548,25 @@ void UMatchSubsystem::RequestSonyAccessToken()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MatchSubsystem", "RequestSonyAccessToken");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.MatchSubsystem.UnRegisterEvents
+// (Final, Native, Private)
+
+void UMatchSubsystem::UnRegisterEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchSubsystem", "UnRegisterEvents");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3550,6 +3640,62 @@ void UModParametersSubsystem::InitializeSubsystem()
 		Func = Class->GetFunction("ModParametersSubsystem", "InitializeSubsystem");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PropWitchHuntModule.MultiplayerStatusSubsystem.SetIsCrossPlatformGame
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bIsCrossPlatform                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMultiplayerStatusSubsystem::SetIsCrossPlatformGame(bool bIsCrossPlatform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MultiplayerStatusSubsystem", "SetIsCrossPlatformGame");
+
+	Params::MultiplayerStatusSubsystem_SetIsCrossPlatformGame Parms{};
+
+	Parms.bIsCrossPlatform = bIsCrossPlatform;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.MultiplayerStatusSubsystem.SetIsUsingMultiplayerFeatures
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   LocalUserNum                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsUsingMPFeatures                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsSpectator                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsCrossPlatform                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMultiplayerStatusSubsystem::SetIsUsingMultiplayerFeatures(int32 LocalUserNum, bool bIsUsingMPFeatures, bool bIsSpectator, bool bIsCrossPlatform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MultiplayerStatusSubsystem", "SetIsUsingMultiplayerFeatures");
+
+	Params::MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures Parms{};
+
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.bIsUsingMPFeatures = bIsUsingMPFeatures;
+	Parms.bIsSpectator = bIsSpectator;
+	Parms.bIsCrossPlatform = bIsCrossPlatform;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -4077,6 +4223,174 @@ void UPowerupParametersSubsystem::InitializeSubsystem()
 }
 
 
+// Function PropWitchHuntModule.FilterProfanityProxy.FilterProfanity
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   StringsToFilter                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UFilterProfanityProxy*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFilterProfanityProxy* UFilterProfanityProxy::FilterProfanity(class UObject* WorldContextObject, const TArray<class FString>& StringsToFilter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("FilterProfanityProxy", "FilterProfanity");
+
+	Params::FilterProfanityProxy_FilterProfanity Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.StringsToFilter = std::move(StringsToFilter);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.FilterProfanityProxy.FilterProfanityPS5
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// class FString                           InOutString                                            (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UFilterProfanityProxy::FilterProfanityPS5(class FString* InOutString)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FilterProfanityProxy", "FilterProfanityPS5");
+
+	Params::FilterProfanityProxy_FilterProfanityPS5 Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (InOutString != nullptr)
+		*InOutString = std::move(Parms.InOutString);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.FilterProfanityProxy.HandleMessageFilteringComplete
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// bool                                    Success                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UFilterProfanityProxy::HandleMessageFilteringComplete(bool Success, const TArray<class FString>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FilterProfanityProxy", "HandleMessageFilteringComplete");
+
+	Params::FilterProfanityProxy_HandleMessageFilteringComplete Parms{};
+
+	Parms.Success = Success;
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.FilterProfanityProxy.HandleSingleMessageFilteringComplete
+// (Final, Native, Private)
+// Parameters:
+// bool                                    Success                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           FilteredStrings                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFilterProfanityProxy::HandleSingleMessageFilteringComplete(bool Success, const class FString& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FilterProfanityProxy", "HandleSingleMessageFilteringComplete");
+
+	Params::FilterProfanityProxy_HandleSingleMessageFilteringComplete Parms{};
+
+	Parms.Success = Success;
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.FilterMatchPlayerProfanityProxy.FilterProfanity
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMatchPlayer>             PlayersToFilter                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UFilterMatchPlayerProfanityProxy* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFilterMatchPlayerProfanityProxy* UFilterMatchPlayerProfanityProxy::FilterProfanity(class UObject* WorldContextObject, const TArray<struct FMatchPlayer>& PlayersToFilter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("FilterMatchPlayerProfanityProxy", "FilterProfanity");
+
+	Params::FilterMatchPlayerProfanityProxy_FilterProfanity Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayersToFilter = std::move(PlayersToFilter);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.FilterMatchPlayerProfanityProxy.HandleFilterProfanityResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFilterMatchPlayerProfanityProxy::HandleFilterProfanityResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FilterMatchPlayerProfanityProxy", "HandleFilterProfanityResponse");
+
+	Params::FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PropWitchHuntModule.ProjectVersionBlueprint.AddActorComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -4534,6 +4848,34 @@ void UProjectVersionBlueprint::GetMemoryStats(float* UsedPhysical, float* PeakUs
 }
 
 
+// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineEnvironment
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UProjectVersionBlueprint::GetOnlineEnvironment(class UGameInstance* GameInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetOnlineEnvironment");
+
+	Params::ProjectVersionBlueprint_GetOnlineEnvironment Parms{};
+
+	Parms.GameInstance = GameInstance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetProjectVersion
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -4887,6 +5229,48 @@ bool UProjectVersionBlueprint::IsSwitchBuild()
 		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "IsSwitchBuild");
 
 	Params::ProjectVersionBlueprint_IsSwitchBuild Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.ProjectVersionBlueprint.IsVersionGreaterOrEqual
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   LeftMajor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LeftMinor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LeftBuild                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LeftPatch                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RightMajor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RightMinor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RightBuild                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RightPatch                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UProjectVersionBlueprint::IsVersionGreaterOrEqual(int32 LeftMajor, int32 LeftMinor, int32 LeftBuild, int32 LeftPatch, int32 RightMajor, int32 RightMinor, int32 RightBuild, int32 RightPatch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "IsVersionGreaterOrEqual");
+
+	Params::ProjectVersionBlueprint_IsVersionGreaterOrEqual Parms{};
+
+	Parms.LeftMajor = LeftMajor;
+	Parms.LeftMinor = LeftMinor;
+	Parms.LeftBuild = LeftBuild;
+	Parms.LeftPatch = LeftPatch;
+	Parms.RightMajor = RightMajor;
+	Parms.RightMinor = RightMinor;
+	Parms.RightBuild = RightBuild;
+	Parms.RightPatch = RightPatch;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5872,6 +6256,37 @@ void UReplayWorldSubsystem::StopRecordingReplay()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.ReportSubsystem.ReportPlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReporterPUID                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReportedPUID                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReasonId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ExtraInfo                                              (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UReportSubsystem::ReportPlayer(const class FString& ReporterPUID, const class FString& ReportedPUID, int32 ReasonId, const class FString& ExtraInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReportSubsystem", "ReportPlayer");
+
+	Params::ReportSubsystem_ReportPlayer Parms{};
+
+	Parms.ReporterPUID = std::move(ReporterPUID);
+	Parms.ReportedPUID = std::move(ReportedPUID);
+	Parms.ReasonId = ReasonId;
+	Parms.ExtraInfo = std::move(ExtraInfo);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

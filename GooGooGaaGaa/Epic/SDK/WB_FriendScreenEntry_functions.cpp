@@ -127,6 +127,20 @@ void UWB_FriendScreenEntry_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
+// Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_FriendScreenEntry_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreenEntry_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.CreateTooltips
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -184,12 +198,9 @@ void UWB_FriendScreenEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.OnSessionInviteReceived
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// struct FUniqueNetIdRepl                 FromId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           AppId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FOnlineSessionSearchResultBP     InviteResult                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUniqueNetIdRepl                 FromPlayer                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWB_FriendScreenEntry_C::OnSessionInviteReceived(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult)
+void UWB_FriendScreenEntry_C::OnSessionInviteReceived(const struct FUniqueNetIdRepl& FromPlayer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -198,10 +209,7 @@ void UWB_FriendScreenEntry_C::OnSessionInviteReceived(const struct FUniqueNetIdR
 
 	Params::WB_FriendScreenEntry_C_OnSessionInviteReceived Parms{};
 
-	Parms.UserId = std::move(UserId);
-	Parms.FromId = std::move(FromId);
-	Parms.AppId = std::move(AppId);
-	Parms.InviteResult = std::move(InviteResult);
+	Parms.FromPlayer = std::move(FromPlayer);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

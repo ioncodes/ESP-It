@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveTeam_structs.hpp"
 #include "SSelectedSkills_structs.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 

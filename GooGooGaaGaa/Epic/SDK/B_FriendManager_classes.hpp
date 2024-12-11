@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_PopupType_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "Engine_structs.hpp"
 #include "S_InviteInfo_structs.hpp"
+#include "Engine_structs.hpp"
+#include "E_PopupType_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_FriendManager.B_FriendManager_C
-// 0x0178 (0x01A8 - 0x0030)
+// 0x0200 (0x0230 - 0x0030)
 class UB_FriendManager_C final : public UBaseManager
 {
 public:
@@ -54,14 +54,22 @@ public:
 	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnHasIncomingTradeRequestsCompleted;               // 0x0188(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnUserInfosReceived;                               // 0x0198(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnBlockedPlayerReceived;                           // 0x01A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          BlockedPlayersRetrieved;                           // 0x01B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         BlockedPlayerIds;                                  // 0x01C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	FMulticastInlineDelegateProperty_             SessionInviteReceived;                             // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMap<struct FUniqueNetIdRepl, struct FOnlineSessionSearchResultBP> PendingSessionInvitationsToCheck;                  // 0x01E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void OnHasIncomingTradeRequestsCompleted__DelegateSignature(bool HasIncomingTradeRequests_0);
 	void OnFriendListReceived__DelegateSignature();
 	void OnUserInfosReceived__DelegateSignature(TArray<struct FUniqueNetIdRepl>& UserIds);
+	void SessionInviteReceived__DelegateSignature(const struct FUniqueNetIdRepl& FromPlayer);
 	void AcceptFriendRequest(const struct FUniqueNetIdRepl& FriendId, bool* InitialSuccess);
 	void AcceptFriendRequestQueued();
 	void AnyPendingFriendOrSessionInvitesExist(bool* ThereArePendingInvites);
+	void BlockedPlayerListChanged(int32 LocalUserNum, const class FString& ListName);
 	void CheckForPendingTradeRequests();
 	void CheckForTooManyFriendsAndPending(bool* TooManyFriends, bool* TooManyPending);
 	void CheckIncomingTradeRequests(TArray<struct FTradeRequest>& Requests);
@@ -79,12 +87,16 @@ public:
 	void GetMaximumFriends(int32* MaximumFriends_0);
 	void Initialize(class UGameInstance* InGameInstance);
 	void InitializeFriendsAndPlayers();
+	void IsPlayerBlocked(const class FString& PlayerId, bool* IsBlocked);
+	void IsPlayerRefPlatformBlocked(class UOnlineUserRef* PlayerRef, bool* IsBlocked);
+	void NotifySessionInviteReceived(const struct FUniqueNetIdRepl& FromPlayer);
 	void OnAcceptInviteComplete_35A41B484B6CFFB9578A52A5BD3155FF(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
+	void OnBlockedPlayerReceived__DelegateSignature();
 	void OnCallFailed_2564B7FD4AA17ABFFBFE3CA98D34953C(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnCallFailed_35A41B484B6CFFB9578A52A5BD3155FF(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnCallFailed_3ADB22B24A96F6453AEA11A8FEA28B30(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnCallFailed_53851A804A830E61AFB854AB13BB6C79(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr);
-	void OnCallFailed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages);
+	void OnCallFailed_6967657645E8E6B25C9013B176D7FDD6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error);
 	void OnCallFailed_77C017C448C1753B2D8EC78E394EC197(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
 	void OnCallFailed_9163A3F940C5996E0C84719EFCC9D6CC(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
 	void OnCallFailed_B33D6C834A0A27D7DA8F8F82F18E25A2(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
@@ -92,14 +104,15 @@ public:
 	void OnCallFailed_E50A00F64C1964CD8E4D5695C4575DCF(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
 	void OnDeleteFriendComplete_3ADB22B24A96F6453AEA11A8FEA28B30(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray<struct FTradeRequest>& Requests);
+	void OnFailure_842E1AC84A79AB73771E288077F13694(const TArray<class FString>& FilteredStrings);
 	void OnFriendInviteReceived(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId);
 	void OnFriendSessionInviteReceived(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult);
-	void OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages);
 	void OnNewRecentPlayersAdded(const struct FUniqueNetIdRepl& UserId, const TArray<class UOnlineRecentPlayerRef*>& AddedPlayers);
 	void OnPopupAnimationFinished();
 	void OnPresenceReceived();
 	void OnPresenceTaskComplete_77C017C448C1753B2D8EC78E394EC197(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
 	void OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
+	void OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error);
 	void OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B94079D59F1(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error);
 	void OnQueryUserInfoComplete_53851A804A830E61AFB854AB13BB6C79(bool bWasSuccessful, const TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr);
 	void OnReadFriendsListComplete_9163A3F940C5996E0C84719EFCC9D6CC(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
@@ -107,6 +120,7 @@ public:
 	void OnRejectInviteComplete_2564B7FD4AA17ABFFBFE3CA98D34953C(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnSendInviteComplete_B33D6C834A0A27D7DA8F8F82F18E25A2(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
 	void OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray<struct FTradeRequest>& Requests);
+	void OnSuccess_842E1AC84A79AB73771E288077F13694(const TArray<class FString>& FilteredStrings);
 	void QueryPlatformPresence();
 	void QueryPS5FriendsPresence();
 	void QueryUserInfoQueued();
@@ -120,9 +134,11 @@ public:
 	void SanitizeFriendNames();
 	void SanitizePlayerNames(TArray<class UOnlineUserRef*>& Users);
 	void SanitizeRecentPlayerNames();
+	void SaveBlockedPlayersList();
 	void SendFriendInvite(const struct FUniqueNetIdRepl& FriendId, bool* InitialSuccess);
 	void SendFriendInviteQueued();
-	void SendSessionInvite(const struct FUniqueNetIdRepl& Friend);
+	void SendPlatformSessionInvite(class UOnlineUserRef* UserToInvite);
+	void SendSessionInvite(class UOnlineFriendRef* Friend);
 	void SetHasIncomingTradeRequests(bool HasIncomingTradeRequests_0);
 	void TradeNotifyReceived(ETradeReason Reason, int64 PendingTradeId, const class FString& SourcePlayerId, const class FString& TargetPlayerId);
 
@@ -137,7 +153,7 @@ public:
 	}
 };
 static_assert(alignof(UB_FriendManager_C) == 0x000008, "Wrong alignment on UB_FriendManager_C");
-static_assert(sizeof(UB_FriendManager_C) == 0x0001A8, "Wrong size on UB_FriendManager_C");
+static_assert(sizeof(UB_FriendManager_C) == 0x000230, "Wrong size on UB_FriendManager_C");
 static_assert(offsetof(UB_FriendManager_C, UberGraphFrame) == 0x000030, "Member 'UB_FriendManager_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UB_FriendManager_C, SessionInvitations) == 0x000038, "Member 'UB_FriendManager_C::SessionInvitations' has a wrong offset!");
 static_assert(offsetof(UB_FriendManager_C, BGameInstance) == 0x000088, "Member 'UB_FriendManager_C::BGameInstance' has a wrong offset!");
@@ -163,6 +179,11 @@ static_assert(offsetof(UB_FriendManager_C, MaximumFriendRequests) == 0x000180, "
 static_assert(offsetof(UB_FriendManager_C, HasIncomingTradeRequests) == 0x000184, "Member 'UB_FriendManager_C::HasIncomingTradeRequests' has a wrong offset!");
 static_assert(offsetof(UB_FriendManager_C, OnHasIncomingTradeRequestsCompleted) == 0x000188, "Member 'UB_FriendManager_C::OnHasIncomingTradeRequestsCompleted' has a wrong offset!");
 static_assert(offsetof(UB_FriendManager_C, OnUserInfosReceived) == 0x000198, "Member 'UB_FriendManager_C::OnUserInfosReceived' has a wrong offset!");
+static_assert(offsetof(UB_FriendManager_C, OnBlockedPlayerReceived) == 0x0001A8, "Member 'UB_FriendManager_C::OnBlockedPlayerReceived' has a wrong offset!");
+static_assert(offsetof(UB_FriendManager_C, BlockedPlayersRetrieved) == 0x0001B8, "Member 'UB_FriendManager_C::BlockedPlayersRetrieved' has a wrong offset!");
+static_assert(offsetof(UB_FriendManager_C, BlockedPlayerIds) == 0x0001C0, "Member 'UB_FriendManager_C::BlockedPlayerIds' has a wrong offset!");
+static_assert(offsetof(UB_FriendManager_C, SessionInviteReceived) == 0x0001D0, "Member 'UB_FriendManager_C::SessionInviteReceived' has a wrong offset!");
+static_assert(offsetof(UB_FriendManager_C, PendingSessionInvitationsToCheck) == 0x0001E0, "Member 'UB_FriendManager_C::PendingSessionInvitationsToCheck' has a wrong offset!");
 
 }
 

@@ -425,41 +425,6 @@ public:
 static_assert(alignof(FManagedArrayCollection) == 0x000008, "Wrong alignment on FManagedArrayCollection");
 static_assert(sizeof(FManagedArrayCollection) == 0x0000B0, "Wrong size on FManagedArrayCollection");
 
-// ScriptStruct Chaos.SolverCollisionData
-// 0x00C0 (0x00C0 - 0x0000)
-struct FSolverCollisionData final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedImpulse;                                // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity1;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity2;                                         // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AngularVelocity1;                                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AngularVelocity2;                                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Mass1;                                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Mass2;                                             // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ParticleIndex;                                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LevelsetIndex;                                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ParticleIndexMesh;                                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LevelsetIndexMesh;                                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSolverCollisionData) == 0x000008, "Wrong alignment on FSolverCollisionData");
-static_assert(sizeof(FSolverCollisionData) == 0x0000C0, "Wrong size on FSolverCollisionData");
-static_assert(offsetof(FSolverCollisionData, Location) == 0x000000, "Member 'FSolverCollisionData::Location' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, AccumulatedImpulse) == 0x000018, "Member 'FSolverCollisionData::AccumulatedImpulse' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, Normal) == 0x000030, "Member 'FSolverCollisionData::Normal' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, Velocity1) == 0x000048, "Member 'FSolverCollisionData::Velocity1' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, Velocity2) == 0x000060, "Member 'FSolverCollisionData::Velocity2' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, AngularVelocity1) == 0x000078, "Member 'FSolverCollisionData::AngularVelocity1' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, AngularVelocity2) == 0x000090, "Member 'FSolverCollisionData::AngularVelocity2' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, Mass1) == 0x0000A8, "Member 'FSolverCollisionData::Mass1' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, Mass2) == 0x0000AC, "Member 'FSolverCollisionData::Mass2' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, ParticleIndex) == 0x0000B0, "Member 'FSolverCollisionData::ParticleIndex' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, LevelsetIndex) == 0x0000B4, "Member 'FSolverCollisionData::LevelsetIndex' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, ParticleIndexMesh) == 0x0000B8, "Member 'FSolverCollisionData::ParticleIndexMesh' has a wrong offset!");
-static_assert(offsetof(FSolverCollisionData, LevelsetIndexMesh) == 0x0000BC, "Member 'FSolverCollisionData::LevelsetIndexMesh' has a wrong offset!");
-
 // ScriptStruct Chaos.FieldCollection
 // 0x0000 (0x00B0 - 0x00B0)
 struct FFieldCollection final : public FManagedArrayCollection
@@ -477,6 +442,24 @@ public:
 };
 static_assert(alignof(FClosestPhysicsObjectResult) == 0x000008, "Wrong alignment on FClosestPhysicsObjectResult");
 static_assert(sizeof(FClosestPhysicsObjectResult) == 0x000028, "Wrong size on FClosestPhysicsObjectResult");
+
+// ScriptStruct Chaos.SolverTrailingFilterSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FSolverTrailingFilterSettings final
+{
+public:
+	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSolverTrailingFilterSettings) == 0x000004, "Wrong alignment on FSolverTrailingFilterSettings");
+static_assert(sizeof(FSolverTrailingFilterSettings) == 0x000010, "Wrong size on FSolverTrailingFilterSettings");
+static_assert(offsetof(FSolverTrailingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverTrailingFilterSettings::FilterEnabled' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinMass) == 0x000004, "Member 'FSolverTrailingFilterSettings::MinMass' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverTrailingFilterSettings::MinSpeed' has a wrong offset!");
+static_assert(offsetof(FSolverTrailingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverTrailingFilterSettings::MinVolume' has a wrong offset!");
 
 // ScriptStruct Chaos.SolverCollisionFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -513,24 +496,6 @@ static_assert(offsetof(FSolverBreakingFilterSettings, FilterEnabled) == 0x000000
 static_assert(offsetof(FSolverBreakingFilterSettings, MinMass) == 0x000004, "Member 'FSolverBreakingFilterSettings::MinMass' has a wrong offset!");
 static_assert(offsetof(FSolverBreakingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverBreakingFilterSettings::MinSpeed' has a wrong offset!");
 static_assert(offsetof(FSolverBreakingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverBreakingFilterSettings::MinVolume' has a wrong offset!");
-
-// ScriptStruct Chaos.SolverTrailingFilterSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FSolverTrailingFilterSettings final
-{
-public:
-	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSolverTrailingFilterSettings) == 0x000004, "Wrong alignment on FSolverTrailingFilterSettings");
-static_assert(sizeof(FSolverTrailingFilterSettings) == 0x000010, "Wrong size on FSolverTrailingFilterSettings");
-static_assert(offsetof(FSolverTrailingFilterSettings, FilterEnabled) == 0x000000, "Member 'FSolverTrailingFilterSettings::FilterEnabled' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinMass) == 0x000004, "Member 'FSolverTrailingFilterSettings::MinMass' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinSpeed) == 0x000008, "Member 'FSolverTrailingFilterSettings::MinSpeed' has a wrong offset!");
-static_assert(offsetof(FSolverTrailingFilterSettings, MinVolume) == 0x00000C, "Member 'FSolverTrailingFilterSettings::MinVolume' has a wrong offset!");
 
 // ScriptStruct Chaos.ChaosSolverConfiguration
 // 0x006C (0x006C - 0x0000)
@@ -582,6 +547,41 @@ static_assert(offsetof(FChaosSolverConfiguration, TrailingFilterSettings) == 0x0
 static_assert(offsetof(FChaosSolverConfiguration, Iterations) == 0x000060, "Member 'FChaosSolverConfiguration::Iterations' has a wrong offset!");
 static_assert(offsetof(FChaosSolverConfiguration, PushOutIterations) == 0x000064, "Member 'FChaosSolverConfiguration::PushOutIterations' has a wrong offset!");
 static_assert(offsetof(FChaosSolverConfiguration, bGenerateContactGraph) == 0x000068, "Member 'FChaosSolverConfiguration::bGenerateContactGraph' has a wrong offset!");
+
+// ScriptStruct Chaos.SolverCollisionData
+// 0x00C0 (0x00C0 - 0x0000)
+struct FSolverCollisionData final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedImpulse;                                // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity1;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity2;                                         // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AngularVelocity1;                                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AngularVelocity2;                                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Mass1;                                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Mass2;                                             // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ParticleIndex;                                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelsetIndex;                                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ParticleIndexMesh;                                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelsetIndexMesh;                                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSolverCollisionData) == 0x000008, "Wrong alignment on FSolverCollisionData");
+static_assert(sizeof(FSolverCollisionData) == 0x0000C0, "Wrong size on FSolverCollisionData");
+static_assert(offsetof(FSolverCollisionData, Location) == 0x000000, "Member 'FSolverCollisionData::Location' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, AccumulatedImpulse) == 0x000018, "Member 'FSolverCollisionData::AccumulatedImpulse' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, Normal) == 0x000030, "Member 'FSolverCollisionData::Normal' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, Velocity1) == 0x000048, "Member 'FSolverCollisionData::Velocity1' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, Velocity2) == 0x000060, "Member 'FSolverCollisionData::Velocity2' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, AngularVelocity1) == 0x000078, "Member 'FSolverCollisionData::AngularVelocity1' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, AngularVelocity2) == 0x000090, "Member 'FSolverCollisionData::AngularVelocity2' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, Mass1) == 0x0000A8, "Member 'FSolverCollisionData::Mass1' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, Mass2) == 0x0000AC, "Member 'FSolverCollisionData::Mass2' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, ParticleIndex) == 0x0000B0, "Member 'FSolverCollisionData::ParticleIndex' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, LevelsetIndex) == 0x0000B4, "Member 'FSolverCollisionData::LevelsetIndex' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, ParticleIndexMesh) == 0x0000B8, "Member 'FSolverCollisionData::ParticleIndexMesh' has a wrong offset!");
+static_assert(offsetof(FSolverCollisionData, LevelsetIndexMesh) == 0x0000BC, "Member 'FSolverCollisionData::LevelsetIndexMesh' has a wrong offset!");
 
 // ScriptStruct Chaos.SolverBreakingData
 // 0x0058 (0x0058 - 0x0000)

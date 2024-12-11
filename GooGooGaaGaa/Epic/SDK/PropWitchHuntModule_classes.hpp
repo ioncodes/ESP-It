@@ -734,22 +734,32 @@ static_assert(alignof(UMatchParametersSubsystem) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UMatchParametersSubsystem) == 0x000030, "Wrong size on UMatchParametersSubsystem");
 
 // Class PropWitchHuntModule.MatchSubsystem
-// 0x0108 (0x0138 - 0x0030)
+// 0x01A8 (0x01D8 - 0x0030)
 class UMatchSubsystem final : public UGameInstanceSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CurrentMatchId;                                    // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 AccessToken;                                       // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 BaseUrl;                                           // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FString, class FString>            SonyEnvironmentURLs;                               // 0x0068(0x0050)(NativeAccessSpecifierPrivate)
-	float                                         Timer;                                             // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              ExpirationTime;                                    // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C8[0x70];                                      // 0x00C8(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bCanCreateMatch;                                   // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ActivityId;                                        // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 AccessToken;                                       // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 BaseUrl;                                           // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 ClientId;                                          // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 ClientSecret;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bInitialSetupSuccessful;                           // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAuthenticationSuccessful;                         // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class FString>            SonyEnvironmentURLs;                               // 0x00A8(0x0050)(NativeAccessSpecifierPrivate)
+	float                                         Timer;                                             // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              ExpirationTime;                                    // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_108[0xD0];                                     // 0x0108(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void CreateGameMatch(const TArray<struct FMatchPlayer>& Players);
+	void CreateGameMatch(const class FString& MatchActivityId, const TArray<struct FMatchPlayer>& Players);
+	class FString GetSonyAccessToken();
+	class FString GetSonyBaseURL();
 	void JoinPlayerToMatch(const TArray<struct FMatchPlayer>& Players);
 	void LeavePlayersFromMatch(const TArray<struct FMatchPlayer>& Players);
 	void OnCreateMatchResponse(class UVaRestRequestJSON* Request);
@@ -759,8 +769,10 @@ public:
 	void OnReportMatchResultsResponse(class UVaRestRequestJSON* Request);
 	void OnUpdateMatchDetailsResponse(class UVaRestRequestJSON* Request);
 	void OnUpdateMatchStatusResponse(class UVaRestRequestJSON* Request);
+	void RegisterEvents();
 	void ReportMatchResults(const TArray<struct FMatchTeamResult>& Results);
 	void RequestSonyAccessToken();
+	void UnRegisterEvents();
 	void UpdateMatchDetails(const TArray<struct FMatchPlayer>& Players, const TArray<struct FMatchTeam>& Teams);
 	void UpdateMatchStatus(EUpdateMatchStatus MatchStatus);
 
@@ -775,13 +787,19 @@ public:
 	}
 };
 static_assert(alignof(UMatchSubsystem) == 0x000008, "Wrong alignment on UMatchSubsystem");
-static_assert(sizeof(UMatchSubsystem) == 0x000138, "Wrong size on UMatchSubsystem");
+static_assert(sizeof(UMatchSubsystem) == 0x0001D8, "Wrong size on UMatchSubsystem");
 static_assert(offsetof(UMatchSubsystem, CurrentMatchId) == 0x000038, "Member 'UMatchSubsystem::CurrentMatchId' has a wrong offset!");
-static_assert(offsetof(UMatchSubsystem, AccessToken) == 0x000048, "Member 'UMatchSubsystem::AccessToken' has a wrong offset!");
-static_assert(offsetof(UMatchSubsystem, BaseUrl) == 0x000058, "Member 'UMatchSubsystem::BaseUrl' has a wrong offset!");
-static_assert(offsetof(UMatchSubsystem, SonyEnvironmentURLs) == 0x000068, "Member 'UMatchSubsystem::SonyEnvironmentURLs' has a wrong offset!");
-static_assert(offsetof(UMatchSubsystem, Timer) == 0x0000B8, "Member 'UMatchSubsystem::Timer' has a wrong offset!");
-static_assert(offsetof(UMatchSubsystem, ExpirationTime) == 0x0000C0, "Member 'UMatchSubsystem::ExpirationTime' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, bCanCreateMatch) == 0x000048, "Member 'UMatchSubsystem::bCanCreateMatch' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, ActivityId) == 0x000050, "Member 'UMatchSubsystem::ActivityId' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, AccessToken) == 0x000060, "Member 'UMatchSubsystem::AccessToken' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, BaseUrl) == 0x000070, "Member 'UMatchSubsystem::BaseUrl' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, ClientId) == 0x000080, "Member 'UMatchSubsystem::ClientId' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, ClientSecret) == 0x000090, "Member 'UMatchSubsystem::ClientSecret' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, bInitialSetupSuccessful) == 0x0000A0, "Member 'UMatchSubsystem::bInitialSetupSuccessful' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, bAuthenticationSuccessful) == 0x0000A1, "Member 'UMatchSubsystem::bAuthenticationSuccessful' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, SonyEnvironmentURLs) == 0x0000A8, "Member 'UMatchSubsystem::SonyEnvironmentURLs' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, Timer) == 0x0000F8, "Member 'UMatchSubsystem::Timer' has a wrong offset!");
+static_assert(offsetof(UMatchSubsystem, ExpirationTime) == 0x000100, "Member 'UMatchSubsystem::ExpirationTime' has a wrong offset!");
 
 // Class PropWitchHuntModule.ModParameters
 // 0x0038 (0x0060 - 0x0028)
@@ -832,6 +850,37 @@ public:
 };
 static_assert(alignof(UModParametersSubsystem) == 0x000008, "Wrong alignment on UModParametersSubsystem");
 static_assert(sizeof(UModParametersSubsystem) == 0x000030, "Wrong size on UModParametersSubsystem");
+
+// Class PropWitchHuntModule.MultiplayerStatusSubsystem
+// 0x0010 (0x0040 - 0x0030)
+class UMultiplayerStatusSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsCurrentlyUsingMPFeatures;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsCurrentlySpectator;                             // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsCrossPlatformGame;                              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetIsCrossPlatformGame(bool bIsCrossPlatform);
+	void SetIsUsingMultiplayerFeatures(int32 LocalUserNum, bool bIsUsingMPFeatures, bool bIsSpectator, bool bIsCrossPlatform);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MultiplayerStatusSubsystem">();
+	}
+	static class UMultiplayerStatusSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMultiplayerStatusSubsystem>();
+	}
+};
+static_assert(alignof(UMultiplayerStatusSubsystem) == 0x000008, "Wrong alignment on UMultiplayerStatusSubsystem");
+static_assert(sizeof(UMultiplayerStatusSubsystem) == 0x000040, "Wrong size on UMultiplayerStatusSubsystem");
+static_assert(offsetof(UMultiplayerStatusSubsystem, bIsCurrentlyUsingMPFeatures) == 0x000038, "Member 'UMultiplayerStatusSubsystem::bIsCurrentlyUsingMPFeatures' has a wrong offset!");
+static_assert(offsetof(UMultiplayerStatusSubsystem, bIsCurrentlySpectator) == 0x000039, "Member 'UMultiplayerStatusSubsystem::bIsCurrentlySpectator' has a wrong offset!");
+static_assert(offsetof(UMultiplayerStatusSubsystem, bIsCrossPlatformGame) == 0x00003A, "Member 'UMultiplayerStatusSubsystem::bIsCrossPlatformGame' has a wrong offset!");
 
 // Class PropWitchHuntModule.BeaconPingCallbackProxy
 // 0x0080 (0x00B0 - 0x0030)
@@ -1071,6 +1120,86 @@ public:
 static_assert(alignof(UPowerupParametersSubsystem) == 0x000008, "Wrong alignment on UPowerupParametersSubsystem");
 static_assert(sizeof(UPowerupParametersSubsystem) == 0x000030, "Wrong size on UPowerupParametersSubsystem");
 
+// Class PropWitchHuntModule.FilterProfanityProxy
+// 0x0098 (0x00C8 - 0x0030)
+class UFilterProfanityProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x78];                                      // 0x0050(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UFilterProfanityProxy* FilterProfanity(class UObject* WorldContextObject, const TArray<class FString>& StringsToFilter);
+
+	bool FilterProfanityPS5(class FString* InOutString);
+	void HandleMessageFilteringComplete(bool Success, const TArray<class FString>& FilteredStrings);
+	void HandleSingleMessageFilteringComplete(bool Success, const class FString& FilteredStrings);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FilterProfanityProxy">();
+	}
+	static class UFilterProfanityProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFilterProfanityProxy>();
+	}
+};
+static_assert(alignof(UFilterProfanityProxy) == 0x000008, "Wrong alignment on UFilterProfanityProxy");
+static_assert(sizeof(UFilterProfanityProxy) == 0x0000C8, "Wrong size on UFilterProfanityProxy");
+static_assert(offsetof(UFilterProfanityProxy, OnSuccess) == 0x000030, "Member 'UFilterProfanityProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UFilterProfanityProxy, OnFailure) == 0x000040, "Member 'UFilterProfanityProxy::OnFailure' has a wrong offset!");
+
+// Class PropWitchHuntModule.FilterMatchPlayerProfanityProxy
+// 0x0068 (0x0098 - 0x0030)
+class UFilterMatchPlayerProfanityProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UFilterMatchPlayerProfanityProxy* FilterProfanity(class UObject* WorldContextObject, const TArray<struct FMatchPlayer>& PlayersToFilter);
+
+	void HandleFilterProfanityResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FilterMatchPlayerProfanityProxy">();
+	}
+	static class UFilterMatchPlayerProfanityProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFilterMatchPlayerProfanityProxy>();
+	}
+};
+static_assert(alignof(UFilterMatchPlayerProfanityProxy) == 0x000008, "Wrong alignment on UFilterMatchPlayerProfanityProxy");
+static_assert(sizeof(UFilterMatchPlayerProfanityProxy) == 0x000098, "Wrong size on UFilterMatchPlayerProfanityProxy");
+static_assert(offsetof(UFilterMatchPlayerProfanityProxy, OnSuccess) == 0x000030, "Member 'UFilterMatchPlayerProfanityProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UFilterMatchPlayerProfanityProxy, OnFailure) == 0x000040, "Member 'UFilterMatchPlayerProfanityProxy::OnFailure' has a wrong offset!");
+
+// Class PropWitchHuntModule.ProfanityFilterSubsystem
+// 0x0050 (0x0080 - 0x0030)
+class UProfanityFilterSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ProfanityFilterSubsystem">();
+	}
+	static class UProfanityFilterSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UProfanityFilterSubsystem>();
+	}
+};
+static_assert(alignof(UProfanityFilterSubsystem) == 0x000008, "Wrong alignment on UProfanityFilterSubsystem");
+static_assert(sizeof(UProfanityFilterSubsystem) == 0x000080, "Wrong size on UProfanityFilterSubsystem");
+
 // Class PropWitchHuntModule.ProjectVersionBlueprint
 // 0x0000 (0x0028 - 0x0028)
 class UProjectVersionBlueprint final : public UBlueprintFunctionLibrary
@@ -1091,6 +1220,7 @@ public:
 	static class FString GetItemProperty(class UGameInstance* GameInstance, const struct FBlueprintOnlineItem& Item, class FName PropertyName);
 	static class FString GetLaunchPath();
 	static void GetMemoryStats(float* UsedPhysical, float* PeakUsedPhysical, float* UsedVirtual, float* PeakUsedVirtual, float* AvailablePhysical, float* AvailableVirtual, float* TotalPhysical, float* TotalVirtual);
+	static class FString GetOnlineEnvironment(class UGameInstance* GameInstance);
 	static class FString GetProjectVersion();
 	static class FString GetSessionOwnersId(const struct FBlueprintSessionResult& Result);
 	static class FString GetUint64SteamIdAsString(class UGameInstance* GameInstance);
@@ -1104,6 +1234,7 @@ public:
 	static bool IsPS4Build();
 	static bool IsSessionDedicatedServer(const struct FBlueprintSessionResult& Result);
 	static bool IsSwitchBuild();
+	static bool IsVersionGreaterOrEqual(int32 LeftMajor, int32 LeftMinor, int32 LeftBuild, int32 LeftPatch, int32 RightMajor, int32 RightMinor, int32 RightBuild, int32 RightPatch);
 	static bool IsWindowsBuild();
 	static bool IsXboxBuild();
 	static void KickPlayer(class AGameModeBase* GameMode, class APlayerController* KickedPlayer, const class FText& KickReason);
@@ -1209,6 +1340,26 @@ public:
 };
 static_assert(alignof(UReplayWorldSubsystem) == 0x000008, "Wrong alignment on UReplayWorldSubsystem");
 static_assert(sizeof(UReplayWorldSubsystem) == 0x000030, "Wrong size on UReplayWorldSubsystem");
+
+// Class PropWitchHuntModule.ReportSubsystem
+// 0x0000 (0x0030 - 0x0030)
+class UReportSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	void ReportPlayer(const class FString& ReporterPUID, const class FString& ReportedPUID, int32 ReasonId, const class FString& ExtraInfo);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ReportSubsystem">();
+	}
+	static class UReportSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UReportSubsystem>();
+	}
+};
+static_assert(alignof(UReportSubsystem) == 0x000008, "Wrong alignment on UReportSubsystem");
+static_assert(sizeof(UReportSubsystem) == 0x000030, "Wrong size on UReportSubsystem");
 
 // Class PropWitchHuntModule.SessionSubsystem
 // 0x0000 (0x0030 - 0x0030)

@@ -1604,6 +1604,26 @@ void AB_StaticMeshProp_C::HandleServerSleepEvent()
 }
 
 
+// Function B_StaticMeshProp.B_StaticMeshProp_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_StaticMeshProp_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_StaticMeshProp_C", "ReceiveEndPlay");
+
+	Params::B_StaticMeshProp_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_StaticMeshProp.B_StaticMeshProp_C.ExecuteUbergraph_B_StaticMeshProp
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

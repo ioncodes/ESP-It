@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Rejoin_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Rejoin_structs.hpp"
 
 
 namespace SDK

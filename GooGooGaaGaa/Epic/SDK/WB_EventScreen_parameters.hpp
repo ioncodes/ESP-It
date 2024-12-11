@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "EventTime_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "S_EventInfo_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EventTime_structs.hpp"
 #include "SNeededIngredient_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
+#include "S_EventInfo_structs.hpp"
 #include "SClientItemUnlock_structs.hpp"
 
 

@@ -10,9 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "S_EntryPresence_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UMG_classes.hpp"
+#include "E_FriendListType_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "E_PresenceStates_structs.hpp"
@@ -22,7 +24,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_OnlineFriends.WB_OnlineFriends_C
-// 0x00A8 (0x0388 - 0x02E0)
+// 0x00D8 (0x03B8 - 0x02E0)
 class UWB_OnlineFriends_C final : public UUserWidget
 {
 public:
@@ -31,25 +33,36 @@ public:
 	class UListView*                              FriendListOffline;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UListView*                              FriendListOnline;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UListView*                              FriendListPlaying;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               OfflineTitleBox;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               OnlineTitleBox;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               PlayingTitleBox;                                   // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMap<struct FUniqueNetIdRepl, struct FS_EntryPresence> LastPresenceStatus;                                // 0x0328(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          ItemHasBeenSelected;                               // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_FriendManager_C*                     FriendManager;                                     // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             FriendsTitle;                                      // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   LeftArrowIcon;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                LeftButton;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               OfflineTitleBox;                                   // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               OnlineTitleBox;                                    // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               PlayingTitleBox;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   RightArrowIcon;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                RightButton;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMap<struct FUniqueNetIdRepl, struct FS_EntryPresence> LastPresenceStatus;                                // 0x0350(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          ItemHasBeenSelected;                               // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_FriendManager_C*                     FriendManager;                                     // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	E_FriendListType                              FriendListState;                                   // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AcceptButtonPressed();
 	void AddItemToList(class UListView* List, class UB_FriendScreenEntryData_C* Item, bool ShouldSelect);
+	void BndEvt__WB_OnlineFriends_LeftButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WB_OnlineFriends_RightButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void ClearAndRefreshList();
 	void Construct();
 	void CreateListEntryIfNecessary(class UOnlineFriendRef* FriendRef, E_PresenceStates NewPresence);
 	void Deinit();
 	void ExecuteUbergraph_WB_OnlineFriends(int32 EntryPoint);
+	ESlateVisibility Get_ArrowIcon_Visibility();
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void GetSelectedEntry(class UWB_FriendScreenEntry_C** ListEntry);
 	void Init();
+	void LeftTriggerPressed();
 	class UWidget* OfflineListUpNav(EUINavigation Navigation_0);
 	void OnFriendRemovedEvent(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId);
 	class UWidget* OnlineListNavigation(EUINavigation Navigation_0);
@@ -59,6 +72,7 @@ public:
 	void RefreshPresence();
 	void RemoveEntryFromList(class UObject* EntryData, E_PresenceStates Presence, bool* WasSelectedItem);
 	void ResetFocus(int32 LastFocusedIndex);
+	void RightTriggerPressed();
 	void SelectionChanged(class UObject* Item, bool bIsSelected);
 	void SetListVisibility();
 	void SortFriendEntries(class UObject* ObjectA, class UObject* ObjectB, bool* Result);
@@ -76,19 +90,25 @@ public:
 	}
 };
 static_assert(alignof(UWB_OnlineFriends_C) == 0x000008, "Wrong alignment on UWB_OnlineFriends_C");
-static_assert(sizeof(UWB_OnlineFriends_C) == 0x000388, "Wrong size on UWB_OnlineFriends_C");
+static_assert(sizeof(UWB_OnlineFriends_C) == 0x0003B8, "Wrong size on UWB_OnlineFriends_C");
 static_assert(offsetof(UWB_OnlineFriends_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_OnlineFriends_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_OnlineFriends_C, CircularThrobber) == 0x0002E8, "Member 'UWB_OnlineFriends_C::CircularThrobber' has a wrong offset!");
 static_assert(offsetof(UWB_OnlineFriends_C, FriendListOffline) == 0x0002F0, "Member 'UWB_OnlineFriends_C::FriendListOffline' has a wrong offset!");
 static_assert(offsetof(UWB_OnlineFriends_C, FriendListOnline) == 0x0002F8, "Member 'UWB_OnlineFriends_C::FriendListOnline' has a wrong offset!");
 static_assert(offsetof(UWB_OnlineFriends_C, FriendListPlaying) == 0x000300, "Member 'UWB_OnlineFriends_C::FriendListPlaying' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, OfflineTitleBox) == 0x000308, "Member 'UWB_OnlineFriends_C::OfflineTitleBox' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, OnlineTitleBox) == 0x000310, "Member 'UWB_OnlineFriends_C::OnlineTitleBox' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, PlayingTitleBox) == 0x000318, "Member 'UWB_OnlineFriends_C::PlayingTitleBox' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, ScrollBox) == 0x000320, "Member 'UWB_OnlineFriends_C::ScrollBox' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, LastPresenceStatus) == 0x000328, "Member 'UWB_OnlineFriends_C::LastPresenceStatus' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, ItemHasBeenSelected) == 0x000378, "Member 'UWB_OnlineFriends_C::ItemHasBeenSelected' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineFriends_C, FriendManager) == 0x000380, "Member 'UWB_OnlineFriends_C::FriendManager' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, FriendsTitle) == 0x000308, "Member 'UWB_OnlineFriends_C::FriendsTitle' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, LeftArrowIcon) == 0x000310, "Member 'UWB_OnlineFriends_C::LeftArrowIcon' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, LeftButton) == 0x000318, "Member 'UWB_OnlineFriends_C::LeftButton' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, OfflineTitleBox) == 0x000320, "Member 'UWB_OnlineFriends_C::OfflineTitleBox' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, OnlineTitleBox) == 0x000328, "Member 'UWB_OnlineFriends_C::OnlineTitleBox' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, PlayingTitleBox) == 0x000330, "Member 'UWB_OnlineFriends_C::PlayingTitleBox' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, RightArrowIcon) == 0x000338, "Member 'UWB_OnlineFriends_C::RightArrowIcon' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, RightButton) == 0x000340, "Member 'UWB_OnlineFriends_C::RightButton' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, ScrollBox) == 0x000348, "Member 'UWB_OnlineFriends_C::ScrollBox' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, LastPresenceStatus) == 0x000350, "Member 'UWB_OnlineFriends_C::LastPresenceStatus' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, ItemHasBeenSelected) == 0x0003A0, "Member 'UWB_OnlineFriends_C::ItemHasBeenSelected' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, FriendManager) == 0x0003A8, "Member 'UWB_OnlineFriends_C::FriendManager' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineFriends_C, FriendListState) == 0x0003B0, "Member 'UWB_OnlineFriends_C::FriendListState' has a wrong offset!");
 
 }
 

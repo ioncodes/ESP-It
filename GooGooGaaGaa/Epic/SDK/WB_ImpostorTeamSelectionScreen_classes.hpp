@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ImpostorTeamSelectionScreen.WB_ImpostorTeamSelectionScreen_C
-// 0x0070 (0x0350 - 0x02E0)
+// 0x0068 (0x0348 - 0x02E0)
 class UWB_ImpostorTeamSelectionScreen_C final : public UUserWidget
 {
 public:
@@ -37,7 +37,6 @@ public:
 	class UWB_Button_C*                           Unready;                                           // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_GameStartTimer_C*                   WB_GameStartTimer_61;                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_PlayerListBlock_C*                  WB_PlayerListBlock;                                // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUserWidget*                            InitialFocusWidget;                                // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Menu_K2Node_ComponentBoundEvent_6_Clicked__DelegateSignature();
@@ -56,7 +55,7 @@ public:
 	bool Get_SpectatorReady_bIsEnabled_0();
 	ESlateVisibility Get_Unready_Visibility_0();
 	struct FSlateColor Get_WitchSkillsText_ColorAndOpacity_0();
-	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0);
+	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	ESlateVisibility GetVisibility_0();
 	void InitializeFocus();
 	void OnApply();
@@ -78,7 +77,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_ImpostorTeamSelectionScreen_C) == 0x000008, "Wrong alignment on UWB_ImpostorTeamSelectionScreen_C");
-static_assert(sizeof(UWB_ImpostorTeamSelectionScreen_C) == 0x000350, "Wrong size on UWB_ImpostorTeamSelectionScreen_C");
+static_assert(sizeof(UWB_ImpostorTeamSelectionScreen_C) == 0x000348, "Wrong size on UWB_ImpostorTeamSelectionScreen_C");
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ImpostorTeamSelectionScreen_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_ImpostorTeamSelectionScreen_C::CanvasPanel_0' has a wrong offset!");
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, GameModeText) == 0x0002F0, "Member 'UWB_ImpostorTeamSelectionScreen_C::GameModeText' has a wrong offset!");
@@ -92,7 +91,6 @@ static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, SpectatorReady) == 0x0
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, Unready) == 0x000330, "Member 'UWB_ImpostorTeamSelectionScreen_C::Unready' has a wrong offset!");
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, WB_GameStartTimer_61) == 0x000338, "Member 'UWB_ImpostorTeamSelectionScreen_C::WB_GameStartTimer_61' has a wrong offset!");
 static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, WB_PlayerListBlock) == 0x000340, "Member 'UWB_ImpostorTeamSelectionScreen_C::WB_PlayerListBlock' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorTeamSelectionScreen_C, InitialFocusWidget) == 0x000348, "Member 'UWB_ImpostorTeamSelectionScreen_C::InitialFocusWidget' has a wrong offset!");
 
 }
 

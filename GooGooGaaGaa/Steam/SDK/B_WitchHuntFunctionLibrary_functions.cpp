@@ -17,14 +17,43 @@
 namespace SDK
 {
 
+// Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.ShouldDisableVisibilityDueToPlatformExclusivity
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UB_GameInstance_C*                GameInstance                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UOnlineUserRef*                   UserRef                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    DisableVisibility                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_WitchHuntFunctionLibrary_C::ShouldDisableVisibilityDueToPlatformExclusivity(class UB_GameInstance_C* GameInstance, class UOnlineUserRef* UserRef, class UObject* __WorldContext, bool* DisableVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("B_WitchHuntFunctionLibrary_C", "ShouldDisableVisibilityDueToPlatformExclusivity");
+
+	Params::B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity Parms{};
+
+	Parms.GameInstance = GameInstance;
+	Parms.UserRef = UserRef;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (DisableVisibility != nullptr)
+		*DisableVisibility = Parms.DisableVisibility;
+}
+
+
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.GetPlatformLogo
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString                           PlatformName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           MyPlatformPlatform                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           TheirPlatformName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UTexture2D*                       PlatformLogo                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_WitchHuntFunctionLibrary_C::GetPlatformLogo(const class FString& PlatformName, class UObject* __WorldContext, class UTexture2D** PlatformLogo)
+void UB_WitchHuntFunctionLibrary_C::GetPlatformLogo(const class FString& MyPlatformPlatform, const class FString& TheirPlatformName, class UObject* __WorldContext, class UTexture2D** PlatformLogo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +62,8 @@ void UB_WitchHuntFunctionLibrary_C::GetPlatformLogo(const class FString& Platfor
 
 	Params::B_WitchHuntFunctionLibrary_C_GetPlatformLogo Parms{};
 
-	Parms.PlatformName = std::move(PlatformName);
+	Parms.MyPlatformPlatform = std::move(MyPlatformPlatform);
+	Parms.TheirPlatformName = std::move(TheirPlatformName);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

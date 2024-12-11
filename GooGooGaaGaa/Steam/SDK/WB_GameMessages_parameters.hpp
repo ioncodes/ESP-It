@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "EGameMessageType_structs.hpp"
 #include "SGameMessage_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -75,20 +75,17 @@ static_assert(offsetof(WB_GameMessages_C_ClearGameMessages, CallFunc_Less_IntInt
 static_assert(offsetof(WB_GameMessages_C_ClearGameMessages, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'WB_GameMessages_C_ClearGameMessages::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_GameMessages.WB_GameMessages_C.ExecuteUbergraph_WB_GameMessages
-// 0x0160 (0x0160 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bSuccess, TArray<class FString>& SanitizedMessages)> K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         K2Node_CustomEvent_SanitizedMessages;              // 0x0020(0x0010)(ConstParm, ReferenceParm)
-	TArray<class FString>                         Temp_string_Variable;                              // 0x0030(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings_1;              // 0x0008(0x0010)(ConstParm, ReferenceParm)
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings;                // 0x0018(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         Temp_string_Variable;                              // 0x0038(0x0010)(ReferenceParm)
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0010)()
@@ -100,27 +97,21 @@ public:
 	class FText                                   K2Node_CustomEvent_TargetPlayerName;               // 0x00D8(0x0010)()
 	EGameMessageType                              K2Node_CustomEvent_MessageType;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineMessageSanitizerSubsystem*       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         K2Node_CustomEvent_SanitizedMessages_1;            // 0x0120(0x0010)(ConstParm, ReferenceParm)
-	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
-	class UOnlineMessageSanitizerSubsystemSanitizeDisplayNames* CallFunc_SanitizeDisplayNames_ReturnValue;         // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bSuccess, TArray<class FString>& SanitizedMessages)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFilterProfanityProxy*                  CallFunc_FilterProfanity_ReturnValue;              // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages) == 0x000008, "Wrong alignment on WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages");
-static_assert(sizeof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages) == 0x000160, "Wrong size on WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages");
+static_assert(sizeof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages) == 0x000140, "Wrong size on WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, EntryPoint) == 0x000000, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_SwitchPlatform_ReturnValue) == 0x000004, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_bSuccess) == 0x000018, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_SanitizedMessages) == 0x000020, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_SanitizedMessages' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, Temp_string_Variable) == 0x000030, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, Temp_bool_Variable) == 0x000040, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_filteredStrings_1) == 0x000008, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_filteredStrings_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_filteredStrings) == 0x000018, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_filteredStrings' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, Temp_string_Variable) == 0x000038, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::Temp_string_Variable' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Array_Get_Item) == 0x000048, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Array_Get_Item_1) == 0x000058, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Array_Get_Item_1' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
@@ -130,15 +121,12 @@ static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Nod
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_SourcePlayerName) == 0x0000C8, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_SourcePlayerName' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_TargetPlayerName) == 0x0000D8, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_TargetPlayerName' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_MessageType) == 0x0000E8, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_MessageType' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000F0, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Conv_TextToString_ReturnValue) == 0x0000F8, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000108, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_bSuccess_1) == 0x000118, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CustomEvent_SanitizedMessages_1) == 0x000120, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CustomEvent_SanitizedMessages_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_MakeArray_Array) == 0x000130, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_SanitizeDisplayNames_ReturnValue) == 0x000140, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_SanitizeDisplayNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_IsValid_ReturnValue) == 0x000148, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CreateDelegate_OutputDelegate_1) == 0x00014C, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Conv_TextToString_ReturnValue) == 0x0000F0, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000100, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_MakeArray_Array) == 0x000110, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, K2Node_CreateDelegate_OutputDelegate_1) == 0x000120, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_FilterProfanity_ReturnValue) == 0x000130, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_FilterProfanity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages, CallFunc_IsValid_ReturnValue) == 0x000138, "Member 'WB_GameMessages_C_ExecuteUbergraph_WB_GameMessages::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_GameMessages.WB_GameMessages_C.Get_VerticalBox_1_Visibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -223,33 +211,27 @@ static_assert(offsetof(WB_GameMessages_C_InternalAddGameMessage, CallFunc_AddChi
 static_assert(offsetof(WB_GameMessages_C_InternalAddGameMessage, CallFunc_PlayAnimation_ReturnValue) == 0x0000F0, "Member 'WB_GameMessages_C_InternalAddGameMessage::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_GameMessages_C_InternalAddGameMessage, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x0000F8, "Member 'WB_GameMessages_C_InternalAddGameMessage::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
 
-// Function WB_GameMessages.WB_GameMessages_C.OnCallFailed_22122CDE4C9301009E76EEB1F17098EF
-// 0x0018 (0x0018 - 0x0000)
-struct WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF final
+// Function WB_GameMessages.WB_GameMessages_C.OnFailure_5E4EF2C84265486E4D90B7B040122A50
+// 0x0010 (0x0010 - 0x0000)
+struct WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50 final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         SanitizedMessages;                                 // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF) == 0x000008, "Wrong alignment on WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF");
-static_assert(sizeof(WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF) == 0x000018, "Wrong size on WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF");
-static_assert(offsetof(WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF, bSuccess) == 0x000000, "Member 'WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF::bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF, SanitizedMessages) == 0x000008, "Member 'WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF::SanitizedMessages' has a wrong offset!");
+static_assert(alignof(WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50) == 0x000008, "Wrong alignment on WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50");
+static_assert(sizeof(WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50) == 0x000010, "Wrong size on WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50");
+static_assert(offsetof(WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50, FilteredStrings) == 0x000000, "Member 'WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50::FilteredStrings' has a wrong offset!");
 
-// Function WB_GameMessages.WB_GameMessages_C.OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF
-// 0x0018 (0x0018 - 0x0000)
-struct WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF final
+// Function WB_GameMessages.WB_GameMessages_C.OnSuccess_5E4EF2C84265486E4D90B7B040122A50
+// 0x0010 (0x0010 - 0x0000)
+struct WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50 final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         SanitizedMessages;                                 // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF) == 0x000008, "Wrong alignment on WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF");
-static_assert(sizeof(WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF) == 0x000018, "Wrong size on WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF");
-static_assert(offsetof(WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF, bSuccess) == 0x000000, "Member 'WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF::bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF, SanitizedMessages) == 0x000008, "Member 'WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF::SanitizedMessages' has a wrong offset!");
+static_assert(alignof(WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50) == 0x000008, "Wrong alignment on WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50");
+static_assert(sizeof(WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50) == 0x000010, "Wrong size on WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50");
+static_assert(offsetof(WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50, FilteredStrings) == 0x000000, "Member 'WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50::FilteredStrings' has a wrong offset!");
 
 // Function WB_GameMessages.WB_GameMessages_C.Tick
 // 0x003C (0x003C - 0x0000)

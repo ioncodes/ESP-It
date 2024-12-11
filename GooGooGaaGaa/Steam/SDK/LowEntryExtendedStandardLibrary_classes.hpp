@@ -624,7 +624,7 @@ public:
 	static void GetClassWithName(const class FString& ClassName, class UClass** Class_, bool* Success);
 	static void GetCurrentVolume(int32* Volume, bool* Success);
 	static void GetCurrentVolumePercentage(double* Percentage, bool* Success);
-	static void GetGenericTeamId(class AActor* Target, uint8* TeamID);
+	static void GetGenericTeamId(class AActor* Target, uint8* TeamId);
 	static class FName GetKeyboardFocusedWidgetType();
 	static struct FVector2D GetLocalToAbsoluteScale(const struct FGeometry& Geometry);
 	static void GetMaximumVolume(int32* Volume, bool* Success);
@@ -745,7 +745,7 @@ public:
 	static void SceneCaptureComponent2DToBytes(class USceneCaptureComponent2D* SceneCaptureComponent2D, const ELowEntryImageFormat ImageFormat, TArray<uint8>* ByteArray, const int32 CompressionQuality);
 	static void SceneCaptureComponent2DToPixels(class USceneCaptureComponent2D* SceneCaptureComponent2D, int32* Width, int32* Height, TArray<struct FColor>* Pixels);
 	static void ServerChangeMap(class UObject* WorldContextObject, const class FString& Map, const class FString& Args, class APlayerController* SpecificPlayer);
-	static void SetGenericTeamId(class AActor* Target, const uint8 TeamID);
+	static void SetGenericTeamId(class AActor* Target, const uint8 TeamId);
 	static void SetMouseLockedToViewport(const bool Locked);
 	static void SetMousePosition(const int32 X, const int32 Y);
 	static void SetMousePositionInPercentages(const double X, const double Y);

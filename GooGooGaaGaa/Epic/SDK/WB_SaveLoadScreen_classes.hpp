@@ -21,7 +21,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SaveLoadScreen.WB_SaveLoadScreen_C
-// 0x0178 (0x0458 - 0x02E0)
+// 0x0180 (0x0460 - 0x02E0)
 class UWB_SaveLoadScreen_C final : public UUserWidget
 {
 public:
@@ -53,6 +53,7 @@ public:
 	class FText                                   SaveFieldName;                                     // 0x0428(0x0010)(Edit, BlueprintVisible)
 	class FText                                   InitialEntryName;                                  // 0x0438(0x0010)(Edit, BlueprintVisible)
 	class FString                                 FolderName;                                        // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          HasTooManySaveGames;                               // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnFileLoaded__DelegateSignature(const class FString& Filename, class USaveGame* SaveFile_0);
@@ -61,6 +62,7 @@ public:
 	void OnFileDeleted__DelegateSignature();
 	void OnFileSaved__DelegateSignature(const class FString& Filename);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
+	void CheckForTooManySavegames();
 	ESlateVisibility GetVisibility_1();
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void RefocusList();
@@ -110,7 +112,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_SaveLoadScreen_C) == 0x000008, "Wrong alignment on UWB_SaveLoadScreen_C");
-static_assert(sizeof(UWB_SaveLoadScreen_C) == 0x000458, "Wrong size on UWB_SaveLoadScreen_C");
+static_assert(sizeof(UWB_SaveLoadScreen_C) == 0x000460, "Wrong size on UWB_SaveLoadScreen_C");
 static_assert(offsetof(UWB_SaveLoadScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SaveLoadScreen_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_SaveLoadScreen_C, Back) == 0x0002E8, "Member 'UWB_SaveLoadScreen_C::Back' has a wrong offset!");
 static_assert(offsetof(UWB_SaveLoadScreen_C, Delete) == 0x0002F0, "Member 'UWB_SaveLoadScreen_C::Delete' has a wrong offset!");
@@ -138,6 +140,7 @@ static_assert(offsetof(UWB_SaveLoadScreen_C, MenuTitleLoadOnly) == 0x000418, "Me
 static_assert(offsetof(UWB_SaveLoadScreen_C, SaveFieldName) == 0x000428, "Member 'UWB_SaveLoadScreen_C::SaveFieldName' has a wrong offset!");
 static_assert(offsetof(UWB_SaveLoadScreen_C, InitialEntryName) == 0x000438, "Member 'UWB_SaveLoadScreen_C::InitialEntryName' has a wrong offset!");
 static_assert(offsetof(UWB_SaveLoadScreen_C, FolderName) == 0x000448, "Member 'UWB_SaveLoadScreen_C::FolderName' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, HasTooManySaveGames) == 0x000458, "Member 'UWB_SaveLoadScreen_C::HasTooManySaveGames' has a wrong offset!");
 
 }
 

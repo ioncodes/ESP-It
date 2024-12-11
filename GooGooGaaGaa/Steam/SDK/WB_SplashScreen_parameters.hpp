@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -18,80 +19,104 @@ namespace SDK::Params
 {
 
 // Function WB_SplashScreen.WB_SplashScreen_C.ExecuteUbergraph_WB_SplashScreen
-// 0x0118 (0x0118 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0070(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue_1;                    // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue_2;                    // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenUrl_ReturnValue_1;                    // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetViewportSize_ReturnValue;              // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0098(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X;                          // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_OpenUrl_ReturnValue_2;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector2D_X;                          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00B0(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetViewportSize_ReturnValue_1;            // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_1;                        // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_113[0x5];                                      // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0124(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue;                         // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0135(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue_2;                       // 0x0136(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_137[0x1];                                      // 0x0137(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0138(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0148(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen) == 0x000008, "Wrong alignment on WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen");
-static_assert(sizeof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen) == 0x000118, "Wrong size on WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen");
+static_assert(sizeof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen) == 0x000158, "Wrong size on WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, EntryPoint) == 0x000000, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000030, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000038, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000048, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_2) == 0x000050, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000058, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_2) == 0x000060, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000068, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x000070, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue) == 0x000080, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue_1) == 0x000081, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue_2) == 0x000082, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000010, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000028, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_2) == 0x000038, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_3) == 0x000040, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000048, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_2) == 0x000050, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000058, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_3) == 0x000060, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000068, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetGameInstance_ReturnValue_4) == 0x000070, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000078, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_DynamicCast_bSuccess_4) == 0x000080, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue) == 0x000081, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue_1) == 0x000082, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetViewportSize_ReturnValue) == 0x000088, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetViewportSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_Event_MyGeometry) == 0x000098, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_Event_InDeltaTime) == 0x0000D0, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_X) == 0x0000D8, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_Y) == 0x0000E0, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x0000E9, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_OpenUrl_ReturnValue_2) == 0x000098, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_OpenUrl_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_X) == 0x0000A0, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_Y) == 0x0000A8, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_Event_MyGeometry) == 0x0000B0, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_Event_InDeltaTime) == 0x0000E8, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x0000EC, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_GetViewportSize_ReturnValue_1) == 0x0000F0, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_GetViewportSize_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_X_1) == 0x000100, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_X_1' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BreakVector2D_Y_1) == 0x000108, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000110, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Not_PreBool_ReturnValue) == 0x000111, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_BooleanAND_ReturnValue) == 0x000112, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000118, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x000120, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000124, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Play_ReturnValue) == 0x000134, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Play_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Play_ReturnValue_1) == 0x000135, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Play_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, CallFunc_Play_ReturnValue_2) == 0x000136, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::CallFunc_Play_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x000138, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen, K2Node_CreateDelegate_OutputDelegate_2) == 0x000148, "Member 'WB_SplashScreen_C_ExecuteUbergraph_WB_SplashScreen::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
 
 // Function WB_SplashScreen.WB_SplashScreen_C.GetInitialFocusWidget
 // 0x0020 (0x0020 - 0x0000)
@@ -110,6 +135,25 @@ static_assert(offsetof(WB_SplashScreen_C_GetInitialFocusWidget, CallFunc_GetGame
 static_assert(offsetof(WB_SplashScreen_C_GetInitialFocusWidget, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_SplashScreen_C_GetInitialFocusWidget::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_GetInitialFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_SplashScreen_C_GetInitialFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
+// Function WB_SplashScreen.WB_SplashScreen_C.SetControllerIconVisibility
+// 0x0005 (0x0005 - 0x0000)
+struct WB_SplashScreen_C_SetControllerIconVisibility final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_SplashScreen_C_SetControllerIconVisibility) == 0x000001, "Wrong alignment on WB_SplashScreen_C_SetControllerIconVisibility");
+static_assert(sizeof(WB_SplashScreen_C_SetControllerIconVisibility) == 0x000005, "Wrong size on WB_SplashScreen_C_SetControllerIconVisibility");
+static_assert(offsetof(WB_SplashScreen_C_SetControllerIconVisibility, Temp_bool_Variable) == 0x000000, "Member 'WB_SplashScreen_C_SetControllerIconVisibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_SetControllerIconVisibility, Temp_byte_Variable) == 0x000001, "Member 'WB_SplashScreen_C_SetControllerIconVisibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_SetControllerIconVisibility, Temp_byte_Variable_1) == 0x000002, "Member 'WB_SplashScreen_C_SetControllerIconVisibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_SetControllerIconVisibility, CallFunc_IsConsoleBuild_ReturnValue) == 0x000003, "Member 'WB_SplashScreen_C_SetControllerIconVisibility::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_SetControllerIconVisibility, K2Node_Select_Default) == 0x000004, "Member 'WB_SplashScreen_C_SetControllerIconVisibility::K2Node_Select_Default' has a wrong offset!");
+
 // Function WB_SplashScreen.WB_SplashScreen_C.Tick
 // 0x003C (0x003C - 0x0000)
 struct WB_SplashScreen_C_Tick final
@@ -122,6 +166,35 @@ static_assert(alignof(WB_SplashScreen_C_Tick) == 0x000004, "Wrong alignment on W
 static_assert(sizeof(WB_SplashScreen_C_Tick) == 0x00003C, "Wrong size on WB_SplashScreen_C_Tick");
 static_assert(offsetof(WB_SplashScreen_C_Tick, MyGeometry) == 0x000000, "Member 'WB_SplashScreen_C_Tick::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_SplashScreen_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_SplashScreen_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function WB_SplashScreen.WB_SplashScreen_C.ToggleAllActors
+// 0x0038 (0x0038 - 0x0000)
+struct WB_SplashScreen_C_ToggleAllActors final
+{
+public:
+	bool                                          ShowActors;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_SplashScreen_C_ToggleAllActors) == 0x000008, "Wrong alignment on WB_SplashScreen_C_ToggleAllActors");
+static_assert(sizeof(WB_SplashScreen_C_ToggleAllActors) == 0x000038, "Wrong size on WB_SplashScreen_C_ToggleAllActors");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, ShowActors) == 0x000000, "Member 'WB_SplashScreen_C_ToggleAllActors::ShowActors' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WB_SplashScreen_C_ToggleAllActors::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WB_SplashScreen_C_ToggleAllActors::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_GetAllActorsOfClass_OutActors) == 0x000010, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_Not_PreBool_ReturnValue) == 0x000020, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_Array_Get_Item) == 0x000028, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SplashScreen_C_ToggleAllActors, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'WB_SplashScreen_C_ToggleAllActors::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

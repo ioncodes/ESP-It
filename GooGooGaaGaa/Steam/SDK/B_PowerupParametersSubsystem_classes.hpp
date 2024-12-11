@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WB_HelpTabBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "WB_HelpTabBase_classes.hpp"
 
 
 namespace SDK

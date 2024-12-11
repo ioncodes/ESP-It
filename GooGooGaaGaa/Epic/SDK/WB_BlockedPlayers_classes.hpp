@@ -40,11 +40,13 @@ public:
 	void GetCurrentlyFocusedWidget(class UWidget** FocusedWidget);
 	void GetSelectedEntry(class UWB_OnlineUserEntry_C** ListEntry);
 	void Init();
+	void LeftTriggerPressed();
 	void ListSelectionChanged(class UObject* Item, bool bIsSelected);
 	void PresenceUpdated();
 	void RemoveEntry(class UObject* EntryListObject);
 	void RemoveEntryFromMap(class UObject* EntryListObject);
 	void RequestUserInfos();
+	void RightTriggerPressed();
 	void ScrollToSelectedItem();
 	void SetItemFocus(bool ResetFocus);
 	void SortBlockedPlayersAlphabetically(class UObject* ObjectA, class UObject* ObjectB, bool* Result);

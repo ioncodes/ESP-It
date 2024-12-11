@@ -17,6 +17,34 @@
 namespace SDK
 {
 
+// Function B_GameInstance.B_GameInstance_C.OnEOSLoginStarted__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_GameInstance_C::OnEOSLoginStarted__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnEOSLoginStarted__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnPremiumStatusFailed__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_GameInstance_C::OnPremiumStatusFailed__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnPremiumStatusFailed__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.OnBackendLoginFailed__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
@@ -31,15 +59,15 @@ void UB_GameInstance_C::OnBackendLoginFailed__DelegateSignature()
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.OnEOSLoginStarted__DelegateSignature
+// Function B_GameInstance.B_GameInstance_C.OnMenuGameModeLoaded__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UB_GameInstance_C::OnEOSLoginStarted__DelegateSignature()
+void UB_GameInstance_C::OnMenuGameModeLoaded__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnEOSLoginStarted__DelegateSignature");
+		Func = Class->GetFunction("B_GameInstance_C", "OnMenuGameModeLoaded__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1056,6 +1084,26 @@ void UB_GameInstance_C::HandleTravelError(ETravelFailure FailureType)
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.HandlShowSystemMessage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::HandlShowSystemMessage(const class FString& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "HandlShowSystemMessage");
+
+	Params::B_GameInstance_C_HandlShowSystemMessage Parms{};
+
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.HostGame
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1404,6 +1452,32 @@ void UB_GameInstance_C::LoginStatusChangedNintendo(int32 LocalUserNum, EOnlineLo
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.LoginStatusChangedSOny
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EOnlineLoginStatus                      OldStatus                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EOnlineLoginStatus                      NewStatus                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUniqueNetIdRepl                 NewId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UB_GameInstance_C::LoginStatusChangedSOny(int32 LocalUserNum, EOnlineLoginStatus OldStatus, EOnlineLoginStatus NewStatus, const struct FUniqueNetIdRepl& NewId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "LoginStatusChangedSOny");
+
+	Params::B_GameInstance_C_LoginStatusChangedSOny Parms{};
+
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.OldStatus = OldStatus;
+	Parms.NewStatus = NewStatus;
+	Parms.NewId = std::move(NewId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.NetCodeErrorToString
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -1598,6 +1672,26 @@ void UB_GameInstance_C::OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FNam
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.OnCallFailed_B40DCA83439848E8D4EAB99D06DCB39A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnCallFailed_B40DCA83439848E8D4EAB99D06DCB39A(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_B40DCA83439848E8D4EAB99D06DCB39A");
+
+	Params::B_GameInstance_C_OnCallFailed_B40DCA83439848E8D4EAB99D06DCB39A Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1728,21 +1822,73 @@ void UB_GameInstance_C::OnCallFailed_DE990FDB4B0DC5A886D13582C2A33E2F(bool bWasS
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.OnCallFailed_F3E97BAF4ED76190FAED77A87373C204
+// Function B_GameInstance.B_GameInstance_C.OnCallFailed_E804551E4AB86830B57BED97459D3204
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_F3E97BAF4ED76190FAED77A87373C204(bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_E804551E4AB86830B57BED97459D3204(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_F3E97BAF4ED76190FAED77A87373C204");
+		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_E804551E4AB86830B57BED97459D3204");
 
-	Params::B_GameInstance_C_OnCallFailed_F3E97BAF4ED76190FAED77A87373C204 Parms{};
+	Params::B_GameInstance_C_OnCallFailed_E804551E4AB86830B57BED97459D3204 Parms{};
 
-	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnCallFailed_E804551E4AB86830B57BED97783DB4CD
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnCallFailed_E804551E4AB86830B57BED97783DB4CD(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_E804551E4AB86830B57BED97783DB4CD");
+
+	Params::B_GameInstance_C_OnCallFailed_E804551E4AB86830B57BED97783DB4CD Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnCallFailed_E804551E4AB86830B57BED97D3124B57
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnCallFailed_E804551E4AB86830B57BED97D3124B57(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_E804551E4AB86830B57BED97D3124B57");
+
+	Params::B_GameInstance_C_OnCallFailed_E804551E4AB86830B57BED97D3124B57 Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1830,26 +1976,6 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D(class FNam
 	Params::B_GameInstance_C_OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D Parms{};
 
 	Parms.SessionName_0 = SessionName_0;
-	Parms.bWasSuccessful = bWasSuccessful;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_GameInstance.B_GameInstance_C.OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A87373C204
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UB_GameInstance_C::OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A87373C204(bool bWasSuccessful)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A87373C204");
-
-	Params::B_GameInstance_C_OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A87373C204 Parms{};
-
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -2248,6 +2374,78 @@ void UB_GameInstance_C::OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97459D3204
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97459D3204(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97459D3204");
+
+	Params::B_GameInstance_C_OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97459D3204 Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97783DB4CD
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97783DB4CD(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97783DB4CD");
+
+	Params::B_GameInstance_C_OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97783DB4CD Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97D3124B57
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97D3124B57(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97D3124B57");
+
+	Params::B_GameInstance_C_OnGetUserPrivilegeComplete_E804551E4AB86830B57BED97D3124B57 Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.OnInitCompleted
 // (BlueprintCallable, BlueprintEvent)
 
@@ -2444,17 +2642,23 @@ void UB_GameInstance_C::OnLogoutComplete_7C43DFA84FCD4A8545E69FBDF87B14F1(bool b
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.OnMenuGameModeLoaded__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function B_GameInstance.B_GameInstance_C.OnLogoutComplete_B40DCA83439848E8D4EAB99D06DCB39A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnMenuGameModeLoaded__DelegateSignature()
+void UB_GameInstance_C::OnLogoutComplete_B40DCA83439848E8D4EAB99D06DCB39A(bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnMenuGameModeLoaded__DelegateSignature");
+		Func = Class->GetFunction("B_GameInstance_C", "OnLogoutComplete_B40DCA83439848E8D4EAB99D06DCB39A");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_GameInstance_C_OnLogoutComplete_B40DCA83439848E8D4EAB99D06DCB39A Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

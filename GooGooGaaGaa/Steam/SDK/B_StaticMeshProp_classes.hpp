@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "E_PropSet_structs.hpp"
-#include "EPropPhysicalGroup_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_PropCategory_structs.hpp"
+#include "EPropPhysicalGroup_structs.hpp"
+#include "E_PropSet_structs.hpp"
+#include "Engine_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "E_PropCategory_structs.hpp"
 
 
 namespace SDK
@@ -182,6 +182,7 @@ public:
 	void SetupPhysicalSettings();
 	void OnReplicatedCurrentSleepTransform();
 	void HandleServerSleepEvent();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ExecuteUbergraph_B_StaticMeshProp(int32 EntryPoint);
 
 public:

@@ -12,12 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Niagara_classes.hpp"
 #include "Water_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "AIModule_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK

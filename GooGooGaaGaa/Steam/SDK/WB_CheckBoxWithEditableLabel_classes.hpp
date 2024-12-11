@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "WB_BaseControlWithLabel_classes.hpp"
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "UMG_structs.hpp"
-#include "WB_BaseControlWithLabel_classes.hpp"
 
 
 namespace SDK

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
+#include "B_Rarity_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
-#include "B_Rarity_structs.hpp"
+#include "E_Slot_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 

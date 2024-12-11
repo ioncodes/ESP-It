@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
 #include "S_MatchRules_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "E_MatchRuleType_structs.hpp"
 
 

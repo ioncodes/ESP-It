@@ -29,116 +29,116 @@ static_assert(sizeof(B_ItemManager_C_ConsolidateIngredientItems) == 0x000008, "W
 static_assert(offsetof(B_ItemManager_C_ConsolidateIngredientItems, TargetPlayer) == 0x000000, "Member 'B_ItemManager_C_ConsolidateIngredientItems::TargetPlayer' has a wrong offset!");
 
 // Function B_ItemManager.B_ItemManager_C.ExecuteUbergraph_B_ItemManager
-// 0x0140 (0x0140 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct B_ItemManager_C_ExecuteUbergraph_B_ItemManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_CustomEvent_TargetPlayer;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Notify;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds;                     // 0x0018(0x0010)(ConstParm, ReferenceParm)
-	bool                                          K2Node_CustomEvent_IsDrop;                         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsExtraItem;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_AccountId;                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGrantItemResultEntry>          K2Node_CustomEvent_Items;                          // 0x0030(0x0010)(ConstParm, ReferenceParm)
-	bool                                          K2Node_CustomEvent_bNotify;                        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsDrop;                        // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsExtraItem;                   // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           Temp_object_Variable;                              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGrantItemResultEntry>          Temp_struct_Variable;                              // 0x0078(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Variable;                                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           K2Node_CustomEvent_TargetPlayer_3;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           K2Node_CustomEvent_TargetPlayer_2;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Notify_2;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds_2;                   // 0x00B0(0x0010)(ConstParm, ReferenceParm)
-	bool                                          K2Node_CustomEvent_IsDrop_2;                       // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsExtraItem_2;                  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_CustomEvent_TargetPlayer_1;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds_1;                   // 0x00D0(0x0010)(ConstParm, ReferenceParm)
-	bool                                          K2Node_CustomEvent_Notify_1;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsDrop_1;                       // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsExtraItem_1;                  // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E3[0x1];                                       // 0x00E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 AccountId, TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate;              // 0x00E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGrantItemsCallbackProxy*               CallFunc_GrantItems_ReturnValue;                   // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_AccountId;                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGrantItemResultEntry>          K2Node_CustomEvent_Items;                          // 0x0018(0x0010)(ConstParm, ReferenceParm)
+	bool                                          K2Node_CustomEvent_bNotify;                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsDrop;                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsExtraItem;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           Temp_object_Variable;                              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGrantItemResultEntry>          Temp_struct_Variable;                              // 0x0058(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Variable;                                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_TargetPlayer_3;                 // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Notify_2;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds_2;                   // 0x0080(0x0010)(ConstParm, ReferenceParm)
+	bool                                          K2Node_CustomEvent_IsDrop_2;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsExtraItem_2;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_TargetPlayer_2;                 // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Notify_1;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds_1;                   // 0x00B8(0x0010)(ConstParm, ReferenceParm)
+	bool                                          K2Node_CustomEvent_IsDrop_1;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsExtraItem_1;                  // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_CustomEvent_TargetPlayer_1;                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 K2Node_CustomEvent_ItemDefIds;                     // 0x00D8(0x0010)(ConstParm, ReferenceParm)
+	bool                                          K2Node_CustomEvent_Notify;                         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsDrop;                         // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsExtraItem;                    // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EB[0x5];                                       // 0x00EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGrantItemsCallbackProxy*               CallFunc_GrantItems_ReturnValue;                   // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 AccountId, TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate;              // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_AccountId_1;                    // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FGrantItemResultEntry>          K2Node_CustomEvent_Items_1;                        // 0x0110(0x0010)(ConstParm, ReferenceParm)
-	bool                                          K2Node_CustomEvent_bNotify_1;                      // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsDrop_1;                      // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsExtraItem_1;                 // 0x0122(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_123[0x5];                                      // 0x0123(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_CustomEvent_PlayerState_1;                  // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 AccountId, TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0130(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_TargetPlayer;                   // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_AccountId_1;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGrantItemResultEntry>          K2Node_CustomEvent_Items_1;                        // 0x0120(0x0010)(ConstParm, ReferenceParm)
+	bool                                          K2Node_CustomEvent_bNotify_1;                      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsDrop_1;                      // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsExtraItem_1;                 // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_PlayerState_1;                  // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 AccountId, TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager) == 0x000008, "Wrong alignment on B_ItemManager_C_ExecuteUbergraph_B_ItemManager");
-static_assert(sizeof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager) == 0x000140, "Wrong size on B_ItemManager_C_ExecuteUbergraph_B_ItemManager");
+static_assert(sizeof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager) == 0x000150, "Wrong size on B_ItemManager_C_ExecuteUbergraph_B_ItemManager");
 static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, EntryPoint) == 0x000000, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer) == 0x000008, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify) == 0x000010, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds) == 0x000018, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop) == 0x000028, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem) == 0x000029, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_AccountId) == 0x00002C, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_AccountId' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Items) == 0x000030, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Items' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bNotify) == 0x000040, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bNotify' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsDrop) == 0x000041, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsDrop' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsExtraItem) == 0x000042, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsExtraItem' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_PlayerState) == 0x000048, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_PlayerState' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_AsB_Player_State) == 0x000050, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_object_Variable) == 0x000060, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_AsB_Player_State_1) == 0x000068, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable) == 0x000071, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable_1) == 0x000072, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable_2) == 0x000073, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_struct_Variable) == 0x000078, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_int_Variable) == 0x000088, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000090, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_3) == 0x000098, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_3' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_2) == 0x0000A0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify_2) == 0x0000A8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds_2) == 0x0000B0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop_2) == 0x0000C0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem_2) == 0x0000C1, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem_2' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_1) == 0x0000C8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds_1) == 0x0000D0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify_1) == 0x0000E0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop_1) == 0x0000E1, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem_1) == 0x0000E2, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CreateDelegate_OutputDelegate) == 0x0000E4, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_GrantItems_ReturnValue) == 0x0000F8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_GrantItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000100, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000008, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_AccountId) == 0x000010, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_AccountId' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Items) == 0x000018, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Items' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bNotify) == 0x000028, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bNotify' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsDrop) == 0x000029, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsDrop' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsExtraItem) == 0x00002A, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsExtraItem' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_PlayerState) == 0x000030, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_object_Variable) == 0x000038, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable) == 0x000040, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_AsB_Player_State) == 0x000048, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable_1) == 0x000051, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_bool_Variable_2) == 0x000052, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_struct_Variable) == 0x000058, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, Temp_int_Variable) == 0x000068, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_3) == 0x000070, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_3' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify_2) == 0x000078, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds_2) == 0x000080, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop_2) == 0x000090, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem_2) == 0x000091, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_AsB_Player_State_1) == 0x000098, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_2) == 0x0000A8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_2' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify_1) == 0x0000B0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds_1) == 0x0000B8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop_1) == 0x0000C8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem_1) == 0x0000C9, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer_1) == 0x0000D0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_ItemDefIds) == 0x0000D8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_ItemDefIds' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Notify) == 0x0000E8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Notify' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsDrop) == 0x0000E9, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsDrop' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_IsExtraItem) == 0x0000EA, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_IsExtraItem' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_GrantItems_ReturnValue) == 0x0000F0, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_GrantItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CreateDelegate_OutputDelegate) == 0x0000F8, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, CallFunc_IsValid_ReturnValue) == 0x000108, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_AccountId_1) == 0x00010C, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_AccountId_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Items_1) == 0x000110, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bNotify_1) == 0x000120, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bNotify_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsDrop_1) == 0x000121, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsDrop_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsExtraItem_1) == 0x000122, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsExtraItem_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_PlayerState_1) == 0x000128, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_PlayerState_1' has a wrong offset!");
-static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000130, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_TargetPlayer) == 0x000110, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_TargetPlayer' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_AccountId_1) == 0x000118, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_AccountId_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_Items_1) == 0x000120, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bNotify_1) == 0x000130, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bNotify_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsDrop_1) == 0x000131, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsDrop_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_bIsExtraItem_1) == 0x000132, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_bIsExtraItem_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CustomEvent_PlayerState_1) == 0x000138, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CustomEvent_PlayerState_1' has a wrong offset!");
+static_assert(offsetof(B_ItemManager_C_ExecuteUbergraph_B_ItemManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000140, "Member 'B_ItemManager_C_ExecuteUbergraph_B_ItemManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 
 // Function B_ItemManager.B_ItemManager_C.FixSteamJsonString
 // 0x0050 (0x0050 - 0x0000)

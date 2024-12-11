@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "WB_ServerListBase_classes.hpp"
-#include "ESortMethod_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
+#include "ESortMethod_structs.hpp"
 #include "EServerFilter_structs.hpp"
 #include "UMG_structs.hpp"
 

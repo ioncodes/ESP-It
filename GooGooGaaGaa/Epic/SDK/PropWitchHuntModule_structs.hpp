@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -460,30 +460,6 @@ enum class EUGCQueryBRGBP : uint8
 	UQ_MAX                                   = 19,
 };
 
-// ScriptStruct PropWitchHuntModule.KeyValuePairBRG
-// 0x0020 (0x0020 - 0x0000)
-struct FKeyValuePairBRG final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKeyValuePairBRG) == 0x000008, "Wrong alignment on FKeyValuePairBRG");
-static_assert(sizeof(FKeyValuePairBRG) == 0x000020, "Wrong size on FKeyValuePairBRG");
-static_assert(offsetof(FKeyValuePairBRG, Key) == 0x000000, "Member 'FKeyValuePairBRG::Key' has a wrong offset!");
-static_assert(offsetof(FKeyValuePairBRG, Value) == 0x000010, "Member 'FKeyValuePairBRG::Value' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.ResultBRG
-// 0x0001 (0x0001 - 0x0000)
-struct FResultBRG
-{
-public:
-	EResultBRGBP                                  Result;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FResultBRG) == 0x000001, "Wrong alignment on FResultBRG");
-static_assert(sizeof(FResultBRG) == 0x000001, "Wrong size on FResultBRG");
-static_assert(offsetof(FResultBRG, Result) == 0x000000, "Member 'FResultBRG::Result' has a wrong offset!");
-
 // ScriptStruct PropWitchHuntModule.UInt64BRG
 // 0x0008 (0x0008 - 0x0000)
 struct FUInt64BRG final
@@ -506,6 +482,17 @@ static_assert(alignof(FUGCItemId) == 0x000008, "Wrong alignment on FUGCItemId");
 static_assert(sizeof(FUGCItemId) == 0x000008, "Wrong size on FUGCItemId");
 static_assert(offsetof(FUGCItemId, ID) == 0x000000, "Member 'FUGCItemId::ID' has a wrong offset!");
 
+// ScriptStruct PropWitchHuntModule.ResultBRG
+// 0x0001 (0x0001 - 0x0000)
+struct FResultBRG
+{
+public:
+	EResultBRGBP                                  Result;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FResultBRG) == 0x000001, "Wrong alignment on FResultBRG");
+static_assert(sizeof(FResultBRG) == 0x000001, "Wrong size on FResultBRG");
+static_assert(offsetof(FResultBRG, Result) == 0x000000, "Member 'FResultBRG::Result' has a wrong offset!");
+
 // ScriptStruct PropWitchHuntModule.GeneralWorkshopItemResultBRG
 // 0x000F (0x0010 - 0x0001)
 struct FGeneralWorkshopItemResultBRG : public FResultBRG
@@ -518,29 +505,17 @@ static_assert(alignof(FGeneralWorkshopItemResultBRG) == 0x000008, "Wrong alignme
 static_assert(sizeof(FGeneralWorkshopItemResultBRG) == 0x000010, "Wrong size on FGeneralWorkshopItemResultBRG");
 static_assert(offsetof(FGeneralWorkshopItemResultBRG, WorkshopItemID) == 0x000008, "Member 'FGeneralWorkshopItemResultBRG::WorkshopItemID' has a wrong offset!");
 
-// ScriptStruct PropWitchHuntModule.UGCQueryParameterTagsAllUserDetails
-// 0x0010 (0x0010 - 0x0000)
-struct FUGCQueryParameterTagsAllUserDetails
+// ScriptStruct PropWitchHuntModule.UpdateWorkshopItemResultBRG
+// 0x0008 (0x0018 - 0x0010)
+struct FUpdateWorkshopItemResultBRG : public FGeneralWorkshopItemResultBRG
 {
 public:
-	TArray<struct FKeyValuePairBRG>               RequiredKeyValueTags;                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	bool                                          bUserNeedsToAcceptWorkshopLegalAgreement;          // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FUGCQueryParameterTagsAllUserDetails) == 0x000008, "Wrong alignment on FUGCQueryParameterTagsAllUserDetails");
-static_assert(sizeof(FUGCQueryParameterTagsAllUserDetails) == 0x000010, "Wrong size on FUGCQueryParameterTagsAllUserDetails");
-static_assert(offsetof(FUGCQueryParameterTagsAllUserDetails, RequiredKeyValueTags) == 0x000000, "Member 'FUGCQueryParameterTagsAllUserDetails::RequiredKeyValueTags' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.UGCQueryParameterTagsAllUser
-// 0x0020 (0x0030 - 0x0010)
-struct FUGCQueryParameterTagsAllUser final : public FUGCQueryParameterTagsAllUserDetails
-{
-public:
-	TArray<class FString>                         RequiredTags;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ExcludedTags;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUGCQueryParameterTagsAllUser) == 0x000008, "Wrong alignment on FUGCQueryParameterTagsAllUser");
-static_assert(sizeof(FUGCQueryParameterTagsAllUser) == 0x000030, "Wrong size on FUGCQueryParameterTagsAllUser");
-static_assert(offsetof(FUGCQueryParameterTagsAllUser, RequiredTags) == 0x000010, "Member 'FUGCQueryParameterTagsAllUser::RequiredTags' has a wrong offset!");
-static_assert(offsetof(FUGCQueryParameterTagsAllUser, ExcludedTags) == 0x000020, "Member 'FUGCQueryParameterTagsAllUser::ExcludedTags' has a wrong offset!");
+static_assert(alignof(FUpdateWorkshopItemResultBRG) == 0x000008, "Wrong alignment on FUpdateWorkshopItemResultBRG");
+static_assert(sizeof(FUpdateWorkshopItemResultBRG) == 0x000018, "Wrong size on FUpdateWorkshopItemResultBRG");
+static_assert(offsetof(FUpdateWorkshopItemResultBRG, bUserNeedsToAcceptWorkshopLegalAgreement) == 0x000010, "Member 'FUpdateWorkshopItemResultBRG::bUserNeedsToAcceptWorkshopLegalAgreement' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.UGCQueryParameterAllUserDetails
 // 0x0014 (0x0014 - 0x0000)
@@ -567,6 +542,43 @@ static_assert(offsetof(FUGCQueryParameterAllUserDetails, Language) == 0x000004, 
 static_assert(offsetof(FUGCQueryParameterAllUserDetails, AllowedCacheResponseTime) == 0x000008, "Member 'FUGCQueryParameterAllUserDetails::AllowedCacheResponseTime' has a wrong offset!");
 static_assert(offsetof(FUGCQueryParameterAllUserDetails, NumDaysPlaytime) == 0x00000C, "Member 'FUGCQueryParameterAllUserDetails::NumDaysPlaytime' has a wrong offset!");
 
+// ScriptStruct PropWitchHuntModule.KeyValuePairBRG
+// 0x0020 (0x0020 - 0x0000)
+struct FKeyValuePairBRG final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FKeyValuePairBRG) == 0x000008, "Wrong alignment on FKeyValuePairBRG");
+static_assert(sizeof(FKeyValuePairBRG) == 0x000020, "Wrong size on FKeyValuePairBRG");
+static_assert(offsetof(FKeyValuePairBRG, Key) == 0x000000, "Member 'FKeyValuePairBRG::Key' has a wrong offset!");
+static_assert(offsetof(FKeyValuePairBRG, Value) == 0x000010, "Member 'FKeyValuePairBRG::Value' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.UGCQueryParameterTagsAllUserDetails
+// 0x0010 (0x0010 - 0x0000)
+struct FUGCQueryParameterTagsAllUserDetails
+{
+public:
+	TArray<struct FKeyValuePairBRG>               RequiredKeyValueTags;                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUGCQueryParameterTagsAllUserDetails) == 0x000008, "Wrong alignment on FUGCQueryParameterTagsAllUserDetails");
+static_assert(sizeof(FUGCQueryParameterTagsAllUserDetails) == 0x000010, "Wrong size on FUGCQueryParameterTagsAllUserDetails");
+static_assert(offsetof(FUGCQueryParameterTagsAllUserDetails, RequiredKeyValueTags) == 0x000000, "Member 'FUGCQueryParameterTagsAllUserDetails::RequiredKeyValueTags' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.UGCQueryParameterTagsAllUser
+// 0x0020 (0x0030 - 0x0010)
+struct FUGCQueryParameterTagsAllUser final : public FUGCQueryParameterTagsAllUserDetails
+{
+public:
+	TArray<class FString>                         RequiredTags;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ExcludedTags;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUGCQueryParameterTagsAllUser) == 0x000008, "Wrong alignment on FUGCQueryParameterTagsAllUser");
+static_assert(sizeof(FUGCQueryParameterTagsAllUser) == 0x000030, "Wrong size on FUGCQueryParameterTagsAllUser");
+static_assert(offsetof(FUGCQueryParameterTagsAllUser, RequiredTags) == 0x000010, "Member 'FUGCQueryParameterTagsAllUser::RequiredTags' has a wrong offset!");
+static_assert(offsetof(FUGCQueryParameterTagsAllUser, ExcludedTags) == 0x000020, "Member 'FUGCQueryParameterTagsAllUser::ExcludedTags' has a wrong offset!");
+
 // ScriptStruct PropWitchHuntModule.UGCQueryParameterAllUser
 // 0x003C (0x0050 - 0x0014)
 struct FUGCQueryParameterAllUser : public FUGCQueryParameterAllUserDetails
@@ -583,6 +595,149 @@ static_assert(sizeof(FUGCQueryParameterAllUser) == 0x000050, "Wrong size on FUGC
 static_assert(offsetof(FUGCQueryParameterAllUser, TagParameter) == 0x000018, "Member 'FUGCQueryParameterAllUser::TagParameter' has a wrong offset!");
 static_assert(offsetof(FUGCQueryParameterAllUser, bReturnTotalOnly) == 0x000048, "Member 'FUGCQueryParameterAllUser::bReturnTotalOnly' has a wrong offset!");
 static_assert(offsetof(FUGCQueryParameterAllUser, bReturnIdsOnly) == 0x000049, "Member 'FUGCQueryParameterAllUser::bReturnIdsOnly' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.UGCQueryParameterUser
+// 0x0018 (0x0068 - 0x0050)
+struct FUGCQueryParameterUser final : public FUGCQueryParameterAllUser
+{
+public:
+	class FString                                 FilenameFilter;                                    // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUserUGCListBRGBP                             List;                                              // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUGCMatchingUGCTypeBRGBP                      Type;                                              // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUserUGCListSortOrderBRGBP                    SortOrder;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUGCQueryParameterUser) == 0x000008, "Wrong alignment on FUGCQueryParameterUser");
+static_assert(sizeof(FUGCQueryParameterUser) == 0x000068, "Wrong size on FUGCQueryParameterUser");
+static_assert(offsetof(FUGCQueryParameterUser, FilenameFilter) == 0x000050, "Member 'FUGCQueryParameterUser::FilenameFilter' has a wrong offset!");
+static_assert(offsetof(FUGCQueryParameterUser, List) == 0x000060, "Member 'FUGCQueryParameterUser::List' has a wrong offset!");
+static_assert(offsetof(FUGCQueryParameterUser, Type) == 0x000061, "Member 'FUGCQueryParameterUser::Type' has a wrong offset!");
+static_assert(offsetof(FUGCQueryParameterUser, SortOrder) == 0x000062, "Member 'FUGCQueryParameterUser::SortOrder' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.MatchPlayer
+// 0x0058 (0x0058 - 0x0000)
+struct FMatchPlayer final
+{
+public:
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TeamId;                                            // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsPSNPlayer;                                       // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMatchPlayer) == 0x000008, "Wrong alignment on FMatchPlayer");
+static_assert(sizeof(FMatchPlayer) == 0x000058, "Wrong size on FMatchPlayer");
+static_assert(offsetof(FMatchPlayer, PlayerId) == 0x000000, "Member 'FMatchPlayer::PlayerId' has a wrong offset!");
+static_assert(offsetof(FMatchPlayer, PlayerName) == 0x000030, "Member 'FMatchPlayer::PlayerName' has a wrong offset!");
+static_assert(offsetof(FMatchPlayer, TeamId) == 0x000040, "Member 'FMatchPlayer::TeamId' has a wrong offset!");
+static_assert(offsetof(FMatchPlayer, IsPSNPlayer) == 0x000050, "Member 'FMatchPlayer::IsPSNPlayer' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.ActorToSave
+// 0x0060 (0x0060 - 0x0000)
+struct FActorToSave
+{
+public:
+	struct FPrimaryAssetId                        PrimaryAssetId;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Activated;                                         // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ID;                                                // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FActorToSave) == 0x000008, "Wrong alignment on FActorToSave");
+static_assert(sizeof(FActorToSave) == 0x000060, "Wrong size on FActorToSave");
+static_assert(offsetof(FActorToSave, PrimaryAssetId) == 0x000000, "Member 'FActorToSave::PrimaryAssetId' has a wrong offset!");
+static_assert(offsetof(FActorToSave, Location) == 0x000010, "Member 'FActorToSave::Location' has a wrong offset!");
+static_assert(offsetof(FActorToSave, Rotation) == 0x000028, "Member 'FActorToSave::Rotation' has a wrong offset!");
+static_assert(offsetof(FActorToSave, Scale) == 0x000040, "Member 'FActorToSave::Scale' has a wrong offset!");
+static_assert(offsetof(FActorToSave, Activated) == 0x000058, "Member 'FActorToSave::Activated' has a wrong offset!");
+static_assert(offsetof(FActorToSave, ID) == 0x00005C, "Member 'FActorToSave::ID' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.PropToSave
+// 0x0008 (0x0068 - 0x0060)
+struct FPropToSave final : public FActorToSave
+{
+public:
+	bool                                          StartAwake;                                        // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFreezed;                                         // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPropToSave) == 0x000008, "Wrong alignment on FPropToSave");
+static_assert(sizeof(FPropToSave) == 0x000068, "Wrong size on FPropToSave");
+static_assert(offsetof(FPropToSave, StartAwake) == 0x000060, "Member 'FPropToSave::StartAwake' has a wrong offset!");
+static_assert(offsetof(FPropToSave, IsFreezed) == 0x000061, "Member 'FPropToSave::IsFreezed' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.PlaceableStaticToSave
+// 0x0010 (0x0070 - 0x0060)
+struct FPlaceableStaticToSave final : public FActorToSave
+{
+public:
+	TArray<uint8>                                 MaterialIndices;                                   // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlaceableStaticToSave) == 0x000008, "Wrong alignment on FPlaceableStaticToSave");
+static_assert(sizeof(FPlaceableStaticToSave) == 0x000070, "Wrong size on FPlaceableStaticToSave");
+static_assert(offsetof(FPlaceableStaticToSave, MaterialIndices) == 0x000060, "Member 'FPlaceableStaticToSave::MaterialIndices' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.PlaceableLightToSave
+// 0x0018 (0x0078 - 0x0060)
+struct FPlaceableLightToSave final : public FActorToSave
+{
+public:
+	struct FVector                                Color;                                             // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlaceableLightToSave) == 0x000008, "Wrong alignment on FPlaceableLightToSave");
+static_assert(sizeof(FPlaceableLightToSave) == 0x000078, "Wrong size on FPlaceableLightToSave");
+static_assert(offsetof(FPlaceableLightToSave, Color) == 0x000060, "Member 'FPlaceableLightToSave::Color' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.SwitchToSave
+// 0x0018 (0x0078 - 0x0060)
+struct FSwitchToSave final : public FActorToSave
+{
+public:
+	TArray<int32>                                 SwitchTargets;                                     // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          Breakable;                                         // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSwitchToSave) == 0x000008, "Wrong alignment on FSwitchToSave");
+static_assert(sizeof(FSwitchToSave) == 0x000078, "Wrong size on FSwitchToSave");
+static_assert(offsetof(FSwitchToSave, SwitchTargets) == 0x000060, "Member 'FSwitchToSave::SwitchTargets' has a wrong offset!");
+static_assert(offsetof(FSwitchToSave, Breakable) == 0x000070, "Member 'FSwitchToSave::Breakable' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.PrefabToSave
+// 0x0040 (0x0040 - 0x0000)
+struct FPrefabToSave final
+{
+public:
+	TArray<struct FPropToSave>                    Props;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPlaceableStaticToSave>         Structures;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPlaceableLightToSave>          Lights;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSwitchToSave>                  Switches;                                          // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPrefabToSave) == 0x000008, "Wrong alignment on FPrefabToSave");
+static_assert(sizeof(FPrefabToSave) == 0x000040, "Wrong size on FPrefabToSave");
+static_assert(offsetof(FPrefabToSave, Props) == 0x000000, "Member 'FPrefabToSave::Props' has a wrong offset!");
+static_assert(offsetof(FPrefabToSave, Structures) == 0x000010, "Member 'FPrefabToSave::Structures' has a wrong offset!");
+static_assert(offsetof(FPrefabToSave, Lights) == 0x000020, "Member 'FPrefabToSave::Lights' has a wrong offset!");
+static_assert(offsetof(FPrefabToSave, Switches) == 0x000030, "Member 'FPrefabToSave::Switches' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.WorkshopItemInstallInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FWorkshopItemInstallInfo final
+{
+public:
+	struct FUInt64BRG                             SizeOnDiskBytes;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         SizeOnDiskMBytes;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Directory;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              TimeStampLastUpdate;                               // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWorkshopItemInstallInfo) == 0x000008, "Wrong alignment on FWorkshopItemInstallInfo");
+static_assert(sizeof(FWorkshopItemInstallInfo) == 0x000028, "Wrong size on FWorkshopItemInstallInfo");
+static_assert(offsetof(FWorkshopItemInstallInfo, SizeOnDiskBytes) == 0x000000, "Member 'FWorkshopItemInstallInfo::SizeOnDiskBytes' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemInstallInfo, SizeOnDiskMBytes) == 0x000008, "Member 'FWorkshopItemInstallInfo::SizeOnDiskMBytes' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemInstallInfo, Directory) == 0x000010, "Member 'FWorkshopItemInstallInfo::Directory' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemInstallInfo, TimeStampLastUpdate) == 0x000020, "Member 'FWorkshopItemInstallInfo::TimeStampLastUpdate' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.UGCQueryParameterAll
 // 0x0018 (0x0068 - 0x0050)
@@ -603,36 +758,6 @@ static_assert(offsetof(FUGCQueryParameterAll, RankedByTrendDays) == 0x000060, "M
 static_assert(offsetof(FUGCQueryParameterAll, bMatchAnyTag) == 0x000064, "Member 'FUGCQueryParameterAll::bMatchAnyTag' has a wrong offset!");
 static_assert(offsetof(FUGCQueryParameterAll, QueryType) == 0x000065, "Member 'FUGCQueryParameterAll::QueryType' has a wrong offset!");
 static_assert(offsetof(FUGCQueryParameterAll, FileType) == 0x000066, "Member 'FUGCQueryParameterAll::FileType' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.UGCQueryParameterUser
-// 0x0018 (0x0068 - 0x0050)
-struct FUGCQueryParameterUser final : public FUGCQueryParameterAllUser
-{
-public:
-	class FString                                 FilenameFilter;                                    // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUserUGCListBRGBP                             List;                                              // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUGCMatchingUGCTypeBRGBP                      Type;                                              // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUserUGCListSortOrderBRGBP                    SortOrder;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUGCQueryParameterUser) == 0x000008, "Wrong alignment on FUGCQueryParameterUser");
-static_assert(sizeof(FUGCQueryParameterUser) == 0x000068, "Wrong size on FUGCQueryParameterUser");
-static_assert(offsetof(FUGCQueryParameterUser, FilenameFilter) == 0x000050, "Member 'FUGCQueryParameterUser::FilenameFilter' has a wrong offset!");
-static_assert(offsetof(FUGCQueryParameterUser, List) == 0x000060, "Member 'FUGCQueryParameterUser::List' has a wrong offset!");
-static_assert(offsetof(FUGCQueryParameterUser, Type) == 0x000061, "Member 'FUGCQueryParameterUser::Type' has a wrong offset!");
-static_assert(offsetof(FUGCQueryParameterUser, SortOrder) == 0x000062, "Member 'FUGCQueryParameterUser::SortOrder' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.UpdateWorkshopItemResultBRG
-// 0x0008 (0x0018 - 0x0010)
-struct FUpdateWorkshopItemResultBRG : public FGeneralWorkshopItemResultBRG
-{
-public:
-	bool                                          bUserNeedsToAcceptWorkshopLegalAgreement;          // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUpdateWorkshopItemResultBRG) == 0x000008, "Wrong alignment on FUpdateWorkshopItemResultBRG");
-static_assert(sizeof(FUpdateWorkshopItemResultBRG) == 0x000018, "Wrong size on FUpdateWorkshopItemResultBRG");
-static_assert(offsetof(FUpdateWorkshopItemResultBRG, bUserNeedsToAcceptWorkshopLegalAgreement) == 0x000010, "Member 'FUpdateWorkshopItemResultBRG::bUserNeedsToAcceptWorkshopLegalAgreement' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.WorkshopUpdateDetails
 // 0x00D0 (0x00D0 - 0x0000)
@@ -683,6 +808,21 @@ public:
 static_assert(alignof(FCreateWorkshopItemResultBRG) == 0x000008, "Wrong alignment on FCreateWorkshopItemResultBRG");
 static_assert(sizeof(FCreateWorkshopItemResultBRG) == 0x0000E8, "Wrong size on FCreateWorkshopItemResultBRG");
 static_assert(offsetof(FCreateWorkshopItemResultBRG, ItemDetails) == 0x000018, "Member 'FCreateWorkshopItemResultBRG::ItemDetails' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.MatchTeam
+// 0x0030 (0x0030 - 0x0000)
+struct FMatchTeam final
+{
+public:
+	class FString                                 TeamName;                                          // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TeamId;                                            // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FUniqueNetIdRepl>               TeamMembers;                                       // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMatchTeam) == 0x000008, "Wrong alignment on FMatchTeam");
+static_assert(sizeof(FMatchTeam) == 0x000030, "Wrong size on FMatchTeam");
+static_assert(offsetof(FMatchTeam, TeamName) == 0x000000, "Member 'FMatchTeam::TeamName' has a wrong offset!");
+static_assert(offsetof(FMatchTeam, TeamId) == 0x000010, "Member 'FMatchTeam::TeamId' has a wrong offset!");
+static_assert(offsetof(FMatchTeam, TeamMembers) == 0x000020, "Member 'FMatchTeam::TeamMembers' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.UGCQueryHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -842,55 +982,33 @@ static_assert(offsetof(FQueryWorkshopForItemsResultBRG, bHasMorePages) == 0x0000
 static_assert(offsetof(FQueryWorkshopForItemsResultBRG, bRetrievedDataWasCached) == 0x000019, "Member 'FQueryWorkshopForItemsResultBRG::bRetrievedDataWasCached' has a wrong offset!");
 static_assert(offsetof(FQueryWorkshopForItemsResultBRG, Items) == 0x000020, "Member 'FQueryWorkshopForItemsResultBRG::Items' has a wrong offset!");
 
-// ScriptStruct PropWitchHuntModule.MatchTeamResult
+// ScriptStruct PropWitchHuntModule.SupportedResolution
 // 0x0018 (0x0018 - 0x0000)
-struct FMatchTeamResult final
+struct FSupportedResolution final
 {
 public:
-	class FString                                 TeamID;                                            // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Width;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayString;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMatchTeamResult) == 0x000008, "Wrong alignment on FMatchTeamResult");
-static_assert(sizeof(FMatchTeamResult) == 0x000018, "Wrong size on FMatchTeamResult");
-static_assert(offsetof(FMatchTeamResult, TeamID) == 0x000000, "Member 'FMatchTeamResult::TeamID' has a wrong offset!");
-static_assert(offsetof(FMatchTeamResult, Rank) == 0x000010, "Member 'FMatchTeamResult::Rank' has a wrong offset!");
+static_assert(alignof(FSupportedResolution) == 0x000008, "Wrong alignment on FSupportedResolution");
+static_assert(sizeof(FSupportedResolution) == 0x000018, "Wrong size on FSupportedResolution");
+static_assert(offsetof(FSupportedResolution, Width) == 0x000000, "Member 'FSupportedResolution::Width' has a wrong offset!");
+static_assert(offsetof(FSupportedResolution, Height) == 0x000004, "Member 'FSupportedResolution::Height' has a wrong offset!");
+static_assert(offsetof(FSupportedResolution, DisplayString) == 0x000008, "Member 'FSupportedResolution::DisplayString' has a wrong offset!");
 
-// ScriptStruct PropWitchHuntModule.ActorToSave
-// 0x0060 (0x0060 - 0x0000)
-struct FActorToSave
+// ScriptStruct PropWitchHuntModule.PingCacheEntry
+// 0x0008 (0x0008 - 0x0000)
+struct FPingCacheEntry final
 {
 public:
-	struct FPrimaryAssetId                        PrimaryAssetId;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Activated;                                         // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ID;                                                // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PingInMs;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CreationTime;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FActorToSave) == 0x000008, "Wrong alignment on FActorToSave");
-static_assert(sizeof(FActorToSave) == 0x000060, "Wrong size on FActorToSave");
-static_assert(offsetof(FActorToSave, PrimaryAssetId) == 0x000000, "Member 'FActorToSave::PrimaryAssetId' has a wrong offset!");
-static_assert(offsetof(FActorToSave, Location) == 0x000010, "Member 'FActorToSave::Location' has a wrong offset!");
-static_assert(offsetof(FActorToSave, Rotation) == 0x000028, "Member 'FActorToSave::Rotation' has a wrong offset!");
-static_assert(offsetof(FActorToSave, Scale) == 0x000040, "Member 'FActorToSave::Scale' has a wrong offset!");
-static_assert(offsetof(FActorToSave, Activated) == 0x000058, "Member 'FActorToSave::Activated' has a wrong offset!");
-static_assert(offsetof(FActorToSave, ID) == 0x00005C, "Member 'FActorToSave::ID' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.PropToSave
-// 0x0008 (0x0068 - 0x0060)
-struct FPropToSave final : public FActorToSave
-{
-public:
-	bool                                          StartAwake;                                        // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFreezed;                                         // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPropToSave) == 0x000008, "Wrong alignment on FPropToSave");
-static_assert(sizeof(FPropToSave) == 0x000068, "Wrong size on FPropToSave");
-static_assert(offsetof(FPropToSave, StartAwake) == 0x000060, "Member 'FPropToSave::StartAwake' has a wrong offset!");
-static_assert(offsetof(FPropToSave, IsFreezed) == 0x000061, "Member 'FPropToSave::IsFreezed' has a wrong offset!");
+static_assert(alignof(FPingCacheEntry) == 0x000004, "Wrong alignment on FPingCacheEntry");
+static_assert(sizeof(FPingCacheEntry) == 0x000008, "Wrong size on FPingCacheEntry");
+static_assert(offsetof(FPingCacheEntry, PingInMs) == 0x000000, "Member 'FPingCacheEntry::PingInMs' has a wrong offset!");
+static_assert(offsetof(FPingCacheEntry, CreationTime) == 0x000004, "Member 'FPingCacheEntry::CreationTime' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.UGCQueryParameterDetails
 // 0x0024 (0x0038 - 0x0014)
@@ -916,6 +1034,107 @@ public:
 static_assert(alignof(FQueryWorkshopForItemDetailsResultBRG) == 0x000008, "Wrong alignment on FQueryWorkshopForItemDetailsResultBRG");
 static_assert(sizeof(FQueryWorkshopForItemDetailsResultBRG) == 0x000068, "Wrong size on FQueryWorkshopForItemDetailsResultBRG");
 static_assert(offsetof(FQueryWorkshopForItemDetailsResultBRG, QueryParams) == 0x000030, "Member 'FQueryWorkshopForItemDetailsResultBRG::QueryParams' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.UIParam
+// 0x0014 (0x0014 - 0x0000)
+struct FUIParam final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FloatValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IntValue;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BoolValue;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUIParam) == 0x000004, "Wrong alignment on FUIParam");
+static_assert(sizeof(FUIParam) == 0x000014, "Wrong size on FUIParam");
+static_assert(offsetof(FUIParam, Name) == 0x000000, "Member 'FUIParam::Name' has a wrong offset!");
+static_assert(offsetof(FUIParam, FloatValue) == 0x000008, "Member 'FUIParam::FloatValue' has a wrong offset!");
+static_assert(offsetof(FUIParam, IntValue) == 0x00000C, "Member 'FUIParam::IntValue' has a wrong offset!");
+static_assert(offsetof(FUIParam, BoolValue) == 0x000010, "Member 'FUIParam::BoolValue' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.HunterSkin
+// 0x0038 (0x0038 - 0x0000)
+struct FHunterSkin final
+{
+public:
+	TSubclassOf<class AActor>                     HeadSkinClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     UpperBodySkinClass;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     LowerBodySkinClass;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     HatSkinClass;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     RangedWeaponSkinClass;                             // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     MeleeWeaponSkinClass;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     SkinColorSkinClass;                                // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FHunterSkin) == 0x000008, "Wrong alignment on FHunterSkin");
+static_assert(sizeof(FHunterSkin) == 0x000038, "Wrong size on FHunterSkin");
+static_assert(offsetof(FHunterSkin, HeadSkinClass) == 0x000000, "Member 'FHunterSkin::HeadSkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, UpperBodySkinClass) == 0x000008, "Member 'FHunterSkin::UpperBodySkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, LowerBodySkinClass) == 0x000010, "Member 'FHunterSkin::LowerBodySkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, HatSkinClass) == 0x000018, "Member 'FHunterSkin::HatSkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, RangedWeaponSkinClass) == 0x000020, "Member 'FHunterSkin::RangedWeaponSkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, MeleeWeaponSkinClass) == 0x000028, "Member 'FHunterSkin::MeleeWeaponSkinClass' has a wrong offset!");
+static_assert(offsetof(FHunterSkin, SkinColorSkinClass) == 0x000030, "Member 'FHunterSkin::SkinColorSkinClass' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.UGCUpdateHandle
+// 0x0008 (0x0008 - 0x0000)
+struct FUGCUpdateHandle final
+{
+public:
+	struct FUInt64BRG                             Handle;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUGCUpdateHandle) == 0x000008, "Wrong alignment on FUGCUpdateHandle");
+static_assert(sizeof(FUGCUpdateHandle) == 0x000008, "Wrong size on FUGCUpdateHandle");
+static_assert(offsetof(FUGCUpdateHandle, Handle) == 0x000000, "Member 'FUGCUpdateHandle::Handle' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.MatchTeamResult
+// 0x0018 (0x0018 - 0x0000)
+struct FMatchTeamResult final
+{
+public:
+	class FString                                 TeamId;                                            // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMatchTeamResult) == 0x000008, "Wrong alignment on FMatchTeamResult");
+static_assert(sizeof(FMatchTeamResult) == 0x000018, "Wrong size on FMatchTeamResult");
+static_assert(offsetof(FMatchTeamResult, TeamId) == 0x000000, "Member 'FMatchTeamResult::TeamId' has a wrong offset!");
+static_assert(offsetof(FMatchTeamResult, Rank) == 0x000010, "Member 'FMatchTeamResult::Rank' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.RuntimePropData
+// 0x0038 (0x0038 - 0x0000)
+struct FRuntimePropData final
+{
+public:
+	struct FVector                                LinearVelocity;                                    // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AngularVelocity;                                   // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Size;                                              // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRuntimePropData) == 0x000008, "Wrong alignment on FRuntimePropData");
+static_assert(sizeof(FRuntimePropData) == 0x000038, "Wrong size on FRuntimePropData");
+static_assert(offsetof(FRuntimePropData, LinearVelocity) == 0x000000, "Member 'FRuntimePropData::LinearVelocity' has a wrong offset!");
+static_assert(offsetof(FRuntimePropData, AngularVelocity) == 0x000018, "Member 'FRuntimePropData::AngularVelocity' has a wrong offset!");
+static_assert(offsetof(FRuntimePropData, Size) == 0x000030, "Member 'FRuntimePropData::Size' has a wrong offset!");
+
+// ScriptStruct PropWitchHuntModule.WitchSkin
+// 0x0028 (0x0028 - 0x0000)
+struct FWitchSkin final
+{
+public:
+	TSubclassOf<class AActor>                     HeadSkinClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     BodySkinClass;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     HatSkinClass;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     BroomSkinClass;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     SkinColorSkinClass;                                // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWitchSkin) == 0x000008, "Wrong alignment on FWitchSkin");
+static_assert(sizeof(FWitchSkin) == 0x000028, "Wrong size on FWitchSkin");
+static_assert(offsetof(FWitchSkin, HeadSkinClass) == 0x000000, "Member 'FWitchSkin::HeadSkinClass' has a wrong offset!");
+static_assert(offsetof(FWitchSkin, BodySkinClass) == 0x000008, "Member 'FWitchSkin::BodySkinClass' has a wrong offset!");
+static_assert(offsetof(FWitchSkin, HatSkinClass) == 0x000010, "Member 'FWitchSkin::HatSkinClass' has a wrong offset!");
+static_assert(offsetof(FWitchSkin, BroomSkinClass) == 0x000018, "Member 'FWitchSkin::BroomSkinClass' has a wrong offset!");
+static_assert(offsetof(FWitchSkin, SkinColorSkinClass) == 0x000020, "Member 'FWitchSkin::SkinColorSkinClass' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.UIParameterData
 // 0x0058 (0x0060 - 0x0008)
@@ -948,225 +1167,6 @@ static_assert(offsetof(FUIParameterData, UIMultiplyFactor) == 0x000044, "Member 
 static_assert(offsetof(FUIParameterData, DefaultFloatValue) == 0x000048, "Member 'FUIParameterData::DefaultFloatValue' has a wrong offset!");
 static_assert(offsetof(FUIParameterData, ValueRange) == 0x00004C, "Member 'FUIParameterData::ValueRange' has a wrong offset!");
 static_assert(offsetof(FUIParameterData, StepSize) == 0x00005C, "Member 'FUIParameterData::StepSize' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.RuntimePropData
-// 0x0038 (0x0038 - 0x0000)
-struct FRuntimePropData final
-{
-public:
-	struct FVector                                LinearVelocity;                                    // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AngularVelocity;                                   // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Size;                                              // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRuntimePropData) == 0x000008, "Wrong alignment on FRuntimePropData");
-static_assert(sizeof(FRuntimePropData) == 0x000038, "Wrong size on FRuntimePropData");
-static_assert(offsetof(FRuntimePropData, LinearVelocity) == 0x000000, "Member 'FRuntimePropData::LinearVelocity' has a wrong offset!");
-static_assert(offsetof(FRuntimePropData, AngularVelocity) == 0x000018, "Member 'FRuntimePropData::AngularVelocity' has a wrong offset!");
-static_assert(offsetof(FRuntimePropData, Size) == 0x000030, "Member 'FRuntimePropData::Size' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.PlaceableStaticToSave
-// 0x0010 (0x0070 - 0x0060)
-struct FPlaceableStaticToSave final : public FActorToSave
-{
-public:
-	TArray<uint8>                                 MaterialIndices;                                   // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlaceableStaticToSave) == 0x000008, "Wrong alignment on FPlaceableStaticToSave");
-static_assert(sizeof(FPlaceableStaticToSave) == 0x000070, "Wrong size on FPlaceableStaticToSave");
-static_assert(offsetof(FPlaceableStaticToSave, MaterialIndices) == 0x000060, "Member 'FPlaceableStaticToSave::MaterialIndices' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.UGCUpdateHandle
-// 0x0008 (0x0008 - 0x0000)
-struct FUGCUpdateHandle final
-{
-public:
-	struct FUInt64BRG                             Handle;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUGCUpdateHandle) == 0x000008, "Wrong alignment on FUGCUpdateHandle");
-static_assert(sizeof(FUGCUpdateHandle) == 0x000008, "Wrong size on FUGCUpdateHandle");
-static_assert(offsetof(FUGCUpdateHandle, Handle) == 0x000000, "Member 'FUGCUpdateHandle::Handle' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.SupportedResolution
-// 0x0018 (0x0018 - 0x0000)
-struct FSupportedResolution final
-{
-public:
-	int32                                         Width;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayString;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSupportedResolution) == 0x000008, "Wrong alignment on FSupportedResolution");
-static_assert(sizeof(FSupportedResolution) == 0x000018, "Wrong size on FSupportedResolution");
-static_assert(offsetof(FSupportedResolution, Width) == 0x000000, "Member 'FSupportedResolution::Width' has a wrong offset!");
-static_assert(offsetof(FSupportedResolution, Height) == 0x000004, "Member 'FSupportedResolution::Height' has a wrong offset!");
-static_assert(offsetof(FSupportedResolution, DisplayString) == 0x000008, "Member 'FSupportedResolution::DisplayString' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.MatchPlayer
-// 0x0058 (0x0058 - 0x0000)
-struct FMatchPlayer final
-{
-public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlayerName;                                        // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TeamID;                                            // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsPSNPlayer;                                       // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMatchPlayer) == 0x000008, "Wrong alignment on FMatchPlayer");
-static_assert(sizeof(FMatchPlayer) == 0x000058, "Wrong size on FMatchPlayer");
-static_assert(offsetof(FMatchPlayer, PlayerId) == 0x000000, "Member 'FMatchPlayer::PlayerId' has a wrong offset!");
-static_assert(offsetof(FMatchPlayer, PlayerName) == 0x000030, "Member 'FMatchPlayer::PlayerName' has a wrong offset!");
-static_assert(offsetof(FMatchPlayer, TeamID) == 0x000040, "Member 'FMatchPlayer::TeamID' has a wrong offset!");
-static_assert(offsetof(FMatchPlayer, IsPSNPlayer) == 0x000050, "Member 'FMatchPlayer::IsPSNPlayer' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.MatchTeam
-// 0x0030 (0x0030 - 0x0000)
-struct FMatchTeam final
-{
-public:
-	class FString                                 TeamName;                                          // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TeamID;                                            // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FUniqueNetIdRepl>               TeamMembers;                                       // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMatchTeam) == 0x000008, "Wrong alignment on FMatchTeam");
-static_assert(sizeof(FMatchTeam) == 0x000030, "Wrong size on FMatchTeam");
-static_assert(offsetof(FMatchTeam, TeamName) == 0x000000, "Member 'FMatchTeam::TeamName' has a wrong offset!");
-static_assert(offsetof(FMatchTeam, TeamID) == 0x000010, "Member 'FMatchTeam::TeamID' has a wrong offset!");
-static_assert(offsetof(FMatchTeam, TeamMembers) == 0x000020, "Member 'FMatchTeam::TeamMembers' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.PingCacheEntry
-// 0x0008 (0x0008 - 0x0000)
-struct FPingCacheEntry final
-{
-public:
-	float                                         PingInMs;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CreationTime;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPingCacheEntry) == 0x000004, "Wrong alignment on FPingCacheEntry");
-static_assert(sizeof(FPingCacheEntry) == 0x000008, "Wrong size on FPingCacheEntry");
-static_assert(offsetof(FPingCacheEntry, PingInMs) == 0x000000, "Member 'FPingCacheEntry::PingInMs' has a wrong offset!");
-static_assert(offsetof(FPingCacheEntry, CreationTime) == 0x000004, "Member 'FPingCacheEntry::CreationTime' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.HunterSkin
-// 0x0038 (0x0038 - 0x0000)
-struct FHunterSkin final
-{
-public:
-	TSubclassOf<class AActor>                     HeadSkinClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     UpperBodySkinClass;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     LowerBodySkinClass;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     HatSkinClass;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     RangedWeaponSkinClass;                             // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     MeleeWeaponSkinClass;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     SkinColorSkinClass;                                // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FHunterSkin) == 0x000008, "Wrong alignment on FHunterSkin");
-static_assert(sizeof(FHunterSkin) == 0x000038, "Wrong size on FHunterSkin");
-static_assert(offsetof(FHunterSkin, HeadSkinClass) == 0x000000, "Member 'FHunterSkin::HeadSkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, UpperBodySkinClass) == 0x000008, "Member 'FHunterSkin::UpperBodySkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, LowerBodySkinClass) == 0x000010, "Member 'FHunterSkin::LowerBodySkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, HatSkinClass) == 0x000018, "Member 'FHunterSkin::HatSkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, RangedWeaponSkinClass) == 0x000020, "Member 'FHunterSkin::RangedWeaponSkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, MeleeWeaponSkinClass) == 0x000028, "Member 'FHunterSkin::MeleeWeaponSkinClass' has a wrong offset!");
-static_assert(offsetof(FHunterSkin, SkinColorSkinClass) == 0x000030, "Member 'FHunterSkin::SkinColorSkinClass' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.WitchSkin
-// 0x0028 (0x0028 - 0x0000)
-struct FWitchSkin final
-{
-public:
-	TSubclassOf<class AActor>                     HeadSkinClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     BodySkinClass;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     HatSkinClass;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     BroomSkinClass;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     SkinColorSkinClass;                                // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWitchSkin) == 0x000008, "Wrong alignment on FWitchSkin");
-static_assert(sizeof(FWitchSkin) == 0x000028, "Wrong size on FWitchSkin");
-static_assert(offsetof(FWitchSkin, HeadSkinClass) == 0x000000, "Member 'FWitchSkin::HeadSkinClass' has a wrong offset!");
-static_assert(offsetof(FWitchSkin, BodySkinClass) == 0x000008, "Member 'FWitchSkin::BodySkinClass' has a wrong offset!");
-static_assert(offsetof(FWitchSkin, HatSkinClass) == 0x000010, "Member 'FWitchSkin::HatSkinClass' has a wrong offset!");
-static_assert(offsetof(FWitchSkin, BroomSkinClass) == 0x000018, "Member 'FWitchSkin::BroomSkinClass' has a wrong offset!");
-static_assert(offsetof(FWitchSkin, SkinColorSkinClass) == 0x000020, "Member 'FWitchSkin::SkinColorSkinClass' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.PlaceableLightToSave
-// 0x0018 (0x0078 - 0x0060)
-struct FPlaceableLightToSave final : public FActorToSave
-{
-public:
-	struct FVector                                Color;                                             // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlaceableLightToSave) == 0x000008, "Wrong alignment on FPlaceableLightToSave");
-static_assert(sizeof(FPlaceableLightToSave) == 0x000078, "Wrong size on FPlaceableLightToSave");
-static_assert(offsetof(FPlaceableLightToSave, Color) == 0x000060, "Member 'FPlaceableLightToSave::Color' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.SwitchToSave
-// 0x0018 (0x0078 - 0x0060)
-struct FSwitchToSave final : public FActorToSave
-{
-public:
-	TArray<int32>                                 SwitchTargets;                                     // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          Breakable;                                         // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSwitchToSave) == 0x000008, "Wrong alignment on FSwitchToSave");
-static_assert(sizeof(FSwitchToSave) == 0x000078, "Wrong size on FSwitchToSave");
-static_assert(offsetof(FSwitchToSave, SwitchTargets) == 0x000060, "Member 'FSwitchToSave::SwitchTargets' has a wrong offset!");
-static_assert(offsetof(FSwitchToSave, Breakable) == 0x000070, "Member 'FSwitchToSave::Breakable' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.PrefabToSave
-// 0x0040 (0x0040 - 0x0000)
-struct FPrefabToSave final
-{
-public:
-	TArray<struct FPropToSave>                    Props;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FPlaceableStaticToSave>         Structures;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FPlaceableLightToSave>          Lights;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSwitchToSave>                  Switches;                                          // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPrefabToSave) == 0x000008, "Wrong alignment on FPrefabToSave");
-static_assert(sizeof(FPrefabToSave) == 0x000040, "Wrong size on FPrefabToSave");
-static_assert(offsetof(FPrefabToSave, Props) == 0x000000, "Member 'FPrefabToSave::Props' has a wrong offset!");
-static_assert(offsetof(FPrefabToSave, Structures) == 0x000010, "Member 'FPrefabToSave::Structures' has a wrong offset!");
-static_assert(offsetof(FPrefabToSave, Lights) == 0x000020, "Member 'FPrefabToSave::Lights' has a wrong offset!");
-static_assert(offsetof(FPrefabToSave, Switches) == 0x000030, "Member 'FPrefabToSave::Switches' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.UIParam
-// 0x0014 (0x0014 - 0x0000)
-struct FUIParam final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FloatValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         IntValue;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          BoolValue;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUIParam) == 0x000004, "Wrong alignment on FUIParam");
-static_assert(sizeof(FUIParam) == 0x000014, "Wrong size on FUIParam");
-static_assert(offsetof(FUIParam, Name) == 0x000000, "Member 'FUIParam::Name' has a wrong offset!");
-static_assert(offsetof(FUIParam, FloatValue) == 0x000008, "Member 'FUIParam::FloatValue' has a wrong offset!");
-static_assert(offsetof(FUIParam, IntValue) == 0x00000C, "Member 'FUIParam::IntValue' has a wrong offset!");
-static_assert(offsetof(FUIParam, BoolValue) == 0x000010, "Member 'FUIParam::BoolValue' has a wrong offset!");
-
-// ScriptStruct PropWitchHuntModule.WorkshopItemInstallInfo
-// 0x0028 (0x0028 - 0x0000)
-struct FWorkshopItemInstallInfo final
-{
-public:
-	struct FUInt64BRG                             SizeOnDiskBytes;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         SizeOnDiskMBytes;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Directory;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              TimeStampLastUpdate;                               // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWorkshopItemInstallInfo) == 0x000008, "Wrong alignment on FWorkshopItemInstallInfo");
-static_assert(sizeof(FWorkshopItemInstallInfo) == 0x000028, "Wrong size on FWorkshopItemInstallInfo");
-static_assert(offsetof(FWorkshopItemInstallInfo, SizeOnDiskBytes) == 0x000000, "Member 'FWorkshopItemInstallInfo::SizeOnDiskBytes' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemInstallInfo, SizeOnDiskMBytes) == 0x000008, "Member 'FWorkshopItemInstallInfo::SizeOnDiskMBytes' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemInstallInfo, Directory) == 0x000010, "Member 'FWorkshopItemInstallInfo::Directory' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemInstallInfo, TimeStampLastUpdate) == 0x000020, "Member 'FWorkshopItemInstallInfo::TimeStampLastUpdate' has a wrong offset!");
 
 // ScriptStruct PropWitchHuntModule.QueryWorkshopForUserItemsResultBRG
 // 0x0068 (0x0098 - 0x0030)

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ImpostorState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_ImpostorState_structs.hpp"
 #include "E_MeetingState_structs.hpp"
 
 

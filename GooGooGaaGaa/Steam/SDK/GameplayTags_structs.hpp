@@ -106,6 +106,19 @@ static_assert(offsetof(FGameplayTagQuery, QueryTokenStream) == 0x000018, "Member
 static_assert(offsetof(FGameplayTagQuery, UserDescription) == 0x000028, "Member 'FGameplayTagQuery::UserDescription' has a wrong offset!");
 static_assert(offsetof(FGameplayTagQuery, AutoDescription) == 0x000038, "Member 'FGameplayTagQuery::AutoDescription' has a wrong offset!");
 
+// ScriptStruct GameplayTags.GameplayTagCategoryRemap
+// 0x0020 (0x0020 - 0x0000)
+struct FGameplayTagCategoryRemap final
+{
+public:
+	class FString                                 BaseCategory;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         RemapCategories;                                   // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameplayTagCategoryRemap) == 0x000008, "Wrong alignment on FGameplayTagCategoryRemap");
+static_assert(sizeof(FGameplayTagCategoryRemap) == 0x000020, "Wrong size on FGameplayTagCategoryRemap");
+static_assert(offsetof(FGameplayTagCategoryRemap, BaseCategory) == 0x000000, "Member 'FGameplayTagCategoryRemap::BaseCategory' has a wrong offset!");
+static_assert(offsetof(FGameplayTagCategoryRemap, RemapCategories) == 0x000010, "Member 'FGameplayTagCategoryRemap::RemapCategories' has a wrong offset!");
+
 // ScriptStruct GameplayTags.GameplayTagContainer
 // 0x0020 (0x0020 - 0x0000)
 struct FGameplayTagContainer final
@@ -210,19 +223,6 @@ public:
 };
 static_assert(alignof(FGameplayTagNode) == 0x000008, "Wrong alignment on FGameplayTagNode");
 static_assert(sizeof(FGameplayTagNode) == 0x000050, "Wrong size on FGameplayTagNode");
-
-// ScriptStruct GameplayTags.GameplayTagCategoryRemap
-// 0x0020 (0x0020 - 0x0000)
-struct FGameplayTagCategoryRemap final
-{
-public:
-	class FString                                 BaseCategory;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         RemapCategories;                                   // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayTagCategoryRemap) == 0x000008, "Wrong alignment on FGameplayTagCategoryRemap");
-static_assert(sizeof(FGameplayTagCategoryRemap) == 0x000020, "Wrong size on FGameplayTagCategoryRemap");
-static_assert(offsetof(FGameplayTagCategoryRemap, BaseCategory) == 0x000000, "Member 'FGameplayTagCategoryRemap::BaseCategory' has a wrong offset!");
-static_assert(offsetof(FGameplayTagCategoryRemap, RemapCategories) == 0x000010, "Member 'FGameplayTagCategoryRemap::RemapCategories' has a wrong offset!");
 
 // ScriptStruct GameplayTags.RestrictedConfigInfo
 // 0x0020 (0x0020 - 0x0000)

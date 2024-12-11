@@ -80,6 +80,20 @@ void II_FriendWindow_C::Init()
 }
 
 
+// Function I_FriendWindow.I_FriendWindow_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void II_FriendWindow_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("I_FriendWindow_C", "LeftTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function I_FriendWindow.I_FriendWindow_C.PresenceUpdated
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -89,6 +103,20 @@ void II_FriendWindow_C::PresenceUpdated()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("I_FriendWindow_C", "PresenceUpdated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function I_FriendWindow.I_FriendWindow_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void II_FriendWindow_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("I_FriendWindow_C", "RightTriggerPressed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

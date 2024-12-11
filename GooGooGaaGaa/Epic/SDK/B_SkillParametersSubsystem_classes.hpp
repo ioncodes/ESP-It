@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK

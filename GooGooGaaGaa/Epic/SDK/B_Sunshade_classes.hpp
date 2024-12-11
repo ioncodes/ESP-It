@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "B_StaticMeshActionProp_classes.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "B_StaticMeshActionProp_classes.hpp"
 
 
 namespace SDK

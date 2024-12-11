@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "IrisCore_classes.hpp"
-#include "AudioPlatformConfiguration_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "FieldNotification_structs.hpp"
@@ -21,11 +19,13 @@
 #include "DeveloperSettings_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "PhysicsCore_classes.hpp"
+#include "AudioPlatformConfiguration_structs.hpp"
 #include "Chaos_structs.hpp"
 #include "MeshDescription_classes.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "AudioExtensions_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "IrisCore_classes.hpp"
 #include "NetCore_structs.hpp"
 #include "NetCore_classes.hpp"
 #include "PacketHandler_classes.hpp"

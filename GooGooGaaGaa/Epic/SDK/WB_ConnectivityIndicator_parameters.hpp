@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_ConnectivityState_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_ConnectivityType_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params

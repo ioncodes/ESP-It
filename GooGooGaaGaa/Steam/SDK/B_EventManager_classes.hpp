@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "LowEntryJson_structs.hpp"
+#include "EventNames_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 #include "S_EventInfo_structs.hpp"
-#include "EventNames_structs.hpp"
 #include "S_Event_structs.hpp"
 #include "EventTime_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
-#include "LowEntryJson_structs.hpp"
 
 
 namespace SDK

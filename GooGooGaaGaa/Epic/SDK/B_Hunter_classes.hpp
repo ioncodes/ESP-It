@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 
 

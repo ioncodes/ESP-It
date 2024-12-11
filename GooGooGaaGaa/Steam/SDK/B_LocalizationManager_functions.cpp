@@ -160,23 +160,52 @@ void UB_LocalizationManager_C::Initialize(class UGameInstance* InGameInstance)
 }
 
 
-// Function B_LocalizationManager.B_LocalizationManager_C.IsLanguageSupported
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function B_LocalizationManager.B_LocalizationManager_C.InitializeCulture
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    LanguageIsValid                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UB_LocalizationManager_C::IsLanguageSupported()
+void UB_LocalizationManager_C::InitializeCulture(bool* LanguageIsValid)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_LocalizationManager_C", "IsLanguageSupported");
+		Func = Class->GetFunction("B_LocalizationManager_C", "InitializeCulture");
 
-	Params::B_LocalizationManager_C_IsLanguageSupported Parms{};
+	Params::B_LocalizationManager_C_InitializeCulture Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (LanguageIsValid != nullptr)
+		*LanguageIsValid = Parms.LanguageIsValid;
+}
+
+
+// Function B_LocalizationManager.B_LocalizationManager_C.IsLanguageValid
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           CurrentCulture                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    LanguageIsValid                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           LanguageCode                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UB_LocalizationManager_C::IsLanguageValid(const class FString& CurrentCulture, bool* LanguageIsValid, class FString* LanguageCode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_LocalizationManager_C", "IsLanguageValid");
+
+	Params::B_LocalizationManager_C_IsLanguageValid Parms{};
+
+	Parms.CurrentCulture = std::move(CurrentCulture);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (LanguageIsValid != nullptr)
+		*LanguageIsValid = Parms.LanguageIsValid;
+
+	if (LanguageCode != nullptr)
+		*LanguageCode = std::move(Parms.LanguageCode);
 }
 
 

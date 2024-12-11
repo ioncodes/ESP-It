@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "SLanguage_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SButtonLocalization_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
@@ -41,7 +41,8 @@ public:
 	struct FKey GetKeyForAxis(class FName AxisName, double Scale, bool* bKeyFound);
 	class UB_MenuUIManager_C* GetMenuUIManager();
 	void Initialize(class UGameInstance* InGameInstance);
-	bool IsLanguageSupported();
+	void InitializeCulture(bool* LanguageIsValid);
+	void IsLanguageValid(const class FString& CurrentCulture, bool* LanguageIsValid, class FString* LanguageCode);
 	void NintendoSwitchSwapAcceptBackButton(const struct FKey& ActionKey, struct FKey* FixedKey);
 
 public:

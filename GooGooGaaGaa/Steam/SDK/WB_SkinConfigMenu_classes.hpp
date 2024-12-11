@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "UMG_classes.hpp"
+#include "ETeamID_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -36,22 +36,22 @@ public:
 	int32                                         FocusedConfig;                                     // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddNewConfigButton();
-	void BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
-	void BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
-	void BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
-	void Construct();
-	void DeleteConfigButton();
-	void ExecuteUbergraph_WB_SkinConfigMenu(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
-	void Initialize(class UWB_SkinCategoryMenuScreen_C* SkinCategoryMenu);
-	void OnApply();
-	void OnBack();
-	void OnSpecialAction();
 	void RandomizeSkinConfig();
-	void RemoveSkinConfigFromSave(class UB_SkinSelection_C* SkinSlots, int32 ActiveConfigNr, ETeamID Team_0);
 	void ToggleActiveConfigNrInGamepadMode(int32* ToggledConfigNr);
+	void RemoveSkinConfigFromSave(class UB_SkinSelection_C* SkinSlots, int32 ActiveConfigNr, ETeamID Team_0);
+	void DeleteConfigButton();
+	void AddNewConfigButton();
 	void UpdateSkinConfigTileView();
+	void BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
+	void Initialize(class UWB_SkinCategoryMenuScreen_C* SkinCategoryMenu);
+	void Construct();
+	void OnSpecialAction();
+	void OnApply();
+	void BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
+	void OnBack();
+	void BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
+	void ExecuteUbergraph_WB_SkinConfigMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

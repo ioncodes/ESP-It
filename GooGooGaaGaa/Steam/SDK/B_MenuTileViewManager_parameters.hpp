@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "SMapData_structs.hpp"
-#include "E_GameModifierType_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
+#include "E_GameModifierType_structs.hpp"
+#include "ETeamID_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
 #include "E_PowerupRuleType_structs.hpp"
-#include "ETeamID_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
+#include "SMapData_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
 
 

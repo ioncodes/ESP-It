@@ -176,7 +176,7 @@ static_assert(offsetof(WB_RecentlyPlayed_C_RecentPlayerComparator, CallFunc_GetL
 static_assert(offsetof(WB_RecentlyPlayed_C_RecentPlayerComparator, CallFunc_Less_DateTimeDateTime_ReturnValue) == 0x000048, "Member 'WB_RecentlyPlayed_C_RecentPlayerComparator::CallFunc_Less_DateTimeDateTime_ReturnValue' has a wrong offset!");
 
 // Function WB_RecentlyPlayed.WB_RecentlyPlayed_C.RefreshRecentPlayers
-// 0x0178 (0x0178 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct WB_RecentlyPlayed_C_RefreshRecentPlayers final
 {
 public:
@@ -185,91 +185,105 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               FriendList;                                        // 0x0018(0x0010)(Edit, BlueprintVisible)
 	class UB_OnlineUserEntryData_C*               NewUserEntry;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved; // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved; // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53[0x1];                                       // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0090(0x0030)(HasGetValueTypeHash)
-	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x00C0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UOnlineRecentPlayerRef*>         CallFunc_GetRecentPlayers_OutRecentPlayers;        // 0x00D8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetRecentPlayers_ReturnValue;             // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineRecentPlayerRef*                 CallFunc_Array_Get_Item_1;                         // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0100(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x0138(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x016E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16F[0x1];                                      // 0x016F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0068(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved; // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved; // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_93[0x1];                                       // 0x0093(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x00C8(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0108(0x0030)(HasGetValueTypeHash)
+	TArray<class UOnlineRecentPlayerRef*>         CallFunc_GetRecentPlayers_OutRecentPlayers;        // 0x0138(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetRecentPlayers_ReturnValue;             // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineRecentPlayerRef*                 CallFunc_Array_Get_Item_1;                         // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility; // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x0168(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_RecentlyPlayed_C_RefreshRecentPlayers) == 0x000008, "Wrong alignment on WB_RecentlyPlayed_C_RefreshRecentPlayers");
-static_assert(sizeof(WB_RecentlyPlayed_C_RefreshRecentPlayers) == 0x000178, "Wrong size on WB_RecentlyPlayed_C_RefreshRecentPlayers");
+static_assert(sizeof(WB_RecentlyPlayed_C_RefreshRecentPlayers) == 0x0001A0, "Wrong size on WB_RecentlyPlayed_C_RefreshRecentPlayers");
 static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, NewPlayersToAdd) == 0x000000, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::NewPlayersToAdd' has a wrong offset!");
 static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, RequiresFocusReset) == 0x000010, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::RequiresFocusReset' has a wrong offset!");
 static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, FriendList) == 0x000018, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::FriendList' has a wrong offset!");
 static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, NewUserEntry) == 0x000028, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::NewUserEntry' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_AsB_Game_Instance) == 0x000040, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved) == 0x000050, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved) == 0x000051, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_BooleanAND_ReturnValue) == 0x000052, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Loop_Counter_Variable_1) == 0x000054, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Add_IntInt_ReturnValue_1) == 0x000058, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Array_Index_Variable) == 0x00005C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000060, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Map_Length_ReturnValue) == 0x000068, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Map_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00006C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Array_Index_Variable_1) == 0x000070, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000078, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetOwningPlayer_ReturnValue) == 0x000080, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000088, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000090, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetFriendsList_OutFriends) == 0x0000C0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetFriendsList_ReturnValue) == 0x0000D0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetRecentPlayers_OutRecentPlayers) == 0x0000D8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetRecentPlayers_OutRecentPlayers' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetRecentPlayers_ReturnValue) == 0x0000E8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetRecentPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Get_Item) == 0x0000F0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Get_Item_1) == 0x0000F8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetUserId_ReturnValue) == 0x000100, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Add_ReturnValue) == 0x000130, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Add_ReturnValue_1) == 0x000134, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetUserId_ReturnValue_1) == 0x000138, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Length_ReturnValue) == 0x000168, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Map_Contains_ReturnValue) == 0x00016C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Less_IntInt_ReturnValue) == 0x00016D, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Contains_ReturnValue) == 0x00016E, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Length_ReturnValue_1) == 0x000170, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Less_IntInt_ReturnValue_1) == 0x000174, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000030, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_AsB_Game_Instance) == 0x000048, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000058, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetGameInstance_ReturnValue_1) == 0x000060, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetFriendsList_OutFriends) == 0x000068, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetFriendsList_ReturnValue) == 0x000078, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000080, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Length_ReturnValue) == 0x00008C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved) == 0x000091, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetIsRecentPlayersRetrieved_RecentPlayersRetrieved' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved) == 0x000092, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Loop_Counter_Variable_1) == 0x000094, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_BooleanAND_ReturnValue) == 0x000098, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Add_IntInt_ReturnValue_1) == 0x00009C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Array_Index_Variable) == 0x0000A0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetEngineSubsystem_ReturnValue) == 0x0000A8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Map_Length_ReturnValue) == 0x0000B0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Map_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, Temp_int_Array_Index_Variable_1) == 0x0000B4, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000B8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Get_Item) == 0x0000C0, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetUserId_ReturnValue) == 0x0000C8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Add_ReturnValue) == 0x0000F8, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetOwningPlayer_ReturnValue) == 0x000100, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000108, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetRecentPlayers_OutRecentPlayers) == 0x000138, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetRecentPlayers_OutRecentPlayers' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetRecentPlayers_ReturnValue) == 0x000148, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetRecentPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Length_ReturnValue_1) == 0x00014C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Get_Item_1) == 0x000150, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Less_IntInt_ReturnValue_1) == 0x000158, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Add_ReturnValue_1) == 0x00015C, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility) == 0x000160, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_GetUserId_ReturnValue_1) == 0x000168, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Not_PreBool_ReturnValue) == 0x000198, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Map_Contains_ReturnValue) == 0x000199, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecentlyPlayed_C_RefreshRecentPlayers, CallFunc_Array_Contains_ReturnValue) == 0x00019A, "Member 'WB_RecentlyPlayed_C_RefreshRecentPlayers::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
 
 // Function WB_RecentlyPlayed.WB_RecentlyPlayed_C.RemoveEntry
 // 0x0028 (0x0028 - 0x0000)

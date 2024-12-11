@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_ConnectivityState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_ConnectivityState_structs.hpp"
 #include "E_ConnectivityType_structs.hpp"
 
 

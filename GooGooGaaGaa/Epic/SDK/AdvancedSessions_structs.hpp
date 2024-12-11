@@ -115,15 +115,15 @@ enum class EOnlineComparisonOpRedux : uint8
 	EOnlineComparisonOpRedux_MAX             = 6,
 };
 
-// ScriptStruct AdvancedSessions.BPUserOnlineAccount
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FBPUserOnlineAccount final
+// ScriptStruct AdvancedSessions.SessionPropertyKeyPair
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FSessionPropertyKeyPair final
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBPUserOnlineAccount) == 0x000008, "Wrong alignment on FBPUserOnlineAccount");
-static_assert(sizeof(FBPUserOnlineAccount) == 0x000010, "Wrong size on FBPUserOnlineAccount");
+static_assert(alignof(FSessionPropertyKeyPair) == 0x000008, "Wrong alignment on FSessionPropertyKeyPair");
+static_assert(sizeof(FSessionPropertyKeyPair) == 0x000028, "Wrong size on FSessionPropertyKeyPair");
 
 // ScriptStruct AdvancedSessions.BPUniqueNetId
 // 0x0020 (0x0020 - 0x0000)
@@ -182,15 +182,25 @@ static_assert(offsetof(FBPFriendInfo, UniqueNetId) == 0x000028, "Member 'FBPFrie
 static_assert(offsetof(FBPFriendInfo, bIsPlayingSameGame) == 0x000048, "Member 'FBPFriendInfo::bIsPlayingSameGame' has a wrong offset!");
 static_assert(offsetof(FBPFriendInfo, PresenceInfo) == 0x000050, "Member 'FBPFriendInfo::PresenceInfo' has a wrong offset!");
 
-// ScriptStruct AdvancedSessions.SessionPropertyKeyPair
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FSessionPropertyKeyPair final
+// ScriptStruct AdvancedSessions.SessionsSearchSetting
+// 0x0030 (0x0030 - 0x0000)
+struct alignas(0x08) FSessionsSearchSetting final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSessionPropertyKeyPair) == 0x000008, "Wrong alignment on FSessionPropertyKeyPair");
-static_assert(sizeof(FSessionPropertyKeyPair) == 0x000028, "Wrong size on FSessionPropertyKeyPair");
+static_assert(alignof(FSessionsSearchSetting) == 0x000008, "Wrong alignment on FSessionsSearchSetting");
+static_assert(sizeof(FSessionsSearchSetting) == 0x000030, "Wrong size on FSessionsSearchSetting");
+
+// ScriptStruct AdvancedSessions.BPUserOnlineAccount
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FBPUserOnlineAccount final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBPUserOnlineAccount) == 0x000008, "Wrong alignment on FBPUserOnlineAccount");
+static_assert(sizeof(FBPUserOnlineAccount) == 0x000010, "Wrong size on FBPUserOnlineAccount");
 
 // ScriptStruct AdvancedSessions.BPOnlineUser
 // 0x0040 (0x0040 - 0x0000)
@@ -206,16 +216,6 @@ static_assert(sizeof(FBPOnlineUser) == 0x000040, "Wrong size on FBPOnlineUser");
 static_assert(offsetof(FBPOnlineUser, UniqueNetId) == 0x000000, "Member 'FBPOnlineUser::UniqueNetId' has a wrong offset!");
 static_assert(offsetof(FBPOnlineUser, DisplayName) == 0x000020, "Member 'FBPOnlineUser::DisplayName' has a wrong offset!");
 static_assert(offsetof(FBPOnlineUser, RealName) == 0x000030, "Member 'FBPOnlineUser::RealName' has a wrong offset!");
-
-// ScriptStruct AdvancedSessions.SessionsSearchSetting
-// 0x0030 (0x0030 - 0x0000)
-struct alignas(0x08) FSessionsSearchSetting final
-{
-public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSessionsSearchSetting) == 0x000008, "Wrong alignment on FSessionsSearchSetting");
-static_assert(sizeof(FSessionsSearchSetting) == 0x000030, "Wrong size on FSessionsSearchSetting");
 
 // ScriptStruct AdvancedSessions.BPOnlineRecentPlayer
 // 0x0010 (0x0050 - 0x0040)

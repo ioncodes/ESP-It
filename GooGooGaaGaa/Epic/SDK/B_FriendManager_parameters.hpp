@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "S_InviteInfo_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "E_PopupType_structs.hpp"
-#include "S_InviteInfo_structs.hpp"
 
 
 namespace SDK::Params
@@ -41,6 +41,17 @@ public:
 static_assert(alignof(B_FriendManager_C_OnUserInfosReceived__DelegateSignature) == 0x000008, "Wrong alignment on B_FriendManager_C_OnUserInfosReceived__DelegateSignature");
 static_assert(sizeof(B_FriendManager_C_OnUserInfosReceived__DelegateSignature) == 0x000010, "Wrong size on B_FriendManager_C_OnUserInfosReceived__DelegateSignature");
 static_assert(offsetof(B_FriendManager_C_OnUserInfosReceived__DelegateSignature, UserIds) == 0x000000, "Member 'B_FriendManager_C_OnUserInfosReceived__DelegateSignature::UserIds' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.SessionInviteReceived__DelegateSignature
+// 0x0030 (0x0030 - 0x0000)
+struct B_FriendManager_C_SessionInviteReceived__DelegateSignature final
+{
+public:
+	struct FUniqueNetIdRepl                       FromPlayer;                                        // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_SessionInviteReceived__DelegateSignature) == 0x000008, "Wrong alignment on B_FriendManager_C_SessionInviteReceived__DelegateSignature");
+static_assert(sizeof(B_FriendManager_C_SessionInviteReceived__DelegateSignature) == 0x000030, "Wrong size on B_FriendManager_C_SessionInviteReceived__DelegateSignature");
+static_assert(offsetof(B_FriendManager_C_SessionInviteReceived__DelegateSignature, FromPlayer) == 0x000000, "Member 'B_FriendManager_C_SessionInviteReceived__DelegateSignature::FromPlayer' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.AcceptFriendRequest
 // 0x0078 (0x0078 - 0x0000)
@@ -109,6 +120,20 @@ static_assert(offsetof(B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist, 
 static_assert(offsetof(B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist, K2Node_SwitchEnum_CmpSuccess) == 0x00003A, "Member 'B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'B_FriendManager_C_AnyPendingFriendOrSessionInvitesExist::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.BlockedPlayerListChanged
+// 0x0018 (0x0018 - 0x0000)
+struct B_FriendManager_C_BlockedPlayerListChanged final
+{
+public:
+	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ListName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_BlockedPlayerListChanged) == 0x000008, "Wrong alignment on B_FriendManager_C_BlockedPlayerListChanged");
+static_assert(sizeof(B_FriendManager_C_BlockedPlayerListChanged) == 0x000018, "Wrong size on B_FriendManager_C_BlockedPlayerListChanged");
+static_assert(offsetof(B_FriendManager_C_BlockedPlayerListChanged, LocalUserNum) == 0x000000, "Member 'B_FriendManager_C_BlockedPlayerListChanged::LocalUserNum' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_BlockedPlayerListChanged, ListName) == 0x000008, "Member 'B_FriendManager_C_BlockedPlayerListChanged::ListName' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.CheckForTooManyFriendsAndPending
 // 0x0078 (0x0078 - 0x0000)
@@ -202,75 +227,97 @@ static_assert(offsetof(B_FriendManager_C_CheckIncomingTradeRequests, CallFunc_Eq
 static_assert(offsetof(B_FriendManager_C_CheckIncomingTradeRequests, CallFunc_Add_IntInt_ReturnValue) == 0x000074, "Member 'B_FriendManager_C_CheckIncomingTradeRequests::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.CreateNecerssaryInvitationPopups
-// 0x0158 (0x0158 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct B_FriendManager_C_CreateNecerssaryInvitationPopups final
 {
 public:
-	TArray<struct FUniqueNetIdRepl>               InvitationToRemove;                                // 0x0000(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item;                           // 0x0030(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FUniqueNetIdRepl>               CallFunc_Map_Values_Values;                        // 0x0068(0x0010)(ReferenceParm)
-	TArray<struct FUniqueNetIdRepl>               CallFunc_Map_Keys_Keys;                            // 0x0078(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_1;                         // 0x0090(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_PopupType                                   CallFunc_Map_Find_Value;                           // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserRef*                         CallFunc_GetUserInfo_ReturnValue;                  // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DA[0x6];                                       // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x00F8(0x0030)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_InviteInfo                          K2Node_MakeStruct_S_InviteInfo;                    // 0x0130(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CurrentUserId;                                     // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FUniqueNetIdRepl>               InvitationToRemove;                                // 0x0030(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   CallFunc_Map_Find_Value;                           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   CallFunc_Map_Find_Value_1;                         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57[0x1];                                       // 0x0057(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item;                           // 0x0058(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue_1;                 // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   CallFunc_Map_Find_Value_2;                         // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineUserRef*                         CallFunc_GetUserInfo_ReturnValue;                  // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerRefPlatformBlocked_IsBlocked;     // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility; // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x00D0(0x0030)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_InviteInfo                          K2Node_MakeStruct_S_InviteInfo;                    // 0x0108(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FUniqueNetIdRepl>               CallFunc_Map_Values_Values;                        // 0x0130(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUniqueNetIdRepl>               CallFunc_Map_Keys_Keys;                            // 0x0148(0x0010)(ReferenceParm)
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_1;                         // 0x0158(0x0030)(HasGetValueTypeHash)
 };
 static_assert(alignof(B_FriendManager_C_CreateNecerssaryInvitationPopups) == 0x000008, "Wrong alignment on B_FriendManager_C_CreateNecerssaryInvitationPopups");
-static_assert(sizeof(B_FriendManager_C_CreateNecerssaryInvitationPopups) == 0x000158, "Wrong size on B_FriendManager_C_CreateNecerssaryInvitationPopups");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, InvitationToRemove) == 0x000000, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::InvitationToRemove' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Array_Index_Variable) == 0x000018, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Array_Index_Variable_1) == 0x000020, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000028, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Get_Item) == 0x000030, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Remove_ReturnValue) == 0x000060, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Loop_Counter_Variable_1) == 0x000064, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Values_Values) == 0x000068, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Keys_Keys) == 0x000078, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Length_ReturnValue) == 0x000088, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Less_IntInt_ReturnValue) == 0x0000C0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_Value) == 0x0000C8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_ReturnValue) == 0x0000C9, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetUserInfo_ReturnValue) == 0x0000D0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetUserInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000D8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_IsValid_ReturnValue) == 0x0000D9, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetDisplayName_ReturnValue) == 0x0000E0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetPresenceForUser_bIsValid) == 0x0000F0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetPresenceForUser_Out) == 0x0000F8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Add_IntInt_ReturnValue_1) == 0x000128, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, K2Node_MakeStruct_S_InviteInfo) == 0x000130, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::K2Node_MakeStruct_S_InviteInfo' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Add_ReturnValue_1) == 0x000150, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(sizeof(B_FriendManager_C_CreateNecerssaryInvitationPopups) == 0x000188, "Wrong size on B_FriendManager_C_CreateNecerssaryInvitationPopups");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CurrentUserId) == 0x000000, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CurrentUserId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, InvitationToRemove) == 0x000030, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::InvitationToRemove' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Array_Index_Variable) == 0x000040, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Loop_Counter_Variable) == 0x000044, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Add_IntInt_ReturnValue) == 0x000048, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Array_Index_Variable_1) == 0x00004C, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_Value) == 0x000050, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_ReturnValue) == 0x000051, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Remove_ReturnValue) == 0x000052, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, K2Node_SwitchEnum_CmpSuccess) == 0x000053, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_Value_1) == 0x000054, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_ReturnValue_1) == 0x000055, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, K2Node_SwitchEnum_CmpSuccess_1) == 0x000056, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Get_Item) == 0x000058, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Add_ReturnValue) == 0x000088, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Remove_ReturnValue_1) == 0x00008C, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Remove_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_Value_2) == 0x000094, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Find_ReturnValue_2) == 0x000095, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, Temp_int_Loop_Counter_Variable_1) == 0x000098, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000A0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetUserInfo_ReturnValue) == 0x0000A8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetUserInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Less_IntInt_ReturnValue) == 0x0000B0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_IsPlayerRefPlatformBlocked_IsBlocked) == 0x0000B1, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_IsPlayerRefPlatformBlocked_IsBlocked' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_IsValid_ReturnValue) == 0x0000B2, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility) == 0x0000B3, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_BooleanOR_ReturnValue) == 0x0000B4, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetDisplayName_ReturnValue) == 0x0000B8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetPresenceForUser_bIsValid) == 0x0000C8, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_GetPresenceForUser_Out) == 0x0000D0, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Add_IntInt_ReturnValue_1) == 0x000100, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, K2Node_MakeStruct_S_InviteInfo) == 0x000108, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::K2Node_MakeStruct_S_InviteInfo' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Add_ReturnValue_1) == 0x000128, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Length_ReturnValue) == 0x00012C, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Values_Values) == 0x000130, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Less_IntInt_ReturnValue_1) == 0x000140, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Map_Keys_Keys) == 0x000148, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_CreateNecerssaryInvitationPopups, CallFunc_Array_Get_Item_1) == 0x000158, "Member 'B_FriendManager_C_CreateNecerssaryInvitationPopups::CallFunc_Array_Get_Item_1' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.DeleteFriend
 // 0x0030 (0x0030 - 0x0000)
@@ -284,724 +331,776 @@ static_assert(sizeof(B_FriendManager_C_DeleteFriend) == 0x000030, "Wrong size on
 static_assert(offsetof(B_FriendManager_C_DeleteFriend, FriendId) == 0x000000, "Member 'B_FriendManager_C_DeleteFriend::FriendId' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.ExecuteUbergraph_B_FriendManager
-// 0x1558 (0x1558 - 0x0000)
+// 0x16E0 (0x16E0 - 0x0000)
 struct B_FriendManager_C_ExecuteUbergraph_B_FriendManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_LocalUserNum_3;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_13;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_14;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_10;                    // 0x0010(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_9;                     // 0x0010(0x0030)(HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_ListName_7;                     // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_9;                     // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_2;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_12;              // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_9;                     // 0x0068(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_6;                     // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_8;                     // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate;              // 0x00B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_1;                            // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable;                              // 0x00E8(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_11;              // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_8;                     // 0x0130(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_5;                     // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_7;                     // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0180(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_10;              // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_7;                     // 0x0198(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_4;                     // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_6;                     // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_2;                            // 0x01F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_3;                            // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_1;                            // 0x0218(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_9;               // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_6;                     // 0x0268(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_3;                     // 0x0298(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_5;                     // 0x02A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x02B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_8;               // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_5;                     // 0x02D0(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_2;                     // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_4;                     // 0x0310(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0320(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_4;                            // 0x0330(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_5;                            // 0x0340(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_2;                            // 0x0350(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_7;               // 0x0381(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_382[0x6];                                      // 0x0382(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_UserIds_1;                      // 0x0388(0x0010)(ConstParm, ReferenceParm)
-	class FString                                 K2Node_CustomEvent_ErrorStr_3;                     // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x03A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_6;               // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_8;                     // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate;              // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_1;                            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       Temp_struct_Variable;                              // 0x0090(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_13;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_8;                     // 0x00D8(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_6;                     // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_7;                     // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_12;              // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_7;                     // 0x0140(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_5;                     // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_6;                     // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0190(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_2;                            // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_3;                            // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_1;                            // 0x01C0(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_11;              // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_6;                     // 0x0210(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_4;                     // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_5;                     // 0x0250(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0260(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_10;              // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_5;                     // 0x0278(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_3;                     // 0x02A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_4;                     // 0x02B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x02C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_4;                            // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_5;                            // 0x02E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_2;                            // 0x02F8(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_9;               // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32A[0x6];                                      // 0x032A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_UserIds_1;                      // 0x0330(0x0010)(ConstParm, ReferenceParm)
+	class FString                                 K2Node_CustomEvent_ErrorStr_3;                     // 0x0340(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0350(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_8;               // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_UserIds;                        // 0x0368(0x0010)(ConstParm, ReferenceParm)
+	class FString                                 K2Node_CustomEvent_ErrorStr_2;                     // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bWasSuccessful, TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0388(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_6;                            // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FUniqueNetIdRepl>               Temp_struct_Variable_3;                            // 0x03A8(0x0010)(ReferenceParm)
+	bool                                          Temp_bool_Variable_3;                              // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_UserIds;                        // 0x03C0(0x0010)(ConstParm, ReferenceParm)
-	class FString                                 K2Node_CustomEvent_ErrorStr_2;                     // 0x03D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(bool bWasSuccessful, TArray<struct FUniqueNetIdRepl>& UserIds, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x03E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_6;                            // 0x03F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FUniqueNetIdRepl>               Temp_struct_Variable_3;                            // 0x0400(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable_3;                              // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_1;                 // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_5;               // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425[0x3];                                      // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_4;                     // 0x0428(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_1;                     // 0x0458(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_1;                     // 0x0468(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0478(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum;                   // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_4;               // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_3;                     // 0x0490(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName;                       // 0x04C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr;                       // 0x04D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x04E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_7;                            // 0x04F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_8;                            // 0x0500(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_4;                            // 0x0510(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_541[0x3];                                      // 0x0541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x0548(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_PopupType                                   Temp_byte_Variable;                                // 0x0560(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_PopupType                                   Temp_byte_Variable_1;                              // 0x0570(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_6;   // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0580(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_591[0x7];                                      // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_7;   // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_LocalUserNum_2;                 // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_7;               // 0x03CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CD[0x3];                                      // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_4;                     // 0x03D0(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_2;                     // 0x0400(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_1;                     // 0x0410(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_LocalUserNum_1;                 // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_6;               // 0x0434(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_3;                     // 0x0438(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_1;                     // 0x0468(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr;                       // 0x0478(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0488(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_7;                            // 0x0498(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_8;                            // 0x04A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_4;                            // 0x04B8(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x04EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x04F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x04F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0500(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   Temp_byte_Variable;                                // 0x0508(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0510(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   Temp_byte_Variable_1;                              // 0x0518(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_6;   // 0x0520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0528(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_539[0x7];                                      // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_7;   // 0x0540(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTradeRequest>                  K2Node_CustomEvent_requests_1;                     // 0x0548(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FTradeRequest>& Requests)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0558(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTradeRequest>                  K2Node_CustomEvent_requests;                       // 0x0568(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FTradeRequest>& Requests)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x0578(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTradeRequest>                  Temp_struct_Variable_5;                            // 0x0588(0x0010)(ReferenceParm)
+	class UGetIncomingTradeRequestsProxy*         CallFunc_GetIncomingTradeRequests_ReturnValue;     // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5A1[0x7];                                      // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         K2Node_CustomEvent_SanitizedMessages_1;            // 0x05A8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(bool bSuccess, TArray<class FString>& SanitizedMessages)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x05B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x05C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         K2Node_CustomEvent_SanitizedMessages;              // 0x05D0(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(bool bSuccess, TArray<class FString>& SanitizedMessages)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x05E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         Temp_string_Variable_9;                            // 0x05F0(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable_5;                              // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineMessageSanitizerSubsystem*       CallFunc_GetGameInstanceSubsystem_ReturnValue_8;   // 0x0608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTradeRequest>                  K2Node_CustomEvent_requests_1;                     // 0x0610(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FTradeRequest>& Requests)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x0620(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTradeRequest>                  K2Node_CustomEvent_requests;                       // 0x0630(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FTradeRequest>& Requests)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0640(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTradeRequest>                  Temp_struct_Variable_5;                            // 0x0650(0x0010)(ReferenceParm)
-	class UGetIncomingTradeRequestsProxy*         CallFunc_GetIncomingTradeRequests_ReturnValue;     // 0x0660(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0668(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_9;   // 0x0670(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_10;  // 0x0678(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue;    // 0x0680(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSubsystemAvailable_ReturnValue;         // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_689[0x3];                                      // 0x0689(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x068C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_6;                       // 0x06A0(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_3;               // 0x06D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D1[0x7];                                      // 0x06D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_5;                       // 0x06D8(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_2;               // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_709[0x3];                                      // 0x0709(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x070C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x071C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71D[0x3];                                      // 0x071D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_6;                            // 0x0720(0x0030)(HasGetValueTypeHash)
-	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_11;  // 0x0750(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_12;  // 0x0758(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue_1;  // 0x0760(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0768(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0770(0x0030)(HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x07A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue;                // 0x07B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_4;                       // 0x07B8(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x07E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x07E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7EA[0x2];                                      // 0x07EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x07EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7FC[0x4];                                      // 0x07FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_3;                       // 0x0800(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0830(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0831(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_832[0x6];                                      // 0x0832(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_7;                            // 0x0838(0x0030)(HasGetValueTypeHash)
-	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_13;  // 0x0868(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_14;  // 0x0870(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue_2;  // 0x0878(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue_1;          // 0x0880(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsSubsystemAvailable_ReturnValue_1;       // 0x08B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B1[0x7];                                      // 0x08B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x08B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x08C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C1[0x7];                                      // 0x08C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x08C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x08DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DD[0x3];                                      // 0x08DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x08E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E5[0x3];                                      // 0x08E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x08E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x08F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0908(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x090C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_911[0x3];                                      // 0x0911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0914(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0918(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x091C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91D[0x3];                                      // 0x091D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0920(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x0924(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x0928(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_929[0x7];                                      // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_15;  // 0x0930(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x0938(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_2;                       // 0x0948(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_2;                     // 0x0978(0x0030)(HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult)> K2Node_CreateDelegate_OutputDelegate_20;           // 0x09A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x09B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_1;                       // 0x09C8(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FromId;                         // 0x09F8(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_AppId;                          // 0x0A28(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FOnlineSessionSearchResultBP           K2Node_CustomEvent_InviteResult;                   // 0x0A38(0x01B8)()
-	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0BF0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0BF8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0C00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C01[0x7];                                      // 0x0C01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0C08(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0C10(0x0030)(HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, TArray<class UOnlineRecentPlayerRef*>& AddedPlayers)> K2Node_CreateDelegate_OutputDelegate_21;           // 0x0C40(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0C50(0x0030)(HasGetValueTypeHash)
-	TArray<class UOnlineRecentPlayerRef*>         K2Node_CustomEvent_AddedPlayers;                   // 0x0C80(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_22;           // 0x0C90(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_5;                 // 0x0CA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_17;              // 0x0CA4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA5[0x3];                                      // 0x0CA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_ListName_9;                     // 0x0CA8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_11;                    // 0x0CB8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0CC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_23;           // 0x0CCC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0CDC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CDD[0x3];                                      // 0x0CDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0CE0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0CE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE9[0x7];                                      // 0x0CE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_InviteInfoPopup_C*                  CallFunc_Create_ReturnValue;                       // 0x0CF0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0CF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0CF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CFA[0x6];                                      // 0x0CFA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_InviteInfo                          CallFunc_Array_Get_Item;                           // 0x0D00(0x0020)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0D20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerBlocked_IsBlocked;                // 0x0D21(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0D22(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D23[0x5];                                      // 0x0D23(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_1;                     // 0x0D28(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_Friend;                         // 0x0D58(0x0030)(HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0D88(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_24;           // 0x0D90(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0DA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_16;  // 0x0DA8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId;                       // 0x0DB0(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam; // 0x0DE0(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_SendSessionInviteToFriend_ReturnValue;    // 0x0E10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E11[0x3];                                      // 0x0E11(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0E14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineUserSubsystemQueryUserInfo*      CallFunc_QueryUserInfo_ReturnValue;                // 0x0E18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0E20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0E21(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E22[0x6];                                      // 0x0E22(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_8;                            // 0x0E28(0x0030)(HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_10;                           // 0x0E58(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E69[0x7];                                      // 0x0E69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable_11;                           // 0x0E70(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0E80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E81[0x3];                                      // 0x0E81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0E84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_7;                       // 0x0E88(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_Namespace;                      // 0x0EB8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_14;              // 0x0EC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC9[0x7];                                      // 0x0EC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_Error;                          // 0x0ED0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0EE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EE1[0x7];                                      // 0x0EE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_1;                         // 0x0EE8(0x0030)(HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemSendInvite*      CallFunc_SendInvite_ReturnValue;                   // 0x0F18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_25;           // 0x0F20(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0F30(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x0F31(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0F32(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_2;           // 0x0F33(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F34[0x4];                                      // 0x0F34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_2;                         // 0x0F38(0x0030)(HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemAcceptInvite*    CallFunc_AcceptInvite_ReturnValue;                 // 0x0F68(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0F70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F71[0x3];                                      // 0x0F71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x0F74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0F78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F79[0x7];                                      // 0x0F79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_3;                         // 0x0F80(0x0030)(HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemRejectInvite*    CallFunc_RejectInvite_ReturnValue;                 // 0x0FB0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0FB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_3;           // 0x0FB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FBA[0x6];                                      // 0x0FBA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_4;                         // 0x0FC0(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x0FF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FF1[0x7];                                      // 0x0FF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystemDeleteFriend*    CallFunc_DeleteFriend_ReturnValue;                 // 0x0FF8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x1000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_4;           // 0x1001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1002[0x2];                                     // 0x1002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_3;            // 0x1004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_8;                       // 0x1008(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_Namespace_1;                    // 0x1038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_15;              // 0x1048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1049[0x7];                                     // 0x1049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_Error_1;                        // 0x1050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UNamedOnlineSession*                    CallFunc_GetNamedSession_ReturnValue;              // 0x1060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x1068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1069[0x7];                                     // 0x1069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNamedOnlineSessionBP                  CallFunc_GetValue_ReturnValue;                     // 0x1070(0x0208)()
-	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x1278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1279[0x3];                                     // 0x1279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ETradeReason Reason, int64 PendingTradeId, const class FString& SourceProductUserId, const class FString& TargetProductUserId)> K2Node_CreateDelegate_OutputDelegate_26;           // 0x127C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_128C[0x4];                                     // 0x128C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x1290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_27;           // 0x1298(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1; // 0x12A8(0x0030)(HasGetValueTypeHash)
-	TArray<class UOnlineRecentPlayerRef*>         CallFunc_GetRecentPlayers_OutRecentPlayers;        // 0x12D8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetRecentPlayers_ReturnValue;             // 0x12E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12E9[0x7];                                     // 0x12E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UOnlineUserRef*>                 K2Node_CustomEvent_Users;                          // 0x12F0(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x1300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1304[0x4];                                     // 0x1304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         CallFunc_GetDisplayNamesFromUsers_DisplayNames;    // 0x1308(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x1318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131C[0x4];                                     // 0x131C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineMessageSanitizerSubsystemSanitizeDisplayNames* CallFunc_SanitizeDisplayNames_ReturnValue;         // 0x1320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x1328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_4;        // 0x1329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_132A[0x6];                                     // 0x132A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_17;  // 0x1330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemReadFriendsList* CallFunc_ReadFriendsList_ReturnValue;              // 0x1338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_5;                         // 0x1340(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x1374(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1375[0x3];                                     // 0x1375(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x1378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue;          // 0x137C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_7;                // 0x137D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x137E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x137F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x1380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1381[0x7];                                     // 0x1381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_18;  // 0x1388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_6;                         // 0x1390(0x0030)(HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemQueryRecentPlayers* CallFunc_QueryRecentPlayers_ReturnValue;           // 0x13C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x13C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x13C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_1;        // 0x13CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_8;                // 0x13CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x13CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x13D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13D1[0x3];                                     // 0x13D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x13D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue_1;           // 0x13D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13D9[0x7];                                     // 0x13D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_19;  // 0x13E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_7;                         // 0x13E8(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x1418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1; // 0x141C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141D[0x3];                                     // 0x141D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_7;            // 0x1420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_2;        // 0x1424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_9;                // 0x1425(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x1426(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue_2;           // 0x1427(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_20;  // 0x1428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_8;                         // 0x1430(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x1460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2; // 0x1464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_8;   // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_9;   // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue;    // 0x05B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSubsystemAvailable_ReturnValue;         // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C1[0x3];                                      // 0x05C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x05C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_8;                       // 0x05D8(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_5;               // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_7;                       // 0x0610(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_4;               // 0x0640(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_641[0x3];                                      // 0x0641(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0644(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0654(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_655[0x3];                                      // 0x0655(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_6;                            // 0x0658(0x0030)(HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_10;  // 0x0688(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_11;  // 0x0690(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue_1;  // 0x0698(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x06A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x06A8(0x0030)(HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x06D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue;                // 0x06E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_6;                       // 0x06F0(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_3;               // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0721(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_722[0x2];                                      // 0x0722(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0724(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_734[0x4];                                      // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_5;                       // 0x0738(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_2;               // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x0769(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76A[0x6];                                      // 0x076A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_7;                            // 0x0770(0x0030)(HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_12;  // 0x07A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_13;  // 0x07A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetNamedPresenceSubsystem_ReturnValue_2;  // 0x07B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue_1;          // 0x07B8(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsSubsystemAvailable_ReturnValue_1;       // 0x07E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x07F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x07F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0800(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_811[0x3];                                      // 0x0811(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x0814(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_824[0x4];                                      // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_4;                       // 0x0828(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x0858(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_859[0x7];                                      // 0x0859(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error_1;                        // 0x0860(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_3;                       // 0x0870(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x08A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A1[0x7];                                      // 0x08A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error;                          // 0x08A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x08B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_9;                            // 0x08C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x08D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D9[0x7];                                      // 0x08D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_8;                            // 0x08E0(0x0030)(HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_14;  // 0x0910(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, const class FString& ListName)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x0918(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetNamedFriendsSubsystem_ReturnValue;     // 0x0928(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_15;  // 0x0930(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_16;  // 0x0938(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue_1;  // 0x0940(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetNamedFriendsSubsystem_ReturnValue_1;   // 0x0948(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue_2;          // 0x0950(0x0030)(HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemQueryBlockedPlayers* CallFunc_QueryBlockedPlayers_ReturnValue;          // 0x0980(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x0988(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0998(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_999[0x7];                                      // 0x0999(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings_1;              // 0x09A0(0x0010)(ConstParm, ReferenceParm)
+	TArray<class FString>                         K2Node_CustomEvent_filteredStrings;                // 0x09B0(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<class FString>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x09C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         Temp_string_Variable_10;                           // 0x09D0(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x09E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x09E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_20;           // 0x09E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x09F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9F9[0x3];                                      // 0x09F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x09FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0A04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A05[0x3];                                      // 0x0A05(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0A08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0A0C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0A10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x0A14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x0A19(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1A[0x2];                                      // 0x0A1A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_LocalUserNum_4;                 // 0x0A1C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_15;              // 0x0A20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A21[0x7];                                      // 0x0A21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_10;                    // 0x0A28(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName_8;                     // 0x0A58(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_9;                     // 0x0A68(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_21;           // 0x0A78(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId)> K2Node_CreateDelegate_OutputDelegate_22;           // 0x0A88(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_2;                       // 0x0A98(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_2;                     // 0x0AC8(0x0030)(HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult)> K2Node_CreateDelegate_OutputDelegate_23;           // 0x0AF8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x0B08(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_1;                       // 0x0B18(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FromId;                         // 0x0B48(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_AppId;                          // 0x0B78(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FOnlineSessionSearchResultBP           K2Node_CustomEvent_InviteResult;                   // 0x0B88(0x01B8)()
+	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0D40(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0D48(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0D50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D51[0x7];                                      // 0x0D51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0D58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0D60(0x0030)(HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, TArray<class UOnlineRecentPlayerRef*>& AddedPlayers)> K2Node_CreateDelegate_OutputDelegate_24;           // 0x0D90(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0DA0(0x0030)(HasGetValueTypeHash)
+	TArray<class UOnlineRecentPlayerRef*>         K2Node_CustomEvent_AddedPlayers;                   // 0x0DD0(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_25;           // 0x0DE0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0DF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DF4[0x4];                                      // 0x0DF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0DF8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0E00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E01[0x7];                                      // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_InviteInfoPopup_C*                  CallFunc_Create_ReturnValue;                       // 0x0E08(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0E10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0E11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0E12(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E13[0x5];                                      // 0x0E13(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_InviteInfo                          CallFunc_Array_Get_Item;                           // 0x0E18(0x0020)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_LocalUserNum_6;                 // 0x0E38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_19;              // 0x0E3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E3D[0x3];                                      // 0x0E3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_ListName_10;                    // 0x0E40(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_11;                    // 0x0E50(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_17;  // 0x0E60(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerBlocked_IsBlocked;                // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0E69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0E6A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E6B[0x5];                                      // 0x0E6B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_1;                     // 0x0E70(0x0030)(HasGetValueTypeHash)
+	class UOnlineFriendRef*                       K2Node_CustomEvent_Friend;                         // 0x0EA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_26;           // 0x0EA8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0EB8(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerRefPlatformBlocked_IsBlocked;     // 0x0EE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0EE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EEA[0x2];                                      // 0x0EEA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_27;           // 0x0EEC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EFC[0x4];                                      // 0x0EFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId;                       // 0x0F00(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam; // 0x0F30(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_SendSessionInviteToFriend_ReturnValue;    // 0x0F60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F61[0x3];                                      // 0x0F61(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0F64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineUserSubsystemQueryUserInfo*      CallFunc_QueryUserInfo_ReturnValue;                // 0x0F68(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0F70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0F71(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F72[0x6];                                      // 0x0F72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0F78(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0F80(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0F88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F89[0x7];                                      // 0x0F89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_18;  // 0x0F90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0F98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9C[0x4];                                      // 0x0F9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_9;                            // 0x0FA0(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0FD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD1[0x7];                                      // 0x0FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_1;                         // 0x0FD8(0x0030)(HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_11;                           // 0x1008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemSendInvite*      CallFunc_SendInvite_ReturnValue;                   // 0x1018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x1020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x1021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x1022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x1023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1024[0x4];                                     // 0x1024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable_12;                           // 0x1028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_2;           // 0x1038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1039[0x7];                                     // 0x1039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_2;                         // 0x1040(0x0030)(HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemAcceptInvite*    CallFunc_AcceptInvite_ReturnValue;                 // 0x1070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x1078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1079[0x3];                                     // 0x1079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x107C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x1080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1081[0x7];                                     // 0x1081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_3;                         // 0x1088(0x0030)(HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemRejectInvite*    CallFunc_RejectInvite_ReturnValue;                 // 0x10B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x10C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_3;           // 0x10C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C2[0x6];                                     // 0x10C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_4;                         // 0x10C8(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_7;                // 0x10F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10F9[0x7];                                     // 0x10F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystemDeleteFriend*    CallFunc_DeleteFriend_ReturnValue;                 // 0x1100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x1108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_4;           // 0x1109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_110A[0x2];                                     // 0x110A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_3;            // 0x110C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_9;                       // 0x1110(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_Namespace;                      // 0x1140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_16;              // 0x1150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1151[0x7];                                     // 0x1151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error_2;                        // 0x1158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UNamedOnlineSession*                    CallFunc_GetNamedSession_ReturnValue;              // 0x1168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x1170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1171[0x7];                                     // 0x1171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNamedOnlineSessionBP                  CallFunc_GetValue_ReturnValue;                     // 0x1178(0x0208)()
+	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x1380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1381[0x3];                                     // 0x1381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(ETradeReason Reason, int64 PendingTradeId, const class FString& SourceProductUserId, const class FString& TargetProductUserId)> K2Node_CreateDelegate_OutputDelegate_28;           // 0x1384(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_29;           // 0x1394(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13A4[0x4];                                     // 0x13A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x13A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1; // 0x13B0(0x0030)(HasGetValueTypeHash)
+	TArray<class UOnlineRecentPlayerRef*>         CallFunc_GetRecentPlayers_OutRecentPlayers;        // 0x13E0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetRecentPlayers_ReturnValue;             // 0x13F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13F1[0x7];                                     // 0x13F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UOnlineUserRef*>                 K2Node_CustomEvent_Users;                          // 0x13F8(0x0010)(ReferenceParm)
+	TArray<class FString>                         CallFunc_GetDisplayNamesFromUsers_DisplayNames;    // 0x1408(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x1418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141C[0x4];                                     // 0x141C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFilterProfanityProxy*                  CallFunc_FilterProfanity_ReturnValue;              // 0x1420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x1428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x142C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_4;        // 0x142D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_142E[0x2];                                     // 0x142E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_5;                         // 0x1430(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x1460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x1464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1465[0x3];                                     // 0x1465(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_8;            // 0x1468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_3;        // 0x146C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_10;               // 0x146D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x146E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue_3;           // 0x146F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x1470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x1474(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1475[0x3];                                     // 0x1475(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_9;                         // 0x1478(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x14A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue_4;           // 0x14AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14AD[0x3];                                     // 0x14AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_9;            // 0x14B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3; // 0x14B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_4;        // 0x14B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_11;               // 0x14B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14B7[0x1];                                     // 0x14B7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable_12;                           // 0x14B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x14C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C9[0x7];                                     // 0x14C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable_13;                           // 0x14D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x14E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue_1;   // 0x14E8(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x1518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1519[0x7];                                     // 0x1519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue_1;              // 0x1520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x1528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue_1;             // 0x1529(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue_2;             // 0x152A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_152B[0x1];                                     // 0x152B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_LocalUserNum_4;                 // 0x152C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_16;              // 0x1530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1531[0x7];                                     // 0x1531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_ListName_8;                     // 0x1538(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_10;                    // 0x1548(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x1468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x146C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue;          // 0x146D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_8;                // 0x146E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_146F[0x1];                                     // 0x146F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_6;                         // 0x1470(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x14A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x14A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_1;        // 0x14A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14A3[0x1];                                     // 0x14A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x14A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_9;                // 0x14A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14A9[0x3];                                     // 0x14A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x14AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x14B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14B1[0x7];                                     // 0x14B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_10;                      // 0x14B8(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_Namespace_1;                    // 0x14E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_17;              // 0x14F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14F9[0x7];                                     // 0x14F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error_3;                        // 0x1500(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue_1;           // 0x1510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1511[0x3];                                     // 0x1511(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)> K2Node_CreateDelegate_OutputDelegate_30;           // 0x1514(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1524[0x4];                                     // 0x1524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_7;                         // 0x1528(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x1558(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1; // 0x155C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_155D[0x3];                                     // 0x155D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_7;            // 0x1560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_2;        // 0x1564(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_10;               // 0x1565(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x1566(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue_2;           // 0x1567(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_8;                         // 0x1568(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x1598(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue_3;           // 0x159C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159D[0x3];                                     // 0x159D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_8;            // 0x15A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2; // 0x15A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_3;        // 0x15A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_11;               // 0x15A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15A7[0x1];                                     // 0x15A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item_9;                         // 0x15A8(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x15D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3; // 0x15D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue_4;        // 0x15DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15DB[0x1];                                     // 0x15DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x15DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_12;               // 0x15E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15E1[0x3];                                     // 0x15E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_9;            // 0x15E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x15E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue_4;           // 0x15E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15EA[0x6];                                     // 0x15EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_19;  // 0x15F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_20;  // 0x15F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemQueryRecentPlayers* CallFunc_QueryRecentPlayers_ReturnValue;           // 0x1600(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystemReadFriendsList* CallFunc_ReadFriendsList_ReturnValue;              // 0x1608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x1610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x1611(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1612[0x6];                                     // 0x1612(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x1618(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue_1;   // 0x1620(0x0030)(HasGetValueTypeHash)
+	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue_1;              // 0x1650(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_21;  // 0x1658(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x1660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1661[0x7];                                     // 0x1661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_22;  // 0x1668(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x1670(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_LocalUserNum;                   // 0x1674(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ListName;                       // 0x1678(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x1688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1689[0x7];                                     // 0x1689(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable_13;                           // 0x1690(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_14;                           // 0x16A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x16B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue_1;             // 0x16B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue_2;             // 0x16B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16B3[0x1];                                     // 0x16B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_LocalUserNum_5;                 // 0x16B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_18;              // 0x16B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16B9[0x7];                                     // 0x16B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_ListName_9;                     // 0x16C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_ErrorStr_10;                    // 0x16D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager) == 0x000008, "Wrong alignment on B_FriendManager_C_ExecuteUbergraph_B_FriendManager");
-static_assert(sizeof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager) == 0x001558, "Wrong size on B_FriendManager_C_ExecuteUbergraph_B_FriendManager");
+static_assert(sizeof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager) == 0x0016E0, "Wrong size on B_FriendManager_C_ExecuteUbergraph_B_FriendManager");
 static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, EntryPoint) == 0x000000, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_3) == 0x000004, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_13) == 0x000008, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_13' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_10) == 0x000010, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_14) == 0x000008, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_14' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_9) == 0x000010, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_9' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_7) == 0x000040, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_9) == 0x000050, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_2) == 0x000060, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_12) == 0x000064, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_12' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_9) == 0x000068, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_6) == 0x000098, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_8) == 0x0000A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate) == 0x0000B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable) == 0x0000C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_1) == 0x0000D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable) == 0x0000E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable) == 0x000118, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable) == 0x00011C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000120, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_11) == 0x000128, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_8) == 0x000130, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_5) == 0x000160, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_7) == 0x000170, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000180, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_10) == 0x000190, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_7) == 0x000198, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_4) == 0x0001C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_6) == 0x0001D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_2) == 0x0001F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_3) == 0x000208, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_1) == 0x000218, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_1) == 0x000248, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000250, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000258, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_9) == 0x000260, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_6) == 0x000268, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_3) == 0x000298, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_5) == 0x0002A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x0002B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_8) == 0x0002C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_5) == 0x0002D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_2) == 0x000300, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_4) == 0x000310, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x000320, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_4) == 0x000330, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_5) == 0x000340, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_2) == 0x000350, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_2) == 0x000380, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_7) == 0x000381, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserIds_1) == 0x000388, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserIds_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_3) == 0x000398, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0003A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_6) == 0x0003B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserIds) == 0x0003C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserIds' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_2) == 0x0003D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x0003E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_6) == 0x0003F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_3) == 0x000400, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_3) == 0x000410, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x000418, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_1) == 0x000420, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_5) == 0x000424, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_4) == 0x000428, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_1) == 0x000458, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_1) == 0x000468, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000478, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum) == 0x000488, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_4) == 0x00048C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_3) == 0x000490, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName) == 0x0004C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr) == 0x0004D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x0004E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_7) == 0x0004F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_8) == 0x000500, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_4) == 0x000510, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_4) == 0x000540, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable_1) == 0x000544, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_4) == 0x000548, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_5) == 0x000550, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000558, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_byte_Variable) == 0x000560, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000568, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_byte_Variable_1) == 0x000570, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_6) == 0x000578, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFriendsList_OutFriends) == 0x000580, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFriendsList_ReturnValue) == 0x000590, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_7) == 0x000598, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bSuccess_1) == 0x0005A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_SanitizedMessages_1) == 0x0005A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_SanitizedMessages_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x0005B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bSuccess) == 0x0005C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_SanitizedMessages) == 0x0005D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_SanitizedMessages' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x0005E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_9) == 0x0005F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_5) == 0x000600, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_8) == 0x000608, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_requests_1) == 0x000610, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_requests_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x000620, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_requests) == 0x000630, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_requests' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000640, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_5) == 0x000650, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetIncomingTradeRequests_ReturnValue) == 0x000660, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetIncomingTradeRequests_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue) == 0x000668, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_9) == 0x000670, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_10) == 0x000678, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue) == 0x000680, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsSubsystemAvailable_ReturnValue) == 0x000688, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsSubsystemAvailable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x00068C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_6) == 0x0006A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_3) == 0x0006D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_5) == 0x0006D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_2) == 0x000708, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x00070C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_6) == 0x00071C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_6) == 0x000720, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_11) == 0x000750, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_12) == 0x000758, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue_1) == 0x000760, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000768, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000770, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x0007A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryPresence_ReturnValue) == 0x0007B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryPresence_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_4) == 0x0007B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_1) == 0x0007E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_1) == 0x0007E9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0007EC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_3) == 0x000800, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful) == 0x000830, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_7) == 0x000831, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_7) == 0x000838, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_13) == 0x000868, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_14) == 0x000870, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue_2) == 0x000878, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniquePlayerId_ReturnValue_1) == 0x000880, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniquePlayerId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsSubsystemAvailable_ReturnValue_1) == 0x0008B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsSubsystemAvailable_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAccount_ReturnValue) == 0x0008B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAttribute_Found) == 0x0008C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAttribute_Found' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAttribute_ReturnValue) == 0x0008C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable) == 0x0008D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_SwitchString_CmpSuccess) == 0x0008DC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue) == 0x0008E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0008E4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x0008E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x0008F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_1) == 0x000908, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00090C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000910, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_2) == 0x000914, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000918, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_2) == 0x00091C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_3) == 0x000920, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000924, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_3) == 0x000928, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_8) == 0x000050, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate) == 0x000060, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable) == 0x000070, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_1) == 0x000080, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable) == 0x000090, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable) == 0x0000C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable) == 0x0000C4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_13) == 0x0000D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_13' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_8) == 0x0000D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_6) == 0x000108, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_7) == 0x000118, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000128, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_12) == 0x000138, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_7) == 0x000140, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_5) == 0x000170, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_6) == 0x000180, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000190, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_2) == 0x0001A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_3) == 0x0001B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_1) == 0x0001C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_1) == 0x0001F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0001F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000200, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_11) == 0x000208, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_6) == 0x000210, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_4) == 0x000240, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_5) == 0x000250, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x000260, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_10) == 0x000270, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_5) == 0x000278, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_3) == 0x0002A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_4) == 0x0002B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0002C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_4) == 0x0002D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_5) == 0x0002E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_2) == 0x0002F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_2) == 0x000328, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_9) == 0x000329, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserIds_1) == 0x000330, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserIds_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_3) == 0x000340, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x000350, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_8) == 0x000360, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserIds) == 0x000368, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserIds' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_2) == 0x000378, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000388, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_6) == 0x000398, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_3) == 0x0003A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_3) == 0x0003B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x0003C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_2) == 0x0003C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_7) == 0x0003CC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_4) == 0x0003D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_2) == 0x000400, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_1) == 0x000410, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000420, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_1) == 0x000430, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_6) == 0x000434, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_3) == 0x000438, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_1) == 0x000468, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr) == 0x000478, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x000488, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_7) == 0x000498, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_8) == 0x0004A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_4) == 0x0004B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_4) == 0x0004E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable_1) == 0x0004EC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_4) == 0x0004F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_5) == 0x0004F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000500, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_byte_Variable) == 0x000508, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000510, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_byte_Variable_1) == 0x000518, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_6) == 0x000520, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFriendsList_OutFriends) == 0x000528, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFriendsList_ReturnValue) == 0x000538, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_7) == 0x000540, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_requests_1) == 0x000548, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_requests_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x000558, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_requests) == 0x000568, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_requests' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x000578, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_5) == 0x000588, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetIncomingTradeRequests_ReturnValue) == 0x000598, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetIncomingTradeRequests_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue) == 0x0005A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_8) == 0x0005A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_9) == 0x0005B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue) == 0x0005B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsSubsystemAvailable_ReturnValue) == 0x0005C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsSubsystemAvailable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x0005C4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_8) == 0x0005D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_5) == 0x000608, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_7) == 0x000610, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_4) == 0x000640, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000644, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_5) == 0x000654, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_6) == 0x000658, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_10) == 0x000688, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_11) == 0x000690, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue_1) == 0x000698, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x0006A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniquePlayerId_ReturnValue) == 0x0006A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x0006D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryPresence_ReturnValue) == 0x0006E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryPresence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_6) == 0x0006F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_3) == 0x000720, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_1) == 0x000721, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x000724, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_5) == 0x000738, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_2) == 0x000768, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_6) == 0x000769, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_7) == 0x000770, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_12) == 0x0007A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_13) == 0x0007A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedPresenceSubsystem_ReturnValue_2) == 0x0007B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedPresenceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniquePlayerId_ReturnValue_1) == 0x0007B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniquePlayerId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsSubsystemAvailable_ReturnValue_1) == 0x0007E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsSubsystemAvailable_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAccount_ReturnValue) == 0x0007F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAttribute_Found) == 0x0007F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserAttribute_ReturnValue) == 0x000800, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_SwitchString_CmpSuccess) == 0x000810, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x000814, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_4) == 0x000828, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_1) == 0x000858, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error_1) == 0x000860, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_3) == 0x000870, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful) == 0x0008A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error) == 0x0008A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0008B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_9) == 0x0008C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_7) == 0x0008D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_8) == 0x0008E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_14) == 0x000910, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x000918, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedFriendsSubsystem_ReturnValue) == 0x000928, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedFriendsSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_15) == 0x000930, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x000938, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_2) == 0x000948, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_2) == 0x000978, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_20) == 0x0009A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0009B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_1) == 0x0009C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FromId) == 0x0009F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FromId' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_AppId) == 0x000A28, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_AppId' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_InviteResult) == 0x000A38, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_InviteResult' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_Event_InGameInstance) == 0x000BF0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_Event_InGameInstance' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000BF8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_DynamicCast_bSuccess) == 0x000C00, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000C08, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000C10, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_21) == 0x000C40, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId) == 0x000C50, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_AddedPlayers) == 0x000C80, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_AddedPlayers' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_22) == 0x000C90, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_5) == 0x000CA0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_17) == 0x000CA4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_17' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_9) == 0x000CA8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_11) == 0x000CB8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue) == 0x000CC8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_23) == 0x000CCC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000CDC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000CE0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_2) == 0x000CE8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Create_ReturnValue) == 0x000CF0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue) == 0x000CF8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanAND_ReturnValue) == 0x000CF9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item) == 0x000D00, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_3) == 0x000D20, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsPlayerBlocked_IsBlocked) == 0x000D21, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsPlayerBlocked_IsBlocked' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000D22, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_1) == 0x000D28, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Friend) == 0x000D58, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Friend' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000D88, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_16) == 0x000938, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedIdentitySubsystem_ReturnValue_1) == 0x000940, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedIdentitySubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedFriendsSubsystem_ReturnValue_1) == 0x000948, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedFriendsSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniquePlayerId_ReturnValue_2) == 0x000950, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniquePlayerId_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryBlockedPlayers_ReturnValue) == 0x000980, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryBlockedPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x000988, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_2) == 0x000998, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_filteredStrings_1) == 0x0009A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_filteredStrings_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_filteredStrings) == 0x0009B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_filteredStrings' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x0009C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_10) == 0x0009D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable) == 0x0009E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue) == 0x0009E4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_20) == 0x0009E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0009F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_1) == 0x0009FC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000A00, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000A04, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_2) == 0x000A08, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_3) == 0x000A0C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000A10, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000A14, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_2) == 0x000A18, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_3) == 0x000A19, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_4) == 0x000A1C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_15) == 0x000A20, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_15' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_10) == 0x000A28, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_8) == 0x000A58, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_9) == 0x000A68, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_21) == 0x000A78, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_22) == 0x000A88, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_2) == 0x000A98, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_2) == 0x000AC8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_23) == 0x000AF8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x000B08, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_1) == 0x000B18, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FromId) == 0x000B48, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FromId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_AppId) == 0x000B78, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_AppId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_InviteResult) == 0x000B88, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_InviteResult' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_Event_InGameInstance) == 0x000D40, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_Event_InGameInstance' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000D48, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_DynamicCast_bSuccess) == 0x000D50, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000D58, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000D60, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_24) == 0x000D90, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_24' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000DA0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_16) == 0x000DA8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId) == 0x000DB0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam) == 0x000DE0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SendSessionInviteToFriend_ReturnValue) == 0x000E10, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SendSessionInviteToFriend_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue) == 0x000E14, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryUserInfo_ReturnValue) == 0x000E18, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryUserInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_2) == 0x000E20, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_4) == 0x000E21, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_8) == 0x000E28, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_10) == 0x000E58, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_8) == 0x000E68, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_11) == 0x000E70, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000E80, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000E84, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_7) == 0x000E88, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Namespace) == 0x000EB8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Namespace' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_14) == 0x000EC8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_14' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error) == 0x000ED0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_3) == 0x000EE0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_1) == 0x000EE8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SendInvite_ReturnValue) == 0x000F18, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SendInvite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_25) == 0x000F20, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_25' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_5) == 0x000F30, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x000F31, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_4) == 0x000F32, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_2) == 0x000F33, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_2) == 0x000F38, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_AcceptInvite_ReturnValue) == 0x000F68, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_AcceptInvite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_6) == 0x000F70, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_2) == 0x000F74, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_5) == 0x000F78, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_3) == 0x000F80, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_RejectInvite_ReturnValue) == 0x000FB0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_RejectInvite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_7) == 0x000FB8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_3) == 0x000FB9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_4) == 0x000FC0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_6) == 0x000FF0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_DeleteFriend_ReturnValue) == 0x000FF8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_DeleteFriend_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_8) == 0x001000, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_4) == 0x001001, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_3) == 0x001004, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_8) == 0x001008, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Namespace_1) == 0x001038, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Namespace_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_15) == 0x001048, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_15' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error_1) == 0x001050, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedSession_ReturnValue) == 0x001060, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedSession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_9) == 0x001068, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetValue_ReturnValue) == 0x001070, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_NotEqual_StrStr_ReturnValue) == 0x001278, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_NotEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_26) == 0x00127C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_26' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstance_ReturnValue) == 0x001290, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_27) == 0x001298, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_27' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1) == 0x0012A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetRecentPlayers_OutRecentPlayers) == 0x0012D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetRecentPlayers_OutRecentPlayers' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetRecentPlayers_ReturnValue) == 0x0012E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetRecentPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Users) == 0x0012F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Users' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_4) == 0x001300, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetDisplayNamesFromUsers_DisplayNames) == 0x001308, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetDisplayNamesFromUsers_DisplayNames' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x001318, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SanitizeDisplayNames_ReturnValue) == 0x001320, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SanitizeDisplayNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_10) == 0x001328, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_4) == 0x001329, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_17) == 0x001330, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_ReadFriendsList_ReturnValue) == 0x001338, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_ReadFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_5) == 0x001340, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_1) == 0x001370, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Contains_ReturnValue) == 0x001374, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x001378, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue) == 0x00137C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_7) == 0x00137D, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue) == 0x00137E, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_11) == 0x00137F, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue) == 0x001380, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_18) == 0x001388, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_6) == 0x001390, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryRecentPlayers_ReturnValue) == 0x0013C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryRecentPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x0013C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_12) == 0x0013C9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_1) == 0x0013CA, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_8) == 0x0013CB, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_2) == 0x0013CC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_1) == 0x0013D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x0013D4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_1) == 0x0013D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_19) == 0x0013E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_7) == 0x0013E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_3) == 0x001418, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1) == 0x00141C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_7) == 0x001420, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_2) == 0x001424, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_9) == 0x001425, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_2) == 0x001426, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_2) == 0x001427, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_20) == 0x001428, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_8) == 0x001430, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_4) == 0x001460, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2) == 0x001464, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_8) == 0x001468, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_3) == 0x00146C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_10) == 0x00146D, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_3) == 0x00146E, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_3) == 0x00146F, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable_2) == 0x001470, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_9) == 0x001474, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_9) == 0x001478, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_5) == 0x0014A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_4) == 0x0014AC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_9) == 0x0014B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3) == 0x0014B4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_4) == 0x0014B5, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_11) == 0x0014B6, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_12) == 0x0014B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_12' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_4) == 0x0014C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_13) == 0x0014D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_13' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x0014E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetControllerUniqueNetId_ReturnValue_1) == 0x0014E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetControllerUniqueNetId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SwitchPlatform_ReturnValue) == 0x001518, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryPresence_ReturnValue_1) == 0x001520, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryPresence_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_13) == 0x001528, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SwitchPlatform_ReturnValue_1) == 0x001529, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SwitchPlatform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SwitchPlatform_ReturnValue_2) == 0x00152A, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SwitchPlatform_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_4) == 0x00152C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_4' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_16) == 0x001530, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_16' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_8) == 0x001538, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_8' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_10) == 0x001548, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId) == 0x000DA0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_AddedPlayers) == 0x000DD0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_AddedPlayers' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_25) == 0x000DE0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_25' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue) == 0x000DF0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000DF8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000E00, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Create_ReturnValue) == 0x000E08, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_3) == 0x000E10, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue) == 0x000E11, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanAND_ReturnValue) == 0x000E12, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item) == 0x000E18, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_6) == 0x000E38, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_19) == 0x000E3C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_19' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_10) == 0x000E40, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_11) == 0x000E50, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_17) == 0x000E60, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsPlayerBlocked_IsBlocked) == 0x000E68, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsPlayerBlocked_IsBlocked' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000E69, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_4) == 0x000E6A, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId_1) == 0x000E70, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Friend) == 0x000EA0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Friend' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_26) == 0x000EA8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_26' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUserId_ReturnValue) == 0x000EB8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsPlayerRefPlatformBlocked_IsBlocked) == 0x000EE8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsPlayerRefPlatformBlocked_IsBlocked' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_2) == 0x000EE9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_27) == 0x000EEC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_27' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_FriendId) == 0x000F00, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_FriendId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam) == 0x000F30, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SendSessionInviteToFriend_ReturnValue) == 0x000F60, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SendSessionInviteToFriend_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue) == 0x000F64, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryUserInfo_ReturnValue) == 0x000F68, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryUserInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_3) == 0x000F70, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_5) == 0x000F71, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000F78, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000F80, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000F88, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_18) == 0x000F90, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_18' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000F98, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_struct_Variable_9) == 0x000FA0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_struct_Variable_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_4) == 0x000FD0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_1) == 0x000FD8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_11) == 0x001008, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_SendInvite_ReturnValue) == 0x001018, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_SendInvite_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_6) == 0x001020, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x001021, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_8) == 0x001022, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_5) == 0x001023, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_12) == 0x001028, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_2) == 0x001038, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_2) == 0x001040, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_AcceptInvite_ReturnValue) == 0x001070, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_AcceptInvite_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_7) == 0x001078, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_2) == 0x00107C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_6) == 0x001080, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_3) == 0x001088, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_RejectInvite_ReturnValue) == 0x0010B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_RejectInvite_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_8) == 0x0010C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_3) == 0x0010C1, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_4) == 0x0010C8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_7) == 0x0010F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_DeleteFriend_ReturnValue) == 0x001100, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_DeleteFriend_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_9) == 0x001108, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_IsNotEmpty_ReturnValue_4) == 0x001109, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_IsNotEmpty_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_AddUnique_ReturnValue_3) == 0x00110C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_AddUnique_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_9) == 0x001110, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Namespace) == 0x001140, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Namespace' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_16) == 0x001150, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_16' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error_2) == 0x001158, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetNamedSession_ReturnValue) == 0x001168, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetNamedSession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_10) == 0x001170, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetValue_ReturnValue) == 0x001178, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_NotEqual_StrStr_ReturnValue) == 0x001380, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_NotEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_28) == 0x001384, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_28' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_29) == 0x001394, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_29' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstance_ReturnValue) == 0x0013A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1) == 0x0013B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetRecentPlayers_OutRecentPlayers) == 0x0013E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetRecentPlayers_OutRecentPlayers' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetRecentPlayers_ReturnValue) == 0x0013F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetRecentPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Users) == 0x0013F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Users' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetDisplayNamesFromUsers_DisplayNames) == 0x001408, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetDisplayNamesFromUsers_DisplayNames' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Loop_Counter_Variable_4) == 0x001418, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FilterProfanity_ReturnValue) == 0x001420, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FilterProfanity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x001428, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_11) == 0x00142C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GreaterEqual_IntInt_ReturnValue_4) == 0x00142D, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GreaterEqual_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_5) == 0x001430, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_1) == 0x001460, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue) == 0x001464, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x001468, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Contains_ReturnValue) == 0x00146C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue) == 0x00146D, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_8) == 0x00146E, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_6) == 0x001470, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue) == 0x0014A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x0014A1, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_1) == 0x0014A2, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_2) == 0x0014A4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_9) == 0x0014A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x0014AC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_1) == 0x0014B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_UserId_10) == 0x0014B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_UserId_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Namespace_1) == 0x0014E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Namespace_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_17) == 0x0014F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_17' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_Error_3) == 0x001500, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_Error_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_1) == 0x001510, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CreateDelegate_OutputDelegate_30) == 0x001514, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CreateDelegate_OutputDelegate_30' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_7) == 0x001528, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_3) == 0x001558, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1) == 0x00155C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_7) == 0x001560, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_2) == 0x001564, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_10) == 0x001565, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_2) == 0x001566, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_2) == 0x001567, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_8) == 0x001568, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_4) == 0x001598, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_3) == 0x00159C, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_8) == 0x0015A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2) == 0x0015A4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_3) == 0x0015A5, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_11) == 0x0015A6, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Get_Item_9) == 0x0015A8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Get_Item_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_3) == 0x0015D8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3) == 0x0015D9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_FUniqueNetIdIsValid_ReturnValue_4) == 0x0015DA, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_FUniqueNetIdIsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_Length_ReturnValue_5) == 0x0015DC, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Not_PreBool_ReturnValue_12) == 0x0015E0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Not_PreBool_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Subtract_IntInt_ReturnValue_9) == 0x0015E4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Subtract_IntInt_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_BooleanOR_ReturnValue_4) == 0x0015E8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_Array_RemoveItem_ReturnValue_4) == 0x0015E9, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_Array_RemoveItem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_19) == 0x0015F0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_19' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_20) == 0x0015F8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_20' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryRecentPlayers_ReturnValue) == 0x001600, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryRecentPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_ReadFriendsList_ReturnValue) == 0x001608, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_ReadFriendsList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_12) == 0x001610, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_13) == 0x001611, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x001618, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetControllerUniqueNetId_ReturnValue_1) == 0x001620, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetControllerUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_QueryPresence_ReturnValue_1) == 0x001650, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_QueryPresence_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_21) == 0x001658, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_21' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsValid_ReturnValue_14) == 0x001660, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_GetGameInstanceSubsystem_ReturnValue_22) == 0x001668, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_GetGameInstanceSubsystem_ReturnValue_22' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_int_Variable_2) == 0x001670, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum) == 0x001674, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName) == 0x001678, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_bool_Variable_9) == 0x001688, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_13) == 0x001690, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_13' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, Temp_string_Variable_14) == 0x0016A0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::Temp_string_Variable_14' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x0016B0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsConsoleBuild_ReturnValue_1) == 0x0016B1, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsConsoleBuild_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, CallFunc_IsConsoleBuild_ReturnValue_2) == 0x0016B2, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::CallFunc_IsConsoleBuild_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_LocalUserNum_5) == 0x0016B4, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_LocalUserNum_5' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_bWasSuccessful_18) == 0x0016B8, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_bWasSuccessful_18' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ListName_9) == 0x0016C0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ListName_9' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_ExecuteUbergraph_B_FriendManager, K2Node_CustomEvent_ErrorStr_10) == 0x0016D0, "Member 'B_FriendManager_C_ExecuteUbergraph_B_FriendManager::K2Node_CustomEvent_ErrorStr_10' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.GetCachedPlatformPresence
 // 0x0370 (0x0370 - 0x0000)
@@ -1184,6 +1283,59 @@ static_assert(alignof(B_FriendManager_C_Initialize) == 0x000008, "Wrong alignmen
 static_assert(sizeof(B_FriendManager_C_Initialize) == 0x000008, "Wrong size on B_FriendManager_C_Initialize");
 static_assert(offsetof(B_FriendManager_C_Initialize, InGameInstance) == 0x000000, "Member 'B_FriendManager_C_Initialize::InGameInstance' has a wrong offset!");
 
+// Function B_FriendManager.B_FriendManager_C.IsPlayerBlocked
+// 0x0018 (0x0018 - 0x0000)
+struct B_FriendManager_C_IsPlayerBlocked final
+{
+public:
+	class FString                                 PlayerId;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          IsBlocked;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_IsPlayerBlocked) == 0x000008, "Wrong alignment on B_FriendManager_C_IsPlayerBlocked");
+static_assert(sizeof(B_FriendManager_C_IsPlayerBlocked) == 0x000018, "Wrong size on B_FriendManager_C_IsPlayerBlocked");
+static_assert(offsetof(B_FriendManager_C_IsPlayerBlocked, PlayerId) == 0x000000, "Member 'B_FriendManager_C_IsPlayerBlocked::PlayerId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerBlocked, IsBlocked) == 0x000010, "Member 'B_FriendManager_C_IsPlayerBlocked::IsBlocked' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerBlocked, CallFunc_Array_Contains_ReturnValue) == 0x000011, "Member 'B_FriendManager_C_IsPlayerBlocked::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.IsPlayerRefPlatformBlocked
+// 0x0028 (0x0028 - 0x0000)
+struct B_FriendManager_C_IsPlayerRefPlatformBlocked final
+{
+public:
+	class UOnlineUserRef*                         PlayerRef;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBlocked;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerBlocked_IsBlocked;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_IsPlayerRefPlatformBlocked) == 0x000008, "Wrong alignment on B_FriendManager_C_IsPlayerRefPlatformBlocked");
+static_assert(sizeof(B_FriendManager_C_IsPlayerRefPlatformBlocked) == 0x000028, "Wrong size on B_FriendManager_C_IsPlayerRefPlatformBlocked");
+static_assert(offsetof(B_FriendManager_C_IsPlayerRefPlatformBlocked, PlayerRef) == 0x000000, "Member 'B_FriendManager_C_IsPlayerRefPlatformBlocked::PlayerRef' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerRefPlatformBlocked, IsBlocked) == 0x000008, "Member 'B_FriendManager_C_IsPlayerRefPlatformBlocked::IsBlocked' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerRefPlatformBlocked, CallFunc_GetUserAttribute_Found) == 0x000009, "Member 'B_FriendManager_C_IsPlayerRefPlatformBlocked::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerRefPlatformBlocked, CallFunc_GetUserAttribute_ReturnValue) == 0x000010, "Member 'B_FriendManager_C_IsPlayerRefPlatformBlocked::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_IsPlayerRefPlatformBlocked, CallFunc_IsPlayerBlocked_IsBlocked) == 0x000020, "Member 'B_FriendManager_C_IsPlayerRefPlatformBlocked::CallFunc_IsPlayerBlocked_IsBlocked' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.NotifySessionInviteReceived
+// 0x01F8 (0x01F8 - 0x0000)
+struct B_FriendManager_C_NotifySessionInviteReceived final
+{
+public:
+	struct FUniqueNetIdRepl                       FromPlayer;                                        // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSearchResultBP           CallFunc_Map_Find_Value;                           // 0x0038(0x01B8)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_NotifySessionInviteReceived) == 0x000008, "Wrong alignment on B_FriendManager_C_NotifySessionInviteReceived");
+static_assert(sizeof(B_FriendManager_C_NotifySessionInviteReceived) == 0x0001F8, "Wrong size on B_FriendManager_C_NotifySessionInviteReceived");
+static_assert(offsetof(B_FriendManager_C_NotifySessionInviteReceived, FromPlayer) == 0x000000, "Member 'B_FriendManager_C_NotifySessionInviteReceived::FromPlayer' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_NotifySessionInviteReceived, CallFunc_Map_Remove_ReturnValue) == 0x000030, "Member 'B_FriendManager_C_NotifySessionInviteReceived::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_NotifySessionInviteReceived, CallFunc_Map_Find_Value) == 0x000038, "Member 'B_FriendManager_C_NotifySessionInviteReceived::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_NotifySessionInviteReceived, CallFunc_Map_Find_ReturnValue) == 0x0001F0, "Member 'B_FriendManager_C_NotifySessionInviteReceived::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
 // Function B_FriendManager.B_FriendManager_C.OnAcceptInviteComplete_35A41B484B6CFFB9578A52A5BD3155FF
 // 0x0058 (0x0058 - 0x0000)
 struct B_FriendManager_C_OnAcceptInviteComplete_35A41B484B6CFFB9578A52A5BD3155FF final
@@ -1276,19 +1428,21 @@ static_assert(offsetof(B_FriendManager_C_OnCallFailed_53851A804A830E61AFB854AB13
 static_assert(offsetof(B_FriendManager_C_OnCallFailed_53851A804A830E61AFB854AB13BB6C79, UserIds) == 0x000008, "Member 'B_FriendManager_C_OnCallFailed_53851A804A830E61AFB854AB13BB6C79::UserIds' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_OnCallFailed_53851A804A830E61AFB854AB13BB6C79, ErrorStr) == 0x000018, "Member 'B_FriendManager_C_OnCallFailed_53851A804A830E61AFB854AB13BB6C79::ErrorStr' has a wrong offset!");
 
-// Function B_FriendManager.B_FriendManager_C.OnCallFailed_652B7B3045DC0C028A2E38958D67868C
-// 0x0018 (0x0018 - 0x0000)
-struct B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C final
+// Function B_FriendManager.B_FriendManager_C.OnCallFailed_6967657645E8E6B25C9013B176D7FDD6
+// 0x0048 (0x0048 - 0x0000)
+struct B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6 final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         SanitizedMessages;                                 // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Error;                                             // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C) == 0x000008, "Wrong alignment on B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C");
-static_assert(sizeof(B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C) == 0x000018, "Wrong size on B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C");
-static_assert(offsetof(B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C, bSuccess) == 0x000000, "Member 'B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C::bSuccess' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C, SanitizedMessages) == 0x000008, "Member 'B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C::SanitizedMessages' has a wrong offset!");
+static_assert(alignof(B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6) == 0x000008, "Wrong alignment on B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6");
+static_assert(sizeof(B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6) == 0x000048, "Wrong size on B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6");
+static_assert(offsetof(B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6, UserId) == 0x000000, "Member 'B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6::UserId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6, bWasSuccessful) == 0x000030, "Member 'B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6::bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6, Error) == 0x000038, "Member 'B_FriendManager_C_OnCallFailed_6967657645E8E6B25C9013B176D7FDD6::Error' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.OnCallFailed_77C017C448C1753B2D8EC78E394EC197
 // 0x0038 (0x0038 - 0x0000)
@@ -1401,6 +1555,17 @@ static_assert(alignof(B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320
 static_assert(sizeof(B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC) == 0x000010, "Wrong size on B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC");
 static_assert(offsetof(B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC, Requests) == 0x000000, "Member 'B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC::Requests' has a wrong offset!");
 
+// Function B_FriendManager.B_FriendManager_C.OnFailure_842E1AC84A79AB73771E288077F13694
+// 0x0010 (0x0010 - 0x0000)
+struct B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694 final
+{
+public:
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694) == 0x000008, "Wrong alignment on B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694");
+static_assert(sizeof(B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694) == 0x000010, "Wrong size on B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694");
+static_assert(offsetof(B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694, FilteredStrings) == 0x000000, "Member 'B_FriendManager_C_OnFailure_842E1AC84A79AB73771E288077F13694::FilteredStrings' has a wrong offset!");
+
 // Function B_FriendManager.B_FriendManager_C.OnFriendInviteReceived
 // 0x0060 (0x0060 - 0x0000)
 struct B_FriendManager_C_OnFriendInviteReceived final
@@ -1430,20 +1595,6 @@ static_assert(offsetof(B_FriendManager_C_OnFriendSessionInviteReceived, UserId) 
 static_assert(offsetof(B_FriendManager_C_OnFriendSessionInviteReceived, FromId) == 0x000030, "Member 'B_FriendManager_C_OnFriendSessionInviteReceived::FromId' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_OnFriendSessionInviteReceived, AppId) == 0x000060, "Member 'B_FriendManager_C_OnFriendSessionInviteReceived::AppId' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_OnFriendSessionInviteReceived, InviteResult) == 0x000070, "Member 'B_FriendManager_C_OnFriendSessionInviteReceived::InviteResult' has a wrong offset!");
-
-// Function B_FriendManager.B_FriendManager_C.OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C
-// 0x0018 (0x0018 - 0x0000)
-struct B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C final
-{
-public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         SanitizedMessages;                                 // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C) == 0x000008, "Wrong alignment on B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C");
-static_assert(sizeof(B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C) == 0x000018, "Wrong size on B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C");
-static_assert(offsetof(B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C, bSuccess) == 0x000000, "Member 'B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C::bSuccess' has a wrong offset!");
-static_assert(offsetof(B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C, SanitizedMessages) == 0x000008, "Member 'B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C::SanitizedMessages' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.OnNewRecentPlayersAdded
 // 0x0040 (0x0040 - 0x0000)
@@ -1483,6 +1634,22 @@ static_assert(alignof(B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8
 static_assert(sizeof(B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF) == 0x000038, "Wrong size on B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF");
 static_assert(offsetof(B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF, UserId) == 0x000000, "Member 'B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF::UserId' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF, bWasSuccessful) == 0x000030, "Member 'B_FriendManager_C_OnPresenceTaskComplete_E50A00F64C1964CD8E4D5695C4575DCF::bWasSuccessful' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6
+// 0x0048 (0x0048 - 0x0000)
+struct B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6 final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Error;                                             // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6) == 0x000008, "Wrong alignment on B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6");
+static_assert(sizeof(B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6) == 0x000048, "Wrong size on B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6");
+static_assert(offsetof(B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6, UserId) == 0x000000, "Member 'B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6::UserId' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6, bWasSuccessful) == 0x000030, "Member 'B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6::bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6, Error) == 0x000038, "Member 'B_FriendManager_C_OnQueryBlockedPlayersComplete_6967657645E8E6B25C9013B176D7FDD6::Error' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B94079D59F1
 // 0x0058 (0x0058 - 0x0000)
@@ -1584,6 +1751,17 @@ public:
 static_assert(alignof(B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC) == 0x000008, "Wrong alignment on B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC");
 static_assert(sizeof(B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC) == 0x000010, "Wrong size on B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC");
 static_assert(offsetof(B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC, Requests) == 0x000000, "Member 'B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC::Requests' has a wrong offset!");
+
+// Function B_FriendManager.B_FriendManager_C.OnSuccess_842E1AC84A79AB73771E288077F13694
+// 0x0010 (0x0010 - 0x0000)
+struct B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694 final
+{
+public:
+	TArray<class FString>                         FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694) == 0x000008, "Wrong alignment on B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694");
+static_assert(sizeof(B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694) == 0x000010, "Wrong size on B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694");
+static_assert(offsetof(B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694, FilteredStrings) == 0x000000, "Member 'B_FriendManager_C_OnSuccess_842E1AC84A79AB73771E288077F13694::FilteredStrings' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.QueryPS5FriendsPresence
 // 0x0100 (0x0100 - 0x0000)
@@ -1777,6 +1955,63 @@ static_assert(alignof(B_FriendManager_C_SanitizePlayerNames) == 0x000008, "Wrong
 static_assert(sizeof(B_FriendManager_C_SanitizePlayerNames) == 0x000010, "Wrong size on B_FriendManager_C_SanitizePlayerNames");
 static_assert(offsetof(B_FriendManager_C_SanitizePlayerNames, Users) == 0x000000, "Member 'B_FriendManager_C_SanitizePlayerNames::Users' has a wrong offset!");
 
+// Function B_FriendManager.B_FriendManager_C.SaveBlockedPlayersList
+// 0x0120 (0x0120 - 0x0000)
+struct B_FriendManager_C_SaveBlockedPlayersList final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetNamedFriendsSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0030(0x0030)(HasGetValueTypeHash)
+	TArray<class UOnlineUserRef*>                 CallFunc_GetBlockedPlayers_OutBlockedPlayers;      // 0x0060(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetBlockedPlayers_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserRef*                         CallFunc_Array_Get_Item;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0088(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1; // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_AppendMultiple_ReturnValue;               // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_SaveBlockedPlayersList) == 0x000008, "Wrong alignment on B_FriendManager_C_SaveBlockedPlayersList");
+static_assert(sizeof(B_FriendManager_C_SaveBlockedPlayersList) == 0x000120, "Wrong size on B_FriendManager_C_SaveBlockedPlayersList");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, Temp_int_Array_Index_Variable) == 0x000000, "Member 'B_FriendManager_C_SaveBlockedPlayersList::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'B_FriendManager_C_SaveBlockedPlayersList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000010, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000018, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetNamedFriendsSubsystem_ReturnValue) == 0x000020, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetNamedFriendsSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000028, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000030, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetBlockedPlayers_OutBlockedPlayers) == 0x000060, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetBlockedPlayers_OutBlockedPlayers' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetBlockedPlayers_ReturnValue) == 0x000070, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetBlockedPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Array_Get_Item) == 0x000078, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_GetUserId_ReturnValue) == 0x000088, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0000C0, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Array_AddUnique_ReturnValue) == 0x0000D0, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1) == 0x0000D8, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Array_Length_ReturnValue_1) == 0x0000E8, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Concat_StrStr_ReturnValue) == 0x0000F0, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_Conv_IntToString_ReturnValue) == 0x000100, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SaveBlockedPlayersList, CallFunc_AppendMultiple_ReturnValue) == 0x000110, "Member 'B_FriendManager_C_SaveBlockedPlayersList::CallFunc_AppendMultiple_ReturnValue' has a wrong offset!");
+
 // Function B_FriendManager.B_FriendManager_C.SendFriendInvite
 // 0x00B8 (0x00B8 - 0x0000)
 struct B_FriendManager_C_SendFriendInvite final
@@ -1813,15 +2048,55 @@ static_assert(offsetof(B_FriendManager_C_SendFriendInvite, CallFunc_MakeLiteralT
 static_assert(offsetof(B_FriendManager_C_SendFriendInvite, CallFunc_Conv_TextToString_ReturnValue_2) == 0x000098, "Member 'B_FriendManager_C_SendFriendInvite::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_FriendManager_C_SendFriendInvite, CallFunc_Conv_TextToString_ReturnValue_3) == 0x0000A8, "Member 'B_FriendManager_C_SendFriendInvite::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
 
+// Function B_FriendManager.B_FriendManager_C.SendPlatformSessionInvite
+// 0x00C8 (0x00C8 - 0x0000)
+struct B_FriendManager_C_SendPlatformSessionInvite final
+{
+public:
+	class UOnlineUserRef*                         UserToInvite;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetNamedSessionSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found_1;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue_1;           // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x0060(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0090(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_SendSessionInviteToFriend_ReturnValue;    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_FriendManager_C_SendPlatformSessionInvite) == 0x000008, "Wrong alignment on B_FriendManager_C_SendPlatformSessionInvite");
+static_assert(sizeof(B_FriendManager_C_SendPlatformSessionInvite) == 0x0000C8, "Wrong size on B_FriendManager_C_SendPlatformSessionInvite");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, UserToInvite) == 0x000000, "Member 'B_FriendManager_C_SendPlatformSessionInvite::UserToInvite' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetUserAttribute_Found) == 0x000010, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetUserAttribute_ReturnValue) == 0x000018, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetNamedSessionSubsystem_ReturnValue) == 0x000028, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetNamedSessionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, K2Node_SwitchString_CmpSuccess) == 0x000030, "Member 'B_FriendManager_C_SendPlatformSessionInvite::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000038, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetUserAttribute_Found_1) == 0x000040, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetUserAttribute_Found_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetUserAttribute_ReturnValue_1) == 0x000048, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetUserAttribute_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000058, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x000060, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000090, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_SendSessionInviteToFriend_ReturnValue) == 0x0000C0, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_SendSessionInviteToFriend_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FriendManager_C_SendPlatformSessionInvite, CallFunc_Ps4Platform_ReturnValue) == 0x0000C1, "Member 'B_FriendManager_C_SendPlatformSessionInvite::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
+
 // Function B_FriendManager.B_FriendManager_C.SendSessionInvite
-// 0x0030 (0x0030 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct B_FriendManager_C_SendSessionInvite final
 {
 public:
-	struct FUniqueNetIdRepl                       Friend;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UOnlineFriendRef*                       Friend;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_FriendManager_C_SendSessionInvite) == 0x000008, "Wrong alignment on B_FriendManager_C_SendSessionInvite");
-static_assert(sizeof(B_FriendManager_C_SendSessionInvite) == 0x000030, "Wrong size on B_FriendManager_C_SendSessionInvite");
+static_assert(sizeof(B_FriendManager_C_SendSessionInvite) == 0x000008, "Wrong size on B_FriendManager_C_SendSessionInvite");
 static_assert(offsetof(B_FriendManager_C_SendSessionInvite, Friend) == 0x000000, "Member 'B_FriendManager_C_SendSessionInvite::Friend' has a wrong offset!");
 
 // Function B_FriendManager.B_FriendManager_C.SetHasIncomingTradeRequests

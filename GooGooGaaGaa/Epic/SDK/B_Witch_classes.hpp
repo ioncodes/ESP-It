@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "STauntAnimation_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_BasicCharacter_classes.hpp"
+#include "STauntAnimation_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 
 

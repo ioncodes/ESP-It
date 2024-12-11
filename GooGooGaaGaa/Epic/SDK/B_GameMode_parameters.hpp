@@ -12,12 +12,12 @@
 
 #include "PropWitchHuntModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SMapData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_JoinAsHunterStates_structs.hpp"
-#include "E_MapSize_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "E_MapSize_structs.hpp"
+#include "SMapData_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "E_JoinAsHunterStates_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "SCalculatedScoreStat_structs.hpp"
@@ -244,20 +244,20 @@ static_assert(sizeof(B_GameMode_C_PlayerIDReceived) == 0x000008, "Wrong size on 
 static_assert(offsetof(B_GameMode_C_PlayerIDReceived, PlayerState) == 0x000000, "Member 'B_GameMode_C_PlayerIDReceived::PlayerState' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.HandleStartMatch
-// 0x0390 (0x0390 - 0x0000)
+// 0x03C8 (0x03C8 - 0x0000)
 struct B_GameMode_C_HandleStartMatch final
 {
 public:
 	TArray<class AB_StaticMeshProp_C*>            StaticMeshProps;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -270,14 +270,14 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players; // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players; // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_2;               // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -290,28 +290,28 @@ public:
 	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_GetTournamentPlayersStruct_PlayerIds;     // 0x00D0(0x0010)(ReferenceParm)
 	TArray<struct FS_TournamentPlayer>            CallFunc_GetTournamentPlayersStruct_TournamentPlayers; // 0x00E0(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_6;               // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_StaticMeshProp_C*                    CallFunc_Array_Get_Item_1;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -322,78 +322,82 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVaRestURL                             CallFunc_GetWorldURL_ReturnValue;                  // 0x0188(0x0068)()
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x01F8(0x0010)()
-	class APlayerState*                           CallFunc_Array_Get_Item_2;                         // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0210(0x0048)(HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0268(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0278(0x0010)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_7;               // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_DateTime_ToIso8601_String;                // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item_3;                         // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue;          // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FVaRestURL                             CallFunc_GetWorldURL_ReturnValue;                  // 0x01A8(0x0068)()
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_7;               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0218(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0228(0x0048)(HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item_2;                         // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0278(0x0010)(ReferenceParm)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0298(0x0010)()
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_SpawnNewPlayerPawn_PlayerPawn;            // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_2;             // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x02CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CB[0x5];                                      // 0x02CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_SpawnNewPlayerPawn_PlayerPawn;            // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_PoolManager_C*                       CallFunc_GetPoolManager_ReturnValue;               // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item_4;                         // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_3;             // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_302[0x6];                                      // 0x0302(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_AchievementManager_C*                CallFunc_CreateObject_Object;                      // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_329[0x3];                                      // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339[0x3];                                      // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_345[0x3];                                      // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_StaticMeshProp_C*>            CallFunc_GetAllActorsOfClass_OutActors;            // 0x0358(0x0010)(ReferenceParm)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_6;            // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0389(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetWitchesCount_WitchesCount;             // 0x038A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x02BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2BD[0x3];                                      // 0x02BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_DateTime_ToIso8601_String;                // 0x02C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item_3;                         // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_2;             // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F2[0x6];                                      // 0x02F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_PoolManager_C*                       CallFunc_GetPoolManager_ReturnValue;               // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item_4;                         // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_3;             // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31A[0x2];                                      // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_AchievementManager_C*                CallFunc_CreateObject_Object;                      // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UReplayWorldSubsystem*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x036C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36D[0x3];                                      // 0x036D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_6;            // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_StaticMeshProp_C*>            CallFunc_GetAllActorsOfClass_OutActors;            // 0x0398(0x0010)(ReferenceParm)
+	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x03B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B2[0x6];                                      // 0x03B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetWitchesCount_WitchesCount;             // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_HandleStartMatch) == 0x000008, "Wrong alignment on B_GameMode_C_HandleStartMatch");
-static_assert(sizeof(B_GameMode_C_HandleStartMatch) == 0x000390, "Wrong size on B_GameMode_C_HandleStartMatch");
+static_assert(sizeof(B_GameMode_C_HandleStartMatch) == 0x0003C8, "Wrong size on B_GameMode_C_HandleStartMatch");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, StaticMeshProps) == 0x000000, "Member 'B_GameMode_C_HandleStartMatch::StaticMeshProps' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_State) == 0x000020, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000030, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_State) == 0x000028, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000031, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable) == 0x000034, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_1) == 0x000038, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue) == 0x000040, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -404,11 +408,11 @@ static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_R
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_2) == 0x000068, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000070, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_2) == 0x000078, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_State_1) == 0x000080, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_3) == 0x000088, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_3) == 0x000090, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players) == 0x000098, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Length_ReturnValue_1) == 0x00009C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Length_ReturnValue_1) == 0x00007C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_3) == 0x000080, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players) == 0x000088, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_CheckDefaultNrOfActivePlayers_Sufficient_Players' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_State_1) == 0x000090, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_3) == 0x000098, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_4) == 0x0000A0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_2) == 0x0000A8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_State_2) == 0x0000B0, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_State_2' has a wrong offset!");
@@ -419,23 +423,23 @@ static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsRoundEnd_RoundI
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Not_PreBool_ReturnValue) == 0x0000CA, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetTournamentPlayersStruct_PlayerIds) == 0x0000D0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetTournamentPlayersStruct_PlayerIds' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetTournamentPlayersStruct_TournamentPlayers) == 0x0000E0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetTournamentPlayersStruct_TournamentPlayers' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_1) == 0x0000F0, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000F4, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_1) == 0x0000F8, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_3) == 0x000100, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000108, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_1) == 0x0000F0, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_1) == 0x0000F4, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item) == 0x0000F8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_1) == 0x000100, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State) == 0x000108, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_6) == 0x000110, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_4) == 0x000118, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000120, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_2) == 0x000114, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_3) == 0x000118, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000120, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_7) == 0x000128, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_2) == 0x00012C, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item) == 0x000130, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State) == 0x000138, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_4) == 0x000130, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000138, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_8) == 0x000140, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_5) == 0x000148, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Length_ReturnValue_2) == 0x000150, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue) == 0x000154, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_2) == 0x000158, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_2) == 0x000154, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue) == 0x000158, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_2) == 0x00015C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_6) == 0x000160, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_1) == 0x000168, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_1' has a wrong offset!");
@@ -444,58 +448,61 @@ static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSucces
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Length_ReturnValue_3) == 0x00017C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000180, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_1) == 0x000181, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetWorldURL_ReturnValue) == 0x000188, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetWorldURL_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_3) == 0x0001F0, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Conv_StringToText_ReturnValue) == 0x0001F8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_2) == 0x000208, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_MakeStruct_FormatArgumentData) == 0x000210, "Member 'B_GameMode_C_HandleStartMatch::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_1) == 0x000258, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_10) == 0x000260, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_MakeArray_Array) == 0x000268, "Member 'B_GameMode_C_HandleStartMatch::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Format_ReturnValue) == 0x000278, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_SwitchEnum_CmpSuccess) == 0x000288, "Member 'B_GameMode_C_HandleStartMatch::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_UtcNow_ReturnValue) == 0x000290, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_UtcNow_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_7) == 0x000298, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_DateTime_ToIso8601_String) == 0x0002A0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_DateTime_ToIso8601_String' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_3) == 0x0002B0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetCurrentLevelName_ReturnValue) == 0x000188, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetCurrentLevelName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Concat_StrStr_ReturnValue) == 0x000198, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetWorldURL_ReturnValue) == 0x0001A8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetWorldURL_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameState_ReturnValue_7) == 0x000210, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameState_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Conv_StringToText_ReturnValue) == 0x000218, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_MakeStruct_FormatArgumentData) == 0x000228, "Member 'B_GameMode_C_HandleStartMatch::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_2) == 0x000270, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_MakeArray_Array) == 0x000278, "Member 'B_GameMode_C_HandleStartMatch::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_1) == 0x000288, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_10) == 0x000290, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Format_ReturnValue) == 0x000298, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0002A8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_SpawnNewPlayerPawn_PlayerPawn) == 0x0002B0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_SpawnNewPlayerPawn_PlayerPawn' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Length_ReturnValue_4) == 0x0002B8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_2) == 0x0002C0, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_11) == 0x0002C8, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_2) == 0x0002C9, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0002CA, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_SpawnNewPlayerPawn_PlayerPawn) == 0x0002D0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_SpawnNewPlayerPawn_PlayerPawn' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetPoolManager_ReturnValue) == 0x0002D8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetPoolManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_4) == 0x0002E0, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetEngineSubsystem_ReturnValue) == 0x0002E8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_4) == 0x0002F0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_3) == 0x0002F8, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_12) == 0x000300, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000301, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_5) == 0x000308, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x000310, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_13) == 0x000318, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_3) == 0x00031C, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_CreateObject_Object) == 0x000320, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_CreateObject_Object' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_3) == 0x000328, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_3) == 0x00032C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000330, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x000338, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_4) == 0x00033C, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Add_ReturnValue) == 0x000340, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_4) == 0x000344, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_4) == 0x000348, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_6) == 0x000350, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetAllActorsOfClass_OutActors) == 0x000358, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_6) == 0x000368, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_14) == 0x000370, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Now_ReturnValue) == 0x000378, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Now_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000380, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000388, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_BooleanOR_ReturnValue) == 0x000389, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetWitchesCount_WitchesCount) == 0x00038A, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetWitchesCount_WitchesCount' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_2) == 0x0002BC, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_UtcNow_ReturnValue) == 0x0002C0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_UtcNow_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_DateTime_ToIso8601_String) == 0x0002C8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_DateTime_ToIso8601_String' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_3) == 0x0002D8, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_3) == 0x0002E0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_2) == 0x0002E8, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_11) == 0x0002F0, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_SwitchEnum_CmpSuccess) == 0x0002F1, "Member 'B_GameMode_C_HandleStartMatch::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetPoolManager_ReturnValue) == 0x0002F8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetPoolManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Array_Index_Variable_4) == 0x000300, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Array_Index_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_3) == 0x000304, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Get_Item_4) == 0x000308, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Player_State_3) == 0x000310, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Player_State_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_12) == 0x000318, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_3) == 0x000319, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_3) == 0x00031C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000320, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000328, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_5) == 0x000330, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x000338, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_13) == 0x000340, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_CreateObject_Object) == 0x000348, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000350, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x000358, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000360, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, Temp_int_Loop_Counter_Variable_4) == 0x000368, "Member 'B_GameMode_C_HandleStartMatch::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Less_IntInt_ReturnValue_4) == 0x00036C, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Add_IntInt_ReturnValue_4) == 0x000370, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameInstance_ReturnValue_6) == 0x000378, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Array_Add_ReturnValue) == 0x000380, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_AsB_Game_Instance_6) == 0x000388, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_AsB_Game_Instance_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, K2Node_DynamicCast_bSuccess_14) == 0x000390, "Member 'B_GameMode_C_HandleStartMatch::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetAllActorsOfClass_OutActors) == 0x000398, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_Now_ReturnValue) == 0x0003A8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_Now_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0003B0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_BooleanOR_ReturnValue) == 0x0003B1, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x0003B8, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleStartMatch, CallFunc_GetWitchesCount_WitchesCount) == 0x0003C0, "Member 'B_GameMode_C_HandleStartMatch::CallFunc_GetWitchesCount_WitchesCount' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.HandleEndMatch
-// 0x04F0 (0x04F0 - 0x0000)
+// 0x0500 (0x0500 - 0x0000)
 struct B_GameMode_C_HandleEndMatch final
 {
 public:
@@ -509,199 +516,202 @@ public:
 	class AB_PlayerState_C*                       WitchHunter;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       PlayerUnderTest;                                   // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	TArray<class AB_MagicRelict_C*>               MagicRelicts;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	int32                                         Temp_int_Variable;                                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerInWinnerTeam_InWinnerTeam;        // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_Achievement_C*                       CallFunc_Array_Get_Item_1;                         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_ScoreStatManager_C*                  CallFunc_GetPlayerScoreStatManager_ScoreStatManager; // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetHunterScoreStat_Stat;                  // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item_2;                         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_2;               // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRoundEnd_RoundIsEnd;                    // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_6;               // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerInWinnerTeam_InWinnerTeam;        // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_ScoreStatManager_C*                  CallFunc_GetPlayerScoreStatManager_ScoreStatManager; // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetHunterScoreStat_Stat;                  // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_Achievement_C*                       CallFunc_Array_Get_Item_1;                         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item_2;                         // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_2;               // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_3;               // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_7;               // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A2[0x6];                                      // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           CallFunc_Array_Get_Item_3;                         // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_2;             // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1ED[0x3];                                      // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_MagicRelict_C*                       CallFunc_Array_Get_Item_4;                         // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_8;               // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_4;               // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_3;                               // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVaRestURL                             CallFunc_GetWorldURL_ReturnValue;                  // 0x0238(0x0068)()
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_9;               // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_5;               // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x02B8(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02C8(0x0048)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0310(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0320(0x0010)(ReferenceParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_6;               // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRoundEnd_RoundIsEnd;                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_3;               // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A[0x2];                                      // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_182[0x2];                                      // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UReplayWorldSubsystem*                  CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_7;               // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x3];                                      // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item_3;                         // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_2;             // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_MagicRelict_C*                       CallFunc_Array_Get_Item_4;                         // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_8;               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_4;               // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_9;               // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVaRestURL                             CallFunc_GetWorldURL_ReturnValue;                  // 0x0250(0x0068)()
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_5;               // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x02C8(0x0010)()
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02E8(0x0048)(HasGetValueTypeHash)
 	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0338(0x0010)()
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0348(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1; // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_5;                   // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue;          // 0x0368(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item_5;                         // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2; // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_3;             // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldPostQuestProgress_Result;           // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_392[0x6];                                      // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3; // 0x0398(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable;                                // 0x03A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A2[0x2];                                      // 0x03A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumberOfActivePlayers_ActiveCount;     // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default;                             // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue; // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMatchTeamResult                       K2Node_MakeStruct_MatchTeamResult;                 // 0x03B8(0x0018)()
-	TArray<class ULowEntryJsonObjectEntry*>       K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array; // 0x03D0(0x0010)(ReferenceParm)
-	class ULowEntryJsonObject*                    K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object; // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetLastSurvivingWitch_LastWitchExists;    // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       CallFunc_GetLastSurvivingWitch_LastWitchPlayer;    // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0338(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0348(0x0010)()
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0358(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1; // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_5;                   // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue;          // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item_5;                         // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2; // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_3;             // 0x0398(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldPostQuestProgress_Result;           // 0x03A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x03A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A3[0x5];                                      // 0x03A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3; // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Temp_byte_Variable;                                // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumberOfActivePlayers_ActiveCount;     // 0x03B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue; // 0x03B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ULowEntryJsonObjectEntry*>       K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array; // 0x03C8(0x0010)(ReferenceParm)
+	class ULowEntryJsonObject*                    K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object; // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMatchTeamResult                       K2Node_MakeStruct_MatchTeamResult;                 // 0x03E0(0x0018)()
 	class FString                                 CallFunc_Object_Pure_ToJsonString_ReturnValue;     // 0x03F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x3];                                      // 0x0419(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_4;                               // 0x041C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue_1;        // 0x0420(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1;      // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431[0x3];                                      // 0x0431(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_5;                               // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_449[0x3];                                      // 0x0449(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_6;                               // 0x044C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0451(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0452(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_453[0x1];                                      // 0x0453(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_15;                    // 0x0468(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_469[0x3];                                      // 0x0469(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_5;                  // 0x046C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_471[0x3];                                      // 0x0471(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable_1;                              // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0480(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_6;            // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_16;                    // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default_1;                           // 0x0494(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMatchTeamResult                       K2Node_MakeStruct_MatchTeamResult_1;               // 0x0498(0x0018)()
-	TArray<struct FMatchTeamResult>               K2Node_MakeArray_Array_1;                          // 0x04B0(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x04C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C2[0x6];                                      // 0x04C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_7;            // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_MagicRelict_C*>               CallFunc_GetAllActorsOfClass_OutActors;            // 0x04D0(0x0010)(ReferenceParm)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_7;            // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_17;                    // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetLastSurvivingWitch_LastWitchExists;    // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       CallFunc_GetLastSurvivingWitch_LastWitchPlayer;    // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_429[0x3];                                      // 0x0429(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_4;                               // 0x042C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetCurrentLevelName_ReturnValue_1;        // 0x0430(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1;      // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_441[0x3];                                      // 0x0441(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_5;                               // 0x0444(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459[0x3];                                      // 0x0459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_6;                               // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0461(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0462(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_463[0x1];                                      // 0x0463(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0464(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x0468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x0470(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_15;                    // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_5;                  // 0x047C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x3];                                      // 0x0481(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0484(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Temp_byte_Variable_1;                              // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_489[0x7];                                      // 0x0489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_6;            // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_16;                    // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x3];                                      // 0x04A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default_1;                           // 0x04A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMatchTeamResult                       K2Node_MakeStruct_MatchTeamResult_1;               // 0x04A8(0x0018)()
+	TArray<struct FMatchTeamResult>               K2Node_MakeArray_Array_1;                          // 0x04C0(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x04D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D2[0x6];                                      // 0x04D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_7;            // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_MagicRelict_C*>               CallFunc_GetAllActorsOfClass_OutActors;            // 0x04E0(0x0010)(ReferenceParm)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_7;            // 0x04F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_17;                    // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_HandleEndMatch) == 0x000008, "Wrong alignment on B_GameMode_C_HandleEndMatch");
-static_assert(sizeof(B_GameMode_C_HandleEndMatch) == 0x0004F0, "Wrong size on B_GameMode_C_HandleEndMatch");
+static_assert(sizeof(B_GameMode_C_HandleEndMatch) == 0x000500, "Wrong size on B_GameMode_C_HandleEndMatch");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, WinnerTeam) == 0x000000, "Member 'B_GameMode_C_HandleEndMatch::WinnerTeam' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, ForceRegardlessOfEnd) == 0x000001, "Member 'B_GameMode_C_HandleEndMatch::ForceRegardlessOfEnd' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, SurvivingWitches) == 0x000004, "Member 'B_GameMode_C_HandleEndMatch::SurvivingWitches' has a wrong offset!");
@@ -710,155 +720,156 @@ static_assert(offsetof(B_GameMode_C_HandleEndMatch, LastHitHunters) == 0x000010,
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, WitchHunter) == 0x000018, "Member 'B_GameMode_C_HandleEndMatch::WitchHunter' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, PlayerUnderTest) == 0x000020, "Member 'B_GameMode_C_HandleEndMatch::PlayerUnderTest' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, MagicRelicts) == 0x000028, "Member 'B_GameMode_C_HandleEndMatch::MagicRelicts' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable) == 0x000038, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue) == 0x000040, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable) == 0x000048, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable) == 0x000054, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable) == 0x00003C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue) == 0x000048, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable) == 0x000050, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue) == 0x000054, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_1) == 0x000058, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State) == 0x000060, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue) == 0x000070, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue) == 0x000060, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State) == 0x000068, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance) == 0x000078, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_SwitchEnum_CmpSuccess) == 0x000081, "Member 'B_GameMode_C_HandleEndMatch::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_2) == 0x000088, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_1) == 0x000090, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_1) == 0x000094, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item) == 0x000098, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State) == 0x0000A0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_2) == 0x0000A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsPlayerInWinnerTeam_InWinnerTeam) == 0x0000A9, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsPlayerInWinnerTeam_InWinnerTeam' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_2) == 0x0000AC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_3) == 0x0000B0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_1) == 0x0000B4, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000BC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_2) == 0x0000C0, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_2) == 0x0000C4, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_1) == 0x0000C8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000D0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue) == 0x0000D4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_3) == 0x0000D8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetPlayerScoreStatManager_ScoreStatManager) == 0x0000E0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetPlayerScoreStatManager_ScoreStatManager' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetHunterScoreStat_Stat) == 0x0000E8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetHunterScoreStat_Stat' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_2) == 0x0000F0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_FTrunc_ReturnValue) == 0x0000F8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_1) == 0x000100, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_3) == 0x000108, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Greater_IntInt_ReturnValue) == 0x000109, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_4) == 0x00010C, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_1) == 0x000110, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000118, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_4) == 0x000120, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_5) == 0x000128, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_1) == 0x000130, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_4) == 0x000138, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_2) == 0x000140, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_5) == 0x000148, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsRoundEnd_RoundIsEnd) == 0x000149, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsRoundEnd_RoundIsEnd' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_6) == 0x000150, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Not_PreBool_ReturnValue) == 0x000158, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_3) == 0x000160, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_6) == 0x000168, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_3) == 0x00016C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_2) == 0x000170, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_3) == 0x000174, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000178, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_7) == 0x000180, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_1) == 0x000188, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_5) == 0x000190, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000198, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_7) == 0x0001A0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_3) == 0x0001A1, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001A8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Get_Player_Achievement_Achievement) == 0x0001B0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Get_Player_Achievement_Achievement' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Get_Player_Achievement_Success) == 0x0001B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Get_Player_Achievement_Success' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_1) == 0x0001BC, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_3) == 0x0001C0, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_3) == 0x0001C8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_2) == 0x0001D0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_8) == 0x0001D8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_4) == 0x0001DC, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_4) == 0x0001E0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_4) == 0x0001E4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_4) == 0x0001E8, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x0001EC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_4) == 0x0001F0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_2) == 0x0001F8, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_8) == 0x000200, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_4) == 0x000208, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_9) == 0x000210, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_2) == 0x000218, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_3) == 0x000220, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000228, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_10) == 0x000230, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetWorldURL_ReturnValue) == 0x000238, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetWorldURL_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_9) == 0x0002A0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_5) == 0x0002A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_11) == 0x0002B0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Conv_StringToText_ReturnValue) == 0x0002B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_FormatArgumentData) == 0x0002C8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Conv_NameToString_ReturnValue) == 0x000310, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeArray_Array) == 0x000320, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_1) == 0x000090, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_2) == 0x000094, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_1) == 0x000098, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State) == 0x0000A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_2) == 0x0000B0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_3) == 0x0000B4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsPlayerInWinnerTeam_InWinnerTeam) == 0x0000B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsPlayerInWinnerTeam_InWinnerTeam' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetPlayerScoreStatManager_ScoreStatManager) == 0x0000C0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetPlayerScoreStatManager_ScoreStatManager' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_1) == 0x0000C8, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetHunterScoreStat_Stat) == 0x0000D0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetHunterScoreStat_Stat' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue) == 0x0000D8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_FTrunc_ReturnValue) == 0x0000DC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Greater_IntInt_ReturnValue) == 0x0000E0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000E4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_2) == 0x0000E8, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_2) == 0x0000EC, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_1) == 0x0000F0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000F8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue) == 0x0000FC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_3) == 0x000100, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000108, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_2) == 0x000110, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_4) == 0x000118, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_1) == 0x000120, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_3) == 0x000128, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_1) == 0x000129, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_4) == 0x000130, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_1) == 0x000138, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_4) == 0x000140, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_5) == 0x000148, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_2) == 0x000150, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_5) == 0x000158, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_6) == 0x000160, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsRoundEnd_RoundIsEnd) == 0x000168, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsRoundEnd_RoundIsEnd' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_3) == 0x000170, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_6) == 0x000178, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Not_PreBool_ReturnValue) == 0x000179, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_3) == 0x00017C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000180, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_2) == 0x000181, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_3) == 0x000184, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000188, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_7) == 0x000190, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_1) == 0x000198, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Length_ReturnValue_5) == 0x0001A0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0001A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_7) == 0x0001B0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_3) == 0x0001B1, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Get_Player_Achievement_Achievement) == 0x0001C0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Get_Player_Achievement_Achievement' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Get_Player_Achievement_Success) == 0x0001C8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Get_Player_Achievement_Success' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_1) == 0x0001CC, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_3) == 0x0001D0, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_3) == 0x0001D8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_2) == 0x0001E0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_8) == 0x0001E8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_4) == 0x0001EC, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_4) == 0x0001F0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_4) == 0x0001F4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_4) == 0x0001F8, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x0001FC, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_4) == 0x000200, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_2) == 0x000208, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_8) == 0x000210, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_4) == 0x000218, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_9) == 0x000220, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_2) == 0x000228, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_3) == 0x000230, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000238, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_10) == 0x000240, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameState_ReturnValue_9) == 0x000248, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameState_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetWorldURL_ReturnValue) == 0x000250, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetWorldURL_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_State_5) == 0x0002B8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_State_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_11) == 0x0002C0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Conv_StringToText_ReturnValue) == 0x0002C8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Conv_NameToString_ReturnValue) == 0x0002D8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_FormatArgumentData) == 0x0002E8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue) == 0x000330, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Format_ReturnValue) == 0x000338, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000348, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1) == 0x000358, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_5) == 0x000360, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetCurrentLevelName_ReturnValue) == 0x000368, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetCurrentLevelName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_5) == 0x000378, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2) == 0x000380, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_3) == 0x000388, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_12) == 0x000390, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ShouldPostQuestProgress_Result) == 0x000391, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ShouldPostQuestProgress_Result' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3) == 0x000398, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x0003A0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_byte_Variable) == 0x0003A1, "Member 'B_GameMode_C_HandleEndMatch::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetNumberOfActivePlayers_ActiveCount) == 0x0003A4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetNumberOfActivePlayers_ActiveCount' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_Select_Default) == 0x0003A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue) == 0x0003B0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_MatchTeamResult) == 0x0003B8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_MatchTeamResult' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array) == 0x0003D0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object) == 0x0003E0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetLastSurvivingWitch_LastWitchExists) == 0x0003E8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetLastSurvivingWitch_LastWitchExists' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetLastSurvivingWitch_LastWitchPlayer) == 0x0003F0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetLastSurvivingWitch_LastWitchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeArray_Array) == 0x000338, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Format_ReturnValue) == 0x000348, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000358, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1) == 0x000368, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Array_Index_Variable_5) == 0x000370, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Array_Index_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetCurrentLevelName_ReturnValue) == 0x000378, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetCurrentLevelName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Array_Get_Item_5) == 0x000388, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2) == 0x000390, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Player_State_3) == 0x000398, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Player_State_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_12) == 0x0003A0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ShouldPostQuestProgress_Result) == 0x0003A1, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ShouldPostQuestProgress_Result' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x0003A2, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3) == 0x0003A8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_byte_Variable) == 0x0003B0, "Member 'B_GameMode_C_HandleEndMatch::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetNumberOfActivePlayers_ActiveCount) == 0x0003B4, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetNumberOfActivePlayers_ActiveCount' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue) == 0x0003B8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_Select_Default) == 0x0003C0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array) == 0x0003C8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_LowEntry_CreateJsonObjectPure_TempArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object) == 0x0003D8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_LowEntry_CreateJsonObjectPure_JsonObject_Object' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_MatchTeamResult) == 0x0003E0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_MatchTeamResult' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Object_Pure_ToJsonString_ReturnValue) == 0x0003F8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Object_Pure_ToJsonString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_3) == 0x000408, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000410, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_13) == 0x000418, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_4) == 0x00041C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetCurrentLevelName_ReturnValue_1) == 0x000420, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetCurrentLevelName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1) == 0x000430, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_5) == 0x000434, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_4) == 0x000438, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000440, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_14) == 0x000448, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_6) == 0x00044C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Not_PreBool_ReturnValue_1) == 0x000450, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000451, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue_1) == 0x000452, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_5) == 0x000454, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_5) == 0x000458, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x000460, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_15) == 0x000468, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_15' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_5) == 0x00046C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_5) == 0x000470, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_6) == 0x000474, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_byte_Variable_1) == 0x000478, "Member 'B_GameMode_C_HandleEndMatch::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_6) == 0x000480, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_6) == 0x000488, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_16) == 0x000490, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_16' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_Select_Default_1) == 0x000494, "Member 'B_GameMode_C_HandleEndMatch::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_MatchTeamResult_1) == 0x000498, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_MatchTeamResult_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeArray_Array_1) == 0x0004B0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanOR_ReturnValue) == 0x0004C0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue_2) == 0x0004C1, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_7) == 0x0004C8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetAllActorsOfClass_OutActors) == 0x0004D0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_7) == 0x0004E0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_17) == 0x0004E8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_17' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetLastSurvivingWitch_LastWitchExists) == 0x000408, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetLastSurvivingWitch_LastWitchExists' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetLastSurvivingWitch_LastWitchPlayer) == 0x000410, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetLastSurvivingWitch_LastWitchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_3) == 0x000418, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000420, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_13) == 0x000428, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_4) == 0x00042C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetCurrentLevelName_ReturnValue_1) == 0x000430, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetCurrentLevelName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1) == 0x000440, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_IsPlayerInWinnerTeam_InWinnerTeam_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_5) == 0x000444, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_4) == 0x000448, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000450, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_14) == 0x000458, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Variable_6) == 0x00045C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Not_PreBool_ReturnValue_1) == 0x000460, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000461, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue_1) == 0x000462, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_5) == 0x000464, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_5) == 0x000468, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x000470, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_15) == 0x000478, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_15' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_int_Loop_Counter_Variable_5) == 0x00047C, "Member 'B_GameMode_C_HandleEndMatch::Temp_int_Loop_Counter_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Less_IntInt_ReturnValue_5) == 0x000480, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_Add_IntInt_ReturnValue_6) == 0x000484, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, Temp_byte_Variable_1) == 0x000488, "Member 'B_GameMode_C_HandleEndMatch::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_6) == 0x000490, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_6) == 0x000498, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_16) == 0x0004A0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_16' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_Select_Default_1) == 0x0004A4, "Member 'B_GameMode_C_HandleEndMatch::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeStruct_MatchTeamResult_1) == 0x0004A8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeStruct_MatchTeamResult_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_MakeArray_Array_1) == 0x0004C0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanOR_ReturnValue) == 0x0004D0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_BooleanAND_ReturnValue_2) == 0x0004D1, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetGameInstance_ReturnValue_7) == 0x0004D8, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetGameInstance_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, CallFunc_GetAllActorsOfClass_OutActors) == 0x0004E0, "Member 'B_GameMode_C_HandleEndMatch::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_AsB_Game_Instance_7) == 0x0004F0, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_AsB_Game_Instance_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandleEndMatch, K2Node_DynamicCast_bSuccess_17) == 0x0004F8, "Member 'B_GameMode_C_HandleEndMatch::K2Node_DynamicCast_bSuccess_17' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.SpawnPlaceableStatic
 // 0x00D0 (0x00D0 - 0x0000)
@@ -1023,8 +1034,166 @@ static_assert(offsetof(B_GameMode_C_SpawnActionPlaceableStatic, SpawnedActor) ==
 static_assert(offsetof(B_GameMode_C_SpawnActionPlaceableStatic, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000090, "Member 'B_GameMode_C_SpawnActionPlaceableStatic::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_SpawnActionPlaceableStatic, CallFunc_FinishSpawningActor_ReturnValue) == 0x000098, "Member 'B_GameMode_C_SpawnActionPlaceableStatic::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
 
+// Function B_GameMode.B_GameMode_C.CheckIfCrossPlatformGame
+// 0x0128 (0x0128 - 0x0000)
+struct B_GameMode_C_CheckIfCrossPlatformGame final
+{
+public:
+	TArray<class FString>                         Platforms;                                         // 0x0000(0x0010)(Edit, BlueprintVisible)
+	class UB_GameInstance_C*                      GameInstance;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class APlayerState*>                   PlayerArray;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0048(0x0030)(HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x00A0(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue_1;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_GameMode_C_CheckIfCrossPlatformGame) == 0x000008, "Wrong alignment on B_GameMode_C_CheckIfCrossPlatformGame");
+static_assert(sizeof(B_GameMode_C_CheckIfCrossPlatformGame) == 0x000128, "Wrong size on B_GameMode_C_CheckIfCrossPlatformGame");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, Platforms) == 0x000000, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::Platforms' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, GameInstance) == 0x000010, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::GameInstance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, PlayerArray) == 0x000018, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::PlayerArray' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, Temp_int_Array_Index_Variable) == 0x000028, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000038, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Array_Get_Item) == 0x000040, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000048, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetPlayerController_ReturnValue) == 0x000078, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetUserAccount_ReturnValue) == 0x000080, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_IsLocalController_ReturnValue) == 0x000088, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetUserAttribute_Found) == 0x000089, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetUserAttribute_ReturnValue) == 0x000090, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x0000A0, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Array_Length_ReturnValue) == 0x0000D0, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Less_IntInt_ReturnValue) == 0x0000D4, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Array_Length_ReturnValue_1) == 0x0000D8, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Greater_IntInt_ReturnValue) == 0x0000DC, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Array_AddUnique_ReturnValue) == 0x0000E0, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetBGameState_ReturnValue) == 0x0000E8, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetBGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x0000F0, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000100, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x000110, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000114, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetBGameInstance_ReturnValue) == 0x000118, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGame, CallFunc_GetBGameState_ReturnValue_1) == 0x000120, "Member 'B_GameMode_C_CheckIfCrossPlatformGame::CallFunc_GetBGameState_ReturnValue_1' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.CheckIfCrossPlatformGameAfterJoin
+// 0x01C8 (0x01C8 - 0x0000)
+struct B_GameMode_C_CheckIfCrossPlatformGameAfterJoin final
+{
+public:
+	class APlayerController*                      JoiningController;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 JoiningPlayerPlatform;                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      GameInstance;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class APlayerState*>                   PlayerArray;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0050(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue_1;              // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x00C0(0x0030)(HasGetValueTypeHash)
+	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_StriStri_ReturnValue;            // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0150(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId_1; // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform_1;   // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue_1;      // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_StriStri_ReturnValue_1;          // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A2[0x6];                                      // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue_2;              // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin) == 0x000008, "Wrong alignment on B_GameMode_C_CheckIfCrossPlatformGameAfterJoin");
+static_assert(sizeof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin) == 0x0001C8, "Wrong size on B_GameMode_C_CheckIfCrossPlatformGameAfterJoin");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, JoiningController) == 0x000000, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::JoiningController' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, JoiningPlayerPlatform) == 0x000008, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::JoiningPlayerPlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, GameInstance) == 0x000018, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::GameInstance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, PlayerArray) == 0x000020, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::PlayerArray' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, Temp_int_Array_Index_Variable) == 0x000034, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Array_Get_Item) == 0x000040, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetPlayerController_ReturnValue) == 0x000048, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000050, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_IsLocalController_ReturnValue) == 0x000080, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Less_IntInt_ReturnValue) == 0x000081, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Add_IntInt_ReturnValue) == 0x000084, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetBGameState_ReturnValue) == 0x000088, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetBGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_IsEmpty_ReturnValue) == 0x000090, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Concat_StrStr_ReturnValue) == 0x000098, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Not_PreBool_ReturnValue) == 0x0000A8, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000B0, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetBGameState_ReturnValue_1) == 0x0000B8, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetBGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetUniquePlayerId_ReturnValue) == 0x0000C0, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetUserAccount_ReturnValue) == 0x0000F0, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetUserAttribute_Found) == 0x0000F8, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetUserAttribute_ReturnValue) == 0x000100, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_NotEqual_StriStri_ReturnValue) == 0x000110, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_NotEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000118, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x000128, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000138, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x000148, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000150, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_NativePlatformId_1) == 0x000180, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_NativePlatformId_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_NativePlatform_1) == 0x000190, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_NativePlatform_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetNativePlatformInfo_ReturnValue_1) == 0x0001A0, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetNativePlatformInfo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_NotEqual_StriStri_ReturnValue_1) == 0x0001A1, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_NotEqual_StriStri_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0001A8, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetBGameInstance_ReturnValue) == 0x0001B8, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CheckIfCrossPlatformGameAfterJoin, CallFunc_GetBGameState_ReturnValue_2) == 0x0001C0, "Member 'B_GameMode_C_CheckIfCrossPlatformGameAfterJoin::CallFunc_GetBGameState_ReturnValue_2' has a wrong offset!");
+
 // Function B_GameMode.B_GameMode_C.GetPlayerIdForMatch
-// 0x0120 (0x0120 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct B_GameMode_C_GetPlayerIdForMatch final
 {
 public:
@@ -1036,19 +1205,22 @@ public:
 	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0048(0x0030)(HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x00B0(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x00F0(0x0030)(HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x00E8(0x0030)(HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue_1;       // 0x0128(0x0030)(HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_GetPlayerIdForMatch) == 0x000008, "Wrong alignment on B_GameMode_C_GetPlayerIdForMatch");
-static_assert(sizeof(B_GameMode_C_GetPlayerIdForMatch) == 0x000120, "Wrong size on B_GameMode_C_GetPlayerIdForMatch");
+static_assert(sizeof(B_GameMode_C_GetPlayerIdForMatch) == 0x000158, "Wrong size on B_GameMode_C_GetPlayerIdForMatch");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, PlayerState) == 0x000000, "Member 'B_GameMode_C_GetPlayerIdForMatch::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, NetId) == 0x000008, "Member 'B_GameMode_C_GetPlayerIdForMatch::NetId' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, IsPSNUser) == 0x000038, "Member 'B_GameMode_C_GetPlayerIdForMatch::IsPSNUser' has a wrong offset!");
@@ -1056,16 +1228,20 @@ static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetGameInstanc
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000048, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, K2Node_DynamicCast_AsB_Game_Instance) == 0x000078, "Member 'B_GameMode_C_GetPlayerIdForMatch::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'B_GameMode_C_GetPlayerIdForMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_Ps4Platform_ReturnValue) == 0x000081, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x000088, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000098, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x0000A8, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x0000A9, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x0000B0, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x0000E0, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000E8, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x0000F0, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000E0, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x0000E8, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000118, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000120, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_GetPlayerIdForMatch, CallFunc_CreateUniquePlayerId_ReturnValue_1) == 0x000128, "Member 'B_GameMode_C_GetPlayerIdForMatch::CallFunc_CreateUniquePlayerId_ReturnValue_1' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.SetupMatchStartDetails
-// 0x0318 (0x0318 - 0x0000)
+// 0x0320 (0x0320 - 0x0000)
 struct B_GameMode_C_SetupMatchStartDetails final
 {
 public:
@@ -1078,56 +1254,59 @@ public:
 	class UB_GameInstance_C*                      GameInstance;                                      // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       CurrentPlayerState;                                // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x00C8(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchTeam                             K2Node_MakeStruct_MatchTeam;                       // 0x0100(0x0030)()
-	struct FMatchTeam                             K2Node_MakeStruct_MatchTeam_1;                     // 0x0130(0x0030)()
-	TArray<struct FMatchTeam>                     K2Node_MakeArray_Array;                            // 0x0160(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x0190(0x0058)()
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0218(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0228(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatformId; // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatform; // 0x0278(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x0288(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x02C0(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x02F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0080(0x0030)(HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x00F8(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchTeam                             K2Node_MakeStruct_MatchTeam;                       // 0x0130(0x0030)()
+	struct FMatchTeam                             K2Node_MakeStruct_MatchTeam_1;                     // 0x0160(0x0030)()
+	TArray<struct FMatchTeam>                     K2Node_MakeArray_Array;                            // 0x0190(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x01C0(0x0058)()
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0248(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x0258(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0288(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatformId; // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatform; // 0x02B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x02C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x02F0(0x0030)(HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_SetupMatchStartDetails) == 0x000008, "Wrong alignment on B_GameMode_C_SetupMatchStartDetails");
-static_assert(sizeof(B_GameMode_C_SetupMatchStartDetails) == 0x000318, "Wrong size on B_GameMode_C_SetupMatchStartDetails");
+static_assert(sizeof(B_GameMode_C_SetupMatchStartDetails) == 0x000320, "Wrong size on B_GameMode_C_SetupMatchStartDetails");
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CurrentPlayerIsPSN) == 0x000000, "Member 'B_GameMode_C_SetupMatchStartDetails::CurrentPlayerIsPSN' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, WitchPlayers) == 0x000008, "Member 'B_GameMode_C_SetupMatchStartDetails::WitchPlayers' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, HunterPlayers) == 0x000018, "Member 'B_GameMode_C_SetupMatchStartDetails::HunterPlayers' has a wrong offset!");
@@ -1136,46 +1315,48 @@ static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, PlayersToAdd) == 0x0
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, GameInstance) == 0x000068, "Member 'B_GameMode_C_SetupMatchStartDetails::GameInstance' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CurrentPlayerState) == 0x000070, "Member 'B_GameMode_C_SetupMatchStartDetails::CurrentPlayerState' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, Temp_int_Array_Index_Variable) == 0x000078, "Member 'B_GameMode_C_SetupMatchStartDetails::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstance_ReturnValue) == 0x000080, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_AsB_Game_Instance) == 0x000088, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameState_ReturnValue) == 0x000098, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, Temp_int_Loop_Counter_Variable) == 0x0000A0, "Member 'B_GameMode_C_SetupMatchStartDetails::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_AsB_Player_State) == 0x0000B0, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerIdForMatch_NetId) == 0x0000C8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x0000F8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchTeam) == 0x000100, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchTeam' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchTeam_1) == 0x000130, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchTeam_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeArray_Array) == 0x000160, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue) == 0x000170, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue_1) == 0x000174, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_SwitchEnum_CmpSuccess) == 0x000178, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerName_ReturnValue) == 0x000180, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchPlayer) == 0x000190, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue_2) == 0x0001E8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001F0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0001F8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Length_ReturnValue_1) == 0x000200, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Conv_IntToString_ReturnValue) == 0x000208, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Concat_StrStr_ReturnValue) == 0x000218, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000228, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000258, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformAccountName_NativePlatformId) == 0x000268, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformAccountName_NativePlatformId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformAccountName_NativePlatform) == 0x000278, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformAccountName_NativePlatform' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x000288, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x0002B8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x0002C0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x0002F0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000300, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x000310, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_IsDedicatedServer_ReturnValue) == 0x00007C, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000080, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstance_ReturnValue) == 0x0000B0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameState_ReturnValue) == 0x0000B8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000C0, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Get_Item) == 0x0000D0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Length_ReturnValue) == 0x0000D8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_AsB_Player_State) == 0x0000E0, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_DynamicCast_bSuccess_1) == 0x0000E8, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, Temp_int_Loop_Counter_Variable) == 0x0000EC, "Member 'B_GameMode_C_SetupMatchStartDetails::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Less_IntInt_ReturnValue) == 0x0000F0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Add_IntInt_ReturnValue) == 0x0000F4, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerIdForMatch_NetId) == 0x0000F8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x000128, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchTeam) == 0x000130, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchTeam' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchTeam_1) == 0x000160, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchTeam_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeArray_Array) == 0x000190, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue) == 0x0001A0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue_1) == 0x0001A4, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_SwitchEnum_CmpSuccess) == 0x0001A8, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerName_ReturnValue) == 0x0001B0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, K2Node_MakeStruct_MatchPlayer) == 0x0001C0, "Member 'B_GameMode_C_SetupMatchStartDetails::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Add_ReturnValue_2) == 0x000218, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000220, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000228, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Array_Length_ReturnValue_1) == 0x000230, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Conv_IntToString_ReturnValue) == 0x000238, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Concat_StrStr_ReturnValue) == 0x000248, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x000258, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000288, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000298, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformAccountName_NativePlatformId) == 0x0002A0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformAccountName_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformAccountName_NativePlatform) == 0x0002B0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformAccountName_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x0002C0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x0002C8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x0002D8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x0002E8, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_SetupMatchStartDetails, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x0002F0, "Member 'B_GameMode_C_SetupMatchStartDetails::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.CreateOnlineMatch
-// 0x0310 (0x0310 - 0x0000)
+// 0x0320 (0x0320 - 0x0000)
 struct B_GameMode_C_CreateOnlineMatch final
 {
 public:
@@ -1183,92 +1364,98 @@ public:
 	TArray<struct FMatchPlayer>                   PlayersToAdd;                                      // 0x0008(0x0010)(Edit, BlueprintVisible)
 	class UB_GameInstance_C*                      GameInstance;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class APlayerState*>                   CurrentPlayers;                                    // 0x0020(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x0080(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x00B8(0x0058)()
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0130(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetPlayerName_ReturnValue_1;              // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer_1;                   // 0x0180(0x0058)()
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_ReturnValue_2;              // 0x01E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x01F0(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatformId; // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatform; // 0x0230(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x0248(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x0278(0x0030)(HasGetValueTypeHash)
-	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer_2;                   // 0x02B0(0x0058)()
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x0078(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x00B0(0x0058)()
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0128(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetPlayerName_ReturnValue_1;              // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer_1;                   // 0x0188(0x0058)()
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerName_ReturnValue_2;              // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatformId; // 0x01F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountName_NativePlatform; // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x0220(0x0030)(HasGetValueTypeHash)
+	class UOnlineSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatformId;   // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformInfo_NativePlatform;     // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNativePlatformInfo_ReturnValue;        // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystem*               CallFunc_GetNamedIdentitySubsystem_ReturnValue;    // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x0288(0x0030)(HasGetValueTypeHash)
+	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer_2;                   // 0x02C0(0x0058)()
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_CreateOnlineMatch) == 0x000008, "Wrong alignment on B_GameMode_C_CreateOnlineMatch");
-static_assert(sizeof(B_GameMode_C_CreateOnlineMatch) == 0x000310, "Wrong size on B_GameMode_C_CreateOnlineMatch");
+static_assert(sizeof(B_GameMode_C_CreateOnlineMatch) == 0x000320, "Wrong size on B_GameMode_C_CreateOnlineMatch");
 static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CurrentPlayerState) == 0x000000, "Member 'B_GameMode_C_CreateOnlineMatch::CurrentPlayerState' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, PlayersToAdd) == 0x000008, "Member 'B_GameMode_C_CreateOnlineMatch::PlayersToAdd' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, GameInstance) == 0x000018, "Member 'B_GameMode_C_CreateOnlineMatch::GameInstance' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CurrentPlayers) == 0x000020, "Member 'B_GameMode_C_CreateOnlineMatch::CurrentPlayers' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'B_GameMode_C_CreateOnlineMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, Temp_int_Array_Index_Variable) == 0x000038, "Member 'B_GameMode_C_CreateOnlineMatch::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstance_ReturnValue) == 0x000040, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_DynamicCast_AsB_Game_Instance) == 0x000048, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000058, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Get_Item) == 0x000060, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue) == 0x000070, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerIdForMatch_NetId) == 0x000080, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x0000B0, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Length_ReturnValue_1) == 0x0000B4, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer) == 0x0000B8, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Conv_IntToString_ReturnValue) == 0x000110, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Concat_StrStr_ReturnValue) == 0x000120, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000130, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000160, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue_1) == 0x000170, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer_1) == 0x000180, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue) == 0x0001D8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue_2) == 0x0001E0, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x0001F0, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformAccountName_NativePlatformId) == 0x000220, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformAccountName_NativePlatformId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformAccountName_NativePlatform) == 0x000230, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformAccountName_NativePlatform' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000240, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue_1) == 0x000244, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x000248, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000258, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x000268, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000270, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x000278, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetBGameState_ReturnValue) == 0x0002A8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetBGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer_2) == 0x0002B0, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue_2) == 0x000308, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'B_GameMode_C_CreateOnlineMatch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_DynamicCast_AsB_Game_Instance) == 0x000040, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, Temp_int_Array_Index_Variable) == 0x000050, "Member 'B_GameMode_C_CreateOnlineMatch::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000054, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Get_Item) == 0x000058, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue) == 0x000060, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Less_IntInt_ReturnValue) == 0x000074, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerIdForMatch_NetId) == 0x000078, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x0000A8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer) == 0x0000B0, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000108, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Length_ReturnValue_1) == 0x000110, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Conv_IntToString_ReturnValue) == 0x000118, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000128, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Concat_StrStr_ReturnValue) == 0x000158, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000168, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue_1) == 0x000178, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer_1) == 0x000188, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue) == 0x0001E0, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerName_ReturnValue_2) == 0x0001E8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformAccountName_NativePlatformId) == 0x0001F8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformAccountName_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformAccountName_NativePlatform) == 0x000208, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformAccountName_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000218, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue_1) == 0x00021C, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x000220, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000250, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_NativePlatformId) == 0x000258, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_NativePlatformId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_NativePlatform) == 0x000268, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_NativePlatform' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNativePlatformInfo_ReturnValue) == 0x000278, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNativePlatformInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetNamedIdentitySubsystem_ReturnValue) == 0x000280, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetNamedIdentitySubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x000288, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_GetBGameState_ReturnValue) == 0x0002B8, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_GetBGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, K2Node_MakeStruct_MatchPlayer_2) == 0x0002C0, "Member 'B_GameMode_C_CreateOnlineMatch::K2Node_MakeStruct_MatchPlayer_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateOnlineMatch, CallFunc_Array_Add_ReturnValue_2) == 0x000318, "Member 'B_GameMode_C_CreateOnlineMatch::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.SendPlayerJoinedMessageToAll
 // 0x0058 (0x0058 - 0x0000)
@@ -2576,190 +2763,195 @@ static_assert(offsetof(B_GameMode_C_RemoveAllProps, CallFunc_Array_Get_Item_3) =
 static_assert(offsetof(B_GameMode_C_RemoveAllProps, CallFunc_GetAllActorsOfClass_OutActors_2) == 0x000100, "Member 'B_GameMode_C_RemoveAllProps::CallFunc_GetAllActorsOfClass_OutActors_2' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.HandlePlayerLeft
-// 0x0120 (0x0120 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct B_GameMode_C_HandlePlayerLeft final
 {
 public:
 	class AB_PlayerController_C*                  PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  LeavingPlayerController;                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x0018(0x0030)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x0060(0x0058)()
-	TArray<struct FMatchPlayer>                   K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ConstParm, ReferenceParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_PlayerName;                 // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00F0(0x0010)()
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x0068(0x0058)()
+	TArray<struct FMatchPlayer>                   K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerName_PlayerName;                 // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00F8(0x0010)()
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_HandlePlayerLeft) == 0x000008, "Wrong alignment on B_GameMode_C_HandlePlayerLeft");
-static_assert(sizeof(B_GameMode_C_HandlePlayerLeft) == 0x000120, "Wrong size on B_GameMode_C_HandlePlayerLeft");
+static_assert(sizeof(B_GameMode_C_HandlePlayerLeft) == 0x000128, "Wrong size on B_GameMode_C_HandlePlayerLeft");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, PlayerController) == 0x000000, "Member 'B_GameMode_C_HandlePlayerLeft::PlayerController' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, LeavingPlayerController) == 0x000008, "Member 'B_GameMode_C_HandlePlayerLeft::LeavingPlayerController' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_HasAuthority_ReturnValue) == 0x000010, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_IsLocalController_ReturnValue) == 0x000011, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_Not_PreBool_ReturnValue) == 0x000012, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetPlayerIdForMatch_NetId) == 0x000018, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x000048, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetPlayerName_ReturnValue) == 0x000050, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_MakeStruct_MatchPlayer) == 0x000060, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_MakeArray_Array) == 0x0000B8, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameState_ReturnValue) == 0x0000C8, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_AsB_Game_State) == 0x0000D0, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_bSuccess) == 0x0000D8, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetPlayerName_PlayerName) == 0x0000E0, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetPlayerName_PlayerName' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_Conv_StringToText_ReturnValue) == 0x0000F0, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameState_ReturnValue_1) == 0x000100, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_AsB_Game_State_1) == 0x000108, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_bSuccess_1) == 0x000110, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000118, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_FUniqueNetIdIsValid_ReturnValue) == 0x000060, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_FUniqueNetIdIsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_MakeStruct_MatchPlayer) == 0x000068, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_MakeArray_Array) == 0x0000C0, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameState_ReturnValue) == 0x0000D0, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_AsB_Game_State) == 0x0000D8, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_bSuccess) == 0x0000E0, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetPlayerName_PlayerName) == 0x0000E8, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetPlayerName_PlayerName' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_Conv_StringToText_ReturnValue) == 0x0000F8, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameState_ReturnValue_1) == 0x000108, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_AsB_Game_State_1) == 0x000110, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, K2Node_DynamicCast_bSuccess_1) == 0x000118, "Member 'B_GameMode_C_HandlePlayerLeft::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_HandlePlayerLeft, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000120, "Member 'B_GameMode_C_HandlePlayerLeft::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.Handle Player Join
-// 0x0390 (0x0390 - 0x0000)
+// 0x0378 (0x0378 - 0x0000)
 struct B_GameMode_C_Handle_Player_Join final
 {
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      JoiningPlayerController;                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumPlayers_ReturnValue;                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UB_TournamentPlayer_C*>          CallFunc_GetTournamentPlayers_ReturnValue;         // 0x0030(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0040(0x0010)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0010(0x0010)()
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumPlayers_ReturnValue;                // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UB_TournamentPlayer_C*>          CallFunc_GetTournamentPlayers_ReturnValue;         // 0x0058(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0080(0x0010)()
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x0098(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x00E0(0x0058)()
-	TArray<struct FMatchPlayer>                   K2Node_MakeArray_Array;                            // 0x0138(0x0010)(ConstParm, ReferenceParm)
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0148(0x0020)()
-	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller_1;        // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DevelopmentBuild_ReturnValue;             // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerIdForMatch_NetId;                // 0x0080(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetPlayerIdForMatch_IsPSNUser;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FMatchPlayer                           K2Node_MakeStruct_MatchPlayer;                     // 0x00C8(0x0058)()
+	TArray<struct FMatchPlayer>                   K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ConstParm, ReferenceParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0130(0x0010)()
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0150(0x0020)()
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller_1;        // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DevelopmentBuild_ReturnValue;             // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19A[0x6];                                      // 0x019A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNamedOnlineSession*                    CallFunc_GetNamedSession_ReturnValue;              // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x01EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x01F8(0x0150)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x0379(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A[0x6];                                      // 0x037A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1ED[0x3];                                      // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNamedOnlineSession*                    CallFunc_GetNamedSession_ReturnValue;              // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0220(0x0150)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_Handle_Player_Join) == 0x000008, "Wrong alignment on B_GameMode_C_Handle_Player_Join");
-static_assert(sizeof(B_GameMode_C_Handle_Player_Join) == 0x000390, "Wrong size on B_GameMode_C_Handle_Player_Join");
+static_assert(sizeof(B_GameMode_C_Handle_Player_Join) == 0x000378, "Wrong size on B_GameMode_C_Handle_Player_Join");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, PlayerController) == 0x000000, "Member 'B_GameMode_C_Handle_Player_Join::PlayerController' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, JoiningPlayerController) == 0x000008, "Member 'B_GameMode_C_Handle_Player_Join::JoiningPlayerController' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetNumPlayers_ReturnValue) == 0x000010, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetNumPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetTournamentPlayers_ReturnValue) == 0x000030, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetTournamentPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_MakeLiteralText_ReturnValue) == 0x000040, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Greater_IntInt_ReturnValue) == 0x000054, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_1) == 0x000058, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Player_Controller) == 0x000060, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000070, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_MakeLiteralText_ReturnValue) == 0x000010, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_HasAuthority_ReturnValue) == 0x000020, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetNumPlayers_ReturnValue) == 0x000024, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetNumPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue) == 0x000028, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance) == 0x000030, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_1) == 0x000040, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000048, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetTournamentPlayers_ReturnValue) == 0x000058, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetTournamentPlayers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Greater_IntInt_ReturnValue) == 0x00006C, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_BooleanAND_ReturnValue) == 0x00006D, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Player_Controller) == 0x000070, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_2) == 0x000078, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_BooleanAND_ReturnValue) == 0x000079, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000080, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_HasAuthority_ReturnValue) == 0x000090, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_IsDedicatedServer_ReturnValue) == 0x000091, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerIdForMatch_NetId) == 0x000098, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x0000C8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerName_ReturnValue) == 0x0000D0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_MakeStruct_MatchPlayer) == 0x0000E0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_MakeArray_Array) == 0x000138, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000148, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_UniqueNetIdToString_String) == 0x000168, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_2) == 0x000178, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000180, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_3) == 0x000188, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameState_ReturnValue) == 0x000190, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_State) == 0x000198, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_4) == 0x0001A0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Player_Controller_1) == 0x0001A8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_5) == 0x0001B0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_DevelopmentBuild_ReturnValue) == 0x0001B1, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_DevelopmentBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_3) == 0x0001B8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Not_PreBool_ReturnValue) == 0x0001C0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0001C8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_IsDedicatedServer_ReturnValue) == 0x000079, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerIdForMatch_NetId) == 0x000080, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerIdForMatch_NetId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerIdForMatch_IsPSNUser) == 0x0000B0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerIdForMatch_IsPSNUser' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetPlayerName_ReturnValue) == 0x0000B8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_MakeStruct_MatchPlayer) == 0x0000C8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_MakeStruct_MatchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_MakeArray_Array) == 0x000120, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000130, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000140, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameState_ReturnValue) == 0x000148, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000150, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_State) == 0x000170, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_3) == 0x000178, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_UniqueNetIdToString_String) == 0x000180, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Player_Controller_1) == 0x000190, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Player_Controller_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_4) == 0x000198, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_DevelopmentBuild_ReturnValue) == 0x000199, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_DevelopmentBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameState_ReturnValue_1) == 0x0001A0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Not_PreBool_ReturnValue) == 0x0001A8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_State_1) == 0x0001B0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_5) == 0x0001B8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_HasRoundStarted_RoundHasStarted) == 0x0001B9, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_HasRoundStarted_RoundHasStarted' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_2) == 0x0001C0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0001C8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_6) == 0x0001D0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001D8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetNamedSession_ReturnValue) == 0x0001E0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetNamedSession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Map_Contains_ReturnValue) == 0x0001E8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_IsValid_ReturnValue) == 0x0001E9, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_3) == 0x0001D8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0001E0, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_7) == 0x0001E8, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Map_Contains_ReturnValue) == 0x0001E9, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Not_PreBool_ReturnValue_1) == 0x0001EA, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_BooleanAND_ReturnValue_1) == 0x0001EB, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetSessionSettings_ReturnValue) == 0x0001F0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetSessionSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetValue_ReturnValue) == 0x0001F8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_4) == 0x000348, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000350, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000358, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_7) == 0x000360, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameState_ReturnValue_1) == 0x000368, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_State_1) == 0x000370, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_8) == 0x000378, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_HasRoundStarted_RoundHasStarted) == 0x000379, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_HasRoundStarted_RoundHasStarted' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000380, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_BooleanAND_ReturnValue_2) == 0x000388, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_BooleanAND_ReturnValue_2) == 0x0001EC, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstance_ReturnValue_4) == 0x0001F0, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001F8, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000200, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, K2Node_DynamicCast_bSuccess_8) == 0x000208, "Member 'B_GameMode_C_Handle_Player_Join::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetSessionSettings_ReturnValue) == 0x000210, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetSessionSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetNamedSession_ReturnValue) == 0x000218, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetNamedSession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_GetValue_ReturnValue) == 0x000220, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_GetValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_IsValid_ReturnValue) == 0x000370, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_Handle_Player_Join, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000371, "Member 'B_GameMode_C_Handle_Player_Join::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.GetPlayerScoreStatManager
 // 0x0020 (0x0020 - 0x0000)
@@ -5280,6 +5472,72 @@ static_assert(sizeof(B_GameMode_C_OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2)
 static_assert(offsetof(B_GameMode_C_OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2, SessionName) == 0x000000, "Member 'B_GameMode_C_OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2::SessionName' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2, bWasSuccessful) == 0x000008, "Member 'B_GameMode_C_OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2::bWasSuccessful' has a wrong offset!");
 
+// Function B_GameMode.B_GameMode_C.OnFailure_51806D7E463D79826CE53692A53AAAC2
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2 final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2) == 0x000008, "Wrong alignment on B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2");
+static_assert(sizeof(B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2) == 0x000010, "Wrong size on B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2");
+static_assert(offsetof(B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2::FilteredStrings' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_51806D7E463D79826CE53692A53AAAC2
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2 final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2) == 0x000008, "Wrong alignment on B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2");
+static_assert(sizeof(B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2) == 0x000010, "Wrong size on B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2");
+static_assert(offsetof(B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2::FilteredStrings' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.OnFailure_273C0DFE40DFD0EA331D808B522EB1CC
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC) == 0x000008, "Wrong alignment on B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC");
+static_assert(sizeof(B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC) == 0x000010, "Wrong size on B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC");
+static_assert(offsetof(B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC::FilteredStrings' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC) == 0x000008, "Wrong alignment on B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC");
+static_assert(sizeof(B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC) == 0x000010, "Wrong size on B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC");
+static_assert(offsetof(B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC::FilteredStrings' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.OnFailure_6B22101E4F5020B89C7E4D9836EF42AA
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA) == 0x000008, "Wrong alignment on B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA");
+static_assert(sizeof(B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA) == 0x000010, "Wrong size on B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA");
+static_assert(offsetof(B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA::FilteredStrings' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA final
+{
+public:
+	TArray<struct FMatchPlayer>                   FilteredStrings;                                   // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA) == 0x000008, "Wrong alignment on B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA");
+static_assert(sizeof(B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA) == 0x000010, "Wrong size on B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA");
+static_assert(offsetof(B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA, FilteredStrings) == 0x000000, "Member 'B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA::FilteredStrings' has a wrong offset!");
+
 // Function B_GameMode.B_GameMode_C.K2_PostLogin
 // 0x0008 (0x0008 - 0x0000)
 struct B_GameMode_C_K2_PostLogin final
@@ -5368,273 +5626,368 @@ static_assert(offsetof(B_GameMode_C_HandleKickPlayerCommand, WitchItAccountId) =
 static_assert(offsetof(B_GameMode_C_HandleKickPlayerCommand, Code) == 0x000004, "Member 'B_GameMode_C_HandleKickPlayerCommand::Code' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_HandleKickPlayerCommand, Message) == 0x000008, "Member 'B_GameMode_C_HandleKickPlayerCommand::Message' has a wrong offset!");
 
+// Function B_GameMode.B_GameMode_C.JoinPlayersToMatchWithProfanity
+// 0x0010 (0x0010 - 0x0000)
+struct B_GameMode_C_JoinPlayersToMatchWithProfanity final
+{
+public:
+	TArray<struct FMatchPlayer>                   Players;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_JoinPlayersToMatchWithProfanity) == 0x000008, "Wrong alignment on B_GameMode_C_JoinPlayersToMatchWithProfanity");
+static_assert(sizeof(B_GameMode_C_JoinPlayersToMatchWithProfanity) == 0x000010, "Wrong size on B_GameMode_C_JoinPlayersToMatchWithProfanity");
+static_assert(offsetof(B_GameMode_C_JoinPlayersToMatchWithProfanity, Players) == 0x000000, "Member 'B_GameMode_C_JoinPlayersToMatchWithProfanity::Players' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.CreateMatchWithProfanity
+// 0x0020 (0x0020 - 0x0000)
+struct B_GameMode_C_CreateMatchWithProfanity final
+{
+public:
+	class FString                                 MatchID;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   Players;                                           // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_CreateMatchWithProfanity) == 0x000008, "Wrong alignment on B_GameMode_C_CreateMatchWithProfanity");
+static_assert(sizeof(B_GameMode_C_CreateMatchWithProfanity) == 0x000020, "Wrong size on B_GameMode_C_CreateMatchWithProfanity");
+static_assert(offsetof(B_GameMode_C_CreateMatchWithProfanity, MatchID) == 0x000000, "Member 'B_GameMode_C_CreateMatchWithProfanity::MatchID' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_CreateMatchWithProfanity, Players) == 0x000010, "Member 'B_GameMode_C_CreateMatchWithProfanity::Players' has a wrong offset!");
+
+// Function B_GameMode.B_GameMode_C.UpdateMatchDetailsWithProfanity
+// 0x0020 (0x0020 - 0x0000)
+struct B_GameMode_C_UpdateMatchDetailsWithProfanity final
+{
+public:
+	TArray<struct FMatchPlayer>                   Players;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FMatchTeam>                     Teams;                                             // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(B_GameMode_C_UpdateMatchDetailsWithProfanity) == 0x000008, "Wrong alignment on B_GameMode_C_UpdateMatchDetailsWithProfanity");
+static_assert(sizeof(B_GameMode_C_UpdateMatchDetailsWithProfanity) == 0x000020, "Wrong size on B_GameMode_C_UpdateMatchDetailsWithProfanity");
+static_assert(offsetof(B_GameMode_C_UpdateMatchDetailsWithProfanity, Players) == 0x000000, "Member 'B_GameMode_C_UpdateMatchDetailsWithProfanity::Players' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_UpdateMatchDetailsWithProfanity, Teams) == 0x000010, "Member 'B_GameMode_C_UpdateMatchDetailsWithProfanity::Teams' has a wrong offset!");
+
 // Function B_GameMode.B_GameMode_C.ExecuteUbergraph_B_GameMode
-// 0x0430 (0x0430 - 0x0000)
+// 0x0590 (0x0590 - 0x0000)
 struct B_GameMode_C_ExecuteUbergraph_B_GameMode final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckRandomTimerForWaitState_IsRandom;    // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetPickupSpawnDelay_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AController*                            K2Node_Event_ExitingController;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0038(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0060(0x0020)()
-	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x00D8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      K2Node_Event_NewPlayer;                            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1; // 0x0100(0x0020)()
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_UniqueNetIdToString_String_1;             // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0138(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0148(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0190(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01A0(0x0010)()
-	bool                                          CallFunc_GetLastSurvivingWitch_LastWitchExists;    // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       CallFunc_GetLastSurvivingWitch_LastWitchPlayer;    // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_AccountId;                      // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_RequestedAccountName;           // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_ServerClientConfig_C*                K2Node_CustomEvent_ClientConfig;                   // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_AccountState;                   // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsTearingDown_Result;                     // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HandleShouldGameStart_IsReady;            // 0x01E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E6[0x2];                                      // 0x01E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSubsystemDestroySession*  CallFunc_DestroySession_ReturnValue;               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x021C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0230(0x0008)(NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTrackingStarted_HasTrackingStarted;    // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_282[0x6];                                      // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInstanceManagerConnSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A9[0x3];                                      // 0x02A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x02AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x02BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInstanceManagerConnSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_SessionName_1;                  // 0x02F4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x02FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FD[0x3];                                      // 0x02FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Temp_real_Variable;                                // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_2;               // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_SeekGameState_C*                     K2Node_DynamicCast_AsB_Seek_Game_State;            // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x032A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x032B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& Message)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x032C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_message_1;                      // 0x0340(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0350(0x0010)()
-	TDelegate<void(int32 WitchItAccountId, int32 Code, const class FString& Message)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0360(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_witchItAccountId;               // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_code;                           // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_message;                        // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_392[0x2];                                      // 0x0392(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0394(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x03A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A5[0x3];                                      // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x03A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DevelopmentBuild_ReturnValue;             // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_3;          // 0x03B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA[0x6];                                      // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_SessionName;                    // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_3;               // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_4;               // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable;                                // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller_1;        // 0x0420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0429(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42A[0x2];                                      // 0x042A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x042C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable;                                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_SessionName;                    // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_1;               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_SeekGameState_C*                     K2Node_DynamicCast_AsB_Seek_Game_State;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_SessionName_1;                  // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_Event_NewPlayer;                            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_2;               // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x00C0(0x0020)()
+	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00F0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0100(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0148(0x0010)(ReferenceParm)
+	class AController*                            K2Node_Event_ExitingController;                    // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0160(0x0010)()
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1; // 0x0190(0x0020)()
+	class FString                                 CallFunc_UniqueNetIdToString_String_1;             // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckRandomTimerForWaitState_IsRandom;    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x020C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetPickupSpawnDelay_ReturnValue;          // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0238(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   Temp_struct_Variable;                              // 0x0248(0x0010)(ReferenceParm)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0258(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_3;          // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0264(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0278(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings;                // 0x0280(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0290(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings_1;              // 0x02A0(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_GetLastSurvivingWitch_LastWitchExists;    // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       CallFunc_GetLastSurvivingWitch_LastWitchPlayer;    // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_AccountId;                      // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_RequestedAccountName;           // 0x02C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_ServerClientConfig_C*                K2Node_CustomEvent_ClientConfig;                   // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_AccountState;                   // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsTearingDown_Result;                     // 0x02E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HandleShouldGameStart_IsReady;            // 0x02E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E6[0x2];                                      // 0x02E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystemDestroySession*  CallFunc_DestroySession_ReturnValue;               // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x02F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x3];                                      // 0x0309(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x030C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31D[0x3];                                      // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0320(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_4;               // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_3;               // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTrackingStarted_HasTrackingStarted;    // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0350(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   Temp_struct_Variable_1;                            // 0x0368(0x0010)(ReferenceParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings_2;              // 0x0390(0x0010)(ConstParm, ReferenceParm)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x03A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings_3;              // 0x03B8(0x0010)(ConstParm, ReferenceParm)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x03C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x03D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_message_1;                      // 0x03D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x03F0(0x0010)()
+	TDelegate<void(int32 WitchItAccountId, int32 Code, const class FString& Message)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0400(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_witchItAccountId;               // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_code;                           // 0x0414(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_message;                        // 0x0418(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInstanceManagerConnSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0441(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_442[0x2];                                      // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_10;           // 0x0444(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x0454(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMatchPlayer>                   Temp_struct_Variable_2;                            // 0x0468(0x0010)(ReferenceParm)
+	class UInstanceManagerConnSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x0478(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x0480(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0489(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DevelopmentBuild_ReturnValue;             // 0x048A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48B[0x5];                                      // 0x048B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings_4;              // 0x0490(0x0010)(ConstParm, ReferenceParm)
+	double                                        Temp_real_Variable;                                // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_5;               // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x04B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State_4;               // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_filteredStrings_5;              // 0x04D0(0x0010)(ConstParm, ReferenceParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FMatchPlayer>& FilteredStrings)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x04F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller_1;        // 0x0500(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_Players_2;                      // 0x0510(0x0010)(ConstParm, ReferenceParm)
+	class FString                                 K2Node_CustomEvent_MatchId;                        // 0x0520(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_Players_1;                      // 0x0530(0x0010)(ReferenceParm)
+	class UFilterMatchPlayerProfanityProxy*       CallFunc_FilterProfanity_ReturnValue;              // 0x0540(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFilterMatchPlayerProfanityProxy*       CallFunc_FilterProfanity_ReturnValue_1;            // 0x0548(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0551(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_552[0x6];                                      // 0x0552(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMatchSubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FMatchPlayer>                   K2Node_CustomEvent_Players;                        // 0x0560(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FMatchTeam>                     K2Node_CustomEvent_Teams;                          // 0x0570(0x0010)(ConstParm, ReferenceParm)
+	class UFilterMatchPlayerProfanityProxy*       CallFunc_FilterProfanity_ReturnValue_2;            // 0x0580(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_589[0x3];                                      // 0x0589(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x058C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GameMode_C_ExecuteUbergraph_B_GameMode) == 0x000008, "Wrong alignment on B_GameMode_C_ExecuteUbergraph_B_GameMode");
-static_assert(sizeof(B_GameMode_C_ExecuteUbergraph_B_GameMode) == 0x000430, "Wrong size on B_GameMode_C_ExecuteUbergraph_B_GameMode");
+static_assert(sizeof(B_GameMode_C_ExecuteUbergraph_B_GameMode) == 0x000590, "Wrong size on B_GameMode_C_ExecuteUbergraph_B_GameMode");
 static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, EntryPoint) == 0x000000, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_CheckRandomTimerForWaitState_IsRandom) == 0x000008, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_CheckRandomTimerForWaitState_IsRandom' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasAuthority_ReturnValue) == 0x000009, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000010, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetPickupSpawnDelay_ReturnValue) == 0x000018, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetPickupSpawnDelay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_ExitingController) == 0x000030, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_ExitingController' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000038, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_Controller) == 0x000040, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_State) == 0x000050, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000060, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_UniqueNetIdToString_String) == 0x000080, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue) == 0x000090, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue) == 0x000098, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000A8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0000B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x0000D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue) == 0x0000E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_NewPlayer) == 0x0000F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_NewPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Array_Length_ReturnValue) == 0x0000F8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1) == 0x000100, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000120, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_UniqueNetIdToString_String_1) == 0x000128, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_UniqueNetIdToString_String_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Conv_StringToText_ReturnValue) == 0x000138, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_MakeStruct_FormatArgumentData) == 0x000148, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_MakeArray_Array) == 0x000190, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Format_ReturnValue) == 0x0001A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetLastSurvivingWitch_LastWitchExists) == 0x0001B0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetLastSurvivingWitch_LastWitchExists' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetLastSurvivingWitch_LastWitchPlayer) == 0x0001B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetLastSurvivingWitch_LastWitchPlayer' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_AccountId) == 0x0001C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_AccountId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_RequestedAccountName) == 0x0001C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_RequestedAccountName' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_ClientConfig) == 0x0001D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_ClientConfig' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_AccountState) == 0x0001E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_AccountState' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsTearingDown_Result) == 0x0001E4, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsTearingDown_Result' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HandleShouldGameStart_IsReady) == 0x0001E5, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HandleShouldGameStart_IsReady' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue) == 0x0001E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue) == 0x0001F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_Instance) == 0x0001F8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_2) == 0x000200, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000208, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_DestroySession_ReturnValue) == 0x000210, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_DestroySession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue) == 0x000218, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_2) == 0x00021C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue_2) == 0x000230, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_EndPlayReason) == 0x000238, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_1) == 0x000240, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State) == 0x000248, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_3) == 0x000250, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_2) == 0x000258, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x000260, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_1) == 0x000268, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_4) == 0x000270, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000278, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasTrackingStarted_HasTrackingStarted) == 0x000280, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasTrackingStarted_HasTrackingStarted' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_1) == 0x000281, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_3) == 0x000288, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000290, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_2) == 0x000298, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0002A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_3) == 0x0002A8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_3) == 0x0002AC, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_4) == 0x0002BC, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue_1) == 0x0002D0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0002D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_5) == 0x0002E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x0002E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_4) == 0x0002F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_SessionName_1) == 0x0002F4, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_SessionName_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_bWasSuccessful_1) == 0x0002FC, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_3) == 0x000300, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_real_Variable) == 0x000308, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_2) == 0x000310, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_6) == 0x000318, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Seek_Game_State) == 0x000320, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Seek_Game_State' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_7) == 0x000328, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000329, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00032A, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00032B, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_5) == 0x00032C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_message_1) == 0x000340, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_message_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000350, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_6) == 0x000360, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_witchItAccountId) == 0x000370, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_witchItAccountId' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_code) == 0x000374, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_code' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_message) == 0x000378, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_message' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_4) == 0x000388, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasAuthority_ReturnValue_1) == 0x000390, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000391, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_7) == 0x000394, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x0003A4, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000008, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_name_Variable) == 0x000010, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_bool_Variable) == 0x000018, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue) == 0x000019, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x00001A, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_SessionName) == 0x00001C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_SessionName' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_bWasSuccessful) == 0x000024, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue) == 0x000038, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_1) == 0x000040, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State) == 0x000048, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_1) == 0x000058, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Seek_Game_State) == 0x000068, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Seek_Game_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000071, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000072, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000073, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue) == 0x000078, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_SessionName_1) == 0x000080, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_SessionName_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_bWasSuccessful_1) == 0x000088, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_Instance) == 0x000090, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_3) == 0x000098, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x000099, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_2) == 0x0000A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_NewPlayer) == 0x0000A8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_NewPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_2) == 0x0000B0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_4) == 0x0000B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x0000C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_UniqueNetIdToString_String) == 0x0000E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Conv_StringToText_ReturnValue) == 0x0000F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_MakeStruct_FormatArgumentData) == 0x000100, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_MakeArray_Array) == 0x000148, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_ExitingController) == 0x000158, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_ExitingController' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Format_ReturnValue) == 0x000160, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_Controller) == 0x000170, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_5) == 0x000178, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_State) == 0x000180, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_6) == 0x000188, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1) == 0x000190, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_UniqueNetIdToString_String_1) == 0x0001B0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_UniqueNetIdToString_String_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_3) == 0x0001C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue) == 0x0001C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0001D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Array_Length_ReturnValue) == 0x0001E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0001F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000200, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_DeltaSeconds) == 0x000204, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_CheckRandomTimerForWaitState_IsRandom) == 0x000208, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_CheckRandomTimerForWaitState_IsRandom' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_1) == 0x00020C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000220, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasAuthority_ReturnValue) == 0x000228, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetPickupSpawnDelay_ReturnValue) == 0x000230, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetPickupSpawnDelay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_2) == 0x000238, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_struct_Variable) == 0x000248, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000258, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_3) == 0x000260, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_3) == 0x000264, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x000278, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings) == 0x000280, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_4) == 0x000290, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings_1) == 0x0002A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetLastSurvivingWitch_LastWitchExists) == 0x0002B0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetLastSurvivingWitch_LastWitchExists' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetLastSurvivingWitch_LastWitchPlayer) == 0x0002B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetLastSurvivingWitch_LastWitchPlayer' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_AccountId) == 0x0002C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_AccountId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_RequestedAccountName) == 0x0002C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_RequestedAccountName' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_ClientConfig) == 0x0002D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_ClientConfig' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_AccountState) == 0x0002E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_AccountState' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsTearingDown_Result) == 0x0002E4, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsTearingDown_Result' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HandleShouldGameStart_IsReady) == 0x0002E5, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HandleShouldGameStart_IsReady' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0002E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_DestroySession_ReturnValue) == 0x0002F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_DestroySession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_5) == 0x0002F8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue) == 0x000308, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_6) == 0x00030C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_Event_EndPlayReason) == 0x00031C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_ReturnValue_2) == 0x000320, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000328, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_4) == 0x000330, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_3) == 0x000338, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_7) == 0x000340, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasTrackingStarted_HasTrackingStarted) == 0x000341, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasTrackingStarted_HasTrackingStarted' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000348, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_7) == 0x000350, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000360, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_struct_Variable_1) == 0x000368, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue_1) == 0x000378, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000380, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_8) == 0x000388, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings_2) == 0x000390, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x0003A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_8) == 0x0003A8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_DevelopmentBuild_ReturnValue) == 0x0003B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_DevelopmentBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsDedicatedServer_ReturnValue_3) == 0x0003B9, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsDedicatedServer_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_5) == 0x0003C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_SessionName) == 0x0003C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_SessionName' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_bWasSuccessful) == 0x0003D0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_4) == 0x0003D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_5) == 0x0003E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_3) == 0x0003E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_3' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_8) == 0x0003F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_4) == 0x0003F8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_4' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_9) == 0x000400, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue_2) == 0x000408, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_name_Variable) == 0x000410, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000418, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_Controller_1) == 0x000420, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_10) == 0x000428, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_bool_Variable) == 0x000429, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00042C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings_3) == 0x0003B8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_3) == 0x0003C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x0003D0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_message_1) == 0x0003D8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_message_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_1) == 0x0003E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0003F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_9) == 0x000400, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_witchItAccountId) == 0x000410, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_witchItAccountId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_code) == 0x000414, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_code' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_message) == 0x000418, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_message' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_4) == 0x000428, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_3) == 0x000430, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000438, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_2) == 0x000440, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_3) == 0x000441, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_10) == 0x000444, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_11) == 0x000454, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_struct_Variable_2) == 0x000468, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_4) == 0x000478, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetEngineSubsystem_ReturnValue_5) == 0x000480, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetEngineSubsystem_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_4) == 0x000488, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_HasAuthority_ReturnValue_1) == 0x000489, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_DevelopmentBuild_ReturnValue) == 0x00048A, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_DevelopmentBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings_4) == 0x000490, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, Temp_real_Variable) == 0x0004A0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameState_ReturnValue_5) == 0x0004A8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameState_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_12) == 0x0004B0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Game_State_4) == 0x0004C0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Game_State_4' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_9) == 0x0004C8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_filteredStrings_5) == 0x0004D0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_filteredStrings_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstance_ReturnValue_2) == 0x0004E0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x0004E8, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CreateDelegate_OutputDelegate_13) == 0x0004F0, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_AsB_Player_Controller_1) == 0x000500, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_AsB_Player_Controller_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_DynamicCast_bSuccess_10) == 0x000508, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_Players_2) == 0x000510, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_Players_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_MatchId) == 0x000520, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_MatchId' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_Players_1) == 0x000530, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_Players_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_FilterProfanity_ReturnValue) == 0x000540, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_FilterProfanity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_FilterProfanity_ReturnValue_1) == 0x000548, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_FilterProfanity_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_5) == 0x000550, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_6) == 0x000551, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_GetGameInstanceSubsystem_ReturnValue_5) == 0x000558, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_GetGameInstanceSubsystem_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_Players) == 0x000560, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_Players' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, K2Node_CustomEvent_Teams) == 0x000570, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::K2Node_CustomEvent_Teams' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_FilterProfanity_ReturnValue_2) == 0x000580, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_FilterProfanity_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_IsValid_ReturnValue_7) == 0x000588, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_GameMode_C_ExecuteUbergraph_B_GameMode, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00058C, "Member 'B_GameMode_C_ExecuteUbergraph_B_GameMode::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
 
 // Function B_GameMode.B_GameMode_C.GetPlayObjectiveId
 // 0x0008 (0x0008 - 0x0000)

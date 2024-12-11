@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function B_SkinSelectionFunctionLibrary.B_SkinSelectionFunctionLibrary_C.Get Skin Config Save Name
-// 0x0118 (0x0118 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name final
 {
 public:
@@ -32,24 +32,29 @@ public:
 	class FString                                 Suffix;                                            // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CombinedNames;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_ProjectPersistentDownloadDir_ReturnValue; // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue_1;             // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetProjectSavedDirectory_ReturnValue;     // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_SelectString_ReturnValue_1;               // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_3; // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_3; // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x000008, "Wrong alignment on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
-static_assert(sizeof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x000118, "Wrong size on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
+static_assert(sizeof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x000140, "Wrong size on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, SkinSelection) == 0x000000, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::SkinSelection' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Team) == 0x000008, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Team' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, ConfigNr) == 0x00000C, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::ConfigNr' has a wrong offset!");
@@ -59,19 +64,23 @@ static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Nam
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Suffix) == 0x000038, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Suffix' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CombinedNames) == 0x000048, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CombinedNames' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, K2Node_SwitchEnum_CmpSuccess) == 0x000058, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_IsConsoleBuild_ReturnValue) == 0x000059, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SwitchPlatform_ReturnValue) == 0x000059, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_IsConsoleBuild_ReturnValue) == 0x00005A, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_ProjectPersistentDownloadDir_ReturnValue) == 0x000060, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_ProjectPersistentDownloadDir_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SwitchPlatform_ReturnValue) == 0x000070, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SwitchPlatform_ReturnValue_1) == 0x000070, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SwitchPlatform_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_GetProjectSavedDirectory_ReturnValue) == 0x000078, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_GetProjectSavedDirectory_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SelectString_ReturnValue) == 0x000088, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SelectString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SelectString_ReturnValue_1) == 0x000098, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SelectString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item_1) == 0x0000B8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Temp_string_Variable) == 0x0000A8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue) == 0x0000C8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000D8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Concat_StrStr_ReturnValue) == 0x0000E8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x0000F8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_3) == 0x000108, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item_1) == 0x0000D8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Temp_bool_Variable) == 0x0000E8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000F0, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, K2Node_Select_Default) == 0x000100, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Concat_StrStr_ReturnValue) == 0x000110, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x000120, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_3) == 0x000130, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_3' has a wrong offset!");
 
 // Function B_SkinSelectionFunctionLibrary.B_SkinSelectionFunctionLibrary_C.Get Default Skin Configs
 // 0x00C8 (0x00C8 - 0x0000)

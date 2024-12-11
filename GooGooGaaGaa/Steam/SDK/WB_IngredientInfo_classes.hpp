@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_Ingredients_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_Ingredients_structs.hpp"
 #include "B_Rarity_structs.hpp"
 
 
@@ -34,6 +35,7 @@ public:
 	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CraftingScene_C*                     CraftingScene;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         CountQuantity;                                     // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              WantedVisibilty;                                   // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ForceIngredientCountFromInventoryManagerDisplay();
@@ -43,6 +45,7 @@ public:
 	class FText Get_Quantity_Text_0();
 	void CountIngredient(E_Ingredients Ingredient_0);
 	void IncredientsSpawned();
+	void Construct();
 	void ExecuteUbergraph_WB_IngredientInfo(int32 EntryPoint);
 
 public:
@@ -65,6 +68,7 @@ static_assert(offsetof(UWB_IngredientInfo_C, Quantity) == 0x0002FC, "Member 'UWB
 static_assert(offsetof(UWB_IngredientInfo_C, MinQuantity) == 0x000300, "Member 'UWB_IngredientInfo_C::MinQuantity' has a wrong offset!");
 static_assert(offsetof(UWB_IngredientInfo_C, CraftingScene) == 0x000308, "Member 'UWB_IngredientInfo_C::CraftingScene' has a wrong offset!");
 static_assert(offsetof(UWB_IngredientInfo_C, CountQuantity) == 0x000310, "Member 'UWB_IngredientInfo_C::CountQuantity' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, WantedVisibilty) == 0x000314, "Member 'UWB_IngredientInfo_C::WantedVisibilty' has a wrong offset!");
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
 
 

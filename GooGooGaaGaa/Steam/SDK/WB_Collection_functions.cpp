@@ -252,6 +252,49 @@ void UWB_Collection_C::OnSpecialAction()
 }
 
 
+// Function WB_Collection.WB_Collection_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_Collection_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Collection_C", "PreConstruct");
+
+	Params::WB_Collection_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_Collection.WB_Collection_C.StoreButtonCustomNavigation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_Collection_C::StoreButtonCustomNavigation(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Collection_C", "StoreButtonCustomNavigation");
+
+	Params::WB_Collection_C_StoreButtonCustomNavigation Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_Collection.WB_Collection_C.StorePageClosed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

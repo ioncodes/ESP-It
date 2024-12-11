@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "SteamGeneral_structs.hpp"
 #include "SteamWorkshop_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

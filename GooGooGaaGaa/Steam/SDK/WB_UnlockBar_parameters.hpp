@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "SClientItemUnlock_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "EItemUnlockType_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
-#include "SClientItemUnlock_structs.hpp"
 #include "UMG_structs.hpp"
+#include "S_ItemInfo_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params

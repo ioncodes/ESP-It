@@ -62,7 +62,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync) == 0x000008, "Wrong alignment on B_SavegameFunctionLibrary_C_SaveSaveGameAsync");
 static_assert(sizeof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync) == 0x000030, "Wrong size on B_SavegameFunctionLibrary_C_SaveSaveGameAsync");
@@ -70,7 +70,7 @@ static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, SaveGame) 
 static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, SaveGameType) == 0x000008, "Member 'B_SavegameFunctionLibrary_C_SaveSaveGameAsync::SaveGameType' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, __WorldContext) == 0x000010, "Member 'B_SavegameFunctionLibrary_C_SaveSaveGameAsync::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000018, "Member 'B_SavegameFunctionLibrary_C_SaveSaveGameAsync::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, CallFunc_SwitchPlatform_ReturnValue) == 0x000028, "Member 'B_SavegameFunctionLibrary_C_SaveSaveGameAsync::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SavegameFunctionLibrary_C_SaveSaveGameAsync, CallFunc_IsConsoleBuild_ReturnValue) == 0x000028, "Member 'B_SavegameFunctionLibrary_C_SaveSaveGameAsync::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
 
 // Function B_SavegameFunctionLibrary.B_SavegameFunctionLibrary_C.LoadSaveGameAsync
 // 0x0088 (0x0088 - 0x0000)
@@ -95,7 +95,6 @@ public:
 	class USaveGame*                              CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSaveGameAnyBytes_ReturnValue;          // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync) == 0x000008, "Wrong alignment on B_SavegameFunctionLibrary_C_LoadSaveGameAsync");
 static_assert(sizeof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync) == 0x000088, "Wrong size on B_SavegameFunctionLibrary_C_LoadSaveGameAsync");
@@ -114,7 +113,6 @@ static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync, K2Node_Sel
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync, CallFunc_CreateSaveGameObject_ReturnValue) == 0x000078, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGameAsync::CallFunc_CreateSaveGameObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync, CallFunc_HasSaveGameAnyBytes_ReturnValue) == 0x000080, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGameAsync::CallFunc_HasSaveGameAnyBytes_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync, CallFunc_DoesSaveGameExist_ReturnValue) == 0x000081, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGameAsync::CallFunc_DoesSaveGameExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGameAsync, CallFunc_BooleanAND_ReturnValue) == 0x000082, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGameAsync::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_SavegameFunctionLibrary.B_SavegameFunctionLibrary_C.SaveSaveGame
 // 0x0040 (0x0040 - 0x0000)
@@ -162,7 +160,6 @@ public:
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSaveGameAnyBytes_ReturnValue;          // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0083(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SavegameFunctionLibrary_C_LoadSaveGame) == 0x000008, "Wrong alignment on B_SavegameFunctionLibrary_C_LoadSaveGame");
 static_assert(sizeof(B_SavegameFunctionLibrary_C_LoadSaveGame) == 0x000088, "Wrong size on B_SavegameFunctionLibrary_C_LoadSaveGame");
@@ -183,7 +180,6 @@ static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGame, CallFunc_Create
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGame, CallFunc_SaveGameToSlot_ReturnValue) == 0x000080, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGame::CallFunc_SaveGameToSlot_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGame, CallFunc_HasSaveGameAnyBytes_ReturnValue) == 0x000081, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGame::CallFunc_HasSaveGameAnyBytes_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGame, CallFunc_DoesSaveGameExist_ReturnValue) == 0x000082, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGame::CallFunc_DoesSaveGameExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SavegameFunctionLibrary_C_LoadSaveGame, CallFunc_BooleanAND_ReturnValue) == 0x000083, "Member 'B_SavegameFunctionLibrary_C_LoadSaveGame::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

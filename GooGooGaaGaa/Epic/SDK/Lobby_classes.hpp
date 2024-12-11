@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Lobby_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "Lobby_structs.hpp"
 
 
 namespace SDK

@@ -58,141 +58,128 @@ static_assert(offsetof(WB_FriendScreenEntry_C_CreateTooltips, CallFunc_CreateTex
 static_assert(offsetof(WB_FriendScreenEntry_C_CreateTooltips, CallFunc_CreateTextTooltip_Tooltip_2) == 0x000010, "Member 'WB_FriendScreenEntry_C_CreateTooltips::CallFunc_CreateTextTooltip_Tooltip_2' has a wrong offset!");
 
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.ExecuteUbergraph_WB_FriendScreenEntry
-// 0x0610 (0x0610 - 0x0000)
+// 0x03D8 (0x03D8 - 0x0000)
 struct WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsExpanded;                          // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_FriendScreenEntryData_C*             K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data;   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0078(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x00B0(0x0030)(HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult)> K2Node_CreateDelegate_OutputDelegate;              // 0x00E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x00F0(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FromId;                         // 0x0120(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_AppId;                          // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FOnlineSessionSearchResultBP           K2Node_CustomEvent_InviteResult;                   // 0x0160(0x01B8)()
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_2;                  // 0x0318(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x034C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_3;                  // 0x0360(0x0030)(HasGetValueTypeHash)
-	struct FOnlineSessionSearchResultBP           CallFunc_Map_Find_Value;                           // 0x0390(0x01B8)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0548(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_4;                  // 0x0550(0x0030)(HasGetValueTypeHash)
-	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0581(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0582(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_583[0x5];                                      // 0x0583(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue;            // 0x0588(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetListItemObject_ReturnValue;            // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UListView*                              K2Node_DynamicCast_AsList_View;                    // 0x0598(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsSelected;                          // 0x05A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x05A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A3[0x5];                                      // 0x05A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B1[0x7];                                      // 0x05B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x05B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x05C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x05C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3[0x5];                                      // 0x05C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue_1;          // 0x05C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue_2;          // 0x05D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x05D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_OnlineFriends_C*                    CallFunc_WidgetGetParentOfClass_ReturnValue;       // 0x05E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x05E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E9[0x7];                                      // 0x05E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendRef*                       K2Node_CustomEvent_FriendRef;                      // 0x0608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsExpanded;                          // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_FriendScreenEntryData_C*             K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data;   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0070(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x00A0(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_2;                  // 0x00D8(0x0030)(HasGetValueTypeHash)
+	struct FOnlineSessionSearchResultBP           CallFunc_Map_Find_Value;                           // 0x0108(0x01B8)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_3;                  // 0x02C8(0x0030)(HasGetValueTypeHash)
+	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2FB[0x5];                                      // 0x02FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue;            // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetListItemObject_ReturnValue;            // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UListView*                              K2Node_DynamicCast_AsList_View;                    // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsSelected;                          // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x031A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31B[0x5];                                      // 0x031B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x033A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33B[0x5];                                      // 0x033B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue_1;          // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UListViewBase*                          CallFunc_GetOwningListView_ReturnValue_2;          // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_OnlineFriends_C*                    CallFunc_WidgetGetParentOfClass_ReturnValue;       // 0x0350(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0358(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendRef*                       K2Node_CustomEvent_FriendRef;                      // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& FromPlayer)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0390(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FromPlayer;                     // 0x03A0(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry) == 0x000008, "Wrong alignment on WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry");
-static_assert(sizeof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry) == 0x000610, "Wrong size on WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry");
+static_assert(sizeof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry) == 0x0003D8, "Wrong size on WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry");
 static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, EntryPoint) == 0x000000, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_1) == 0x000010, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000028, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_byte_Variable) == 0x000031, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x000038, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_byte_Variable_1) == 0x000040, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_2) == 0x000048, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000050, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_bIsExpanded) == 0x000059, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_bIsExpanded' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_ListItemObject) == 0x000060, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_ListItemObject' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data) == 0x000068, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_3) == 0x000070, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue) == 0x000078, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_bool_Variable) == 0x0000A8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_1) == 0x0000B0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CreateDelegate_OutputDelegate) == 0x0000E0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_UserId) == 0x0000F0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_UserId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_FromId) == 0x000120, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_FromId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_AppId) == 0x000150, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_AppId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_InviteResult) == 0x000160, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_InviteResult' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_2) == 0x000318, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x000348, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CreateDelegate_OutputDelegate_1) == 0x00034C, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_3) == 0x000360, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Find_Value) == 0x000390, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Find_ReturnValue) == 0x000548, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_4) == 0x000550, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_Answer) == 0x000580, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_Answer' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Remove_ReturnValue) == 0x000581, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_SwitchEnum_CmpSuccess) == 0x000582, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue) == 0x000588, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetListItemObject_ReturnValue) == 0x000590, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetListItemObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsList_View) == 0x000598, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsList_View' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_4) == 0x0005A0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_bIsSelected) == 0x0005A1, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Select_Default) == 0x0005A2, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_3) == 0x0005A8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue) == 0x0005B0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0005B8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_5) == 0x0005C0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue_1) == 0x0005C1, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue_2) == 0x0005C2, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue_1) == 0x0005C8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue_2) == 0x0005D0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0005D8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_WidgetGetParentOfClass_ReturnValue) == 0x0005E0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_WidgetGetParentOfClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsGamepadMode_ReturnValue) == 0x0005E8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_4) == 0x0005F0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x0005F8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_6) == 0x000600, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_FriendRef) == 0x000608, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_FriendRef' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_byte_Variable) == 0x000019, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x000020, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_1) == 0x000028, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000030, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_byte_Variable_1) == 0x000039, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_2) == 0x000040, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000048, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_2) == 0x000050, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_bIsExpanded) == 0x000051, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_bIsExpanded' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_ListItemObject) == 0x000058, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_ListItemObject' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data) == 0x000060, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Friend_Screen_Entry_Data' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_3) == 0x000068, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue) == 0x000070, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_1) == 0x0000A0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, Temp_bool_Variable) == 0x0000D0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_2) == 0x0000D8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Find_Value) == 0x000108, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Find_ReturnValue) == 0x0002C0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetUserId_ReturnValue_3) == 0x0002C8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetUserId_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_Answer) == 0x0002F8, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_Answer' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_Map_Remove_ReturnValue) == 0x0002F9, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_SwitchEnum_CmpSuccess) == 0x0002FA, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue) == 0x000300, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetListItemObject_ReturnValue) == 0x000308, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetListItemObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsList_View) == 0x000310, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsList_View' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_4) == 0x000318, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Event_bIsSelected) == 0x000319, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Event_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_Select_Default) == 0x00031A, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_3) == 0x000320, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue) == 0x000328, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000330, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_5) == 0x000338, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue_1) == 0x000339, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsVisible_ReturnValue_2) == 0x00033A, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsVisible_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue_1) == 0x000340, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetOwningListView_ReturnValue_2) == 0x000348, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetOwningListView_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_WidgetGetParentOfClass_ReturnValue) == 0x000350, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_WidgetGetParentOfClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CreateDelegate_OutputDelegate) == 0x000358, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_IsGamepadMode_ReturnValue) == 0x000368, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_GetGameInstance_ReturnValue_4) == 0x000370, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000378, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_DynamicCast_bSuccess_6) == 0x000380, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_FriendRef) == 0x000388, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_FriendRef' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CreateDelegate_OutputDelegate_1) == 0x000390, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, K2Node_CustomEvent_FromPlayer) == 0x0003A0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::K2Node_CustomEvent_FromPlayer' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x0003D0, "Member 'WB_FriendScreenEntry_C_ExecuteUbergraph_WB_FriendScreenEntry::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
 
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
@@ -206,21 +193,15 @@ static_assert(sizeof(WB_FriendScreenEntry_C_OnListItemObjectSet) == 0x000008, "W
 static_assert(offsetof(WB_FriendScreenEntry_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WB_FriendScreenEntry_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
 
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.OnSessionInviteReceived
-// 0x0228 (0x0228 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_FriendScreenEntry_C_OnSessionInviteReceived final
 {
 public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       FromId;                                            // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FString                                 AppId;                                             // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FOnlineSessionSearchResultBP           InviteResult;                                      // 0x0070(0x01B8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUniqueNetIdRepl                       FromPlayer;                                        // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreenEntry_C_OnSessionInviteReceived) == 0x000008, "Wrong alignment on WB_FriendScreenEntry_C_OnSessionInviteReceived");
-static_assert(sizeof(WB_FriendScreenEntry_C_OnSessionInviteReceived) == 0x000228, "Wrong size on WB_FriendScreenEntry_C_OnSessionInviteReceived");
-static_assert(offsetof(WB_FriendScreenEntry_C_OnSessionInviteReceived, UserId) == 0x000000, "Member 'WB_FriendScreenEntry_C_OnSessionInviteReceived::UserId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_OnSessionInviteReceived, FromId) == 0x000030, "Member 'WB_FriendScreenEntry_C_OnSessionInviteReceived::FromId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_OnSessionInviteReceived, AppId) == 0x000060, "Member 'WB_FriendScreenEntry_C_OnSessionInviteReceived::AppId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreenEntry_C_OnSessionInviteReceived, InviteResult) == 0x000070, "Member 'WB_FriendScreenEntry_C_OnSessionInviteReceived::InviteResult' has a wrong offset!");
+static_assert(sizeof(WB_FriendScreenEntry_C_OnSessionInviteReceived) == 0x000030, "Wrong size on WB_FriendScreenEntry_C_OnSessionInviteReceived");
+static_assert(offsetof(WB_FriendScreenEntry_C_OnSessionInviteReceived, FromPlayer) == 0x000000, "Member 'WB_FriendScreenEntry_C_OnSessionInviteReceived::FromPlayer' has a wrong offset!");
 
 // Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.SessionInviteAnswer
 // 0x0001 (0x0001 - 0x0000)

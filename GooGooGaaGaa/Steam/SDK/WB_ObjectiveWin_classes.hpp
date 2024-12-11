@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveResult_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_ObjectiveResult_structs.hpp"
 
 
 namespace SDK

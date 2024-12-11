@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "EGameMessageType_structs.hpp"
+#include "E_MapSize_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
+#include "SMapData_structs.hpp"
+#include "EGameMessageType_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "E_JoinAsHunterStates_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SMapData_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
-#include "E_MapSize_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_GameMode.B_GameMode_C
-// 0x0228 (0x05A8 - 0x0380)
+// 0x0238 (0x05B8 - 0x0380)
 class AB_GameMode_C : public ABaseGameMode
 {
 public:
@@ -89,6 +89,9 @@ public:
 	TArray<int32>                                 DisconnectedPlayers;                               // 0x0590(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          MapsToVoteUpdateNeeded;                            // 0x05A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          TimerHasBeenIncreased;                             // 0x05A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bRecordReplay;                                     // 0x05A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A3[0x5];                                      // 0x05A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 MatchActivityId;                                   // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void OnMidGamePlayerJoin__DelegateSignature();
@@ -104,6 +107,8 @@ public:
 	void SpawnPlaceableLight(class UClass* Class_0, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor);
 	void SpawnActionProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor);
 	void SpawnActionPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, bool Activated, TArray<uint8>& MaterialIndices, class ABP_PlaceableStaticProp_C** SpawnedActor);
+	void CheckIfCrossPlatformGame();
+	void CheckIfCrossPlatformGameAfterJoin(class APlayerController* JoiningController);
 	void GetPlayerIdForMatch(class APlayerState* PlayerState, struct FUniqueNetIdRepl* NetId, bool* IsPSNUser);
 	void SetupMatchStartDetails();
 	void CreateOnlineMatch();
@@ -183,6 +188,12 @@ public:
 	void CheckIfAllPlayersAreReady(bool* IsReady);
 	void OnDestroySessionComplete_BC6CE1BA4A9064285EE44985FF9B06B2(class FName SessionName, bool bWasSuccessful);
 	void OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2(class FName SessionName, bool bWasSuccessful);
+	void OnFailure_51806D7E463D79826CE53692A53AAAC2(const TArray<struct FMatchPlayer>& FilteredStrings);
+	void OnSuccess_51806D7E463D79826CE53692A53AAAC2(const TArray<struct FMatchPlayer>& FilteredStrings);
+	void OnFailure_273C0DFE40DFD0EA331D808B522EB1CC(const TArray<struct FMatchPlayer>& FilteredStrings);
+	void OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC(const TArray<struct FMatchPlayer>& FilteredStrings);
+	void OnFailure_6B22101E4F5020B89C7E4D9836EF42AA(const TArray<struct FMatchPlayer>& FilteredStrings);
+	void OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA(const TArray<struct FMatchPlayer>& FilteredStrings);
 	void StartGame();
 	void K2_PostLogin(class APlayerController* NewPlayer);
 	void K2_OnLogout(class AController* ExitingController);
@@ -199,6 +210,9 @@ public:
 	void HandleKickPlayerCommand(int32 WitchItAccountId, int32 Code, const class FString& Message);
 	void OnHandleTeardownMessageDedicatedServer();
 	void ShutdownServer();
+	void JoinPlayersToMatchWithProfanity(const TArray<struct FMatchPlayer>& Players);
+	void CreateMatchWithProfanity(const class FString& MatchID, TArray<struct FMatchPlayer>& Players);
+	void UpdateMatchDetailsWithProfanity(const TArray<struct FMatchPlayer>& Players, const TArray<struct FMatchTeam>& Teams);
 	void ExecuteUbergraph_B_GameMode(int32 EntryPoint);
 
 	void GetPlayObjectiveId(int64* ObjectiveId) const;
@@ -218,7 +232,7 @@ public:
 	}
 };
 static_assert(alignof(AB_GameMode_C) == 0x000008, "Wrong alignment on AB_GameMode_C");
-static_assert(sizeof(AB_GameMode_C) == 0x0005A8, "Wrong size on AB_GameMode_C");
+static_assert(sizeof(AB_GameMode_C) == 0x0005B8, "Wrong size on AB_GameMode_C");
 static_assert(offsetof(AB_GameMode_C, UberGraphFrame) == 0x000380, "Member 'AB_GameMode_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(AB_GameMode_C, DefaultSceneRoot) == 0x000388, "Member 'AB_GameMode_C::DefaultSceneRoot' has a wrong offset!");
 static_assert(offsetof(AB_GameMode_C, IsInitialized) == 0x000390, "Member 'AB_GameMode_C::IsInitialized' has a wrong offset!");
@@ -267,6 +281,8 @@ static_assert(offsetof(AB_GameMode_C, IsLiveRuleEditingAllowed) == 0x000589, "Me
 static_assert(offsetof(AB_GameMode_C, DisconnectedPlayers) == 0x000590, "Member 'AB_GameMode_C::DisconnectedPlayers' has a wrong offset!");
 static_assert(offsetof(AB_GameMode_C, MapsToVoteUpdateNeeded) == 0x0005A0, "Member 'AB_GameMode_C::MapsToVoteUpdateNeeded' has a wrong offset!");
 static_assert(offsetof(AB_GameMode_C, TimerHasBeenIncreased) == 0x0005A1, "Member 'AB_GameMode_C::TimerHasBeenIncreased' has a wrong offset!");
+static_assert(offsetof(AB_GameMode_C, bRecordReplay) == 0x0005A2, "Member 'AB_GameMode_C::bRecordReplay' has a wrong offset!");
+static_assert(offsetof(AB_GameMode_C, MatchActivityId) == 0x0005A8, "Member 'AB_GameMode_C::MatchActivityId' has a wrong offset!");
 
 }
 

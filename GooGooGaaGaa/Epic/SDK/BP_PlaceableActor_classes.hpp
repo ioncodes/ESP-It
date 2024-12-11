@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_PropCategory_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
 
 

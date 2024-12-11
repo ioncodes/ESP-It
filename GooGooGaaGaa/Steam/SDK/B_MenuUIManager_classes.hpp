@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MenuUIManager.B_MenuUIManager_C
-// 0x0138 (0x0168 - 0x0030)
+// 0x0148 (0x0178 - 0x0030)
 class UB_MenuUIManager_C final : public UBaseManager
 {
 public:
@@ -38,6 +38,7 @@ public:
 	uint8                                         Pad_103[0x5];                                      // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, double>                   SessionPings;                                      // 0x0108(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnGamePadModeChanged;                              // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 SwitchMenuMap;                                     // 0x0168(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void OnGamePadModeChanged__DelegateSignature(bool bGamePadMode);
@@ -76,7 +77,7 @@ public:
 	}
 };
 static_assert(alignof(UB_MenuUIManager_C) == 0x000008, "Wrong alignment on UB_MenuUIManager_C");
-static_assert(sizeof(UB_MenuUIManager_C) == 0x000168, "Wrong size on UB_MenuUIManager_C");
+static_assert(sizeof(UB_MenuUIManager_C) == 0x000178, "Wrong size on UB_MenuUIManager_C");
 static_assert(offsetof(UB_MenuUIManager_C, UberGraphFrame) == 0x000030, "Member 'UB_MenuUIManager_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UB_MenuUIManager_C, CurrentMenuState) == 0x000038, "Member 'UB_MenuUIManager_C::CurrentMenuState' has a wrong offset!");
 static_assert(offsetof(UB_MenuUIManager_C, SplashScreenShown) == 0x000039, "Member 'UB_MenuUIManager_C::SplashScreenShown' has a wrong offset!");
@@ -90,6 +91,7 @@ static_assert(offsetof(UB_MenuUIManager_C, IsOverlayWidgetOpen) == 0x000101, "Me
 static_assert(offsetof(UB_MenuUIManager_C, IsGamepadMode) == 0x000102, "Member 'UB_MenuUIManager_C::IsGamepadMode' has a wrong offset!");
 static_assert(offsetof(UB_MenuUIManager_C, SessionPings) == 0x000108, "Member 'UB_MenuUIManager_C::SessionPings' has a wrong offset!");
 static_assert(offsetof(UB_MenuUIManager_C, OnGamePadModeChanged) == 0x000158, "Member 'UB_MenuUIManager_C::OnGamePadModeChanged' has a wrong offset!");
+static_assert(offsetof(UB_MenuUIManager_C, SwitchMenuMap) == 0x000168, "Member 'UB_MenuUIManager_C::SwitchMenuMap' has a wrong offset!");
 
 }
 

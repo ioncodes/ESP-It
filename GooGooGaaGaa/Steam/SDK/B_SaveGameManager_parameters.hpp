@@ -20,25 +20,26 @@ struct B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_Name_2;                         // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Name_1;                         // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USaveGame*                              K2Node_CustomEvent_SaveGame_2;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_Name_1;                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USaveGame*                              K2Node_CustomEvent_SaveGame_1;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_SettingsSave_C*                      K2Node_DynamicCast_AsB_Settings_Save;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_NotificationSave_C*                  K2Node_DynamicCast_AsB_Notification_Save;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate;              // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USaveGame*                              K2Node_CustomEvent_SaveGame_1;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_NotificationSave_C*                  K2Node_DynamicCast_AsB_Notification_Save;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate;              // 0x0034(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Name_2;                         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USaveGame*                              K2Node_CustomEvent_SaveGame_2;                     // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_SettingsSave_C*                      K2Node_DynamicCast_AsB_Settings_Save;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Name_3;                         // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -56,9 +57,8 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x00F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0105(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_106[0x2];                                      // 0x0106(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame;                    // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame_1;                  // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MutedPlayersSave_C*                  K2Node_DynamicCast_AsB_Muted_Players_Save_1;       // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -78,19 +78,20 @@ public:
 static_assert(alignof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager) == 0x000008, "Wrong alignment on B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager");
 static_assert(sizeof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager) == 0x000168, "Wrong size on B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, EntryPoint) == 0x000000, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_Name_2) == 0x000008, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_Name_2' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_bSuccess_1) == 0x000018, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_SaveGame_2) == 0x000020, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_SaveGame_2' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_Name_1) == 0x000028, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_Name_1' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_bSuccess) == 0x000038, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_SaveGame_1) == 0x000040, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_SaveGame_1' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_Settings_Save) == 0x000048, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_Settings_Save' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_Notification_Save) == 0x000058, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_Notification_Save' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate) == 0x000064, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000074, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000084, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_Name_1) == 0x000008, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_Name_1' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_bSuccess) == 0x000018, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_SaveGame_1) == 0x000020, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_SaveGame_1' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_Notification_Save) == 0x000028, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_Notification_Save' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate) == 0x000034, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000044, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000054, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_Name_2) == 0x000068, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_Name_2' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_bSuccess_1) == 0x000078, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_SaveGame_2) == 0x000080, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_SaveGame_2' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_Settings_Save) == 0x000088, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_Settings_Save' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_Name_3) == 0x000098, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_Name_3' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_bSuccess_2) == 0x0000A8, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_bSuccess_2' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CustomEvent_SaveGame_3) == 0x0000B0, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CustomEvent_SaveGame_3' has a wrong offset!");
@@ -104,8 +105,7 @@ static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_User_Messages_Save) == 0x0000E8, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_User_Messages_Save' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_bSuccess_3) == 0x0000F0, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000F4, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_SwitchPlatform_ReturnValue) == 0x000104, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_BooleanAND_ReturnValue_2) == 0x000105, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_BooleanAND_ReturnValue_2) == 0x000104, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_LoadSaveGame_Savegame) == 0x000108, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_LoadSaveGame_Savegame' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, CallFunc_LoadSaveGame_Savegame_1) == 0x000110, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::CallFunc_LoadSaveGame_Savegame_1' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K2Node_DynamicCast_AsB_Muted_Players_Save_1) == 0x000118, "Member 'B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager::K2Node_DynamicCast_AsB_Muted_Players_Save_1' has a wrong offset!");

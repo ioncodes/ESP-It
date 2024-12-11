@@ -65,8 +65,36 @@ void UB_ReportPlayerManager_C::CanReporterReport(const class FString& PlayerToRe
 }
 
 
+// Function B_ReportPlayerManager.B_ReportPlayerManager_C.ConstructReportJsonObject
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerState*                     PlayerToReport                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerState*                     ReportingPlayer                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UVaRestJsonObject*                JsonRequest                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UB_ReportPlayerManager_C::ConstructReportJsonObject(class APlayerState* PlayerToReport, class APlayerState* ReportingPlayer, int32 Reason, class UVaRestJsonObject** JsonRequest)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ReportPlayerManager_C", "ConstructReportJsonObject");
+
+	Params::B_ReportPlayerManager_C_ConstructReportJsonObject Parms{};
+
+	Parms.PlayerToReport = PlayerToReport;
+	Parms.ReportingPlayer = ReportingPlayer;
+	Parms.Reason = Reason;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (JsonRequest != nullptr)
+		*JsonRequest = Parms.JsonRequest;
+}
+
+
 // Function B_ReportPlayerManager.B_ReportPlayerManager_C.ExecuteUbergraph_B_ReportPlayerManager
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -80,50 +108,6 @@ void UB_ReportPlayerManager_C::ExecuteUbergraph_B_ReportPlayerManager(int32 Entr
 	Params::B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_ReportPlayerManager.B_ReportPlayerManager_C.OnFailure_CA756CEE40EA230D71CCEA881C25CCBD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   QueryID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UB_ReportPlayerManager_C::OnFailure_CA756CEE40EA230D71CCEA881C25CCBD(const class FString& DownloadedString, int32 QueryID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ReportPlayerManager_C", "OnFailure_CA756CEE40EA230D71CCEA881C25CCBD");
-
-	Params::B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD Parms{};
-
-	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.QueryID = QueryID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_ReportPlayerManager.B_ReportPlayerManager_C.OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   QueryID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UB_ReportPlayerManager_C::OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD(const class FString& DownloadedString, int32 QueryID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ReportPlayerManager_C", "OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD");
-
-	Params::B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD Parms{};
-
-	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.QueryID = QueryID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -36,26 +36,6 @@ enum class ESCCModification : uint32
 	ESCCModification_MAX                     = 4,
 };
 
-// ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FTypedElementDataStorageColumn
-{
-};
-#pragma pack(pop)
-static_assert(alignof(FTypedElementDataStorageColumn) == 0x000001, "Wrong alignment on FTypedElementDataStorageColumn");
-static_assert(sizeof(FTypedElementDataStorageColumn) == 0x000001, "Wrong size on FTypedElementDataStorageColumn");
-
-// ScriptStruct TypedElementFramework.TestColumnE
-// 0x0001 (0x0001 - 0x0000)
-struct FTestColumnE final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTestColumnE) == 0x000001, "Wrong alignment on FTestColumnE");
-static_assert(sizeof(FTestColumnE) == 0x000001, "Wrong size on FTestColumnE");
-
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FScriptTypedElementHandle final
@@ -65,6 +45,16 @@ public:
 };
 static_assert(alignof(FScriptTypedElementHandle) == 0x000008, "Wrong alignment on FScriptTypedElementHandle");
 static_assert(sizeof(FScriptTypedElementHandle) == 0x000008, "Wrong size on FScriptTypedElementHandle");
+
+// ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct alignas(0x01) FTypedElementDataStorageColumn
+{
+};
+#pragma pack(pop)
+static_assert(alignof(FTypedElementDataStorageColumn) == 0x000001, "Wrong alignment on FTypedElementDataStorageColumn");
+static_assert(sizeof(FTypedElementDataStorageColumn) == 0x000001, "Wrong size on FTypedElementDataStorageColumn");
 
 // ScriptStruct TypedElementFramework.TypedElementAlertColumn
 // 0x0020 (0x0020 - 0x0000)
@@ -454,6 +444,16 @@ public:
 };
 static_assert(alignof(FTestColumnD) == 0x000001, "Wrong alignment on FTestColumnD");
 static_assert(sizeof(FTestColumnD) == 0x000001, "Wrong size on FTestColumnD");
+
+// ScriptStruct TypedElementFramework.TestColumnE
+// 0x0001 (0x0001 - 0x0000)
+struct FTestColumnE final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTestColumnE) == 0x000001, "Wrong alignment on FTestColumnE");
+static_assert(sizeof(FTestColumnE) == 0x000001, "Wrong size on FTestColumnE");
 
 // ScriptStruct TypedElementFramework.TestColumnF
 // 0x0001 (0x0001 - 0x0000)

@@ -57,26 +57,6 @@ class FText UWB_PlayerListWidget_C::Get_GameModeText_Text_0()
 }
 
 
-// Function WB_PlayerListWidget.WB_PlayerListWidget_C.Get_GameNameText_Text_0
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_PlayerListWidget_C::Get_GameNameText_Text_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_PlayerListWidget_C", "Get_GameNameText_Text_0");
-
-	Params::WB_PlayerListWidget_C_Get_GameNameText_Text_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WB_PlayerListWidget.WB_PlayerListWidget_C.Get_RoundText_Text_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -110,6 +90,26 @@ ESlateVisibility UWB_PlayerListWidget_C::Get_RoundText_Visibility_0()
 		Func = Class->GetFunction("WB_PlayerListWidget_C", "Get_RoundText_Visibility_0");
 
 	Params::WB_PlayerListWidget_C_Get_RoundText_Visibility_0 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_PlayerListWidget.WB_PlayerListWidget_C.GetGameNameTextText0
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UWB_PlayerListWidget_C::GetGameNameTextText0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PlayerListWidget_C", "GetGameNameTextText0");
+
+	Params::WB_PlayerListWidget_C_GetGameNameTextText0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

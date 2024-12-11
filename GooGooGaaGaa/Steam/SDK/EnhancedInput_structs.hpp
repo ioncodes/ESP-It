@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Slate_structs.hpp"
 
 
@@ -199,22 +199,61 @@ enum class ETriggerEventsSupported : uint8
 	ETriggerEventsSupported_MAX              = 8,
 };
 
-// ScriptStruct EnhancedInput.PlayerMappableKeyOptions
-// 0x0030 (0x0030 - 0x0000)
-struct FPlayerMappableKeyOptions final
+// ScriptStruct EnhancedInput.InputActionValue
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FInputActionValue final
 {
 public:
-	class UObject*                                MetaData;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   DisplayName;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   DisplayCategory;                                   // 0x0020(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPlayerMappableKeyOptions) == 0x000008, "Wrong alignment on FPlayerMappableKeyOptions");
-static_assert(sizeof(FPlayerMappableKeyOptions) == 0x000030, "Wrong size on FPlayerMappableKeyOptions");
-static_assert(offsetof(FPlayerMappableKeyOptions, MetaData) == 0x000000, "Member 'FPlayerMappableKeyOptions::MetaData' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyOptions, Name) == 0x000008, "Member 'FPlayerMappableKeyOptions::Name' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyOptions, DisplayName) == 0x000010, "Member 'FPlayerMappableKeyOptions::DisplayName' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyOptions, DisplayCategory) == 0x000020, "Member 'FPlayerMappableKeyOptions::DisplayCategory' has a wrong offset!");
+static_assert(alignof(FInputActionValue) == 0x000008, "Wrong alignment on FInputActionValue");
+static_assert(sizeof(FInputActionValue) == 0x000020, "Wrong size on FInputActionValue");
+
+// ScriptStruct EnhancedInput.PlayerMappableKeyQueryOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FPlayerMappableKeyQueryOptions final
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   KeyToMatch;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPlayerMappableKeySlot                        SlotToMatch;                                       // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bMatchBasicKeyTypes : 1;                           // 0x0021(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bMatchKeyAxisType : 1;                             // 0x0021(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EHardwareDevicePrimaryType                    RequiredDeviceType;                                // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RequiredDeviceFlags;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlayerMappableKeyQueryOptions) == 0x000008, "Wrong alignment on FPlayerMappableKeyQueryOptions");
+static_assert(sizeof(FPlayerMappableKeyQueryOptions) == 0x000028, "Wrong size on FPlayerMappableKeyQueryOptions");
+static_assert(offsetof(FPlayerMappableKeyQueryOptions, MappingName) == 0x000000, "Member 'FPlayerMappableKeyQueryOptions::MappingName' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyQueryOptions, KeyToMatch) == 0x000008, "Member 'FPlayerMappableKeyQueryOptions::KeyToMatch' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyQueryOptions, SlotToMatch) == 0x000020, "Member 'FPlayerMappableKeyQueryOptions::SlotToMatch' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyQueryOptions, RequiredDeviceType) == 0x000022, "Member 'FPlayerMappableKeyQueryOptions::RequiredDeviceType' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyQueryOptions, RequiredDeviceFlags) == 0x000024, "Member 'FPlayerMappableKeyQueryOptions::RequiredDeviceFlags' has a wrong offset!");
+
+// ScriptStruct EnhancedInput.KeyConsumptionOptions
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FKeyConsumptionOptions final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FKeyConsumptionOptions) == 0x000008, "Wrong alignment on FKeyConsumptionOptions");
+static_assert(sizeof(FKeyConsumptionOptions) == 0x000018, "Wrong size on FKeyConsumptionOptions");
+
+// ScriptStruct EnhancedInput.InjectedInput
+// 0x0040 (0x0040 - 0x0000)
+struct FInjectedInput final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0020(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0030(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FInjectedInput) == 0x000008, "Wrong alignment on FInjectedInput");
+static_assert(sizeof(FInjectedInput) == 0x000040, "Wrong size on FInjectedInput");
+static_assert(offsetof(FInjectedInput, Triggers) == 0x000020, "Member 'FInjectedInput::Triggers' has a wrong offset!");
+static_assert(offsetof(FInjectedInput, Modifiers) == 0x000030, "Member 'FInjectedInput::Modifiers' has a wrong offset!");
 
 // ScriptStruct EnhancedInput.MapPlayerKeyArgs
 // 0x0040 (0x0040 - 0x0000)
@@ -239,16 +278,6 @@ static_assert(offsetof(FMapPlayerKeyArgs, NewKey) == 0x000010, "Member 'FMapPlay
 static_assert(offsetof(FMapPlayerKeyArgs, HardwareDeviceId) == 0x000028, "Member 'FMapPlayerKeyArgs::HardwareDeviceId' has a wrong offset!");
 static_assert(offsetof(FMapPlayerKeyArgs, ProfileId) == 0x000030, "Member 'FMapPlayerKeyArgs::ProfileId' has a wrong offset!");
 
-// ScriptStruct EnhancedInput.InputActionValue
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FInputActionValue final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FInputActionValue) == 0x000008, "Wrong alignment on FInputActionValue");
-static_assert(sizeof(FInputActionValue) == 0x000020, "Wrong size on FInputActionValue");
-
 // ScriptStruct EnhancedInput.PlayerMappableKeyProfileCreationArgs
 // 0x0030 (0x0030 - 0x0000)
 struct FPlayerMappableKeyProfileCreationArgs final
@@ -268,6 +297,22 @@ static_assert(offsetof(FPlayerMappableKeyProfileCreationArgs, ProfileType) == 0x
 static_assert(offsetof(FPlayerMappableKeyProfileCreationArgs, ProfileIdentifier) == 0x000008, "Member 'FPlayerMappableKeyProfileCreationArgs::ProfileIdentifier' has a wrong offset!");
 static_assert(offsetof(FPlayerMappableKeyProfileCreationArgs, UserId) == 0x000010, "Member 'FPlayerMappableKeyProfileCreationArgs::UserId' has a wrong offset!");
 static_assert(offsetof(FPlayerMappableKeyProfileCreationArgs, DisplayName) == 0x000018, "Member 'FPlayerMappableKeyProfileCreationArgs::DisplayName' has a wrong offset!");
+
+// ScriptStruct EnhancedInput.MappingQueryIssue
+// 0x0018 (0x0018 - 0x0000)
+struct FMappingQueryIssue final
+{
+public:
+	EMappingQueryIssue                            Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputMappingContext*                   BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInputAction*                           BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMappingQueryIssue) == 0x000008, "Wrong alignment on FMappingQueryIssue");
+static_assert(sizeof(FMappingQueryIssue) == 0x000018, "Wrong size on FMappingQueryIssue");
+static_assert(offsetof(FMappingQueryIssue, Issue) == 0x000000, "Member 'FMappingQueryIssue::Issue' has a wrong offset!");
+static_assert(offsetof(FMappingQueryIssue, BlockingContext) == 0x000008, "Member 'FMappingQueryIssue::BlockingContext' has a wrong offset!");
+static_assert(offsetof(FMappingQueryIssue, BlockingAction) == 0x000010, "Member 'FMappingQueryIssue::BlockingAction' has a wrong offset!");
 
 // ScriptStruct EnhancedInput.PlayerKeyMapping
 // 0x0080 (0x0080 - 0x0000)
@@ -307,70 +352,6 @@ static_assert(alignof(FKeyMappingRow) == 0x000008, "Wrong alignment on FKeyMappi
 static_assert(sizeof(FKeyMappingRow) == 0x000050, "Wrong size on FKeyMappingRow");
 static_assert(offsetof(FKeyMappingRow, Mappings) == 0x000000, "Member 'FKeyMappingRow::Mappings' has a wrong offset!");
 
-// ScriptStruct EnhancedInput.ModifyContextOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FModifyContextOptions final
-{
-public:
-	uint8                                         bIgnoreAllPressedKeysUntilRelease : 1;             // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bForceImmediately : 1;                             // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bNotifyUserSettings : 1;                           // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-static_assert(alignof(FModifyContextOptions) == 0x000001, "Wrong alignment on FModifyContextOptions");
-static_assert(sizeof(FModifyContextOptions) == 0x000001, "Wrong size on FModifyContextOptions");
-
-// ScriptStruct EnhancedInput.InjectedInput
-// 0x0040 (0x0040 - 0x0000)
-struct FInjectedInput final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0020(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0030(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FInjectedInput) == 0x000008, "Wrong alignment on FInjectedInput");
-static_assert(sizeof(FInjectedInput) == 0x000040, "Wrong size on FInjectedInput");
-static_assert(offsetof(FInjectedInput, Triggers) == 0x000020, "Member 'FInjectedInput::Triggers' has a wrong offset!");
-static_assert(offsetof(FInjectedInput, Modifiers) == 0x000030, "Member 'FInjectedInput::Modifiers' has a wrong offset!");
-
-// ScriptStruct EnhancedInput.PlayerMappableKeyQueryOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FPlayerMappableKeyQueryOptions final
-{
-public:
-	class FName                                   MappingName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   KeyToMatch;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPlayerMappableKeySlot                        SlotToMatch;                                       // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bMatchBasicKeyTypes : 1;                           // 0x0021(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bMatchKeyAxisType : 1;                             // 0x0021(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	EHardwareDevicePrimaryType                    RequiredDeviceType;                                // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RequiredDeviceFlags;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerMappableKeyQueryOptions) == 0x000008, "Wrong alignment on FPlayerMappableKeyQueryOptions");
-static_assert(sizeof(FPlayerMappableKeyQueryOptions) == 0x000028, "Wrong size on FPlayerMappableKeyQueryOptions");
-static_assert(offsetof(FPlayerMappableKeyQueryOptions, MappingName) == 0x000000, "Member 'FPlayerMappableKeyQueryOptions::MappingName' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyQueryOptions, KeyToMatch) == 0x000008, "Member 'FPlayerMappableKeyQueryOptions::KeyToMatch' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyQueryOptions, SlotToMatch) == 0x000020, "Member 'FPlayerMappableKeyQueryOptions::SlotToMatch' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyQueryOptions, RequiredDeviceType) == 0x000022, "Member 'FPlayerMappableKeyQueryOptions::RequiredDeviceType' has a wrong offset!");
-static_assert(offsetof(FPlayerMappableKeyQueryOptions, RequiredDeviceFlags) == 0x000024, "Member 'FPlayerMappableKeyQueryOptions::RequiredDeviceFlags' has a wrong offset!");
-
-// ScriptStruct EnhancedInput.MappingQueryIssue
-// 0x0018 (0x0018 - 0x0000)
-struct FMappingQueryIssue final
-{
-public:
-	EMappingQueryIssue                            Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputMappingContext*                   BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInputAction*                           BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMappingQueryIssue) == 0x000008, "Wrong alignment on FMappingQueryIssue");
-static_assert(sizeof(FMappingQueryIssue) == 0x000018, "Wrong size on FMappingQueryIssue");
-static_assert(offsetof(FMappingQueryIssue, Issue) == 0x000000, "Member 'FMappingQueryIssue::Issue' has a wrong offset!");
-static_assert(offsetof(FMappingQueryIssue, BlockingContext) == 0x000008, "Member 'FMappingQueryIssue::BlockingContext' has a wrong offset!");
-static_assert(offsetof(FMappingQueryIssue, BlockingAction) == 0x000010, "Member 'FMappingQueryIssue::BlockingAction' has a wrong offset!");
-
 // ScriptStruct EnhancedInput.PlayerMappableKeySlot
 // 0x0004 (0x0004 - 0x0000)
 struct FPlayerMappableKeySlot final
@@ -381,6 +362,23 @@ public:
 static_assert(alignof(FPlayerMappableKeySlot) == 0x000004, "Wrong alignment on FPlayerMappableKeySlot");
 static_assert(sizeof(FPlayerMappableKeySlot) == 0x000004, "Wrong size on FPlayerMappableKeySlot");
 static_assert(offsetof(FPlayerMappableKeySlot, SlotNumber) == 0x000000, "Member 'FPlayerMappableKeySlot::SlotNumber' has a wrong offset!");
+
+// ScriptStruct EnhancedInput.PlayerMappableKeyOptions
+// 0x0030 (0x0030 - 0x0000)
+struct FPlayerMappableKeyOptions final
+{
+public:
+	class UObject*                                MetaData;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   DisplayName;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   DisplayCategory;                                   // 0x0020(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlayerMappableKeyOptions) == 0x000008, "Wrong alignment on FPlayerMappableKeyOptions");
+static_assert(sizeof(FPlayerMappableKeyOptions) == 0x000030, "Wrong size on FPlayerMappableKeyOptions");
+static_assert(offsetof(FPlayerMappableKeyOptions, MetaData) == 0x000000, "Member 'FPlayerMappableKeyOptions::MetaData' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyOptions, Name) == 0x000008, "Member 'FPlayerMappableKeyOptions::Name' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyOptions, DisplayName) == 0x000010, "Member 'FPlayerMappableKeyOptions::DisplayName' has a wrong offset!");
+static_assert(offsetof(FPlayerMappableKeyOptions, DisplayCategory) == 0x000020, "Member 'FPlayerMappableKeyOptions::DisplayCategory' has a wrong offset!");
 
 // ScriptStruct EnhancedInput.EnhancedActionKeyMapping
 // 0x0050 (0x0050 - 0x0000)
@@ -440,15 +438,17 @@ static_assert(offsetof(FDefaultContextSetting, Priority) == 0x000028, "Member 'F
 static_assert(offsetof(FDefaultContextSetting, bAddImmediately) == 0x00002C, "Member 'FDefaultContextSetting::bAddImmediately' has a wrong offset!");
 static_assert(offsetof(FDefaultContextSetting, bRegisterWithUserSettings) == 0x00002D, "Member 'FDefaultContextSetting::bRegisterWithUserSettings' has a wrong offset!");
 
-// ScriptStruct EnhancedInput.KeyConsumptionOptions
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FKeyConsumptionOptions final
+// ScriptStruct EnhancedInput.ModifyContextOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FModifyContextOptions final
 {
 public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bIgnoreAllPressedKeysUntilRelease : 1;             // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceImmediately : 1;                             // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bNotifyUserSettings : 1;                           // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
-static_assert(alignof(FKeyConsumptionOptions) == 0x000008, "Wrong alignment on FKeyConsumptionOptions");
-static_assert(sizeof(FKeyConsumptionOptions) == 0x000018, "Wrong size on FKeyConsumptionOptions");
+static_assert(alignof(FModifyContextOptions) == 0x000001, "Wrong alignment on FModifyContextOptions");
+static_assert(sizeof(FModifyContextOptions) == 0x000001, "Wrong size on FModifyContextOptions");
 
 // ScriptStruct EnhancedInput.InjectedInputArray
 // 0x0010 (0x0010 - 0x0000)

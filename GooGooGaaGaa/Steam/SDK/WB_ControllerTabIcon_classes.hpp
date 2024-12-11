@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "WB_ControllerIcon_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

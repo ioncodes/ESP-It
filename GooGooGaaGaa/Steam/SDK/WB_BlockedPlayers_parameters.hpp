@@ -380,40 +380,50 @@ static_assert(offsetof(WB_BlockedPlayers_C_SortBlockedPlayersAlphabetically, Cal
 static_assert(offsetof(WB_BlockedPlayers_C_SortBlockedPlayersAlphabetically, CallFunc_CompareStringsAlphabetically_AIsLessThanB) == 0x000078, "Member 'WB_BlockedPlayers_C_SortBlockedPlayersAlphabetically::CallFunc_CompareStringsAlphabetically_AIsLessThanB' has a wrong offset!");
 
 // Function WB_BlockedPlayers.WB_BlockedPlayers_C.UserInfosReceived
-// 0x0080 (0x0080 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct WB_BlockedPlayers_C_UserInfosReceived final
 {
 public:
 	TArray<struct FUniqueNetIdRepl>               UserIds;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<class UOnlineUserRef*>                 OnlineUsers;                                       // 0x0010(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item;                           // 0x0038(0x0030)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineUserRef*                         CallFunc_GetUserInfo_ReturnValue;                  // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserSubsystem*                   CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_Array_Get_Item;                           // 0x0050(0x0030)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineUserRef*                         CallFunc_GetUserInfo_ReturnValue;                  // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility; // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_BlockedPlayers_C_UserInfosReceived) == 0x000008, "Wrong alignment on WB_BlockedPlayers_C_UserInfosReceived");
-static_assert(sizeof(WB_BlockedPlayers_C_UserInfosReceived) == 0x000080, "Wrong size on WB_BlockedPlayers_C_UserInfosReceived");
+static_assert(sizeof(WB_BlockedPlayers_C_UserInfosReceived) == 0x000098, "Wrong size on WB_BlockedPlayers_C_UserInfosReceived");
 static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, UserIds) == 0x000000, "Member 'WB_BlockedPlayers_C_UserInfosReceived::UserIds' has a wrong offset!");
 static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, OnlineUsers) == 0x000010, "Member 'WB_BlockedPlayers_C_UserInfosReceived::OnlineUsers' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, Temp_int_Array_Index_Variable) == 0x000020, "Member 'WB_BlockedPlayers_C_UserInfosReceived::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000028, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'WB_BlockedPlayers_C_UserInfosReceived::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Get_Item) == 0x000038, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_GetUserInfo_ReturnValue) == 0x000070, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_GetUserInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_IsValid_ReturnValue) == 0x000079, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Add_ReturnValue) == 0x00007C, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'WB_BlockedPlayers_C_UserInfosReceived::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, Temp_int_Array_Index_Variable) == 0x000028, "Member 'WB_BlockedPlayers_C_UserInfosReceived::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, K2Node_DynamicCast_AsB_Game_Instance) == 0x000038, "Member 'WB_BlockedPlayers_C_UserInfosReceived::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WB_BlockedPlayers_C_UserInfosReceived::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000048, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Get_Item) == 0x000050, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_GetUserInfo_ReturnValue) == 0x000088, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_GetUserInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_IsValid_ReturnValue) == 0x000091, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility) == 0x000092, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Not_PreBool_ReturnValue) == 0x000093, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BlockedPlayers_C_UserInfosReceived, CallFunc_Array_Add_ReturnValue) == 0x000094, "Member 'WB_BlockedPlayers_C_UserInfosReceived::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 }
 

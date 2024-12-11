@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "B_Ingredient_structs.hpp"
+#include "UMG_structs.hpp"
 #include "E_Ingredients_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "B_Rarity_structs.hpp"
@@ -204,7 +205,7 @@ static_assert(sizeof(WB_IngredientInfo_C_CountIngredient) == 0x000001, "Wrong si
 static_assert(offsetof(WB_IngredientInfo_C_CountIngredient, Ingredient_0) == 0x000000, "Member 'WB_IngredientInfo_C_CountIngredient::Ingredient_0' has a wrong offset!");
 
 // Function WB_IngredientInfo.WB_IngredientInfo_C.ExecuteUbergraph_WB_IngredientInfo
-// 0x0014 (0x0014 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo final
 {
 public:
@@ -215,14 +216,16 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo) == 0x000004, "Wrong alignment on WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo");
-static_assert(sizeof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo) == 0x000014, "Wrong size on WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo");
+static_assert(sizeof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo) == 0x000018, "Wrong size on WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo");
 static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, EntryPoint) == 0x000000, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, K2Node_CustomEvent_Ingredient) == 0x000004, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::K2Node_CustomEvent_Ingredient' has a wrong offset!");
 static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, CallFunc_Subtract_IntInt_ReturnValue) == 0x000008, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000C, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, CallFunc_Max_ReturnValue) == 0x000010, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::CallFunc_Max_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo, CallFunc_GetVisibility_ReturnValue) == 0x000014, "Member 'WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
 
 }
 

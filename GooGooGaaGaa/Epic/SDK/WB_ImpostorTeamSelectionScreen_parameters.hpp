@@ -320,11 +320,11 @@ static_assert(offsetof(WB_ImpostorTeamSelectionScreen_C_Get_WitchSkillsText_Colo
 struct WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget final
 {
 public:
-	class UUserWidget*                            InitialFocusWidget_0;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget");
 static_assert(sizeof(WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget");
-static_assert(offsetof(WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget, InitialFocusWidget_0) == 0x000000, "Member 'WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget::InitialFocusWidget_0' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_ImpostorTeamSelectionScreen_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
 
 // Function WB_ImpostorTeamSelectionScreen.WB_ImpostorTeamSelectionScreen_C.GetVisibility_0
 // 0x0030 (0x0030 - 0x0000)

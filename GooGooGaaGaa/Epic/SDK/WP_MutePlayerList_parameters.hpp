@@ -114,26 +114,34 @@ static_assert(offsetof(WP_MutePlayerList_C_ExecuteUbergraph_WP_MutePlayerList, C
 static_assert(offsetof(WP_MutePlayerList_C_ExecuteUbergraph_WP_MutePlayerList, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000128, "Member 'WP_MutePlayerList_C_ExecuteUbergraph_WP_MutePlayerList::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WP_MutePlayerList.WP_MutePlayerList_C.GetInitialFocusWidget
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WP_MutePlayerList_C_GetInitialFocusWidget final
 {
 public:
 	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_MutePlayerEntry_C*                  K2Node_DynamicCast_AsWB_Mute_Player_Entry;         // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_MutePlayerEntry_C*                  K2Node_DynamicCast_AsWB_Mute_Player_Entry;         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_Select_Default;                             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WP_MutePlayerList_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WP_MutePlayerList_C_GetInitialFocusWidget");
-static_assert(sizeof(WP_MutePlayerList_C_GetInitialFocusWidget) == 0x000028, "Wrong size on WP_MutePlayerList_C_GetInitialFocusWidget");
+static_assert(sizeof(WP_MutePlayerList_C_GetInitialFocusWidget) == 0x000038, "Wrong size on WP_MutePlayerList_C_GetInitialFocusWidget");
 static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
-static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_GetChildAt_ReturnValue) == 0x000008, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_GetChildrenCount_ReturnValue) == 0x000010, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, K2Node_DynamicCast_AsWB_Mute_Player_Entry) == 0x000018, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::K2Node_DynamicCast_AsWB_Mute_Player_Entry' has a wrong offset!");
-static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_Greater_IntInt_ReturnValue) == 0x000021, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, Temp_bool_Variable) == 0x000008, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_GetChildrenCount_ReturnValue) == 0x000018, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, K2Node_DynamicCast_AsWB_Mute_Player_Entry) == 0x000020, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::K2Node_DynamicCast_AsWB_Mute_Player_Entry' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_Greater_IntInt_ReturnValue) == 0x000029, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, CallFunc_IsVisible_ReturnValue) == 0x00002A, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_MutePlayerList_C_GetInitialFocusWidget, K2Node_Select_Default) == 0x000030, "Member 'WP_MutePlayerList_C_GetInitialFocusWidget::K2Node_Select_Default' has a wrong offset!");
 
 // Function WP_MutePlayerList.WP_MutePlayerList_C.Tick
 // 0x003C (0x003C - 0x0000)

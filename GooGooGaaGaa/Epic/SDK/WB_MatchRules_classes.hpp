@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "E_MatchRuleType_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

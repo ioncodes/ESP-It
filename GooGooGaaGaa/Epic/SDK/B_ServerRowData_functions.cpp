@@ -207,28 +207,6 @@ void UB_ServerRowData_C::GetServerPing(int32* ServerPing_0)
 }
 
 
-// Function B_ServerRowData.B_ServerRowData_C.OnCallFailed_5AE74FFB44DC3300BF055BB6B9289C53
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_ServerRowData_C::OnCallFailed_5AE74FFB44DC3300BF055BB6B9289C53(bool bSuccess, const class FString& SanitizedMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ServerRowData_C", "OnCallFailed_5AE74FFB44DC3300BF055BB6B9289C53");
-
-	Params::B_ServerRowData_C_OnCallFailed_5AE74FFB44DC3300BF055BB6B9289C53 Parms{};
-
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_ServerRowData.B_ServerRowData_C.OnFailure_0197AFB74526CB7BFA7733A333D0119E
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -268,28 +246,6 @@ void UB_ServerRowData_C::OnFailure_9E834CA94A8DDE3F4158EE90844B1CBB(const class 
 
 	Parms.ServerAddress = std::move(ServerAddress);
 	Parms.PingMs = PingMs;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_ServerRowData.B_ServerRowData_C.OnMessageProcessed_5AE74FFB44DC3300BF055BB6B9289C53
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_ServerRowData_C::OnMessageProcessed_5AE74FFB44DC3300BF055BB6B9289C53(bool bSuccess, const class FString& SanitizedMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ServerRowData_C", "OnMessageProcessed_5AE74FFB44DC3300BF055BB6B9289C53");
-
-	Params::B_ServerRowData_C_OnMessageProcessed_5AE74FFB44DC3300BF055BB6B9289C53 Parms{};
-
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessage = std::move(SanitizedMessage);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -424,20 +380,6 @@ void UB_ServerRowData_C::OnTimeout_9E834CA94A8DDE3F4158EE90844B1CBB(const class 
 	Parms.PingMs = PingMs;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_ServerRowData.B_ServerRowData_C.RequestSanitizedName
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_ServerRowData_C::RequestSanitizedName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ServerRowData_C", "RequestSanitizedName");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

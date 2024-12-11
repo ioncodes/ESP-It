@@ -47,10 +47,11 @@ public:
 	void BP_OnEntryReleased();
 	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void Construct();
 	void CreateTooltips();
 	void ExecuteUbergraph_WB_FriendScreenEntry(int32 EntryPoint);
 	void OnListItemObjectSet(class UObject* ListItemObject);
-	void OnSessionInviteReceived(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FromId, const class FString& AppId, const struct FOnlineSessionSearchResultBP& InviteResult);
+	void OnSessionInviteReceived(const struct FUniqueNetIdRepl& FromPlayer);
 	void SessionInviteAnswer(E_QuestionAnswer Answer);
 	void SetButtons();
 	void SetFriendInfoValue(class UOnlineFriendRef* FriendRef);

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_ObjectiveTeam_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "ETeamID_structs.hpp"
-#include "E_ObjectiveTeam_structs.hpp"
 
 
 namespace SDK::Params

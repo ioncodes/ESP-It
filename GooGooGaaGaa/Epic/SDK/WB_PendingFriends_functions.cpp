@@ -149,6 +149,20 @@ void UWB_PendingFriends_C::Init()
 }
 
 
+// Function WB_PendingFriends.WB_PendingFriends_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_PendingFriends_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PendingFriends_C", "LeftTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_PendingFriends.WB_PendingFriends_C.NavigateToOtherList
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -241,6 +255,20 @@ void UWB_PendingFriends_C::RemoveEntryFromMap(TMap<struct FUniqueNetIdRepl, clas
 	UObject::ProcessEvent(Func, &Parms);
 
 	Map = std::move(Parms.Map);
+}
+
+
+// Function WB_PendingFriends.WB_PendingFriends_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_PendingFriends_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PendingFriends_C", "RightTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

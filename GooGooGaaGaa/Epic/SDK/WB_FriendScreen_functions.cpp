@@ -177,6 +177,34 @@ void UWB_FriendScreen_C::GamepadAcceptKeyPressed()
 }
 
 
+// Function WB_FriendScreen.WB_FriendScreen_C.GamepadLeftTriggerPressed
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_FriendScreen_C::GamepadLeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreen_C", "GamepadLeftTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_FriendScreen.WB_FriendScreen_C.GamepadRightTriggerPressed
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_FriendScreen_C::GamepadRightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreen_C", "GamepadRightTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_FriendScreen.WB_FriendScreen_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

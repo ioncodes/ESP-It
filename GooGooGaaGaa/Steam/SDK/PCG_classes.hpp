@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "StructUtils_structs.hpp"
+#include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PCG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "StructUtils_structs.hpp"
 
 
 namespace SDK
@@ -96,60 +96,230 @@ static_assert(offsetof(UPCGSettings, Seed) == 0x000040, "Member 'UPCGSettings::S
 static_assert(offsetof(UPCGSettings, bUseSeed) == 0x000050, "Member 'UPCGSettings::bUseSeed' has a wrong offset!");
 static_assert(offsetof(UPCGSettings, CachedOverridableParams) == 0x000090, "Member 'UPCGSettings::CachedOverridableParams' has a wrong offset!");
 
-// Class PCG.PCGNumberOfElementsBaseSettings
+// Class PCG.PCGCombinePointsSettings
+// 0x0068 (0x0110 - 0x00A8)
+class UPCGCombinePointsSettings final : public UPCGSettings
+{
+public:
+	bool                                          bCenterPivot;                                      // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFirstPointTransform;                           // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             PointTransform;                                    // 0x00B0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGCombinePointsSettings">();
+	}
+	static class UPCGCombinePointsSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGCombinePointsSettings>();
+	}
+};
+static_assert(alignof(UPCGCombinePointsSettings) == 0x000010, "Wrong alignment on UPCGCombinePointsSettings");
+static_assert(sizeof(UPCGCombinePointsSettings) == 0x000110, "Wrong size on UPCGCombinePointsSettings");
+static_assert(offsetof(UPCGCombinePointsSettings, bCenterPivot) == 0x0000A8, "Member 'UPCGCombinePointsSettings::bCenterPivot' has a wrong offset!");
+static_assert(offsetof(UPCGCombinePointsSettings, bUseFirstPointTransform) == 0x0000A9, "Member 'UPCGCombinePointsSettings::bUseFirstPointTransform' has a wrong offset!");
+static_assert(offsetof(UPCGCombinePointsSettings, PointTransform) == 0x0000B0, "Member 'UPCGCombinePointsSettings::PointTransform' has a wrong offset!");
+
+// Class PCG.PCGVisualizeAttributeSettings
+// 0x0070 (0x0118 - 0x00A8)
+class UPCGVisualizeAttributeSettings final : public UPCGSettings
+{
+public:
+	struct FPCGAttributePropertyInputSelector     AttributeSource;                                   // 0x00A8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CustomPrefixString;                                // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrefixWithIndex;                                  // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrefixWithAttributeName;                          // 0x00E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocalOffset;                                       // 0x00E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 Color;                                             // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Duration;                                          // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PointLimit;                                        // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisualizeEnabled;                                 // 0x0114(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGVisualizeAttributeSettings">();
+	}
+	static class UPCGVisualizeAttributeSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGVisualizeAttributeSettings>();
+	}
+};
+static_assert(alignof(UPCGVisualizeAttributeSettings) == 0x000008, "Wrong alignment on UPCGVisualizeAttributeSettings");
+static_assert(sizeof(UPCGVisualizeAttributeSettings) == 0x000118, "Wrong size on UPCGVisualizeAttributeSettings");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, AttributeSource) == 0x0000A8, "Member 'UPCGVisualizeAttributeSettings::AttributeSource' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, CustomPrefixString) == 0x0000D0, "Member 'UPCGVisualizeAttributeSettings::CustomPrefixString' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, bPrefixWithIndex) == 0x0000E0, "Member 'UPCGVisualizeAttributeSettings::bPrefixWithIndex' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, bPrefixWithAttributeName) == 0x0000E1, "Member 'UPCGVisualizeAttributeSettings::bPrefixWithAttributeName' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, LocalOffset) == 0x0000E8, "Member 'UPCGVisualizeAttributeSettings::LocalOffset' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, Color) == 0x000100, "Member 'UPCGVisualizeAttributeSettings::Color' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, Duration) == 0x000108, "Member 'UPCGVisualizeAttributeSettings::Duration' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, PointLimit) == 0x000110, "Member 'UPCGVisualizeAttributeSettings::PointLimit' has a wrong offset!");
+static_assert(offsetof(UPCGVisualizeAttributeSettings, bVisualizeEnabled) == 0x000114, "Member 'UPCGVisualizeAttributeSettings::bVisualizeEnabled' has a wrong offset!");
+
+// Class PCG.PCGHiGenGridSizeSettings
 // 0x0008 (0x00B0 - 0x00A8)
-class UPCGNumberOfElementsBaseSettings : public UPCGSettings
+class UPCGHiGenGridSizeSettings final : public UPCGSettings
 {
 public:
-	class FName                                   OutputAttributeName;                               // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGHiGenGrid                                 HiGenGridSize;                                     // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGNumberOfElementsBaseSettings">();
+		return StaticClassImpl<"PCGHiGenGridSizeSettings">();
 	}
-	static class UPCGNumberOfElementsBaseSettings* GetDefaultObj()
+	static class UPCGHiGenGridSizeSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGNumberOfElementsBaseSettings>();
+		return GetDefaultObjImpl<UPCGHiGenGridSizeSettings>();
 	}
 };
-static_assert(alignof(UPCGNumberOfElementsBaseSettings) == 0x000008, "Wrong alignment on UPCGNumberOfElementsBaseSettings");
-static_assert(sizeof(UPCGNumberOfElementsBaseSettings) == 0x0000B0, "Wrong size on UPCGNumberOfElementsBaseSettings");
-static_assert(offsetof(UPCGNumberOfElementsBaseSettings, OutputAttributeName) == 0x0000A8, "Member 'UPCGNumberOfElementsBaseSettings::OutputAttributeName' has a wrong offset!");
+static_assert(alignof(UPCGHiGenGridSizeSettings) == 0x000008, "Wrong alignment on UPCGHiGenGridSizeSettings");
+static_assert(sizeof(UPCGHiGenGridSizeSettings) == 0x0000B0, "Wrong size on UPCGHiGenGridSizeSettings");
+static_assert(offsetof(UPCGHiGenGridSizeSettings, HiGenGridSize) == 0x0000A8, "Member 'UPCGHiGenGridSizeSettings::HiGenGridSize' has a wrong offset!");
 
-// Class PCG.PCGNumberOfEntriesSettings
-// 0x0000 (0x00B0 - 0x00B0)
-class UPCGNumberOfEntriesSettings final : public UPCGNumberOfElementsBaseSettings
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGNumberOfEntriesSettings">();
-	}
-	static class UPCGNumberOfEntriesSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGNumberOfEntriesSettings>();
-	}
-};
-static_assert(alignof(UPCGNumberOfEntriesSettings) == 0x000008, "Wrong alignment on UPCGNumberOfEntriesSettings");
-static_assert(sizeof(UPCGNumberOfEntriesSettings) == 0x0000B0, "Wrong size on UPCGNumberOfEntriesSettings");
-
-// Class PCG.PCGConvexHull2DSettings
+// Class PCG.PCGMutateSeedSettings
 // 0x0000 (0x00A8 - 0x00A8)
-class UPCGConvexHull2DSettings final : public UPCGSettings
+class UPCGMutateSeedSettings final : public UPCGSettings
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGConvexHull2DSettings">();
+		return StaticClassImpl<"PCGMutateSeedSettings">();
 	}
-	static class UPCGConvexHull2DSettings* GetDefaultObj()
+	static class UPCGMutateSeedSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGConvexHull2DSettings>();
+		return GetDefaultObjImpl<UPCGMutateSeedSettings>();
 	}
 };
-static_assert(alignof(UPCGConvexHull2DSettings) == 0x000008, "Wrong alignment on UPCGConvexHull2DSettings");
-static_assert(sizeof(UPCGConvexHull2DSettings) == 0x0000A8, "Wrong size on UPCGConvexHull2DSettings");
+static_assert(alignof(UPCGMutateSeedSettings) == 0x000008, "Wrong alignment on UPCGMutateSeedSettings");
+static_assert(sizeof(UPCGMutateSeedSettings) == 0x0000A8, "Wrong size on UPCGMutateSeedSettings");
+
+// Class PCG.PCGAttributeNoiseSettings
+// 0x0060 (0x0108 - 0x00A8)
+class UPCGAttributeNoiseSettings final : public UPCGSettings
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x00A8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputSelector    OutputTarget;                                      // 0x00D0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAttributeNoiseMode                        Mode;                                              // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NoiseMin;                                          // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseMax;                                          // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvertSource;                                     // 0x0104(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClampResult;                                      // 0x0105(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasSpatialToPointDeprecation;                     // 0x0106(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_107[0x1];                                      // 0x0107(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGAttributeNoiseSettings">();
+	}
+	static class UPCGAttributeNoiseSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGAttributeNoiseSettings>();
+	}
+};
+static_assert(alignof(UPCGAttributeNoiseSettings) == 0x000008, "Wrong alignment on UPCGAttributeNoiseSettings");
+static_assert(sizeof(UPCGAttributeNoiseSettings) == 0x000108, "Wrong size on UPCGAttributeNoiseSettings");
+static_assert(offsetof(UPCGAttributeNoiseSettings, InputSource) == 0x0000A8, "Member 'UPCGAttributeNoiseSettings::InputSource' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, OutputTarget) == 0x0000D0, "Member 'UPCGAttributeNoiseSettings::OutputTarget' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, Mode) == 0x0000F8, "Member 'UPCGAttributeNoiseSettings::Mode' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, NoiseMin) == 0x0000FC, "Member 'UPCGAttributeNoiseSettings::NoiseMin' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, NoiseMax) == 0x000100, "Member 'UPCGAttributeNoiseSettings::NoiseMax' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, bInvertSource) == 0x000104, "Member 'UPCGAttributeNoiseSettings::bInvertSource' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, bClampResult) == 0x000105, "Member 'UPCGAttributeNoiseSettings::bClampResult' has a wrong offset!");
+static_assert(offsetof(UPCGAttributeNoiseSettings, bHasSpatialToPointDeprecation) == 0x000106, "Member 'UPCGAttributeNoiseSettings::bHasSpatialToPointDeprecation' has a wrong offset!");
+
+// Class PCG.PCGPointNeighborhoodSettings
+// 0x0028 (0x00D0 - 0x00A8)
+class UPCGPointNeighborhoodSettings final : public UPCGSettings
+{
+public:
+	double                                        SearchDistance;                                    // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetDistanceToAttribute;                           // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DistanceAttribute;                                 // 0x00B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetAveragePositionToAttribute;                    // 0x00BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AveragePositionAttribute;                          // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPointNeighborhoodDensityMode              SetDensity;                                        // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetAveragePosition;                               // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetAverageColor;                                  // 0x00CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWeightedAverage;                                  // 0x00CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CF[0x1];                                       // 0x00CF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGPointNeighborhoodSettings">();
+	}
+	static class UPCGPointNeighborhoodSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGPointNeighborhoodSettings>();
+	}
+};
+static_assert(alignof(UPCGPointNeighborhoodSettings) == 0x000008, "Wrong alignment on UPCGPointNeighborhoodSettings");
+static_assert(sizeof(UPCGPointNeighborhoodSettings) == 0x0000D0, "Wrong size on UPCGPointNeighborhoodSettings");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, SearchDistance) == 0x0000A8, "Member 'UPCGPointNeighborhoodSettings::SearchDistance' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetDistanceToAttribute) == 0x0000B0, "Member 'UPCGPointNeighborhoodSettings::bSetDistanceToAttribute' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, DistanceAttribute) == 0x0000B4, "Member 'UPCGPointNeighborhoodSettings::DistanceAttribute' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAveragePositionToAttribute) == 0x0000BC, "Member 'UPCGPointNeighborhoodSettings::bSetAveragePositionToAttribute' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, AveragePositionAttribute) == 0x0000C0, "Member 'UPCGPointNeighborhoodSettings::AveragePositionAttribute' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, SetDensity) == 0x0000C8, "Member 'UPCGPointNeighborhoodSettings::SetDensity' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAveragePosition) == 0x0000CC, "Member 'UPCGPointNeighborhoodSettings::bSetAveragePosition' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAverageColor) == 0x0000CD, "Member 'UPCGPointNeighborhoodSettings::bSetAverageColor' has a wrong offset!");
+static_assert(offsetof(UPCGPointNeighborhoodSettings, bWeightedAverage) == 0x0000CE, "Member 'UPCGPointNeighborhoodSettings::bWeightedAverage' has a wrong offset!");
+
+// Class PCG.PCGAddTagSettings
+// 0x0010 (0x00B8 - 0x00A8)
+class UPCGAddTagSettings final : public UPCGSettings
+{
+public:
+	class FString                                 TagsToAdd;                                         // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGAddTagSettings">();
+	}
+	static class UPCGAddTagSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGAddTagSettings>();
+	}
+};
+static_assert(alignof(UPCGAddTagSettings) == 0x000008, "Wrong alignment on UPCGAddTagSettings");
+static_assert(sizeof(UPCGAddTagSettings) == 0x0000B8, "Wrong size on UPCGAddTagSettings");
+static_assert(offsetof(UPCGAddTagSettings, TagsToAdd) == 0x0000A8, "Member 'UPCGAddTagSettings::TagsToAdd' has a wrong offset!");
+
+// Class PCG.PCGCullPointsOutsideActorBoundsSettings
+// 0x0008 (0x00B0 - 0x00A8)
+class UPCGCullPointsOutsideActorBoundsSettings final : public UPCGSettings
+{
+public:
+	float                                         BoundsExpansion;                                   // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGCullPointsOutsideActorBoundsSettings">();
+	}
+	static class UPCGCullPointsOutsideActorBoundsSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGCullPointsOutsideActorBoundsSettings>();
+	}
+};
+static_assert(alignof(UPCGCullPointsOutsideActorBoundsSettings) == 0x000008, "Wrong alignment on UPCGCullPointsOutsideActorBoundsSettings");
+static_assert(sizeof(UPCGCullPointsOutsideActorBoundsSettings) == 0x0000B0, "Wrong size on UPCGCullPointsOutsideActorBoundsSettings");
+static_assert(offsetof(UPCGCullPointsOutsideActorBoundsSettings, BoundsExpansion) == 0x0000A8, "Member 'UPCGCullPointsOutsideActorBoundsSettings::BoundsExpansion' has a wrong offset!");
 
 // Class PCG.PCGSpatialData
 // 0x0048 (0x0080 - 0x0038)
@@ -229,115 +399,52 @@ static_assert(offsetof(UPCGSpatialDataWithPointCache, CachedPointData) == 0x0000
 static_assert(offsetof(UPCGSpatialDataWithPointCache, CachedBoundedPointDataBoxes) == 0x000088, "Member 'UPCGSpatialDataWithPointCache::CachedBoundedPointDataBoxes' has a wrong offset!");
 static_assert(offsetof(UPCGSpatialDataWithPointCache, CachedBoundedPointData) == 0x000098, "Member 'UPCGSpatialDataWithPointCache::CachedBoundedPointData' has a wrong offset!");
 
-// Class PCG.PCGDifferenceData
-// 0x0028 (0x00F8 - 0x00D0)
-class UPCGDifferenceData final : public UPCGSpatialDataWithPointCache
+// Class PCG.PCGSurfaceData
+// 0x0060 (0x0130 - 0x00D0)
+class UPCGSurfaceData : public UPCGSpatialDataWithPointCache
 {
 public:
-	bool                                          bDiffMetadata;                                     // 0x00D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPCGSpatialData*                        Source;                                            // 0x00D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPCGSpatialData*                        Difference;                                        // 0x00E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPCGUnionData*                          DifferencesUnion;                                  // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EPCGDifferenceDensityFunction                 DensityFunction;                                   // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddDifference(const class UPCGSpatialData* InDifference);
-	void Initialize(const class UPCGSpatialData* InData);
-	void SetDensityFunction(EPCGDifferenceDensityFunction InDensityFunction);
+	struct FTransform                             Transform;                                         // 0x00D0(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGDifferenceData">();
+		return StaticClassImpl<"PCGSurfaceData">();
 	}
-	static class UPCGDifferenceData* GetDefaultObj()
+	static class UPCGSurfaceData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGDifferenceData>();
+		return GetDefaultObjImpl<UPCGSurfaceData>();
 	}
 };
-static_assert(alignof(UPCGDifferenceData) == 0x000008, "Wrong alignment on UPCGDifferenceData");
-static_assert(sizeof(UPCGDifferenceData) == 0x0000F8, "Wrong size on UPCGDifferenceData");
-static_assert(offsetof(UPCGDifferenceData, bDiffMetadata) == 0x0000D0, "Member 'UPCGDifferenceData::bDiffMetadata' has a wrong offset!");
-static_assert(offsetof(UPCGDifferenceData, Source) == 0x0000D8, "Member 'UPCGDifferenceData::Source' has a wrong offset!");
-static_assert(offsetof(UPCGDifferenceData, Difference) == 0x0000E0, "Member 'UPCGDifferenceData::Difference' has a wrong offset!");
-static_assert(offsetof(UPCGDifferenceData, DifferencesUnion) == 0x0000E8, "Member 'UPCGDifferenceData::DifferencesUnion' has a wrong offset!");
-static_assert(offsetof(UPCGDifferenceData, DensityFunction) == 0x0000F0, "Member 'UPCGDifferenceData::DensityFunction' has a wrong offset!");
+static_assert(alignof(UPCGSurfaceData) == 0x000010, "Wrong alignment on UPCGSurfaceData");
+static_assert(sizeof(UPCGSurfaceData) == 0x000130, "Wrong size on UPCGSurfaceData");
+static_assert(offsetof(UPCGSurfaceData, Transform) == 0x0000D0, "Member 'UPCGSurfaceData::Transform' has a wrong offset!");
 
-// Class PCG.PCGLoadDataAssetSettings
-// 0x0050 (0x00F8 - 0x00A8)
-class UPCGLoadDataAssetSettings final : public UPCGSettings
+// Class PCG.PCGLandscapeData
+// 0x0080 (0x01B0 - 0x0130)
+class UPCGLandscapeData final : public UPCGSurfaceData
 {
 public:
-	TSoftObjectPtr<class UPCGDataAsset>           Asset;                                             // 0x00A8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGPinProperties>              Pins;                                              // 0x00D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	class FString                                 AssetName;                                         // 0x00E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWarnIfNoAsset;                                    // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSynchronousLoad;                                  // 0x00F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTagOutputsBasedOnOutputPins;                      // 0x00F2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3[0x5];                                       // 0x00F3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class ALandscapeProxy>> Landscapes;                                        // 0x0130(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	struct FBox                                   Bounds;                                            // 0x0140(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FPCGLandscapeDataProps                 DataProps;                                         // 0x0178(0x0005)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_17D[0x33];                                     // 0x017D(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGLoadDataAssetSettings">();
+		return StaticClassImpl<"PCGLandscapeData">();
 	}
-	static class UPCGLoadDataAssetSettings* GetDefaultObj()
+	static class UPCGLandscapeData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGLoadDataAssetSettings>();
+		return GetDefaultObjImpl<UPCGLandscapeData>();
 	}
 };
-static_assert(alignof(UPCGLoadDataAssetSettings) == 0x000008, "Wrong alignment on UPCGLoadDataAssetSettings");
-static_assert(sizeof(UPCGLoadDataAssetSettings) == 0x0000F8, "Wrong size on UPCGLoadDataAssetSettings");
-static_assert(offsetof(UPCGLoadDataAssetSettings, Asset) == 0x0000A8, "Member 'UPCGLoadDataAssetSettings::Asset' has a wrong offset!");
-static_assert(offsetof(UPCGLoadDataAssetSettings, Pins) == 0x0000D0, "Member 'UPCGLoadDataAssetSettings::Pins' has a wrong offset!");
-static_assert(offsetof(UPCGLoadDataAssetSettings, AssetName) == 0x0000E0, "Member 'UPCGLoadDataAssetSettings::AssetName' has a wrong offset!");
-static_assert(offsetof(UPCGLoadDataAssetSettings, bWarnIfNoAsset) == 0x0000F0, "Member 'UPCGLoadDataAssetSettings::bWarnIfNoAsset' has a wrong offset!");
-static_assert(offsetof(UPCGLoadDataAssetSettings, bSynchronousLoad) == 0x0000F1, "Member 'UPCGLoadDataAssetSettings::bSynchronousLoad' has a wrong offset!");
-static_assert(offsetof(UPCGLoadDataAssetSettings, bTagOutputsBasedOnOutputPins) == 0x0000F2, "Member 'UPCGLoadDataAssetSettings::bTagOutputsBasedOnOutputPins' has a wrong offset!");
-
-// Class PCG.PCGDebugSettings
-// 0x0028 (0x00D0 - 0x00A8)
-class UPCGDebugSettings final : public UPCGSettings
-{
-public:
-	TSoftObjectPtr<class AActor>                  TargetActor;                                       // 0x00A8(0x0028)(BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGDebugSettings">();
-	}
-	static class UPCGDebugSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGDebugSettings>();
-	}
-};
-static_assert(alignof(UPCGDebugSettings) == 0x000008, "Wrong alignment on UPCGDebugSettings");
-static_assert(sizeof(UPCGDebugSettings) == 0x0000D0, "Wrong size on UPCGDebugSettings");
-static_assert(offsetof(UPCGDebugSettings, TargetActor) == 0x0000A8, "Member 'UPCGDebugSettings::TargetActor' has a wrong offset!");
-
-// Class PCG.PCGAddTagSettings
-// 0x0010 (0x00B8 - 0x00A8)
-class UPCGAddTagSettings final : public UPCGSettings
-{
-public:
-	class FString                                 TagsToAdd;                                         // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGAddTagSettings">();
-	}
-	static class UPCGAddTagSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGAddTagSettings>();
-	}
-};
-static_assert(alignof(UPCGAddTagSettings) == 0x000008, "Wrong alignment on UPCGAddTagSettings");
-static_assert(sizeof(UPCGAddTagSettings) == 0x0000B8, "Wrong size on UPCGAddTagSettings");
-static_assert(offsetof(UPCGAddTagSettings, TagsToAdd) == 0x0000A8, "Member 'UPCGAddTagSettings::TagsToAdd' has a wrong offset!");
+static_assert(alignof(UPCGLandscapeData) == 0x000010, "Wrong alignment on UPCGLandscapeData");
+static_assert(sizeof(UPCGLandscapeData) == 0x0001B0, "Wrong size on UPCGLandscapeData");
+static_assert(offsetof(UPCGLandscapeData, Landscapes) == 0x000130, "Member 'UPCGLandscapeData::Landscapes' has a wrong offset!");
+static_assert(offsetof(UPCGLandscapeData, Bounds) == 0x000140, "Member 'UPCGLandscapeData::Bounds' has a wrong offset!");
+static_assert(offsetof(UPCGLandscapeData, DataProps) == 0x000178, "Member 'UPCGLandscapeData::DataProps' has a wrong offset!");
 
 // Class PCG.PCGApplyOnActorSettings
 // 0x0048 (0x00F0 - 0x00A8)
@@ -363,63 +470,6 @@ static_assert(sizeof(UPCGApplyOnActorSettings) == 0x0000F0, "Wrong size on UPCGA
 static_assert(offsetof(UPCGApplyOnActorSettings, TargetActor) == 0x0000A8, "Member 'UPCGApplyOnActorSettings::TargetActor' has a wrong offset!");
 static_assert(offsetof(UPCGApplyOnActorSettings, PropertyOverrideDescriptions) == 0x0000D0, "Member 'UPCGApplyOnActorSettings::PropertyOverrideDescriptions' has a wrong offset!");
 static_assert(offsetof(UPCGApplyOnActorSettings, PostProcessFunctionNames) == 0x0000E0, "Member 'UPCGApplyOnActorSettings::PostProcessFunctionNames' has a wrong offset!");
-
-// Class PCG.PCGDataAsset
-// 0x0040 (0x0068 - 0x0028)
-class UPCGDataAsset final : public UObject
-{
-public:
-	struct FPCGDataCollection                     Data;                                              // 0x0028(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	class FString                                 Name_0;                                            // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGDataAsset">();
-	}
-	static class UPCGDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGDataAsset>();
-	}
-};
-static_assert(alignof(UPCGDataAsset) == 0x000008, "Wrong alignment on UPCGDataAsset");
-static_assert(sizeof(UPCGDataAsset) == 0x000068, "Wrong size on UPCGDataAsset");
-static_assert(offsetof(UPCGDataAsset, Data) == 0x000028, "Member 'UPCGDataAsset::Data' has a wrong offset!");
-static_assert(offsetof(UPCGDataAsset, Name_0) == 0x000058, "Member 'UPCGDataAsset::Name_0' has a wrong offset!");
-
-// Class PCG.PCGPolyLineData
-// 0x0000 (0x00D0 - 0x00D0)
-class UPCGPolyLineData : public UPCGSpatialDataWithPointCache
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGPolyLineData">();
-	}
-	static class UPCGPolyLineData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGPolyLineData>();
-	}
-};
-static_assert(alignof(UPCGPolyLineData) == 0x000008, "Wrong alignment on UPCGPolyLineData");
-static_assert(sizeof(UPCGPolyLineData) == 0x0000D0, "Wrong size on UPCGPolyLineData");
-
-// Class PCG.PCGApplyScaleToBoundsSettings
-// 0x0000 (0x00A8 - 0x00A8)
-class UPCGApplyScaleToBoundsSettings final : public UPCGSettings
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGApplyScaleToBoundsSettings">();
-	}
-	static class UPCGApplyScaleToBoundsSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGApplyScaleToBoundsSettings>();
-	}
-};
-static_assert(alignof(UPCGApplyScaleToBoundsSettings) == 0x000008, "Wrong alignment on UPCGApplyScaleToBoundsSettings");
-static_assert(sizeof(UPCGApplyScaleToBoundsSettings) == 0x0000A8, "Wrong size on UPCGApplyScaleToBoundsSettings");
 
 // Class PCG.PCGMetadataSettingsBase
 // 0x0030 (0x00D8 - 0x00A8)
@@ -447,33 +497,52 @@ static_assert(sizeof(UPCGMetadataSettingsBase) == 0x0000D8, "Wrong size on UPCGM
 static_assert(offsetof(UPCGMetadataSettingsBase, OutputTarget) == 0x0000A8, "Member 'UPCGMetadataSettingsBase::OutputTarget' has a wrong offset!");
 static_assert(offsetof(UPCGMetadataSettingsBase, OutputDataFromPin) == 0x0000D0, "Member 'UPCGMetadataSettingsBase::OutputDataFromPin' has a wrong offset!");
 
-// Class PCG.PCGMetadataMakeRotatorSettings
-// 0x0080 (0x0158 - 0x00D8)
-class UPCGMetadataMakeRotatorSettings final : public UPCGMetadataSettingsBase
+// Class PCG.PCGApplyScaleToBoundsSettings
+// 0x0000 (0x00A8 - 0x00A8)
+class UPCGApplyScaleToBoundsSettings final : public UPCGSettings
 {
 public:
-	struct FPCGAttributePropertyInputSelector     InputSource1;                                      // 0x00D8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     InputSource2;                                      // 0x0100(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     InputSource3;                                      // 0x0128(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGMetadataMakeRotatorOp                     Operation;                                         // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGApplyScaleToBoundsSettings">();
+	}
+	static class UPCGApplyScaleToBoundsSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGApplyScaleToBoundsSettings>();
+	}
+};
+static_assert(alignof(UPCGApplyScaleToBoundsSettings) == 0x000008, "Wrong alignment on UPCGApplyScaleToBoundsSettings");
+static_assert(sizeof(UPCGApplyScaleToBoundsSettings) == 0x0000A8, "Wrong size on UPCGApplyScaleToBoundsSettings");
+
+// Class PCG.PCGDensityRemapSettings
+// 0x0018 (0x00C0 - 0x00A8)
+class UPCGDensityRemapSettings final : public UPCGSettings
+{
+public:
+	float                                         InRangeMin;                                        // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InRangeMax;                                        // 0x00AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutRangeMin;                                       // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutRangeMax;                                       // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExcludeValuesOutsideInputRange;                   // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGMetadataMakeRotatorSettings">();
+		return StaticClassImpl<"PCGDensityRemapSettings">();
 	}
-	static class UPCGMetadataMakeRotatorSettings* GetDefaultObj()
+	static class UPCGDensityRemapSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGMetadataMakeRotatorSettings>();
+		return GetDefaultObjImpl<UPCGDensityRemapSettings>();
 	}
 };
-static_assert(alignof(UPCGMetadataMakeRotatorSettings) == 0x000008, "Wrong alignment on UPCGMetadataMakeRotatorSettings");
-static_assert(sizeof(UPCGMetadataMakeRotatorSettings) == 0x000158, "Wrong size on UPCGMetadataMakeRotatorSettings");
-static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource1) == 0x0000D8, "Member 'UPCGMetadataMakeRotatorSettings::InputSource1' has a wrong offset!");
-static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource2) == 0x000100, "Member 'UPCGMetadataMakeRotatorSettings::InputSource2' has a wrong offset!");
-static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource3) == 0x000128, "Member 'UPCGMetadataMakeRotatorSettings::InputSource3' has a wrong offset!");
-static_assert(offsetof(UPCGMetadataMakeRotatorSettings, Operation) == 0x000150, "Member 'UPCGMetadataMakeRotatorSettings::Operation' has a wrong offset!");
+static_assert(alignof(UPCGDensityRemapSettings) == 0x000008, "Wrong alignment on UPCGDensityRemapSettings");
+static_assert(sizeof(UPCGDensityRemapSettings) == 0x0000C0, "Wrong size on UPCGDensityRemapSettings");
+static_assert(offsetof(UPCGDensityRemapSettings, InRangeMin) == 0x0000A8, "Member 'UPCGDensityRemapSettings::InRangeMin' has a wrong offset!");
+static_assert(offsetof(UPCGDensityRemapSettings, InRangeMax) == 0x0000AC, "Member 'UPCGDensityRemapSettings::InRangeMax' has a wrong offset!");
+static_assert(offsetof(UPCGDensityRemapSettings, OutRangeMin) == 0x0000B0, "Member 'UPCGDensityRemapSettings::OutRangeMin' has a wrong offset!");
+static_assert(offsetof(UPCGDensityRemapSettings, OutRangeMax) == 0x0000B4, "Member 'UPCGDensityRemapSettings::OutRangeMax' has a wrong offset!");
+static_assert(offsetof(UPCGDensityRemapSettings, bExcludeValuesOutsideInputRange) == 0x0000B8, "Member 'UPCGDensityRemapSettings::bExcludeValuesOutsideInputRange' has a wrong offset!");
 
 // Class PCG.PCGAssetExporter
 // 0x0000 (0x0028 - 0x0028)
@@ -497,43 +566,22 @@ public:
 static_assert(alignof(UPCGAssetExporter) == 0x000008, "Wrong alignment on UPCGAssetExporter");
 static_assert(sizeof(UPCGAssetExporter) == 0x000028, "Wrong size on UPCGAssetExporter");
 
-// Class PCG.PCGSettingsWithDynamicInputs
-// 0x0010 (0x00B8 - 0x00A8)
-class UPCGSettingsWithDynamicInputs : public UPCGSettings
-{
-public:
-	TArray<struct FPCGPinProperties>              DynamicInputPinProperties;                         // 0x00A8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGSettingsWithDynamicInputs">();
-	}
-	static class UPCGSettingsWithDynamicInputs* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGSettingsWithDynamicInputs>();
-	}
-};
-static_assert(alignof(UPCGSettingsWithDynamicInputs) == 0x000008, "Wrong alignment on UPCGSettingsWithDynamicInputs");
-static_assert(sizeof(UPCGSettingsWithDynamicInputs) == 0x0000B8, "Wrong size on UPCGSettingsWithDynamicInputs");
-static_assert(offsetof(UPCGSettingsWithDynamicInputs, DynamicInputPinProperties) == 0x0000A8, "Member 'UPCGSettingsWithDynamicInputs::DynamicInputPinProperties' has a wrong offset!");
-
-// Class PCG.PCGCollapseSettings
+// Class PCG.PCGConvexHull2DSettings
 // 0x0000 (0x00A8 - 0x00A8)
-class UPCGCollapseSettings : public UPCGSettings
+class UPCGConvexHull2DSettings final : public UPCGSettings
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGCollapseSettings">();
+		return StaticClassImpl<"PCGConvexHull2DSettings">();
 	}
-	static class UPCGCollapseSettings* GetDefaultObj()
+	static class UPCGConvexHull2DSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGCollapseSettings>();
+		return GetDefaultObjImpl<UPCGConvexHull2DSettings>();
 	}
 };
-static_assert(alignof(UPCGCollapseSettings) == 0x000008, "Wrong alignment on UPCGCollapseSettings");
-static_assert(sizeof(UPCGCollapseSettings) == 0x0000A8, "Wrong size on UPCGCollapseSettings");
+static_assert(alignof(UPCGConvexHull2DSettings) == 0x000008, "Wrong alignment on UPCGConvexHull2DSettings");
+static_assert(sizeof(UPCGConvexHull2DSettings) == 0x0000A8, "Wrong size on UPCGConvexHull2DSettings");
 
 // Class PCG.PCGAttributeCastSettings
 // 0x0058 (0x0100 - 0x00A8)
@@ -561,27 +609,6 @@ static_assert(offsetof(UPCGAttributeCastSettings, InputSource) == 0x0000A8, "Mem
 static_assert(offsetof(UPCGAttributeCastSettings, OutputType) == 0x0000D0, "Member 'UPCGAttributeCastSettings::OutputType' has a wrong offset!");
 static_assert(offsetof(UPCGAttributeCastSettings, OutputTarget) == 0x0000D8, "Member 'UPCGAttributeCastSettings::OutputTarget' has a wrong offset!");
 
-// Class PCG.PCGAttributeExtractorTestObject
-// 0x0008 (0x0030 - 0x0028)
-class UPCGAttributeExtractorTestObject final : public UObject
-{
-public:
-	double                                        DoubleValue;                                       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGAttributeExtractorTestObject">();
-	}
-	static class UPCGAttributeExtractorTestObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGAttributeExtractorTestObject>();
-	}
-};
-static_assert(alignof(UPCGAttributeExtractorTestObject) == 0x000008, "Wrong alignment on UPCGAttributeExtractorTestObject");
-static_assert(sizeof(UPCGAttributeExtractorTestObject) == 0x000030, "Wrong size on UPCGAttributeExtractorTestObject");
-static_assert(offsetof(UPCGAttributeExtractorTestObject, DoubleValue) == 0x000028, "Member 'UPCGAttributeExtractorTestObject::DoubleValue' has a wrong offset!");
-
 // Class PCG.PCGManagedResource
 // 0x0010 (0x0038 - 0x0028)
 class UPCGManagedResource : public UObject
@@ -606,55 +633,81 @@ static_assert(sizeof(UPCGManagedResource) == 0x000038, "Wrong size on UPCGManage
 static_assert(offsetof(UPCGManagedResource, Crc) == 0x000028, "Member 'UPCGManagedResource::Crc' has a wrong offset!");
 static_assert(offsetof(UPCGManagedResource, bIsMarkedUnused) == 0x000030, "Member 'UPCGManagedResource::bIsMarkedUnused' has a wrong offset!");
 
-// Class PCG.PCGManagedComponent
-// 0x0028 (0x0060 - 0x0038)
-class UPCGManagedComponent : public UPCGManagedResource
+// Class PCG.PCGPrimitiveData
+// 0x0090 (0x0160 - 0x00D0)
+class UPCGPrimitiveData final : public UPCGSpatialDataWithPointCache
 {
 public:
-	TSoftObjectPtr<class UActorComponent>         GeneratedComponent;                                // 0x0038(0x0028)(Edit, BlueprintVisible, ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                VoxelSize;                                         // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UPrimitiveComponent>     Primitive;                                         // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FBox                                   CachedBounds;                                      // 0x00F0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FBox                                   CachedStrictBounds;                                // 0x0128(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGManagedComponent">();
+		return StaticClassImpl<"PCGPrimitiveData">();
 	}
-	static class UPCGManagedComponent* GetDefaultObj()
+	static class UPCGPrimitiveData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGManagedComponent>();
+		return GetDefaultObjImpl<UPCGPrimitiveData>();
 	}
 };
-static_assert(alignof(UPCGManagedComponent) == 0x000008, "Wrong alignment on UPCGManagedComponent");
-static_assert(sizeof(UPCGManagedComponent) == 0x000060, "Wrong size on UPCGManagedComponent");
-static_assert(offsetof(UPCGManagedComponent, GeneratedComponent) == 0x000038, "Member 'UPCGManagedComponent::GeneratedComponent' has a wrong offset!");
+static_assert(alignof(UPCGPrimitiveData) == 0x000008, "Wrong alignment on UPCGPrimitiveData");
+static_assert(sizeof(UPCGPrimitiveData) == 0x000160, "Wrong size on UPCGPrimitiveData");
+static_assert(offsetof(UPCGPrimitiveData, VoxelSize) == 0x0000D0, "Member 'UPCGPrimitiveData::VoxelSize' has a wrong offset!");
+static_assert(offsetof(UPCGPrimitiveData, Primitive) == 0x0000E8, "Member 'UPCGPrimitiveData::Primitive' has a wrong offset!");
+static_assert(offsetof(UPCGPrimitiveData, CachedBounds) == 0x0000F0, "Member 'UPCGPrimitiveData::CachedBounds' has a wrong offset!");
+static_assert(offsetof(UPCGPrimitiveData, CachedStrictBounds) == 0x000128, "Member 'UPCGPrimitiveData::CachedStrictBounds' has a wrong offset!");
 
-// Class PCG.PCGProjectionData
-// 0x00A0 (0x0170 - 0x00D0)
-class UPCGProjectionData : public UPCGSpatialDataWithPointCache
+// Class PCG.PCGAttributeExtractorTestObject
+// 0x0008 (0x0030 - 0x0028)
+class UPCGAttributeExtractorTestObject final : public UObject
 {
 public:
-	class UPCGSpatialData*                        Source;                                            // 0x00D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPCGSpatialData*                        Target;                                            // 0x00D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FBox                                   CachedBounds;                                      // 0x00E0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FBox                                   CachedStrictBounds;                                // 0x0118(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FPCGProjectionParams                   ProjectionParams;                                  // 0x0150(0x0020)(Edit, BlueprintVisible, EditConst, Protected, NativeAccessSpecifierProtected)
+	double                                        DoubleValue;                                       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGProjectionData">();
+		return StaticClassImpl<"PCGAttributeExtractorTestObject">();
 	}
-	static class UPCGProjectionData* GetDefaultObj()
+	static class UPCGAttributeExtractorTestObject* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGProjectionData>();
+		return GetDefaultObjImpl<UPCGAttributeExtractorTestObject>();
 	}
 };
-static_assert(alignof(UPCGProjectionData) == 0x000008, "Wrong alignment on UPCGProjectionData");
-static_assert(sizeof(UPCGProjectionData) == 0x000170, "Wrong size on UPCGProjectionData");
-static_assert(offsetof(UPCGProjectionData, Source) == 0x0000D0, "Member 'UPCGProjectionData::Source' has a wrong offset!");
-static_assert(offsetof(UPCGProjectionData, Target) == 0x0000D8, "Member 'UPCGProjectionData::Target' has a wrong offset!");
-static_assert(offsetof(UPCGProjectionData, CachedBounds) == 0x0000E0, "Member 'UPCGProjectionData::CachedBounds' has a wrong offset!");
-static_assert(offsetof(UPCGProjectionData, CachedStrictBounds) == 0x000118, "Member 'UPCGProjectionData::CachedStrictBounds' has a wrong offset!");
-static_assert(offsetof(UPCGProjectionData, ProjectionParams) == 0x000150, "Member 'UPCGProjectionData::ProjectionParams' has a wrong offset!");
+static_assert(alignof(UPCGAttributeExtractorTestObject) == 0x000008, "Wrong alignment on UPCGAttributeExtractorTestObject");
+static_assert(sizeof(UPCGAttributeExtractorTestObject) == 0x000030, "Wrong size on UPCGAttributeExtractorTestObject");
+static_assert(offsetof(UPCGAttributeExtractorTestObject, DoubleValue) == 0x000028, "Member 'UPCGAttributeExtractorTestObject::DoubleValue' has a wrong offset!");
+
+// Class PCG.PCGNormalToDensitySettings
+// 0x0030 (0x00D8 - 0x00A8)
+class UPCGNormalToDensitySettings final : public UPCGSettings
+{
+public:
+	struct FVector                                Normal;                                            // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Strength;                                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGNormalToDensityMode                       DensityMode;                                       // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGNormalToDensitySettings">();
+	}
+	static class UPCGNormalToDensitySettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGNormalToDensitySettings>();
+	}
+};
+static_assert(alignof(UPCGNormalToDensitySettings) == 0x000008, "Wrong alignment on UPCGNormalToDensitySettings");
+static_assert(sizeof(UPCGNormalToDensitySettings) == 0x0000D8, "Wrong size on UPCGNormalToDensitySettings");
+static_assert(offsetof(UPCGNormalToDensitySettings, Normal) == 0x0000A8, "Member 'UPCGNormalToDensitySettings::Normal' has a wrong offset!");
+static_assert(offsetof(UPCGNormalToDensitySettings, Offset) == 0x0000C0, "Member 'UPCGNormalToDensitySettings::Offset' has a wrong offset!");
+static_assert(offsetof(UPCGNormalToDensitySettings, Strength) == 0x0000C8, "Member 'UPCGNormalToDensitySettings::Strength' has a wrong offset!");
+static_assert(offsetof(UPCGNormalToDensitySettings, DensityMode) == 0x0000D0, "Member 'UPCGNormalToDensitySettings::DensityMode' has a wrong offset!");
 
 // Class PCG.PCGAttributeFilteringSettings
 // 0x01E8 (0x0290 - 0x00A8)
@@ -693,6 +746,59 @@ static_assert(offsetof(UPCGAttributeFilteringSettings, bUseSpatialQuery) == 0x00
 static_assert(offsetof(UPCGAttributeFilteringSettings, AttributeTypes) == 0x000110, "Member 'UPCGAttributeFilteringSettings::AttributeTypes' has a wrong offset!");
 static_assert(offsetof(UPCGAttributeFilteringSettings, bHasSpatialToPointDeprecation) == 0x000280, "Member 'UPCGAttributeFilteringSettings::bHasSpatialToPointDeprecation' has a wrong offset!");
 
+// Class PCG.PCGManagedDebugStringMessageKey
+// 0x0008 (0x0040 - 0x0038)
+class UPCGManagedDebugStringMessageKey final : public UPCGManagedResource
+{
+public:
+	uint64                                        HashKey;                                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGManagedDebugStringMessageKey">();
+	}
+	static class UPCGManagedDebugStringMessageKey* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGManagedDebugStringMessageKey>();
+	}
+};
+static_assert(alignof(UPCGManagedDebugStringMessageKey) == 0x000008, "Wrong alignment on UPCGManagedDebugStringMessageKey");
+static_assert(sizeof(UPCGManagedDebugStringMessageKey) == 0x000040, "Wrong size on UPCGManagedDebugStringMessageKey");
+static_assert(offsetof(UPCGManagedDebugStringMessageKey, HashKey) == 0x000038, "Member 'UPCGManagedDebugStringMessageKey::HashKey' has a wrong offset!");
+
+// Class PCG.PCGCopyPointsSettings
+// 0x0008 (0x00B0 - 0x00A8)
+class UPCGCopyPointsSettings final : public UPCGSettings
+{
+public:
+	EPCGCopyPointsInheritanceMode                 RotationInheritance;                               // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCopyPointsInheritanceMode                 ScaleInheritance;                                  // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCopyPointsInheritanceMode                 ColorInheritance;                                  // 0x00AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCopyPointsInheritanceMode                 SeedInheritance;                                   // 0x00AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCopyPointsMetadataInheritanceMode         AttributeInheritance;                              // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCopyPointsTagInheritanceMode              TagInheritance;                                    // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGCopyPointsSettings">();
+	}
+	static class UPCGCopyPointsSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGCopyPointsSettings>();
+	}
+};
+static_assert(alignof(UPCGCopyPointsSettings) == 0x000008, "Wrong alignment on UPCGCopyPointsSettings");
+static_assert(sizeof(UPCGCopyPointsSettings) == 0x0000B0, "Wrong size on UPCGCopyPointsSettings");
+static_assert(offsetof(UPCGCopyPointsSettings, RotationInheritance) == 0x0000A8, "Member 'UPCGCopyPointsSettings::RotationInheritance' has a wrong offset!");
+static_assert(offsetof(UPCGCopyPointsSettings, ScaleInheritance) == 0x0000A9, "Member 'UPCGCopyPointsSettings::ScaleInheritance' has a wrong offset!");
+static_assert(offsetof(UPCGCopyPointsSettings, ColorInheritance) == 0x0000AA, "Member 'UPCGCopyPointsSettings::ColorInheritance' has a wrong offset!");
+static_assert(offsetof(UPCGCopyPointsSettings, SeedInheritance) == 0x0000AB, "Member 'UPCGCopyPointsSettings::SeedInheritance' has a wrong offset!");
+static_assert(offsetof(UPCGCopyPointsSettings, AttributeInheritance) == 0x0000AC, "Member 'UPCGCopyPointsSettings::AttributeInheritance' has a wrong offset!");
+static_assert(offsetof(UPCGCopyPointsSettings, TagInheritance) == 0x0000AD, "Member 'UPCGCopyPointsSettings::TagInheritance' has a wrong offset!");
+
 // Class PCG.PCGAttributeFilteringRangeSettings
 // 0x0398 (0x0440 - 0x00A8)
 class UPCGAttributeFilteringRangeSettings final : public UPCGSettings
@@ -720,47 +826,6 @@ static_assert(offsetof(UPCGAttributeFilteringRangeSettings, TargetAttribute) == 
 static_assert(offsetof(UPCGAttributeFilteringRangeSettings, MinThreshold) == 0x0000D0, "Member 'UPCGAttributeFilteringRangeSettings::MinThreshold' has a wrong offset!");
 static_assert(offsetof(UPCGAttributeFilteringRangeSettings, MaxThreshold) == 0x000280, "Member 'UPCGAttributeFilteringRangeSettings::MaxThreshold' has a wrong offset!");
 static_assert(offsetof(UPCGAttributeFilteringRangeSettings, bHasSpatialToPointDeprecation) == 0x000430, "Member 'UPCGAttributeFilteringRangeSettings::bHasSpatialToPointDeprecation' has a wrong offset!");
-
-// Class PCG.PCGFilterDataBaseSettings
-// 0x0000 (0x00A8 - 0x00A8)
-class UPCGFilterDataBaseSettings : public UPCGSettings
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGFilterDataBaseSettings">();
-	}
-	static class UPCGFilterDataBaseSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGFilterDataBaseSettings>();
-	}
-};
-static_assert(alignof(UPCGFilterDataBaseSettings) == 0x000008, "Wrong alignment on UPCGFilterDataBaseSettings");
-static_assert(sizeof(UPCGFilterDataBaseSettings) == 0x0000A8, "Wrong size on UPCGFilterDataBaseSettings");
-
-// Class PCG.PCGFilterByTagSettings
-// 0x0018 (0x00C0 - 0x00A8)
-class UPCGFilterByTagSettings final : public UPCGFilterDataBaseSettings
-{
-public:
-	EPCGFilterByTagOperation                      Operation;                                         // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SelectedTags;                                      // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGFilterByTagSettings">();
-	}
-	static class UPCGFilterByTagSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGFilterByTagSettings>();
-	}
-};
-static_assert(alignof(UPCGFilterByTagSettings) == 0x000008, "Wrong alignment on UPCGFilterByTagSettings");
-static_assert(sizeof(UPCGFilterByTagSettings) == 0x0000C0, "Wrong size on UPCGFilterByTagSettings");
-static_assert(offsetof(UPCGFilterByTagSettings, Operation) == 0x0000A8, "Member 'UPCGFilterByTagSettings::Operation' has a wrong offset!");
-static_assert(offsetof(UPCGFilterByTagSettings, SelectedTags) == 0x0000B0, "Member 'UPCGFilterByTagSettings::SelectedTags' has a wrong offset!");
 
 // Class PCG.PCGAttributePropertySelectorBlueprintHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -792,27 +857,6 @@ public:
 static_assert(alignof(UPCGAttributePropertySelectorBlueprintHelpers) == 0x000008, "Wrong alignment on UPCGAttributePropertySelectorBlueprintHelpers");
 static_assert(sizeof(UPCGAttributePropertySelectorBlueprintHelpers) == 0x000028, "Wrong size on UPCGAttributePropertySelectorBlueprintHelpers");
 
-// Class PCG.PCGExternalDataSettings
-// 0x0050 (0x00F8 - 0x00A8)
-class UPCGExternalDataSettings : public UPCGSettings
-{
-public:
-	TMap<class FString, struct FPCGAttributePropertyInputSelector> AttributeMapping;                                  // 0x00A8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGExternalDataSettings">();
-	}
-	static class UPCGExternalDataSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGExternalDataSettings>();
-	}
-};
-static_assert(alignof(UPCGExternalDataSettings) == 0x000008, "Wrong alignment on UPCGExternalDataSettings");
-static_assert(sizeof(UPCGExternalDataSettings) == 0x0000F8, "Wrong size on UPCGExternalDataSettings");
-static_assert(offsetof(UPCGExternalDataSettings, AttributeMapping) == 0x0000A8, "Member 'UPCGExternalDataSettings::AttributeMapping' has a wrong offset!");
-
 // Class PCG.PCGBooleanSelectSettings
 // 0x0008 (0x00B0 - 0x00A8)
 class UPCGBooleanSelectSettings final : public UPCGSettings
@@ -835,51 +879,6 @@ static_assert(alignof(UPCGBooleanSelectSettings) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UPCGBooleanSelectSettings) == 0x0000B0, "Wrong size on UPCGBooleanSelectSettings");
 static_assert(offsetof(UPCGBooleanSelectSettings, bUseInputB) == 0x0000A8, "Member 'UPCGBooleanSelectSettings::bUseInputB' has a wrong offset!");
 
-// Class PCG.PCGDeleteTagsSettings
-// 0x0018 (0x00C0 - 0x00A8)
-class UPCGDeleteTagsSettings final : public UPCGSettings
-{
-public:
-	EPCGTagFilterOperation                        Operation;                                         // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SelectedTags;                                      // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGDeleteTagsSettings">();
-	}
-	static class UPCGDeleteTagsSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGDeleteTagsSettings>();
-	}
-};
-static_assert(alignof(UPCGDeleteTagsSettings) == 0x000008, "Wrong alignment on UPCGDeleteTagsSettings");
-static_assert(sizeof(UPCGDeleteTagsSettings) == 0x0000C0, "Wrong size on UPCGDeleteTagsSettings");
-static_assert(offsetof(UPCGDeleteTagsSettings, Operation) == 0x0000A8, "Member 'UPCGDeleteTagsSettings::Operation' has a wrong offset!");
-static_assert(offsetof(UPCGDeleteTagsSettings, SelectedTags) == 0x0000B0, "Member 'UPCGDeleteTagsSettings::SelectedTags' has a wrong offset!");
-
-// Class PCG.PCGSplineProjectionData
-// 0x0018 (0x0188 - 0x0170)
-class UPCGSplineProjectionData final : public UPCGProjectionData
-{
-public:
-	struct FInterpCurveVector2D                   ProjectedPosition;                                 // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGSplineProjectionData">();
-	}
-	static class UPCGSplineProjectionData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGSplineProjectionData>();
-	}
-};
-static_assert(alignof(UPCGSplineProjectionData) == 0x000008, "Wrong alignment on UPCGSplineProjectionData");
-static_assert(sizeof(UPCGSplineProjectionData) == 0x000188, "Wrong size on UPCGSplineProjectionData");
-static_assert(offsetof(UPCGSplineProjectionData, ProjectedPosition) == 0x000170, "Member 'UPCGSplineProjectionData::ProjectedPosition' has a wrong offset!");
-
 // Class PCG.PCGBranchSettings
 // 0x0008 (0x00B0 - 0x00A8)
 class UPCGBranchSettings final : public UPCGSettings
@@ -901,71 +900,6 @@ public:
 static_assert(alignof(UPCGBranchSettings) == 0x000008, "Wrong alignment on UPCGBranchSettings");
 static_assert(sizeof(UPCGBranchSettings) == 0x0000B0, "Wrong size on UPCGBranchSettings");
 static_assert(offsetof(UPCGBranchSettings, bOutputToB) == 0x0000A8, "Member 'UPCGBranchSettings::bOutputToB' has a wrong offset!");
-
-// Class PCG.PCGOuterIntersectionSettings
-// 0x0008 (0x00C0 - 0x00B8)
-class UPCGOuterIntersectionSettings final : public UPCGSettingsWithDynamicInputs
-{
-public:
-	EPCGIntersectionDensityFunction               DensityFunction;                                   // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnorePinsWithNoInput;                            // 0x00B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bKeepZeroDensityPoints;                            // 0x00BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BB[0x5];                                       // 0x00BB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGOuterIntersectionSettings">();
-	}
-	static class UPCGOuterIntersectionSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGOuterIntersectionSettings>();
-	}
-};
-static_assert(alignof(UPCGOuterIntersectionSettings) == 0x000008, "Wrong alignment on UPCGOuterIntersectionSettings");
-static_assert(sizeof(UPCGOuterIntersectionSettings) == 0x0000C0, "Wrong size on UPCGOuterIntersectionSettings");
-static_assert(offsetof(UPCGOuterIntersectionSettings, DensityFunction) == 0x0000B8, "Member 'UPCGOuterIntersectionSettings::DensityFunction' has a wrong offset!");
-static_assert(offsetof(UPCGOuterIntersectionSettings, bIgnorePinsWithNoInput) == 0x0000B9, "Member 'UPCGOuterIntersectionSettings::bIgnorePinsWithNoInput' has a wrong offset!");
-static_assert(offsetof(UPCGOuterIntersectionSettings, bKeepZeroDensityPoints) == 0x0000BA, "Member 'UPCGOuterIntersectionSettings::bKeepZeroDensityPoints' has a wrong offset!");
-
-// Class PCG.PCGCreateTargetActor
-// 0x00D8 (0x0180 - 0x00A8)
-class UPCGCreateTargetActor final : public UPCGSettings
-{
-public:
-	class AActor*                                 TemplateActor;                                     // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGAttachOptions                             AttachOptions;                                     // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class AActor>                  RootActor;                                         // 0x00B8(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorLabel;                                        // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             ActorPivot;                                        // 0x00F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGObjectPropertyOverrideDescription> PropertyOverrideDescriptions;                      // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           PostProcessFunctionNames;                          // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     TemplateActorClass;                                // 0x0170(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAllowTemplateActorEditing;                        // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGCreateTargetActor">();
-	}
-	static class UPCGCreateTargetActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGCreateTargetActor>();
-	}
-};
-static_assert(alignof(UPCGCreateTargetActor) == 0x000010, "Wrong alignment on UPCGCreateTargetActor");
-static_assert(sizeof(UPCGCreateTargetActor) == 0x000180, "Wrong size on UPCGCreateTargetActor");
-static_assert(offsetof(UPCGCreateTargetActor, TemplateActor) == 0x0000A8, "Member 'UPCGCreateTargetActor::TemplateActor' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, AttachOptions) == 0x0000B0, "Member 'UPCGCreateTargetActor::AttachOptions' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, RootActor) == 0x0000B8, "Member 'UPCGCreateTargetActor::RootActor' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, ActorLabel) == 0x0000E0, "Member 'UPCGCreateTargetActor::ActorLabel' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, ActorPivot) == 0x0000F0, "Member 'UPCGCreateTargetActor::ActorPivot' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, PropertyOverrideDescriptions) == 0x000150, "Member 'UPCGCreateTargetActor::PropertyOverrideDescriptions' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, PostProcessFunctionNames) == 0x000160, "Member 'UPCGCreateTargetActor::PostProcessFunctionNames' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, TemplateActorClass) == 0x000170, "Member 'UPCGCreateTargetActor::TemplateActorClass' has a wrong offset!");
-static_assert(offsetof(UPCGCreateTargetActor, bAllowTemplateActorEditing) == 0x000178, "Member 'UPCGCreateTargetActor::bAllowTemplateActorEditing' has a wrong offset!");
 
 // Class PCG.PCGCollisionShapeData
 // 0x00F0 (0x01C0 - 0x00D0)
@@ -993,32 +927,6 @@ static_assert(sizeof(UPCGCollisionShapeData) == 0x0001C0, "Wrong size on UPCGCol
 static_assert(offsetof(UPCGCollisionShapeData, Transform) == 0x0000D0, "Member 'UPCGCollisionShapeData::Transform' has a wrong offset!");
 static_assert(offsetof(UPCGCollisionShapeData, CachedBounds) == 0x000148, "Member 'UPCGCollisionShapeData::CachedBounds' has a wrong offset!");
 static_assert(offsetof(UPCGCollisionShapeData, CachedStrictBounds) == 0x000180, "Member 'UPCGCollisionShapeData::CachedStrictBounds' has a wrong offset!");
-
-// Class PCG.PCGCombinePointsSettings
-// 0x0068 (0x0110 - 0x00A8)
-class UPCGCombinePointsSettings final : public UPCGSettings
-{
-public:
-	bool                                          bCenterPivot;                                      // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFirstPointTransform;                           // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             PointTransform;                                    // 0x00B0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGCombinePointsSettings">();
-	}
-	static class UPCGCombinePointsSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGCombinePointsSettings>();
-	}
-};
-static_assert(alignof(UPCGCombinePointsSettings) == 0x000010, "Wrong alignment on UPCGCombinePointsSettings");
-static_assert(sizeof(UPCGCombinePointsSettings) == 0x000110, "Wrong size on UPCGCombinePointsSettings");
-static_assert(offsetof(UPCGCombinePointsSettings, bCenterPivot) == 0x0000A8, "Member 'UPCGCombinePointsSettings::bCenterPivot' has a wrong offset!");
-static_assert(offsetof(UPCGCombinePointsSettings, bUseFirstPointTransform) == 0x0000A9, "Member 'UPCGCombinePointsSettings::bUseFirstPointTransform' has a wrong offset!");
-static_assert(offsetof(UPCGCombinePointsSettings, PointTransform) == 0x0000B0, "Member 'UPCGCombinePointsSettings::PointTransform' has a wrong offset!");
 
 // Class PCG.PCGCreatePointsSettings
 // 0x0018 (0x00C0 - 0x00A8)
@@ -1078,27 +986,49 @@ static_assert(offsetof(UPCGCreatePointsGridSettings, bSetPointsBounds) == 0x0000
 static_assert(offsetof(UPCGCreatePointsGridSettings, bCullPointsOutsideVolume) == 0x0000DA, "Member 'UPCGCreatePointsGridSettings::bCullPointsOutsideVolume' has a wrong offset!");
 static_assert(offsetof(UPCGCreatePointsGridSettings, PointPosition) == 0x0000DB, "Member 'UPCGCreatePointsGridSettings::PointPosition' has a wrong offset!");
 
-// Class PCG.PCGCullPointsOutsideActorBoundsSettings
-// 0x0008 (0x00B0 - 0x00A8)
-class UPCGCullPointsOutsideActorBoundsSettings final : public UPCGSettings
+// Class PCG.PCGDataAsset
+// 0x0040 (0x0068 - 0x0028)
+class UPCGDataAsset final : public UObject
 {
 public:
-	float                                         BoundsExpansion;                                   // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPCGDataCollection                     Data;                                              // 0x0028(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGCullPointsOutsideActorBoundsSettings">();
+		return StaticClassImpl<"PCGDataAsset">();
 	}
-	static class UPCGCullPointsOutsideActorBoundsSettings* GetDefaultObj()
+	static class UPCGDataAsset* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGCullPointsOutsideActorBoundsSettings>();
+		return GetDefaultObjImpl<UPCGDataAsset>();
 	}
 };
-static_assert(alignof(UPCGCullPointsOutsideActorBoundsSettings) == 0x000008, "Wrong alignment on UPCGCullPointsOutsideActorBoundsSettings");
-static_assert(sizeof(UPCGCullPointsOutsideActorBoundsSettings) == 0x0000B0, "Wrong size on UPCGCullPointsOutsideActorBoundsSettings");
-static_assert(offsetof(UPCGCullPointsOutsideActorBoundsSettings, BoundsExpansion) == 0x0000A8, "Member 'UPCGCullPointsOutsideActorBoundsSettings::BoundsExpansion' has a wrong offset!");
+static_assert(alignof(UPCGDataAsset) == 0x000008, "Wrong alignment on UPCGDataAsset");
+static_assert(sizeof(UPCGDataAsset) == 0x000068, "Wrong size on UPCGDataAsset");
+static_assert(offsetof(UPCGDataAsset, Data) == 0x000028, "Member 'UPCGDataAsset::Data' has a wrong offset!");
+static_assert(offsetof(UPCGDataAsset, Name_0) == 0x000058, "Member 'UPCGDataAsset::Name_0' has a wrong offset!");
+
+// Class PCG.PCGExternalDataSettings
+// 0x0050 (0x00F8 - 0x00A8)
+class UPCGExternalDataSettings : public UPCGSettings
+{
+public:
+	TMap<class FString, struct FPCGAttributePropertyInputSelector> AttributeMapping;                                  // 0x00A8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGExternalDataSettings">();
+	}
+	static class UPCGExternalDataSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGExternalDataSettings>();
+	}
+};
+static_assert(alignof(UPCGExternalDataSettings) == 0x000008, "Wrong alignment on UPCGExternalDataSettings");
+static_assert(sizeof(UPCGExternalDataSettings) == 0x0000F8, "Wrong size on UPCGExternalDataSettings");
+static_assert(offsetof(UPCGExternalDataSettings, AttributeMapping) == 0x0000A8, "Member 'UPCGExternalDataSettings::AttributeMapping' has a wrong offset!");
 
 // Class PCG.PCGLoadDataTableSettings
 // 0x0030 (0x0128 - 0x00F8)
@@ -1125,6 +1055,27 @@ static_assert(sizeof(UPCGLoadDataTableSettings) == 0x000128, "Wrong size on UPCG
 static_assert(offsetof(UPCGLoadDataTableSettings, DataTable) == 0x0000F8, "Member 'UPCGLoadDataTableSettings::DataTable' has a wrong offset!");
 static_assert(offsetof(UPCGLoadDataTableSettings, OutputType) == 0x000120, "Member 'UPCGLoadDataTableSettings::OutputType' has a wrong offset!");
 static_assert(offsetof(UPCGLoadDataTableSettings, bSynchronousLoad) == 0x000121, "Member 'UPCGLoadDataTableSettings::bSynchronousLoad' has a wrong offset!");
+
+// Class PCG.PCGManagedComponent
+// 0x0028 (0x0060 - 0x0038)
+class UPCGManagedComponent : public UPCGManagedResource
+{
+public:
+	TSoftObjectPtr<class UActorComponent>         GeneratedComponent;                                // 0x0038(0x0028)(Edit, BlueprintVisible, ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGManagedComponent">();
+	}
+	static class UPCGManagedComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGManagedComponent>();
+	}
+};
+static_assert(alignof(UPCGManagedComponent) == 0x000008, "Wrong alignment on UPCGManagedComponent");
+static_assert(sizeof(UPCGManagedComponent) == 0x000060, "Wrong size on UPCGManagedComponent");
+static_assert(offsetof(UPCGManagedComponent, GeneratedComponent) == 0x000038, "Member 'UPCGManagedComponent::GeneratedComponent' has a wrong offset!");
 
 // Class PCG.PCGManagedDebugDrawComponent
 // 0x0000 (0x0060 - 0x0060)
@@ -1186,6 +1137,30 @@ static_assert(alignof(UPCGDeleteAttributesSettings) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UPCGDeleteAttributesSettings) == 0x0000C0, "Wrong size on UPCGDeleteAttributesSettings");
 static_assert(offsetof(UPCGDeleteAttributesSettings, Operation) == 0x0000A8, "Member 'UPCGDeleteAttributesSettings::Operation' has a wrong offset!");
 static_assert(offsetof(UPCGDeleteAttributesSettings, SelectedAttributes) == 0x0000B0, "Member 'UPCGDeleteAttributesSettings::SelectedAttributes' has a wrong offset!");
+
+// Class PCG.PCGDeleteTagsSettings
+// 0x0018 (0x00C0 - 0x00A8)
+class UPCGDeleteTagsSettings final : public UPCGSettings
+{
+public:
+	EPCGTagFilterOperation                        Operation;                                         // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SelectedTags;                                      // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGDeleteTagsSettings">();
+	}
+	static class UPCGDeleteTagsSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGDeleteTagsSettings>();
+	}
+};
+static_assert(alignof(UPCGDeleteTagsSettings) == 0x000008, "Wrong alignment on UPCGDeleteTagsSettings");
+static_assert(sizeof(UPCGDeleteTagsSettings) == 0x0000C0, "Wrong size on UPCGDeleteTagsSettings");
+static_assert(offsetof(UPCGDeleteTagsSettings, Operation) == 0x0000A8, "Member 'UPCGDeleteTagsSettings::Operation' has a wrong offset!");
+static_assert(offsetof(UPCGDeleteTagsSettings, SelectedTags) == 0x0000B0, "Member 'UPCGDeleteTagsSettings::SelectedTags' has a wrong offset!");
 
 // Class PCG.PCGDistanceSettings
 // 0x0048 (0x00F0 - 0x00A8)
@@ -1295,6 +1270,23 @@ static_assert(sizeof(UPCGEngineSettings) == 0x000058, "Wrong size on UPCGEngineS
 static_assert(offsetof(UPCGEngineSettings, VolumeScale) == 0x000038, "Member 'UPCGEngineSettings::VolumeScale' has a wrong offset!");
 static_assert(offsetof(UPCGEngineSettings, bGenerateOnDrop) == 0x000050, "Member 'UPCGEngineSettings::bGenerateOnDrop' has a wrong offset!");
 static_assert(offsetof(UPCGEngineSettings, bDisplayCullingStateWhenDebugging) == 0x000051, "Member 'UPCGEngineSettings::bDisplayCullingStateWhenDebugging' has a wrong offset!");
+
+// Class PCG.PCGFilterDataBaseSettings
+// 0x0000 (0x00A8 - 0x00A8)
+class UPCGFilterDataBaseSettings : public UPCGSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGFilterDataBaseSettings">();
+	}
+	static class UPCGFilterDataBaseSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGFilterDataBaseSettings>();
+	}
+};
+static_assert(alignof(UPCGFilterDataBaseSettings) == 0x000008, "Wrong alignment on UPCGFilterDataBaseSettings");
+static_assert(sizeof(UPCGFilterDataBaseSettings) == 0x0000A8, "Wrong size on UPCGFilterDataBaseSettings");
 
 // Class PCG.PCGFilterByAttributeSettings
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1676,27 +1668,37 @@ public:
 static_assert(alignof(UPCGFunctionPrototypes) == 0x000008, "Wrong alignment on UPCGFunctionPrototypes");
 static_assert(sizeof(UPCGFunctionPrototypes) == 0x000028, "Wrong size on UPCGFunctionPrototypes");
 
-// Class PCG.PCGHiGenGridSizeSettings
-// 0x0008 (0x00B0 - 0x00A8)
-class UPCGHiGenGridSizeSettings final : public UPCGSettings
+// Class PCG.PCGLoadDataAssetSettings
+// 0x0050 (0x00F8 - 0x00A8)
+class UPCGLoadDataAssetSettings final : public UPCGSettings
 {
 public:
-	EPCGHiGenGrid                                 HiGenGridSize;                                     // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UPCGDataAsset>           Asset;                                             // 0x00A8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPCGPinProperties>              Pins;                                              // 0x00D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	class FString                                 AssetName;                                         // 0x00E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWarnIfNoAsset;                                    // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSynchronousLoad;                                  // 0x00F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTagOutputsBasedOnOutputPins;                      // 0x00F2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F3[0x5];                                       // 0x00F3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGHiGenGridSizeSettings">();
+		return StaticClassImpl<"PCGLoadDataAssetSettings">();
 	}
-	static class UPCGHiGenGridSizeSettings* GetDefaultObj()
+	static class UPCGLoadDataAssetSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGHiGenGridSizeSettings>();
+		return GetDefaultObjImpl<UPCGLoadDataAssetSettings>();
 	}
 };
-static_assert(alignof(UPCGHiGenGridSizeSettings) == 0x000008, "Wrong alignment on UPCGHiGenGridSizeSettings");
-static_assert(sizeof(UPCGHiGenGridSizeSettings) == 0x0000B0, "Wrong size on UPCGHiGenGridSizeSettings");
-static_assert(offsetof(UPCGHiGenGridSizeSettings, HiGenGridSize) == 0x0000A8, "Member 'UPCGHiGenGridSizeSettings::HiGenGridSize' has a wrong offset!");
+static_assert(alignof(UPCGLoadDataAssetSettings) == 0x000008, "Wrong alignment on UPCGLoadDataAssetSettings");
+static_assert(sizeof(UPCGLoadDataAssetSettings) == 0x0000F8, "Wrong size on UPCGLoadDataAssetSettings");
+static_assert(offsetof(UPCGLoadDataAssetSettings, Asset) == 0x0000A8, "Member 'UPCGLoadDataAssetSettings::Asset' has a wrong offset!");
+static_assert(offsetof(UPCGLoadDataAssetSettings, Pins) == 0x0000D0, "Member 'UPCGLoadDataAssetSettings::Pins' has a wrong offset!");
+static_assert(offsetof(UPCGLoadDataAssetSettings, AssetName) == 0x0000E0, "Member 'UPCGLoadDataAssetSettings::AssetName' has a wrong offset!");
+static_assert(offsetof(UPCGLoadDataAssetSettings, bWarnIfNoAsset) == 0x0000F0, "Member 'UPCGLoadDataAssetSettings::bWarnIfNoAsset' has a wrong offset!");
+static_assert(offsetof(UPCGLoadDataAssetSettings, bSynchronousLoad) == 0x0000F1, "Member 'UPCGLoadDataAssetSettings::bSynchronousLoad' has a wrong offset!");
+static_assert(offsetof(UPCGLoadDataAssetSettings, bTagOutputsBasedOnOutputPins) == 0x0000F2, "Member 'UPCGLoadDataAssetSettings::bTagOutputsBasedOnOutputPins' has a wrong offset!");
 
 // Class PCG.PCGMakeConcreteSettings
 // 0x0000 (0x00A8 - 0x00A8)
@@ -1732,6 +1734,34 @@ public:
 static_assert(alignof(UPCGMergeAttributesSettings) == 0x000008, "Wrong alignment on UPCGMergeAttributesSettings");
 static_assert(sizeof(UPCGMergeAttributesSettings) == 0x0000A8, "Wrong size on UPCGMergeAttributesSettings");
 
+// Class PCG.PCGMetadataMakeRotatorSettings
+// 0x0080 (0x0158 - 0x00D8)
+class UPCGMetadataMakeRotatorSettings final : public UPCGMetadataSettingsBase
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource1;                                      // 0x00D8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     InputSource2;                                      // 0x0100(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     InputSource3;                                      // 0x0128(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGMetadataMakeRotatorOp                     Operation;                                         // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGMetadataMakeRotatorSettings">();
+	}
+	static class UPCGMetadataMakeRotatorSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGMetadataMakeRotatorSettings>();
+	}
+};
+static_assert(alignof(UPCGMetadataMakeRotatorSettings) == 0x000008, "Wrong alignment on UPCGMetadataMakeRotatorSettings");
+static_assert(sizeof(UPCGMetadataMakeRotatorSettings) == 0x000158, "Wrong size on UPCGMetadataMakeRotatorSettings");
+static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource1) == 0x0000D8, "Member 'UPCGMetadataMakeRotatorSettings::InputSource1' has a wrong offset!");
+static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource2) == 0x000100, "Member 'UPCGMetadataMakeRotatorSettings::InputSource2' has a wrong offset!");
+static_assert(offsetof(UPCGMetadataMakeRotatorSettings, InputSource3) == 0x000128, "Member 'UPCGMetadataMakeRotatorSettings::InputSource3' has a wrong offset!");
+static_assert(offsetof(UPCGMetadataMakeRotatorSettings, Operation) == 0x000150, "Member 'UPCGMetadataMakeRotatorSettings::Operation' has a wrong offset!");
+
 // Class PCG.PCGMultiSelectSettings
 // 0x0058 (0x0100 - 0x00A8)
 class UPCGMultiSelectSettings final : public UPCGSettings
@@ -1766,50 +1796,26 @@ static_assert(offsetof(UPCGMultiSelectSettings, StringOptions) == 0x0000D0, "Mem
 static_assert(offsetof(UPCGMultiSelectSettings, EnumSelection) == 0x0000E0, "Member 'UPCGMultiSelectSettings::EnumSelection' has a wrong offset!");
 static_assert(offsetof(UPCGMultiSelectSettings, CachedPinLabels) == 0x0000F0, "Member 'UPCGMultiSelectSettings::CachedPinLabels' has a wrong offset!");
 
-// Class PCG.PCGMutateSeedSettings
-// 0x0000 (0x00A8 - 0x00A8)
-class UPCGMutateSeedSettings final : public UPCGSettings
+// Class PCG.PCGNumberOfElementsBaseSettings
+// 0x0008 (0x00B0 - 0x00A8)
+class UPCGNumberOfElementsBaseSettings : public UPCGSettings
 {
 public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGMutateSeedSettings">();
-	}
-	static class UPCGMutateSeedSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGMutateSeedSettings>();
-	}
-};
-static_assert(alignof(UPCGMutateSeedSettings) == 0x000008, "Wrong alignment on UPCGMutateSeedSettings");
-static_assert(sizeof(UPCGMutateSeedSettings) == 0x0000A8, "Wrong size on UPCGMutateSeedSettings");
-
-// Class PCG.PCGNormalToDensitySettings
-// 0x0030 (0x00D8 - 0x00A8)
-class UPCGNormalToDensitySettings final : public UPCGSettings
-{
-public:
-	struct FVector                                Normal;                                            // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Offset;                                            // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Strength;                                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGNormalToDensityMode                       DensityMode;                                       // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   OutputAttributeName;                               // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGNormalToDensitySettings">();
+		return StaticClassImpl<"PCGNumberOfElementsBaseSettings">();
 	}
-	static class UPCGNormalToDensitySettings* GetDefaultObj()
+	static class UPCGNumberOfElementsBaseSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGNormalToDensitySettings>();
+		return GetDefaultObjImpl<UPCGNumberOfElementsBaseSettings>();
 	}
 };
-static_assert(alignof(UPCGNormalToDensitySettings) == 0x000008, "Wrong alignment on UPCGNormalToDensitySettings");
-static_assert(sizeof(UPCGNormalToDensitySettings) == 0x0000D8, "Wrong size on UPCGNormalToDensitySettings");
-static_assert(offsetof(UPCGNormalToDensitySettings, Normal) == 0x0000A8, "Member 'UPCGNormalToDensitySettings::Normal' has a wrong offset!");
-static_assert(offsetof(UPCGNormalToDensitySettings, Offset) == 0x0000C0, "Member 'UPCGNormalToDensitySettings::Offset' has a wrong offset!");
-static_assert(offsetof(UPCGNormalToDensitySettings, Strength) == 0x0000C8, "Member 'UPCGNormalToDensitySettings::Strength' has a wrong offset!");
-static_assert(offsetof(UPCGNormalToDensitySettings, DensityMode) == 0x0000D0, "Member 'UPCGNormalToDensitySettings::DensityMode' has a wrong offset!");
+static_assert(alignof(UPCGNumberOfElementsBaseSettings) == 0x000008, "Wrong alignment on UPCGNumberOfElementsBaseSettings");
+static_assert(sizeof(UPCGNumberOfElementsBaseSettings) == 0x0000B0, "Wrong size on UPCGNumberOfElementsBaseSettings");
+static_assert(offsetof(UPCGNumberOfElementsBaseSettings, OutputAttributeName) == 0x0000A8, "Member 'UPCGNumberOfElementsBaseSettings::OutputAttributeName' has a wrong offset!");
 
 // Class PCG.PCGNumberOfPointsSettings
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1828,66 +1834,69 @@ public:
 static_assert(alignof(UPCGNumberOfPointsSettings) == 0x000008, "Wrong alignment on UPCGNumberOfPointsSettings");
 static_assert(sizeof(UPCGNumberOfPointsSettings) == 0x0000B0, "Wrong size on UPCGNumberOfPointsSettings");
 
-// Class PCG.PCGPointNeighborhoodSettings
-// 0x0028 (0x00D0 - 0x00A8)
-class UPCGPointNeighborhoodSettings final : public UPCGSettings
+// Class PCG.PCGNumberOfEntriesSettings
+// 0x0000 (0x00B0 - 0x00B0)
+class UPCGNumberOfEntriesSettings final : public UPCGNumberOfElementsBaseSettings
 {
 public:
-	double                                        SearchDistance;                                    // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetDistanceToAttribute;                           // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DistanceAttribute;                                 // 0x00B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetAveragePositionToAttribute;                    // 0x00BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   AveragePositionAttribute;                          // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPointNeighborhoodDensityMode              SetDensity;                                        // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetAveragePosition;                               // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetAverageColor;                                  // 0x00CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWeightedAverage;                                  // 0x00CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CF[0x1];                                       // 0x00CF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGNumberOfEntriesSettings">();
+	}
+	static class UPCGNumberOfEntriesSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGNumberOfEntriesSettings>();
+	}
+};
+static_assert(alignof(UPCGNumberOfEntriesSettings) == 0x000008, "Wrong alignment on UPCGNumberOfEntriesSettings");
+static_assert(sizeof(UPCGNumberOfEntriesSettings) == 0x0000B0, "Wrong size on UPCGNumberOfEntriesSettings");
+
+// Class PCG.PCGSettingsWithDynamicInputs
+// 0x0010 (0x00B8 - 0x00A8)
+class UPCGSettingsWithDynamicInputs : public UPCGSettings
+{
+public:
+	TArray<struct FPCGPinProperties>              DynamicInputPinProperties;                         // 0x00A8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGPointNeighborhoodSettings">();
+		return StaticClassImpl<"PCGSettingsWithDynamicInputs">();
 	}
-	static class UPCGPointNeighborhoodSettings* GetDefaultObj()
+	static class UPCGSettingsWithDynamicInputs* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGPointNeighborhoodSettings>();
+		return GetDefaultObjImpl<UPCGSettingsWithDynamicInputs>();
 	}
 };
-static_assert(alignof(UPCGPointNeighborhoodSettings) == 0x000008, "Wrong alignment on UPCGPointNeighborhoodSettings");
-static_assert(sizeof(UPCGPointNeighborhoodSettings) == 0x0000D0, "Wrong size on UPCGPointNeighborhoodSettings");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, SearchDistance) == 0x0000A8, "Member 'UPCGPointNeighborhoodSettings::SearchDistance' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetDistanceToAttribute) == 0x0000B0, "Member 'UPCGPointNeighborhoodSettings::bSetDistanceToAttribute' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, DistanceAttribute) == 0x0000B4, "Member 'UPCGPointNeighborhoodSettings::DistanceAttribute' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAveragePositionToAttribute) == 0x0000BC, "Member 'UPCGPointNeighborhoodSettings::bSetAveragePositionToAttribute' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, AveragePositionAttribute) == 0x0000C0, "Member 'UPCGPointNeighborhoodSettings::AveragePositionAttribute' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, SetDensity) == 0x0000C8, "Member 'UPCGPointNeighborhoodSettings::SetDensity' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAveragePosition) == 0x0000CC, "Member 'UPCGPointNeighborhoodSettings::bSetAveragePosition' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, bSetAverageColor) == 0x0000CD, "Member 'UPCGPointNeighborhoodSettings::bSetAverageColor' has a wrong offset!");
-static_assert(offsetof(UPCGPointNeighborhoodSettings, bWeightedAverage) == 0x0000CE, "Member 'UPCGPointNeighborhoodSettings::bWeightedAverage' has a wrong offset!");
+static_assert(alignof(UPCGSettingsWithDynamicInputs) == 0x000008, "Wrong alignment on UPCGSettingsWithDynamicInputs");
+static_assert(sizeof(UPCGSettingsWithDynamicInputs) == 0x0000B8, "Wrong size on UPCGSettingsWithDynamicInputs");
+static_assert(offsetof(UPCGSettingsWithDynamicInputs, DynamicInputPinProperties) == 0x0000A8, "Member 'UPCGSettingsWithDynamicInputs::DynamicInputPinProperties' has a wrong offset!");
 
-// Class PCG.PCGManagedDebugStringMessageKey
-// 0x0008 (0x0040 - 0x0038)
-class UPCGManagedDebugStringMessageKey final : public UPCGManagedResource
+// Class PCG.PCGOuterIntersectionSettings
+// 0x0008 (0x00C0 - 0x00B8)
+class UPCGOuterIntersectionSettings final : public UPCGSettingsWithDynamicInputs
 {
 public:
-	uint64                                        HashKey;                                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGIntersectionDensityFunction               DensityFunction;                                   // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnorePinsWithNoInput;                            // 0x00B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bKeepZeroDensityPoints;                            // 0x00BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BB[0x5];                                       // 0x00BB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGManagedDebugStringMessageKey">();
+		return StaticClassImpl<"PCGOuterIntersectionSettings">();
 	}
-	static class UPCGManagedDebugStringMessageKey* GetDefaultObj()
+	static class UPCGOuterIntersectionSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGManagedDebugStringMessageKey>();
+		return GetDefaultObjImpl<UPCGOuterIntersectionSettings>();
 	}
 };
-static_assert(alignof(UPCGManagedDebugStringMessageKey) == 0x000008, "Wrong alignment on UPCGManagedDebugStringMessageKey");
-static_assert(sizeof(UPCGManagedDebugStringMessageKey) == 0x000040, "Wrong size on UPCGManagedDebugStringMessageKey");
-static_assert(offsetof(UPCGManagedDebugStringMessageKey, HashKey) == 0x000038, "Member 'UPCGManagedDebugStringMessageKey::HashKey' has a wrong offset!");
+static_assert(alignof(UPCGOuterIntersectionSettings) == 0x000008, "Wrong alignment on UPCGOuterIntersectionSettings");
+static_assert(sizeof(UPCGOuterIntersectionSettings) == 0x0000C0, "Wrong size on UPCGOuterIntersectionSettings");
+static_assert(offsetof(UPCGOuterIntersectionSettings, DensityFunction) == 0x0000B8, "Member 'UPCGOuterIntersectionSettings::DensityFunction' has a wrong offset!");
+static_assert(offsetof(UPCGOuterIntersectionSettings, bIgnorePinsWithNoInput) == 0x0000B9, "Member 'UPCGOuterIntersectionSettings::bIgnorePinsWithNoInput' has a wrong offset!");
+static_assert(offsetof(UPCGOuterIntersectionSettings, bKeepZeroDensityPoints) == 0x0000BA, "Member 'UPCGOuterIntersectionSettings::bKeepZeroDensityPoints' has a wrong offset!");
 
 // Class PCG.PCGPrintElementSettings
 // 0x0030 (0x00D8 - 0x00A8)
@@ -2300,45 +2309,41 @@ static_assert(alignof(UPCGUserParametersData) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UPCGUserParametersData) == 0x000048, "Wrong size on UPCGUserParametersData");
 static_assert(offsetof(UPCGUserParametersData, UserParameters) == 0x000038, "Member 'UPCGUserParametersData::UserParameters' has a wrong offset!");
 
-// Class PCG.PCGVisualizeAttributeSettings
-// 0x0070 (0x0118 - 0x00A8)
-class UPCGVisualizeAttributeSettings final : public UPCGSettings
+// Class PCG.PCGDifferenceData
+// 0x0028 (0x00F8 - 0x00D0)
+class UPCGDifferenceData final : public UPCGSpatialDataWithPointCache
 {
 public:
-	struct FPCGAttributePropertyInputSelector     AttributeSource;                                   // 0x00A8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CustomPrefixString;                                // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrefixWithIndex;                                  // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrefixWithAttributeName;                          // 0x00E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LocalOffset;                                       // 0x00E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 Color;                                             // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Duration;                                          // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PointLimit;                                        // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisualizeEnabled;                                 // 0x0114(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bDiffMetadata;                                     // 0x00D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGSpatialData*                        Source;                                            // 0x00D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPCGSpatialData*                        Difference;                                        // 0x00E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPCGUnionData*                          DifferencesUnion;                                  // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EPCGDifferenceDensityFunction                 DensityFunction;                                   // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddDifference(const class UPCGSpatialData* InDifference);
+	void Initialize(const class UPCGSpatialData* InData);
+	void SetDensityFunction(EPCGDifferenceDensityFunction InDensityFunction);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGVisualizeAttributeSettings">();
+		return StaticClassImpl<"PCGDifferenceData">();
 	}
-	static class UPCGVisualizeAttributeSettings* GetDefaultObj()
+	static class UPCGDifferenceData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGVisualizeAttributeSettings>();
+		return GetDefaultObjImpl<UPCGDifferenceData>();
 	}
 };
-static_assert(alignof(UPCGVisualizeAttributeSettings) == 0x000008, "Wrong alignment on UPCGVisualizeAttributeSettings");
-static_assert(sizeof(UPCGVisualizeAttributeSettings) == 0x000118, "Wrong size on UPCGVisualizeAttributeSettings");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, AttributeSource) == 0x0000A8, "Member 'UPCGVisualizeAttributeSettings::AttributeSource' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, CustomPrefixString) == 0x0000D0, "Member 'UPCGVisualizeAttributeSettings::CustomPrefixString' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, bPrefixWithIndex) == 0x0000E0, "Member 'UPCGVisualizeAttributeSettings::bPrefixWithIndex' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, bPrefixWithAttributeName) == 0x0000E1, "Member 'UPCGVisualizeAttributeSettings::bPrefixWithAttributeName' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, LocalOffset) == 0x0000E8, "Member 'UPCGVisualizeAttributeSettings::LocalOffset' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, Color) == 0x000100, "Member 'UPCGVisualizeAttributeSettings::Color' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, Duration) == 0x000108, "Member 'UPCGVisualizeAttributeSettings::Duration' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, PointLimit) == 0x000110, "Member 'UPCGVisualizeAttributeSettings::PointLimit' has a wrong offset!");
-static_assert(offsetof(UPCGVisualizeAttributeSettings, bVisualizeEnabled) == 0x000114, "Member 'UPCGVisualizeAttributeSettings::bVisualizeEnabled' has a wrong offset!");
+static_assert(alignof(UPCGDifferenceData) == 0x000008, "Wrong alignment on UPCGDifferenceData");
+static_assert(sizeof(UPCGDifferenceData) == 0x0000F8, "Wrong size on UPCGDifferenceData");
+static_assert(offsetof(UPCGDifferenceData, bDiffMetadata) == 0x0000D0, "Member 'UPCGDifferenceData::bDiffMetadata' has a wrong offset!");
+static_assert(offsetof(UPCGDifferenceData, Source) == 0x0000D8, "Member 'UPCGDifferenceData::Source' has a wrong offset!");
+static_assert(offsetof(UPCGDifferenceData, Difference) == 0x0000E0, "Member 'UPCGDifferenceData::Difference' has a wrong offset!");
+static_assert(offsetof(UPCGDifferenceData, DifferencesUnion) == 0x0000E8, "Member 'UPCGDifferenceData::DifferencesUnion' has a wrong offset!");
+static_assert(offsetof(UPCGDifferenceData, DensityFunction) == 0x0000F0, "Member 'UPCGDifferenceData::DensityFunction' has a wrong offset!");
 
 // Class PCG.PCGIntersectionData
 // 0x0088 (0x0158 - 0x00D0)
@@ -2373,52 +2378,22 @@ static_assert(offsetof(UPCGIntersectionData, B) == 0x0000E0, "Member 'UPCGInters
 static_assert(offsetof(UPCGIntersectionData, CachedBounds) == 0x0000E8, "Member 'UPCGIntersectionData::CachedBounds' has a wrong offset!");
 static_assert(offsetof(UPCGIntersectionData, CachedStrictBounds) == 0x000120, "Member 'UPCGIntersectionData::CachedStrictBounds' has a wrong offset!");
 
-// Class PCG.PCGSurfaceData
-// 0x0060 (0x0130 - 0x00D0)
-class UPCGSurfaceData : public UPCGSpatialDataWithPointCache
+// Class PCG.PCGPolyLineData
+// 0x0000 (0x00D0 - 0x00D0)
+class UPCGPolyLineData : public UPCGSpatialDataWithPointCache
 {
-public:
-	struct FTransform                             Transform;                                         // 0x00D0(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGSurfaceData">();
+		return StaticClassImpl<"PCGPolyLineData">();
 	}
-	static class UPCGSurfaceData* GetDefaultObj()
+	static class UPCGPolyLineData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGSurfaceData>();
+		return GetDefaultObjImpl<UPCGPolyLineData>();
 	}
 };
-static_assert(alignof(UPCGSurfaceData) == 0x000010, "Wrong alignment on UPCGSurfaceData");
-static_assert(sizeof(UPCGSurfaceData) == 0x000130, "Wrong size on UPCGSurfaceData");
-static_assert(offsetof(UPCGSurfaceData, Transform) == 0x0000D0, "Member 'UPCGSurfaceData::Transform' has a wrong offset!");
-
-// Class PCG.PCGLandscapeData
-// 0x0080 (0x01B0 - 0x0130)
-class UPCGLandscapeData final : public UPCGSurfaceData
-{
-public:
-	TArray<TSoftObjectPtr<class ALandscapeProxy>> Landscapes;                                        // 0x0130(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	struct FBox                                   Bounds;                                            // 0x0140(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FPCGLandscapeDataProps                 DataProps;                                         // 0x0178(0x0005)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_17D[0x33];                                     // 0x017D(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGLandscapeData">();
-	}
-	static class UPCGLandscapeData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGLandscapeData>();
-	}
-};
-static_assert(alignof(UPCGLandscapeData) == 0x000010, "Wrong alignment on UPCGLandscapeData");
-static_assert(sizeof(UPCGLandscapeData) == 0x0001B0, "Wrong size on UPCGLandscapeData");
-static_assert(offsetof(UPCGLandscapeData, Landscapes) == 0x000130, "Member 'UPCGLandscapeData::Landscapes' has a wrong offset!");
-static_assert(offsetof(UPCGLandscapeData, Bounds) == 0x000140, "Member 'UPCGLandscapeData::Bounds' has a wrong offset!");
-static_assert(offsetof(UPCGLandscapeData, DataProps) == 0x000178, "Member 'UPCGLandscapeData::DataProps' has a wrong offset!");
+static_assert(alignof(UPCGPolyLineData) == 0x000008, "Wrong alignment on UPCGPolyLineData");
+static_assert(sizeof(UPCGPolyLineData) == 0x0000D0, "Wrong size on UPCGPolyLineData");
 
 // Class PCG.PCGLandscapeSplineData
 // 0x0020 (0x00F0 - 0x00D0)
@@ -2472,32 +2447,34 @@ static_assert(alignof(UPCGPointData) == 0x000010, "Wrong alignment on UPCGPointD
 static_assert(sizeof(UPCGPointData) == 0x0001B0, "Wrong size on UPCGPointData");
 static_assert(offsetof(UPCGPointData, Points) == 0x000080, "Member 'UPCGPointData::Points' has a wrong offset!");
 
-// Class PCG.PCGPrimitiveData
-// 0x0090 (0x0160 - 0x00D0)
-class UPCGPrimitiveData final : public UPCGSpatialDataWithPointCache
+// Class PCG.PCGProjectionData
+// 0x00A0 (0x0170 - 0x00D0)
+class UPCGProjectionData : public UPCGSpatialDataWithPointCache
 {
 public:
-	struct FVector                                VoxelSize;                                         // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UPrimitiveComponent>     Primitive;                                         // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FBox                                   CachedBounds;                                      // 0x00F0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FBox                                   CachedStrictBounds;                                // 0x0128(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	class UPCGSpatialData*                        Source;                                            // 0x00D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPCGSpatialData*                        Target;                                            // 0x00D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FBox                                   CachedBounds;                                      // 0x00E0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FBox                                   CachedStrictBounds;                                // 0x0118(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FPCGProjectionParams                   ProjectionParams;                                  // 0x0150(0x0020)(Edit, BlueprintVisible, EditConst, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PCGPrimitiveData">();
+		return StaticClassImpl<"PCGProjectionData">();
 	}
-	static class UPCGPrimitiveData* GetDefaultObj()
+	static class UPCGProjectionData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPCGPrimitiveData>();
+		return GetDefaultObjImpl<UPCGProjectionData>();
 	}
 };
-static_assert(alignof(UPCGPrimitiveData) == 0x000008, "Wrong alignment on UPCGPrimitiveData");
-static_assert(sizeof(UPCGPrimitiveData) == 0x000160, "Wrong size on UPCGPrimitiveData");
-static_assert(offsetof(UPCGPrimitiveData, VoxelSize) == 0x0000D0, "Member 'UPCGPrimitiveData::VoxelSize' has a wrong offset!");
-static_assert(offsetof(UPCGPrimitiveData, Primitive) == 0x0000E8, "Member 'UPCGPrimitiveData::Primitive' has a wrong offset!");
-static_assert(offsetof(UPCGPrimitiveData, CachedBounds) == 0x0000F0, "Member 'UPCGPrimitiveData::CachedBounds' has a wrong offset!");
-static_assert(offsetof(UPCGPrimitiveData, CachedStrictBounds) == 0x000128, "Member 'UPCGPrimitiveData::CachedStrictBounds' has a wrong offset!");
+static_assert(alignof(UPCGProjectionData) == 0x000008, "Wrong alignment on UPCGProjectionData");
+static_assert(sizeof(UPCGProjectionData) == 0x000170, "Wrong size on UPCGProjectionData");
+static_assert(offsetof(UPCGProjectionData, Source) == 0x0000D0, "Member 'UPCGProjectionData::Source' has a wrong offset!");
+static_assert(offsetof(UPCGProjectionData, Target) == 0x0000D8, "Member 'UPCGProjectionData::Target' has a wrong offset!");
+static_assert(offsetof(UPCGProjectionData, CachedBounds) == 0x0000E0, "Member 'UPCGProjectionData::CachedBounds' has a wrong offset!");
+static_assert(offsetof(UPCGProjectionData, CachedStrictBounds) == 0x000118, "Member 'UPCGProjectionData::CachedStrictBounds' has a wrong offset!");
+static_assert(offsetof(UPCGProjectionData, ProjectionParams) == 0x000150, "Member 'UPCGProjectionData::ProjectionParams' has a wrong offset!");
 
 // Class PCG.PCGBaseTextureData
 // 0x00B0 (0x01E0 - 0x0130)
@@ -2597,6 +2574,27 @@ static_assert(alignof(UPCGSplineData) == 0x000010, "Wrong alignment on UPCGSplin
 static_assert(sizeof(UPCGSplineData) == 0x000270, "Wrong size on UPCGSplineData");
 static_assert(offsetof(UPCGSplineData, SplineStruct) == 0x0000D0, "Member 'UPCGSplineData::SplineStruct' has a wrong offset!");
 static_assert(offsetof(UPCGSplineData, CachedBounds) == 0x000230, "Member 'UPCGSplineData::CachedBounds' has a wrong offset!");
+
+// Class PCG.PCGSplineProjectionData
+// 0x0018 (0x0188 - 0x0170)
+class UPCGSplineProjectionData final : public UPCGProjectionData
+{
+public:
+	struct FInterpCurveVector2D                   ProjectedPosition;                                 // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGSplineProjectionData">();
+	}
+	static class UPCGSplineProjectionData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGSplineProjectionData>();
+	}
+};
+static_assert(alignof(UPCGSplineProjectionData) == 0x000008, "Wrong alignment on UPCGSplineProjectionData");
+static_assert(sizeof(UPCGSplineProjectionData) == 0x000188, "Wrong size on UPCGSplineProjectionData");
+static_assert(offsetof(UPCGSplineProjectionData, ProjectedPosition) == 0x000170, "Member 'UPCGSplineProjectionData::ProjectedPosition' has a wrong offset!");
 
 // Class PCG.PCGSplineInteriorSurfaceData
 // 0x01C0 (0x02F0 - 0x0130)
@@ -3240,43 +3238,6 @@ static_assert(offsetof(UPCGAttributeGetFromPointIndexSettings, InputSource) == 0
 static_assert(offsetof(UPCGAttributeGetFromPointIndexSettings, Index_0) == 0x0000D0, "Member 'UPCGAttributeGetFromPointIndexSettings::Index_0' has a wrong offset!");
 static_assert(offsetof(UPCGAttributeGetFromPointIndexSettings, OutputAttributeName) == 0x0000D4, "Member 'UPCGAttributeGetFromPointIndexSettings::OutputAttributeName' has a wrong offset!");
 
-// Class PCG.PCGAttributeNoiseSettings
-// 0x0060 (0x0108 - 0x00A8)
-class UPCGAttributeNoiseSettings final : public UPCGSettings
-{
-public:
-	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x00A8(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyOutputSelector    OutputTarget;                                      // 0x00D0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGAttributeNoiseMode                        Mode;                                              // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NoiseMin;                                          // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseMax;                                          // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvertSource;                                     // 0x0104(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClampResult;                                      // 0x0105(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasSpatialToPointDeprecation;                     // 0x0106(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_107[0x1];                                      // 0x0107(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGAttributeNoiseSettings">();
-	}
-	static class UPCGAttributeNoiseSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGAttributeNoiseSettings>();
-	}
-};
-static_assert(alignof(UPCGAttributeNoiseSettings) == 0x000008, "Wrong alignment on UPCGAttributeNoiseSettings");
-static_assert(sizeof(UPCGAttributeNoiseSettings) == 0x000108, "Wrong size on UPCGAttributeNoiseSettings");
-static_assert(offsetof(UPCGAttributeNoiseSettings, InputSource) == 0x0000A8, "Member 'UPCGAttributeNoiseSettings::InputSource' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, OutputTarget) == 0x0000D0, "Member 'UPCGAttributeNoiseSettings::OutputTarget' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, Mode) == 0x0000F8, "Member 'UPCGAttributeNoiseSettings::Mode' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, NoiseMin) == 0x0000FC, "Member 'UPCGAttributeNoiseSettings::NoiseMin' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, NoiseMax) == 0x000100, "Member 'UPCGAttributeNoiseSettings::NoiseMax' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, bInvertSource) == 0x000104, "Member 'UPCGAttributeNoiseSettings::bInvertSource' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, bClampResult) == 0x000105, "Member 'UPCGAttributeNoiseSettings::bClampResult' has a wrong offset!");
-static_assert(offsetof(UPCGAttributeNoiseSettings, bHasSpatialToPointDeprecation) == 0x000106, "Member 'UPCGAttributeNoiseSettings::bHasSpatialToPointDeprecation' has a wrong offset!");
-
 // Class PCG.PCGAttributeReduceSettings
 // 0x0038 (0x00E0 - 0x00A8)
 class UPCGAttributeReduceSettings final : public UPCGSettings
@@ -3388,6 +3349,23 @@ static_assert(offsetof(UPCGBoundsModifierSettings, BoundsMax) == 0x0000C8, "Memb
 static_assert(offsetof(UPCGBoundsModifierSettings, bAffectSteepness) == 0x0000E0, "Member 'UPCGBoundsModifierSettings::bAffectSteepness' has a wrong offset!");
 static_assert(offsetof(UPCGBoundsModifierSettings, Steepness) == 0x0000E4, "Member 'UPCGBoundsModifierSettings::Steepness' has a wrong offset!");
 
+// Class PCG.PCGCollapseSettings
+// 0x0000 (0x00A8 - 0x00A8)
+class UPCGCollapseSettings : public UPCGSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGCollapseSettings">();
+	}
+	static class UPCGCollapseSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGCollapseSettings>();
+	}
+};
+static_assert(alignof(UPCGCollapseSettings) == 0x000008, "Wrong alignment on UPCGCollapseSettings");
+static_assert(sizeof(UPCGCollapseSettings) == 0x0000A8, "Wrong size on UPCGCollapseSettings");
+
 // Class PCG.PCGConvertToPointDataSettings
 // 0x0000 (0x00A8 - 0x00A8)
 class UPCGConvertToPointDataSettings final : public UPCGCollapseSettings
@@ -3421,38 +3399,6 @@ public:
 };
 static_assert(alignof(UPCGConvertToAttributeSetSettings) == 0x000008, "Wrong alignment on UPCGConvertToAttributeSetSettings");
 static_assert(sizeof(UPCGConvertToAttributeSetSettings) == 0x0000A8, "Wrong size on UPCGConvertToAttributeSetSettings");
-
-// Class PCG.PCGCopyPointsSettings
-// 0x0008 (0x00B0 - 0x00A8)
-class UPCGCopyPointsSettings final : public UPCGSettings
-{
-public:
-	EPCGCopyPointsInheritanceMode                 RotationInheritance;                               // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCopyPointsInheritanceMode                 ScaleInheritance;                                  // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCopyPointsInheritanceMode                 ColorInheritance;                                  // 0x00AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCopyPointsInheritanceMode                 SeedInheritance;                                   // 0x00AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCopyPointsMetadataInheritanceMode         AttributeInheritance;                              // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCopyPointsTagInheritanceMode              TagInheritance;                                    // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGCopyPointsSettings">();
-	}
-	static class UPCGCopyPointsSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGCopyPointsSettings>();
-	}
-};
-static_assert(alignof(UPCGCopyPointsSettings) == 0x000008, "Wrong alignment on UPCGCopyPointsSettings");
-static_assert(sizeof(UPCGCopyPointsSettings) == 0x0000B0, "Wrong size on UPCGCopyPointsSettings");
-static_assert(offsetof(UPCGCopyPointsSettings, RotationInheritance) == 0x0000A8, "Member 'UPCGCopyPointsSettings::RotationInheritance' has a wrong offset!");
-static_assert(offsetof(UPCGCopyPointsSettings, ScaleInheritance) == 0x0000A9, "Member 'UPCGCopyPointsSettings::ScaleInheritance' has a wrong offset!");
-static_assert(offsetof(UPCGCopyPointsSettings, ColorInheritance) == 0x0000AA, "Member 'UPCGCopyPointsSettings::ColorInheritance' has a wrong offset!");
-static_assert(offsetof(UPCGCopyPointsSettings, SeedInheritance) == 0x0000AB, "Member 'UPCGCopyPointsSettings::SeedInheritance' has a wrong offset!");
-static_assert(offsetof(UPCGCopyPointsSettings, AttributeInheritance) == 0x0000AC, "Member 'UPCGCopyPointsSettings::AttributeInheritance' has a wrong offset!");
-static_assert(offsetof(UPCGCopyPointsSettings, TagInheritance) == 0x0000AD, "Member 'UPCGCopyPointsSettings::TagInheritance' has a wrong offset!");
 
 // Class PCG.PCGAddAttributeSettings
 // 0x01D8 (0x0280 - 0x00A8)
@@ -3564,6 +3510,45 @@ public:
 static_assert(alignof(UPCGCreateSurfaceFromSplineSettings) == 0x000008, "Wrong alignment on UPCGCreateSurfaceFromSplineSettings");
 static_assert(sizeof(UPCGCreateSurfaceFromSplineSettings) == 0x0000A8, "Wrong size on UPCGCreateSurfaceFromSplineSettings");
 
+// Class PCG.PCGCreateTargetActor
+// 0x00D8 (0x0180 - 0x00A8)
+class UPCGCreateTargetActor final : public UPCGSettings
+{
+public:
+	class AActor*                                 TemplateActor;                                     // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAttachOptions                             AttachOptions;                                     // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class AActor>                  RootActor;                                         // 0x00B8(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorLabel;                                        // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ActorPivot;                                        // 0x00F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPCGObjectPropertyOverrideDescription> PropertyOverrideDescriptions;                      // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           PostProcessFunctionNames;                          // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     TemplateActorClass;                                // 0x0170(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAllowTemplateActorEditing;                        // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGCreateTargetActor">();
+	}
+	static class UPCGCreateTargetActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGCreateTargetActor>();
+	}
+};
+static_assert(alignof(UPCGCreateTargetActor) == 0x000010, "Wrong alignment on UPCGCreateTargetActor");
+static_assert(sizeof(UPCGCreateTargetActor) == 0x000180, "Wrong size on UPCGCreateTargetActor");
+static_assert(offsetof(UPCGCreateTargetActor, TemplateActor) == 0x0000A8, "Member 'UPCGCreateTargetActor::TemplateActor' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, AttachOptions) == 0x0000B0, "Member 'UPCGCreateTargetActor::AttachOptions' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, RootActor) == 0x0000B8, "Member 'UPCGCreateTargetActor::RootActor' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, ActorLabel) == 0x0000E0, "Member 'UPCGCreateTargetActor::ActorLabel' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, ActorPivot) == 0x0000F0, "Member 'UPCGCreateTargetActor::ActorPivot' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, PropertyOverrideDescriptions) == 0x000150, "Member 'UPCGCreateTargetActor::PropertyOverrideDescriptions' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, PostProcessFunctionNames) == 0x000160, "Member 'UPCGCreateTargetActor::PostProcessFunctionNames' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, TemplateActorClass) == 0x000170, "Member 'UPCGCreateTargetActor::TemplateActorClass' has a wrong offset!");
+static_assert(offsetof(UPCGCreateTargetActor, bAllowTemplateActorEditing) == 0x000178, "Member 'UPCGCreateTargetActor::bAllowTemplateActorEditing' has a wrong offset!");
+
 // Class PCG.PCGDataFromActorSettings
 // 0x0050 (0x00F8 - 0x00A8)
 class UPCGDataFromActorSettings : public UPCGSettings
@@ -3654,6 +3639,27 @@ static_assert(offsetof(UPCGDataTableRowToParamDataSettings, RowName) == 0x0000A8
 static_assert(offsetof(UPCGDataTableRowToParamDataSettings, DataTable) == 0x0000B0, "Member 'UPCGDataTableRowToParamDataSettings::DataTable' has a wrong offset!");
 static_assert(offsetof(UPCGDataTableRowToParamDataSettings, bSynchronousLoad) == 0x0000D8, "Member 'UPCGDataTableRowToParamDataSettings::bSynchronousLoad' has a wrong offset!");
 
+// Class PCG.PCGDebugSettings
+// 0x0028 (0x00D0 - 0x00A8)
+class UPCGDebugSettings final : public UPCGSettings
+{
+public:
+	TSoftObjectPtr<class AActor>                  TargetActor;                                       // 0x00A8(0x0028)(BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGDebugSettings">();
+	}
+	static class UPCGDebugSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGDebugSettings>();
+	}
+};
+static_assert(alignof(UPCGDebugSettings) == 0x000008, "Wrong alignment on UPCGDebugSettings");
+static_assert(sizeof(UPCGDebugSettings) == 0x0000D0, "Wrong size on UPCGDebugSettings");
+static_assert(offsetof(UPCGDebugSettings, TargetActor) == 0x0000A8, "Member 'UPCGDebugSettings::TargetActor' has a wrong offset!");
+
 // Class PCG.PCGDensityFilterSettings
 // 0x0010 (0x00B8 - 0x00A8)
 class UPCGDensityFilterSettings final : public UPCGSettings
@@ -3705,36 +3711,6 @@ static_assert(sizeof(UPCGLinearDensityRemapSettings) == 0x0000B8, "Wrong size on
 static_assert(offsetof(UPCGLinearDensityRemapSettings, RemapMin) == 0x0000A8, "Member 'UPCGLinearDensityRemapSettings::RemapMin' has a wrong offset!");
 static_assert(offsetof(UPCGLinearDensityRemapSettings, RemapMax) == 0x0000AC, "Member 'UPCGLinearDensityRemapSettings::RemapMax' has a wrong offset!");
 static_assert(offsetof(UPCGLinearDensityRemapSettings, bMultiplyDensity) == 0x0000B0, "Member 'UPCGLinearDensityRemapSettings::bMultiplyDensity' has a wrong offset!");
-
-// Class PCG.PCGDensityRemapSettings
-// 0x0018 (0x00C0 - 0x00A8)
-class UPCGDensityRemapSettings final : public UPCGSettings
-{
-public:
-	float                                         InRangeMin;                                        // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InRangeMax;                                        // 0x00AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutRangeMin;                                       // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutRangeMax;                                       // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExcludeValuesOutsideInputRange;                   // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PCGDensityRemapSettings">();
-	}
-	static class UPCGDensityRemapSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPCGDensityRemapSettings>();
-	}
-};
-static_assert(alignof(UPCGDensityRemapSettings) == 0x000008, "Wrong alignment on UPCGDensityRemapSettings");
-static_assert(sizeof(UPCGDensityRemapSettings) == 0x0000C0, "Wrong size on UPCGDensityRemapSettings");
-static_assert(offsetof(UPCGDensityRemapSettings, InRangeMin) == 0x0000A8, "Member 'UPCGDensityRemapSettings::InRangeMin' has a wrong offset!");
-static_assert(offsetof(UPCGDensityRemapSettings, InRangeMax) == 0x0000AC, "Member 'UPCGDensityRemapSettings::InRangeMax' has a wrong offset!");
-static_assert(offsetof(UPCGDensityRemapSettings, OutRangeMin) == 0x0000B0, "Member 'UPCGDensityRemapSettings::OutRangeMin' has a wrong offset!");
-static_assert(offsetof(UPCGDensityRemapSettings, OutRangeMax) == 0x0000B4, "Member 'UPCGDensityRemapSettings::OutRangeMax' has a wrong offset!");
-static_assert(offsetof(UPCGDensityRemapSettings, bExcludeValuesOutsideInputRange) == 0x0000B8, "Member 'UPCGDensityRemapSettings::bExcludeValuesOutsideInputRange' has a wrong offset!");
 
 // Class PCG.PCGDifferenceSettings
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3877,6 +3853,30 @@ static_assert(alignof(UPCGFilterByIndexSettings) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UPCGFilterByIndexSettings) == 0x0000C0, "Wrong size on UPCGFilterByIndexSettings");
 static_assert(offsetof(UPCGFilterByIndexSettings, bInvertFilter) == 0x0000A8, "Member 'UPCGFilterByIndexSettings::bInvertFilter' has a wrong offset!");
 static_assert(offsetof(UPCGFilterByIndexSettings, SelectedIndices) == 0x0000B0, "Member 'UPCGFilterByIndexSettings::SelectedIndices' has a wrong offset!");
+
+// Class PCG.PCGFilterByTagSettings
+// 0x0018 (0x00C0 - 0x00A8)
+class UPCGFilterByTagSettings final : public UPCGFilterDataBaseSettings
+{
+public:
+	EPCGFilterByTagOperation                      Operation;                                         // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SelectedTags;                                      // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PCGFilterByTagSettings">();
+	}
+	static class UPCGFilterByTagSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPCGFilterByTagSettings>();
+	}
+};
+static_assert(alignof(UPCGFilterByTagSettings) == 0x000008, "Wrong alignment on UPCGFilterByTagSettings");
+static_assert(sizeof(UPCGFilterByTagSettings) == 0x0000C0, "Wrong size on UPCGFilterByTagSettings");
+static_assert(offsetof(UPCGFilterByTagSettings, Operation) == 0x0000A8, "Member 'UPCGFilterByTagSettings::Operation' has a wrong offset!");
+static_assert(offsetof(UPCGFilterByTagSettings, SelectedTags) == 0x0000B0, "Member 'UPCGFilterByTagSettings::SelectedTags' has a wrong offset!");
 
 // Class PCG.PCGFilterByTypeSettings
 // 0x0008 (0x00B0 - 0x00A8)

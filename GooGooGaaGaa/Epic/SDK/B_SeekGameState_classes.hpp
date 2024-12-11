@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SeekGameState.B_SeekGameState_C
-// 0x0020 (0x05C0 - 0x05A0)
+// 0x0018 (0x05D0 - 0x05B8)
 class AB_SeekGameState_C : public AB_GameState_C
 {
 public:
-	EGameState                                    State;                                             // 0x05A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A1[0x7];                                      // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnSeekStart;                                       // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         SeekTime;                                          // 0x05B8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameState                                    State;                                             // 0x05B1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B2[0x6];                                      // 0x05B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSeekStart;                                       // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         SeekTime;                                          // 0x05C8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnSeekStart__DelegateSignature();
@@ -46,10 +46,10 @@ public:
 	}
 };
 static_assert(alignof(AB_SeekGameState_C) == 0x000008, "Wrong alignment on AB_SeekGameState_C");
-static_assert(sizeof(AB_SeekGameState_C) == 0x0005C0, "Wrong size on AB_SeekGameState_C");
-static_assert(offsetof(AB_SeekGameState_C, State) == 0x0005A0, "Member 'AB_SeekGameState_C::State' has a wrong offset!");
-static_assert(offsetof(AB_SeekGameState_C, OnSeekStart) == 0x0005A8, "Member 'AB_SeekGameState_C::OnSeekStart' has a wrong offset!");
-static_assert(offsetof(AB_SeekGameState_C, SeekTime) == 0x0005B8, "Member 'AB_SeekGameState_C::SeekTime' has a wrong offset!");
+static_assert(sizeof(AB_SeekGameState_C) == 0x0005D0, "Wrong size on AB_SeekGameState_C");
+static_assert(offsetof(AB_SeekGameState_C, State) == 0x0005B1, "Member 'AB_SeekGameState_C::State' has a wrong offset!");
+static_assert(offsetof(AB_SeekGameState_C, OnSeekStart) == 0x0005B8, "Member 'AB_SeekGameState_C::OnSeekStart' has a wrong offset!");
+static_assert(offsetof(AB_SeekGameState_C, SeekTime) == 0x0005C8, "Member 'AB_SeekGameState_C::SeekTime' has a wrong offset!");
 
 }
 

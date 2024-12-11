@@ -31,6 +31,7 @@ public:
 public:
 	void Construct();
 	void ExecuteUbergraph_WB_DLC(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

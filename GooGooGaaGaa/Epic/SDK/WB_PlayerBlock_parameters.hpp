@@ -593,19 +593,57 @@ static_assert(offsetof(WB_PlayerBlock_C_Tick, MyGeometry) == 0x000000, "Member '
 static_assert(offsetof(WB_PlayerBlock_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_PlayerBlock_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_PlayerBlock.WB_PlayerBlock_C.ExecuteUbergraph_WB_PlayerBlock
-// 0x0040 (0x0040 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetProductUserId_ProductUserId;           // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetProductUserId_PlatformType;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniquePlayerId_ReturnValue;            // 0x0090(0x0030)(HasGetValueTypeHash)
+	class UUserOnlineAccountRef*                  CallFunc_GetUserAccount_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetPlatformLogo_PlatformLogo;             // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00F0(0x00D0)()
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x01C0(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock) == 0x000004, "Wrong alignment on WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock");
-static_assert(sizeof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock) == 0x000040, "Wrong size on WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock");
+static_assert(alignof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock) == 0x000010, "Wrong alignment on WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock");
+static_assert(sizeof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock) == 0x0001D0, "Wrong size on WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock");
 static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, EntryPoint) == 0x000000, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_Event_MyGeometry) == 0x000004, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_Ps4Platform_ReturnValue) == 0x000004, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_Event_MyGeometry) == 0x000008, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_Event_InDeltaTime) == 0x000040, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_IsValid_ReturnValue) == 0x000044, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetProductUserId_ProductUserId) == 0x000048, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetProductUserId_ProductUserId' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetProductUserId_PlatformType) == 0x000058, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetProductUserId_PlatformType' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_IsEmpty_ReturnValue) == 0x000068, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_MakeVector2D_ReturnValue) == 0x000070, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_Not_PreBool_ReturnValue) == 0x000080, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000088, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetUniquePlayerId_ReturnValue) == 0x000090, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetUserAccount_ReturnValue) == 0x0000C0, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetUserAccount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetUserAttribute_Found) == 0x0000C8, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetUserAttribute_ReturnValue) == 0x0000D0, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_GetPlatformLogo_PlatformLogo) == 0x0000E0, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_GetPlatformLogo_PlatformLogo' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, CallFunc_IsValid_ReturnValue_1) == 0x0000E8, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_MakeStruct_SlateBrush) == 0x0000F0, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x0001C0, "Member 'WB_PlayerBlock_C_ExecuteUbergraph_WB_PlayerBlock::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
 
 }
 

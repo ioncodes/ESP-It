@@ -17,30 +17,41 @@ namespace SDK::Params
 {
 
 // Function WB_ObjectiveTutorial.WB_ObjectiveTutorial_C.ExecuteUbergraph_WB_ObjectiveTutorial
-// 0x0020 (0x0020 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial) == 0x000008, "Wrong alignment on WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial");
-static_assert(sizeof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial) == 0x000020, "Wrong size on WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial");
+static_assert(sizeof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial) == 0x000048, "Wrong size on WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial");
 static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, EntryPoint) == 0x000000, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_byte_Variable) == 0x000004, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_byte_Variable_1) == 0x000005, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_bool_Variable) == 0x000006, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, CallFunc_Ps4Platform_ReturnValue) == 0x000004, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_Select_Default) == 0x000019, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_byte_Variable) == 0x000010, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, CallFunc_GetGameInstance_ReturnValue_1) == 0x000028, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_byte_Variable_1) == 0x000030, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000038, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, Temp_bool_Variable) == 0x000041, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial, K2Node_Select_Default) == 0x000042, "Member 'WB_ObjectiveTutorial_C_ExecuteUbergraph_WB_ObjectiveTutorial::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_ObjectiveTutorial.WB_ObjectiveTutorial_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)

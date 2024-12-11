@@ -193,6 +193,17 @@ enum class EPhysicalMaterialSoftCollisionMode : uint8
 	EPhysicalMaterialSoftCollisionMode_MAX   = 3,
 };
 
+// ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
+// 0x0004 (0x0004 - 0x0000)
+struct FPhysicalMaterialDamageModifier final
+{
+public:
+	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPhysicalMaterialDamageModifier) == 0x000004, "Wrong alignment on FPhysicalMaterialDamageModifier");
+static_assert(sizeof(FPhysicalMaterialDamageModifier) == 0x000004, "Wrong size on FPhysicalMaterialDamageModifier");
+static_assert(offsetof(FPhysicalMaterialDamageModifier, DamageThresholdMultiplier) == 0x000000, "Member 'FPhysicalMaterialDamageModifier::DamageThresholdMultiplier' has a wrong offset!");
+
 // ScriptStruct PhysicsCore.BodyInstanceCore
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FBodyInstanceCore
@@ -226,17 +237,6 @@ static_assert(sizeof(FPhysicalMaterialStrength) == 0x00000C, "Wrong size on FPhy
 static_assert(offsetof(FPhysicalMaterialStrength, TensileStrength) == 0x000000, "Member 'FPhysicalMaterialStrength::TensileStrength' has a wrong offset!");
 static_assert(offsetof(FPhysicalMaterialStrength, CompressionStrength) == 0x000004, "Member 'FPhysicalMaterialStrength::CompressionStrength' has a wrong offset!");
 static_assert(offsetof(FPhysicalMaterialStrength, ShearStrength) == 0x000008, "Member 'FPhysicalMaterialStrength::ShearStrength' has a wrong offset!");
-
-// ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
-// 0x0004 (0x0004 - 0x0000)
-struct FPhysicalMaterialDamageModifier final
-{
-public:
-	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPhysicalMaterialDamageModifier) == 0x000004, "Wrong alignment on FPhysicalMaterialDamageModifier");
-static_assert(sizeof(FPhysicalMaterialDamageModifier) == 0x000004, "Wrong size on FPhysicalMaterialDamageModifier");
-static_assert(offsetof(FPhysicalMaterialDamageModifier, DamageThresholdMultiplier) == 0x000000, "Member 'FPhysicalMaterialDamageModifier::DamageThresholdMultiplier' has a wrong offset!");
 
 }
 

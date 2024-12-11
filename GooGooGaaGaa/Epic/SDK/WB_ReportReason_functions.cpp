@@ -118,5 +118,88 @@ bool UWB_ReportReason_C::Get_ReportPlayer_bIsEnabled_0()
 	return Parms.ReturnValue;
 }
 
+
+// Function WB_ReportReason.WB_ReportReason_C.GetControllerIconVisibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_ReportReason_C::GetControllerIconVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ReportReason_C", "GetControllerIconVisibility");
+
+	Params::WB_ReportReason_C_GetControllerIconVisibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_ReportReason.WB_ReportReason_C.GetInitialFocusWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InitialFocusWidget                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ReportReason_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ReportReason_C", "GetInitialFocusWidget");
+
+	Params::WB_ReportReason_C_GetInitialFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialFocusWidget != nullptr)
+		*InitialFocusWidget = Parms.InitialFocusWidget;
+}
+
+
+// Function WB_ReportReason.WB_ReportReason_C.OnApply
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ReportReason_C::OnApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ReportReason_C", "OnApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ReportReason.WB_ReportReason_C.OnBack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ReportReason_C::OnBack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ReportReason_C", "OnBack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ReportReason.WB_ReportReason_C.OnSpecialAction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ReportReason_C::OnSpecialAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ReportReason_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

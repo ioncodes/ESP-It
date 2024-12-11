@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "EChatType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "EChatType_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
@@ -76,7 +76,7 @@ static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_AddChild_ReturnValue) 
 static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Array_Add_ReturnValue) == 0x0000B8, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.AddPlayerChatMessage
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WB_Chat_C_AddPlayerChatMessage final
 {
 public:
@@ -99,25 +99,30 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetChatEnabled_ChatEnabled;               // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerBlocked_IsBlocked;                // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B6[0x2];                                       // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C8(0x0010)()
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x00B4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C7[0x1];                                       // 0x00C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00D8(0x0010)()
 };
 static_assert(alignof(WB_Chat_C_AddPlayerChatMessage) == 0x000008, "Wrong alignment on WB_Chat_C_AddPlayerChatMessage");
-static_assert(sizeof(WB_Chat_C_AddPlayerChatMessage) == 0x0000D8, "Wrong size on WB_Chat_C_AddPlayerChatMessage");
+static_assert(sizeof(WB_Chat_C_AddPlayerChatMessage) == 0x0000E8, "Wrong size on WB_Chat_C_AddPlayerChatMessage");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, PlayerState) == 0x000000, "Member 'WB_Chat_C_AddPlayerChatMessage::PlayerState' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, ChatMessage) == 0x000008, "Member 'WB_Chat_C_AddPlayerChatMessage::ChatMessage' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, ChatType) == 0x000018, "Member 'WB_Chat_C_AddPlayerChatMessage::ChatType' has a wrong offset!");
@@ -132,18 +137,23 @@ static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000068, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetChatEnabled_ChatEnabled) == 0x000071, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetChatEnabled_ChatEnabled' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameState_ReturnValue) == 0x000078, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x000080, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000088, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_3) == 0x000090, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x000098, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue_3) == 0x000078, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000080, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_3) == 0x000088, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_IsPlayerBlocked_IsBlocked) == 0x000089, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_IsPlayerBlocked_IsBlocked' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Not_PreBool_ReturnValue) == 0x00008A, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x00008B, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameState_ReturnValue) == 0x000090, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000098, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_4) == 0x0000A0, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_IsPlayerMuted_IsMuted) == 0x0000A1, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x0000A4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Not_PreBool_ReturnValue) == 0x0000B4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_BooleanAND_ReturnValue) == 0x0000B5, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetPlayerOrBotName_Name) == 0x0000B8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x0000C8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x0000A8, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_5) == 0x0000B0, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x0000B4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_IsPlayerMuted_IsMuted) == 0x0000C4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000C5, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_BooleanAND_ReturnValue) == 0x0000C6, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetPlayerOrBotName_Name) == 0x0000C8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x0000D8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)

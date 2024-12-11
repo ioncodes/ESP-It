@@ -17,6 +17,79 @@
 namespace SDK::Params
 {
 
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerBlocked
+// 0x0028 (0x0028 - 0x0000)
+struct BFL_ChatAndVoice_C_IsPlayerBlocked final
+{
+public:
+	class UB_GameInstance_C*                      BGameInstance;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 PlayerToCheck;                                     // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBlocked;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerBlocked_IsBlocked;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerBlocked_IsBlocked_1;              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BFL_ChatAndVoice_C_IsPlayerBlocked) == 0x000008, "Wrong alignment on BFL_ChatAndVoice_C_IsPlayerBlocked");
+static_assert(sizeof(BFL_ChatAndVoice_C_IsPlayerBlocked) == 0x000028, "Wrong size on BFL_ChatAndVoice_C_IsPlayerBlocked");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, BGameInstance) == 0x000000, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::BGameInstance' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, PlayerToCheck) == 0x000008, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::PlayerToCheck' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, __WorldContext) == 0x000018, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, IsBlocked) == 0x000020, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::IsBlocked' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, CallFunc_IsPlayerBlocked_IsBlocked) == 0x000021, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::CallFunc_IsPlayerBlocked_IsBlocked' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlocked, CallFunc_IsPlayerBlocked_IsBlocked_1) == 0x000022, "Member 'BFL_ChatAndVoice_C_IsPlayerBlocked::CallFunc_IsPlayerBlocked_IsBlocked_1' has a wrong offset!");
+
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerBlockedWrapper
+// 0x0068 (0x0068 - 0x0000)
+struct BFL_ChatAndVoice_C_IsPlayerBlockedWrapper final
+{
+public:
+	class APlayerState*                           MyPlayerState;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           OtherPlayerState;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0020(0x0020)()
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1; // 0x0040(0x0020)()
+	bool                                          CallFunc_IsPlayerBlocked_ReturnValue;              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper) == 0x000008, "Wrong alignment on BFL_ChatAndVoice_C_IsPlayerBlockedWrapper");
+static_assert(sizeof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper) == 0x000068, "Wrong size on BFL_ChatAndVoice_C_IsPlayerBlockedWrapper");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, MyPlayerState) == 0x000000, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::MyPlayerState' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, OtherPlayerState) == 0x000008, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::OtherPlayerState' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, __WorldContext) == 0x000010, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, ReturnValue) == 0x000018, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000020, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1) == 0x000040, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_IsPlayerBlocked_ReturnValue) == 0x000060, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_IsPlayerBlocked_ReturnValue' has a wrong offset!");
+
+// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerMutedManually
+// 0x0030 (0x0030 - 0x0000)
+struct BFL_ChatAndVoice_C_IsPlayerMutedManually final
+{
+public:
+	class APlayerState*                           Player_State;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_SaveGameManager_C*                   SaveGameManager;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BFL_ChatAndVoice_C_IsPlayerMutedManually) == 0x000008, "Wrong alignment on BFL_ChatAndVoice_C_IsPlayerMutedManually");
+static_assert(sizeof(BFL_ChatAndVoice_C_IsPlayerMutedManually) == 0x000030, "Wrong size on BFL_ChatAndVoice_C_IsPlayerMutedManually");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, Player_State) == 0x000000, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::Player_State' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, SaveGameManager) == 0x000008, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::SaveGameManager' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, __WorldContext) == 0x000010, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, ReturnValue) == 0x000018, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, K2Node_DynamicCast_AsB_Player_State) == 0x000020, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsPlayerMuted_IsMuted) == 0x00002A, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
+static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsValid_ReturnValue_1) == 0x00002B, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+
 // Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.ArePlayersInSameObjectiveTeam
 // 0x0040 (0x0040 - 0x0000)
 struct BFL_ChatAndVoice_C_ArePlayersInSameObjectiveTeam final
@@ -100,58 +173,6 @@ static_assert(offsetof(BFL_ChatAndVoice_C_ArePlayersInSameTeam, Temp_bool_Variab
 static_assert(offsetof(BFL_ChatAndVoice_C_ArePlayersInSameTeam, Temp_byte_Variable_1) == 0x000041, "Member 'BFL_ChatAndVoice_C_ArePlayersInSameTeam::Temp_byte_Variable_1' has a wrong offset!");
 static_assert(offsetof(BFL_ChatAndVoice_C_ArePlayersInSameTeam, K2Node_Select_Default) == 0x000042, "Member 'BFL_ChatAndVoice_C_ArePlayersInSameTeam::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(BFL_ChatAndVoice_C_ArePlayersInSameTeam, K2Node_Select_Default_1) == 0x000043, "Member 'BFL_ChatAndVoice_C_ArePlayersInSameTeam::K2Node_Select_Default_1' has a wrong offset!");
-
-// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerBlockedWrapper
-// 0x0068 (0x0068 - 0x0000)
-struct BFL_ChatAndVoice_C_IsPlayerBlockedWrapper final
-{
-public:
-	class APlayerState*                           MyPlayerState;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           OtherPlayerState;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0020(0x0020)()
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1; // 0x0040(0x0020)()
-	bool                                          CallFunc_IsPlayerBlocked_ReturnValue;              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper) == 0x000008, "Wrong alignment on BFL_ChatAndVoice_C_IsPlayerBlockedWrapper");
-static_assert(sizeof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper) == 0x000068, "Wrong size on BFL_ChatAndVoice_C_IsPlayerBlockedWrapper");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, MyPlayerState) == 0x000000, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::MyPlayerState' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, OtherPlayerState) == 0x000008, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::OtherPlayerState' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, __WorldContext) == 0x000010, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, ReturnValue) == 0x000018, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000020, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1) == 0x000040, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId_1' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerBlockedWrapper, CallFunc_IsPlayerBlocked_ReturnValue) == 0x000060, "Member 'BFL_ChatAndVoice_C_IsPlayerBlockedWrapper::CallFunc_IsPlayerBlocked_ReturnValue' has a wrong offset!");
-
-// Function BFL_ChatAndVoice.BFL_ChatAndVoice_C.IsPlayerMutedManually
-// 0x0030 (0x0030 - 0x0000)
-struct BFL_ChatAndVoice_C_IsPlayerMutedManually final
-{
-public:
-	class APlayerState*                           Player_State;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_SaveGameManager_C*                   SaveGameManager;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BFL_ChatAndVoice_C_IsPlayerMutedManually) == 0x000008, "Wrong alignment on BFL_ChatAndVoice_C_IsPlayerMutedManually");
-static_assert(sizeof(BFL_ChatAndVoice_C_IsPlayerMutedManually) == 0x000030, "Wrong size on BFL_ChatAndVoice_C_IsPlayerMutedManually");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, Player_State) == 0x000000, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::Player_State' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, SaveGameManager) == 0x000008, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::SaveGameManager' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, __WorldContext) == 0x000010, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, ReturnValue) == 0x000018, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, K2Node_DynamicCast_AsB_Player_State) == 0x000020, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsPlayerMuted_IsMuted) == 0x00002A, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
-static_assert(offsetof(BFL_ChatAndVoice_C_IsPlayerMutedManually, CallFunc_IsValid_ReturnValue_1) == 0x00002B, "Member 'BFL_ChatAndVoice_C_IsPlayerMutedManually::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 }
 

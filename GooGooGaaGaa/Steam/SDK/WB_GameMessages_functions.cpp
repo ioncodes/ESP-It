@@ -133,45 +133,41 @@ void UWB_GameMessages_C::InternalAddGameMessage(const class FText& SourcePlayerN
 }
 
 
-// Function WB_GameMessages.WB_GameMessages_C.OnCallFailed_22122CDE4C9301009E76EEB1F17098EF
+// Function WB_GameMessages.WB_GameMessages_C.OnFailure_5E4EF2C84265486E4D90B7B040122A50
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_GameMessages_C::OnCallFailed_22122CDE4C9301009E76EEB1F17098EF(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+void UWB_GameMessages_C::OnFailure_5E4EF2C84265486E4D90B7B040122A50(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_GameMessages_C", "OnCallFailed_22122CDE4C9301009E76EEB1F17098EF");
+		Func = Class->GetFunction("WB_GameMessages_C", "OnFailure_5E4EF2C84265486E4D90B7B040122A50");
 
-	Params::WB_GameMessages_C_OnCallFailed_22122CDE4C9301009E76EEB1F17098EF Parms{};
+	Params::WB_GameMessages_C_OnFailure_5E4EF2C84265486E4D90B7B040122A50 Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessages = std::move(SanitizedMessages);
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WB_GameMessages.WB_GameMessages_C.OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF
+// Function WB_GameMessages.WB_GameMessages_C.OnSuccess_5E4EF2C84265486E4D90B7B040122A50
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_GameMessages_C::OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+void UWB_GameMessages_C::OnSuccess_5E4EF2C84265486E4D90B7B040122A50(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_GameMessages_C", "OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF");
+		Func = Class->GetFunction("WB_GameMessages_C", "OnSuccess_5E4EF2C84265486E4D90B7B040122A50");
 
-	Params::WB_GameMessages_C_OnMessageArrayProcessed_22122CDE4C9301009E76EEB1F17098EF Parms{};
+	Params::WB_GameMessages_C_OnSuccess_5E4EF2C84265486E4D90B7B040122A50 Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.SanitizedMessages = std::move(SanitizedMessages);
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

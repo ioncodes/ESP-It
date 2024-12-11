@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "LowEntryExtendedStandardLibrary_structs.hpp"
 #include "B_Dummy_classes.hpp"
+#include "LowEntryExtendedStandardLibrary_structs.hpp"
 
 
 namespace SDK

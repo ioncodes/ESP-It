@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -337,6 +337,57 @@ static_assert(sizeof(FAudioTextBoxStyle) == 0x000100, "Wrong size on FAudioTextB
 static_assert(offsetof(FAudioTextBoxStyle, BackgroundImage) == 0x000010, "Member 'FAudioTextBoxStyle::BackgroundImage' has a wrong offset!");
 static_assert(offsetof(FAudioTextBoxStyle, BackgroundColor) == 0x0000E0, "Member 'FAudioTextBoxStyle::BackgroundColor' has a wrong offset!");
 
+// ScriptStruct AudioWidgets.AudioSliderStyle
+// 0x0748 (0x0750 - 0x0008)
+struct FAudioSliderStyle final : public FSlateWidgetStyle
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSliderStyle                           SliderStyle;                                       // 0x0010(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0510(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            WidgetBackgroundImage;                             // 0x0610(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderBackgroundColor;                             // 0x06E0(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6F4[0x4];                                      // 0x06F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SliderBackgroundSize;                              // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LabelPadding;                                      // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderBarColor;                                    // 0x070C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderThumbColor;                                  // 0x0720(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            WidgetBackgroundColor;                             // 0x0734(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_748[0x8];                                      // 0x0748(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAudioSliderStyle) == 0x000010, "Wrong alignment on FAudioSliderStyle");
+static_assert(sizeof(FAudioSliderStyle) == 0x000750, "Wrong size on FAudioSliderStyle");
+static_assert(offsetof(FAudioSliderStyle, SliderStyle) == 0x000010, "Member 'FAudioSliderStyle::SliderStyle' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, TextBoxStyle) == 0x000510, "Member 'FAudioSliderStyle::TextBoxStyle' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, WidgetBackgroundImage) == 0x000610, "Member 'FAudioSliderStyle::WidgetBackgroundImage' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, SliderBackgroundColor) == 0x0006E0, "Member 'FAudioSliderStyle::SliderBackgroundColor' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, SliderBackgroundSize) == 0x0006F8, "Member 'FAudioSliderStyle::SliderBackgroundSize' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, LabelPadding) == 0x000708, "Member 'FAudioSliderStyle::LabelPadding' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, SliderBarColor) == 0x00070C, "Member 'FAudioSliderStyle::SliderBarColor' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, SliderThumbColor) == 0x000720, "Member 'FAudioSliderStyle::SliderThumbColor' has a wrong offset!");
+static_assert(offsetof(FAudioSliderStyle, WidgetBackgroundColor) == 0x000734, "Member 'FAudioSliderStyle::WidgetBackgroundColor' has a wrong offset!");
+
+// ScriptStruct AudioWidgets.AudioSpectrumPlotStyle
+// 0x00B8 (0x00C0 - 0x0008)
+struct FAudioSpectrumPlotStyle final : public FSlateWidgetStyle
+{
+public:
+	struct FSlateColor                            BackgroundColor;                                   // 0x0008(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            GridColor;                                         // 0x001C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            AxisLabelColor;                                    // 0x0030(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         AxisLabelFont;                                     // 0x0048(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SpectrumColor;                                     // 0x00A8(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAudioSpectrumPlotStyle) == 0x000008, "Wrong alignment on FAudioSpectrumPlotStyle");
+static_assert(sizeof(FAudioSpectrumPlotStyle) == 0x0000C0, "Wrong size on FAudioSpectrumPlotStyle");
+static_assert(offsetof(FAudioSpectrumPlotStyle, BackgroundColor) == 0x000008, "Member 'FAudioSpectrumPlotStyle::BackgroundColor' has a wrong offset!");
+static_assert(offsetof(FAudioSpectrumPlotStyle, GridColor) == 0x00001C, "Member 'FAudioSpectrumPlotStyle::GridColor' has a wrong offset!");
+static_assert(offsetof(FAudioSpectrumPlotStyle, AxisLabelColor) == 0x000030, "Member 'FAudioSpectrumPlotStyle::AxisLabelColor' has a wrong offset!");
+static_assert(offsetof(FAudioSpectrumPlotStyle, AxisLabelFont) == 0x000048, "Member 'FAudioSpectrumPlotStyle::AxisLabelFont' has a wrong offset!");
+static_assert(offsetof(FAudioSpectrumPlotStyle, SpectrumColor) == 0x0000A8, "Member 'FAudioSpectrumPlotStyle::SpectrumColor' has a wrong offset!");
+
 // ScriptStruct AudioWidgets.AudioRadialSliderStyle
 // 0x0158 (0x0160 - 0x0008)
 struct FAudioRadialSliderStyle final : public FSlateWidgetStyle
@@ -376,57 +427,6 @@ static_assert(offsetof(FPlayheadOverlayStyle, PlayheadColor) == 0x000008, "Membe
 static_assert(offsetof(FPlayheadOverlayStyle, PlayheadWidth) == 0x00001C, "Member 'FPlayheadOverlayStyle::PlayheadWidth' has a wrong offset!");
 static_assert(offsetof(FPlayheadOverlayStyle, DesiredWidth) == 0x000020, "Member 'FPlayheadOverlayStyle::DesiredWidth' has a wrong offset!");
 static_assert(offsetof(FPlayheadOverlayStyle, DesiredHeight) == 0x000024, "Member 'FPlayheadOverlayStyle::DesiredHeight' has a wrong offset!");
-
-// ScriptStruct AudioWidgets.AudioSpectrumPlotStyle
-// 0x00B8 (0x00C0 - 0x0008)
-struct FAudioSpectrumPlotStyle final : public FSlateWidgetStyle
-{
-public:
-	struct FSlateColor                            BackgroundColor;                                   // 0x0008(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            GridColor;                                         // 0x001C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            AxisLabelColor;                                    // 0x0030(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         AxisLabelFont;                                     // 0x0048(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SpectrumColor;                                     // 0x00A8(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAudioSpectrumPlotStyle) == 0x000008, "Wrong alignment on FAudioSpectrumPlotStyle");
-static_assert(sizeof(FAudioSpectrumPlotStyle) == 0x0000C0, "Wrong size on FAudioSpectrumPlotStyle");
-static_assert(offsetof(FAudioSpectrumPlotStyle, BackgroundColor) == 0x000008, "Member 'FAudioSpectrumPlotStyle::BackgroundColor' has a wrong offset!");
-static_assert(offsetof(FAudioSpectrumPlotStyle, GridColor) == 0x00001C, "Member 'FAudioSpectrumPlotStyle::GridColor' has a wrong offset!");
-static_assert(offsetof(FAudioSpectrumPlotStyle, AxisLabelColor) == 0x000030, "Member 'FAudioSpectrumPlotStyle::AxisLabelColor' has a wrong offset!");
-static_assert(offsetof(FAudioSpectrumPlotStyle, AxisLabelFont) == 0x000048, "Member 'FAudioSpectrumPlotStyle::AxisLabelFont' has a wrong offset!");
-static_assert(offsetof(FAudioSpectrumPlotStyle, SpectrumColor) == 0x0000A8, "Member 'FAudioSpectrumPlotStyle::SpectrumColor' has a wrong offset!");
-
-// ScriptStruct AudioWidgets.AudioSliderStyle
-// 0x0748 (0x0750 - 0x0008)
-struct FAudioSliderStyle final : public FSlateWidgetStyle
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSliderStyle                           SliderStyle;                                       // 0x0010(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0510(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            WidgetBackgroundImage;                             // 0x0610(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderBackgroundColor;                             // 0x06E0(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6F4[0x4];                                      // 0x06F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SliderBackgroundSize;                              // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LabelPadding;                                      // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderBarColor;                                    // 0x070C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderThumbColor;                                  // 0x0720(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            WidgetBackgroundColor;                             // 0x0734(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_748[0x8];                                      // 0x0748(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAudioSliderStyle) == 0x000010, "Wrong alignment on FAudioSliderStyle");
-static_assert(sizeof(FAudioSliderStyle) == 0x000750, "Wrong size on FAudioSliderStyle");
-static_assert(offsetof(FAudioSliderStyle, SliderStyle) == 0x000010, "Member 'FAudioSliderStyle::SliderStyle' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, TextBoxStyle) == 0x000510, "Member 'FAudioSliderStyle::TextBoxStyle' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, WidgetBackgroundImage) == 0x000610, "Member 'FAudioSliderStyle::WidgetBackgroundImage' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, SliderBackgroundColor) == 0x0006E0, "Member 'FAudioSliderStyle::SliderBackgroundColor' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, SliderBackgroundSize) == 0x0006F8, "Member 'FAudioSliderStyle::SliderBackgroundSize' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, LabelPadding) == 0x000708, "Member 'FAudioSliderStyle::LabelPadding' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, SliderBarColor) == 0x00070C, "Member 'FAudioSliderStyle::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, SliderThumbColor) == 0x000720, "Member 'FAudioSliderStyle::SliderThumbColor' has a wrong offset!");
-static_assert(offsetof(FAudioSliderStyle, WidgetBackgroundColor) == 0x000734, "Member 'FAudioSliderStyle::WidgetBackgroundColor' has a wrong offset!");
 
 }
 

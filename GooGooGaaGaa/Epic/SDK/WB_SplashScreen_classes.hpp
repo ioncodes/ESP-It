@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SplashScreen.WB_SplashScreen_C
-// 0x0040 (0x0320 - 0x02E0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_SplashScreen_C final : public UUserWidget
 {
 public:
@@ -26,11 +27,13 @@ public:
 	class UCircularThrobber*                      CircularThrobber_1;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_0;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 KeyArt;                                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Text_C*                             WB_Text;                                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_VersionNumber_C*                    WB_VersionNumber;                                  // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ViewportSizeSet;                                   // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AllowLoginReattempt;                               // 0x0319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           TextBox;                                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   WB_ControllerIcon;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Text_C*                             WB_Text;                                           // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_VersionNumber_C*                    WB_VersionNumber;                                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ViewportSizeSet;                                   // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AllowLoginReattempt;                               // 0x0329(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -42,9 +45,12 @@ public:
 	void OnBack();
 	void OnBackendLoginFailed_Event();
 	void OnEOSLoginStarted_Event();
+	void OnPremiumStatusFailed_Event();
 	void OnSpecialAction();
+	void SetControllerIconVisibility();
 	void SetCorrectMediaResolution();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ToggleAllActors(bool ShowActors);
 
 public:
 	static class UClass* StaticClass()
@@ -57,16 +63,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_SplashScreen_C) == 0x000008, "Wrong alignment on UWB_SplashScreen_C");
-static_assert(sizeof(UWB_SplashScreen_C) == 0x000320, "Wrong size on UWB_SplashScreen_C");
+static_assert(sizeof(UWB_SplashScreen_C) == 0x000330, "Wrong size on UWB_SplashScreen_C");
 static_assert(offsetof(UWB_SplashScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SplashScreen_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWB_SplashScreen_C, CircularThrobber_1) == 0x0002E8, "Member 'UWB_SplashScreen_C::CircularThrobber_1' has a wrong offset!");
 static_assert(offsetof(UWB_SplashScreen_C, Image_0) == 0x0002F0, "Member 'UWB_SplashScreen_C::Image_0' has a wrong offset!");
 static_assert(offsetof(UWB_SplashScreen_C, KeyArt) == 0x0002F8, "Member 'UWB_SplashScreen_C::KeyArt' has a wrong offset!");
-static_assert(offsetof(UWB_SplashScreen_C, WB_Text) == 0x000300, "Member 'UWB_SplashScreen_C::WB_Text' has a wrong offset!");
-static_assert(offsetof(UWB_SplashScreen_C, WB_VersionNumber) == 0x000308, "Member 'UWB_SplashScreen_C::WB_VersionNumber' has a wrong offset!");
-static_assert(offsetof(UWB_SplashScreen_C, MediaPlayer) == 0x000310, "Member 'UWB_SplashScreen_C::MediaPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_SplashScreen_C, ViewportSizeSet) == 0x000318, "Member 'UWB_SplashScreen_C::ViewportSizeSet' has a wrong offset!");
-static_assert(offsetof(UWB_SplashScreen_C, AllowLoginReattempt) == 0x000319, "Member 'UWB_SplashScreen_C::AllowLoginReattempt' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, TextBox) == 0x000300, "Member 'UWB_SplashScreen_C::TextBox' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, WB_ControllerIcon) == 0x000308, "Member 'UWB_SplashScreen_C::WB_ControllerIcon' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, WB_Text) == 0x000310, "Member 'UWB_SplashScreen_C::WB_Text' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, WB_VersionNumber) == 0x000318, "Member 'UWB_SplashScreen_C::WB_VersionNumber' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, MediaPlayer) == 0x000320, "Member 'UWB_SplashScreen_C::MediaPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, ViewportSizeSet) == 0x000328, "Member 'UWB_SplashScreen_C::ViewportSizeSet' has a wrong offset!");
+static_assert(offsetof(UWB_SplashScreen_C, AllowLoginReattempt) == 0x000329, "Member 'UWB_SplashScreen_C::AllowLoginReattempt' has a wrong offset!");
 
 }
 

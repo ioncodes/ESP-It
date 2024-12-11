@@ -689,6 +689,20 @@ enum class EGeometryScriptPixelSamplingMethod : uint8
 	EGeometryScriptPixelSamplingMethod_MAX   = 2,
 };
 
+// ScriptStruct GeometryScriptingCore.GeometryScriptMeshReadLOD
+// 0x0008 (0x0008 - 0x0000)
+struct FGeometryScriptMeshReadLOD final
+{
+public:
+	EGeometryScriptLODType                        LODType;                                           // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LODIndex;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptMeshReadLOD) == 0x000004, "Wrong alignment on FGeometryScriptMeshReadLOD");
+static_assert(sizeof(FGeometryScriptMeshReadLOD) == 0x000008, "Wrong size on FGeometryScriptMeshReadLOD");
+static_assert(offsetof(FGeometryScriptMeshReadLOD, LODType) == 0x000000, "Member 'FGeometryScriptMeshReadLOD::LODType' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshReadLOD, LODIndex) == 0x000004, "Member 'FGeometryScriptMeshReadLOD::LODIndex' has a wrong offset!");
+
 // ScriptStruct GeometryScriptingCore.GeometryScript3DGridParameters
 // 0x000C (0x000C - 0x0000)
 struct FGeometryScript3DGridParameters final
@@ -705,44 +719,26 @@ static_assert(offsetof(FGeometryScript3DGridParameters, SizeMethod) == 0x000000,
 static_assert(offsetof(FGeometryScript3DGridParameters, GridCellSize) == 0x000004, "Member 'FGeometryScript3DGridParameters::GridCellSize' has a wrong offset!");
 static_assert(offsetof(FGeometryScript3DGridParameters, GridResolution) == 0x000008, "Member 'FGeometryScript3DGridParameters::GridResolution' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptSolidifyOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FGeometryScriptSolidifyOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptMorphologyOptions
+// 0x0024 (0x0024 - 0x0000)
+struct FGeometryScriptMorphologyOptions final
 {
 public:
-	struct FGeometryScript3DGridParameters        GridParameters;                                    // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         WindingThreshold;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSolidAtBoundaries;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ExtendBounds;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SurfaceSearchSteps;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bThickenShells;                                    // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScript3DGridParameters        SDFGridParameters;                                 // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseSeparateMeshGrid;                              // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScript3DGridParameters        MeshGridParameters;                                // 0x0010(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptMorphologicalOpType            Operation;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ShellThickness;                                    // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Distance;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptSolidifyOptions) == 0x000008, "Wrong alignment on FGeometryScriptSolidifyOptions");
-static_assert(sizeof(FGeometryScriptSolidifyOptions) == 0x000028, "Wrong size on FGeometryScriptSolidifyOptions");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, GridParameters) == 0x000000, "Member 'FGeometryScriptSolidifyOptions::GridParameters' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, WindingThreshold) == 0x00000C, "Member 'FGeometryScriptSolidifyOptions::WindingThreshold' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, bSolidAtBoundaries) == 0x000010, "Member 'FGeometryScriptSolidifyOptions::bSolidAtBoundaries' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, ExtendBounds) == 0x000014, "Member 'FGeometryScriptSolidifyOptions::ExtendBounds' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, SurfaceSearchSteps) == 0x000018, "Member 'FGeometryScriptSolidifyOptions::SurfaceSearchSteps' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, bThickenShells) == 0x00001C, "Member 'FGeometryScriptSolidifyOptions::bThickenShells' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSolidifyOptions, ShellThickness) == 0x000020, "Member 'FGeometryScriptSolidifyOptions::ShellThickness' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptMeshReadLOD
-// 0x0008 (0x0008 - 0x0000)
-struct FGeometryScriptMeshReadLOD final
-{
-public:
-	EGeometryScriptLODType                        LODType;                                           // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LODIndex;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptMeshReadLOD) == 0x000004, "Wrong alignment on FGeometryScriptMeshReadLOD");
-static_assert(sizeof(FGeometryScriptMeshReadLOD) == 0x000008, "Wrong size on FGeometryScriptMeshReadLOD");
-static_assert(offsetof(FGeometryScriptMeshReadLOD, LODType) == 0x000000, "Member 'FGeometryScriptMeshReadLOD::LODType' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshReadLOD, LODIndex) == 0x000004, "Member 'FGeometryScriptMeshReadLOD::LODIndex' has a wrong offset!");
+static_assert(alignof(FGeometryScriptMorphologyOptions) == 0x000004, "Wrong alignment on FGeometryScriptMorphologyOptions");
+static_assert(sizeof(FGeometryScriptMorphologyOptions) == 0x000024, "Wrong size on FGeometryScriptMorphologyOptions");
+static_assert(offsetof(FGeometryScriptMorphologyOptions, SDFGridParameters) == 0x000000, "Member 'FGeometryScriptMorphologyOptions::SDFGridParameters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMorphologyOptions, bUseSeparateMeshGrid) == 0x00000C, "Member 'FGeometryScriptMorphologyOptions::bUseSeparateMeshGrid' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMorphologyOptions, MeshGridParameters) == 0x000010, "Member 'FGeometryScriptMorphologyOptions::MeshGridParameters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMorphologyOptions, Operation) == 0x00001C, "Member 'FGeometryScriptMorphologyOptions::Operation' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMorphologyOptions, Distance) == 0x000020, "Member 'FGeometryScriptMorphologyOptions::Distance' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshWriteLOD
 // 0x0008 (0x0008 - 0x0000)
@@ -845,24 +841,6 @@ static_assert(offsetof(FGeometryScriptUVTriangle, UV0) == 0x000000, "Member 'FGe
 static_assert(offsetof(FGeometryScriptUVTriangle, UV1) == 0x000010, "Member 'FGeometryScriptUVTriangle::UV1' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptUVTriangle, UV2) == 0x000020, "Member 'FGeometryScriptUVTriangle::UV2' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptCopyMeshFromComponentOptions
-// 0x000C (0x000C - 0x0000)
-struct FGeometryScriptCopyMeshFromComponentOptions final
-{
-public:
-	bool                                          bWantNormals;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWantTangents;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWantInstanceColors;                               // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptMeshReadLOD             RequestedLOD;                                      // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptCopyMeshFromComponentOptions) == 0x000004, "Wrong alignment on FGeometryScriptCopyMeshFromComponentOptions");
-static_assert(sizeof(FGeometryScriptCopyMeshFromComponentOptions) == 0x00000C, "Wrong size on FGeometryScriptCopyMeshFromComponentOptions");
-static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantNormals) == 0x000000, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantNormals' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantTangents) == 0x000001, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantTangents' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantInstanceColors) == 0x000002, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantInstanceColors' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, RequestedLOD) == 0x000004, "Member 'FGeometryScriptCopyMeshFromComponentOptions::RequestedLOD' has a wrong offset!");
-
 // ScriptStruct GeometryScriptingCore.GeometryScriptColorFlags
 // 0x0004 (0x0004 - 0x0000)
 struct FGeometryScriptColorFlags final
@@ -879,6 +857,22 @@ static_assert(offsetof(FGeometryScriptColorFlags, bRed) == 0x000000, "Member 'FG
 static_assert(offsetof(FGeometryScriptColorFlags, bGreen) == 0x000001, "Member 'FGeometryScriptColorFlags::bGreen' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptColorFlags, bBlue) == 0x000002, "Member 'FGeometryScriptColorFlags::bBlue' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptColorFlags, bAlpha) == 0x000003, "Member 'FGeometryScriptColorFlags::bAlpha' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptDetermineMeshOcclusionOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryScriptDetermineMeshOcclusionOptions final
+{
+public:
+	double                                        SamplingDensity;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoubleSided;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumSearchDirections;                               // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000008, "Wrong alignment on FGeometryScriptDetermineMeshOcclusionOptions");
+static_assert(sizeof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000010, "Wrong size on FGeometryScriptDetermineMeshOcclusionOptions");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, SamplingDensity) == 0x000000, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::SamplingDensity' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, bDoubleSided) == 0x000008, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::bDoubleSided' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, NumSearchDirections) == 0x00000C, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::NumSearchDirections' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptGroupLayer
 // 0x0008 (0x0008 - 0x0000)
@@ -905,6 +899,24 @@ public:
 static_assert(alignof(FGeometryScriptIndexList) == 0x000008, "Wrong alignment on FGeometryScriptIndexList");
 static_assert(sizeof(FGeometryScriptIndexList) == 0x000018, "Wrong size on FGeometryScriptIndexList");
 static_assert(offsetof(FGeometryScriptIndexList, IndexType) == 0x000000, "Member 'FGeometryScriptIndexList::IndexType' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptMeshPointSamplingOptions
+// 0x0018 (0x0018 - 0x0000)
+struct FGeometryScriptMeshPointSamplingOptions final
+{
+public:
+	float                                         SamplingRadius;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNumSamples;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RandomSeed;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SubSampleDensity;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptMeshPointSamplingOptions) == 0x000008, "Wrong alignment on FGeometryScriptMeshPointSamplingOptions");
+static_assert(sizeof(FGeometryScriptMeshPointSamplingOptions) == 0x000018, "Wrong size on FGeometryScriptMeshPointSamplingOptions");
+static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, SamplingRadius) == 0x000000, "Member 'FGeometryScriptMeshPointSamplingOptions::SamplingRadius' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, MaxNumSamples) == 0x000004, "Member 'FGeometryScriptMeshPointSamplingOptions::MaxNumSamples' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, RandomSeed) == 0x000008, "Member 'FGeometryScriptMeshPointSamplingOptions::RandomSeed' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, SubSampleDensity) == 0x000010, "Member 'FGeometryScriptMeshPointSamplingOptions::SubSampleDensity' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptTriangleList
 // 0x0010 (0x0010 - 0x0000)
@@ -979,17 +991,6 @@ public:
 static_assert(alignof(FGeometryScriptSimplePolygon) == 0x000008, "Wrong alignment on FGeometryScriptSimplePolygon");
 static_assert(sizeof(FGeometryScriptSimplePolygon) == 0x000010, "Wrong size on FGeometryScriptSimplePolygon");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptPNTessellateOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FGeometryScriptPNTessellateOptions final
-{
-public:
-	bool                                          bRecomputeNormals;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptPNTessellateOptions) == 0x000001, "Wrong alignment on FGeometryScriptPNTessellateOptions");
-static_assert(sizeof(FGeometryScriptPNTessellateOptions) == 0x000001, "Wrong size on FGeometryScriptPNTessellateOptions");
-static_assert(offsetof(FGeometryScriptPNTessellateOptions, bRecomputeNormals) == 0x000000, "Member 'FGeometryScriptPNTessellateOptions::bRecomputeNormals' has a wrong offset!");
-
 // ScriptStruct GeometryScriptingCore.GeometryScriptGeneralPolygonList
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FGeometryScriptGeneralPolygonList final
@@ -999,6 +1000,19 @@ public:
 };
 static_assert(alignof(FGeometryScriptGeneralPolygonList) == 0x000008, "Wrong alignment on FGeometryScriptGeneralPolygonList");
 static_assert(sizeof(FGeometryScriptGeneralPolygonList) == 0x000010, "Wrong size on FGeometryScriptGeneralPolygonList");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSelectiveTessellateOptions
+// 0x0002 (0x0002 - 0x0000)
+struct FGeometryScriptSelectiveTessellateOptions final
+{
+public:
+	bool                                          bEnableMultithreading;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptEmptySelectionBehavior         EmptyBehavior;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptSelectiveTessellateOptions) == 0x000001, "Wrong alignment on FGeometryScriptSelectiveTessellateOptions");
+static_assert(sizeof(FGeometryScriptSelectiveTessellateOptions) == 0x000002, "Wrong size on FGeometryScriptSelectiveTessellateOptions");
+static_assert(offsetof(FGeometryScriptSelectiveTessellateOptions, bEnableMultithreading) == 0x000000, "Member 'FGeometryScriptSelectiveTessellateOptions::bEnableMultithreading' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSelectiveTessellateOptions, EmptyBehavior) == 0x000001, "Member 'FGeometryScriptSelectiveTessellateOptions::EmptyBehavior' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptDynamicMeshBVH
 // 0x0020 (0x0020 - 0x0000)
@@ -1140,23 +1154,6 @@ public:
 static_assert(alignof(FGeometryScriptSetStaticMeshCollisionOptions) == 0x000001, "Wrong alignment on FGeometryScriptSetStaticMeshCollisionOptions");
 static_assert(sizeof(FGeometryScriptSetStaticMeshCollisionOptions) == 0x000001, "Wrong size on FGeometryScriptSetStaticMeshCollisionOptions");
 static_assert(offsetof(FGeometryScriptSetStaticMeshCollisionOptions, bMarkAsCustomized) == 0x000000, "Member 'FGeometryScriptSetStaticMeshCollisionOptions::bMarkAsCustomized' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptBlurMeshVertexColorsOptions
-// 0x0004 (0x0004 - 0x0000)
-struct FGeometryScriptBlurMeshVertexColorsOptions final
-{
-public:
-	bool                                          Red;                                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Green;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Blue;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Alpha;                                             // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptBlurMeshVertexColorsOptions) == 0x000001, "Wrong alignment on FGeometryScriptBlurMeshVertexColorsOptions");
-static_assert(sizeof(FGeometryScriptBlurMeshVertexColorsOptions) == 0x000004, "Wrong size on FGeometryScriptBlurMeshVertexColorsOptions");
-static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Red) == 0x000000, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Red' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Green) == 0x000001, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Green' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Blue) == 0x000002, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Blue' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Alpha) == 0x000003, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Alpha' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.ComputeNegativeSpaceOptions
 // 0x0028 (0x0028 - 0x0000)
@@ -1893,6 +1890,27 @@ static_assert(offsetof(FGeometryScriptBendWarpOptions, bSymmetricExtents) == 0x0
 static_assert(offsetof(FGeometryScriptBendWarpOptions, LowerExtent) == 0x000004, "Member 'FGeometryScriptBendWarpOptions::LowerExtent' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptBendWarpOptions, bBidirectional) == 0x000008, "Member 'FGeometryScriptBendWarpOptions::bBidirectional' has a wrong offset!");
 
+// ScriptStruct GeometryScriptingCore.GeometryScriptPolygonOffsetOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FGeometryScriptPolygonOffsetOptions final
+{
+public:
+	EGeometryScriptPolyOffsetJoinType             JoinType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MiterLimit;                                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetBothSides;                                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StepsPerRadianScale;                               // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaximumStepsPerRadian;                             // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptPolygonOffsetOptions) == 0x000008, "Wrong alignment on FGeometryScriptPolygonOffsetOptions");
+static_assert(sizeof(FGeometryScriptPolygonOffsetOptions) == 0x000028, "Wrong size on FGeometryScriptPolygonOffsetOptions");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, JoinType) == 0x000000, "Member 'FGeometryScriptPolygonOffsetOptions::JoinType' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MiterLimit) == 0x000008, "Member 'FGeometryScriptPolygonOffsetOptions::MiterLimit' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, bOffsetBothSides) == 0x000010, "Member 'FGeometryScriptPolygonOffsetOptions::bOffsetBothSides' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, StepsPerRadianScale) == 0x000018, "Member 'FGeometryScriptPolygonOffsetOptions::StepsPerRadianScale' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MaximumStepsPerRadian) == 0x000020, "Member 'FGeometryScriptPolygonOffsetOptions::MaximumStepsPerRadian' has a wrong offset!");
+
 // ScriptStruct GeometryScriptingCore.GeometryScriptTwistWarpOptions
 // 0x000C (0x000C - 0x0000)
 struct FGeometryScriptTwistWarpOptions final
@@ -1926,6 +1944,54 @@ static_assert(sizeof(FGeometryScriptFlareWarpOptions) == 0x00000C, "Wrong size o
 static_assert(offsetof(FGeometryScriptFlareWarpOptions, bSymmetricExtents) == 0x000000, "Member 'FGeometryScriptFlareWarpOptions::bSymmetricExtents' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptFlareWarpOptions, LowerExtent) == 0x000004, "Member 'FGeometryScriptFlareWarpOptions::LowerExtent' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptFlareWarpOptions, FlareType) == 0x000008, "Member 'FGeometryScriptFlareWarpOptions::FlareType' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptExpMapUVOptions
+// 0x0008 (0x0008 - 0x0000)
+struct FGeometryScriptExpMapUVOptions final
+{
+public:
+	int32                                         NormalSmoothingRounds;                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NormalSmoothingAlpha;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptExpMapUVOptions) == 0x000004, "Wrong alignment on FGeometryScriptExpMapUVOptions");
+static_assert(sizeof(FGeometryScriptExpMapUVOptions) == 0x000008, "Wrong size on FGeometryScriptExpMapUVOptions");
+static_assert(offsetof(FGeometryScriptExpMapUVOptions, NormalSmoothingRounds) == 0x000000, "Member 'FGeometryScriptExpMapUVOptions::NormalSmoothingRounds' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptExpMapUVOptions, NormalSmoothingAlpha) == 0x000004, "Member 'FGeometryScriptExpMapUVOptions::NormalSmoothingAlpha' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSpectralConformalUVOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FGeometryScriptSpectralConformalUVOptions final
+{
+public:
+	bool                                          bPreserveIrregularity;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptSpectralConformalUVOptions) == 0x000001, "Wrong alignment on FGeometryScriptSpectralConformalUVOptions");
+static_assert(sizeof(FGeometryScriptSpectralConformalUVOptions) == 0x000001, "Wrong size on FGeometryScriptSpectralConformalUVOptions");
+static_assert(offsetof(FGeometryScriptSpectralConformalUVOptions, bPreserveIrregularity) == 0x000000, "Member 'FGeometryScriptSpectralConformalUVOptions::bPreserveIrregularity' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptRecomputeUVsOptions
+// 0x001C (0x001C - 0x0000)
+struct FGeometryScriptRecomputeUVsOptions final
+{
+public:
+	EGeometryScriptUVFlattenMethod                Method;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptUVIslandSource                 IslandSource;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptExpMapUVOptions         ExpMapOptions;                                     // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSpectralConformalUVOptions SpectralConformalOptions;                          // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bAutoAlignIslandsWithAxes;                         // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptRecomputeUVsOptions) == 0x000004, "Wrong alignment on FGeometryScriptRecomputeUVsOptions");
+static_assert(sizeof(FGeometryScriptRecomputeUVsOptions) == 0x00001C, "Wrong size on FGeometryScriptRecomputeUVsOptions");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, Method) == 0x000000, "Member 'FGeometryScriptRecomputeUVsOptions::Method' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, IslandSource) == 0x000001, "Member 'FGeometryScriptRecomputeUVsOptions::IslandSource' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, ExpMapOptions) == 0x000004, "Member 'FGeometryScriptRecomputeUVsOptions::ExpMapOptions' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, SpectralConformalOptions) == 0x00000C, "Member 'FGeometryScriptRecomputeUVsOptions::SpectralConformalOptions' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, GroupLayer) == 0x000010, "Member 'FGeometryScriptRecomputeUVsOptions::GroupLayer' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, bAutoAlignIslandsWithAxes) == 0x000018, "Member 'FGeometryScriptRecomputeUVsOptions::bAutoAlignIslandsWithAxes' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptPerlinNoiseLayerOptions
 // 0x0028 (0x0028 - 0x0000)
@@ -2052,26 +2118,6 @@ static_assert(offsetof(FGeometryScriptMeshOffsetOptions, SmoothAlpha) == 0x00000
 static_assert(offsetof(FGeometryScriptMeshOffsetOptions, bReprojectDuringSmoothing) == 0x000010, "Member 'FGeometryScriptMeshOffsetOptions::bReprojectDuringSmoothing' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshOffsetOptions, BoundaryAlpha) == 0x000014, "Member 'FGeometryScriptMeshOffsetOptions::BoundaryAlpha' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptPointClusteringOptions
-// 0x0020 (0x0020 - 0x0000)
-struct FGeometryScriptPointClusteringOptions final
-{
-public:
-	TArray<struct FVector>                        InitialClusterCenters;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         TargetNumClusters;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptInitKMeansMethod               InitializeMethod;                                  // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RandomSeed;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxIterations;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptPointClusteringOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointClusteringOptions");
-static_assert(sizeof(FGeometryScriptPointClusteringOptions) == 0x000020, "Wrong size on FGeometryScriptPointClusteringOptions");
-static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitialClusterCenters) == 0x000000, "Member 'FGeometryScriptPointClusteringOptions::InitialClusterCenters' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPointClusteringOptions, TargetNumClusters) == 0x000010, "Member 'FGeometryScriptPointClusteringOptions::TargetNumClusters' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitializeMethod) == 0x000014, "Member 'FGeometryScriptPointClusteringOptions::InitializeMethod' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPointClusteringOptions, RandomSeed) == 0x000018, "Member 'FGeometryScriptPointClusteringOptions::RandomSeed' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPointClusteringOptions, MaxIterations) == 0x00001C, "Member 'FGeometryScriptPointClusteringOptions::MaxIterations' has a wrong offset!");
-
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshExtrudeOptions
 // 0x0028 (0x0028 - 0x0000)
 struct FGeometryScriptMeshExtrudeOptions final
@@ -2090,6 +2136,20 @@ static_assert(offsetof(FGeometryScriptMeshExtrudeOptions, ExtrudeDistance) == 0x
 static_assert(offsetof(FGeometryScriptMeshExtrudeOptions, ExtrudeDirection) == 0x000008, "Member 'FGeometryScriptMeshExtrudeOptions::ExtrudeDirection' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshExtrudeOptions, UVScale) == 0x000020, "Member 'FGeometryScriptMeshExtrudeOptions::UVScale' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshExtrudeOptions, bSolidsToShells) == 0x000024, "Member 'FGeometryScriptMeshExtrudeOptions::bSolidsToShells' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptPointPriorityOptions
+// 0x0018 (0x0018 - 0x0000)
+struct FGeometryScriptPointPriorityOptions final
+{
+public:
+	TArray<float>                                 OptionalPriorityWeights;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bUniformSpacing;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptPointPriorityOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointPriorityOptions");
+static_assert(sizeof(FGeometryScriptPointPriorityOptions) == 0x000018, "Wrong size on FGeometryScriptPointPriorityOptions");
+static_assert(offsetof(FGeometryScriptPointPriorityOptions, OptionalPriorityWeights) == 0x000000, "Member 'FGeometryScriptPointPriorityOptions::OptionalPriorityWeights' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointPriorityOptions, bUniformSpacing) == 0x000010, "Member 'FGeometryScriptPointPriorityOptions::bUniformSpacing' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshLinearExtrudeOptions
 // 0x0038 (0x0038 - 0x0000)
@@ -2248,24 +2308,6 @@ static_assert(offsetof(FGeometryScriptSplitNormalsOptions, bSplitByOpeningAngle)
 static_assert(offsetof(FGeometryScriptSplitNormalsOptions, OpeningAngleDeg) == 0x000004, "Member 'FGeometryScriptSplitNormalsOptions::OpeningAngleDeg' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplitNormalsOptions, bSplitByFaceGroup) == 0x000008, "Member 'FGeometryScriptSplitNormalsOptions::bSplitByFaceGroup' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplitNormalsOptions, GroupLayer) == 0x00000C, "Member 'FGeometryScriptSplitNormalsOptions::GroupLayer' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptSampleTextureOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FGeometryScriptSampleTextureOptions final
-{
-public:
-	EGeometryScriptPixelSamplingMethod            SamplingMethod;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWrap;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              UVScale;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              UVOffset;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptSampleTextureOptions) == 0x000008, "Wrong alignment on FGeometryScriptSampleTextureOptions");
-static_assert(sizeof(FGeometryScriptSampleTextureOptions) == 0x000028, "Wrong size on FGeometryScriptSampleTextureOptions");
-static_assert(offsetof(FGeometryScriptSampleTextureOptions, SamplingMethod) == 0x000000, "Member 'FGeometryScriptSampleTextureOptions::SamplingMethod' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSampleTextureOptions, bWrap) == 0x000001, "Member 'FGeometryScriptSampleTextureOptions::bWrap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSampleTextureOptions, UVScale) == 0x000008, "Member 'FGeometryScriptSampleTextureOptions::UVScale' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSampleTextureOptions, UVOffset) == 0x000018, "Member 'FGeometryScriptSampleTextureOptions::UVOffset' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptTangentsOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -2521,24 +2563,6 @@ static_assert(offsetof(FGeometryScriptDegenerateTriangleOptions, MinTriangleArea
 static_assert(offsetof(FGeometryScriptDegenerateTriangleOptions, MinEdgeLength) == 0x000010, "Member 'FGeometryScriptDegenerateTriangleOptions::MinEdgeLength' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptDegenerateTriangleOptions, bCompactOnCompletion) == 0x000018, "Member 'FGeometryScriptDegenerateTriangleOptions::bCompactOnCompletion' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptMeshPointSamplingOptions
-// 0x0018 (0x0018 - 0x0000)
-struct FGeometryScriptMeshPointSamplingOptions final
-{
-public:
-	float                                         SamplingRadius;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxNumSamples;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RandomSeed;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SubSampleDensity;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptMeshPointSamplingOptions) == 0x000008, "Wrong alignment on FGeometryScriptMeshPointSamplingOptions");
-static_assert(sizeof(FGeometryScriptMeshPointSamplingOptions) == 0x000018, "Wrong size on FGeometryScriptMeshPointSamplingOptions");
-static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, SamplingRadius) == 0x000000, "Member 'FGeometryScriptMeshPointSamplingOptions::SamplingRadius' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, MaxNumSamples) == 0x000004, "Member 'FGeometryScriptMeshPointSamplingOptions::MaxNumSamples' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, RandomSeed) == 0x000008, "Member 'FGeometryScriptMeshPointSamplingOptions::RandomSeed' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshPointSamplingOptions, SubSampleDensity) == 0x000010, "Member 'FGeometryScriptMeshPointSamplingOptions::SubSampleDensity' has a wrong offset!");
-
 // ScriptStruct GeometryScriptingCore.GeometryScriptNonUniformPointSamplingOptions
 // 0x0018 (0x0018 - 0x0000)
 struct FGeometryScriptNonUniformPointSamplingOptions final
@@ -2648,18 +2672,16 @@ static_assert(offsetof(FGeometryScriptRayHitResult, HitTriangleID) == 0x000008, 
 static_assert(offsetof(FGeometryScriptRayHitResult, HitPosition) == 0x000010, "Member 'FGeometryScriptRayHitResult::HitPosition' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptRayHitResult, HitBaryCoords) == 0x000028, "Member 'FGeometryScriptRayHitResult::HitBaryCoords' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptSelectiveTessellateOptions
-// 0x0002 (0x0002 - 0x0000)
-struct FGeometryScriptSelectiveTessellateOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptPNTessellateOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FGeometryScriptPNTessellateOptions final
 {
 public:
-	bool                                          bEnableMultithreading;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptEmptySelectionBehavior         EmptyBehavior;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecomputeNormals;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptSelectiveTessellateOptions) == 0x000001, "Wrong alignment on FGeometryScriptSelectiveTessellateOptions");
-static_assert(sizeof(FGeometryScriptSelectiveTessellateOptions) == 0x000002, "Wrong size on FGeometryScriptSelectiveTessellateOptions");
-static_assert(offsetof(FGeometryScriptSelectiveTessellateOptions, bEnableMultithreading) == 0x000000, "Member 'FGeometryScriptSelectiveTessellateOptions::bEnableMultithreading' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptSelectiveTessellateOptions, EmptyBehavior) == 0x000001, "Member 'FGeometryScriptSelectiveTessellateOptions::EmptyBehavior' has a wrong offset!");
+static_assert(alignof(FGeometryScriptPNTessellateOptions) == 0x000001, "Wrong alignment on FGeometryScriptPNTessellateOptions");
+static_assert(sizeof(FGeometryScriptPNTessellateOptions) == 0x000001, "Wrong size on FGeometryScriptPNTessellateOptions");
+static_assert(offsetof(FGeometryScriptPNTessellateOptions, bRecomputeNormals) == 0x000000, "Member 'FGeometryScriptPNTessellateOptions::bRecomputeNormals' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptRepackUVsOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -2674,54 +2696,6 @@ static_assert(alignof(FGeometryScriptRepackUVsOptions) == 0x000004, "Wrong align
 static_assert(sizeof(FGeometryScriptRepackUVsOptions) == 0x000008, "Wrong size on FGeometryScriptRepackUVsOptions");
 static_assert(offsetof(FGeometryScriptRepackUVsOptions, TargetImageWidth) == 0x000000, "Member 'FGeometryScriptRepackUVsOptions::TargetImageWidth' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptRepackUVsOptions, bOptimizeIslandRotation) == 0x000004, "Member 'FGeometryScriptRepackUVsOptions::bOptimizeIslandRotation' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptExpMapUVOptions
-// 0x0008 (0x0008 - 0x0000)
-struct FGeometryScriptExpMapUVOptions final
-{
-public:
-	int32                                         NormalSmoothingRounds;                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NormalSmoothingAlpha;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptExpMapUVOptions) == 0x000004, "Wrong alignment on FGeometryScriptExpMapUVOptions");
-static_assert(sizeof(FGeometryScriptExpMapUVOptions) == 0x000008, "Wrong size on FGeometryScriptExpMapUVOptions");
-static_assert(offsetof(FGeometryScriptExpMapUVOptions, NormalSmoothingRounds) == 0x000000, "Member 'FGeometryScriptExpMapUVOptions::NormalSmoothingRounds' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptExpMapUVOptions, NormalSmoothingAlpha) == 0x000004, "Member 'FGeometryScriptExpMapUVOptions::NormalSmoothingAlpha' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptSpectralConformalUVOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FGeometryScriptSpectralConformalUVOptions final
-{
-public:
-	bool                                          bPreserveIrregularity;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptSpectralConformalUVOptions) == 0x000001, "Wrong alignment on FGeometryScriptSpectralConformalUVOptions");
-static_assert(sizeof(FGeometryScriptSpectralConformalUVOptions) == 0x000001, "Wrong size on FGeometryScriptSpectralConformalUVOptions");
-static_assert(offsetof(FGeometryScriptSpectralConformalUVOptions, bPreserveIrregularity) == 0x000000, "Member 'FGeometryScriptSpectralConformalUVOptions::bPreserveIrregularity' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptRecomputeUVsOptions
-// 0x001C (0x001C - 0x0000)
-struct FGeometryScriptRecomputeUVsOptions final
-{
-public:
-	EGeometryScriptUVFlattenMethod                Method;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptUVIslandSource                 IslandSource;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptExpMapUVOptions         ExpMapOptions;                                     // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSpectralConformalUVOptions SpectralConformalOptions;                          // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bAutoAlignIslandsWithAxes;                         // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGeometryScriptRecomputeUVsOptions) == 0x000004, "Wrong alignment on FGeometryScriptRecomputeUVsOptions");
-static_assert(sizeof(FGeometryScriptRecomputeUVsOptions) == 0x00001C, "Wrong size on FGeometryScriptRecomputeUVsOptions");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, Method) == 0x000000, "Member 'FGeometryScriptRecomputeUVsOptions::Method' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, IslandSource) == 0x000001, "Member 'FGeometryScriptRecomputeUVsOptions::IslandSource' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, ExpMapOptions) == 0x000004, "Member 'FGeometryScriptRecomputeUVsOptions::ExpMapOptions' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, SpectralConformalOptions) == 0x00000C, "Member 'FGeometryScriptRecomputeUVsOptions::SpectralConformalOptions' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, GroupLayer) == 0x000010, "Member 'FGeometryScriptRecomputeUVsOptions::GroupLayer' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptRecomputeUVsOptions, bAutoAlignIslandsWithAxes) == 0x000018, "Member 'FGeometryScriptRecomputeUVsOptions::bAutoAlignIslandsWithAxes' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptPatchBuilderOptions
 // 0x0034 (0x0034 - 0x0000)
@@ -2765,40 +2739,67 @@ static_assert(alignof(FGeometryScriptXAtlasOptions) == 0x000004, "Wrong alignmen
 static_assert(sizeof(FGeometryScriptXAtlasOptions) == 0x000004, "Wrong size on FGeometryScriptXAtlasOptions");
 static_assert(offsetof(FGeometryScriptXAtlasOptions, MaxIterations) == 0x000000, "Member 'FGeometryScriptXAtlasOptions::MaxIterations' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptMorphologyOptions
-// 0x0024 (0x0024 - 0x0000)
-struct FGeometryScriptMorphologyOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptBlurMeshVertexColorsOptions
+// 0x0004 (0x0004 - 0x0000)
+struct FGeometryScriptBlurMeshVertexColorsOptions final
 {
 public:
-	struct FGeometryScript3DGridParameters        SDFGridParameters;                                 // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseSeparateMeshGrid;                              // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScript3DGridParameters        MeshGridParameters;                                // 0x0010(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptMorphologicalOpType            Operation;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Distance;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Red;                                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Green;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Blue;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Alpha;                                             // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptMorphologyOptions) == 0x000004, "Wrong alignment on FGeometryScriptMorphologyOptions");
-static_assert(sizeof(FGeometryScriptMorphologyOptions) == 0x000024, "Wrong size on FGeometryScriptMorphologyOptions");
-static_assert(offsetof(FGeometryScriptMorphologyOptions, SDFGridParameters) == 0x000000, "Member 'FGeometryScriptMorphologyOptions::SDFGridParameters' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMorphologyOptions, bUseSeparateMeshGrid) == 0x00000C, "Member 'FGeometryScriptMorphologyOptions::bUseSeparateMeshGrid' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMorphologyOptions, MeshGridParameters) == 0x000010, "Member 'FGeometryScriptMorphologyOptions::MeshGridParameters' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMorphologyOptions, Operation) == 0x00001C, "Member 'FGeometryScriptMorphologyOptions::Operation' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMorphologyOptions, Distance) == 0x000020, "Member 'FGeometryScriptMorphologyOptions::Distance' has a wrong offset!");
+static_assert(alignof(FGeometryScriptBlurMeshVertexColorsOptions) == 0x000001, "Wrong alignment on FGeometryScriptBlurMeshVertexColorsOptions");
+static_assert(sizeof(FGeometryScriptBlurMeshVertexColorsOptions) == 0x000004, "Wrong size on FGeometryScriptBlurMeshVertexColorsOptions");
+static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Red) == 0x000000, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Red' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Green) == 0x000001, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Green' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Blue) == 0x000002, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Blue' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBlurMeshVertexColorsOptions, Alpha) == 0x000003, "Member 'FGeometryScriptBlurMeshVertexColorsOptions::Alpha' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptPointPriorityOptions
-// 0x0018 (0x0018 - 0x0000)
-struct FGeometryScriptPointPriorityOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptSolidifyOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FGeometryScriptSolidifyOptions final
 {
 public:
-	TArray<float>                                 OptionalPriorityWeights;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bUniformSpacing;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGeometryScript3DGridParameters        GridParameters;                                    // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         WindingThreshold;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSolidAtBoundaries;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ExtendBounds;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SurfaceSearchSteps;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bThickenShells;                                    // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ShellThickness;                                    // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptPointPriorityOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointPriorityOptions");
-static_assert(sizeof(FGeometryScriptPointPriorityOptions) == 0x000018, "Wrong size on FGeometryScriptPointPriorityOptions");
-static_assert(offsetof(FGeometryScriptPointPriorityOptions, OptionalPriorityWeights) == 0x000000, "Member 'FGeometryScriptPointPriorityOptions::OptionalPriorityWeights' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPointPriorityOptions, bUniformSpacing) == 0x000010, "Member 'FGeometryScriptPointPriorityOptions::bUniformSpacing' has a wrong offset!");
+static_assert(alignof(FGeometryScriptSolidifyOptions) == 0x000008, "Wrong alignment on FGeometryScriptSolidifyOptions");
+static_assert(sizeof(FGeometryScriptSolidifyOptions) == 0x000028, "Wrong size on FGeometryScriptSolidifyOptions");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, GridParameters) == 0x000000, "Member 'FGeometryScriptSolidifyOptions::GridParameters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, WindingThreshold) == 0x00000C, "Member 'FGeometryScriptSolidifyOptions::WindingThreshold' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, bSolidAtBoundaries) == 0x000010, "Member 'FGeometryScriptSolidifyOptions::bSolidAtBoundaries' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, ExtendBounds) == 0x000014, "Member 'FGeometryScriptSolidifyOptions::ExtendBounds' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, SurfaceSearchSteps) == 0x000018, "Member 'FGeometryScriptSolidifyOptions::SurfaceSearchSteps' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, bThickenShells) == 0x00001C, "Member 'FGeometryScriptSolidifyOptions::bThickenShells' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSolidifyOptions, ShellThickness) == 0x000020, "Member 'FGeometryScriptSolidifyOptions::ShellThickness' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptPointClusteringOptions
+// 0x0020 (0x0020 - 0x0000)
+struct FGeometryScriptPointClusteringOptions final
+{
+public:
+	TArray<struct FVector>                        InitialClusterCenters;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         TargetNumClusters;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptInitKMeansMethod               InitializeMethod;                                  // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RandomSeed;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxIterations;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptPointClusteringOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointClusteringOptions");
+static_assert(sizeof(FGeometryScriptPointClusteringOptions) == 0x000020, "Wrong size on FGeometryScriptPointClusteringOptions");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitialClusterCenters) == 0x000000, "Member 'FGeometryScriptPointClusteringOptions::InitialClusterCenters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, TargetNumClusters) == 0x000010, "Member 'FGeometryScriptPointClusteringOptions::TargetNumClusters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitializeMethod) == 0x000014, "Member 'FGeometryScriptPointClusteringOptions::InitializeMethod' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, RandomSeed) == 0x000018, "Member 'FGeometryScriptPointClusteringOptions::RandomSeed' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, MaxIterations) == 0x00001C, "Member 'FGeometryScriptPointClusteringOptions::MaxIterations' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptPointFlatteningOptions
 // 0x0070 (0x0070 - 0x0000)
@@ -2813,27 +2814,6 @@ static_assert(alignof(FGeometryScriptPointFlatteningOptions) == 0x000010, "Wrong
 static_assert(sizeof(FGeometryScriptPointFlatteningOptions) == 0x000070, "Wrong size on FGeometryScriptPointFlatteningOptions");
 static_assert(offsetof(FGeometryScriptPointFlatteningOptions, Frame) == 0x000000, "Member 'FGeometryScriptPointFlatteningOptions::Frame' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptPointFlatteningOptions, DropAxis) == 0x000060, "Member 'FGeometryScriptPointFlatteningOptions::DropAxis' has a wrong offset!");
-
-// ScriptStruct GeometryScriptingCore.GeometryScriptPolygonOffsetOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FGeometryScriptPolygonOffsetOptions final
-{
-public:
-	EGeometryScriptPolyOffsetJoinType             JoinType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MiterLimit;                                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOffsetBothSides;                                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StepsPerRadianScale;                               // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        MaximumStepsPerRadian;                             // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGeometryScriptPolygonOffsetOptions) == 0x000008, "Wrong alignment on FGeometryScriptPolygonOffsetOptions");
-static_assert(sizeof(FGeometryScriptPolygonOffsetOptions) == 0x000028, "Wrong size on FGeometryScriptPolygonOffsetOptions");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, JoinType) == 0x000000, "Member 'FGeometryScriptPolygonOffsetOptions::JoinType' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MiterLimit) == 0x000008, "Member 'FGeometryScriptPolygonOffsetOptions::MiterLimit' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, bOffsetBothSides) == 0x000010, "Member 'FGeometryScriptPolygonOffsetOptions::bOffsetBothSides' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, StepsPerRadianScale) == 0x000018, "Member 'FGeometryScriptPolygonOffsetOptions::StepsPerRadianScale' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MaximumStepsPerRadian) == 0x000020, "Member 'FGeometryScriptPolygonOffsetOptions::MaximumStepsPerRadian' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptOpenPathOffsetOptions
 // 0x0028 (0x0028 - 0x0000)
@@ -2880,21 +2860,41 @@ static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeMethod) == 0x0
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeStart) == 0x00000C, "Member 'FGeometryScriptSplineSamplingOptions::RangeStart' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeEnd) == 0x000010, "Member 'FGeometryScriptSplineSamplingOptions::RangeEnd' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptDetermineMeshOcclusionOptions
-// 0x0010 (0x0010 - 0x0000)
-struct FGeometryScriptDetermineMeshOcclusionOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptCopyMeshFromComponentOptions
+// 0x000C (0x000C - 0x0000)
+struct FGeometryScriptCopyMeshFromComponentOptions final
 {
 public:
-	double                                        SamplingDensity;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoubleSided;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumSearchDirections;                               // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWantNormals;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWantTangents;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWantInstanceColors;                               // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshReadLOD             RequestedLOD;                                      // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000008, "Wrong alignment on FGeometryScriptDetermineMeshOcclusionOptions");
-static_assert(sizeof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000010, "Wrong size on FGeometryScriptDetermineMeshOcclusionOptions");
-static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, SamplingDensity) == 0x000000, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::SamplingDensity' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, bDoubleSided) == 0x000008, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::bDoubleSided' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, NumSearchDirections) == 0x00000C, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::NumSearchDirections' has a wrong offset!");
+static_assert(alignof(FGeometryScriptCopyMeshFromComponentOptions) == 0x000004, "Wrong alignment on FGeometryScriptCopyMeshFromComponentOptions");
+static_assert(sizeof(FGeometryScriptCopyMeshFromComponentOptions) == 0x00000C, "Wrong size on FGeometryScriptCopyMeshFromComponentOptions");
+static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantNormals) == 0x000000, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantNormals' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantTangents) == 0x000001, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantTangents' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantInstanceColors) == 0x000002, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantInstanceColors' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, RequestedLOD) == 0x000004, "Member 'FGeometryScriptCopyMeshFromComponentOptions::RequestedLOD' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSampleTextureOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FGeometryScriptSampleTextureOptions final
+{
+public:
+	EGeometryScriptPixelSamplingMethod            SamplingMethod;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWrap;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              UVScale;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              UVOffset;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptSampleTextureOptions) == 0x000008, "Wrong alignment on FGeometryScriptSampleTextureOptions");
+static_assert(sizeof(FGeometryScriptSampleTextureOptions) == 0x000028, "Wrong size on FGeometryScriptSampleTextureOptions");
+static_assert(offsetof(FGeometryScriptSampleTextureOptions, SamplingMethod) == 0x000000, "Member 'FGeometryScriptSampleTextureOptions::SamplingMethod' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSampleTextureOptions, bWrap) == 0x000001, "Member 'FGeometryScriptSampleTextureOptions::bWrap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSampleTextureOptions, UVScale) == 0x000008, "Member 'FGeometryScriptSampleTextureOptions::UVScale' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSampleTextureOptions, UVOffset) == 0x000018, "Member 'FGeometryScriptSampleTextureOptions::UVOffset' has a wrong offset!");
 
 }
 

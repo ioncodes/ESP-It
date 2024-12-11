@@ -3952,13 +3952,13 @@ struct LowEntryExtendedStandardLibrary_GetGenericTeamId final
 {
 public:
 	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         TeamID;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         TeamId;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LowEntryExtendedStandardLibrary_GetGenericTeamId) == 0x000008, "Wrong alignment on LowEntryExtendedStandardLibrary_GetGenericTeamId");
 static_assert(sizeof(LowEntryExtendedStandardLibrary_GetGenericTeamId) == 0x000010, "Wrong size on LowEntryExtendedStandardLibrary_GetGenericTeamId");
 static_assert(offsetof(LowEntryExtendedStandardLibrary_GetGenericTeamId, Target) == 0x000000, "Member 'LowEntryExtendedStandardLibrary_GetGenericTeamId::Target' has a wrong offset!");
-static_assert(offsetof(LowEntryExtendedStandardLibrary_GetGenericTeamId, TeamID) == 0x000008, "Member 'LowEntryExtendedStandardLibrary_GetGenericTeamId::TeamID' has a wrong offset!");
+static_assert(offsetof(LowEntryExtendedStandardLibrary_GetGenericTeamId, TeamId) == 0x000008, "Member 'LowEntryExtendedStandardLibrary_GetGenericTeamId::TeamId' has a wrong offset!");
 
 // Function LowEntryExtendedStandardLibrary.LowEntryExtendedStandardLibrary.GetKeyboardFocusedWidgetType
 // 0x0008 (0x0008 - 0x0000)
@@ -5816,13 +5816,13 @@ struct LowEntryExtendedStandardLibrary_SetGenericTeamId final
 {
 public:
 	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         TeamID;                                            // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         TeamId;                                            // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LowEntryExtendedStandardLibrary_SetGenericTeamId) == 0x000008, "Wrong alignment on LowEntryExtendedStandardLibrary_SetGenericTeamId");
 static_assert(sizeof(LowEntryExtendedStandardLibrary_SetGenericTeamId) == 0x000010, "Wrong size on LowEntryExtendedStandardLibrary_SetGenericTeamId");
 static_assert(offsetof(LowEntryExtendedStandardLibrary_SetGenericTeamId, Target) == 0x000000, "Member 'LowEntryExtendedStandardLibrary_SetGenericTeamId::Target' has a wrong offset!");
-static_assert(offsetof(LowEntryExtendedStandardLibrary_SetGenericTeamId, TeamID) == 0x000008, "Member 'LowEntryExtendedStandardLibrary_SetGenericTeamId::TeamID' has a wrong offset!");
+static_assert(offsetof(LowEntryExtendedStandardLibrary_SetGenericTeamId, TeamId) == 0x000008, "Member 'LowEntryExtendedStandardLibrary_SetGenericTeamId::TeamId' has a wrong offset!");
 
 // Function LowEntryExtendedStandardLibrary.LowEntryExtendedStandardLibrary.SetMouseLockedToViewport
 // 0x0001 (0x0001 - 0x0000)

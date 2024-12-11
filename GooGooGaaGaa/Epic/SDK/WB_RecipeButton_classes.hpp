@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "B_Rarity_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_SkinOrRecipeButton_classes.hpp"
 
 

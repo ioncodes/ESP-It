@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_classes.hpp"
 #include "ETeamID_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

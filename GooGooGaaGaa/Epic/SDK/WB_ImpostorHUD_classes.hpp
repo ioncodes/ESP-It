@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_TaskType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "E_ImpostorState_structs.hpp"
-#include "E_MeetingState_structs.hpp"
 #include "E_PossessNotWorkingReason_structs.hpp"
+#include "E_MeetingState_structs.hpp"
+#include "E_TaskType_structs.hpp"
 
 
 namespace SDK
@@ -57,6 +57,7 @@ public:
 
 public:
 	void Construct();
+	void DestroyHUDInMainMenu();
 	void ExecuteUbergraph_WB_ImpostorHUD(int32 EntryPoint);
 	void FadeInAnimationFinished();
 	ESlateVisibility Get_ActionHint_Visibility_0();

@@ -89,6 +89,28 @@ void UWB_AccountSettings_C::BndEvt__WB_AccountSettings_CopyButton_K2Node_Compone
 }
 
 
+// Function WB_AccountSettings.WB_AccountSettings_C.BndEvt__WB_AccountSettings_DisableCrossPlatform_K2Node_ComponentBoundEvent_2_OnCheckStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UWB_CheckBoxWithLabel_C*          Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsChecked                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_AccountSettings_C::BndEvt__WB_AccountSettings_DisableCrossPlatform_K2Node_ComponentBoundEvent_2_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "BndEvt__WB_AccountSettings_DisableCrossPlatform_K2Node_ComponentBoundEvent_2_OnCheckStateChanged__DelegateSignature");
+
+	Params::WB_AccountSettings_C_BndEvt__WB_AccountSettings_DisableCrossPlatform_K2Node_ComponentBoundEvent_2_OnCheckStateChanged__DelegateSignature Parms{};
+
+	Parms.Sender = Sender;
+	Parms.IsChecked = IsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_AccountSettings.WB_AccountSettings_C.BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -215,6 +237,26 @@ void UWB_AccountSettings_C::FocusFirstElement()
 }
 
 
+// Function WB_AccountSettings.WB_AccountSettings_C.Get_DisableCrossPlatform_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_AccountSettings_C::Get_DisableCrossPlatform_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "Get_DisableCrossPlatform_Visibility");
+
+	Params::WB_AccountSettings_C_Get_DisableCrossPlatform_Visibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_AccountSettings.WB_AccountSettings_C.GetCurrentlyFocusedWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -245,6 +287,20 @@ void UWB_AccountSettings_C::Init()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_AccountSettings_C", "Init");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_AccountSettings.WB_AccountSettings_C.LeftTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_AccountSettings_C::LeftTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "LeftTriggerPressed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -357,6 +413,43 @@ void UWB_AccountSettings_C::ProcessSettingsArray(TArray<struct FAccountSetting>&
 	UObject::ProcessEvent(Func, &Parms);
 
 	Settings = std::move(Parms.Settings);
+}
+
+
+// Function WB_AccountSettings.WB_AccountSettings_C.RightTriggerPressed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_AccountSettings_C::RightTriggerPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "RightTriggerPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_AccountSettings.WB_AccountSettings_C.SelectCrossPlatformIfPossible
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_AccountSettings_C::SelectCrossPlatformIfPossible(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "SelectCrossPlatformIfPossible");
+
+	Params::WB_AccountSettings_C_SelectCrossPlatformIfPossible Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

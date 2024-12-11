@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SteamGeneral_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SteamGeneral_structs.hpp"
 
 
 namespace SDK
@@ -570,6 +570,38 @@ static_assert(alignof(FQueryWorkshopForAllItemsResult) == 0x000008, "Wrong align
 static_assert(sizeof(FQueryWorkshopForAllItemsResult) == 0x000098, "Wrong size on FQueryWorkshopForAllItemsResult");
 static_assert(offsetof(FQueryWorkshopForAllItemsResult, QueryParams) == 0x000030, "Member 'FQueryWorkshopForAllItemsResult::QueryParams' has a wrong offset!");
 
+// ScriptStruct SteamWorkshop.WorkshopItemDownloadInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FWorkshopItemDownloadInfo
+{
+public:
+	struct FUInt64                                bytesCurrent;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	struct FUInt64                                bytesTotal;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MegaBytesCurrent;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MegaBytesTotal;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PercentageFinished;                                // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWorkshopItemDownloadInfo) == 0x000008, "Wrong alignment on FWorkshopItemDownloadInfo");
+static_assert(sizeof(FWorkshopItemDownloadInfo) == 0x000020, "Wrong size on FWorkshopItemDownloadInfo");
+static_assert(offsetof(FWorkshopItemDownloadInfo, bytesCurrent) == 0x000000, "Member 'FWorkshopItemDownloadInfo::bytesCurrent' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, bytesTotal) == 0x000008, "Member 'FWorkshopItemDownloadInfo::bytesTotal' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesCurrent) == 0x000010, "Member 'FWorkshopItemDownloadInfo::MegaBytesCurrent' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesTotal) == 0x000014, "Member 'FWorkshopItemDownloadInfo::MegaBytesTotal' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, PercentageFinished) == 0x000018, "Member 'FWorkshopItemDownloadInfo::PercentageFinished' has a wrong offset!");
+
+// ScriptStruct SteamWorkshop.WorkshopItemUpdateInfo
+// 0x0008 (0x0028 - 0x0020)
+struct FWorkshopItemUpdateInfo final : public FWorkshopItemDownloadInfo
+{
+public:
+	EItemUpdateStatusBP                           Status;                                            // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWorkshopItemUpdateInfo) == 0x000008, "Wrong alignment on FWorkshopItemUpdateInfo");
+static_assert(sizeof(FWorkshopItemUpdateInfo) == 0x000028, "Wrong size on FWorkshopItemUpdateInfo");
+static_assert(offsetof(FWorkshopItemUpdateInfo, Status) == 0x000020, "Member 'FWorkshopItemUpdateInfo::Status' has a wrong offset!");
+
 // ScriptStruct SteamWorkshop.SteamUGCQueryParameterDetails
 // 0x0024 (0x0038 - 0x0014)
 struct FSteamUGCQueryParameterDetails final : public FSteamUGCQueryParameterAllUserDetails
@@ -653,38 +685,6 @@ static_assert(offsetof(FSteamWorkshopItemInstallInfo, SizeOnDiskBytes) == 0x0000
 static_assert(offsetof(FSteamWorkshopItemInstallInfo, SizeOnDiskMBytes) == 0x000008, "Member 'FSteamWorkshopItemInstallInfo::SizeOnDiskMBytes' has a wrong offset!");
 static_assert(offsetof(FSteamWorkshopItemInstallInfo, Directory) == 0x000010, "Member 'FSteamWorkshopItemInstallInfo::Directory' has a wrong offset!");
 static_assert(offsetof(FSteamWorkshopItemInstallInfo, TimeStampLastUpdate) == 0x000020, "Member 'FSteamWorkshopItemInstallInfo::TimeStampLastUpdate' has a wrong offset!");
-
-// ScriptStruct SteamWorkshop.WorkshopItemDownloadInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FWorkshopItemDownloadInfo
-{
-public:
-	struct FUInt64                                bytesCurrent;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FUInt64                                bytesTotal;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MegaBytesCurrent;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MegaBytesTotal;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PercentageFinished;                                // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWorkshopItemDownloadInfo) == 0x000008, "Wrong alignment on FWorkshopItemDownloadInfo");
-static_assert(sizeof(FWorkshopItemDownloadInfo) == 0x000020, "Wrong size on FWorkshopItemDownloadInfo");
-static_assert(offsetof(FWorkshopItemDownloadInfo, bytesCurrent) == 0x000000, "Member 'FWorkshopItemDownloadInfo::bytesCurrent' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, bytesTotal) == 0x000008, "Member 'FWorkshopItemDownloadInfo::bytesTotal' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesCurrent) == 0x000010, "Member 'FWorkshopItemDownloadInfo::MegaBytesCurrent' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesTotal) == 0x000014, "Member 'FWorkshopItemDownloadInfo::MegaBytesTotal' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, PercentageFinished) == 0x000018, "Member 'FWorkshopItemDownloadInfo::PercentageFinished' has a wrong offset!");
-
-// ScriptStruct SteamWorkshop.WorkshopItemUpdateInfo
-// 0x0008 (0x0028 - 0x0020)
-struct FWorkshopItemUpdateInfo final : public FWorkshopItemDownloadInfo
-{
-public:
-	EItemUpdateStatusBP                           Status;                                            // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWorkshopItemUpdateInfo) == 0x000008, "Wrong alignment on FWorkshopItemUpdateInfo");
-static_assert(sizeof(FWorkshopItemUpdateInfo) == 0x000028, "Wrong size on FWorkshopItemUpdateInfo");
-static_assert(offsetof(FWorkshopItemUpdateInfo, Status) == 0x000020, "Member 'FWorkshopItemUpdateInfo::Status' has a wrong offset!");
 
 }
 

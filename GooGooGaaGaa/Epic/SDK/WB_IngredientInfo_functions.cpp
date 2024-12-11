@@ -149,6 +149,20 @@ void UWB_IngredientInfo_C::IncredientsSpawned()
 }
 
 
+// Function WB_IngredientInfo.WB_IngredientInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_IngredientInfo_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_IngredientInfo_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_IngredientInfo.WB_IngredientInfo_C.ExecuteUbergraph_WB_IngredientInfo
 // (Final, UbergraphFunction)
 // Parameters:

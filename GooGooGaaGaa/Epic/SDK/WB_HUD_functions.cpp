@@ -45,6 +45,20 @@ void UWB_HUD_C::Construct()
 }
 
 
+// Function WB_HUD.WB_HUD_C.DestroyHUDInMainMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_HUD_C::DestroyHUDInMainMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_HUD_C", "DestroyHUDInMainMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_HUD.WB_HUD_C.ExecuteUbergraph_WB_HUD
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

@@ -399,7 +399,7 @@ static_assert(sizeof(UMasterServerSubsystem) == 0x000048, "Wrong size on UMaster
 static_assert(offsetof(UMasterServerSubsystem, NewMasterServerManager) == 0x000040, "Member 'UMasterServerSubsystem::NewMasterServerManager' has a wrong offset!");
 
 // Class MasterServerPlugin.NewMasterServerManager
-// 0x0290 (0x02B8 - 0x0028)
+// 0x0280 (0x02A8 - 0x0028)
 class UNewMasterServerManager : public UObject
 {
 public:
@@ -426,12 +426,12 @@ public:
 	FMulticastInlineDelegateProperty_             OnReceivedAccountPresenceUpdate;                   // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnReceivedAccountSettings;                         // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnReceivedAccountMessages;                         // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A0[0x48];                                     // 0x01A0(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	class UServerBrowser*                         _serverBrowser;                                    // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FString, struct FAccountPresenceEntry> AccountPresenceMap;                                // 0x01F0(0x0050)(NativeAccessSpecifierPrivate)
-	class FString                                 _serverUrl;                                        // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         _remainingReconnectTimeout;                        // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_254[0x64];                                     // 0x0254(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0[0x38];                                     // 0x01A0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class UServerBrowser*                         _serverBrowser;                                    // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FString, struct FAccountPresenceEntry> AccountPresenceMap;                                // 0x01E0(0x0050)(NativeAccessSpecifierPrivate)
+	class FString                                 _serverUrl;                                        // 0x0230(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         _remainingReconnectTimeout;                        // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_244[0x64];                                     // 0x0244(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BPTick(float DeltaTime);
@@ -472,7 +472,7 @@ public:
 	}
 };
 static_assert(alignof(UNewMasterServerManager) == 0x000008, "Wrong alignment on UNewMasterServerManager");
-static_assert(sizeof(UNewMasterServerManager) == 0x0002B8, "Wrong size on UNewMasterServerManager");
+static_assert(sizeof(UNewMasterServerManager) == 0x0002A8, "Wrong size on UNewMasterServerManager");
 static_assert(offsetof(UNewMasterServerManager, IsActive) == 0x000030, "Member 'UNewMasterServerManager::IsActive' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, AutoReconnect) == 0x000031, "Member 'UNewMasterServerManager::AutoReconnect' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnNotifyQuestChange) == 0x000038, "Member 'UNewMasterServerManager::OnNotifyQuestChange' has a wrong offset!");
@@ -492,10 +492,10 @@ static_assert(offsetof(UNewMasterServerManager, OnReceiveTeardownPacketDedicated
 static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountPresenceUpdate) == 0x000170, "Member 'UNewMasterServerManager::OnReceivedAccountPresenceUpdate' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountSettings) == 0x000180, "Member 'UNewMasterServerManager::OnReceivedAccountSettings' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountMessages) == 0x000190, "Member 'UNewMasterServerManager::OnReceivedAccountMessages' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _serverBrowser) == 0x0001E8, "Member 'UNewMasterServerManager::_serverBrowser' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, AccountPresenceMap) == 0x0001F0, "Member 'UNewMasterServerManager::AccountPresenceMap' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _serverUrl) == 0x000240, "Member 'UNewMasterServerManager::_serverUrl' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _remainingReconnectTimeout) == 0x000250, "Member 'UNewMasterServerManager::_remainingReconnectTimeout' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _serverBrowser) == 0x0001D8, "Member 'UNewMasterServerManager::_serverBrowser' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, AccountPresenceMap) == 0x0001E0, "Member 'UNewMasterServerManager::AccountPresenceMap' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _serverUrl) == 0x000230, "Member 'UNewMasterServerManager::_serverUrl' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _remainingReconnectTimeout) == 0x000240, "Member 'UNewMasterServerManager::_remainingReconnectTimeout' has a wrong offset!");
 
 // Class MasterServerPlugin.ServerBrowser
 // 0x00F0 (0x0118 - 0x0028)

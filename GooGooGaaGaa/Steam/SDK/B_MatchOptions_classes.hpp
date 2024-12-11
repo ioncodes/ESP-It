@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "S_PropLayoutData_structs.hpp"
 #include "ETeamSwitchingOption_structs.hpp"
 #include "SMapData_structs.hpp"
+#include "S_PropLayoutData_structs.hpp"
 #include "Engine_classes.hpp"
 
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -121,7 +121,7 @@ static_assert(offsetof(WB_CreateTradeScreen_C_OnPreviewKeyDown, CallFunc_GetGame
 static_assert(offsetof(WB_CreateTradeScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x0002D0, "Member 'WB_CreateTradeScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
 
 // Function WB_CreateTradeScreen.WB_CreateTradeScreen_C.PopulateList
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_CreateTradeScreen_C_PopulateList final
 {
 public:
@@ -129,53 +129,64 @@ public:
 	class UB_FriendScreenEntryData_C*             NewFriendEntry;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineFriendRef*                       CurrentFriendRef;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UOnlineFriendRef*>               Friends;                                           // 0x0020(0x0010)(Edit, BlueprintVisible)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0038(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* ObjectA, class UObject* ObjectB, bool* Result)> K2Node_CreateDelegate_OutputDelegate;              // 0x006C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility; // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53[0x1];                                       // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* ObjectA, class UObject* ObjectB, bool* Result)> K2Node_CreateDelegate_OutputDelegate;              // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0070(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_FriendScreenEntryData_C*             CallFunc_CreateObject_Object;                      // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_FriendScreenEntryData_C*             CallFunc_CreateObject_Object;                      // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x00A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CreateTradeScreen_C_PopulateList) == 0x000008, "Wrong alignment on WB_CreateTradeScreen_C_PopulateList");
-static_assert(sizeof(WB_CreateTradeScreen_C_PopulateList) == 0x0000A8, "Wrong size on WB_CreateTradeScreen_C_PopulateList");
+static_assert(sizeof(WB_CreateTradeScreen_C_PopulateList) == 0x0000B8, "Wrong size on WB_CreateTradeScreen_C_PopulateList");
 static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, ObjectDataArray) == 0x000000, "Member 'WB_CreateTradeScreen_C_PopulateList::ObjectDataArray' has a wrong offset!");
 static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, NewFriendEntry) == 0x000010, "Member 'WB_CreateTradeScreen_C_PopulateList::NewFriendEntry' has a wrong offset!");
 static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CurrentFriendRef) == 0x000018, "Member 'WB_CreateTradeScreen_C_PopulateList::CurrentFriendRef' has a wrong offset!");
 static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, Friends) == 0x000020, "Member 'WB_CreateTradeScreen_C_PopulateList::Friends' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000030, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetFriendsList_OutFriends) == 0x000038, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetFriendsList_ReturnValue) == 0x000048, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, Temp_int_Array_Index_Variable) == 0x00004C, "Member 'WB_CreateTradeScreen_C_PopulateList::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'WB_CreateTradeScreen_C_PopulateList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetUserAttribute_Found) == 0x000054, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetUserAttribute_Found' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetUserAttribute_ReturnValue) == 0x000058, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Add_IntInt_ReturnValue) == 0x000068, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_CreateDelegate_OutputDelegate) == 0x00006C, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Length_ReturnValue) == 0x00007C, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Greater_IntInt_ReturnValue) == 0x000080, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Add_ReturnValue) == 0x000084, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_CreateObject_Object) == 0x000088, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_CreateObject_Object' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Length_ReturnValue_1) == 0x000090, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'WB_CreateTradeScreen_C_PopulateList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, Temp_int_Array_Index_Variable) == 0x000038, "Member 'WB_CreateTradeScreen_C_PopulateList::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetGameInstance_ReturnValue) == 0x000040, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_DynamicCast_AsB_Game_Instance) == 0x000048, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility) == 0x000051, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Not_PreBool_ReturnValue) == 0x000052, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_CreateDelegate_OutputDelegate) == 0x000054, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000068, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetFriendsList_OutFriends) == 0x000070, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetFriendsList_ReturnValue) == 0x000080, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Length_ReturnValue) == 0x000084, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Greater_IntInt_ReturnValue) == 0x000088, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Add_ReturnValue) == 0x00008C, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_CreateObject_Object) == 0x000090, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_CreateObject_Object' has a wrong offset!");
 static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Get_Item) == 0x000098, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Less_IntInt_ReturnValue) == 0x0000A0, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetInviteStatus_ReturnValue) == 0x0000A1, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_SwitchEnum_CmpSuccess) == 0x0000A2, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetInviteStatus_ReturnValue) == 0x0000A5, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, K2Node_SwitchEnum_CmpSuccess) == 0x0000A6, "Member 'WB_CreateTradeScreen_C_PopulateList::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetUserAttribute_Found) == 0x0000A7, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(WB_CreateTradeScreen_C_PopulateList, CallFunc_GetUserAttribute_ReturnValue) == 0x0000A8, "Member 'WB_CreateTradeScreen_C_PopulateList::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
 
 // Function WB_CreateTradeScreen.WB_CreateTradeScreen_C.SortByAscii
 // 0x0080 (0x0080 - 0x0000)

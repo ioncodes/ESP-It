@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "WB_TileViewButton_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "E_PowerupRuleType_structs.hpp"
+#include "WB_TileViewButton_classes.hpp"
 
 
 namespace SDK

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "WB_TileViewButton_classes.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
-#include "WB_TileViewButton_classes.hpp"
 
 
 namespace SDK

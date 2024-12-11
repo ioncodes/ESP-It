@@ -32,8 +32,8 @@ public:
 	void BndEvt__WB_Button_K2Node_ComponentBoundEvent_17_Clicked__DelegateSignature();
 	void ExecuteUbergraph_WP_FriendEntry(int32 EntryPoint);
 	class FText GetFriendName();
-	void OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage);
-	void OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage);
+	void OnFailure_3B29CDF84EBCC33AA20D569145F79DBD(const TArray<class FString>& FilteredStrings);
+	void OnSuccess_3B29CDF84EBCC33AA20D569145F79DBD(const TArray<class FString>& FilteredStrings);
 	void SetFriendInfoValue(class UOnlineFriendRef* FriendRef);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 

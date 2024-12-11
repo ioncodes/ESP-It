@@ -40,6 +40,21 @@ static_assert(alignof(FSHAHashData) == 0x000001, "Wrong alignment on FSHAHashDat
 static_assert(sizeof(FSHAHashData) == 0x000014, "Wrong size on FSHAHashData");
 static_assert(offsetof(FSHAHashData, Hash) == 0x000000, "Member 'FSHAHashData::Hash' has a wrong offset!");
 
+// ScriptStruct BuildPatchServices.ChunkPartData
+// 0x0018 (0x0018 - 0x0000)
+struct FChunkPartData final
+{
+public:
+	struct FGuid                                  Guid;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Offset;                                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Size;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FChunkPartData) == 0x000004, "Wrong alignment on FChunkPartData");
+static_assert(sizeof(FChunkPartData) == 0x000018, "Wrong size on FChunkPartData");
+static_assert(offsetof(FChunkPartData, Guid) == 0x000000, "Member 'FChunkPartData::Guid' has a wrong offset!");
+static_assert(offsetof(FChunkPartData, Offset) == 0x000010, "Member 'FChunkPartData::Offset' has a wrong offset!");
+static_assert(offsetof(FChunkPartData, Size) == 0x000014, "Member 'FChunkPartData::Size' has a wrong offset!");
+
 // ScriptStruct BuildPatchServices.ChunkInfoData
 // 0x0040 (0x0040 - 0x0000)
 struct FChunkInfoData final
@@ -60,21 +75,6 @@ static_assert(offsetof(FChunkInfoData, Hash) == 0x000010, "Member 'FChunkInfoDat
 static_assert(offsetof(FChunkInfoData, ShaHash) == 0x000018, "Member 'FChunkInfoData::ShaHash' has a wrong offset!");
 static_assert(offsetof(FChunkInfoData, FileSize) == 0x000030, "Member 'FChunkInfoData::FileSize' has a wrong offset!");
 static_assert(offsetof(FChunkInfoData, GroupNumber) == 0x000038, "Member 'FChunkInfoData::GroupNumber' has a wrong offset!");
-
-// ScriptStruct BuildPatchServices.ChunkPartData
-// 0x0018 (0x0018 - 0x0000)
-struct FChunkPartData final
-{
-public:
-	struct FGuid                                  Guid;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Offset;                                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Size;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FChunkPartData) == 0x000004, "Wrong alignment on FChunkPartData");
-static_assert(sizeof(FChunkPartData) == 0x000018, "Wrong size on FChunkPartData");
-static_assert(offsetof(FChunkPartData, Guid) == 0x000000, "Member 'FChunkPartData::Guid' has a wrong offset!");
-static_assert(offsetof(FChunkPartData, Offset) == 0x000010, "Member 'FChunkPartData::Offset' has a wrong offset!");
-static_assert(offsetof(FChunkPartData, Size) == 0x000014, "Member 'FChunkPartData::Size' has a wrong offset!");
 
 // ScriptStruct BuildPatchServices.FileManifestData
 // 0x0068 (0x0068 - 0x0000)

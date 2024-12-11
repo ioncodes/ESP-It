@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "SMapData_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
-#include "SMapData_structs.hpp"
-#include "E_MapListMenuState_structs.hpp"
 #include "UMG_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "E_MapListMenuState_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params
@@ -94,7 +94,7 @@ struct WB_MapList_C_ExecuteUbergraph_WB_MapList final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBlueprintResultSwitch                        CallFunc_ShowWebURLUI_Result;                      // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
@@ -125,7 +125,7 @@ public:
 	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x0090(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_Event_Key;                                  // 0x00A8(0x0018)(HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -137,14 +137,14 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00EE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_ExecuteUbergraph_WB_MapList) == 0x000008, "Wrong alignment on WB_MapList_C_ExecuteUbergraph_WB_MapList");
 static_assert(sizeof(WB_MapList_C_ExecuteUbergraph_WB_MapList) == 0x0000F0, "Wrong size on WB_MapList_C_ExecuteUbergraph_WB_MapList");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, EntryPoint) == 0x000000, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue) == 0x000004, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_ComponentBoundEvent_bIsChecked) == 0x000005, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowWebURLUI_Result) == 0x000006, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowWebURLUI_Result' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowWebURLUI_AllowedDomains) == 0x000008, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowWebURLUI_AllowedDomains' has a wrong offset!");
@@ -168,7 +168,7 @@ static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_CreateDe
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_InputKeyEvent_Key) == 0x000090, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_InputKeyEvent_Key' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_Event_Key) == 0x0000A8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_Event_Key' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_2) == 0x0000C0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0000C1, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue) == 0x0000C1, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_3) == 0x0000C2, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_4) == 0x0000C8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x0000D0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
@@ -178,8 +178,8 @@ static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassI
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue) == 0x0000E9, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x0000EA, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000EB, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_SwitchPlatform_ReturnValue) == 0x0000EC, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_IsChecked_ReturnValue) == 0x0000ED, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_IsChecked_ReturnValue) == 0x0000EC, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0000ED, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000EE, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.Get_AutoSaveCheckbox_Visibility
@@ -554,9 +554,9 @@ struct WB_MapList_C_OnGamepadTab final
 public:
 	struct FKey                                   TabKey;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	bool                                          ToRight;                                           // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue_1;             // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue_1;             // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -565,9 +565,9 @@ static_assert(alignof(WB_MapList_C_OnGamepadTab) == 0x000008, "Wrong alignment o
 static_assert(sizeof(WB_MapList_C_OnGamepadTab) == 0x000020, "Wrong size on WB_MapList_C_OnGamepadTab");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, TabKey) == 0x000000, "Member 'WB_MapList_C_OnGamepadTab::TabKey' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, ToRight) == 0x000018, "Member 'WB_MapList_C_OnGamepadTab::ToRight' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_SwitchPlatform_ReturnValue) == 0x000019, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_IsConsoleBuild_ReturnValue) == 0x000019, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x00001A, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_SwitchPlatform_ReturnValue_1) == 0x00001B, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_SwitchPlatform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_IsConsoleBuild_ReturnValue_1) == 0x00001B, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_IsConsoleBuild_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_ClassIsChildOf_ReturnValue) == 0x00001D, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess_1) == 0x00001E, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");

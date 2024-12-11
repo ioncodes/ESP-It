@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "S_PropData_structs.hpp"
-#include "WB_TileViewButton_classes.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "WB_TileViewButton_classes.hpp"
 
 
 namespace SDK

@@ -12,6 +12,7 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -48,6 +49,8 @@ public:
 	void OnApply();
 	void OnBack();
 	void OnSpecialAction();
+	void PreConstruct(bool IsDesignTime);
+	class UWidget* StoreButtonCustomNavigation(EUINavigation Navigation_0);
 	void StorePageClosed(bool PurchaseMade);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 

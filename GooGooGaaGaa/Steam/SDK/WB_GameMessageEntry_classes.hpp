@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EGameMessageType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SGameMessage_structs.hpp"
+#include "EGameMessageType_structs.hpp"
 #include "UMG_classes.hpp"
 
 

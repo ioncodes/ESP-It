@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EventNames.EventNames
-// NumValues: 0x0018
+// NumValues: 0x0019
 enum class EventNames : uint8
 {
 	NewEnumerator1                           = 0,
@@ -41,7 +41,8 @@ enum class EventNames : uint8
 	NewEnumerator23                          = 20,
 	NewEnumerator24                          = 21,
 	NewEnumerator25                          = 22,
-	EventNames_MAX                           = 23,
+	NewEnumerator26                          = 23,
+	EventNames_MAX                           = 24,
 };
 
 }

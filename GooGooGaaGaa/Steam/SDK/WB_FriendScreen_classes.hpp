@@ -55,6 +55,8 @@ public:
 	void Destruct();
 	void ExecuteUbergraph_WB_FriendScreen(int32 EntryPoint);
 	void GamepadAcceptKeyPressed();
+	void GamepadLeftTriggerPressed();
+	void GamepadRightTriggerPressed();
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	class UWidget* GetWidgetLeftToCurrent();
 	class UWidget* GetWidgetRightToCurrent();

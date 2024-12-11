@@ -24,7 +24,8 @@ namespace SDK
 class UB_WitchHuntFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetPlatformLogo(const class FString& PlatformName, class UObject* __WorldContext, class UTexture2D** PlatformLogo);
+	static void ShouldDisableVisibilityDueToPlatformExclusivity(class UB_GameInstance_C* GameInstance, class UOnlineUserRef* UserRef, class UObject* __WorldContext, bool* DisableVisibility);
+	static void GetPlatformLogo(const class FString& MyPlatformPlatform, const class FString& TheirPlatformName, class UObject* __WorldContext, class UTexture2D** PlatformLogo);
 	static bool HasWitchInvisiblePowerup(class AActor* Actor, class UObject* __WorldContext);
 	static class APawn* GetActorFromWitchAsPawn(class AActor* Actor, class UObject* __WorldContext);
 	static bool IsActorFromWitch(class AActor* Actor, class UObject* __WorldContext);

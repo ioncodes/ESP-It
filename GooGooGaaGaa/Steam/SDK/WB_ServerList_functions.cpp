@@ -895,46 +895,6 @@ void UWB_ServerList_C::OnCallFailed_4FD22F724DF4D5357C18E9B01100757B(bool bWasSu
 }
 
 
-// Function WB_ServerList.WB_ServerList_C.OnCallFailed_542E60C048C6474E739F6A86CFE54BE5
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_ServerList_C::OnCallFailed_542E60C048C6474E739F6A86CFE54BE5(bool bWasSuccessful)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerList_C", "OnCallFailed_542E60C048C6474E739F6A86CFE54BE5");
-
-	Params::WB_ServerList_C_OnCallFailed_542E60C048C6474E739F6A86CFE54BE5 Parms{};
-
-	Parms.bWasSuccessful = bWasSuccessful;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_ServerList.WB_ServerList_C.OnCallFailed_542E60C048C6474E739F6A86DDCDE7A0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_ServerList_C::OnCallFailed_542E60C048C6474E739F6A86DDCDE7A0(bool bWasSuccessful)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerList_C", "OnCallFailed_542E60C048C6474E739F6A86DDCDE7A0");
-
-	Params::WB_ServerList_C_OnCallFailed_542E60C048C6474E739F6A86DDCDE7A0 Parms{};
-
-	Parms.bWasSuccessful = bWasSuccessful;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WB_ServerList.WB_ServerList_C.OnCallFailed_AD6707DF4707F115F8ED888FE9A43620
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -975,41 +935,41 @@ void UWB_ServerList_C::OnCallFailed_AD6707DF4707F115F8ED888FFB8C9A65(bool bWasSu
 }
 
 
-// Function WB_ServerList.WB_ServerList_C.OnCancelFindSessionsComplete_542E60C048C6474E739F6A86CFE54BE5
-// (BlueprintCallable, BlueprintEvent)
+// Function WB_ServerList.WB_ServerList_C.OnFailure_9B3ACF534FAB6A87C559A6984DEFD5EE
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_ServerList_C::OnCancelFindSessionsComplete_542E60C048C6474E739F6A86CFE54BE5(bool bWasSuccessful)
+void UWB_ServerList_C::OnFailure_9B3ACF534FAB6A87C559A6984DEFD5EE(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerList_C", "OnCancelFindSessionsComplete_542E60C048C6474E739F6A86CFE54BE5");
+		Func = Class->GetFunction("WB_ServerList_C", "OnFailure_9B3ACF534FAB6A87C559A6984DEFD5EE");
 
-	Params::WB_ServerList_C_OnCancelFindSessionsComplete_542E60C048C6474E739F6A86CFE54BE5 Parms{};
+	Params::WB_ServerList_C_OnFailure_9B3ACF534FAB6A87C559A6984DEFD5EE Parms{};
 
-	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WB_ServerList.WB_ServerList_C.OnCancelFindSessionsComplete_542E60C048C6474E739F6A86DDCDE7A0
-// (BlueprintCallable, BlueprintEvent)
+// Function WB_ServerList.WB_ServerList_C.OnFailure_9B3ACF534FAB6A87C559A6985FC779AB
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_ServerList_C::OnCancelFindSessionsComplete_542E60C048C6474E739F6A86DDCDE7A0(bool bWasSuccessful)
+void UWB_ServerList_C::OnFailure_9B3ACF534FAB6A87C559A6985FC779AB(const TArray<class FString>& FilteredStrings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ServerList_C", "OnCancelFindSessionsComplete_542E60C048C6474E739F6A86DDCDE7A0");
+		Func = Class->GetFunction("WB_ServerList_C", "OnFailure_9B3ACF534FAB6A87C559A6985FC779AB");
 
-	Params::WB_ServerList_C_OnCancelFindSessionsComplete_542E60C048C6474E739F6A86DDCDE7A0 Parms{};
+	Params::WB_ServerList_C_OnFailure_9B3ACF534FAB6A87C559A6985FC779AB Parms{};
 
-	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.FilteredStrings = std::move(FilteredStrings);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1171,6 +1131,46 @@ void UWB_ServerList_C::OnSpecialAction()
 		Func = Class->GetFunction("WB_ServerList_C", "OnSpecialAction");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ServerList.WB_ServerList_C.OnSuccess_9B3ACF534FAB6A87C559A6984DEFD5EE
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWB_ServerList_C::OnSuccess_9B3ACF534FAB6A87C559A6984DEFD5EE(const TArray<class FString>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnSuccess_9B3ACF534FAB6A87C559A6984DEFD5EE");
+
+	Params::WB_ServerList_C_OnSuccess_9B3ACF534FAB6A87C559A6984DEFD5EE Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_ServerList.WB_ServerList_C.OnSuccess_9B3ACF534FAB6A87C559A6985FC779AB
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FString>                   FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWB_ServerList_C::OnSuccess_9B3ACF534FAB6A87C559A6985FC779AB(const TArray<class FString>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerList_C", "OnSuccess_9B3ACF534FAB6A87C559A6985FC779AB");
+
+	Params::WB_ServerList_C_OnSuccess_9B3ACF534FAB6A87C559A6985FC779AB Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,31 +10,67 @@
 
 #include "Basic.hpp"
 
-#include "EHighlightChannel_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EHighlightChannel_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK::Params
 {
 
+// Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.ShouldDisableVisibilityDueToPlatformExclusivity
+// 0x0038 (0x0038 - 0x0000)
+struct B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity final
+{
+public:
+	class UB_GameInstance_C*                      GameInstance;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineUserRef*                         UserRef;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableVisibility;                                 // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity) == 0x000038, "Wrong size on B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, GameInstance) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::GameInstance' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, UserRef) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::UserRef' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::__WorldContext' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, DisableVisibility) == 0x000018, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::DisableVisibility' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, CallFunc_GetUserAttribute_Found) == 0x000019, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, CallFunc_GetUserAttribute_ReturnValue) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000030, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, CallFunc_Not_PreBool_ReturnValue) == 0x000031, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity, CallFunc_Ps4Platform_ReturnValue) == 0x000032, "Member 'B_WitchHuntFunctionLibrary_C_ShouldDisableVisibilityDueToPlatformExclusivity::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
+
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.GetPlatformLogo
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_GetPlatformLogo final
 {
 public:
-	class FString                                 PlatformName;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             PlatformLogo;                                      // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 MyPlatformPlatform;                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TheirPlatformName;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             PlatformLogo;                                      // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue_1;        // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue_2;        // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_GetPlatformLogo");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo) == 0x000028, "Wrong size on B_WitchHuntFunctionLibrary_C_GetPlatformLogo");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, PlatformName) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::PlatformName' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, PlatformLogo) == 0x000018, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::PlatformLogo' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, K2Node_SwitchString_CmpSuccess) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo) == 0x000038, "Wrong size on B_WitchHuntFunctionLibrary_C_GetPlatformLogo");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, MyPlatformPlatform) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::MyPlatformPlatform' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, TheirPlatformName) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::TheirPlatformName' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, __WorldContext) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::__WorldContext' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, PlatformLogo) == 0x000028, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::PlatformLogo' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, K2Node_SwitchString_CmpSuccess) == 0x000030, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000031, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, CallFunc_EqualEqual_StriStri_ReturnValue_1) == 0x000032, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::CallFunc_EqualEqual_StriStri_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlatformLogo, CallFunc_EqualEqual_StriStri_ReturnValue_2) == 0x000033, "Member 'B_WitchHuntFunctionLibrary_C_GetPlatformLogo::CallFunc_EqualEqual_StriStri_ReturnValue_2' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.HasWitchInvisiblePowerup
 // 0x0040 (0x0040 - 0x0000)

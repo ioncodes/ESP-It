@@ -8358,9 +8358,9 @@ void ULowEntryExtendedStandardLibrary::GetCurrentVolumePercentage(double* Percen
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                           Target                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   TeamID                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   TeamId                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ULowEntryExtendedStandardLibrary::GetGenericTeamId(class AActor* Target, uint8* TeamID)
+void ULowEntryExtendedStandardLibrary::GetGenericTeamId(class AActor* Target, uint8* TeamId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8378,8 +8378,8 @@ void ULowEntryExtendedStandardLibrary::GetGenericTeamId(class AActor* Target, ui
 
 	Func->FunctionFlags = Flgs;
 
-	if (TeamID != nullptr)
-		*TeamID = Parms.TeamID;
+	if (TeamId != nullptr)
+		*TeamId = Parms.TeamId;
 }
 
 
@@ -12028,9 +12028,9 @@ void ULowEntryExtendedStandardLibrary::ServerChangeMap(class UObject* WorldConte
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Target                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   TeamID                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   TeamId                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ULowEntryExtendedStandardLibrary::SetGenericTeamId(class AActor* Target, const uint8 TeamID)
+void ULowEntryExtendedStandardLibrary::SetGenericTeamId(class AActor* Target, const uint8 TeamId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -12040,7 +12040,7 @@ void ULowEntryExtendedStandardLibrary::SetGenericTeamId(class AActor* Target, co
 	Params::LowEntryExtendedStandardLibrary_SetGenericTeamId Parms{};
 
 	Parms.Target = Target;
-	Parms.TeamID = TeamID;
+	Parms.TeamId = TeamId;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

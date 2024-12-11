@@ -10,12 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "UMG_structs.hpp"
 #include "E_PresenceStates_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_EntryPresence_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
 
 
 namespace SDK::Params
@@ -84,76 +85,101 @@ static_assert(offsetof(WB_OnlineFriends_C_CreateListEntryIfNecessary, CallFunc_R
 static_assert(offsetof(WB_OnlineFriends_C_CreateListEntryIfNecessary, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0000B1, "Member 'WB_OnlineFriends_C_CreateListEntryIfNecessary::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function WB_OnlineFriends.WB_OnlineFriends_C.ExecuteUbergraph_WB_OnlineFriends
-// 0x0130 (0x0130 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId)> K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0038(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId;                       // 0x0068(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_EntryPresence                       CallFunc_Map_Find_Value;                           // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveEntryFromList_WasSelectedItem;      // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_2;           // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1; // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry;               // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry_1;             // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsSelected;                    // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry_2;             // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Item, bool bIsSelected)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0118(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_3;           // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_1;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& FriendId)> K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0030(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId;                       // 0x0060(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_EntryPresence                       CallFunc_Map_Find_Value;                           // 0x0098(0x0010)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoveEntryFromList_WasSelectedItem;      // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_2;           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1; // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry;               // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry_1;             // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Item;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsSelected;                    // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_FriendScreenEntry_C*                CallFunc_GetSelectedEntry_ListEntry_2;             // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Item, bool bIsSelected)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0110(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_3;           // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends) == 0x000008, "Wrong alignment on WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends");
-static_assert(sizeof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends) == 0x000130, "Wrong size on WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends");
+static_assert(sizeof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends) == 0x000138, "Wrong size on WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends");
 static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, EntryPoint) == 0x000000, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue) == 0x000010, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved) == 0x000018, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_1) == 0x000020, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_UserId) == 0x000038, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_UserId' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_FriendId) == 0x000068, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_FriendId' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Contains_ReturnValue) == 0x000098, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Find_Value) == 0x0000A0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Find_ReturnValue) == 0x0000B0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_RemoveEntryFromList_WasSelectedItem) == 0x0000B1, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_RemoveEntryFromList_WasSelectedItem' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetGameInstance_ReturnValue) == 0x0000B8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Remove_ReturnValue) == 0x0000C0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000C8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_2) == 0x0000D8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1) == 0x0000E0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry) == 0x0000E8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry_1) == 0x0000F0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_IsValid_ReturnValue) == 0x0000F8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_IsValid_ReturnValue_1) == 0x0000F9, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_Item) == 0x000100, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_Item' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_bIsSelected) == 0x000108, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry_2) == 0x000110, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry_2' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CreateDelegate_OutputDelegate_1) == 0x000118, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_3) == 0x000128, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue) == 0x000008, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved) == 0x000010, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_1) == 0x000018, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_UserId) == 0x000030, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_UserId' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_FriendId) == 0x000060, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_FriendId' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Contains_ReturnValue) == 0x000090, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Find_Value) == 0x000098, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Find_ReturnValue) == 0x0000A8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_RemoveEntryFromList_WasSelectedItem) == 0x0000A9, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_RemoveEntryFromList_WasSelectedItem' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetGameInstance_ReturnValue) == 0x0000B0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_Map_Remove_ReturnValue) == 0x0000B8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000C0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_2) == 0x0000D0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1) == 0x0000D8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetIsFriendListRetrieved_FriendListRetrieved_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry) == 0x0000E0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry_1) == 0x0000E8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_IsValid_ReturnValue) == 0x0000F0, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_IsValid_ReturnValue_1) == 0x0000F1, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_Item) == 0x0000F8, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_Item' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CustomEvent_bIsSelected) == 0x000100, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CustomEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetSelectedEntry_ListEntry_2) == 0x000108, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetSelectedEntry_ListEntry_2' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_CreateDelegate_OutputDelegate_1) == 0x000110, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetBGameInstance_ReturnValue_3) == 0x000120, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetBGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000128, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_SwitchEnum_CmpSuccess) == 0x000130, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends, K2Node_SwitchEnum_CmpSuccess_1) == 0x000131, "Member 'WB_OnlineFriends_C_ExecuteUbergraph_WB_OnlineFriends::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.Get_ArrowIcon_Visibility
+// 0x0006 (0x0006 - 0x0000)
+struct WB_OnlineFriends_C_Get_ArrowIcon_Visibility final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility) == 0x000001, "Wrong alignment on WB_OnlineFriends_C_Get_ArrowIcon_Visibility");
+static_assert(sizeof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility) == 0x000006, "Wrong size on WB_OnlineFriends_C_Get_ArrowIcon_Visibility");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, ReturnValue) == 0x000000, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, Temp_bool_Variable) == 0x000001, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, Temp_byte_Variable) == 0x000002, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, Temp_byte_Variable_1) == 0x000003, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_Get_ArrowIcon_Visibility, K2Node_Select_Default) == 0x000005, "Member 'WB_OnlineFriends_C_Get_ArrowIcon_Visibility::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_OnlineFriends.WB_OnlineFriends_C.GetCurrentlyFocusedWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -364,7 +390,7 @@ static_assert(offsetof(WB_OnlineFriends_C_PlayingListDownNav, CallFunc_GetNumIte
 static_assert(offsetof(WB_OnlineFriends_C_PlayingListDownNav, CallFunc_Greater_IntInt_ReturnValue_1) == 0x00001C, "Member 'WB_OnlineFriends_C_PlayingListDownNav::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function WB_OnlineFriends.WB_OnlineFriends_C.RefreshFriendsList
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct WB_OnlineFriends_C_RefreshFriendsList final
 {
 public:
@@ -375,58 +401,79 @@ public:
 	struct FAccountPresenceEntry                  CurrentAccountPresence;                            // 0x0020(0x0030)(Edit, BlueprintVisible)
 	TArray<class UOnlineFriendRef*>               Friends;                                           // 0x0050(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0078(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineUserPresenceData                CallFunc_GetCachedPlatformPresence_Presence;       // 0x0090(0x00A8)()
-	EOnlineCachedResult_                          CallFunc_GetCachedPlatformPresence_CachedResult;   // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x0140(0x0030)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUserAttribute_Found;                   // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue;             // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUserAttribute_Found_1;                 // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserAttribute_ReturnValue_1;           // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess_1;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility; // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x2];                                       // 0x00B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineUserPresenceData                CallFunc_GetCachedPlatformPresence_Presence;       // 0x00B8(0x00A8)()
+	EOnlineCachedResult_                          CallFunc_GetCachedPlatformPresence_CachedResult;   // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetPresenceForUser_bIsValid;              // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAccountPresenceEntry                  CallFunc_GetPresenceForUser_Out;                   // 0x0168(0x0030)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x01B0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C2[0x2];                                      // 0x01C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_OnlineFriends_C_RefreshFriendsList) == 0x000008, "Wrong alignment on WB_OnlineFriends_C_RefreshFriendsList");
-static_assert(sizeof(WB_OnlineFriends_C_RefreshFriendsList) == 0x0001A8, "Wrong size on WB_OnlineFriends_C_RefreshFriendsList");
+static_assert(sizeof(WB_OnlineFriends_C_RefreshFriendsList) == 0x0001D0, "Wrong size on WB_OnlineFriends_C_RefreshFriendsList");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, EntryList) == 0x000000, "Member 'WB_OnlineFriends_C_RefreshFriendsList::EntryList' has a wrong offset!");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, NewPresence) == 0x000010, "Member 'WB_OnlineFriends_C_RefreshFriendsList::NewPresence' has a wrong offset!");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CurrentFriendRef) == 0x000018, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CurrentFriendRef' has a wrong offset!");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CurrentAccountPresence) == 0x000020, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CurrentAccountPresence' has a wrong offset!");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, Friends) == 0x000050, "Member 'WB_OnlineFriends_C_RefreshFriendsList::Friends' has a wrong offset!");
 static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, Temp_int_Array_Index_Variable) == 0x000060, "Member 'WB_OnlineFriends_C_RefreshFriendsList::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Not_PreBool_ReturnValue) == 0x000064, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000068, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, Temp_int_Loop_Counter_Variable) == 0x000070, "Member 'WB_OnlineFriends_C_RefreshFriendsList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetFriendsList_OutFriends) == 0x000078, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetFriendsList_ReturnValue) == 0x000088, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetCachedPlatformPresence_Presence) == 0x000090, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetCachedPlatformPresence_Presence' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetCachedPlatformPresence_CachedResult) == 0x000138, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetCachedPlatformPresence_CachedResult' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetPresenceForUser_bIsValid) == 0x000139, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetPresenceForUser_Out) == 0x000140, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchEnum_CmpSuccess) == 0x000170, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Array_Get_Item) == 0x000178, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_Found) == 0x000180, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_Found' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_ReturnValue) == 0x000188, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetInviteStatus_ReturnValue) == 0x000198, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Array_Length_ReturnValue) == 0x00019C, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchEnum_CmpSuccess_1) == 0x0001A0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Less_IntInt_ReturnValue) == 0x0001A1, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_Found) == 0x000064, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_Found' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_ReturnValue) == 0x000068, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_Found_1) == 0x000078, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_Found_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetUserAttribute_ReturnValue_1) == 0x000080, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetUserAttribute_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchString_CmpSuccess) == 0x000090, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchString_CmpSuccess_1) == 0x000091, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchString_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchEnum_CmpSuccess) == 0x000092, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Not_PreBool_ReturnValue) == 0x000093, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetGameInstance_ReturnValue) == 0x000098, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000A0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, Temp_int_Loop_Counter_Variable) == 0x0000AC, "Member 'WB_OnlineFriends_C_RefreshFriendsList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility) == 0x0000B0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_ShouldDisableVisibilityDueToPlatformExclusivity_DisableVisibility' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000B1, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Add_IntInt_ReturnValue) == 0x0000B4, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetCachedPlatformPresence_Presence) == 0x0000B8, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetCachedPlatformPresence_Presence' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetCachedPlatformPresence_CachedResult) == 0x000160, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetCachedPlatformPresence_CachedResult' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetPresenceForUser_bIsValid) == 0x000161, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetPresenceForUser_bIsValid' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetPresenceForUser_Out) == 0x000168, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetPresenceForUser_Out' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchEnum_CmpSuccess_1) == 0x000198, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0001A0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Array_Get_Item) == 0x0001A8, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetFriendsList_OutFriends) == 0x0001B0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetFriendsList_ReturnValue) == 0x0001C0, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_GetInviteStatus_ReturnValue) == 0x0001C1, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Array_Length_ReturnValue) == 0x0001C4, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, K2Node_SwitchEnum_CmpSuccess_2) == 0x0001C8, "Member 'WB_OnlineFriends_C_RefreshFriendsList::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_OnlineFriends_C_RefreshFriendsList, CallFunc_Less_IntInt_ReturnValue) == 0x0001C9, "Member 'WB_OnlineFriends_C_RefreshFriendsList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_OnlineFriends.WB_OnlineFriends_C.RemoveEntryFromList
 // 0x0038 (0x0038 - 0x0000)

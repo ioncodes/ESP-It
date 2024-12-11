@@ -10,6 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -72,105 +75,141 @@ static_assert(offsetof(B_ReportPlayerManager_C_CanReporterReport, CallFunc_Map_C
 static_assert(offsetof(B_ReportPlayerManager_C_CanReporterReport, CallFunc_Array_Contains_ReturnValue) == 0x000032, "Member 'B_ReportPlayerManager_C_CanReporterReport::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ReportPlayerManager_C_CanReporterReport, CallFunc_Not_PreBool_ReturnValue) == 0x000033, "Member 'B_ReportPlayerManager_C_CanReporterReport::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
+// Function B_ReportPlayerManager.B_ReportPlayerManager_C.ConstructReportJsonObject
+// 0x0100 (0x0100 - 0x0000)
+struct B_ReportPlayerManager_C_ConstructReportJsonObject final
+{
+public:
+	class APlayerState*                           PlayerToReport;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           ReportingPlayer;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Reason;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVaRestJsonObject*                      JsonRequest;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVaRestJsonObject*                      ReportJsonObject;                                  // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x0030(0x0030)(HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_6;                               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVaRestSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVaRestJsonObject*                      CallFunc_ConstructVaRestJsonObject_ReturnValue;    // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_DateTime_ToIso8601_String;                // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x00C0(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1; // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_ReportPlayerManager_C_ConstructReportJsonObject) == 0x000008, "Wrong alignment on B_ReportPlayerManager_C_ConstructReportJsonObject");
+static_assert(sizeof(B_ReportPlayerManager_C_ConstructReportJsonObject) == 0x000100, "Wrong size on B_ReportPlayerManager_C_ConstructReportJsonObject");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, PlayerToReport) == 0x000000, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::PlayerToReport' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, ReportingPlayer) == 0x000008, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::ReportingPlayer' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Reason) == 0x000010, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Reason' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, JsonRequest) == 0x000018, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::JsonRequest' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, ReportJsonObject) == 0x000020, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::ReportJsonObject' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable) == 0x000028, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x000030, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_1) == 0x000060, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x000068, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_2) == 0x000078, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_3) == 0x00007C, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_4) == 0x000080, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_5) == 0x000084, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, Temp_int_Variable_6) == 0x000088, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000090, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_ConstructVaRestJsonObject_ReturnValue) == 0x000098, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_ConstructVaRestJsonObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, K2Node_Select_Default) == 0x0000A0, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_UtcNow_ReturnValue) == 0x0000A8, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_UtcNow_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_DateTime_ToIso8601_String) == 0x0000B0, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_DateTime_ToIso8601_String' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x0000C0, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ConstructReportJsonObject, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1) == 0x0000F0, "Member 'B_ReportPlayerManager_C_ConstructReportJsonObject::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1' has a wrong offset!");
+
 // Function B_ReportPlayerManager.B_ReportPlayerManager_C.ExecuteUbergraph_B_ReportPlayerManager
-// 0x0178 (0x0178 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_DownloadedString_1;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_QueryId_1;                      // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& DownloadedString, int32 QueryID)> K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_DownloadedString;               // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_QueryId;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& DownloadedString, int32 QueryID)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class APlayerState*                           K2Node_CustomEvent_PlayerToReport;                 // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Reason;                         // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           K2Node_CustomEvent_Reporter;                       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId; // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1; // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanReporterReport_CanReport;              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_8;              // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_9;              // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UDownloadStringCallbackProxy*           CallFunc_UploadString_ReturnValue;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UReportSubsystem*                       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_6;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_7;                               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_1;                            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_2;                            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_3;                            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_4;                            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_5;                            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class APlayerState*                           K2Node_CustomEvent_PlayerToReport;                 // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Reason;                         // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           K2Node_CustomEvent_Reporter;                       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameMode_C*                          CallFunc_GetBGameMode_ReturnValue;                 // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue;    // 0x00B0(0x0030)(HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId; // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1;  // 0x0140(0x0030)(HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default_1;                           // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1; // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1; // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanReporterReport_CanReport;              // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager) == 0x000008, "Wrong alignment on B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager");
-static_assert(sizeof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager) == 0x000178, "Wrong size on B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager");
+static_assert(sizeof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager) == 0x0001B8, "Wrong size on B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager");
 static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, EntryPoint) == 0x000000, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_DownloadedString_1) == 0x000008, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_DownloadedString_1' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_QueryId_1) == 0x000018, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_QueryId_1' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CreateDelegate_OutputDelegate) == 0x00001C, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_DownloadedString) == 0x000030, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_DownloadedString' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_QueryId) == 0x000040, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_QueryId' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000044, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable) == 0x000054, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable) == 0x000058, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_PlayerToReport) == 0x000068, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_PlayerToReport' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_Reason) == 0x000070, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_Reason' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_Reporter) == 0x000078, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_Reporter' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId) == 0x000080, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000090, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Conv_IntToString_ReturnValue) == 0x0000A0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1) == 0x0000B0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue) == 0x0000C0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000D0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_CanReporterReport_CanReport) == 0x0000E0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_CanReporterReport_CanReport' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0000E8, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000F8, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000108, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000118, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_6) == 0x000128, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_7) == 0x000138, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_8) == 0x000148, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_9) == 0x000158, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_UploadString_ReturnValue) == 0x000168, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_UploadString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_IsValid_ReturnValue) == 0x000170, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function B_ReportPlayerManager.B_ReportPlayerManager_C.OnFailure_CA756CEE40EA230D71CCEA881C25CCBD
-// 0x0018 (0x0018 - 0x0000)
-struct B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD final
-{
-public:
-	class FString                                 DownloadedString;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         QueryID;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD) == 0x000008, "Wrong alignment on B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD");
-static_assert(sizeof(B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD) == 0x000018, "Wrong size on B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD");
-static_assert(offsetof(B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD, DownloadedString) == 0x000000, "Member 'B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD::DownloadedString' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD, QueryID) == 0x000010, "Member 'B_ReportPlayerManager_C_OnFailure_CA756CEE40EA230D71CCEA881C25CCBD::QueryID' has a wrong offset!");
-
-// Function B_ReportPlayerManager.B_ReportPlayerManager_C.OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD
-// 0x0018 (0x0018 - 0x0000)
-struct B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD final
-{
-public:
-	class FString                                 DownloadedString;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         QueryID;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD) == 0x000008, "Wrong alignment on B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD");
-static_assert(sizeof(B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD) == 0x000018, "Wrong size on B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD");
-static_assert(offsetof(B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD, DownloadedString) == 0x000000, "Member 'B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD::DownloadedString' has a wrong offset!");
-static_assert(offsetof(B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD, QueryID) == 0x000010, "Member 'B_ReportPlayerManager_C_OnSuccess_CA756CEE40EA230D71CCEA881C25CCBD::QueryID' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable) == 0x000010, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_1) == 0x000014, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_2) == 0x000018, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_3) == 0x00001C, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_4) == 0x000020, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_5) == 0x000024, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_6) == 0x000028, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_int_Variable_7) == 0x00002C, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_int_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable) == 0x000030, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable_1) == 0x000040, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable_2) == 0x000050, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable_3) == 0x000060, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable_4) == 0x000070, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, Temp_string_Variable_5) == 0x000080, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::Temp_string_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_PlayerToReport) == 0x000090, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_PlayerToReport' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_Reason) == 0x000098, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_Reason' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_CustomEvent_Reporter) == 0x0000A0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_CustomEvent_Reporter' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetBGameMode_ReturnValue) == 0x0000A8, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetBGameMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetPlayerStateUniqueNetId_ReturnValue) == 0x0000B0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetPlayerStateUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetObjectClass_ReturnValue) == 0x0000E0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0000E8, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId) == 0x0000F8, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Conv_NameToString_ReturnValue) == 0x000108, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue) == 0x000118, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_Select_Default) == 0x000128, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000130, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1) == 0x000140, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetPlayerStateUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, K2Node_Select_Default_1) == 0x000170, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1) == 0x000180, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000190, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1) == 0x0001A0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_GetNativePlatformAccountIdFromPlayerState_PlatformId_1' has a wrong offset!");
+static_assert(offsetof(B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager, CallFunc_CanReporterReport_CanReport) == 0x0001B0, "Member 'B_ReportPlayerManager_C_ExecuteUbergraph_B_ReportPlayerManager::CallFunc_CanReporterReport_CanReport' has a wrong offset!");
 
 // Function B_ReportPlayerManager.B_ReportPlayerManager_C.ReportPlayer
 // 0x0018 (0x0018 - 0x0000)

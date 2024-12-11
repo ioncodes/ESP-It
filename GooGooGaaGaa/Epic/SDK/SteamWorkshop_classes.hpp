@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SteamWorkshop_structs.hpp"
 #include "Engine_classes.hpp"
 #include "SteamGeneral_structs.hpp"
-#include "SteamWorkshop_structs.hpp"
 
 
 namespace SDK

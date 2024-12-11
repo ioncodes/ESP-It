@@ -311,8 +311,42 @@ void AB_GameMode_C::SpawnActionPlaceableStatic(class UClass* Class_0, const stru
 }
 
 
+// Function B_GameMode.B_GameMode_C.CheckIfCrossPlatformGame
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_GameMode_C::CheckIfCrossPlatformGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "CheckIfCrossPlatformGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.CheckIfCrossPlatformGameAfterJoin
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                JoiningController                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::CheckIfCrossPlatformGameAfterJoin(class APlayerController* JoiningController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "CheckIfCrossPlatformGameAfterJoin");
+
+	Params::B_GameMode_C_CheckIfCrossPlatformGameAfterJoin Parms{};
+
+	Parms.JoiningController = JoiningController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameMode.B_GameMode_C.GetPlayerIdForMatch
-// (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FUniqueNetIdRepl                 NetId                                                  (Parm, OutParm, HasGetValueTypeHash)
@@ -1931,6 +1965,126 @@ void AB_GameMode_C::OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2(class FName Se
 }
 
 
+// Function B_GameMode.B_GameMode_C.OnFailure_51806D7E463D79826CE53692A53AAAC2
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnFailure_51806D7E463D79826CE53692A53AAAC2(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnFailure_51806D7E463D79826CE53692A53AAAC2");
+
+	Params::B_GameMode_C_OnFailure_51806D7E463D79826CE53692A53AAAC2 Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_51806D7E463D79826CE53692A53AAAC2
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnSuccess_51806D7E463D79826CE53692A53AAAC2(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnSuccess_51806D7E463D79826CE53692A53AAAC2");
+
+	Params::B_GameMode_C_OnSuccess_51806D7E463D79826CE53692A53AAAC2 Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.OnFailure_273C0DFE40DFD0EA331D808B522EB1CC
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnFailure_273C0DFE40DFD0EA331D808B522EB1CC(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnFailure_273C0DFE40DFD0EA331D808B522EB1CC");
+
+	Params::B_GameMode_C_OnFailure_273C0DFE40DFD0EA331D808B522EB1CC Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC");
+
+	Params::B_GameMode_C_OnSuccess_273C0DFE40DFD0EA331D808B522EB1CC Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.OnFailure_6B22101E4F5020B89C7E4D9836EF42AA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnFailure_6B22101E4F5020B89C7E4D9836EF42AA(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnFailure_6B22101E4F5020B89C7E4D9836EF42AA");
+
+	Params::B_GameMode_C_OnFailure_6B22101E4F5020B89C7E4D9836EF42AA Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             FilteredStrings                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA(const TArray<struct FMatchPlayer>& FilteredStrings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA");
+
+	Params::B_GameMode_C_OnSuccess_6B22101E4F5020B89C7E4D9836EF42AA Parms{};
+
+	Parms.FilteredStrings = std::move(FilteredStrings);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameMode.B_GameMode_C.StartGame
 // (BlueprintCallable, BlueprintEvent)
 
@@ -2204,6 +2358,72 @@ void AB_GameMode_C::ShutdownServer()
 		Func = Class->GetFunction("B_GameMode_C", "ShutdownServer");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.JoinPlayersToMatchWithProfanity
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             Players                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::JoinPlayersToMatchWithProfanity(const TArray<struct FMatchPlayer>& Players)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "JoinPlayersToMatchWithProfanity");
+
+	Params::B_GameMode_C_JoinPlayersToMatchWithProfanity Parms{};
+
+	Parms.Players = std::move(Players);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.CreateMatchWithProfanity
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           MatchID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<struct FMatchPlayer>             Players                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::CreateMatchWithProfanity(const class FString& MatchID, TArray<struct FMatchPlayer>& Players)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "CreateMatchWithProfanity");
+
+	Params::B_GameMode_C_CreateMatchWithProfanity Parms{};
+
+	Parms.MatchID = std::move(MatchID);
+	Parms.Players = std::move(Players);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Players = std::move(Parms.Players);
+}
+
+
+// Function B_GameMode.B_GameMode_C.UpdateMatchDetailsWithProfanity
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FMatchPlayer>             Players                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FMatchTeam>               Teams                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_GameMode_C::UpdateMatchDetailsWithProfanity(const TArray<struct FMatchPlayer>& Players, const TArray<struct FMatchTeam>& Teams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "UpdateMatchDetailsWithProfanity");
+
+	Params::B_GameMode_C_UpdateMatchDetailsWithProfanity Parms{};
+
+	Parms.Players = std::move(Players);
+	Parms.Teams = std::move(Teams);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

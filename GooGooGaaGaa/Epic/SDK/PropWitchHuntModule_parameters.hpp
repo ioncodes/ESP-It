@@ -1296,15 +1296,39 @@ static_assert(sizeof(Logger_LogWarning) == 0x000010, "Wrong size on Logger_LogWa
 static_assert(offsetof(Logger_LogWarning, Text) == 0x000000, "Member 'Logger_LogWarning::Text' has a wrong offset!");
 
 // Function PropWitchHuntModule.MatchSubsystem.CreateGameMatch
-// 0x0010 (0x0010 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct MatchSubsystem_CreateGameMatch final
 {
 public:
-	TArray<struct FMatchPlayer>                   Players;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 MatchActivityId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMatchPlayer>                   Players;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MatchSubsystem_CreateGameMatch) == 0x000008, "Wrong alignment on MatchSubsystem_CreateGameMatch");
-static_assert(sizeof(MatchSubsystem_CreateGameMatch) == 0x000010, "Wrong size on MatchSubsystem_CreateGameMatch");
-static_assert(offsetof(MatchSubsystem_CreateGameMatch, Players) == 0x000000, "Member 'MatchSubsystem_CreateGameMatch::Players' has a wrong offset!");
+static_assert(sizeof(MatchSubsystem_CreateGameMatch) == 0x000020, "Wrong size on MatchSubsystem_CreateGameMatch");
+static_assert(offsetof(MatchSubsystem_CreateGameMatch, MatchActivityId) == 0x000000, "Member 'MatchSubsystem_CreateGameMatch::MatchActivityId' has a wrong offset!");
+static_assert(offsetof(MatchSubsystem_CreateGameMatch, Players) == 0x000010, "Member 'MatchSubsystem_CreateGameMatch::Players' has a wrong offset!");
+
+// Function PropWitchHuntModule.MatchSubsystem.GetSonyAccessToken
+// 0x0010 (0x0010 - 0x0000)
+struct MatchSubsystem_GetSonyAccessToken final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchSubsystem_GetSonyAccessToken) == 0x000008, "Wrong alignment on MatchSubsystem_GetSonyAccessToken");
+static_assert(sizeof(MatchSubsystem_GetSonyAccessToken) == 0x000010, "Wrong size on MatchSubsystem_GetSonyAccessToken");
+static_assert(offsetof(MatchSubsystem_GetSonyAccessToken, ReturnValue) == 0x000000, "Member 'MatchSubsystem_GetSonyAccessToken::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.MatchSubsystem.GetSonyBaseURL
+// 0x0010 (0x0010 - 0x0000)
+struct MatchSubsystem_GetSonyBaseURL final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchSubsystem_GetSonyBaseURL) == 0x000008, "Wrong alignment on MatchSubsystem_GetSonyBaseURL");
+static_assert(sizeof(MatchSubsystem_GetSonyBaseURL) == 0x000010, "Wrong size on MatchSubsystem_GetSonyBaseURL");
+static_assert(offsetof(MatchSubsystem_GetSonyBaseURL, ReturnValue) == 0x000000, "Member 'MatchSubsystem_GetSonyBaseURL::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.MatchSubsystem.JoinPlayerToMatch
 // 0x0010 (0x0010 - 0x0000)
@@ -1439,6 +1463,35 @@ public:
 static_assert(alignof(MatchSubsystem_UpdateMatchStatus) == 0x000001, "Wrong alignment on MatchSubsystem_UpdateMatchStatus");
 static_assert(sizeof(MatchSubsystem_UpdateMatchStatus) == 0x000001, "Wrong size on MatchSubsystem_UpdateMatchStatus");
 static_assert(offsetof(MatchSubsystem_UpdateMatchStatus, MatchStatus) == 0x000000, "Member 'MatchSubsystem_UpdateMatchStatus::MatchStatus' has a wrong offset!");
+
+// Function PropWitchHuntModule.MultiplayerStatusSubsystem.SetIsCrossPlatformGame
+// 0x0001 (0x0001 - 0x0000)
+struct MultiplayerStatusSubsystem_SetIsCrossPlatformGame final
+{
+public:
+	bool                                          bIsCrossPlatform;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MultiplayerStatusSubsystem_SetIsCrossPlatformGame) == 0x000001, "Wrong alignment on MultiplayerStatusSubsystem_SetIsCrossPlatformGame");
+static_assert(sizeof(MultiplayerStatusSubsystem_SetIsCrossPlatformGame) == 0x000001, "Wrong size on MultiplayerStatusSubsystem_SetIsCrossPlatformGame");
+static_assert(offsetof(MultiplayerStatusSubsystem_SetIsCrossPlatformGame, bIsCrossPlatform) == 0x000000, "Member 'MultiplayerStatusSubsystem_SetIsCrossPlatformGame::bIsCrossPlatform' has a wrong offset!");
+
+// Function PropWitchHuntModule.MultiplayerStatusSubsystem.SetIsUsingMultiplayerFeatures
+// 0x0008 (0x0008 - 0x0000)
+struct MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures final
+{
+public:
+	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUsingMPFeatures;                                // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSpectator;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCrossPlatform;                                  // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures) == 0x000004, "Wrong alignment on MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures");
+static_assert(sizeof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures) == 0x000008, "Wrong size on MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures");
+static_assert(offsetof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures, LocalUserNum) == 0x000000, "Member 'MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures::LocalUserNum' has a wrong offset!");
+static_assert(offsetof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures, bIsUsingMPFeatures) == 0x000004, "Member 'MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures::bIsUsingMPFeatures' has a wrong offset!");
+static_assert(offsetof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures, bIsSpectator) == 0x000005, "Member 'MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures::bIsSpectator' has a wrong offset!");
+static_assert(offsetof(MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures, bIsCrossPlatform) == 0x000006, "Member 'MultiplayerStatusSubsystem_SetIsUsingMultiplayerFeatures::bIsCrossPlatform' has a wrong offset!");
 
 // Function PropWitchHuntModule.BeaconPingCallbackProxy.BeaconPingString
 // 0x0030 (0x0030 - 0x0000)
@@ -1644,6 +1697,89 @@ static_assert(alignof(CallBackProxyPingServer_PingServer) == 0x000008, "Wrong al
 static_assert(sizeof(CallBackProxyPingServer_PingServer) == 0x000018, "Wrong size on CallBackProxyPingServer_PingServer");
 static_assert(offsetof(CallBackProxyPingServer_PingServer, ServerAddress) == 0x000000, "Member 'CallBackProxyPingServer_PingServer::ServerAddress' has a wrong offset!");
 static_assert(offsetof(CallBackProxyPingServer_PingServer, ReturnValue) == 0x000010, "Member 'CallBackProxyPingServer_PingServer::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterProfanityProxy.FilterProfanity
+// 0x0020 (0x0020 - 0x0000)
+struct FilterProfanityProxy_FilterProfanity final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         StringsToFilter;                                   // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UFilterProfanityProxy*                  ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FilterProfanityProxy_FilterProfanity) == 0x000008, "Wrong alignment on FilterProfanityProxy_FilterProfanity");
+static_assert(sizeof(FilterProfanityProxy_FilterProfanity) == 0x000020, "Wrong size on FilterProfanityProxy_FilterProfanity");
+static_assert(offsetof(FilterProfanityProxy_FilterProfanity, WorldContextObject) == 0x000000, "Member 'FilterProfanityProxy_FilterProfanity::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(FilterProfanityProxy_FilterProfanity, StringsToFilter) == 0x000008, "Member 'FilterProfanityProxy_FilterProfanity::StringsToFilter' has a wrong offset!");
+static_assert(offsetof(FilterProfanityProxy_FilterProfanity, ReturnValue) == 0x000018, "Member 'FilterProfanityProxy_FilterProfanity::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterProfanityProxy.FilterProfanityPS5
+// 0x0018 (0x0018 - 0x0000)
+struct FilterProfanityProxy_FilterProfanityPS5 final
+{
+public:
+	class FString                                 InOutString;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FilterProfanityProxy_FilterProfanityPS5) == 0x000008, "Wrong alignment on FilterProfanityProxy_FilterProfanityPS5");
+static_assert(sizeof(FilterProfanityProxy_FilterProfanityPS5) == 0x000018, "Wrong size on FilterProfanityProxy_FilterProfanityPS5");
+static_assert(offsetof(FilterProfanityProxy_FilterProfanityPS5, InOutString) == 0x000000, "Member 'FilterProfanityProxy_FilterProfanityPS5::InOutString' has a wrong offset!");
+static_assert(offsetof(FilterProfanityProxy_FilterProfanityPS5, ReturnValue) == 0x000010, "Member 'FilterProfanityProxy_FilterProfanityPS5::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterProfanityProxy.HandleMessageFilteringComplete
+// 0x0018 (0x0018 - 0x0000)
+struct FilterProfanityProxy_HandleMessageFilteringComplete final
+{
+public:
+	bool                                          Success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         FilteredStrings;                                   // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FilterProfanityProxy_HandleMessageFilteringComplete) == 0x000008, "Wrong alignment on FilterProfanityProxy_HandleMessageFilteringComplete");
+static_assert(sizeof(FilterProfanityProxy_HandleMessageFilteringComplete) == 0x000018, "Wrong size on FilterProfanityProxy_HandleMessageFilteringComplete");
+static_assert(offsetof(FilterProfanityProxy_HandleMessageFilteringComplete, Success) == 0x000000, "Member 'FilterProfanityProxy_HandleMessageFilteringComplete::Success' has a wrong offset!");
+static_assert(offsetof(FilterProfanityProxy_HandleMessageFilteringComplete, FilteredStrings) == 0x000008, "Member 'FilterProfanityProxy_HandleMessageFilteringComplete::FilteredStrings' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterProfanityProxy.HandleSingleMessageFilteringComplete
+// 0x0018 (0x0018 - 0x0000)
+struct FilterProfanityProxy_HandleSingleMessageFilteringComplete final
+{
+public:
+	bool                                          Success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FilteredStrings;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FilterProfanityProxy_HandleSingleMessageFilteringComplete) == 0x000008, "Wrong alignment on FilterProfanityProxy_HandleSingleMessageFilteringComplete");
+static_assert(sizeof(FilterProfanityProxy_HandleSingleMessageFilteringComplete) == 0x000018, "Wrong size on FilterProfanityProxy_HandleSingleMessageFilteringComplete");
+static_assert(offsetof(FilterProfanityProxy_HandleSingleMessageFilteringComplete, Success) == 0x000000, "Member 'FilterProfanityProxy_HandleSingleMessageFilteringComplete::Success' has a wrong offset!");
+static_assert(offsetof(FilterProfanityProxy_HandleSingleMessageFilteringComplete, FilteredStrings) == 0x000008, "Member 'FilterProfanityProxy_HandleSingleMessageFilteringComplete::FilteredStrings' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterMatchPlayerProfanityProxy.FilterProfanity
+// 0x0020 (0x0020 - 0x0000)
+struct FilterMatchPlayerProfanityProxy_FilterProfanity final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMatchPlayer>                   PlayersToFilter;                                   // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UFilterMatchPlayerProfanityProxy*       ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FilterMatchPlayerProfanityProxy_FilterProfanity) == 0x000008, "Wrong alignment on FilterMatchPlayerProfanityProxy_FilterProfanity");
+static_assert(sizeof(FilterMatchPlayerProfanityProxy_FilterProfanity) == 0x000020, "Wrong size on FilterMatchPlayerProfanityProxy_FilterProfanity");
+static_assert(offsetof(FilterMatchPlayerProfanityProxy_FilterProfanity, WorldContextObject) == 0x000000, "Member 'FilterMatchPlayerProfanityProxy_FilterProfanity::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(FilterMatchPlayerProfanityProxy_FilterProfanity, PlayersToFilter) == 0x000008, "Member 'FilterMatchPlayerProfanityProxy_FilterProfanity::PlayersToFilter' has a wrong offset!");
+static_assert(offsetof(FilterMatchPlayerProfanityProxy_FilterProfanity, ReturnValue) == 0x000018, "Member 'FilterMatchPlayerProfanityProxy_FilterProfanity::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.FilterMatchPlayerProfanityProxy.HandleFilterProfanityResponse
+// 0x0008 (0x0008 - 0x0000)
+struct FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse) == 0x000008, "Wrong alignment on FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse");
+static_assert(sizeof(FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse) == 0x000008, "Wrong size on FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse");
+static_assert(offsetof(FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse, Request) == 0x000000, "Member 'FilterMatchPlayerProfanityProxy_HandleFilterProfanityResponse::Request' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.AddActorComponent
 // 0x0018 (0x0018 - 0x0000)
@@ -1866,6 +2002,19 @@ static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, AvailableVirtual)
 static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, TotalPhysical) == 0x000018, "Member 'ProjectVersionBlueprint_GetMemoryStats::TotalPhysical' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, TotalVirtual) == 0x00001C, "Member 'ProjectVersionBlueprint_GetMemoryStats::TotalVirtual' has a wrong offset!");
 
+// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineEnvironment
+// 0x0018 (0x0018 - 0x0000)
+struct ProjectVersionBlueprint_GetOnlineEnvironment final
+{
+public:
+	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ProjectVersionBlueprint_GetOnlineEnvironment) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetOnlineEnvironment");
+static_assert(sizeof(ProjectVersionBlueprint_GetOnlineEnvironment) == 0x000018, "Wrong size on ProjectVersionBlueprint_GetOnlineEnvironment");
+static_assert(offsetof(ProjectVersionBlueprint_GetOnlineEnvironment, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetOnlineEnvironment::GameInstance' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_GetOnlineEnvironment, ReturnValue) == 0x000008, "Member 'ProjectVersionBlueprint_GetOnlineEnvironment::ReturnValue' has a wrong offset!");
+
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetProjectVersion
 // 0x0010 (0x0010 - 0x0000)
 struct ProjectVersionBlueprint_GetProjectVersion final
@@ -2044,6 +2193,34 @@ public:
 static_assert(alignof(ProjectVersionBlueprint_IsSwitchBuild) == 0x000001, "Wrong alignment on ProjectVersionBlueprint_IsSwitchBuild");
 static_assert(sizeof(ProjectVersionBlueprint_IsSwitchBuild) == 0x000001, "Wrong size on ProjectVersionBlueprint_IsSwitchBuild");
 static_assert(offsetof(ProjectVersionBlueprint_IsSwitchBuild, ReturnValue) == 0x000000, "Member 'ProjectVersionBlueprint_IsSwitchBuild::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.ProjectVersionBlueprint.IsVersionGreaterOrEqual
+// 0x0024 (0x0024 - 0x0000)
+struct ProjectVersionBlueprint_IsVersionGreaterOrEqual final
+{
+public:
+	int32                                         LeftMajor;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LeftMinor;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LeftBuild;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LeftPatch;                                         // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RightMajor;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RightMinor;                                        // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RightBuild;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RightPatch;                                        // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ProjectVersionBlueprint_IsVersionGreaterOrEqual) == 0x000004, "Wrong alignment on ProjectVersionBlueprint_IsVersionGreaterOrEqual");
+static_assert(sizeof(ProjectVersionBlueprint_IsVersionGreaterOrEqual) == 0x000024, "Wrong size on ProjectVersionBlueprint_IsVersionGreaterOrEqual");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, LeftMajor) == 0x000000, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::LeftMajor' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, LeftMinor) == 0x000004, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::LeftMinor' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, LeftBuild) == 0x000008, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::LeftBuild' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, LeftPatch) == 0x00000C, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::LeftPatch' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, RightMajor) == 0x000010, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::RightMajor' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, RightMinor) == 0x000014, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::RightMinor' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, RightBuild) == 0x000018, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::RightBuild' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, RightPatch) == 0x00001C, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::RightPatch' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_IsVersionGreaterOrEqual, ReturnValue) == 0x000020, "Member 'ProjectVersionBlueprint_IsVersionGreaterOrEqual::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.IsWindowsBuild
 // 0x0001 (0x0001 - 0x0000)
@@ -2508,6 +2685,24 @@ static_assert(alignof(ReplayWorldSubsystem_StartRecordingReplay) == 0x000008, "W
 static_assert(sizeof(ReplayWorldSubsystem_StartRecordingReplay) == 0x000020, "Wrong size on ReplayWorldSubsystem_StartRecordingReplay");
 static_assert(offsetof(ReplayWorldSubsystem_StartRecordingReplay, ReplayName) == 0x000000, "Member 'ReplayWorldSubsystem_StartRecordingReplay::ReplayName' has a wrong offset!");
 static_assert(offsetof(ReplayWorldSubsystem_StartRecordingReplay, FriendlyName) == 0x000010, "Member 'ReplayWorldSubsystem_StartRecordingReplay::FriendlyName' has a wrong offset!");
+
+// Function PropWitchHuntModule.ReportSubsystem.ReportPlayer
+// 0x0038 (0x0038 - 0x0000)
+struct ReportSubsystem_ReportPlayer final
+{
+public:
+	class FString                                 ReporterPUID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReportedPUID;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReasonId;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ExtraInfo;                                         // 0x0028(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ReportSubsystem_ReportPlayer) == 0x000008, "Wrong alignment on ReportSubsystem_ReportPlayer");
+static_assert(sizeof(ReportSubsystem_ReportPlayer) == 0x000038, "Wrong size on ReportSubsystem_ReportPlayer");
+static_assert(offsetof(ReportSubsystem_ReportPlayer, ReporterPUID) == 0x000000, "Member 'ReportSubsystem_ReportPlayer::ReporterPUID' has a wrong offset!");
+static_assert(offsetof(ReportSubsystem_ReportPlayer, ReportedPUID) == 0x000010, "Member 'ReportSubsystem_ReportPlayer::ReportedPUID' has a wrong offset!");
+static_assert(offsetof(ReportSubsystem_ReportPlayer, ReasonId) == 0x000020, "Member 'ReportSubsystem_ReportPlayer::ReasonId' has a wrong offset!");
+static_assert(offsetof(ReportSubsystem_ReportPlayer, ExtraInfo) == 0x000028, "Member 'ReportSubsystem_ReportPlayer::ExtraInfo' has a wrong offset!");
 
 // Function PropWitchHuntModule.SessionSubsystem.GetActiveGameSession
 // 0x0128 (0x0128 - 0x0000)

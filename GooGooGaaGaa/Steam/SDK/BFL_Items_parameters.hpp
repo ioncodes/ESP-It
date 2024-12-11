@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SGrantedItem_structs.hpp"
 #include "SClientItemUnlock_structs.hpp"
 #include "EItemUnlockType_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "SGrantedItem_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
 
 

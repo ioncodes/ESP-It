@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params
@@ -114,29 +114,28 @@ public:
 	bool                                          UserGeneratedContent;                              // 0x01C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FOnlineSessionSettingBP> CurrentExtraSessings;                              // 0x01C8(0x0050)(Edit, BlueprintVisible)
-	TMap<class FName, struct FOnlineSessionSettingBP> CallFunc_GetExtraSessionSettings_ExtraSettings;    // 0x0218(0x0050)()
-	class FName                                   Temp_name_Variable;                                // 0x0268(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable_1;                              // 0x0274(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingBP                CallFunc_Map_Find_Value;                           // 0x0288(0x0030)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSessionSettingValue_As_Bool;           // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CA[0x2];                                      // 0x02CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSessionSettingValue_As_Int;            // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetSessionSettingValue_As_Float;          // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_GetSessionSettingValue_As_Int_64;         // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSessionSettingValue_As_String;         // 0x02E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetCanCommunicateOnline_CanCommunicate;   // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FOnlineSessionSettingBP> CallFunc_GetExtraSessionSettings_ExtraSettings;    // 0x0220(0x0050)()
+	class FName                                   Temp_name_Variable;                                // 0x0270(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x0278(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingBP                CallFunc_Map_Find_Value;                           // 0x0280(0x0030)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSessionSettingValue_As_Bool;           // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSessionSettingValue_As_Int;            // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetSessionSettingValue_As_Float;          // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_GetSessionSettingValue_As_Int_64;         // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSessionSettingValue_As_String;         // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Contains_ReturnValue;                     // 0x02F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F3[0x5];                                      // 0x02F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_GetCanCommunicateOnline_CanCommunicate;   // 0x02F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSessionDedicatedServer_Is_Dedicated;    // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -189,23 +188,23 @@ static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CurrentServer) 
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, ServerEowData) == 0x0001B8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::ServerEowData' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, UserGeneratedContent) == 0x0001C0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::UserGeneratedContent' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CurrentExtraSessings) == 0x0001C8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CurrentExtraSessings' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetExtraSessionSettings_ExtraSettings) == 0x000218, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetExtraSessionSettings_ExtraSettings' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, Temp_name_Variable) == 0x000268, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_SwitchPlatform_ReturnValue) == 0x000270, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, Temp_name_Variable_1) == 0x000274, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetGameInstance_ReturnValue) == 0x000280, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Map_Find_Value) == 0x000288, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Map_Find_ReturnValue) == 0x0002B8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, K2Node_DynamicCast_AsB_Game_Instance) == 0x0002C0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, K2Node_DynamicCast_bSuccess) == 0x0002C8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Bool) == 0x0002C9, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Bool' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Int) == 0x0002CC, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Int' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Float) == 0x0002D0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Float' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Int_64) == 0x0002D8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Int_64' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_String) == 0x0002E0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_String' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetCanCommunicateOnline_CanCommunicate) == 0x0002F0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetCanCommunicateOnline_CanCommunicate' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_IsConsoleBuild_ReturnValue) == 0x000218, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetExtraSessionSettings_ExtraSettings) == 0x000220, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetExtraSessionSettings_ExtraSettings' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, Temp_name_Variable) == 0x000270, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, Temp_name_Variable_1) == 0x000278, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::Temp_name_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Map_Find_Value) == 0x000280, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Map_Find_ReturnValue) == 0x0002B0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetGameInstance_ReturnValue) == 0x0002B8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Bool) == 0x0002C0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Bool' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Int) == 0x0002C4, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Int' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Float) == 0x0002C8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Float' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_Int_64) == 0x0002D0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_Int_64' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetSessionSettingValue_As_String) == 0x0002D8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetSessionSettingValue_As_String' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, K2Node_DynamicCast_AsB_Game_Instance) == 0x0002E8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, K2Node_DynamicCast_bSuccess) == 0x0002F0, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Contains_ReturnValue) == 0x0002F1, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Not_PreBool_ReturnValue) == 0x0002F2, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetCanCommunicateOnline_CanCommunicate) == 0x0002F2, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetCanCommunicateOnline_CanCommunicate' has a wrong offset!");
+static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_Not_PreBool_ReturnValue) == 0x0002F3, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetOwningPlayer_ReturnValue) == 0x0002F8, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_IsSessionDedicatedServer_Is_Dedicated) == 0x000300, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_IsSessionDedicatedServer_Is_Dedicated' has a wrong offset!");
 static_assert(offsetof(WB_ServerListBase_C_HandleServerFoundEOS, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000308, "Member 'WB_ServerListBase_C_HandleServerFoundEOS::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");

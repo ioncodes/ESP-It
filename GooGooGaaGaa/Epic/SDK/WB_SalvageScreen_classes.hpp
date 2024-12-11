@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
-#include "Engine_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
 #include "B_Rarity_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
 #include "WB_CategoryMenuScreen_classes.hpp"
+#include "S_ItemInfo_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
+#include "E_Slot_structs.hpp"
 
 
 namespace SDK

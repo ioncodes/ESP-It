@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "DeveloperSettings_classes.hpp"
 #include "Niagara_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "NiagaraCore_structs.hpp"
-#include "NiagaraCore_classes.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
-#include "MovieScene_classes.hpp"
 #include "NiagaraShader_structs.hpp"
 #include "NiagaraShader_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
+#include "NiagaraCore_structs.hpp"
+#include "NiagaraCore_classes.hpp"
+#include "MovieScene_classes.hpp"
 
 
 namespace SDK
@@ -933,6 +933,23 @@ static_assert(alignof(UNiagaraStatelessModule_Drag) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UNiagaraStatelessModule_Drag) == 0x000050, "Wrong size on UNiagaraStatelessModule_Drag");
 static_assert(offsetof(UNiagaraStatelessModule_Drag, DragDistribution) == 0x000030, "Member 'UNiagaraStatelessModule_Drag::DragDistribution' has a wrong offset!");
 
+// Class Niagara.NiagaraEventReceiverEmitterAction
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraEventReceiverEmitterAction : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraEventReceiverEmitterAction">();
+	}
+	static class UNiagaraEventReceiverEmitterAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraEventReceiverEmitterAction>();
+	}
+};
+static_assert(alignof(UNiagaraEventReceiverEmitterAction) == 0x000008, "Wrong alignment on UNiagaraEventReceiverEmitterAction");
+static_assert(sizeof(UNiagaraEventReceiverEmitterAction) == 0x000028, "Wrong size on UNiagaraEventReceiverEmitterAction");
+
 // Class Niagara.NiagaraStatelessModule_DynamicMaterialParameters
 // 0x00A8 (0x00D8 - 0x0030)
 class UNiagaraStatelessModule_DynamicMaterialParameters final : public UNiagaraStatelessModule
@@ -1073,149 +1090,6 @@ static_assert(sizeof(UNiagaraStatelessModule_MeshIndex) == 0x000058, "Wrong size
 static_assert(offsetof(UNiagaraStatelessModule_MeshIndex, MeshIndex) == 0x000030, "Member 'UNiagaraStatelessModule_MeshIndex::MeshIndex' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_MeshIndex, MeshIndexWeight) == 0x000048, "Member 'UNiagaraStatelessModule_MeshIndex::MeshIndexWeight' has a wrong offset!");
 
-// Class Niagara.NiagaraRendererProperties
-// 0x0098 (0x00C0 - 0x0028)
-class UNiagaraRendererProperties : public UNiagaraMergeable
-{
-public:
-	struct FNiagaraPlatformSet                    Platforms;                                         // 0x0028(0x0030)(Edit, NativeAccessSpecifierPublic)
-	int32                                         SortOrderHint;                                     // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRendererMotionVectorSetting           MotionVectorSetting;                               // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RendererEnabledBinding;                            // 0x0060(0x0038)(Edit, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInCullProxies;                               // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  OuterEmitterVersion;                               // 0x009C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x14];                                      // 0x00AC(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraRendererProperties">();
-	}
-	static class UNiagaraRendererProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraRendererProperties>();
-	}
-};
-static_assert(alignof(UNiagaraRendererProperties) == 0x000008, "Wrong alignment on UNiagaraRendererProperties");
-static_assert(sizeof(UNiagaraRendererProperties) == 0x0000C0, "Wrong size on UNiagaraRendererProperties");
-static_assert(offsetof(UNiagaraRendererProperties, Platforms) == 0x000028, "Member 'UNiagaraRendererProperties::Platforms' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, SortOrderHint) == 0x000058, "Member 'UNiagaraRendererProperties::SortOrderHint' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, MotionVectorSetting) == 0x00005C, "Member 'UNiagaraRendererProperties::MotionVectorSetting' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, RendererEnabledBinding) == 0x000060, "Member 'UNiagaraRendererProperties::RendererEnabledBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, bIsEnabled) == 0x000098, "Member 'UNiagaraRendererProperties::bIsEnabled' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, bAllowInCullProxies) == 0x000099, "Member 'UNiagaraRendererProperties::bAllowInCullProxies' has a wrong offset!");
-static_assert(offsetof(UNiagaraRendererProperties, OuterEmitterVersion) == 0x00009C, "Member 'UNiagaraRendererProperties::OuterEmitterVersion' has a wrong offset!");
-
-// Class Niagara.NiagaraMeshRendererProperties
-// 0x05D0 (0x0690 - 0x00C0)
-class UNiagaraMeshRendererProperties final : public UNiagaraRendererProperties
-{
-public:
-	TArray<struct FNiagaraMeshRendererMeshProperties> Meshes;                                            // 0x00C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraSortMode                              SortMode;                                          // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRendererSortPrecision                 SortPrecision;                                     // 0x00D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRendererGpuTranslucentLatency         GpuTranslucentLatency;                             // 0x00D3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverrideMaterials : 1;                            // 0x00D4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseHeterogeneousVolumes : 1;                      // 0x00D4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSortOnlyWhenTranslucent : 1;                      // 0x00D4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSubImageBlend : 1;                                // 0x00D4(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableFrustumCulling : 1;                         // 0x00D4(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableCameraDistanceCulling : 1;                  // 0x00D4(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableMeshFlipbook : 1;                           // 0x00D4(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLockedAxisEnable : 1;                             // 0x00D4(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bCastShadows : 1;                                  // 0x00D8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNiagaraMeshMaterialOverride>   OverrideMaterials;                                 // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FNiagaraMeshMICOverride>        MICOverrideMaterials;                              // 0x00F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              SubImageSize;                                      // 0x0100(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LockedAxis;                                        // 0x0110(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                MeshBoundsScale;                                   // 0x0128(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraMeshFacingMode                        FacingMode;                                        // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraMeshLockedAxisSpace                   LockedAxisSpace;                                   // 0x0141(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinCameraDistance;                                 // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCameraDistance;                                 // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        RendererVisibility;                                // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0150(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0188(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01C0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       MeshOrientationBinding;                            // 0x01F8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       ScaleBinding;                                      // 0x0230(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SubImageIndexBinding;                              // 0x0268(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x02A0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x02D8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0310(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0348(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0380(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       CustomSortingBinding;                              // 0x03B8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x03F0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       CameraOffsetBinding;                               // 0x0428(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0460(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       MeshIndexBinding;                                  // 0x0498(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x04D0(0x0050)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x0520(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevScaleBinding;                                  // 0x0558(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevMeshOrientationBinding;                        // 0x0590(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevCameraOffsetBinding;                           // 0x05C8(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevVelocityBinding;                               // 0x0600(0x0038)(Transient, NativeAccessSpecifierPublic)
-	uint32                                        MaterialParamValidMask;                            // 0x0638(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_63C[0x54];                                     // 0x063C(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraMeshRendererProperties">();
-	}
-	static class UNiagaraMeshRendererProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraMeshRendererProperties>();
-	}
-};
-static_assert(alignof(UNiagaraMeshRendererProperties) == 0x000008, "Wrong alignment on UNiagaraMeshRendererProperties");
-static_assert(sizeof(UNiagaraMeshRendererProperties) == 0x000690, "Wrong size on UNiagaraMeshRendererProperties");
-static_assert(offsetof(UNiagaraMeshRendererProperties, Meshes) == 0x0000C0, "Member 'UNiagaraMeshRendererProperties::Meshes' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, SourceMode) == 0x0000D0, "Member 'UNiagaraMeshRendererProperties::SourceMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, SortMode) == 0x0000D1, "Member 'UNiagaraMeshRendererProperties::SortMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, SortPrecision) == 0x0000D2, "Member 'UNiagaraMeshRendererProperties::SortPrecision' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, GpuTranslucentLatency) == 0x0000D3, "Member 'UNiagaraMeshRendererProperties::GpuTranslucentLatency' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, OverrideMaterials) == 0x0000E0, "Member 'UNiagaraMeshRendererProperties::OverrideMaterials' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MICOverrideMaterials) == 0x0000F0, "Member 'UNiagaraMeshRendererProperties::MICOverrideMaterials' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, SubImageSize) == 0x000100, "Member 'UNiagaraMeshRendererProperties::SubImageSize' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, LockedAxis) == 0x000110, "Member 'UNiagaraMeshRendererProperties::LockedAxis' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MeshBoundsScale) == 0x000128, "Member 'UNiagaraMeshRendererProperties::MeshBoundsScale' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, FacingMode) == 0x000140, "Member 'UNiagaraMeshRendererProperties::FacingMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, LockedAxisSpace) == 0x000141, "Member 'UNiagaraMeshRendererProperties::LockedAxisSpace' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MinCameraDistance) == 0x000144, "Member 'UNiagaraMeshRendererProperties::MinCameraDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MaxCameraDistance) == 0x000148, "Member 'UNiagaraMeshRendererProperties::MaxCameraDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, RendererVisibility) == 0x00014C, "Member 'UNiagaraMeshRendererProperties::RendererVisibility' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PositionBinding) == 0x000150, "Member 'UNiagaraMeshRendererProperties::PositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, ColorBinding) == 0x000188, "Member 'UNiagaraMeshRendererProperties::ColorBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, VelocityBinding) == 0x0001C0, "Member 'UNiagaraMeshRendererProperties::VelocityBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MeshOrientationBinding) == 0x0001F8, "Member 'UNiagaraMeshRendererProperties::MeshOrientationBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, ScaleBinding) == 0x000230, "Member 'UNiagaraMeshRendererProperties::ScaleBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, SubImageIndexBinding) == 0x000268, "Member 'UNiagaraMeshRendererProperties::SubImageIndexBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterialBinding) == 0x0002A0, "Member 'UNiagaraMeshRendererProperties::DynamicMaterialBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial1Binding) == 0x0002D8, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial2Binding) == 0x000310, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial3Binding) == 0x000348, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialRandomBinding) == 0x000380, "Member 'UNiagaraMeshRendererProperties::MaterialRandomBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, CustomSortingBinding) == 0x0003B8, "Member 'UNiagaraMeshRendererProperties::CustomSortingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, NormalizedAgeBinding) == 0x0003F0, "Member 'UNiagaraMeshRendererProperties::NormalizedAgeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, CameraOffsetBinding) == 0x000428, "Member 'UNiagaraMeshRendererProperties::CameraOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, RendererVisibilityTagBinding) == 0x000460, "Member 'UNiagaraMeshRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MeshIndexBinding) == 0x000498, "Member 'UNiagaraMeshRendererProperties::MeshIndexBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialParameters) == 0x0004D0, "Member 'UNiagaraMeshRendererProperties::MaterialParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PrevPositionBinding) == 0x000520, "Member 'UNiagaraMeshRendererProperties::PrevPositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PrevScaleBinding) == 0x000558, "Member 'UNiagaraMeshRendererProperties::PrevScaleBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PrevMeshOrientationBinding) == 0x000590, "Member 'UNiagaraMeshRendererProperties::PrevMeshOrientationBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PrevCameraOffsetBinding) == 0x0005C8, "Member 'UNiagaraMeshRendererProperties::PrevCameraOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, PrevVelocityBinding) == 0x000600, "Member 'UNiagaraMeshRendererProperties::PrevVelocityBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialParamValidMask) == 0x000638, "Member 'UNiagaraMeshRendererProperties::MaterialParamValidMask' has a wrong offset!");
-
 // Class Niagara.NiagaraStatelessModule_MeshRotationRate
 // 0x0030 (0x0060 - 0x0030)
 class UNiagaraStatelessModule_MeshRotationRate final : public UNiagaraStatelessModule
@@ -1236,6 +1110,48 @@ public:
 static_assert(alignof(UNiagaraStatelessModule_MeshRotationRate) == 0x000008, "Wrong alignment on UNiagaraStatelessModule_MeshRotationRate");
 static_assert(sizeof(UNiagaraStatelessModule_MeshRotationRate) == 0x000060, "Wrong size on UNiagaraStatelessModule_MeshRotationRate");
 static_assert(offsetof(UNiagaraStatelessModule_MeshRotationRate, RotationRateDistribution) == 0x000030, "Member 'UNiagaraStatelessModule_MeshRotationRate::RotationRateDistribution' has a wrong offset!");
+
+// Class Niagara.NiagaraEffectType
+// 0x0078 (0x00A0 - 0x0028)
+class UNiagaraEffectType final : public UObject
+{
+public:
+	bool                                          bAllowCullingForLocalPlayers;                      // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ENiagaraScalabilityUpdateFrequency            UpdateFrequency;                                   // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraCullReaction                          CullReaction;                                      // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSignificanceHandler*            SignificanceHandler;                               // 0x0038(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraSystemScalabilitySettings> DetailLevelScalabilitySettings;                    // 0x0040(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	struct FNiagaraSystemScalabilitySettingsArray SystemScalabilitySettings;                         // 0x0050(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraEmitterScalabilitySettingsArray EmitterScalabilitySettings;                        // 0x0060(0x0010)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraBaselineController*             PerformanceBaselineController;                     // 0x0078(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FNiagaraPerfBaselineStats              PerfBaselineStats;                                 // 0x0080(0x0010)(Config, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FGuid                                  PerfBaselineVersion;                               // 0x0090(0x0010)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraEffectType">();
+	}
+	static class UNiagaraEffectType* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraEffectType>();
+	}
+};
+static_assert(alignof(UNiagaraEffectType) == 0x000008, "Wrong alignment on UNiagaraEffectType");
+static_assert(sizeof(UNiagaraEffectType) == 0x0000A0, "Wrong size on UNiagaraEffectType");
+static_assert(offsetof(UNiagaraEffectType, bAllowCullingForLocalPlayers) == 0x000028, "Member 'UNiagaraEffectType::bAllowCullingForLocalPlayers' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, UpdateFrequency) == 0x00002C, "Member 'UNiagaraEffectType::UpdateFrequency' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, CullReaction) == 0x000030, "Member 'UNiagaraEffectType::CullReaction' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, SignificanceHandler) == 0x000038, "Member 'UNiagaraEffectType::SignificanceHandler' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, DetailLevelScalabilitySettings) == 0x000040, "Member 'UNiagaraEffectType::DetailLevelScalabilitySettings' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, SystemScalabilitySettings) == 0x000050, "Member 'UNiagaraEffectType::SystemScalabilitySettings' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, EmitterScalabilitySettings) == 0x000060, "Member 'UNiagaraEffectType::EmitterScalabilitySettings' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, PerformanceBaselineController) == 0x000078, "Member 'UNiagaraEffectType::PerformanceBaselineController' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, PerfBaselineStats) == 0x000080, "Member 'UNiagaraEffectType::PerfBaselineStats' has a wrong offset!");
+static_assert(offsetof(UNiagaraEffectType, PerfBaselineVersion) == 0x000090, "Member 'UNiagaraEffectType::PerfBaselineVersion' has a wrong offset!");
 
 // Class Niagara.NiagaraStatelessModule_RotateAroundPoint
 // 0x0018 (0x0048 - 0x0030)
@@ -1289,6 +1205,41 @@ static_assert(alignof(UNiagaraStatelessModule_ScaleColor) == 0x000008, "Wrong al
 static_assert(sizeof(UNiagaraStatelessModule_ScaleColor) == 0x000058, "Wrong size on UNiagaraStatelessModule_ScaleColor");
 static_assert(offsetof(UNiagaraStatelessModule_ScaleColor, ScaleDistribution) == 0x000030, "Member 'UNiagaraStatelessModule_ScaleColor::ScaleDistribution' has a wrong offset!");
 
+// Class Niagara.NiagaraBaselineController
+// 0x0040 (0x0068 - 0x0028)
+class UNiagaraBaselineController : public UObject
+{
+public:
+	float                                         TestDuration;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraEffectType*                     EffectType;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ANiagaraPerfBaselineActor*              Owner;                                             // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UNiagaraSystem>          System;                                            // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	class UNiagaraSystem* GetSystem();
+	void OnBeginTest();
+	void OnEndTest(const struct FNiagaraPerfBaselineStats& Stats);
+	void OnOwnerTick(float DeltaTime);
+	bool OnTickTest();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraBaselineController">();
+	}
+	static class UNiagaraBaselineController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraBaselineController>();
+	}
+};
+static_assert(alignof(UNiagaraBaselineController) == 0x000008, "Wrong alignment on UNiagaraBaselineController");
+static_assert(sizeof(UNiagaraBaselineController) == 0x000068, "Wrong size on UNiagaraBaselineController");
+static_assert(offsetof(UNiagaraBaselineController, TestDuration) == 0x000028, "Member 'UNiagaraBaselineController::TestDuration' has a wrong offset!");
+static_assert(offsetof(UNiagaraBaselineController, EffectType) == 0x000030, "Member 'UNiagaraBaselineController::EffectType' has a wrong offset!");
+static_assert(offsetof(UNiagaraBaselineController, Owner) == 0x000038, "Member 'UNiagaraBaselineController::Owner' has a wrong offset!");
+static_assert(offsetof(UNiagaraBaselineController, System) == 0x000040, "Member 'UNiagaraBaselineController::System' has a wrong offset!");
+
 // Class Niagara.NiagaraStatelessModule_ScaleMeshSize
 // 0x0048 (0x0078 - 0x0030)
 class UNiagaraStatelessModule_ScaleMeshSize final : public UNiagaraStatelessModule
@@ -1339,6 +1290,43 @@ static_assert(sizeof(UNiagaraStatelessModule_ScaleMeshSizeBySpeed) == 0x000060, 
 static_assert(offsetof(UNiagaraStatelessModule_ScaleMeshSizeBySpeed, VelocityThreshold) == 0x000030, "Member 'UNiagaraStatelessModule_ScaleMeshSizeBySpeed::VelocityThreshold' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_ScaleMeshSizeBySpeed, ScaleDistribution) == 0x000038, "Member 'UNiagaraStatelessModule_ScaleMeshSizeBySpeed::ScaleDistribution' has a wrong offset!");
 
+// Class Niagara.NiagaraFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static int32 AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject);
+	static class UNiagaraParameterCollectionInstance* GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection);
+	static void OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent);
+	static void OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh);
+	static void OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent);
+	static void ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32 CollisionGroup);
+	static void SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32 CollisionGroup);
+	static void SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32 CollisionGroup);
+	static void SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& FilteredBones);
+	static void SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& FilteredSockets);
+	static void SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& SamplingRegions);
+	static void SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture2DArray* Texture);
+	static void SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture);
+	static void SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture);
+	static class UNiagaraComponent* SpawnSystemAtLocation(const class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck);
+	static class UNiagaraComponent* SpawnSystemAtLocationWithParams(const struct FFXSystemSpawnParameters& SpawnParams);
+	static class UNiagaraComponent* SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, class FName AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck);
+	static class UNiagaraComponent* SpawnSystemAttachedWithParams(const struct FFXSystemSpawnParameters& SpawnParams);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraFunctionLibrary">();
+	}
+	static class UNiagaraFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraFunctionLibrary>();
+	}
+};
+static_assert(alignof(UNiagaraFunctionLibrary) == 0x000008, "Wrong alignment on UNiagaraFunctionLibrary");
+static_assert(sizeof(UNiagaraFunctionLibrary) == 0x000028, "Wrong size on UNiagaraFunctionLibrary");
+
 // Class Niagara.NiagaraStatelessModule_ScaleSpriteSize
 // 0x0048 (0x0078 - 0x0030)
 class UNiagaraStatelessModule_ScaleSpriteSize final : public UNiagaraStatelessModule
@@ -1365,66 +1353,6 @@ static_assert(sizeof(UNiagaraStatelessModule_ScaleSpriteSize) == 0x000078, "Wron
 static_assert(offsetof(UNiagaraStatelessModule_ScaleSpriteSize, ScaleDistribution) == 0x000030, "Member 'UNiagaraStatelessModule_ScaleSpriteSize::ScaleDistribution' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_ScaleSpriteSize, ScaleCurveRange) == 0x000058, "Member 'UNiagaraStatelessModule_ScaleSpriteSize::ScaleCurveRange' has a wrong offset!");
 
-// Class Niagara.NiagaraActor
-// 0x0010 (0x02A0 - 0x0290)
-class ANiagaraActor : public AActor
-{
-public:
-	class UNiagaraComponent*                      NiagaraComponent;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         bDestroyOnSystemFinish : 1;                        // 0x0298(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent);
-	void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);
-
-	bool GetDestroyOnSystemFinish() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraActor">();
-	}
-	static class ANiagaraActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANiagaraActor>();
-	}
-};
-static_assert(alignof(ANiagaraActor) == 0x000008, "Wrong alignment on ANiagaraActor");
-static_assert(sizeof(ANiagaraActor) == 0x0002A0, "Wrong size on ANiagaraActor");
-static_assert(offsetof(ANiagaraActor, NiagaraComponent) == 0x000290, "Member 'ANiagaraActor::NiagaraComponent' has a wrong offset!");
-
-// Class Niagara.NiagaraLensEffectBase
-// 0x0090 (0x0330 - 0x02A0)
-class ANiagaraLensEffectBase final : public ANiagaraActor
-{
-public:
-	uint8                                         Pad_2A0[0x10];                                     // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             DesiredRelativeTransform;                          // 0x02B0(0x0060)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BaseAuthoredFOV;                                   // 0x0310(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bAllowMultipleInstances : 1;                       // 0x0314(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bResetWhenRetriggered : 1;                         // 0x0314(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSubclassOf<class AActor>>             EmittersToTreatAsSame;                             // 0x0318(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class APlayerCameraManager*                   OwningCameraManager;                               // 0x0328(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraLensEffectBase">();
-	}
-	static class ANiagaraLensEffectBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANiagaraLensEffectBase>();
-	}
-};
-static_assert(alignof(ANiagaraLensEffectBase) == 0x000010, "Wrong alignment on ANiagaraLensEffectBase");
-static_assert(sizeof(ANiagaraLensEffectBase) == 0x000330, "Wrong size on ANiagaraLensEffectBase");
-static_assert(offsetof(ANiagaraLensEffectBase, DesiredRelativeTransform) == 0x0002B0, "Member 'ANiagaraLensEffectBase::DesiredRelativeTransform' has a wrong offset!");
-static_assert(offsetof(ANiagaraLensEffectBase, BaseAuthoredFOV) == 0x000310, "Member 'ANiagaraLensEffectBase::BaseAuthoredFOV' has a wrong offset!");
-static_assert(offsetof(ANiagaraLensEffectBase, EmittersToTreatAsSame) == 0x000318, "Member 'ANiagaraLensEffectBase::EmittersToTreatAsSame' has a wrong offset!");
-static_assert(offsetof(ANiagaraLensEffectBase, OwningCameraManager) == 0x000328, "Member 'ANiagaraLensEffectBase::OwningCameraManager' has a wrong offset!");
-
 // Class Niagara.NiagaraStatelessModule_ScaleSpriteSizeBySpeed
 // 0x0030 (0x0060 - 0x0030)
 class UNiagaraStatelessModule_ScaleSpriteSizeBySpeed final : public UNiagaraStatelessModule
@@ -1448,6 +1376,40 @@ static_assert(alignof(UNiagaraStatelessModule_ScaleSpriteSizeBySpeed) == 0x00000
 static_assert(sizeof(UNiagaraStatelessModule_ScaleSpriteSizeBySpeed) == 0x000060, "Wrong size on UNiagaraStatelessModule_ScaleSpriteSizeBySpeed");
 static_assert(offsetof(UNiagaraStatelessModule_ScaleSpriteSizeBySpeed, VelocityThreshold) == 0x000030, "Member 'UNiagaraStatelessModule_ScaleSpriteSizeBySpeed::VelocityThreshold' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_ScaleSpriteSizeBySpeed, ScaleDistribution) == 0x000038, "Member 'UNiagaraStatelessModule_ScaleSpriteSizeBySpeed::ScaleDistribution' has a wrong offset!");
+
+// Class Niagara.NiagaraSignificanceHandler
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraSignificanceHandler : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSignificanceHandler">();
+	}
+	static class UNiagaraSignificanceHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSignificanceHandler>();
+	}
+};
+static_assert(alignof(UNiagaraSignificanceHandler) == 0x000008, "Wrong alignment on UNiagaraSignificanceHandler");
+static_assert(sizeof(UNiagaraSignificanceHandler) == 0x000028, "Wrong size on UNiagaraSignificanceHandler");
+
+// Class Niagara.NiagaraSignificanceHandlerDistance
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraSignificanceHandlerDistance final : public UNiagaraSignificanceHandler
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSignificanceHandlerDistance">();
+	}
+	static class UNiagaraSignificanceHandlerDistance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSignificanceHandlerDistance>();
+	}
+};
+static_assert(alignof(UNiagaraSignificanceHandlerDistance) == 0x000008, "Wrong alignment on UNiagaraSignificanceHandlerDistance");
+static_assert(sizeof(UNiagaraSignificanceHandlerDistance) == 0x000028, "Wrong size on UNiagaraSignificanceHandlerDistance");
 
 // Class Niagara.NiagaraStatelessModule_ShapeLocation
 // 0x0048 (0x0078 - 0x0030)
@@ -1498,27 +1460,6 @@ static_assert(offsetof(UNiagaraStatelessModule_ShapeLocation, RingUDistribution)
 static_assert(offsetof(UNiagaraStatelessModule_ShapeLocation, SphereMin) == 0x00006C, "Member 'UNiagaraStatelessModule_ShapeLocation::SphereMin' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_ShapeLocation, SphereMax) == 0x000070, "Member 'UNiagaraStatelessModule_ShapeLocation::SphereMax' has a wrong offset!");
 
-// Class Niagara.NiagaraPreviewAxis
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraPreviewAxis : public UObject
-{
-public:
-	void ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32 PreviewIndex, bool bIsXAxis, class FString* OutLabelText);
-	int32 Num();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis">();
-	}
-	static class UNiagaraPreviewAxis* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis");
-static_assert(sizeof(UNiagaraPreviewAxis) == 0x000028, "Wrong size on UNiagaraPreviewAxis");
-
 // Class Niagara.NiagaraStatelessModule_SolveVelocitiesAndForces
 // 0x0000 (0x0030 - 0x0030)
 class UNiagaraStatelessModule_SolveVelocitiesAndForces final : public UNiagaraStatelessModule
@@ -1535,6 +1476,50 @@ public:
 };
 static_assert(alignof(UNiagaraStatelessModule_SolveVelocitiesAndForces) == 0x000008, "Wrong alignment on UNiagaraStatelessModule_SolveVelocitiesAndForces");
 static_assert(sizeof(UNiagaraStatelessModule_SolveVelocitiesAndForces) == 0x000030, "Wrong size on UNiagaraStatelessModule_SolveVelocitiesAndForces");
+
+// Class Niagara.NiagaraParameterCollectionInstance
+// 0x00C8 (0x00F0 - 0x0028)
+class UNiagaraParameterCollectionInstance final : public UObject
+{
+public:
+	class UNiagaraParameterCollection*            Collection;                                        // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraVariable>               OverridenParameters;                               // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterStore                 ParameterStorage;                                  // 0x0040(0x0088)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C8[0x28];                                      // 0x00C8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool GetBoolParameter(const class FString& InVariableName);
+	struct FLinearColor GetColorParameter(const class FString& InVariableName);
+	float GetFloatParameter(const class FString& InVariableName);
+	int32 GetIntParameter(const class FString& InVariableName);
+	struct FQuat GetQuatParameter(const class FString& InVariableName);
+	struct FVector2D GetVector2DParameter(const class FString& InVariableName);
+	struct FVector4 GetVector4Parameter(const class FString& InVariableName);
+	struct FVector GetVectorParameter(const class FString& InVariableName);
+	void SetBoolParameter(const class FString& InVariableName, bool InValue);
+	void SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue);
+	void SetFloatParameter(const class FString& InVariableName, float InValue);
+	void SetIntParameter(const class FString& InVariableName, int32 InValue);
+	void SetQuatParameter(const class FString& InVariableName, const struct FQuat& InValue);
+	void SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue);
+	void SetVector4Parameter(const class FString& InVariableName, const struct FVector4& InValue);
+	void SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraParameterCollectionInstance">();
+	}
+	static class UNiagaraParameterCollectionInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraParameterCollectionInstance>();
+	}
+};
+static_assert(alignof(UNiagaraParameterCollectionInstance) == 0x000008, "Wrong alignment on UNiagaraParameterCollectionInstance");
+static_assert(sizeof(UNiagaraParameterCollectionInstance) == 0x0000F0, "Wrong size on UNiagaraParameterCollectionInstance");
+static_assert(offsetof(UNiagaraParameterCollectionInstance, Collection) == 0x000028, "Member 'UNiagaraParameterCollectionInstance::Collection' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollectionInstance, OverridenParameters) == 0x000030, "Member 'UNiagaraParameterCollectionInstance::OverridenParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollectionInstance, ParameterStorage) == 0x000040, "Member 'UNiagaraParameterCollectionInstance::ParameterStorage' has a wrong offset!");
 
 // Class Niagara.NiagaraStatelessModule_SpriteFacingAndAlignment
 // 0x0020 (0x0050 - 0x0030)
@@ -1565,35 +1550,6 @@ static_assert(offsetof(UNiagaraStatelessModule_SpriteFacingAndAlignment, bSprite
 static_assert(offsetof(UNiagaraStatelessModule_SpriteFacingAndAlignment, SpriteFacing) == 0x000034, "Member 'UNiagaraStatelessModule_SpriteFacingAndAlignment::SpriteFacing' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_SpriteFacingAndAlignment, SpriteAlignment) == 0x000040, "Member 'UNiagaraStatelessModule_SpriteFacingAndAlignment::SpriteAlignment' has a wrong offset!");
 
-// Class Niagara.NiagaraParameterCollection
-// 0x0038 (0x0060 - 0x0028)
-class UNiagaraParameterCollection final : public UObject
-{
-public:
-	class FName                                   NameSpace;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FNiagaraVariable>               Parameters;                                        // 0x0030(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UMaterialParameterCollection*           SourceMaterialCollection;                          // 0x0040(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNiagaraParameterCollectionInstance*    DefaultInstance;                                   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGuid                                  CompileId;                                         // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraParameterCollection">();
-	}
-	static class UNiagaraParameterCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraParameterCollection>();
-	}
-};
-static_assert(alignof(UNiagaraParameterCollection) == 0x000008, "Wrong alignment on UNiagaraParameterCollection");
-static_assert(sizeof(UNiagaraParameterCollection) == 0x000060, "Wrong size on UNiagaraParameterCollection");
-static_assert(offsetof(UNiagaraParameterCollection, NameSpace) == 0x000028, "Member 'UNiagaraParameterCollection::NameSpace' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollection, Parameters) == 0x000030, "Member 'UNiagaraParameterCollection::Parameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollection, SourceMaterialCollection) == 0x000040, "Member 'UNiagaraParameterCollection::SourceMaterialCollection' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollection, DefaultInstance) == 0x000048, "Member 'UNiagaraParameterCollection::DefaultInstance' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollection, CompileId) == 0x000050, "Member 'UNiagaraParameterCollection::CompileId' has a wrong offset!");
-
 // Class Niagara.NiagaraStatelessModule_SpriteRotationRate
 // 0x0020 (0x0050 - 0x0030)
 class UNiagaraStatelessModule_SpriteRotationRate final : public UNiagaraStatelessModule
@@ -1614,6 +1570,74 @@ public:
 static_assert(alignof(UNiagaraStatelessModule_SpriteRotationRate) == 0x000008, "Wrong alignment on UNiagaraStatelessModule_SpriteRotationRate");
 static_assert(sizeof(UNiagaraStatelessModule_SpriteRotationRate) == 0x000050, "Wrong size on UNiagaraStatelessModule_SpriteRotationRate");
 static_assert(offsetof(UNiagaraStatelessModule_SpriteRotationRate, RotationRateDistribution) == 0x000030, "Member 'UNiagaraStatelessModule_SpriteRotationRate::RotationRateDistribution' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewAxis
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraPreviewAxis : public UObject
+{
+public:
+	void ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32 PreviewIndex, bool bIsXAxis, class FString* OutLabelText);
+	int32 Num();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis">();
+	}
+	static class UNiagaraPreviewAxis* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis");
+static_assert(sizeof(UNiagaraPreviewAxis) == 0x000028, "Wrong size on UNiagaraPreviewAxis");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamBase
+// 0x0010 (0x0038 - 0x0028)
+class UNiagaraPreviewAxis_InterpParamBase : public UNiagaraPreviewAxis
+{
+public:
+	class FName                                   Param;                                             // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         Count;                                             // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamBase">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamBase>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamBase) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamBase");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamBase) == 0x000038, "Wrong size on UNiagaraPreviewAxis_InterpParamBase");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamBase, Param) == 0x000028, "Member 'UNiagaraPreviewAxis_InterpParamBase::Param' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamBase, Count) == 0x000030, "Member 'UNiagaraPreviewAxis_InterpParamBase::Count' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamFloat
+// 0x0008 (0x0040 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamFloat final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	float                                         Min;                                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Max;                                               // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamFloat">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamFloat* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamFloat>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamFloat) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamFloat");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamFloat) == 0x000040, "Wrong size on UNiagaraPreviewAxis_InterpParamFloat");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamFloat, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamFloat::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamFloat, Max) == 0x00003C, "Member 'UNiagaraPreviewAxis_InterpParamFloat::Max' has a wrong offset!");
 
 // Class Niagara.NiagaraStatelessModule_SubUVAnimation
 // 0x0020 (0x0050 - 0x0030)
@@ -1652,45 +1676,6 @@ static_assert(offsetof(UNiagaraStatelessModule_SubUVAnimation, AnimationMode) ==
 static_assert(offsetof(UNiagaraStatelessModule_SubUVAnimation, LoopsPerSecond) == 0x000044, "Member 'UNiagaraStatelessModule_SubUVAnimation::LoopsPerSecond' has a wrong offset!");
 static_assert(offsetof(UNiagaraStatelessModule_SubUVAnimation, RandomChangeInterval) == 0x000048, "Member 'UNiagaraStatelessModule_SubUVAnimation::RandomChangeInterval' has a wrong offset!");
 
-// Class Niagara.NiagaraEventReceiverEmitterAction
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraEventReceiverEmitterAction : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraEventReceiverEmitterAction">();
-	}
-	static class UNiagaraEventReceiverEmitterAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraEventReceiverEmitterAction>();
-	}
-};
-static_assert(alignof(UNiagaraEventReceiverEmitterAction) == 0x000008, "Wrong alignment on UNiagaraEventReceiverEmitterAction");
-static_assert(sizeof(UNiagaraEventReceiverEmitterAction) == 0x000028, "Wrong size on UNiagaraEventReceiverEmitterAction");
-
-// Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles
-// 0x0008 (0x0030 - 0x0028)
-class UNiagaraEventReceiverEmitterAction_SpawnParticles final : public UNiagaraEventReceiverEmitterAction
-{
-public:
-	uint32                                        NumParticles;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraEventReceiverEmitterAction_SpawnParticles">();
-	}
-	static class UNiagaraEventReceiverEmitterAction_SpawnParticles* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraEventReceiverEmitterAction_SpawnParticles>();
-	}
-};
-static_assert(alignof(UNiagaraEventReceiverEmitterAction_SpawnParticles) == 0x000008, "Wrong alignment on UNiagaraEventReceiverEmitterAction_SpawnParticles");
-static_assert(sizeof(UNiagaraEventReceiverEmitterAction_SpawnParticles) == 0x000030, "Wrong size on UNiagaraEventReceiverEmitterAction_SpawnParticles");
-static_assert(offsetof(UNiagaraEventReceiverEmitterAction_SpawnParticles, NumParticles) == 0x000028, "Member 'UNiagaraEventReceiverEmitterAction_SpawnParticles::NumParticles' has a wrong offset!");
-
 // Class Niagara.NiagaraValidationRuleSet
 // 0x0010 (0x0038 - 0x0028)
 class UNiagaraValidationRuleSet final : public UObject
@@ -1711,6 +1696,29 @@ public:
 static_assert(alignof(UNiagaraValidationRuleSet) == 0x000008, "Wrong alignment on UNiagaraValidationRuleSet");
 static_assert(sizeof(UNiagaraValidationRuleSet) == 0x000038, "Wrong size on UNiagaraValidationRuleSet");
 static_assert(offsetof(UNiagaraValidationRuleSet, ValidationRules) == 0x000028, "Member 'UNiagaraValidationRuleSet::ValidationRules' has a wrong offset!");
+
+// Class Niagara.NiagaraPerfBaselineActor
+// 0x0010 (0x02A0 - 0x0290)
+class ANiagaraPerfBaselineActor final : public AActor
+{
+public:
+	class UNiagaraBaselineController*             Controller;                                        // 0x0290(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextRenderComponent*                   Label;                                             // 0x0298(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPerfBaselineActor">();
+	}
+	static class ANiagaraPerfBaselineActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ANiagaraPerfBaselineActor>();
+	}
+};
+static_assert(alignof(ANiagaraPerfBaselineActor) == 0x000008, "Wrong alignment on ANiagaraPerfBaselineActor");
+static_assert(sizeof(ANiagaraPerfBaselineActor) == 0x0002A0, "Wrong size on ANiagaraPerfBaselineActor");
+static_assert(offsetof(ANiagaraPerfBaselineActor, Controller) == 0x000290, "Member 'ANiagaraPerfBaselineActor::Controller' has a wrong offset!");
+static_assert(offsetof(ANiagaraPerfBaselineActor, Label) == 0x000298, "Member 'ANiagaraPerfBaselineActor::Label' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceActorComponent
 // 0x0048 (0x0080 - 0x0038)
@@ -1743,29 +1751,6 @@ static_assert(offsetof(UNiagaraDataInterfaceActorComponent, SourceActor) == 0x00
 static_assert(offsetof(UNiagaraDataInterfaceActorComponent, ActorOrComponentParameter) == 0x000058, "Member 'UNiagaraDataInterfaceActorComponent::ActorOrComponentParameter' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceActorComponent, bRequireCurrentFrameData) == 0x000078, "Member 'UNiagaraDataInterfaceActorComponent::bRequireCurrentFrameData' has a wrong offset!");
 
-// Class Niagara.NiagaraPrecompileContainer
-// 0x0018 (0x0040 - 0x0028)
-class UNiagaraPrecompileContainer final : public UObject
-{
-public:
-	TArray<class UNiagaraScript*>                 Scripts;                                           // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UNiagaraSystem*                         System;                                            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPrecompileContainer">();
-	}
-	static class UNiagaraPrecompileContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPrecompileContainer>();
-	}
-};
-static_assert(alignof(UNiagaraPrecompileContainer) == 0x000008, "Wrong alignment on UNiagaraPrecompileContainer");
-static_assert(sizeof(UNiagaraPrecompileContainer) == 0x000040, "Wrong size on UNiagaraPrecompileContainer");
-static_assert(offsetof(UNiagaraPrecompileContainer, Scripts) == 0x000028, "Member 'UNiagaraPrecompileContainer::Scripts' has a wrong offset!");
-static_assert(offsetof(UNiagaraPrecompileContainer, System) == 0x000038, "Member 'UNiagaraPrecompileContainer::System' has a wrong offset!");
-
 // Class Niagara.NiagaraDataInterfaceAsyncGpuTrace
 // 0x0010 (0x0048 - 0x0038)
 class UNiagaraDataInterfaceAsyncGpuTrace final : public UNiagaraDataInterface
@@ -1792,6 +1777,97 @@ static_assert(offsetof(UNiagaraDataInterfaceAsyncGpuTrace, MaxTracesPerParticle)
 static_assert(offsetof(UNiagaraDataInterfaceAsyncGpuTrace, MaxRetraces) == 0x00003C, "Member 'UNiagaraDataInterfaceAsyncGpuTrace::MaxRetraces' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceAsyncGpuTrace, TraceProvider) == 0x000040, "Member 'UNiagaraDataInterfaceAsyncGpuTrace::TraceProvider' has a wrong offset!");
 
+// Class Niagara.NiagaraRendererProperties
+// 0x0098 (0x00C0 - 0x0028)
+class UNiagaraRendererProperties : public UNiagaraMergeable
+{
+public:
+	struct FNiagaraPlatformSet                    Platforms;                                         // 0x0028(0x0030)(Edit, NativeAccessSpecifierPublic)
+	int32                                         SortOrderHint;                                     // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRendererMotionVectorSetting           MotionVectorSetting;                               // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RendererEnabledBinding;                            // 0x0060(0x0038)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInCullProxies;                               // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  OuterEmitterVersion;                               // 0x009C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x14];                                      // 0x00AC(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraRendererProperties">();
+	}
+	static class UNiagaraRendererProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraRendererProperties>();
+	}
+};
+static_assert(alignof(UNiagaraRendererProperties) == 0x000008, "Wrong alignment on UNiagaraRendererProperties");
+static_assert(sizeof(UNiagaraRendererProperties) == 0x0000C0, "Wrong size on UNiagaraRendererProperties");
+static_assert(offsetof(UNiagaraRendererProperties, Platforms) == 0x000028, "Member 'UNiagaraRendererProperties::Platforms' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, SortOrderHint) == 0x000058, "Member 'UNiagaraRendererProperties::SortOrderHint' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, MotionVectorSetting) == 0x00005C, "Member 'UNiagaraRendererProperties::MotionVectorSetting' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, RendererEnabledBinding) == 0x000060, "Member 'UNiagaraRendererProperties::RendererEnabledBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, bIsEnabled) == 0x000098, "Member 'UNiagaraRendererProperties::bIsEnabled' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, bAllowInCullProxies) == 0x000099, "Member 'UNiagaraRendererProperties::bAllowInCullProxies' has a wrong offset!");
+static_assert(offsetof(UNiagaraRendererProperties, OuterEmitterVersion) == 0x00009C, "Member 'UNiagaraRendererProperties::OuterEmitterVersion' has a wrong offset!");
+
+// Class Niagara.NiagaraLightRendererProperties
+// 0x0220 (0x02E0 - 0x00C0)
+class UNiagaraLightRendererProperties final : public UNiagaraRendererProperties
+{
+public:
+	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bUseInverseSquaredFalloff : 1;                     // 0x00C4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAffectsTranslucency : 1;                          // 0x00C4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAlphaScalesBrightness : 1;                        // 0x00C4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideInverseExposureBlend : 1;                 // 0x00C4(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RadiusScale;                                       // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultExponent;                                   // 0x00CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpecularScale;                                     // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector3f                              ColorAdd;                                          // 0x00D4(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InverseExposureBlend;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RendererVisibility;                                // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       LightRenderingEnabledBinding;                      // 0x00E8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       LightExponentBinding;                              // 0x0120(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0158(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0190(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RadiusBinding;                                     // 0x01C8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VolumetricScatteringBinding;                       // 0x0200(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0238(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SpecularScaleBinding;                              // 0x0270(0x0038)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A8[0x38];                                     // 0x02A8(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraLightRendererProperties">();
+	}
+	static class UNiagaraLightRendererProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraLightRendererProperties>();
+	}
+};
+static_assert(alignof(UNiagaraLightRendererProperties) == 0x000008, "Wrong alignment on UNiagaraLightRendererProperties");
+static_assert(sizeof(UNiagaraLightRendererProperties) == 0x0002E0, "Wrong size on UNiagaraLightRendererProperties");
+static_assert(offsetof(UNiagaraLightRendererProperties, SourceMode) == 0x0000C0, "Member 'UNiagaraLightRendererProperties::SourceMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, RadiusScale) == 0x0000C8, "Member 'UNiagaraLightRendererProperties::RadiusScale' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, DefaultExponent) == 0x0000CC, "Member 'UNiagaraLightRendererProperties::DefaultExponent' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, SpecularScale) == 0x0000D0, "Member 'UNiagaraLightRendererProperties::SpecularScale' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, ColorAdd) == 0x0000D4, "Member 'UNiagaraLightRendererProperties::ColorAdd' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, InverseExposureBlend) == 0x0000E0, "Member 'UNiagaraLightRendererProperties::InverseExposureBlend' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, RendererVisibility) == 0x0000E4, "Member 'UNiagaraLightRendererProperties::RendererVisibility' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, LightRenderingEnabledBinding) == 0x0000E8, "Member 'UNiagaraLightRendererProperties::LightRenderingEnabledBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, LightExponentBinding) == 0x000120, "Member 'UNiagaraLightRendererProperties::LightExponentBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, PositionBinding) == 0x000158, "Member 'UNiagaraLightRendererProperties::PositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, ColorBinding) == 0x000190, "Member 'UNiagaraLightRendererProperties::ColorBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, RadiusBinding) == 0x0001C8, "Member 'UNiagaraLightRendererProperties::RadiusBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, VolumetricScatteringBinding) == 0x000200, "Member 'UNiagaraLightRendererProperties::VolumetricScatteringBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, RendererVisibilityTagBinding) == 0x000238, "Member 'UNiagaraLightRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraLightRendererProperties, SpecularScaleBinding) == 0x000270, "Member 'UNiagaraLightRendererProperties::SpecularScaleBinding' has a wrong offset!");
+
 // Class Niagara.NiagaraDataInterfaceConsoleVariable
 // 0x0000 (0x0038 - 0x0038)
 class UNiagaraDataInterfaceConsoleVariable final : public UNiagaraDataInterface
@@ -1808,53 +1884,6 @@ public:
 };
 static_assert(alignof(UNiagaraDataInterfaceConsoleVariable) == 0x000008, "Wrong alignment on UNiagaraDataInterfaceConsoleVariable");
 static_assert(sizeof(UNiagaraDataInterfaceConsoleVariable) == 0x000038, "Wrong size on UNiagaraDataInterfaceConsoleVariable");
-
-// Class Niagara.NiagaraPreviewGrid
-// 0x0050 (0x02E0 - 0x0290)
-class ANiagaraPreviewGrid final : public AActor
-{
-public:
-	class UNiagaraSystem*                         System;                                            // 0x0290(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraPreviewGridResetMode                  ResetMode;                                         // 0x0298(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraPreviewAxis*                    PreviewAxisX;                                      // 0x02A0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UNiagaraPreviewAxis*                    PreviewAxisY;                                      // 0x02A8(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ANiagaraPreviewBase>        PreviewClass;                                      // 0x02B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpacingX;                                          // 0x02B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpacingY;                                          // 0x02BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumX;                                              // 0x02C0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         NumY;                                              // 0x02C4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UChildActorComponent*>           PreviewComponents;                                 // 0x02C8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ActivatePreviews(bool bReset);
-	void DeactivatePreviews();
-	void GetPreviews(TArray<class UNiagaraComponent*>* OutPreviews);
-	void SetPaused(bool bPaused);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewGrid">();
-	}
-	static class ANiagaraPreviewGrid* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANiagaraPreviewGrid>();
-	}
-};
-static_assert(alignof(ANiagaraPreviewGrid) == 0x000008, "Wrong alignment on ANiagaraPreviewGrid");
-static_assert(sizeof(ANiagaraPreviewGrid) == 0x0002E0, "Wrong size on ANiagaraPreviewGrid");
-static_assert(offsetof(ANiagaraPreviewGrid, System) == 0x000290, "Member 'ANiagaraPreviewGrid::System' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, ResetMode) == 0x000298, "Member 'ANiagaraPreviewGrid::ResetMode' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, PreviewAxisX) == 0x0002A0, "Member 'ANiagaraPreviewGrid::PreviewAxisX' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, PreviewAxisY) == 0x0002A8, "Member 'ANiagaraPreviewGrid::PreviewAxisY' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, PreviewClass) == 0x0002B0, "Member 'ANiagaraPreviewGrid::PreviewClass' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, SpacingX) == 0x0002B8, "Member 'ANiagaraPreviewGrid::SpacingX' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, SpacingY) == 0x0002BC, "Member 'ANiagaraPreviewGrid::SpacingY' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, NumX) == 0x0002C0, "Member 'ANiagaraPreviewGrid::NumX' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, NumY) == 0x0002C4, "Member 'ANiagaraPreviewGrid::NumY' has a wrong offset!");
-static_assert(offsetof(ANiagaraPreviewGrid, PreviewComponents) == 0x0002C8, "Member 'ANiagaraPreviewGrid::PreviewComponents' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceDebugDraw
 // 0x0008 (0x0040 - 0x0038)
@@ -1915,53 +1944,6 @@ static_assert(offsetof(UNiagaraDataInterfaceDynamicMesh, bHasTangentBasis) == 0x
 static_assert(offsetof(UNiagaraDataInterfaceDynamicMesh, bClearTrianglesPerFrame) == 0x00006A, "Member 'UNiagaraDataInterfaceDynamicMesh::bClearTrianglesPerFrame' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceDynamicMesh, DefaultBounds) == 0x000070, "Member 'UNiagaraDataInterfaceDynamicMesh::DefaultBounds' has a wrong offset!");
 
-// Class Niagara.NiagaraPreviewAxis_InterpParamBase
-// 0x0010 (0x0038 - 0x0028)
-class UNiagaraPreviewAxis_InterpParamBase : public UNiagaraPreviewAxis
-{
-public:
-	class FName                                   Param;                                             // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         Count;                                             // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamBase">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamBase>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamBase) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamBase");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamBase) == 0x000038, "Wrong size on UNiagaraPreviewAxis_InterpParamBase");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamBase, Param) == 0x000028, "Member 'UNiagaraPreviewAxis_InterpParamBase::Param' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamBase, Count) == 0x000030, "Member 'UNiagaraPreviewAxis_InterpParamBase::Count' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamInt32
-// 0x0008 (0x0040 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamInt32 final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	int32                                         Min;                                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         Max;                                               // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamInt32">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamInt32* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamInt32>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamInt32) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamInt32");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamInt32) == 0x000040, "Wrong size on UNiagaraPreviewAxis_InterpParamInt32");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamInt32, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamInt32::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamInt32, Max) == 0x00003C, "Member 'UNiagaraPreviewAxis_InterpParamInt32::Max' has a wrong offset!");
-
 // Class Niagara.NiagaraDataInterfaceEmitterProperties
 // 0x0010 (0x0048 - 0x0038)
 class UNiagaraDataInterfaceEmitterProperties final : public UNiagaraDataInterface
@@ -1984,6 +1966,55 @@ static_assert(alignof(UNiagaraDataInterfaceEmitterProperties) == 0x000008, "Wron
 static_assert(sizeof(UNiagaraDataInterfaceEmitterProperties) == 0x000048, "Wrong size on UNiagaraDataInterfaceEmitterProperties");
 static_assert(offsetof(UNiagaraDataInterfaceEmitterProperties, EmitterBinding) == 0x000038, "Member 'UNiagaraDataInterfaceEmitterProperties::EmitterBinding' has a wrong offset!");
 
+// Class Niagara.NiagaraScript
+// 0x0398 (0x03C0 - 0x0028)
+class UNiagaraScript final : public UNiagaraScriptBase
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	ENiagaraScriptUsage                           Usage;                                             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  UsageId;                                           // 0x0034(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraParameterStore                 RapidIterationParameters;                          // 0x0048(0x0088)(NativeAccessSpecifierPublic)
+	struct FNiagaraScriptExecutionParameterStore  ScriptExecutionParamStore;                         // 0x00D0(0x0090)(NativeAccessSpecifierPrivate)
+	TArray<struct FNiagaraBoundParameter>         ScriptExecutionBoundParameters;                    // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FNiagaraVMExecutableDataId             CachedScriptVMId;                                  // 0x0170(0x0058)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C8[0x10];                                     // 0x01C8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraVMExecutableData               CachedScriptVM;                                    // 0x01D8(0x01A0)(NativeAccessSpecifierPrivate)
+	TArray<class UNiagaraParameterCollection*>    CachedParameterCollectionReferences;               // 0x0378(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<struct FNiagaraScriptResolvedDataInterfaceInfo> ResolvedDataInterfaces;                            // 0x0388(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FNiagaraResolvedUserDataInterfaceBinding> ResolvedUserDataInterfaceBindings;                 // 0x0398(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FNiagaraResolvedUObjectInfo>    ResolvedUObjectInfos;                              // 0x03A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void RaiseOnGPUCompilationComplete();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraScript">();
+	}
+	static class UNiagaraScript* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraScript>();
+	}
+};
+static_assert(alignof(UNiagaraScript) == 0x000008, "Wrong alignment on UNiagaraScript");
+static_assert(sizeof(UNiagaraScript) == 0x0003C0, "Wrong size on UNiagaraScript");
+static_assert(offsetof(UNiagaraScript, Usage) == 0x000030, "Member 'UNiagaraScript::Usage' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, UsageId) == 0x000034, "Member 'UNiagaraScript::UsageId' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, RapidIterationParameters) == 0x000048, "Member 'UNiagaraScript::RapidIterationParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, ScriptExecutionParamStore) == 0x0000D0, "Member 'UNiagaraScript::ScriptExecutionParamStore' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, ScriptExecutionBoundParameters) == 0x000160, "Member 'UNiagaraScript::ScriptExecutionBoundParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, CachedScriptVMId) == 0x000170, "Member 'UNiagaraScript::CachedScriptVMId' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, CachedScriptVM) == 0x0001D8, "Member 'UNiagaraScript::CachedScriptVM' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, CachedParameterCollectionReferences) == 0x000378, "Member 'UNiagaraScript::CachedParameterCollectionReferences' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, ResolvedDataInterfaces) == 0x000388, "Member 'UNiagaraScript::ResolvedDataInterfaces' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, ResolvedUserDataInterfaceBindings) == 0x000398, "Member 'UNiagaraScript::ResolvedUserDataInterfaceBindings' has a wrong offset!");
+static_assert(offsetof(UNiagaraScript, ResolvedUObjectInfos) == 0x0003A8, "Member 'UNiagaraScript::ResolvedUObjectInfos' has a wrong offset!");
+
 // Class Niagara.NiagaraDataInterfaceGBuffer
 // 0x0000 (0x0038 - 0x0038)
 class UNiagaraDataInterfaceGBuffer final : public UNiagaraDataInterface
@@ -2000,65 +2031,6 @@ public:
 };
 static_assert(alignof(UNiagaraDataInterfaceGBuffer) == 0x000008, "Wrong alignment on UNiagaraDataInterfaceGBuffer");
 static_assert(sizeof(UNiagaraDataInterfaceGBuffer) == 0x000038, "Wrong size on UNiagaraDataInterfaceGBuffer");
-
-// Class Niagara.NiagaraBaselineController
-// 0x0040 (0x0068 - 0x0028)
-class UNiagaraBaselineController : public UObject
-{
-public:
-	float                                         TestDuration;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraEffectType*                     EffectType;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ANiagaraPerfBaselineActor*              Owner;                                             // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UNiagaraSystem>          System;                                            // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	class UNiagaraSystem* GetSystem();
-	void OnBeginTest();
-	void OnEndTest(const struct FNiagaraPerfBaselineStats& Stats);
-	void OnOwnerTick(float DeltaTime);
-	bool OnTickTest();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraBaselineController">();
-	}
-	static class UNiagaraBaselineController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraBaselineController>();
-	}
-};
-static_assert(alignof(UNiagaraBaselineController) == 0x000008, "Wrong alignment on UNiagaraBaselineController");
-static_assert(sizeof(UNiagaraBaselineController) == 0x000068, "Wrong size on UNiagaraBaselineController");
-static_assert(offsetof(UNiagaraBaselineController, TestDuration) == 0x000028, "Member 'UNiagaraBaselineController::TestDuration' has a wrong offset!");
-static_assert(offsetof(UNiagaraBaselineController, EffectType) == 0x000030, "Member 'UNiagaraBaselineController::EffectType' has a wrong offset!");
-static_assert(offsetof(UNiagaraBaselineController, Owner) == 0x000038, "Member 'UNiagaraBaselineController::Owner' has a wrong offset!");
-static_assert(offsetof(UNiagaraBaselineController, System) == 0x000040, "Member 'UNiagaraBaselineController::System' has a wrong offset!");
-
-// Class Niagara.NiagaraBaselineController_Basic
-// 0x0018 (0x0080 - 0x0068)
-class UNiagaraBaselineController_Basic final : public UNiagaraBaselineController
-{
-public:
-	int32                                         NumInstances;                                      // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UNiagaraComponent*>              SpawnedComponents;                                 // 0x0070(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraBaselineController_Basic">();
-	}
-	static class UNiagaraBaselineController_Basic* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraBaselineController_Basic>();
-	}
-};
-static_assert(alignof(UNiagaraBaselineController_Basic) == 0x000008, "Wrong alignment on UNiagaraBaselineController_Basic");
-static_assert(sizeof(UNiagaraBaselineController_Basic) == 0x000080, "Wrong size on UNiagaraBaselineController_Basic");
-static_assert(offsetof(UNiagaraBaselineController_Basic, NumInstances) == 0x000068, "Member 'UNiagaraBaselineController_Basic::NumInstances' has a wrong offset!");
-static_assert(offsetof(UNiagaraBaselineController_Basic, SpawnedComponents) == 0x000070, "Member 'UNiagaraBaselineController_Basic::SpawnedComponents' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceMemoryBuffer
 // 0x0010 (0x0048 - 0x0038)
@@ -2084,6 +2056,29 @@ static_assert(sizeof(UNiagaraDataInterfaceMemoryBuffer) == 0x000048, "Wrong size
 static_assert(offsetof(UNiagaraDataInterfaceMemoryBuffer, DefaultNumElements) == 0x000040, "Member 'UNiagaraDataInterfaceMemoryBuffer::DefaultNumElements' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceMemoryBuffer, GpuSyncMode) == 0x000044, "Member 'UNiagaraDataInterfaceMemoryBuffer::GpuSyncMode' has a wrong offset!");
 
+// Class Niagara.NiagaraPreviewAxis_InterpParamVector
+// 0x0030 (0x0068 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamVector final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	struct FVector                                Min;                                               // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                Max;                                               // 0x0050(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamVector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector) == 0x000068, "Wrong size on UNiagaraPreviewAxis_InterpParamVector");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamVector::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector, Max) == 0x000050, "Member 'UNiagaraPreviewAxis_InterpParamVector::Max' has a wrong offset!");
+
 // Class Niagara.NDIMemoryBufferSimCacheData
 // 0x0020 (0x0048 - 0x0028)
 class UNDIMemoryBufferSimCacheData final : public UObject
@@ -2106,30 +2101,6 @@ static_assert(alignof(UNDIMemoryBufferSimCacheData) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UNDIMemoryBufferSimCacheData) == 0x000048, "Wrong size on UNDIMemoryBufferSimCacheData");
 static_assert(offsetof(UNDIMemoryBufferSimCacheData, FrameData) == 0x000028, "Member 'UNDIMemoryBufferSimCacheData::FrameData' has a wrong offset!");
 static_assert(offsetof(UNDIMemoryBufferSimCacheData, BufferData) == 0x000038, "Member 'UNDIMemoryBufferSimCacheData::BufferData' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamVector4
-// 0x0048 (0x0080 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamVector4 final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               Min;                                               // 0x0040(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector4                               Max;                                               // 0x0060(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector4">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamVector4* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector4>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector4) == 0x000010, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector4");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector4) == 0x000080, "Wrong size on UNiagaraPreviewAxis_InterpParamVector4");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector4, Min) == 0x000040, "Member 'UNiagaraPreviewAxis_InterpParamVector4::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector4, Max) == 0x000060, "Member 'UNiagaraPreviewAxis_InterpParamVector4::Max' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfacePhysicsAsset
 // 0x0070 (0x00A8 - 0x0038)
@@ -2157,6 +2128,27 @@ static_assert(offsetof(UNiagaraDataInterfacePhysicsAsset, DefaultSource) == 0x00
 static_assert(offsetof(UNiagaraDataInterfacePhysicsAsset, SoftSourceActor) == 0x000040, "Member 'UNiagaraDataInterfacePhysicsAsset::SoftSourceActor' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfacePhysicsAsset, MeshUserParameter) == 0x000068, "Member 'UNiagaraDataInterfacePhysicsAsset::MeshUserParameter' has a wrong offset!");
 
+// Class Niagara.NiagaraPreviewBase
+// 0x0000 (0x0290 - 0x0290)
+class ANiagaraPreviewBase final : public AActor
+{
+public:
+	void SetLabelText(const class FText& InXAxisText, const class FText& InYAxisText);
+	void SetSystem(class UNiagaraSystem* InSystem);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewBase">();
+	}
+	static class ANiagaraPreviewBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ANiagaraPreviewBase>();
+	}
+};
+static_assert(alignof(ANiagaraPreviewBase) == 0x000008, "Wrong alignment on ANiagaraPreviewBase");
+static_assert(sizeof(ANiagaraPreviewBase) == 0x000290, "Wrong size on ANiagaraPreviewBase");
+
 // Class Niagara.NiagaraPhysicsAssetDICollectorInterface
 // 0x0000 (0x0028 - 0x0028)
 class INiagaraPhysicsAssetDICollectorInterface final : public IInterface
@@ -2173,90 +2165,6 @@ public:
 };
 static_assert(alignof(INiagaraPhysicsAssetDICollectorInterface) == 0x000008, "Wrong alignment on INiagaraPhysicsAssetDICollectorInterface");
 static_assert(sizeof(INiagaraPhysicsAssetDICollectorInterface) == 0x000028, "Wrong size on INiagaraPhysicsAssetDICollectorInterface");
-
-// Class Niagara.NiagaraSimulationStageBase
-// 0x0018 (0x0040 - 0x0028)
-class UNiagaraSimulationStageBase : public UNiagaraMergeable
-{
-public:
-	class UNiagaraScript*                         Script;                                            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SimulationStageName;                               // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnabled : 1;                                      // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSimulationStageBase">();
-	}
-	static class UNiagaraSimulationStageBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSimulationStageBase>();
-	}
-};
-static_assert(alignof(UNiagaraSimulationStageBase) == 0x000008, "Wrong alignment on UNiagaraSimulationStageBase");
-static_assert(sizeof(UNiagaraSimulationStageBase) == 0x000040, "Wrong size on UNiagaraSimulationStageBase");
-static_assert(offsetof(UNiagaraSimulationStageBase, Script) == 0x000028, "Member 'UNiagaraSimulationStageBase::Script' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageBase, SimulationStageName) == 0x000030, "Member 'UNiagaraSimulationStageBase::SimulationStageName' has a wrong offset!");
-
-// Class Niagara.NiagaraSimulationStageGeneric
-// 0x01A0 (0x01E0 - 0x0040)
-class UNiagaraSimulationStageGeneric final : public UNiagaraSimulationStageBase
-{
-public:
-	struct FNiagaraVariableAttributeBinding       EnabledBinding;                                    // 0x0040(0x0038)(Edit, NativeAccessSpecifierPublic)
-	ENiagaraIterationSource                       IterationSource;                                   // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraParameterBindingWithValue      NumIterations;                                     // 0x0080(0x0020)(Edit, NativeAccessSpecifierPublic)
-	ENiagaraSimStageExecuteBehavior               ExecuteBehavior;                                   // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bDisablePartialParticleUpdate : 1;                 // 0x00A4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraVariableDataInterfaceBinding   DataInterface;                                     // 0x00A8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         bParticleIterationStateEnabled : 1;                // 0x00C8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraVariableAttributeBinding       ParticleIterationStateBinding;                     // 0x00D0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FIntPoint                              ParticleIterationStateRange;                       // 0x0108(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bGpuDispatchForceLinear : 1;                       // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideGpuDispatchNumThreads : 1;                // 0x0110(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsX;                    // 0x0118(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsY;                    // 0x0138(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsZ;                    // 0x0158(0x0020)(Edit, NativeAccessSpecifierPublic)
-	ENiagaraGpuDispatchType                       DirectDispatchType;                                // 0x0178(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraDirectDispatchElementType             DirectDispatchElementType;                         // 0x0179(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraParameterBindingWithValue      ElementCountX;                                     // 0x0180(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterBindingWithValue      ElementCountY;                                     // 0x01A0(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterBindingWithValue      ElementCountZ;                                     // 0x01C0(0x0020)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSimulationStageGeneric">();
-	}
-	static class UNiagaraSimulationStageGeneric* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSimulationStageGeneric>();
-	}
-};
-static_assert(alignof(UNiagaraSimulationStageGeneric) == 0x000008, "Wrong alignment on UNiagaraSimulationStageGeneric");
-static_assert(sizeof(UNiagaraSimulationStageGeneric) == 0x0001E0, "Wrong size on UNiagaraSimulationStageGeneric");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, EnabledBinding) == 0x000040, "Member 'UNiagaraSimulationStageGeneric::EnabledBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, IterationSource) == 0x000078, "Member 'UNiagaraSimulationStageGeneric::IterationSource' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, NumIterations) == 0x000080, "Member 'UNiagaraSimulationStageGeneric::NumIterations' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ExecuteBehavior) == 0x0000A0, "Member 'UNiagaraSimulationStageGeneric::ExecuteBehavior' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, DataInterface) == 0x0000A8, "Member 'UNiagaraSimulationStageGeneric::DataInterface' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ParticleIterationStateBinding) == 0x0000D0, "Member 'UNiagaraSimulationStageGeneric::ParticleIterationStateBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ParticleIterationStateRange) == 0x000108, "Member 'UNiagaraSimulationStageGeneric::ParticleIterationStateRange' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsX) == 0x000118, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsX' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsY) == 0x000138, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsY' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsZ) == 0x000158, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsZ' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, DirectDispatchType) == 0x000178, "Member 'UNiagaraSimulationStageGeneric::DirectDispatchType' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, DirectDispatchElementType) == 0x000179, "Member 'UNiagaraSimulationStageGeneric::DirectDispatchElementType' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountX) == 0x000180, "Member 'UNiagaraSimulationStageGeneric::ElementCountX' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountY) == 0x0001A0, "Member 'UNiagaraSimulationStageGeneric::ElementCountY' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountZ) == 0x0001C0, "Member 'UNiagaraSimulationStageGeneric::ElementCountZ' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceSceneCapture2D
 // 0x00F0 (0x0128 - 0x0038)
@@ -2346,23 +2254,6 @@ static_assert(offsetof(UNiagaraDataInterfaceSimCacheReader, SimCacheBinding) == 
 static_assert(offsetof(UNiagaraDataInterfaceSimCacheReader, SimCache) == 0x000058, "Member 'UNiagaraDataInterfaceSimCacheReader::SimCache' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceSimCacheReader, EmitterBinding) == 0x000060, "Member 'UNiagaraDataInterfaceSimCacheReader::EmitterBinding' has a wrong offset!");
 
-// Class Niagara.NiagaraScratchPadContainer
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraScratchPadContainer final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraScratchPadContainer">();
-	}
-	static class UNiagaraScratchPadContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraScratchPadContainer>();
-	}
-};
-static_assert(alignof(UNiagaraScratchPadContainer) == 0x000008, "Wrong alignment on UNiagaraScratchPadContainer");
-static_assert(sizeof(UNiagaraScratchPadContainer) == 0x000028, "Wrong size on UNiagaraScratchPadContainer");
-
 // Class Niagara.NiagaraDataInterfaceSimpleCounter
 // 0x0010 (0x0048 - 0x0038)
 class UNiagaraDataInterfaceSimpleCounter final : public UNiagaraDataInterfaceRWBase
@@ -2387,6 +2278,23 @@ static_assert(sizeof(UNiagaraDataInterfaceSimpleCounter) == 0x000048, "Wrong siz
 static_assert(offsetof(UNiagaraDataInterfaceSimpleCounter, GpuSyncMode) == 0x000040, "Member 'UNiagaraDataInterfaceSimpleCounter::GpuSyncMode' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceSimpleCounter, InitialValue) == 0x000044, "Member 'UNiagaraDataInterfaceSimpleCounter::InitialValue' has a wrong offset!");
 
+// Class Niagara.NiagaraValidationRule
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraValidationRule final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraValidationRule">();
+	}
+	static class UNiagaraValidationRule* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraValidationRule>();
+	}
+};
+static_assert(alignof(UNiagaraValidationRule) == 0x000008, "Wrong alignment on UNiagaraValidationRule");
+static_assert(sizeof(UNiagaraValidationRule) == 0x000028, "Wrong size on UNiagaraValidationRule");
+
 // Class Niagara.NDISimpleCounterSimCacheData
 // 0x0010 (0x0038 - 0x0028)
 class UNDISimpleCounterSimCacheData final : public UObject
@@ -2407,29 +2315,6 @@ public:
 static_assert(alignof(UNDISimpleCounterSimCacheData) == 0x000008, "Wrong alignment on UNDISimpleCounterSimCacheData");
 static_assert(sizeof(UNDISimpleCounterSimCacheData) == 0x000038, "Wrong size on UNDISimpleCounterSimCacheData");
 static_assert(offsetof(UNDISimpleCounterSimCacheData, Values) == 0x000028, "Member 'UNDISimpleCounterSimCacheData::Values' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamVector2D
-// 0x0020 (0x0058 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamVector2D final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	struct FVector2D                              Min;                                               // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector2D                              Max;                                               // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector2D">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamVector2D* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector2D>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector2D) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector2D");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector2D) == 0x000058, "Wrong size on UNiagaraPreviewAxis_InterpParamVector2D");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector2D, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamVector2D::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector2D, Max) == 0x000048, "Member 'UNiagaraPreviewAxis_InterpParamVector2D::Max' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceStaticMesh
 // 0x00B8 (0x00F0 - 0x0038)
@@ -2593,6 +2478,126 @@ static_assert(alignof(UMovieSceneNiagaraTrack) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UMovieSceneNiagaraTrack) == 0x0000A8, "Wrong size on UMovieSceneNiagaraTrack");
 static_assert(offsetof(UMovieSceneNiagaraTrack, Sections) == 0x000098, "Member 'UMovieSceneNiagaraTrack::Sections' has a wrong offset!");
 
+// Class Niagara.NiagaraSpriteRendererProperties
+// 0x0710 (0x07D0 - 0x00C0)
+class UNiagaraSpriteRendererProperties final : public UNiagaraRendererProperties
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraUserParameterBinding           MaterialUserParamBinding;                          // 0x00C8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraSpriteAlignment                       Alignment;                                         // 0x00E9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraSpriteFacingMode                      FacingMode;                                        // 0x00EA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraSortMode                              SortMode;                                          // 0x00EB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MacroUVRadius;                                     // 0x00EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              PivotInUVSpace;                                    // 0x00F0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SubImageSize;                                      // 0x0100(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bSubImageBlend : 1;                                // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bRemoveHMDRollInVR : 1;                            // 0x0110(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSortOnlyWhenTranslucent : 1;                      // 0x0110(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableCameraDistanceCulling : 1;                  // 0x0110(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCastShadows : 1;                                  // 0x0110(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	ENiagaraRendererSortPrecision                 SortPrecision;                                     // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRendererGpuTranslucentLatency         GpuTranslucentLatency;                             // 0x0112(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRendererPixelCoverageMode             PixelCoverageMode;                                 // 0x0113(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PixelCoverageBlend;                                // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinFacingCameraBlendDistance;                      // 0x0118(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxFacingCameraBlendDistance;                      // 0x011C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinCameraDistance;                                 // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCameraDistance;                                 // 0x0124(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        RendererVisibility;                                // 0x0128(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0130(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0168(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01A0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SpriteRotationBinding;                             // 0x01D8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SpriteSizeBinding;                                 // 0x0210(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SpriteFacingBinding;                               // 0x0248(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SpriteAlignmentBinding;                            // 0x0280(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SubImageIndexBinding;                              // 0x02B8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x02F0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x0328(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0360(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0398(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       CameraOffsetBinding;                               // 0x03D0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       UVScaleBinding;                                    // 0x0408(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PivotOffsetBinding;                                // 0x0440(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0478(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       CustomSortingBinding;                              // 0x04B0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x04E8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0520(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0558(0x0050)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x05A8(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevVelocityBinding;                               // 0x05E0(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevSpriteRotationBinding;                         // 0x0618(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevSpriteSizeBinding;                             // 0x0650(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevSpriteFacingBinding;                           // 0x0688(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevSpriteAlignmentBinding;                        // 0x06C0(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevCameraOffsetBinding;                           // 0x06F8(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevPivotOffsetBinding;                            // 0x0730(0x0038)(Transient, NativeAccessSpecifierPublic)
+	uint32                                        MaterialParamValidMask;                            // 0x0768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_76C[0x64];                                     // 0x076C(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSpriteRendererProperties">();
+	}
+	static class UNiagaraSpriteRendererProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSpriteRendererProperties>();
+	}
+};
+static_assert(alignof(UNiagaraSpriteRendererProperties) == 0x000008, "Wrong alignment on UNiagaraSpriteRendererProperties");
+static_assert(sizeof(UNiagaraSpriteRendererProperties) == 0x0007D0, "Wrong size on UNiagaraSpriteRendererProperties");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraSpriteRendererProperties::Material' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialUserParamBinding) == 0x0000C8, "Member 'UNiagaraSpriteRendererProperties::MaterialUserParamBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SourceMode) == 0x0000E8, "Member 'UNiagaraSpriteRendererProperties::SourceMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, Alignment) == 0x0000E9, "Member 'UNiagaraSpriteRendererProperties::Alignment' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, FacingMode) == 0x0000EA, "Member 'UNiagaraSpriteRendererProperties::FacingMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SortMode) == 0x0000EB, "Member 'UNiagaraSpriteRendererProperties::SortMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MacroUVRadius) == 0x0000EC, "Member 'UNiagaraSpriteRendererProperties::MacroUVRadius' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PivotInUVSpace) == 0x0000F0, "Member 'UNiagaraSpriteRendererProperties::PivotInUVSpace' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SubImageSize) == 0x000100, "Member 'UNiagaraSpriteRendererProperties::SubImageSize' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SortPrecision) == 0x000111, "Member 'UNiagaraSpriteRendererProperties::SortPrecision' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, GpuTranslucentLatency) == 0x000112, "Member 'UNiagaraSpriteRendererProperties::GpuTranslucentLatency' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PixelCoverageMode) == 0x000113, "Member 'UNiagaraSpriteRendererProperties::PixelCoverageMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PixelCoverageBlend) == 0x000114, "Member 'UNiagaraSpriteRendererProperties::PixelCoverageBlend' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MinFacingCameraBlendDistance) == 0x000118, "Member 'UNiagaraSpriteRendererProperties::MinFacingCameraBlendDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaxFacingCameraBlendDistance) == 0x00011C, "Member 'UNiagaraSpriteRendererProperties::MaxFacingCameraBlendDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MinCameraDistance) == 0x000120, "Member 'UNiagaraSpriteRendererProperties::MinCameraDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaxCameraDistance) == 0x000124, "Member 'UNiagaraSpriteRendererProperties::MaxCameraDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, RendererVisibility) == 0x000128, "Member 'UNiagaraSpriteRendererProperties::RendererVisibility' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PositionBinding) == 0x000130, "Member 'UNiagaraSpriteRendererProperties::PositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, ColorBinding) == 0x000168, "Member 'UNiagaraSpriteRendererProperties::ColorBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, VelocityBinding) == 0x0001A0, "Member 'UNiagaraSpriteRendererProperties::VelocityBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteRotationBinding) == 0x0001D8, "Member 'UNiagaraSpriteRendererProperties::SpriteRotationBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteSizeBinding) == 0x000210, "Member 'UNiagaraSpriteRendererProperties::SpriteSizeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteFacingBinding) == 0x000248, "Member 'UNiagaraSpriteRendererProperties::SpriteFacingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteAlignmentBinding) == 0x000280, "Member 'UNiagaraSpriteRendererProperties::SpriteAlignmentBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, SubImageIndexBinding) == 0x0002B8, "Member 'UNiagaraSpriteRendererProperties::SubImageIndexBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterialBinding) == 0x0002F0, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterialBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial1Binding) == 0x000328, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial2Binding) == 0x000360, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial3Binding) == 0x000398, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, CameraOffsetBinding) == 0x0003D0, "Member 'UNiagaraSpriteRendererProperties::CameraOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, UVScaleBinding) == 0x000408, "Member 'UNiagaraSpriteRendererProperties::UVScaleBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PivotOffsetBinding) == 0x000440, "Member 'UNiagaraSpriteRendererProperties::PivotOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialRandomBinding) == 0x000478, "Member 'UNiagaraSpriteRendererProperties::MaterialRandomBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, CustomSortingBinding) == 0x0004B0, "Member 'UNiagaraSpriteRendererProperties::CustomSortingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, NormalizedAgeBinding) == 0x0004E8, "Member 'UNiagaraSpriteRendererProperties::NormalizedAgeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, RendererVisibilityTagBinding) == 0x000520, "Member 'UNiagaraSpriteRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialParameters) == 0x000558, "Member 'UNiagaraSpriteRendererProperties::MaterialParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevPositionBinding) == 0x0005A8, "Member 'UNiagaraSpriteRendererProperties::PrevPositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevVelocityBinding) == 0x0005E0, "Member 'UNiagaraSpriteRendererProperties::PrevVelocityBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteRotationBinding) == 0x000618, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteRotationBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteSizeBinding) == 0x000650, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteSizeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteFacingBinding) == 0x000688, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteFacingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteAlignmentBinding) == 0x0006C0, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteAlignmentBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevCameraOffsetBinding) == 0x0006F8, "Member 'UNiagaraSpriteRendererProperties::PrevCameraOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevPivotOffsetBinding) == 0x000730, "Member 'UNiagaraSpriteRendererProperties::PrevPivotOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialParamValidMask) == 0x000768, "Member 'UNiagaraSpriteRendererProperties::MaterialParamValidMask' has a wrong offset!");
+
 // Class Niagara.MovieSceneNiagaraSystemTrack
 // 0x0008 (0x00B0 - 0x00A8)
 class UMovieSceneNiagaraSystemTrack final : public UMovieSceneNiagaraTrack
@@ -2674,6 +2679,37 @@ public:
 static_assert(alignof(UMovieSceneNiagaraColorParameterTrack) == 0x000008, "Wrong alignment on UMovieSceneNiagaraColorParameterTrack");
 static_assert(sizeof(UMovieSceneNiagaraColorParameterTrack) == 0x0000D0, "Wrong size on UMovieSceneNiagaraColorParameterTrack");
 
+// Class Niagara.VolumeCache
+// 0x0038 (0x0060 - 0x0028)
+class UVolumeCache final : public UObject
+{
+public:
+	class FString                                 FilePath;                                          // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVolumeCacheType                              CacheType;                                         // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIntVector                             Resolution;                                        // 0x003C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameRangeStart;                                   // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameRangeEnd;                                     // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VolumeCache">();
+	}
+	static class UVolumeCache* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVolumeCache>();
+	}
+};
+static_assert(alignof(UVolumeCache) == 0x000008, "Wrong alignment on UVolumeCache");
+static_assert(sizeof(UVolumeCache) == 0x000060, "Wrong size on UVolumeCache");
+static_assert(offsetof(UVolumeCache, FilePath) == 0x000028, "Member 'UVolumeCache::FilePath' has a wrong offset!");
+static_assert(offsetof(UVolumeCache, CacheType) == 0x000038, "Member 'UVolumeCache::CacheType' has a wrong offset!");
+static_assert(offsetof(UVolumeCache, Resolution) == 0x00003C, "Member 'UVolumeCache::Resolution' has a wrong offset!");
+static_assert(offsetof(UVolumeCache, FrameRangeStart) == 0x000048, "Member 'UVolumeCache::FrameRangeStart' has a wrong offset!");
+static_assert(offsetof(UVolumeCache, FrameRangeEnd) == 0x00004C, "Member 'UVolumeCache::FrameRangeEnd' has a wrong offset!");
+
 // Class Niagara.MovieSceneNiagaraFloatParameterTrack
 // 0x0008 (0x00D0 - 0x00C8)
 class UMovieSceneNiagaraFloatParameterTrack final : public UMovieSceneNiagaraParameterTrack
@@ -2714,6 +2750,31 @@ public:
 static_assert(alignof(UMovieSceneNiagaraIntegerParameterTrack) == 0x000008, "Wrong alignment on UMovieSceneNiagaraIntegerParameterTrack");
 static_assert(sizeof(UMovieSceneNiagaraIntegerParameterTrack) == 0x0000D0, "Wrong size on UMovieSceneNiagaraIntegerParameterTrack");
 
+// Class Niagara.NiagaraSimulationStageBase
+// 0x0018 (0x0040 - 0x0028)
+class UNiagaraSimulationStageBase : public UNiagaraMergeable
+{
+public:
+	class UNiagaraScript*                         Script;                                            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SimulationStageName;                               // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnabled : 1;                                      // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSimulationStageBase">();
+	}
+	static class UNiagaraSimulationStageBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSimulationStageBase>();
+	}
+};
+static_assert(alignof(UNiagaraSimulationStageBase) == 0x000008, "Wrong alignment on UNiagaraSimulationStageBase");
+static_assert(sizeof(UNiagaraSimulationStageBase) == 0x000040, "Wrong size on UNiagaraSimulationStageBase");
+static_assert(offsetof(UNiagaraSimulationStageBase, Script) == 0x000028, "Member 'UNiagaraSimulationStageBase::Script' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageBase, SimulationStageName) == 0x000030, "Member 'UNiagaraSimulationStageBase::SimulationStageName' has a wrong offset!");
+
 // Class Niagara.MovieSceneNiagaraVectorParameterTrack
 // 0x0010 (0x00D8 - 0x00C8)
 class UMovieSceneNiagaraVectorParameterTrack final : public UMovieSceneNiagaraParameterTrack
@@ -2736,6 +2797,35 @@ public:
 static_assert(alignof(UMovieSceneNiagaraVectorParameterTrack) == 0x000008, "Wrong alignment on UMovieSceneNiagaraVectorParameterTrack");
 static_assert(sizeof(UMovieSceneNiagaraVectorParameterTrack) == 0x0000D8, "Wrong size on UMovieSceneNiagaraVectorParameterTrack");
 static_assert(offsetof(UMovieSceneNiagaraVectorParameterTrack, ChannelsUsed) == 0x0000D0, "Member 'UMovieSceneNiagaraVectorParameterTrack::ChannelsUsed' has a wrong offset!");
+
+// Class Niagara.NiagaraActor
+// 0x0010 (0x02A0 - 0x0290)
+class ANiagaraActor : public AActor
+{
+public:
+	class UNiagaraComponent*                      NiagaraComponent;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         bDestroyOnSystemFinish : 1;                        // 0x0298(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent);
+	void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);
+
+	bool GetDestroyOnSystemFinish() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraActor">();
+	}
+	static class ANiagaraActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ANiagaraActor>();
+	}
+};
+static_assert(alignof(ANiagaraActor) == 0x000008, "Wrong alignment on ANiagaraActor");
+static_assert(sizeof(ANiagaraActor) == 0x0002A0, "Wrong size on ANiagaraActor");
+static_assert(offsetof(ANiagaraActor, NiagaraComponent) == 0x000290, "Member 'ANiagaraActor::NiagaraComponent' has a wrong offset!");
 
 // Class Niagara.NiagaraBakerOutput
 // 0x0010 (0x0038 - 0x0028)
@@ -2803,50 +2893,6 @@ static_assert(alignof(UNiagaraBakerOutputSparseVolumeTexture) == 0x000008, "Wron
 static_assert(sizeof(UNiagaraBakerOutputSparseVolumeTexture) == 0x000060, "Wrong size on UNiagaraBakerOutputSparseVolumeTexture");
 static_assert(offsetof(UNiagaraBakerOutputSparseVolumeTexture, SourceBinding) == 0x000038, "Member 'UNiagaraBakerOutputSparseVolumeTexture::SourceBinding' has a wrong offset!");
 static_assert(offsetof(UNiagaraBakerOutputSparseVolumeTexture, SparseVolumeTextureAssetPathFormat) == 0x000050, "Member 'UNiagaraBakerOutputSparseVolumeTexture::SparseVolumeTextureAssetPathFormat' has a wrong offset!");
-
-// Class Niagara.NiagaraVolumeRendererProperties
-// 0x01F8 (0x02B8 - 0x00C0)
-class UNiagaraVolumeRendererProperties final : public UNiagaraRendererProperties
-{
-public:
-	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterBinding               MaterialParameterBinding;                          // 0x00C8(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RendererVisibility;                                // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StepFactor;                                        // 0x00DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightingDownsampleFactor;                          // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShadowStepFactor;                                  // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShadowBiasFactor;                                  // 0x00E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EC[0xAC];                                      // 0x00EC(0x00AC)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0198(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VolumeResolutionMaxAxisBinding;                    // 0x01D0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VolumeWorldSpaceSizeBinding;                       // 0x0208(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0240(0x0050)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_290[0x28];                                     // 0x0290(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraVolumeRendererProperties">();
-	}
-	static class UNiagaraVolumeRendererProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraVolumeRendererProperties>();
-	}
-};
-static_assert(alignof(UNiagaraVolumeRendererProperties) == 0x000008, "Wrong alignment on UNiagaraVolumeRendererProperties");
-static_assert(sizeof(UNiagaraVolumeRendererProperties) == 0x0002B8, "Wrong size on UNiagaraVolumeRendererProperties");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraVolumeRendererProperties::Material' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, MaterialParameterBinding) == 0x0000C8, "Member 'UNiagaraVolumeRendererProperties::MaterialParameterBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, RendererVisibility) == 0x0000D8, "Member 'UNiagaraVolumeRendererProperties::RendererVisibility' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, StepFactor) == 0x0000DC, "Member 'UNiagaraVolumeRendererProperties::StepFactor' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, LightingDownsampleFactor) == 0x0000E0, "Member 'UNiagaraVolumeRendererProperties::LightingDownsampleFactor' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, ShadowStepFactor) == 0x0000E4, "Member 'UNiagaraVolumeRendererProperties::ShadowStepFactor' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, ShadowBiasFactor) == 0x0000E8, "Member 'UNiagaraVolumeRendererProperties::ShadowBiasFactor' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, RendererVisibilityTagBinding) == 0x000198, "Member 'UNiagaraVolumeRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, VolumeResolutionMaxAxisBinding) == 0x0001D0, "Member 'UNiagaraVolumeRendererProperties::VolumeResolutionMaxAxisBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, VolumeWorldSpaceSizeBinding) == 0x000208, "Member 'UNiagaraVolumeRendererProperties::VolumeWorldSpaceSizeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraVolumeRendererProperties, MaterialParameters) == 0x000240, "Member 'UNiagaraVolumeRendererProperties::MaterialParameters' has a wrong offset!");
 
 // Class Niagara.NiagaraBakerOutputTexture2D
 // 0x0068 (0x00A0 - 0x0038)
@@ -4177,6 +4223,119 @@ static_assert(sizeof(UNiagaraDataInterfaceGrid3DCollectionReader) == 0x000110, "
 static_assert(offsetof(UNiagaraDataInterfaceGrid3DCollectionReader, EmitterName) == 0x0000F0, "Member 'UNiagaraDataInterfaceGrid3DCollectionReader::EmitterName' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceGrid3DCollectionReader, DIName) == 0x000100, "Member 'UNiagaraDataInterfaceGrid3DCollectionReader::DIName' has a wrong offset!");
 
+// Class Niagara.NiagaraRibbonRendererProperties
+// 0x06A8 (0x0768 - 0x00C0)
+class UNiagaraRibbonRendererProperties final : public UNiagaraRendererProperties
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraUserParameterBinding           MaterialUserParamBinding;                          // 0x00C8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraRibbonUVSettings               UV0Settings;                                       // 0x00E8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FNiagaraRibbonUVSettings               UV1Settings;                                       // 0x0110(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ENiagaraRibbonFacingMode                      FacingMode;                                        // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxNumRibbons;                                     // 0x013C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRibbonDrawDirection                   DrawDirection;                                     // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRibbonShapeMode                       Shape;                                             // 0x0141(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnableAccurateGeometry : 1;                       // 0x0142(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseMaterialBackfaceCulling : 1;                   // 0x0142(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseGeometryNormals : 1;                           // 0x0142(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseGPUInit : 1;                                   // 0x0142(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseConstantFactor : 1;                            // 0x0142(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bScreenSpaceTessellation : 1;                      // 0x0142(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLinkOrderUseUniqueID : 1;                         // 0x0142(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCastShadows : 1;                                  // 0x0142(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_143[0x1];                                      // 0x0143(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WidthSegmentationCount;                            // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MultiPlaneCount;                                   // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TubeSubdivisions;                                  // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraRibbonShapeCustomVertex> CustomVertices;                                    // 0x0150(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	ENiagaraRibbonTessellationMode                TessellationMode;                                  // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurveTension;                                      // 0x0164(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TessellationFactor;                                // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TessellationAngle;                                 // 0x016C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0170(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x01A8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01E0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x0218(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonTwistBinding;                                // 0x0250(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonWidthBinding;                                // 0x0288(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonFacingBinding;                               // 0x02C0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonIdBinding;                                   // 0x02F8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonLinkOrderBinding;                            // 0x0330(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0368(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x03A0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x03D8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0410(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0448(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RibbonUVDistance;                                  // 0x0480(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       U0OverrideBinding;                                 // 0x04B8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       V0RangeOverrideBinding;                            // 0x04F0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       U1OverrideBinding;                                 // 0x0528(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       V1RangeOverrideBinding;                            // 0x0560(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0598(0x0050)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x05E8(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevRibbonWidthBinding;                            // 0x0620(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevRibbonFacingBinding;                           // 0x0658(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevRibbonTwistBinding;                            // 0x0690(0x0038)(Transient, NativeAccessSpecifierPublic)
+	uint32                                        MaterialParamValidMask;                            // 0x06C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6CC[0x9C];                                     // 0x06CC(0x009C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraRibbonRendererProperties">();
+	}
+	static class UNiagaraRibbonRendererProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraRibbonRendererProperties>();
+	}
+};
+static_assert(alignof(UNiagaraRibbonRendererProperties) == 0x000008, "Wrong alignment on UNiagaraRibbonRendererProperties");
+static_assert(sizeof(UNiagaraRibbonRendererProperties) == 0x000768, "Wrong size on UNiagaraRibbonRendererProperties");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraRibbonRendererProperties::Material' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialUserParamBinding) == 0x0000C8, "Member 'UNiagaraRibbonRendererProperties::MaterialUserParamBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, UV0Settings) == 0x0000E8, "Member 'UNiagaraRibbonRendererProperties::UV0Settings' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, UV1Settings) == 0x000110, "Member 'UNiagaraRibbonRendererProperties::UV1Settings' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, FacingMode) == 0x000138, "Member 'UNiagaraRibbonRendererProperties::FacingMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MaxNumRibbons) == 0x00013C, "Member 'UNiagaraRibbonRendererProperties::MaxNumRibbons' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, DrawDirection) == 0x000140, "Member 'UNiagaraRibbonRendererProperties::DrawDirection' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, Shape) == 0x000141, "Member 'UNiagaraRibbonRendererProperties::Shape' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, WidthSegmentationCount) == 0x000144, "Member 'UNiagaraRibbonRendererProperties::WidthSegmentationCount' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MultiPlaneCount) == 0x000148, "Member 'UNiagaraRibbonRendererProperties::MultiPlaneCount' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, TubeSubdivisions) == 0x00014C, "Member 'UNiagaraRibbonRendererProperties::TubeSubdivisions' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, CustomVertices) == 0x000150, "Member 'UNiagaraRibbonRendererProperties::CustomVertices' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationMode) == 0x000160, "Member 'UNiagaraRibbonRendererProperties::TessellationMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, CurveTension) == 0x000164, "Member 'UNiagaraRibbonRendererProperties::CurveTension' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationFactor) == 0x000168, "Member 'UNiagaraRibbonRendererProperties::TessellationFactor' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationAngle) == 0x00016C, "Member 'UNiagaraRibbonRendererProperties::TessellationAngle' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, PositionBinding) == 0x000170, "Member 'UNiagaraRibbonRendererProperties::PositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, ColorBinding) == 0x0001A8, "Member 'UNiagaraRibbonRendererProperties::ColorBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, VelocityBinding) == 0x0001E0, "Member 'UNiagaraRibbonRendererProperties::VelocityBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, NormalizedAgeBinding) == 0x000218, "Member 'UNiagaraRibbonRendererProperties::NormalizedAgeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonTwistBinding) == 0x000250, "Member 'UNiagaraRibbonRendererProperties::RibbonTwistBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonWidthBinding) == 0x000288, "Member 'UNiagaraRibbonRendererProperties::RibbonWidthBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonFacingBinding) == 0x0002C0, "Member 'UNiagaraRibbonRendererProperties::RibbonFacingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonIdBinding) == 0x0002F8, "Member 'UNiagaraRibbonRendererProperties::RibbonIdBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonLinkOrderBinding) == 0x000330, "Member 'UNiagaraRibbonRendererProperties::RibbonLinkOrderBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialRandomBinding) == 0x000368, "Member 'UNiagaraRibbonRendererProperties::MaterialRandomBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterialBinding) == 0x0003A0, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterialBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial1Binding) == 0x0003D8, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial2Binding) == 0x000410, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial3Binding) == 0x000448, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonUVDistance) == 0x000480, "Member 'UNiagaraRibbonRendererProperties::RibbonUVDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, U0OverrideBinding) == 0x0004B8, "Member 'UNiagaraRibbonRendererProperties::U0OverrideBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, V0RangeOverrideBinding) == 0x0004F0, "Member 'UNiagaraRibbonRendererProperties::V0RangeOverrideBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, U1OverrideBinding) == 0x000528, "Member 'UNiagaraRibbonRendererProperties::U1OverrideBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, V1RangeOverrideBinding) == 0x000560, "Member 'UNiagaraRibbonRendererProperties::V1RangeOverrideBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialParameters) == 0x000598, "Member 'UNiagaraRibbonRendererProperties::MaterialParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevPositionBinding) == 0x0005E8, "Member 'UNiagaraRibbonRendererProperties::PrevPositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonWidthBinding) == 0x000620, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonWidthBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonFacingBinding) == 0x000658, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonFacingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonTwistBinding) == 0x000690, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonTwistBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialParamValidMask) == 0x0006C8, "Member 'UNiagaraRibbonRendererProperties::MaterialParamValidMask' has a wrong offset!");
+
 // Class Niagara.NiagaraDataInterfaceIntRenderTarget2D
 // 0x0028 (0x0060 - 0x0038)
 class UNiagaraDataInterfaceIntRenderTarget2D final : public UNiagaraDataInterfaceRWBase
@@ -4273,6 +4432,39 @@ static_assert(alignof(UNiagaraDataInterfaceMeshRendererInfo) == 0x000008, "Wrong
 static_assert(sizeof(UNiagaraDataInterfaceMeshRendererInfo) == 0x000050, "Wrong size on UNiagaraDataInterfaceMeshRendererInfo");
 static_assert(offsetof(UNiagaraDataInterfaceMeshRendererInfo, MeshRenderer) == 0x000038, "Member 'UNiagaraDataInterfaceMeshRendererInfo::MeshRenderer' has a wrong offset!");
 
+// Class Niagara.AsyncNiagaraCaptureSimCache
+// 0x0100 (0x0130 - 0x0030)
+class UAsyncNiagaraCaptureSimCache final : public UCancellableAsyncAction
+{
+public:
+	class UNiagaraSimCache*                       CaptureSimCache;                                   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNiagaraComponent*                      CaptureComponent;                                  // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             CaptureComplete;                                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0xE0];                                      // 0x0050(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, const struct FNiagaraSimCacheCaptureParameters& CaptureParameters, class UNiagaraSimCache** OutSimCache);
+	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 NumFrames, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime);
+	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime);
+
+	void OnCaptureComplete__DelegateSignature(bool bSuccess);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AsyncNiagaraCaptureSimCache">();
+	}
+	static class UAsyncNiagaraCaptureSimCache* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAsyncNiagaraCaptureSimCache>();
+	}
+};
+static_assert(alignof(UAsyncNiagaraCaptureSimCache) == 0x000008, "Wrong alignment on UAsyncNiagaraCaptureSimCache");
+static_assert(sizeof(UAsyncNiagaraCaptureSimCache) == 0x000130, "Wrong size on UAsyncNiagaraCaptureSimCache");
+static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureSimCache) == 0x000030, "Member 'UAsyncNiagaraCaptureSimCache::CaptureSimCache' has a wrong offset!");
+static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureComponent) == 0x000038, "Member 'UAsyncNiagaraCaptureSimCache::CaptureComponent' has a wrong offset!");
+static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureComplete) == 0x000040, "Member 'UAsyncNiagaraCaptureSimCache::CaptureComplete' has a wrong offset!");
+
 // Class Niagara.NiagaraDataInterfaceNeighborGrid3D
 // 0x0008 (0x0078 - 0x0070)
 class UNiagaraDataInterfaceNeighborGrid3D final : public UNiagaraDataInterfaceGrid3D
@@ -4295,27 +4487,6 @@ static_assert(alignof(UNiagaraDataInterfaceNeighborGrid3D) == 0x000008, "Wrong a
 static_assert(sizeof(UNiagaraDataInterfaceNeighborGrid3D) == 0x000078, "Wrong size on UNiagaraDataInterfaceNeighborGrid3D");
 static_assert(offsetof(UNiagaraDataInterfaceNeighborGrid3D, MaxNeighborsPerCell) == 0x000070, "Member 'UNiagaraDataInterfaceNeighborGrid3D::MaxNeighborsPerCell' has a wrong offset!");
 
-// Class Niagara.NiagaraSimCacheFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraSimCacheFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool CaptureNiagaraSimCacheImmediate(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, bool bAdvanceSimulation, float AdvanceDeltaTime);
-	static class UNiagaraSimCache* CreateNiagaraSimCache(class UObject* WorldContextObject);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSimCacheFunctionLibrary">();
-	}
-	static class UNiagaraSimCacheFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSimCacheFunctionLibrary>();
-	}
-};
-static_assert(alignof(UNiagaraSimCacheFunctionLibrary) == 0x000008, "Wrong alignment on UNiagaraSimCacheFunctionLibrary");
-static_assert(sizeof(UNiagaraSimCacheFunctionLibrary) == 0x000028, "Wrong size on UNiagaraSimCacheFunctionLibrary");
-
 // Class Niagara.NiagaraDataInterfaceOcclusion
 // 0x0000 (0x0038 - 0x0038)
 class UNiagaraDataInterfaceOcclusion final : public UNiagaraDataInterface
@@ -4332,6 +4503,29 @@ public:
 };
 static_assert(alignof(UNiagaraDataInterfaceOcclusion) == 0x000008, "Wrong alignment on UNiagaraDataInterfaceOcclusion");
 static_assert(sizeof(UNiagaraDataInterfaceOcclusion) == 0x000038, "Wrong size on UNiagaraDataInterfaceOcclusion");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamLinearColor
+// 0x0020 (0x0058 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamLinearColor final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	struct FLinearColor                           Min;                                               // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FLinearColor                           Max;                                               // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamLinearColor">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamLinearColor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamLinearColor>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamLinearColor) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamLinearColor");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamLinearColor) == 0x000058, "Wrong size on UNiagaraPreviewAxis_InterpParamLinearColor");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamLinearColor, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamLinearColor::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamLinearColor, Max) == 0x000048, "Member 'UNiagaraPreviewAxis_InterpParamLinearColor::Max' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceParticleRead
 // 0x0010 (0x0048 - 0x0038)
@@ -4402,109 +4596,6 @@ static_assert(offsetof(UNiagaraDataInterfaceRasterizationGrid3D, NumAttributes) 
 static_assert(offsetof(UNiagaraDataInterfaceRasterizationGrid3D, Precision) == 0x000074, "Member 'UNiagaraDataInterfaceRasterizationGrid3D::Precision' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceRasterizationGrid3D, ResetValue) == 0x000078, "Member 'UNiagaraDataInterfaceRasterizationGrid3D::ResetValue' has a wrong offset!");
 
-// Class Niagara.NiagaraSystem
-// 0x0530 (0x0578 - 0x0048)
-class UNiagaraSystem final : public UFXSystemAsset
-{
-public:
-	uint8                                         bSupportLargeWorldCoordinates : 1;                 // 0x0048(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideCastShadow : 1;                           // 0x0048(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideReceivesDecals : 1;                       // 0x0048(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideRenderCustomDepth : 1;                    // 0x0048(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideCustomDepthStencilValue : 1;              // 0x0048(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideCustomDepthStencilWriteMask : 1;          // 0x0048(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideTranslucencySortPriority : 1;             // 0x0048(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideTranslucencySortDistanceOffset : 1;       // 0x0048(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastShadow : 1;                                   // 0x0049(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReceivesDecals : 1;                               // 0x0049(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bRenderCustomDepth : 1;                            // 0x0049(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDisableExperimentalVM : 1;                        // 0x0049(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInitialOwnerVelocityFromActor : 1;                // 0x0049(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	ERendererStencilMask                          CustomDepthStencilWriteMask;                       // 0x004A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CustomDepthStencilValue;                           // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TranslucencySortPriority;                          // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TranslucencySortDistanceOffset;                    // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDumpDebugSystemInfo;                              // 0x0058(0x0001)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDumpDebugEmitterInfo;                             // 0x0059(0x0001)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x1];                                       // 0x005A(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bRequireCurrentFrameData;                          // 0x005B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bFixedBounds : 1;                                  // 0x005C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraEffectType*                     EffectType;                                        // 0x0060(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bOverrideScalabilitySettings;                      // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bOverrideAllowCullingForLocalPlayers : 1;          // 0x006C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bAllowCullingForLocalPlayersOverride : 1;          // 0x006C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraSystemScalabilityOverrides     SystemScalabilityOverrides;                        // 0x0070(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FNiagaraPlatformSet                    Platforms;                                         // 0x0080(0x0030)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FNiagaraEmitterHandle>          EmitterHandles;                                    // 0x00B0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides;                      // 0x00C0(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UNiagaraScript*                         SystemSpawnScript;                                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNiagaraScript*                         SystemUpdateScript;                                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_E0[0x10];                                      // 0x00E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraSystemCompiledData             SystemCompiledData;                                // 0x00F0(0x0240)(Protected, NativeAccessSpecifierProtected)
-	struct FNiagaraUserRedirectionParameterStore  ExposedParameters;                                 // 0x0330(0x00D8)(Protected, NativeAccessSpecifierProtected)
-	struct FBox                                   FixedBounds;                                       // 0x0408(0x0038)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bDeterminism;                                      // 0x0440(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_441[0x3];                                      // 0x0441(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RandomSeed;                                        // 0x0444(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WarmupTime;                                        // 0x0448(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         WarmupTickCount;                                   // 0x044C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WarmupTickDelta;                                   // 0x0450(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bFixedTickDelta;                                   // 0x0454(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_455[0x3];                                      // 0x0455(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FixedTickDeltaTime;                                // 0x0458(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bNeedsGPUContextInitForDataInterfaces;             // 0x045C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_45D[0xA3];                                     // 0x045D(0x00A3)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         BitPad_500_0 : 5;                                  // 0x0500(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bAllowSystemStateFastPath : 1;                     // 0x0500(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bSystemStateFastPathEnabled : 1;                   // 0x0500(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_501[0xF];                                      // 0x0501(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraSystemStateData                SystemStateData;                                   // 0x0510(0x0060)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_570[0x8];                                      // 0x0570(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSystem">();
-	}
-	static class UNiagaraSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSystem>();
-	}
-};
-static_assert(alignof(UNiagaraSystem) == 0x000008, "Wrong alignment on UNiagaraSystem");
-static_assert(sizeof(UNiagaraSystem) == 0x000578, "Wrong size on UNiagaraSystem");
-static_assert(offsetof(UNiagaraSystem, CustomDepthStencilWriteMask) == 0x00004A, "Member 'UNiagaraSystem::CustomDepthStencilWriteMask' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, CustomDepthStencilValue) == 0x00004C, "Member 'UNiagaraSystem::CustomDepthStencilValue' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, TranslucencySortPriority) == 0x000050, "Member 'UNiagaraSystem::TranslucencySortPriority' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, TranslucencySortDistanceOffset) == 0x000054, "Member 'UNiagaraSystem::TranslucencySortDistanceOffset' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bDumpDebugSystemInfo) == 0x000058, "Member 'UNiagaraSystem::bDumpDebugSystemInfo' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bDumpDebugEmitterInfo) == 0x000059, "Member 'UNiagaraSystem::bDumpDebugEmitterInfo' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bRequireCurrentFrameData) == 0x00005B, "Member 'UNiagaraSystem::bRequireCurrentFrameData' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, EffectType) == 0x000060, "Member 'UNiagaraSystem::EffectType' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bOverrideScalabilitySettings) == 0x000068, "Member 'UNiagaraSystem::bOverrideScalabilitySettings' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, SystemScalabilityOverrides) == 0x000070, "Member 'UNiagaraSystem::SystemScalabilityOverrides' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, Platforms) == 0x000080, "Member 'UNiagaraSystem::Platforms' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, EmitterHandles) == 0x0000B0, "Member 'UNiagaraSystem::EmitterHandles' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, ParameterCollectionOverrides) == 0x0000C0, "Member 'UNiagaraSystem::ParameterCollectionOverrides' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, SystemSpawnScript) == 0x0000D0, "Member 'UNiagaraSystem::SystemSpawnScript' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, SystemUpdateScript) == 0x0000D8, "Member 'UNiagaraSystem::SystemUpdateScript' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, SystemCompiledData) == 0x0000F0, "Member 'UNiagaraSystem::SystemCompiledData' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, ExposedParameters) == 0x000330, "Member 'UNiagaraSystem::ExposedParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, FixedBounds) == 0x000408, "Member 'UNiagaraSystem::FixedBounds' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bDeterminism) == 0x000440, "Member 'UNiagaraSystem::bDeterminism' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, RandomSeed) == 0x000444, "Member 'UNiagaraSystem::RandomSeed' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, WarmupTime) == 0x000448, "Member 'UNiagaraSystem::WarmupTime' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, WarmupTickCount) == 0x00044C, "Member 'UNiagaraSystem::WarmupTickCount' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, WarmupTickDelta) == 0x000450, "Member 'UNiagaraSystem::WarmupTickDelta' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bFixedTickDelta) == 0x000454, "Member 'UNiagaraSystem::bFixedTickDelta' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, FixedTickDeltaTime) == 0x000458, "Member 'UNiagaraSystem::FixedTickDeltaTime' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, bNeedsGPUContextInitForDataInterfaces) == 0x00045C, "Member 'UNiagaraSystem::bNeedsGPUContextInitForDataInterfaces' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystem, SystemStateData) == 0x000510, "Member 'UNiagaraSystem::SystemStateData' has a wrong offset!");
-
 // Class Niagara.NiagaraDataInterfaceRenderTarget2D
 // 0x0088 (0x00C0 - 0x0038)
 class UNiagaraDataInterfaceRenderTarget2D final : public UNiagaraDataInterfaceRWBase
@@ -4570,66 +4661,6 @@ static_assert(offsetof(UNiagaraDataInterfaceRenderTarget2DArray, Size) == 0x0000
 static_assert(offsetof(UNiagaraDataInterfaceRenderTarget2DArray, OverrideRenderTargetFormat) == 0x000044, "Member 'UNiagaraDataInterfaceRenderTarget2DArray::OverrideRenderTargetFormat' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceRenderTarget2DArray, OverrideRenderTargetFilter) == 0x000045, "Member 'UNiagaraDataInterfaceRenderTarget2DArray::OverrideRenderTargetFilter' has a wrong offset!");
 static_assert(offsetof(UNiagaraDataInterfaceRenderTarget2DArray, RenderTargetUserParameter) == 0x000048, "Member 'UNiagaraDataInterfaceRenderTarget2DArray::RenderTargetUserParameter' has a wrong offset!");
-
-// Class Niagara.NiagaraSimCache
-// 0x01E0 (0x0208 - 0x0028)
-class UNiagaraSimCache final : public UObject
-{
-public:
-	struct FGuid                                  CacheGuid;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UNiagaraSystem>          SoftNiagaraSystem;                                 // 0x0038(0x0028)(Edit, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         StartSeconds;                                      // 0x0060(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         DurationSeconds;                                   // 0x0064(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FNiagaraSimCacheCreateParameters       CreateParameters;                                  // 0x0068(0x0058)(NativeAccessSpecifierPrivate)
-	bool                                          bNeedsReadComponentMappingRecache;                 // 0x00C0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraSimCacheLayout                 CacheLayout;                                       // 0x00C8(0x00C8)(NativeAccessSpecifierPrivate)
-	TArray<struct FNiagaraSimCacheFrame>          CacheFrames;                                       // 0x0190(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<struct FNiagaraVariableBase, class UObject*> DataInterfaceStorage;                              // 0x01A0(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1F0[0x18];                                     // 0x01F0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode() const;
-	class FName GetEmitterName(int32 EmitterIndex) const;
-	TArray<class FName> GetEmitterNames() const;
-	int32 GetNumEmitters() const;
-	int32 GetNumFrames() const;
-	float GetStartSeconds() const;
-	bool IsCacheValid() const;
-	bool IsEmpty() const;
-	void ReadColorAttribute(TArray<struct FLinearColor>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadFloatAttribute(TArray<float>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadIDAttribute(TArray<struct FNiagaraID>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadIntAttribute(TArray<int32>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadPositionAttribute(TArray<struct FVector>* OutValues, class FName AttributeName, class FName EmitterName, bool bLocalSpaceToWorld, int32 FrameIndex) const;
-	void ReadPositionAttributeWithRebase(TArray<struct FVector>* OutValues, const struct FTransform& Transform, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadQuatAttribute(TArray<struct FQuat>* OutValues, class FName AttributeName, class FName EmitterName, bool bLocalSpaceToWorld, int32 FrameIndex) const;
-	void ReadQuatAttributeWithRebase(TArray<struct FQuat>* OutValues, const struct FQuat& Quat, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadVector2Attribute(TArray<struct FVector2D>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadVector4Attribute(TArray<struct FVector4>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-	void ReadVectorAttribute(TArray<struct FVector>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSimCache">();
-	}
-	static class UNiagaraSimCache* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSimCache>();
-	}
-};
-static_assert(alignof(UNiagaraSimCache) == 0x000008, "Wrong alignment on UNiagaraSimCache");
-static_assert(sizeof(UNiagaraSimCache) == 0x000208, "Wrong size on UNiagaraSimCache");
-static_assert(offsetof(UNiagaraSimCache, CacheGuid) == 0x000028, "Member 'UNiagaraSimCache::CacheGuid' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, SoftNiagaraSystem) == 0x000038, "Member 'UNiagaraSimCache::SoftNiagaraSystem' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, StartSeconds) == 0x000060, "Member 'UNiagaraSimCache::StartSeconds' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, DurationSeconds) == 0x000064, "Member 'UNiagaraSimCache::DurationSeconds' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, CreateParameters) == 0x000068, "Member 'UNiagaraSimCache::CreateParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, bNeedsReadComponentMappingRecache) == 0x0000C0, "Member 'UNiagaraSimCache::bNeedsReadComponentMappingRecache' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, CacheLayout) == 0x0000C8, "Member 'UNiagaraSimCache::CacheLayout' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, CacheFrames) == 0x000190, "Member 'UNiagaraSimCache::CacheFrames' has a wrong offset!");
-static_assert(offsetof(UNiagaraSimCache, DataInterfaceStorage) == 0x0001A0, "Member 'UNiagaraSimCache::DataInterfaceStorage' has a wrong offset!");
 
 // Class Niagara.NiagaraDataInterfaceRenderTargetCube
 // 0x0028 (0x0060 - 0x0038)
@@ -5160,40 +5191,6 @@ public:
 static_assert(alignof(UNiagaraEditorParametersAdapterBase) == 0x000008, "Wrong alignment on UNiagaraEditorParametersAdapterBase");
 static_assert(sizeof(UNiagaraEditorParametersAdapterBase) == 0x000028, "Wrong size on UNiagaraEditorParametersAdapterBase");
 
-// Class Niagara.NiagaraSignificanceHandler
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraSignificanceHandler : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSignificanceHandler">();
-	}
-	static class UNiagaraSignificanceHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSignificanceHandler>();
-	}
-};
-static_assert(alignof(UNiagaraSignificanceHandler) == 0x000008, "Wrong alignment on UNiagaraSignificanceHandler");
-static_assert(sizeof(UNiagaraSignificanceHandler) == 0x000028, "Wrong size on UNiagaraSignificanceHandler");
-
-// Class Niagara.NiagaraSignificanceHandlerDistance
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraSignificanceHandlerDistance final : public UNiagaraSignificanceHandler
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraSignificanceHandlerDistance">();
-	}
-	static class UNiagaraSignificanceHandlerDistance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSignificanceHandlerDistance>();
-	}
-};
-static_assert(alignof(UNiagaraSignificanceHandlerDistance) == 0x000008, "Wrong alignment on UNiagaraSignificanceHandlerDistance");
-static_assert(sizeof(UNiagaraSignificanceHandlerDistance) == 0x000028, "Wrong size on UNiagaraSignificanceHandlerDistance");
-
 // Class Niagara.NiagaraSignificanceHandlerAge
 // 0x0000 (0x0028 - 0x0028)
 class UNiagaraSignificanceHandlerAge final : public UNiagaraSignificanceHandler
@@ -5210,48 +5207,6 @@ public:
 };
 static_assert(alignof(UNiagaraSignificanceHandlerAge) == 0x000008, "Wrong alignment on UNiagaraSignificanceHandlerAge");
 static_assert(sizeof(UNiagaraSignificanceHandlerAge) == 0x000028, "Wrong size on UNiagaraSignificanceHandlerAge");
-
-// Class Niagara.NiagaraEffectType
-// 0x0078 (0x00A0 - 0x0028)
-class UNiagaraEffectType final : public UObject
-{
-public:
-	bool                                          bAllowCullingForLocalPlayers;                      // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	ENiagaraScalabilityUpdateFrequency            UpdateFrequency;                                   // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraCullReaction                          CullReaction;                                      // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraSignificanceHandler*            SignificanceHandler;                               // 0x0038(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FNiagaraSystemScalabilitySettings> DetailLevelScalabilitySettings;                    // 0x0040(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
-	struct FNiagaraSystemScalabilitySettingsArray SystemScalabilitySettings;                         // 0x0050(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraEmitterScalabilitySettingsArray EmitterScalabilitySettings;                        // 0x0060(0x0010)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraBaselineController*             PerformanceBaselineController;                     // 0x0078(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FNiagaraPerfBaselineStats              PerfBaselineStats;                                 // 0x0080(0x0010)(Config, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FGuid                                  PerfBaselineVersion;                               // 0x0090(0x0010)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraEffectType">();
-	}
-	static class UNiagaraEffectType* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraEffectType>();
-	}
-};
-static_assert(alignof(UNiagaraEffectType) == 0x000008, "Wrong alignment on UNiagaraEffectType");
-static_assert(sizeof(UNiagaraEffectType) == 0x0000A0, "Wrong size on UNiagaraEffectType");
-static_assert(offsetof(UNiagaraEffectType, bAllowCullingForLocalPlayers) == 0x000028, "Member 'UNiagaraEffectType::bAllowCullingForLocalPlayers' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, UpdateFrequency) == 0x00002C, "Member 'UNiagaraEffectType::UpdateFrequency' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, CullReaction) == 0x000030, "Member 'UNiagaraEffectType::CullReaction' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, SignificanceHandler) == 0x000038, "Member 'UNiagaraEffectType::SignificanceHandler' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, DetailLevelScalabilitySettings) == 0x000040, "Member 'UNiagaraEffectType::DetailLevelScalabilitySettings' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, SystemScalabilitySettings) == 0x000050, "Member 'UNiagaraEffectType::SystemScalabilitySettings' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, EmitterScalabilitySettings) == 0x000060, "Member 'UNiagaraEffectType::EmitterScalabilitySettings' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, PerformanceBaselineController) == 0x000078, "Member 'UNiagaraEffectType::PerformanceBaselineController' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, PerfBaselineStats) == 0x000080, "Member 'UNiagaraEffectType::PerfBaselineStats' has a wrong offset!");
-static_assert(offsetof(UNiagaraEffectType, PerfBaselineVersion) == 0x000090, "Member 'UNiagaraEffectType::PerfBaselineVersion' has a wrong offset!");
 
 // Class Niagara.NiagaraEmitter
 // 0x0048 (0x0070 - 0x0028)
@@ -5283,618 +5238,663 @@ static_assert(offsetof(UNiagaraEmitter, bVersioningEnabled) == 0x000040, "Member
 static_assert(offsetof(UNiagaraEmitter, VersionData) == 0x000048, "Member 'UNiagaraEmitter::VersionData' has a wrong offset!");
 static_assert(offsetof(UNiagaraEmitter, UniqueEmitterName) == 0x000060, "Member 'UNiagaraEmitter::UniqueEmitterName' has a wrong offset!");
 
-// Class Niagara.NiagaraFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraFunctionLibrary final : public UBlueprintFunctionLibrary
+// Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles
+// 0x0008 (0x0030 - 0x0028)
+class UNiagaraEventReceiverEmitterAction_SpawnParticles final : public UNiagaraEventReceiverEmitterAction
 {
 public:
-	static int32 AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject);
-	static class UNiagaraParameterCollectionInstance* GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection);
-	static void OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent);
-	static void OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh);
-	static void OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent);
-	static void ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32 CollisionGroup);
-	static void SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32 CollisionGroup);
-	static void SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32 CollisionGroup);
-	static void SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& FilteredBones);
-	static void SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& FilteredSockets);
-	static void SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, const TArray<class FName>& SamplingRegions);
-	static void SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture2DArray* Texture);
-	static void SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture);
-	static void SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture);
-	static class UNiagaraComponent* SpawnSystemAtLocation(const class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck);
-	static class UNiagaraComponent* SpawnSystemAtLocationWithParams(const struct FFXSystemSpawnParameters& SpawnParams);
-	static class UNiagaraComponent* SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, class FName AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck);
-	static class UNiagaraComponent* SpawnSystemAttachedWithParams(const struct FFXSystemSpawnParameters& SpawnParams);
+	uint32                                        NumParticles;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraFunctionLibrary">();
+		return StaticClassImpl<"NiagaraEventReceiverEmitterAction_SpawnParticles">();
 	}
-	static class UNiagaraFunctionLibrary* GetDefaultObj()
+	static class UNiagaraEventReceiverEmitterAction_SpawnParticles* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNiagaraFunctionLibrary>();
+		return GetDefaultObjImpl<UNiagaraEventReceiverEmitterAction_SpawnParticles>();
 	}
 };
-static_assert(alignof(UNiagaraFunctionLibrary) == 0x000008, "Wrong alignment on UNiagaraFunctionLibrary");
-static_assert(sizeof(UNiagaraFunctionLibrary) == 0x000028, "Wrong size on UNiagaraFunctionLibrary");
+static_assert(alignof(UNiagaraEventReceiverEmitterAction_SpawnParticles) == 0x000008, "Wrong alignment on UNiagaraEventReceiverEmitterAction_SpawnParticles");
+static_assert(sizeof(UNiagaraEventReceiverEmitterAction_SpawnParticles) == 0x000030, "Wrong size on UNiagaraEventReceiverEmitterAction_SpawnParticles");
+static_assert(offsetof(UNiagaraEventReceiverEmitterAction_SpawnParticles, NumParticles) == 0x000028, "Member 'UNiagaraEventReceiverEmitterAction_SpawnParticles::NumParticles' has a wrong offset!");
 
-// Class Niagara.NiagaraLightRendererProperties
-// 0x0220 (0x02E0 - 0x00C0)
-class UNiagaraLightRendererProperties final : public UNiagaraRendererProperties
+// Class Niagara.NiagaraLensEffectBase
+// 0x0090 (0x0330 - 0x02A0)
+class ANiagaraLensEffectBase final : public ANiagaraActor
 {
 public:
-	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bUseInverseSquaredFalloff : 1;                     // 0x00C4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAffectsTranslucency : 1;                          // 0x00C4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAlphaScalesBrightness : 1;                        // 0x00C4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideInverseExposureBlend : 1;                 // 0x00C4(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RadiusScale;                                       // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultExponent;                                   // 0x00CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpecularScale;                                     // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector3f                              ColorAdd;                                          // 0x00D4(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InverseExposureBlend;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RendererVisibility;                                // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       LightRenderingEnabledBinding;                      // 0x00E8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       LightExponentBinding;                              // 0x0120(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0158(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0190(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RadiusBinding;                                     // 0x01C8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VolumetricScatteringBinding;                       // 0x0200(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0238(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SpecularScaleBinding;                              // 0x0270(0x0038)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A8[0x38];                                     // 0x02A8(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A0[0x10];                                     // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             DesiredRelativeTransform;                          // 0x02B0(0x0060)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BaseAuthoredFOV;                                   // 0x0310(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bAllowMultipleInstances : 1;                       // 0x0314(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bResetWhenRetriggered : 1;                         // 0x0314(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSubclassOf<class AActor>>             EmittersToTreatAsSame;                             // 0x0318(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	class APlayerCameraManager*                   OwningCameraManager;                               // 0x0328(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraLightRendererProperties">();
+		return StaticClassImpl<"NiagaraLensEffectBase">();
 	}
-	static class UNiagaraLightRendererProperties* GetDefaultObj()
+	static class ANiagaraLensEffectBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNiagaraLightRendererProperties>();
+		return GetDefaultObjImpl<ANiagaraLensEffectBase>();
 	}
 };
-static_assert(alignof(UNiagaraLightRendererProperties) == 0x000008, "Wrong alignment on UNiagaraLightRendererProperties");
-static_assert(sizeof(UNiagaraLightRendererProperties) == 0x0002E0, "Wrong size on UNiagaraLightRendererProperties");
-static_assert(offsetof(UNiagaraLightRendererProperties, SourceMode) == 0x0000C0, "Member 'UNiagaraLightRendererProperties::SourceMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, RadiusScale) == 0x0000C8, "Member 'UNiagaraLightRendererProperties::RadiusScale' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, DefaultExponent) == 0x0000CC, "Member 'UNiagaraLightRendererProperties::DefaultExponent' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, SpecularScale) == 0x0000D0, "Member 'UNiagaraLightRendererProperties::SpecularScale' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, ColorAdd) == 0x0000D4, "Member 'UNiagaraLightRendererProperties::ColorAdd' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, InverseExposureBlend) == 0x0000E0, "Member 'UNiagaraLightRendererProperties::InverseExposureBlend' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, RendererVisibility) == 0x0000E4, "Member 'UNiagaraLightRendererProperties::RendererVisibility' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, LightRenderingEnabledBinding) == 0x0000E8, "Member 'UNiagaraLightRendererProperties::LightRenderingEnabledBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, LightExponentBinding) == 0x000120, "Member 'UNiagaraLightRendererProperties::LightExponentBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, PositionBinding) == 0x000158, "Member 'UNiagaraLightRendererProperties::PositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, ColorBinding) == 0x000190, "Member 'UNiagaraLightRendererProperties::ColorBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, RadiusBinding) == 0x0001C8, "Member 'UNiagaraLightRendererProperties::RadiusBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, VolumetricScatteringBinding) == 0x000200, "Member 'UNiagaraLightRendererProperties::VolumetricScatteringBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, RendererVisibilityTagBinding) == 0x000238, "Member 'UNiagaraLightRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraLightRendererProperties, SpecularScaleBinding) == 0x000270, "Member 'UNiagaraLightRendererProperties::SpecularScaleBinding' has a wrong offset!");
+static_assert(alignof(ANiagaraLensEffectBase) == 0x000010, "Wrong alignment on ANiagaraLensEffectBase");
+static_assert(sizeof(ANiagaraLensEffectBase) == 0x000330, "Wrong size on ANiagaraLensEffectBase");
+static_assert(offsetof(ANiagaraLensEffectBase, DesiredRelativeTransform) == 0x0002B0, "Member 'ANiagaraLensEffectBase::DesiredRelativeTransform' has a wrong offset!");
+static_assert(offsetof(ANiagaraLensEffectBase, BaseAuthoredFOV) == 0x000310, "Member 'ANiagaraLensEffectBase::BaseAuthoredFOV' has a wrong offset!");
+static_assert(offsetof(ANiagaraLensEffectBase, EmittersToTreatAsSame) == 0x000318, "Member 'ANiagaraLensEffectBase::EmittersToTreatAsSame' has a wrong offset!");
+static_assert(offsetof(ANiagaraLensEffectBase, OwningCameraManager) == 0x000328, "Member 'ANiagaraLensEffectBase::OwningCameraManager' has a wrong offset!");
 
-// Class Niagara.NiagaraParameterCollectionInstance
-// 0x00C8 (0x00F0 - 0x0028)
-class UNiagaraParameterCollectionInstance final : public UObject
+// Class Niagara.NiagaraMeshRendererProperties
+// 0x05D0 (0x0690 - 0x00C0)
+class UNiagaraMeshRendererProperties final : public UNiagaraRendererProperties
 {
 public:
-	class UNiagaraParameterCollection*            Collection;                                        // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FNiagaraVariable>               OverridenParameters;                               // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FNiagaraParameterStore                 ParameterStorage;                                  // 0x0040(0x0088)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C8[0x28];                                      // 0x00C8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool GetBoolParameter(const class FString& InVariableName);
-	struct FLinearColor GetColorParameter(const class FString& InVariableName);
-	float GetFloatParameter(const class FString& InVariableName);
-	int32 GetIntParameter(const class FString& InVariableName);
-	struct FQuat GetQuatParameter(const class FString& InVariableName);
-	struct FVector2D GetVector2DParameter(const class FString& InVariableName);
-	struct FVector4 GetVector4Parameter(const class FString& InVariableName);
-	struct FVector GetVectorParameter(const class FString& InVariableName);
-	void SetBoolParameter(const class FString& InVariableName, bool InValue);
-	void SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue);
-	void SetFloatParameter(const class FString& InVariableName, float InValue);
-	void SetIntParameter(const class FString& InVariableName, int32 InValue);
-	void SetQuatParameter(const class FString& InVariableName, const struct FQuat& InValue);
-	void SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue);
-	void SetVector4Parameter(const class FString& InVariableName, const struct FVector4& InValue);
-	void SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraParameterCollectionInstance">();
-	}
-	static class UNiagaraParameterCollectionInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraParameterCollectionInstance>();
-	}
-};
-static_assert(alignof(UNiagaraParameterCollectionInstance) == 0x000008, "Wrong alignment on UNiagaraParameterCollectionInstance");
-static_assert(sizeof(UNiagaraParameterCollectionInstance) == 0x0000F0, "Wrong size on UNiagaraParameterCollectionInstance");
-static_assert(offsetof(UNiagaraParameterCollectionInstance, Collection) == 0x000028, "Member 'UNiagaraParameterCollectionInstance::Collection' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollectionInstance, OverridenParameters) == 0x000030, "Member 'UNiagaraParameterCollectionInstance::OverridenParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraParameterCollectionInstance, ParameterStorage) == 0x000040, "Member 'UNiagaraParameterCollectionInstance::ParameterStorage' has a wrong offset!");
-
-// Class Niagara.NiagaraPerfBaselineActor
-// 0x0010 (0x02A0 - 0x0290)
-class ANiagaraPerfBaselineActor final : public AActor
-{
-public:
-	class UNiagaraBaselineController*             Controller;                                        // 0x0290(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextRenderComponent*                   Label;                                             // 0x0298(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPerfBaselineActor">();
-	}
-	static class ANiagaraPerfBaselineActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANiagaraPerfBaselineActor>();
-	}
-};
-static_assert(alignof(ANiagaraPerfBaselineActor) == 0x000008, "Wrong alignment on ANiagaraPerfBaselineActor");
-static_assert(sizeof(ANiagaraPerfBaselineActor) == 0x0002A0, "Wrong size on ANiagaraPerfBaselineActor");
-static_assert(offsetof(ANiagaraPerfBaselineActor, Controller) == 0x000290, "Member 'ANiagaraPerfBaselineActor::Controller' has a wrong offset!");
-static_assert(offsetof(ANiagaraPerfBaselineActor, Label) == 0x000298, "Member 'ANiagaraPerfBaselineActor::Label' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewBase
-// 0x0000 (0x0290 - 0x0290)
-class ANiagaraPreviewBase final : public AActor
-{
-public:
-	void SetLabelText(const class FText& InXAxisText, const class FText& InYAxisText);
-	void SetSystem(class UNiagaraSystem* InSystem);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewBase">();
-	}
-	static class ANiagaraPreviewBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANiagaraPreviewBase>();
-	}
-};
-static_assert(alignof(ANiagaraPreviewBase) == 0x000008, "Wrong alignment on ANiagaraPreviewBase");
-static_assert(sizeof(ANiagaraPreviewBase) == 0x000290, "Wrong size on ANiagaraPreviewBase");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamFloat
-// 0x0008 (0x0040 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamFloat final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	float                                         Min;                                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         Max;                                               // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamFloat">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamFloat* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamFloat>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamFloat) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamFloat");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamFloat) == 0x000040, "Wrong size on UNiagaraPreviewAxis_InterpParamFloat");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamFloat, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamFloat::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamFloat, Max) == 0x00003C, "Member 'UNiagaraPreviewAxis_InterpParamFloat::Max' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamVector
-// 0x0030 (0x0068 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamVector final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	struct FVector                                Min;                                               // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector                                Max;                                               // 0x0050(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamVector* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector) == 0x000068, "Wrong size on UNiagaraPreviewAxis_InterpParamVector");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamVector::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector, Max) == 0x000050, "Member 'UNiagaraPreviewAxis_InterpParamVector::Max' has a wrong offset!");
-
-// Class Niagara.NiagaraPreviewAxis_InterpParamLinearColor
-// 0x0020 (0x0058 - 0x0038)
-class UNiagaraPreviewAxis_InterpParamLinearColor final : public UNiagaraPreviewAxis_InterpParamBase
-{
-public:
-	struct FLinearColor                           Min;                                               // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FLinearColor                           Max;                                               // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamLinearColor">();
-	}
-	static class UNiagaraPreviewAxis_InterpParamLinearColor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamLinearColor>();
-	}
-};
-static_assert(alignof(UNiagaraPreviewAxis_InterpParamLinearColor) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamLinearColor");
-static_assert(sizeof(UNiagaraPreviewAxis_InterpParamLinearColor) == 0x000058, "Wrong size on UNiagaraPreviewAxis_InterpParamLinearColor");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamLinearColor, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamLinearColor::Min' has a wrong offset!");
-static_assert(offsetof(UNiagaraPreviewAxis_InterpParamLinearColor, Max) == 0x000048, "Member 'UNiagaraPreviewAxis_InterpParamLinearColor::Max' has a wrong offset!");
-
-// Class Niagara.NiagaraRibbonRendererProperties
-// 0x06A8 (0x0768 - 0x00C0)
-class UNiagaraRibbonRendererProperties final : public UNiagaraRendererProperties
-{
-public:
-	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraUserParameterBinding           MaterialUserParamBinding;                          // 0x00C8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraRibbonUVSettings               UV0Settings;                                       // 0x00E8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FNiagaraRibbonUVSettings               UV1Settings;                                       // 0x0110(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	ENiagaraRibbonFacingMode                      FacingMode;                                        // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxNumRibbons;                                     // 0x013C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRibbonDrawDirection                   DrawDirection;                                     // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRibbonShapeMode                       Shape;                                             // 0x0141(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnableAccurateGeometry : 1;                       // 0x0142(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseMaterialBackfaceCulling : 1;                   // 0x0142(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseGeometryNormals : 1;                           // 0x0142(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseGPUInit : 1;                                   // 0x0142(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseConstantFactor : 1;                            // 0x0142(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bScreenSpaceTessellation : 1;                      // 0x0142(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLinkOrderUseUniqueID : 1;                         // 0x0142(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastShadows : 1;                                  // 0x0142(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_143[0x1];                                      // 0x0143(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WidthSegmentationCount;                            // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MultiPlaneCount;                                   // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TubeSubdivisions;                                  // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FNiagaraRibbonShapeCustomVertex> CustomVertices;                                    // 0x0150(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	ENiagaraRibbonTessellationMode                TessellationMode;                                  // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurveTension;                                      // 0x0164(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TessellationFactor;                                // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TessellationAngle;                                 // 0x016C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0170(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x01A8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01E0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x0218(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonTwistBinding;                                // 0x0250(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonWidthBinding;                                // 0x0288(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonFacingBinding;                               // 0x02C0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonIdBinding;                                   // 0x02F8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonLinkOrderBinding;                            // 0x0330(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0368(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x03A0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x03D8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0410(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0448(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RibbonUVDistance;                                  // 0x0480(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       U0OverrideBinding;                                 // 0x04B8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       V0RangeOverrideBinding;                            // 0x04F0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       U1OverrideBinding;                                 // 0x0528(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       V1RangeOverrideBinding;                            // 0x0560(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0598(0x0050)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x05E8(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevRibbonWidthBinding;                            // 0x0620(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevRibbonFacingBinding;                           // 0x0658(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevRibbonTwistBinding;                            // 0x0690(0x0038)(Transient, NativeAccessSpecifierPublic)
-	uint32                                        MaterialParamValidMask;                            // 0x06C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6CC[0x9C];                                     // 0x06CC(0x009C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraRibbonRendererProperties">();
-	}
-	static class UNiagaraRibbonRendererProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraRibbonRendererProperties>();
-	}
-};
-static_assert(alignof(UNiagaraRibbonRendererProperties) == 0x000008, "Wrong alignment on UNiagaraRibbonRendererProperties");
-static_assert(sizeof(UNiagaraRibbonRendererProperties) == 0x000768, "Wrong size on UNiagaraRibbonRendererProperties");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraRibbonRendererProperties::Material' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialUserParamBinding) == 0x0000C8, "Member 'UNiagaraRibbonRendererProperties::MaterialUserParamBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, UV0Settings) == 0x0000E8, "Member 'UNiagaraRibbonRendererProperties::UV0Settings' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, UV1Settings) == 0x000110, "Member 'UNiagaraRibbonRendererProperties::UV1Settings' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, FacingMode) == 0x000138, "Member 'UNiagaraRibbonRendererProperties::FacingMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MaxNumRibbons) == 0x00013C, "Member 'UNiagaraRibbonRendererProperties::MaxNumRibbons' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, DrawDirection) == 0x000140, "Member 'UNiagaraRibbonRendererProperties::DrawDirection' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, Shape) == 0x000141, "Member 'UNiagaraRibbonRendererProperties::Shape' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, WidthSegmentationCount) == 0x000144, "Member 'UNiagaraRibbonRendererProperties::WidthSegmentationCount' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MultiPlaneCount) == 0x000148, "Member 'UNiagaraRibbonRendererProperties::MultiPlaneCount' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, TubeSubdivisions) == 0x00014C, "Member 'UNiagaraRibbonRendererProperties::TubeSubdivisions' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, CustomVertices) == 0x000150, "Member 'UNiagaraRibbonRendererProperties::CustomVertices' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationMode) == 0x000160, "Member 'UNiagaraRibbonRendererProperties::TessellationMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, CurveTension) == 0x000164, "Member 'UNiagaraRibbonRendererProperties::CurveTension' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationFactor) == 0x000168, "Member 'UNiagaraRibbonRendererProperties::TessellationFactor' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, TessellationAngle) == 0x00016C, "Member 'UNiagaraRibbonRendererProperties::TessellationAngle' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, PositionBinding) == 0x000170, "Member 'UNiagaraRibbonRendererProperties::PositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, ColorBinding) == 0x0001A8, "Member 'UNiagaraRibbonRendererProperties::ColorBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, VelocityBinding) == 0x0001E0, "Member 'UNiagaraRibbonRendererProperties::VelocityBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, NormalizedAgeBinding) == 0x000218, "Member 'UNiagaraRibbonRendererProperties::NormalizedAgeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonTwistBinding) == 0x000250, "Member 'UNiagaraRibbonRendererProperties::RibbonTwistBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonWidthBinding) == 0x000288, "Member 'UNiagaraRibbonRendererProperties::RibbonWidthBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonFacingBinding) == 0x0002C0, "Member 'UNiagaraRibbonRendererProperties::RibbonFacingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonIdBinding) == 0x0002F8, "Member 'UNiagaraRibbonRendererProperties::RibbonIdBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonLinkOrderBinding) == 0x000330, "Member 'UNiagaraRibbonRendererProperties::RibbonLinkOrderBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialRandomBinding) == 0x000368, "Member 'UNiagaraRibbonRendererProperties::MaterialRandomBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterialBinding) == 0x0003A0, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterialBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial1Binding) == 0x0003D8, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial2Binding) == 0x000410, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, DynamicMaterial3Binding) == 0x000448, "Member 'UNiagaraRibbonRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, RibbonUVDistance) == 0x000480, "Member 'UNiagaraRibbonRendererProperties::RibbonUVDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, U0OverrideBinding) == 0x0004B8, "Member 'UNiagaraRibbonRendererProperties::U0OverrideBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, V0RangeOverrideBinding) == 0x0004F0, "Member 'UNiagaraRibbonRendererProperties::V0RangeOverrideBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, U1OverrideBinding) == 0x000528, "Member 'UNiagaraRibbonRendererProperties::U1OverrideBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, V1RangeOverrideBinding) == 0x000560, "Member 'UNiagaraRibbonRendererProperties::V1RangeOverrideBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialParameters) == 0x000598, "Member 'UNiagaraRibbonRendererProperties::MaterialParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevPositionBinding) == 0x0005E8, "Member 'UNiagaraRibbonRendererProperties::PrevPositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonWidthBinding) == 0x000620, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonWidthBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonFacingBinding) == 0x000658, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonFacingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, PrevRibbonTwistBinding) == 0x000690, "Member 'UNiagaraRibbonRendererProperties::PrevRibbonTwistBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraRibbonRendererProperties, MaterialParamValidMask) == 0x0006C8, "Member 'UNiagaraRibbonRendererProperties::MaterialParamValidMask' has a wrong offset!");
-
-// Class Niagara.NiagaraScript
-// 0x0398 (0x03C0 - 0x0028)
-class UNiagaraScript final : public UNiagaraScriptBase
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	ENiagaraScriptUsage                           Usage;                                             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  UsageId;                                           // 0x0034(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraParameterStore                 RapidIterationParameters;                          // 0x0048(0x0088)(NativeAccessSpecifierPublic)
-	struct FNiagaraScriptExecutionParameterStore  ScriptExecutionParamStore;                         // 0x00D0(0x0090)(NativeAccessSpecifierPrivate)
-	TArray<struct FNiagaraBoundParameter>         ScriptExecutionBoundParameters;                    // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FNiagaraVMExecutableDataId             CachedScriptVMId;                                  // 0x0170(0x0058)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C8[0x10];                                     // 0x01C8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraVMExecutableData               CachedScriptVM;                                    // 0x01D8(0x01A0)(NativeAccessSpecifierPrivate)
-	TArray<class UNiagaraParameterCollection*>    CachedParameterCollectionReferences;               // 0x0378(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<struct FNiagaraScriptResolvedDataInterfaceInfo> ResolvedDataInterfaces;                            // 0x0388(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FNiagaraResolvedUserDataInterfaceBinding> ResolvedUserDataInterfaceBindings;                 // 0x0398(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FNiagaraResolvedUObjectInfo>    ResolvedUObjectInfos;                              // 0x03A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void RaiseOnGPUCompilationComplete();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraScript">();
-	}
-	static class UNiagaraScript* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraScript>();
-	}
-};
-static_assert(alignof(UNiagaraScript) == 0x000008, "Wrong alignment on UNiagaraScript");
-static_assert(sizeof(UNiagaraScript) == 0x0003C0, "Wrong size on UNiagaraScript");
-static_assert(offsetof(UNiagaraScript, Usage) == 0x000030, "Member 'UNiagaraScript::Usage' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, UsageId) == 0x000034, "Member 'UNiagaraScript::UsageId' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, RapidIterationParameters) == 0x000048, "Member 'UNiagaraScript::RapidIterationParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, ScriptExecutionParamStore) == 0x0000D0, "Member 'UNiagaraScript::ScriptExecutionParamStore' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, ScriptExecutionBoundParameters) == 0x000160, "Member 'UNiagaraScript::ScriptExecutionBoundParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, CachedScriptVMId) == 0x000170, "Member 'UNiagaraScript::CachedScriptVMId' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, CachedScriptVM) == 0x0001D8, "Member 'UNiagaraScript::CachedScriptVM' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, CachedParameterCollectionReferences) == 0x000378, "Member 'UNiagaraScript::CachedParameterCollectionReferences' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, ResolvedDataInterfaces) == 0x000388, "Member 'UNiagaraScript::ResolvedDataInterfaces' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, ResolvedUserDataInterfaceBindings) == 0x000398, "Member 'UNiagaraScript::ResolvedUserDataInterfaceBindings' has a wrong offset!");
-static_assert(offsetof(UNiagaraScript, ResolvedUObjectInfos) == 0x0003A8, "Member 'UNiagaraScript::ResolvedUObjectInfos' has a wrong offset!");
-
-// Class Niagara.AsyncNiagaraCaptureSimCache
-// 0x0100 (0x0130 - 0x0030)
-class UAsyncNiagaraCaptureSimCache final : public UCancellableAsyncAction
-{
-public:
-	class UNiagaraSimCache*                       CaptureSimCache;                                   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UNiagaraComponent*                      CaptureComponent;                                  // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             CaptureComplete;                                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50[0xE0];                                      // 0x0050(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, const struct FNiagaraSimCacheCaptureParameters& CaptureParameters, class UNiagaraSimCache** OutSimCache);
-	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 NumFrames, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime);
-	static class UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime);
-
-	void OnCaptureComplete__DelegateSignature(bool bSuccess);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AsyncNiagaraCaptureSimCache">();
-	}
-	static class UAsyncNiagaraCaptureSimCache* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAsyncNiagaraCaptureSimCache>();
-	}
-};
-static_assert(alignof(UAsyncNiagaraCaptureSimCache) == 0x000008, "Wrong alignment on UAsyncNiagaraCaptureSimCache");
-static_assert(sizeof(UAsyncNiagaraCaptureSimCache) == 0x000130, "Wrong size on UAsyncNiagaraCaptureSimCache");
-static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureSimCache) == 0x000030, "Member 'UAsyncNiagaraCaptureSimCache::CaptureSimCache' has a wrong offset!");
-static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureComponent) == 0x000038, "Member 'UAsyncNiagaraCaptureSimCache::CaptureComponent' has a wrong offset!");
-static_assert(offsetof(UAsyncNiagaraCaptureSimCache, CaptureComplete) == 0x000040, "Member 'UAsyncNiagaraCaptureSimCache::CaptureComplete' has a wrong offset!");
-
-// Class Niagara.NiagaraSpriteRendererProperties
-// 0x0710 (0x07D0 - 0x00C0)
-class UNiagaraSpriteRendererProperties final : public UNiagaraRendererProperties
-{
-public:
-	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraUserParameterBinding           MaterialUserParamBinding;                          // 0x00C8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraSpriteAlignment                       Alignment;                                         // 0x00E9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraSpriteFacingMode                      FacingMode;                                        // 0x00EA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraSortMode                              SortMode;                                          // 0x00EB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MacroUVRadius;                                     // 0x00EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PivotInUVSpace;                                    // 0x00F0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraMeshRendererMeshProperties> Meshes;                                            // 0x00C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	ENiagaraRendererSourceDataMode                SourceMode;                                        // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraSortMode                              SortMode;                                          // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRendererSortPrecision                 SortPrecision;                                     // 0x00D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraRendererGpuTranslucentLatency         GpuTranslucentLatency;                             // 0x00D3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverrideMaterials : 1;                            // 0x00D4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseHeterogeneousVolumes : 1;                      // 0x00D4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSortOnlyWhenTranslucent : 1;                      // 0x00D4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSubImageBlend : 1;                                // 0x00D4(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableFrustumCulling : 1;                         // 0x00D4(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableCameraDistanceCulling : 1;                  // 0x00D4(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableMeshFlipbook : 1;                           // 0x00D4(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLockedAxisEnable : 1;                             // 0x00D4(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bCastShadows : 1;                                  // 0x00D8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNiagaraMeshMaterialOverride>   OverrideMaterials;                                 // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FNiagaraMeshMICOverride>        MICOverrideMaterials;                              // 0x00F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FVector2D                              SubImageSize;                                      // 0x0100(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bSubImageBlend : 1;                                // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bRemoveHMDRollInVR : 1;                            // 0x0110(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSortOnlyWhenTranslucent : 1;                      // 0x0110(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableCameraDistanceCulling : 1;                  // 0x0110(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastShadows : 1;                                  // 0x0110(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	ENiagaraRendererSortPrecision                 SortPrecision;                                     // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRendererGpuTranslucentLatency         GpuTranslucentLatency;                             // 0x0112(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENiagaraRendererPixelCoverageMode             PixelCoverageMode;                                 // 0x0113(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PixelCoverageBlend;                                // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinFacingCameraBlendDistance;                      // 0x0118(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxFacingCameraBlendDistance;                      // 0x011C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinCameraDistance;                                 // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCameraDistance;                                 // 0x0124(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        RendererVisibility;                                // 0x0128(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0130(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0168(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01A0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SpriteRotationBinding;                             // 0x01D8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SpriteSizeBinding;                                 // 0x0210(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SpriteFacingBinding;                               // 0x0248(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SpriteAlignmentBinding;                            // 0x0280(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       SubImageIndexBinding;                              // 0x02B8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x02F0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x0328(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0360(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0398(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       CameraOffsetBinding;                               // 0x03D0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       UVScaleBinding;                                    // 0x0408(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PivotOffsetBinding;                                // 0x0440(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0478(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       CustomSortingBinding;                              // 0x04B0(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x04E8(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0520(0x0038)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0558(0x0050)(Edit, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x05A8(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevVelocityBinding;                               // 0x05E0(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevSpriteRotationBinding;                         // 0x0618(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevSpriteSizeBinding;                             // 0x0650(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevSpriteFacingBinding;                           // 0x0688(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevSpriteAlignmentBinding;                        // 0x06C0(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevCameraOffsetBinding;                           // 0x06F8(0x0038)(Transient, NativeAccessSpecifierPublic)
-	struct FNiagaraVariableAttributeBinding       PrevPivotOffsetBinding;                            // 0x0730(0x0038)(Transient, NativeAccessSpecifierPublic)
-	uint32                                        MaterialParamValidMask;                            // 0x0768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_76C[0x64];                                     // 0x076C(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                LockedAxis;                                        // 0x0110(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                MeshBoundsScale;                                   // 0x0128(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraMeshFacingMode                        FacingMode;                                        // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraMeshLockedAxisSpace                   LockedAxisSpace;                                   // 0x0141(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinCameraDistance;                                 // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCameraDistance;                                 // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        RendererVisibility;                                // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PositionBinding;                                   // 0x0150(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       ColorBinding;                                      // 0x0188(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VelocityBinding;                                   // 0x01C0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       MeshOrientationBinding;                            // 0x01F8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       ScaleBinding;                                      // 0x0230(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       SubImageIndexBinding;                              // 0x0268(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterialBinding;                            // 0x02A0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial1Binding;                           // 0x02D8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial2Binding;                           // 0x0310(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       DynamicMaterial3Binding;                           // 0x0348(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       MaterialRandomBinding;                             // 0x0380(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       CustomSortingBinding;                              // 0x03B8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       NormalizedAgeBinding;                              // 0x03F0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       CameraOffsetBinding;                               // 0x0428(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0460(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       MeshIndexBinding;                                  // 0x0498(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x04D0(0x0050)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevPositionBinding;                               // 0x0520(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevScaleBinding;                                  // 0x0558(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevMeshOrientationBinding;                        // 0x0590(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevCameraOffsetBinding;                           // 0x05C8(0x0038)(Transient, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       PrevVelocityBinding;                               // 0x0600(0x0038)(Transient, NativeAccessSpecifierPublic)
+	uint32                                        MaterialParamValidMask;                            // 0x0638(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_63C[0x54];                                     // 0x063C(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraSpriteRendererProperties">();
+		return StaticClassImpl<"NiagaraMeshRendererProperties">();
 	}
-	static class UNiagaraSpriteRendererProperties* GetDefaultObj()
+	static class UNiagaraMeshRendererProperties* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNiagaraSpriteRendererProperties>();
+		return GetDefaultObjImpl<UNiagaraMeshRendererProperties>();
 	}
 };
-static_assert(alignof(UNiagaraSpriteRendererProperties) == 0x000008, "Wrong alignment on UNiagaraSpriteRendererProperties");
-static_assert(sizeof(UNiagaraSpriteRendererProperties) == 0x0007D0, "Wrong size on UNiagaraSpriteRendererProperties");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraSpriteRendererProperties::Material' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialUserParamBinding) == 0x0000C8, "Member 'UNiagaraSpriteRendererProperties::MaterialUserParamBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SourceMode) == 0x0000E8, "Member 'UNiagaraSpriteRendererProperties::SourceMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, Alignment) == 0x0000E9, "Member 'UNiagaraSpriteRendererProperties::Alignment' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, FacingMode) == 0x0000EA, "Member 'UNiagaraSpriteRendererProperties::FacingMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SortMode) == 0x0000EB, "Member 'UNiagaraSpriteRendererProperties::SortMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MacroUVRadius) == 0x0000EC, "Member 'UNiagaraSpriteRendererProperties::MacroUVRadius' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PivotInUVSpace) == 0x0000F0, "Member 'UNiagaraSpriteRendererProperties::PivotInUVSpace' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SubImageSize) == 0x000100, "Member 'UNiagaraSpriteRendererProperties::SubImageSize' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SortPrecision) == 0x000111, "Member 'UNiagaraSpriteRendererProperties::SortPrecision' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, GpuTranslucentLatency) == 0x000112, "Member 'UNiagaraSpriteRendererProperties::GpuTranslucentLatency' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PixelCoverageMode) == 0x000113, "Member 'UNiagaraSpriteRendererProperties::PixelCoverageMode' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PixelCoverageBlend) == 0x000114, "Member 'UNiagaraSpriteRendererProperties::PixelCoverageBlend' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MinFacingCameraBlendDistance) == 0x000118, "Member 'UNiagaraSpriteRendererProperties::MinFacingCameraBlendDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaxFacingCameraBlendDistance) == 0x00011C, "Member 'UNiagaraSpriteRendererProperties::MaxFacingCameraBlendDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MinCameraDistance) == 0x000120, "Member 'UNiagaraSpriteRendererProperties::MinCameraDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaxCameraDistance) == 0x000124, "Member 'UNiagaraSpriteRendererProperties::MaxCameraDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, RendererVisibility) == 0x000128, "Member 'UNiagaraSpriteRendererProperties::RendererVisibility' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PositionBinding) == 0x000130, "Member 'UNiagaraSpriteRendererProperties::PositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, ColorBinding) == 0x000168, "Member 'UNiagaraSpriteRendererProperties::ColorBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, VelocityBinding) == 0x0001A0, "Member 'UNiagaraSpriteRendererProperties::VelocityBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteRotationBinding) == 0x0001D8, "Member 'UNiagaraSpriteRendererProperties::SpriteRotationBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteSizeBinding) == 0x000210, "Member 'UNiagaraSpriteRendererProperties::SpriteSizeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteFacingBinding) == 0x000248, "Member 'UNiagaraSpriteRendererProperties::SpriteFacingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SpriteAlignmentBinding) == 0x000280, "Member 'UNiagaraSpriteRendererProperties::SpriteAlignmentBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, SubImageIndexBinding) == 0x0002B8, "Member 'UNiagaraSpriteRendererProperties::SubImageIndexBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterialBinding) == 0x0002F0, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterialBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial1Binding) == 0x000328, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial2Binding) == 0x000360, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, DynamicMaterial3Binding) == 0x000398, "Member 'UNiagaraSpriteRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, CameraOffsetBinding) == 0x0003D0, "Member 'UNiagaraSpriteRendererProperties::CameraOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, UVScaleBinding) == 0x000408, "Member 'UNiagaraSpriteRendererProperties::UVScaleBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PivotOffsetBinding) == 0x000440, "Member 'UNiagaraSpriteRendererProperties::PivotOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialRandomBinding) == 0x000478, "Member 'UNiagaraSpriteRendererProperties::MaterialRandomBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, CustomSortingBinding) == 0x0004B0, "Member 'UNiagaraSpriteRendererProperties::CustomSortingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, NormalizedAgeBinding) == 0x0004E8, "Member 'UNiagaraSpriteRendererProperties::NormalizedAgeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, RendererVisibilityTagBinding) == 0x000520, "Member 'UNiagaraSpriteRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialParameters) == 0x000558, "Member 'UNiagaraSpriteRendererProperties::MaterialParameters' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevPositionBinding) == 0x0005A8, "Member 'UNiagaraSpriteRendererProperties::PrevPositionBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevVelocityBinding) == 0x0005E0, "Member 'UNiagaraSpriteRendererProperties::PrevVelocityBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteRotationBinding) == 0x000618, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteRotationBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteSizeBinding) == 0x000650, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteSizeBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteFacingBinding) == 0x000688, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteFacingBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevSpriteAlignmentBinding) == 0x0006C0, "Member 'UNiagaraSpriteRendererProperties::PrevSpriteAlignmentBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevCameraOffsetBinding) == 0x0006F8, "Member 'UNiagaraSpriteRendererProperties::PrevCameraOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, PrevPivotOffsetBinding) == 0x000730, "Member 'UNiagaraSpriteRendererProperties::PrevPivotOffsetBinding' has a wrong offset!");
-static_assert(offsetof(UNiagaraSpriteRendererProperties, MaterialParamValidMask) == 0x000768, "Member 'UNiagaraSpriteRendererProperties::MaterialParamValidMask' has a wrong offset!");
+static_assert(alignof(UNiagaraMeshRendererProperties) == 0x000008, "Wrong alignment on UNiagaraMeshRendererProperties");
+static_assert(sizeof(UNiagaraMeshRendererProperties) == 0x000690, "Wrong size on UNiagaraMeshRendererProperties");
+static_assert(offsetof(UNiagaraMeshRendererProperties, Meshes) == 0x0000C0, "Member 'UNiagaraMeshRendererProperties::Meshes' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, SourceMode) == 0x0000D0, "Member 'UNiagaraMeshRendererProperties::SourceMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, SortMode) == 0x0000D1, "Member 'UNiagaraMeshRendererProperties::SortMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, SortPrecision) == 0x0000D2, "Member 'UNiagaraMeshRendererProperties::SortPrecision' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, GpuTranslucentLatency) == 0x0000D3, "Member 'UNiagaraMeshRendererProperties::GpuTranslucentLatency' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, OverrideMaterials) == 0x0000E0, "Member 'UNiagaraMeshRendererProperties::OverrideMaterials' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MICOverrideMaterials) == 0x0000F0, "Member 'UNiagaraMeshRendererProperties::MICOverrideMaterials' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, SubImageSize) == 0x000100, "Member 'UNiagaraMeshRendererProperties::SubImageSize' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, LockedAxis) == 0x000110, "Member 'UNiagaraMeshRendererProperties::LockedAxis' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MeshBoundsScale) == 0x000128, "Member 'UNiagaraMeshRendererProperties::MeshBoundsScale' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, FacingMode) == 0x000140, "Member 'UNiagaraMeshRendererProperties::FacingMode' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, LockedAxisSpace) == 0x000141, "Member 'UNiagaraMeshRendererProperties::LockedAxisSpace' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MinCameraDistance) == 0x000144, "Member 'UNiagaraMeshRendererProperties::MinCameraDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MaxCameraDistance) == 0x000148, "Member 'UNiagaraMeshRendererProperties::MaxCameraDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, RendererVisibility) == 0x00014C, "Member 'UNiagaraMeshRendererProperties::RendererVisibility' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PositionBinding) == 0x000150, "Member 'UNiagaraMeshRendererProperties::PositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, ColorBinding) == 0x000188, "Member 'UNiagaraMeshRendererProperties::ColorBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, VelocityBinding) == 0x0001C0, "Member 'UNiagaraMeshRendererProperties::VelocityBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MeshOrientationBinding) == 0x0001F8, "Member 'UNiagaraMeshRendererProperties::MeshOrientationBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, ScaleBinding) == 0x000230, "Member 'UNiagaraMeshRendererProperties::ScaleBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, SubImageIndexBinding) == 0x000268, "Member 'UNiagaraMeshRendererProperties::SubImageIndexBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterialBinding) == 0x0002A0, "Member 'UNiagaraMeshRendererProperties::DynamicMaterialBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial1Binding) == 0x0002D8, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial1Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial2Binding) == 0x000310, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial2Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, DynamicMaterial3Binding) == 0x000348, "Member 'UNiagaraMeshRendererProperties::DynamicMaterial3Binding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialRandomBinding) == 0x000380, "Member 'UNiagaraMeshRendererProperties::MaterialRandomBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, CustomSortingBinding) == 0x0003B8, "Member 'UNiagaraMeshRendererProperties::CustomSortingBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, NormalizedAgeBinding) == 0x0003F0, "Member 'UNiagaraMeshRendererProperties::NormalizedAgeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, CameraOffsetBinding) == 0x000428, "Member 'UNiagaraMeshRendererProperties::CameraOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, RendererVisibilityTagBinding) == 0x000460, "Member 'UNiagaraMeshRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MeshIndexBinding) == 0x000498, "Member 'UNiagaraMeshRendererProperties::MeshIndexBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialParameters) == 0x0004D0, "Member 'UNiagaraMeshRendererProperties::MaterialParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PrevPositionBinding) == 0x000520, "Member 'UNiagaraMeshRendererProperties::PrevPositionBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PrevScaleBinding) == 0x000558, "Member 'UNiagaraMeshRendererProperties::PrevScaleBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PrevMeshOrientationBinding) == 0x000590, "Member 'UNiagaraMeshRendererProperties::PrevMeshOrientationBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PrevCameraOffsetBinding) == 0x0005C8, "Member 'UNiagaraMeshRendererProperties::PrevCameraOffsetBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, PrevVelocityBinding) == 0x000600, "Member 'UNiagaraMeshRendererProperties::PrevVelocityBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraMeshRendererProperties, MaterialParamValidMask) == 0x000638, "Member 'UNiagaraMeshRendererProperties::MaterialParamValidMask' has a wrong offset!");
 
-// Class Niagara.NiagaraValidationRule
-// 0x0000 (0x0028 - 0x0028)
-class UNiagaraValidationRule final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NiagaraValidationRule">();
-	}
-	static class UNiagaraValidationRule* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraValidationRule>();
-	}
-};
-static_assert(alignof(UNiagaraValidationRule) == 0x000008, "Wrong alignment on UNiagaraValidationRule");
-static_assert(sizeof(UNiagaraValidationRule) == 0x000028, "Wrong size on UNiagaraValidationRule");
-
-// Class Niagara.VolumeCache
+// Class Niagara.NiagaraParameterCollection
 // 0x0038 (0x0060 - 0x0028)
-class UVolumeCache final : public UObject
+class UNiagaraParameterCollection final : public UObject
 {
 public:
-	class FString                                 FilePath;                                          // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVolumeCacheType                              CacheType;                                         // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIntVector                             Resolution;                                        // 0x003C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameRangeStart;                                   // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameRangeEnd;                                     // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   NameSpace;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FNiagaraVariable>               Parameters;                                        // 0x0030(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UMaterialParameterCollection*           SourceMaterialCollection;                          // 0x0040(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNiagaraParameterCollectionInstance*    DefaultInstance;                                   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGuid                                  CompileId;                                         // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VolumeCache">();
+		return StaticClassImpl<"NiagaraParameterCollection">();
 	}
-	static class UVolumeCache* GetDefaultObj()
+	static class UNiagaraParameterCollection* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UVolumeCache>();
+		return GetDefaultObjImpl<UNiagaraParameterCollection>();
 	}
 };
-static_assert(alignof(UVolumeCache) == 0x000008, "Wrong alignment on UVolumeCache");
-static_assert(sizeof(UVolumeCache) == 0x000060, "Wrong size on UVolumeCache");
-static_assert(offsetof(UVolumeCache, FilePath) == 0x000028, "Member 'UVolumeCache::FilePath' has a wrong offset!");
-static_assert(offsetof(UVolumeCache, CacheType) == 0x000038, "Member 'UVolumeCache::CacheType' has a wrong offset!");
-static_assert(offsetof(UVolumeCache, Resolution) == 0x00003C, "Member 'UVolumeCache::Resolution' has a wrong offset!");
-static_assert(offsetof(UVolumeCache, FrameRangeStart) == 0x000048, "Member 'UVolumeCache::FrameRangeStart' has a wrong offset!");
-static_assert(offsetof(UVolumeCache, FrameRangeEnd) == 0x00004C, "Member 'UVolumeCache::FrameRangeEnd' has a wrong offset!");
+static_assert(alignof(UNiagaraParameterCollection) == 0x000008, "Wrong alignment on UNiagaraParameterCollection");
+static_assert(sizeof(UNiagaraParameterCollection) == 0x000060, "Wrong size on UNiagaraParameterCollection");
+static_assert(offsetof(UNiagaraParameterCollection, NameSpace) == 0x000028, "Member 'UNiagaraParameterCollection::NameSpace' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollection, Parameters) == 0x000030, "Member 'UNiagaraParameterCollection::Parameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollection, SourceMaterialCollection) == 0x000040, "Member 'UNiagaraParameterCollection::SourceMaterialCollection' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollection, DefaultInstance) == 0x000048, "Member 'UNiagaraParameterCollection::DefaultInstance' has a wrong offset!");
+static_assert(offsetof(UNiagaraParameterCollection, CompileId) == 0x000050, "Member 'UNiagaraParameterCollection::CompileId' has a wrong offset!");
+
+// Class Niagara.NiagaraBaselineController_Basic
+// 0x0018 (0x0080 - 0x0068)
+class UNiagaraBaselineController_Basic final : public UNiagaraBaselineController
+{
+public:
+	int32                                         NumInstances;                                      // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UNiagaraComponent*>              SpawnedComponents;                                 // 0x0070(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraBaselineController_Basic">();
+	}
+	static class UNiagaraBaselineController_Basic* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraBaselineController_Basic>();
+	}
+};
+static_assert(alignof(UNiagaraBaselineController_Basic) == 0x000008, "Wrong alignment on UNiagaraBaselineController_Basic");
+static_assert(sizeof(UNiagaraBaselineController_Basic) == 0x000080, "Wrong size on UNiagaraBaselineController_Basic");
+static_assert(offsetof(UNiagaraBaselineController_Basic, NumInstances) == 0x000068, "Member 'UNiagaraBaselineController_Basic::NumInstances' has a wrong offset!");
+static_assert(offsetof(UNiagaraBaselineController_Basic, SpawnedComponents) == 0x000070, "Member 'UNiagaraBaselineController_Basic::SpawnedComponents' has a wrong offset!");
+
+// Class Niagara.NiagaraPrecompileContainer
+// 0x0018 (0x0040 - 0x0028)
+class UNiagaraPrecompileContainer final : public UObject
+{
+public:
+	TArray<class UNiagaraScript*>                 Scripts;                                           // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UNiagaraSystem*                         System;                                            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPrecompileContainer">();
+	}
+	static class UNiagaraPrecompileContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPrecompileContainer>();
+	}
+};
+static_assert(alignof(UNiagaraPrecompileContainer) == 0x000008, "Wrong alignment on UNiagaraPrecompileContainer");
+static_assert(sizeof(UNiagaraPrecompileContainer) == 0x000040, "Wrong size on UNiagaraPrecompileContainer");
+static_assert(offsetof(UNiagaraPrecompileContainer, Scripts) == 0x000028, "Member 'UNiagaraPrecompileContainer::Scripts' has a wrong offset!");
+static_assert(offsetof(UNiagaraPrecompileContainer, System) == 0x000038, "Member 'UNiagaraPrecompileContainer::System' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamInt32
+// 0x0008 (0x0040 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamInt32 final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	int32                                         Min;                                               // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         Max;                                               // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamInt32">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamInt32* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamInt32>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamInt32) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamInt32");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamInt32) == 0x000040, "Wrong size on UNiagaraPreviewAxis_InterpParamInt32");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamInt32, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamInt32::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamInt32, Max) == 0x00003C, "Member 'UNiagaraPreviewAxis_InterpParamInt32::Max' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamVector2D
+// 0x0020 (0x0058 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamVector2D final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	struct FVector2D                              Min;                                               // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector2D                              Max;                                               // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector2D">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamVector2D* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector2D>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector2D) == 0x000008, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector2D");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector2D) == 0x000058, "Wrong size on UNiagaraPreviewAxis_InterpParamVector2D");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector2D, Min) == 0x000038, "Member 'UNiagaraPreviewAxis_InterpParamVector2D::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector2D, Max) == 0x000048, "Member 'UNiagaraPreviewAxis_InterpParamVector2D::Max' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewAxis_InterpParamVector4
+// 0x0048 (0x0080 - 0x0038)
+class UNiagaraPreviewAxis_InterpParamVector4 final : public UNiagaraPreviewAxis_InterpParamBase
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               Min;                                               // 0x0040(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector4                               Max;                                               // 0x0060(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewAxis_InterpParamVector4">();
+	}
+	static class UNiagaraPreviewAxis_InterpParamVector4* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPreviewAxis_InterpParamVector4>();
+	}
+};
+static_assert(alignof(UNiagaraPreviewAxis_InterpParamVector4) == 0x000010, "Wrong alignment on UNiagaraPreviewAxis_InterpParamVector4");
+static_assert(sizeof(UNiagaraPreviewAxis_InterpParamVector4) == 0x000080, "Wrong size on UNiagaraPreviewAxis_InterpParamVector4");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector4, Min) == 0x000040, "Member 'UNiagaraPreviewAxis_InterpParamVector4::Min' has a wrong offset!");
+static_assert(offsetof(UNiagaraPreviewAxis_InterpParamVector4, Max) == 0x000060, "Member 'UNiagaraPreviewAxis_InterpParamVector4::Max' has a wrong offset!");
+
+// Class Niagara.NiagaraPreviewGrid
+// 0x0050 (0x02E0 - 0x0290)
+class ANiagaraPreviewGrid final : public AActor
+{
+public:
+	class UNiagaraSystem*                         System;                                            // 0x0290(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraPreviewGridResetMode                  ResetMode;                                         // 0x0298(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraPreviewAxis*                    PreviewAxisX;                                      // 0x02A0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNiagaraPreviewAxis*                    PreviewAxisY;                                      // 0x02A8(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ANiagaraPreviewBase>        PreviewClass;                                      // 0x02B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpacingX;                                          // 0x02B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpacingY;                                          // 0x02BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumX;                                              // 0x02C0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         NumY;                                              // 0x02C4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UChildActorComponent*>           PreviewComponents;                                 // 0x02C8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ActivatePreviews(bool bReset);
+	void DeactivatePreviews();
+	void GetPreviews(TArray<class UNiagaraComponent*>* OutPreviews);
+	void SetPaused(bool bPaused);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraPreviewGrid">();
+	}
+	static class ANiagaraPreviewGrid* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ANiagaraPreviewGrid>();
+	}
+};
+static_assert(alignof(ANiagaraPreviewGrid) == 0x000008, "Wrong alignment on ANiagaraPreviewGrid");
+static_assert(sizeof(ANiagaraPreviewGrid) == 0x0002E0, "Wrong size on ANiagaraPreviewGrid");
+static_assert(offsetof(ANiagaraPreviewGrid, System) == 0x000290, "Member 'ANiagaraPreviewGrid::System' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, ResetMode) == 0x000298, "Member 'ANiagaraPreviewGrid::ResetMode' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, PreviewAxisX) == 0x0002A0, "Member 'ANiagaraPreviewGrid::PreviewAxisX' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, PreviewAxisY) == 0x0002A8, "Member 'ANiagaraPreviewGrid::PreviewAxisY' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, PreviewClass) == 0x0002B0, "Member 'ANiagaraPreviewGrid::PreviewClass' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, SpacingX) == 0x0002B8, "Member 'ANiagaraPreviewGrid::SpacingX' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, SpacingY) == 0x0002BC, "Member 'ANiagaraPreviewGrid::SpacingY' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, NumX) == 0x0002C0, "Member 'ANiagaraPreviewGrid::NumX' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, NumY) == 0x0002C4, "Member 'ANiagaraPreviewGrid::NumY' has a wrong offset!");
+static_assert(offsetof(ANiagaraPreviewGrid, PreviewComponents) == 0x0002C8, "Member 'ANiagaraPreviewGrid::PreviewComponents' has a wrong offset!");
+
+// Class Niagara.NiagaraScratchPadContainer
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraScratchPadContainer final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraScratchPadContainer">();
+	}
+	static class UNiagaraScratchPadContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraScratchPadContainer>();
+	}
+};
+static_assert(alignof(UNiagaraScratchPadContainer) == 0x000008, "Wrong alignment on UNiagaraScratchPadContainer");
+static_assert(sizeof(UNiagaraScratchPadContainer) == 0x000028, "Wrong size on UNiagaraScratchPadContainer");
+
+// Class Niagara.NiagaraSimCache
+// 0x01E0 (0x0208 - 0x0028)
+class UNiagaraSimCache final : public UObject
+{
+public:
+	struct FGuid                                  CacheGuid;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UNiagaraSystem>          SoftNiagaraSystem;                                 // 0x0038(0x0028)(Edit, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         StartSeconds;                                      // 0x0060(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         DurationSeconds;                                   // 0x0064(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FNiagaraSimCacheCreateParameters       CreateParameters;                                  // 0x0068(0x0058)(NativeAccessSpecifierPrivate)
+	bool                                          bNeedsReadComponentMappingRecache;                 // 0x00C0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraSimCacheLayout                 CacheLayout;                                       // 0x00C8(0x00C8)(NativeAccessSpecifierPrivate)
+	TArray<struct FNiagaraSimCacheFrame>          CacheFrames;                                       // 0x0190(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<struct FNiagaraVariableBase, class UObject*> DataInterfaceStorage;                              // 0x01A0(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F0[0x18];                                     // 0x01F0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode() const;
+	class FName GetEmitterName(int32 EmitterIndex) const;
+	TArray<class FName> GetEmitterNames() const;
+	int32 GetNumEmitters() const;
+	int32 GetNumFrames() const;
+	float GetStartSeconds() const;
+	bool IsCacheValid() const;
+	bool IsEmpty() const;
+	void ReadColorAttribute(TArray<struct FLinearColor>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadFloatAttribute(TArray<float>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadIDAttribute(TArray<struct FNiagaraID>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadIntAttribute(TArray<int32>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadPositionAttribute(TArray<struct FVector>* OutValues, class FName AttributeName, class FName EmitterName, bool bLocalSpaceToWorld, int32 FrameIndex) const;
+	void ReadPositionAttributeWithRebase(TArray<struct FVector>* OutValues, const struct FTransform& Transform, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadQuatAttribute(TArray<struct FQuat>* OutValues, class FName AttributeName, class FName EmitterName, bool bLocalSpaceToWorld, int32 FrameIndex) const;
+	void ReadQuatAttributeWithRebase(TArray<struct FQuat>* OutValues, const struct FQuat& Quat, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadVector2Attribute(TArray<struct FVector2D>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadVector4Attribute(TArray<struct FVector4>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+	void ReadVectorAttribute(TArray<struct FVector>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSimCache">();
+	}
+	static class UNiagaraSimCache* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSimCache>();
+	}
+};
+static_assert(alignof(UNiagaraSimCache) == 0x000008, "Wrong alignment on UNiagaraSimCache");
+static_assert(sizeof(UNiagaraSimCache) == 0x000208, "Wrong size on UNiagaraSimCache");
+static_assert(offsetof(UNiagaraSimCache, CacheGuid) == 0x000028, "Member 'UNiagaraSimCache::CacheGuid' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, SoftNiagaraSystem) == 0x000038, "Member 'UNiagaraSimCache::SoftNiagaraSystem' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, StartSeconds) == 0x000060, "Member 'UNiagaraSimCache::StartSeconds' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, DurationSeconds) == 0x000064, "Member 'UNiagaraSimCache::DurationSeconds' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, CreateParameters) == 0x000068, "Member 'UNiagaraSimCache::CreateParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, bNeedsReadComponentMappingRecache) == 0x0000C0, "Member 'UNiagaraSimCache::bNeedsReadComponentMappingRecache' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, CacheLayout) == 0x0000C8, "Member 'UNiagaraSimCache::CacheLayout' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, CacheFrames) == 0x000190, "Member 'UNiagaraSimCache::CacheFrames' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimCache, DataInterfaceStorage) == 0x0001A0, "Member 'UNiagaraSimCache::DataInterfaceStorage' has a wrong offset!");
+
+// Class Niagara.NiagaraSimCacheFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraSimCacheFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool CaptureNiagaraSimCacheImmediate(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, bool bAdvanceSimulation, float AdvanceDeltaTime);
+	static class UNiagaraSimCache* CreateNiagaraSimCache(class UObject* WorldContextObject);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSimCacheFunctionLibrary">();
+	}
+	static class UNiagaraSimCacheFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSimCacheFunctionLibrary>();
+	}
+};
+static_assert(alignof(UNiagaraSimCacheFunctionLibrary) == 0x000008, "Wrong alignment on UNiagaraSimCacheFunctionLibrary");
+static_assert(sizeof(UNiagaraSimCacheFunctionLibrary) == 0x000028, "Wrong size on UNiagaraSimCacheFunctionLibrary");
+
+// Class Niagara.NiagaraSimulationStageGeneric
+// 0x01A0 (0x01E0 - 0x0040)
+class UNiagaraSimulationStageGeneric final : public UNiagaraSimulationStageBase
+{
+public:
+	struct FNiagaraVariableAttributeBinding       EnabledBinding;                                    // 0x0040(0x0038)(Edit, NativeAccessSpecifierPublic)
+	ENiagaraIterationSource                       IterationSource;                                   // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraParameterBindingWithValue      NumIterations;                                     // 0x0080(0x0020)(Edit, NativeAccessSpecifierPublic)
+	ENiagaraSimStageExecuteBehavior               ExecuteBehavior;                                   // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bDisablePartialParticleUpdate : 1;                 // 0x00A4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraVariableDataInterfaceBinding   DataInterface;                                     // 0x00A8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         bParticleIterationStateEnabled : 1;                // 0x00C8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraVariableAttributeBinding       ParticleIterationStateBinding;                     // 0x00D0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FIntPoint                              ParticleIterationStateRange;                       // 0x0108(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bGpuDispatchForceLinear : 1;                       // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideGpuDispatchNumThreads : 1;                // 0x0110(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsX;                    // 0x0118(0x0020)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsY;                    // 0x0138(0x0020)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterBindingWithValue      OverrideGpuDispatchNumThreadsZ;                    // 0x0158(0x0020)(Edit, NativeAccessSpecifierPublic)
+	ENiagaraGpuDispatchType                       DirectDispatchType;                                // 0x0178(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENiagaraDirectDispatchElementType             DirectDispatchElementType;                         // 0x0179(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraParameterBindingWithValue      ElementCountX;                                     // 0x0180(0x0020)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterBindingWithValue      ElementCountY;                                     // 0x01A0(0x0020)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterBindingWithValue      ElementCountZ;                                     // 0x01C0(0x0020)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSimulationStageGeneric">();
+	}
+	static class UNiagaraSimulationStageGeneric* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSimulationStageGeneric>();
+	}
+};
+static_assert(alignof(UNiagaraSimulationStageGeneric) == 0x000008, "Wrong alignment on UNiagaraSimulationStageGeneric");
+static_assert(sizeof(UNiagaraSimulationStageGeneric) == 0x0001E0, "Wrong size on UNiagaraSimulationStageGeneric");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, EnabledBinding) == 0x000040, "Member 'UNiagaraSimulationStageGeneric::EnabledBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, IterationSource) == 0x000078, "Member 'UNiagaraSimulationStageGeneric::IterationSource' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, NumIterations) == 0x000080, "Member 'UNiagaraSimulationStageGeneric::NumIterations' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ExecuteBehavior) == 0x0000A0, "Member 'UNiagaraSimulationStageGeneric::ExecuteBehavior' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, DataInterface) == 0x0000A8, "Member 'UNiagaraSimulationStageGeneric::DataInterface' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ParticleIterationStateBinding) == 0x0000D0, "Member 'UNiagaraSimulationStageGeneric::ParticleIterationStateBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ParticleIterationStateRange) == 0x000108, "Member 'UNiagaraSimulationStageGeneric::ParticleIterationStateRange' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsX) == 0x000118, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsX' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsY) == 0x000138, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsY' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, OverrideGpuDispatchNumThreadsZ) == 0x000158, "Member 'UNiagaraSimulationStageGeneric::OverrideGpuDispatchNumThreadsZ' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, DirectDispatchType) == 0x000178, "Member 'UNiagaraSimulationStageGeneric::DirectDispatchType' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, DirectDispatchElementType) == 0x000179, "Member 'UNiagaraSimulationStageGeneric::DirectDispatchElementType' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountX) == 0x000180, "Member 'UNiagaraSimulationStageGeneric::ElementCountX' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountY) == 0x0001A0, "Member 'UNiagaraSimulationStageGeneric::ElementCountY' has a wrong offset!");
+static_assert(offsetof(UNiagaraSimulationStageGeneric, ElementCountZ) == 0x0001C0, "Member 'UNiagaraSimulationStageGeneric::ElementCountZ' has a wrong offset!");
+
+// Class Niagara.NiagaraSystem
+// 0x0530 (0x0578 - 0x0048)
+class UNiagaraSystem final : public UFXSystemAsset
+{
+public:
+	uint8                                         bSupportLargeWorldCoordinates : 1;                 // 0x0048(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideCastShadow : 1;                           // 0x0048(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideReceivesDecals : 1;                       // 0x0048(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideRenderCustomDepth : 1;                    // 0x0048(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideCustomDepthStencilValue : 1;              // 0x0048(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideCustomDepthStencilWriteMask : 1;          // 0x0048(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideTranslucencySortPriority : 1;             // 0x0048(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideTranslucencySortDistanceOffset : 1;       // 0x0048(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCastShadow : 1;                                   // 0x0049(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bReceivesDecals : 1;                               // 0x0049(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bRenderCustomDepth : 1;                            // 0x0049(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDisableExperimentalVM : 1;                        // 0x0049(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bInitialOwnerVelocityFromActor : 1;                // 0x0049(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	ERendererStencilMask                          CustomDepthStencilWriteMask;                       // 0x004A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CustomDepthStencilValue;                           // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TranslucencySortPriority;                          // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TranslucencySortDistanceOffset;                    // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDumpDebugSystemInfo;                              // 0x0058(0x0001)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDumpDebugEmitterInfo;                             // 0x0059(0x0001)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A[0x1];                                       // 0x005A(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bRequireCurrentFrameData;                          // 0x005B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bFixedBounds : 1;                                  // 0x005C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraEffectType*                     EffectType;                                        // 0x0060(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bOverrideScalabilitySettings;                      // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverrideAllowCullingForLocalPlayers : 1;          // 0x006C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bAllowCullingForLocalPlayersOverride : 1;          // 0x006C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraSystemScalabilityOverrides     SystemScalabilityOverrides;                        // 0x0070(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FNiagaraPlatformSet                    Platforms;                                         // 0x0080(0x0030)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FNiagaraEmitterHandle>          EmitterHandles;                                    // 0x00B0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides;                      // 0x00C0(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	class UNiagaraScript*                         SystemSpawnScript;                                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNiagaraScript*                         SystemUpdateScript;                                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E0[0x10];                                      // 0x00E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraSystemCompiledData             SystemCompiledData;                                // 0x00F0(0x0240)(Protected, NativeAccessSpecifierProtected)
+	struct FNiagaraUserRedirectionParameterStore  ExposedParameters;                                 // 0x0330(0x00D8)(Protected, NativeAccessSpecifierProtected)
+	struct FBox                                   FixedBounds;                                       // 0x0408(0x0038)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bDeterminism;                                      // 0x0440(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_441[0x3];                                      // 0x0441(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RandomSeed;                                        // 0x0444(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WarmupTime;                                        // 0x0448(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         WarmupTickCount;                                   // 0x044C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WarmupTickDelta;                                   // 0x0450(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFixedTickDelta;                                   // 0x0454(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_455[0x3];                                      // 0x0455(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FixedTickDeltaTime;                                // 0x0458(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bNeedsGPUContextInitForDataInterfaces;             // 0x045C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_45D[0xA3];                                     // 0x045D(0x00A3)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_500_0 : 5;                                  // 0x0500(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bAllowSystemStateFastPath : 1;                     // 0x0500(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bSystemStateFastPathEnabled : 1;                   // 0x0500(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_501[0xF];                                      // 0x0501(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraSystemStateData                SystemStateData;                                   // 0x0510(0x0060)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_570[0x8];                                      // 0x0570(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraSystem">();
+	}
+	static class UNiagaraSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSystem>();
+	}
+};
+static_assert(alignof(UNiagaraSystem) == 0x000008, "Wrong alignment on UNiagaraSystem");
+static_assert(sizeof(UNiagaraSystem) == 0x000578, "Wrong size on UNiagaraSystem");
+static_assert(offsetof(UNiagaraSystem, CustomDepthStencilWriteMask) == 0x00004A, "Member 'UNiagaraSystem::CustomDepthStencilWriteMask' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, CustomDepthStencilValue) == 0x00004C, "Member 'UNiagaraSystem::CustomDepthStencilValue' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, TranslucencySortPriority) == 0x000050, "Member 'UNiagaraSystem::TranslucencySortPriority' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, TranslucencySortDistanceOffset) == 0x000054, "Member 'UNiagaraSystem::TranslucencySortDistanceOffset' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bDumpDebugSystemInfo) == 0x000058, "Member 'UNiagaraSystem::bDumpDebugSystemInfo' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bDumpDebugEmitterInfo) == 0x000059, "Member 'UNiagaraSystem::bDumpDebugEmitterInfo' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bRequireCurrentFrameData) == 0x00005B, "Member 'UNiagaraSystem::bRequireCurrentFrameData' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, EffectType) == 0x000060, "Member 'UNiagaraSystem::EffectType' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bOverrideScalabilitySettings) == 0x000068, "Member 'UNiagaraSystem::bOverrideScalabilitySettings' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, SystemScalabilityOverrides) == 0x000070, "Member 'UNiagaraSystem::SystemScalabilityOverrides' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, Platforms) == 0x000080, "Member 'UNiagaraSystem::Platforms' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, EmitterHandles) == 0x0000B0, "Member 'UNiagaraSystem::EmitterHandles' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, ParameterCollectionOverrides) == 0x0000C0, "Member 'UNiagaraSystem::ParameterCollectionOverrides' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, SystemSpawnScript) == 0x0000D0, "Member 'UNiagaraSystem::SystemSpawnScript' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, SystemUpdateScript) == 0x0000D8, "Member 'UNiagaraSystem::SystemUpdateScript' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, SystemCompiledData) == 0x0000F0, "Member 'UNiagaraSystem::SystemCompiledData' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, ExposedParameters) == 0x000330, "Member 'UNiagaraSystem::ExposedParameters' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, FixedBounds) == 0x000408, "Member 'UNiagaraSystem::FixedBounds' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bDeterminism) == 0x000440, "Member 'UNiagaraSystem::bDeterminism' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, RandomSeed) == 0x000444, "Member 'UNiagaraSystem::RandomSeed' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, WarmupTime) == 0x000448, "Member 'UNiagaraSystem::WarmupTime' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, WarmupTickCount) == 0x00044C, "Member 'UNiagaraSystem::WarmupTickCount' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, WarmupTickDelta) == 0x000450, "Member 'UNiagaraSystem::WarmupTickDelta' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bFixedTickDelta) == 0x000454, "Member 'UNiagaraSystem::bFixedTickDelta' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, FixedTickDeltaTime) == 0x000458, "Member 'UNiagaraSystem::FixedTickDeltaTime' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, bNeedsGPUContextInitForDataInterfaces) == 0x00045C, "Member 'UNiagaraSystem::bNeedsGPUContextInitForDataInterfaces' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystem, SystemStateData) == 0x000510, "Member 'UNiagaraSystem::SystemStateData' has a wrong offset!");
+
+// Class Niagara.NiagaraVolumeRendererProperties
+// 0x01F8 (0x02B8 - 0x00C0)
+class UNiagaraVolumeRendererProperties final : public UNiagaraRendererProperties
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraParameterBinding               MaterialParameterBinding;                          // 0x00C8(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RendererVisibility;                                // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepFactor;                                        // 0x00DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightingDownsampleFactor;                          // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShadowStepFactor;                                  // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShadowBiasFactor;                                  // 0x00E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EC[0xAC];                                      // 0x00EC(0x00AC)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraVariableAttributeBinding       RendererVisibilityTagBinding;                      // 0x0198(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VolumeResolutionMaxAxisBinding;                    // 0x01D0(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraVariableAttributeBinding       VolumeWorldSpaceSizeBinding;                       // 0x0208(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FNiagaraRendererMaterialParameters     MaterialParameters;                                // 0x0240(0x0050)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_290[0x28];                                     // 0x0290(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NiagaraVolumeRendererProperties">();
+	}
+	static class UNiagaraVolumeRendererProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraVolumeRendererProperties>();
+	}
+};
+static_assert(alignof(UNiagaraVolumeRendererProperties) == 0x000008, "Wrong alignment on UNiagaraVolumeRendererProperties");
+static_assert(sizeof(UNiagaraVolumeRendererProperties) == 0x0002B8, "Wrong size on UNiagaraVolumeRendererProperties");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, Material) == 0x0000C0, "Member 'UNiagaraVolumeRendererProperties::Material' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, MaterialParameterBinding) == 0x0000C8, "Member 'UNiagaraVolumeRendererProperties::MaterialParameterBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, RendererVisibility) == 0x0000D8, "Member 'UNiagaraVolumeRendererProperties::RendererVisibility' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, StepFactor) == 0x0000DC, "Member 'UNiagaraVolumeRendererProperties::StepFactor' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, LightingDownsampleFactor) == 0x0000E0, "Member 'UNiagaraVolumeRendererProperties::LightingDownsampleFactor' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, ShadowStepFactor) == 0x0000E4, "Member 'UNiagaraVolumeRendererProperties::ShadowStepFactor' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, ShadowBiasFactor) == 0x0000E8, "Member 'UNiagaraVolumeRendererProperties::ShadowBiasFactor' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, RendererVisibilityTagBinding) == 0x000198, "Member 'UNiagaraVolumeRendererProperties::RendererVisibilityTagBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, VolumeResolutionMaxAxisBinding) == 0x0001D0, "Member 'UNiagaraVolumeRendererProperties::VolumeResolutionMaxAxisBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, VolumeWorldSpaceSizeBinding) == 0x000208, "Member 'UNiagaraVolumeRendererProperties::VolumeWorldSpaceSizeBinding' has a wrong offset!");
+static_assert(offsetof(UNiagaraVolumeRendererProperties, MaterialParameters) == 0x000240, "Member 'UNiagaraVolumeRendererProperties::MaterialParameters' has a wrong offset!");
 
 }
 

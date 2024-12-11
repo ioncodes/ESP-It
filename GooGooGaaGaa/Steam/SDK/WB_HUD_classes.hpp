@@ -73,6 +73,7 @@ public:
 public:
 	void AddGamemodeSpecificHUDExtensions();
 	void Construct();
+	void DestroyHUDInMainMenu();
 	void ExecuteUbergraph_WB_HUD(int32 EntryPoint);
 	ESlateVisibility Get_CrossHair_Visibility_0();
 	ESlateVisibility Get_GameInProgress_Visibility_0();

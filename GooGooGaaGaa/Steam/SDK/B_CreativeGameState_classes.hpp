@@ -18,18 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativeGameState.B_CreativeGameState_C
-// 0x0040 (0x05E0 - 0x05A0)
+// 0x0040 (0x05F8 - 0x05B8)
 class AB_CreativeGameState_C final : public AB_GameState_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeGameState_C;              // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FString                                 CurrentLayoutName;                                 // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         CurrentPropAmount;                                 // 0x05B8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxPropAmount;                                     // 0x05BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentPlaceableStaticAmount;                      // 0x05C0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxPlaceableStaticAmount;                          // 0x05C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnTogglePlayTest;                                  // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsPlayTestMode;                                    // 0x05D8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B1[0x7];                                      // 0x05B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeGameState_C;              // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FString                                 CurrentLayoutName;                                 // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         CurrentPropAmount;                                 // 0x05D0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxPropAmount;                                     // 0x05D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentPlaceableStaticAmount;                      // 0x05D8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxPlaceableStaticAmount;                          // 0x05DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnTogglePlayTest;                                  // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsPlayTestMode;                                    // 0x05F0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnTogglePlayTest__DelegateSignature(bool HasPlayTestStarted);
@@ -63,15 +64,15 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativeGameState_C) == 0x000008, "Wrong alignment on AB_CreativeGameState_C");
-static_assert(sizeof(AB_CreativeGameState_C) == 0x0005E0, "Wrong size on AB_CreativeGameState_C");
-static_assert(offsetof(AB_CreativeGameState_C, UberGraphFrame_B_CreativeGameState_C) == 0x0005A0, "Member 'AB_CreativeGameState_C::UberGraphFrame_B_CreativeGameState_C' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, CurrentLayoutName) == 0x0005A8, "Member 'AB_CreativeGameState_C::CurrentLayoutName' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, CurrentPropAmount) == 0x0005B8, "Member 'AB_CreativeGameState_C::CurrentPropAmount' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, MaxPropAmount) == 0x0005BC, "Member 'AB_CreativeGameState_C::MaxPropAmount' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, CurrentPlaceableStaticAmount) == 0x0005C0, "Member 'AB_CreativeGameState_C::CurrentPlaceableStaticAmount' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, MaxPlaceableStaticAmount) == 0x0005C4, "Member 'AB_CreativeGameState_C::MaxPlaceableStaticAmount' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, OnTogglePlayTest) == 0x0005C8, "Member 'AB_CreativeGameState_C::OnTogglePlayTest' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameState_C, IsPlayTestMode) == 0x0005D8, "Member 'AB_CreativeGameState_C::IsPlayTestMode' has a wrong offset!");
+static_assert(sizeof(AB_CreativeGameState_C) == 0x0005F8, "Wrong size on AB_CreativeGameState_C");
+static_assert(offsetof(AB_CreativeGameState_C, UberGraphFrame_B_CreativeGameState_C) == 0x0005B8, "Member 'AB_CreativeGameState_C::UberGraphFrame_B_CreativeGameState_C' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, CurrentLayoutName) == 0x0005C0, "Member 'AB_CreativeGameState_C::CurrentLayoutName' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, CurrentPropAmount) == 0x0005D0, "Member 'AB_CreativeGameState_C::CurrentPropAmount' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, MaxPropAmount) == 0x0005D4, "Member 'AB_CreativeGameState_C::MaxPropAmount' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, CurrentPlaceableStaticAmount) == 0x0005D8, "Member 'AB_CreativeGameState_C::CurrentPlaceableStaticAmount' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, MaxPlaceableStaticAmount) == 0x0005DC, "Member 'AB_CreativeGameState_C::MaxPlaceableStaticAmount' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, OnTogglePlayTest) == 0x0005E0, "Member 'AB_CreativeGameState_C::OnTogglePlayTest' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameState_C, IsPlayTestMode) == 0x0005F0, "Member 'AB_CreativeGameState_C::IsPlayTestMode' has a wrong offset!");
 
 }
 

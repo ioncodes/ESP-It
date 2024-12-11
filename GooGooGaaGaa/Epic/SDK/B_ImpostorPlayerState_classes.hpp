@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_TaskType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "B_PlayerState_classes.hpp"
+#include "E_TaskType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "B_PlayerState_classes.hpp"
 
 
 namespace SDK
